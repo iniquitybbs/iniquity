@@ -6,6 +6,7 @@ require "highline"
 
 require "./services/web.rb"
 require "./services/telnet.rb"
+require "./services/rest.rb"
 
 trap("INT") {exit}
 
@@ -15,7 +16,8 @@ EM.run do
         puts "Iniquity: listening..."
     end
 
-    EM.start_server "0.0.0.0", 8081, Telnet
-    EM.start_server '0.0.0.0', 8082, Web
+    EM.start_server "0.0.0.0", 3023, Telnet
+    EM.start_server '0.0.0.0', 3080, Web
+    EM.start_server '0.0.0.0', 3081, Rest
 
 end
