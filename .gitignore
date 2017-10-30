@@ -1,3 +1,4 @@
 .vscode
 dump.*
 *.bak
+*.tmp

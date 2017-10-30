@@ -1,5 +1,5 @@
 # Iniquity
-A re-imagining of the iconic bbs software.
+A re-imagining of the iconic BBS software.
 
 # Basics
 Install Iniquity...
@@ -8,7 +8,7 @@ Install Iniquity...
 
 Start Iniquity BBS...
 
-    ./iniquity
+    iniquity
 
 Connect to your BBS over Telnet...
 
