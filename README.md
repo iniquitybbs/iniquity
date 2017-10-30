@@ -6,13 +6,17 @@ Install Iniquity...
 
     gem install iniquity
 
-Start Iniquity BBS...
+Start Iniquity...
 
     iniquity
 
-Connect to your BBS over Telnet...
+Connect to your BBS with a Terminal...
 
     telnet localhost 3023
+
+or
+
+    ssh anonymous@localhost 3022
 
 Connect to your BBS over the Web...
 
