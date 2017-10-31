@@ -42,9 +42,12 @@ Or using Iniquity's Ruby Gem...
     MyModule.start(:supports => ["telnet", "web"])
 
 # White Paper
-Tempor ipsum duis quis sit minim exercitation eu elit eu minim eiusmod deserunt. Mollit et eiusmod commodo occaecat ipsum. Sunt et esse tempor aliquip commodo ea ex nisi ut ex pariatur eu mollit aliquip. Duis nisi fugiat quis voluptate in ipsum incididunt quis. Consequat cupidatat Lorem est pariatur tempor.
+Mostly rough notes at this point. I will expand on these ideas, turning this portion of the README into a formal whitepaper, or design document...
 
-Qui esse enim incididunt sint nisi officia deserunt aliqua fugiat minim aliquip quis. Sunt consectetur eu sunt laborum id pariatur duis esse. Consequat laboris est esse ullamco Lorem laborum non proident consectetur minim deserunt. Consectetur id consequat tempor dolor velit voluptate sunt cillum incididunt irure sunt.
+## Core Concepts
+1. A modern BBS should be as easy to setup for the novice sysop as it is for the novice user.
+2. Every module should be treated as a unique component. Each module component contains proper
+instructions for its functionality. Every module can be displayed over a Terminal or Web interface.
 
 # A History of Iniquity BBS
 What I'm attempting here is to list key people within Iniquity's history. This section should be expanded to link to real information.
@@ -61,5 +64,10 @@ As I read about Iniquity, its users, its sysops and past attempts to revive the 
 2. Allow for custom WFC screens (use tab to rotate through them)
 3.
 
+# Feature Ideas
+
+1. Rumors that allow anonymous replies as well. That could be fun. :)
+2. I like x/84 and how you can use tags for "message" areas.
+3. Sysop pagers should do things like send emails or push notifications to phones, not just play ansi music in a terminal...
 # License
 MIT
