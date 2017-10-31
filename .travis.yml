@@ -1,5 +1,11 @@
 language: ruby
 rvm:
- - 2.2
- #- jruby
- #- rbx-2
+- 2.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: tFfw17posaGoFN5dJ4FdD4Z44ckRqWDqPktMilT7+r+7eAHheAICTj16sJx36tCuLA1TTM7Zkp2c45No56oG2zuuyHx9ddMuugFUUudkBZYtCxKrax41+E048BkE7MOO4PbkLm/8Ka+OrqzS8tMHHuuU0MrzpThw7o9FguysSW6Oc8/ffF2BRfFzKlHjWRN9B62IUFDV57D4faHhQPMvzlEt7Vnc7SlzYZCntkA/6PkxTsSQrgQjxz7zzqLtIDjRVpOL2Y5/8C53cw8SIc+GxHMW9sW9H3A4a72X720/8cwgLkWyK29eoti0DBHMxrogWLsVBksdYzC/PCZoA6pvuGCsbvwuInDnL39mBjQeA9u2s669IHKpbn0lRBqtjWn/vPaJtjOo95BLw1orR1vH/8+zaEmCpvWob/+U7N9S6C8O3jYXZNpL1afZu72NjaZxI0l07OqKr9B+zTn4ru8drv16Ih2BXwxurhaLJ8NPqdlZ8rgGq3dghIzuybMI1nhnxY81eXyqj+vrCfoUCJkRYW5rqoAkwsgQdsvUjLCnp85lXwwIRnDY5J4c0xNpaGAT/p8A8i55LLa46R1LvxFv6ACBksz7zbz9K3+OhtTIDps/fdAcuBCTUDgTlxE5efveXbEgA3iVQbQjDgJxvebcjJp6orLSd6+6WmPuAeddx0A=
+  gem: iniquity
+  on:
+    tags: true
+    repo: iniquitybbs/iniquity
