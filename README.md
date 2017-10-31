@@ -1,4 +1,6 @@
-[![Gem Version](https://badge.fury.io/rb/iniquity@2x.png)](https://badge.fury.io/rb/iniquity)
+[![Gem Version](https://badge.fury.io/rb/iniquity.svg)](https://badge.fury.io/rb/iniquity)
+
+[![Build Status](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source.svg?branch=master)](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source)
 
 # Iniquity
 A re-imagining of the iconic BBS software.
