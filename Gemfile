@@ -9,4 +9,5 @@ gem "eventmachine"
 gem "highline"
 gem "thin"
 gem "inifile"
+gem "rspec"
 
