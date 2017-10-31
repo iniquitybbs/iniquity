@@ -1,4 +1,5 @@
 .vscode
 dump.*
 *.bak
-*.tmpGemfile.lock
+*.tmp
+iniquity*.gem

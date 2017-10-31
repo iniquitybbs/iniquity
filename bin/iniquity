@@ -2,10 +2,13 @@
 # encoding: UTF-8
 
 BEGIN {
-    unless ENV["INIQUITY_HOME"]
+    unless ARGV[0] || ENV["INIQUITY_HOME"]
         abort "Please set the INIQUITY_HOME environment variable."
     end
 }
+
+HOME = ARGV[0] || ENV["INIQUITY_HOME"] || "."
+ENV["INIQUITY_HOME"] = HOME
 
 require "iniquity"
 require "inifile"
@@ -15,7 +18,13 @@ trap("INT") {exit}
 
 EM.run do
 
-    config = IniFile.load(ENV["INIQUITY_HOME"] + "/iniquity.ini")
+    ### WFC Screen
+
+    EM.add_periodic_timer(15) do
+        puts "Iniquity: WFC Coming Soon!"
+    end
+
+    config = IniFile.load(HOME+ "/iniquity.ini")
 
     config.each_section do |section|
 
@@ -35,14 +44,6 @@ EM.run do
             if config[section]["enabled"] == "yes"
                 EM.start_server "0.0.0.0", config[section]["port"], API
             end
-        end
-
-        ### WFC Screen
-
-        puts "Iniquity: WFC Coming Soon!"
-
-        EM.add_periodic_timer(15) do
-            puts "Iniquity: WFC Coming Soon!"
         end
     end
 end
