@@ -1,4 +1,4 @@
 .vscode
 dump.*
 *.bak
-*.tmp
+*.tmpGemfile.lock

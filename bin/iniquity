@@ -8,8 +8,8 @@ BEGIN {
 }
 
 require "iniquity"
-require "thin"
 require "inifile"
+require "thin"
 
 trap("INT") {exit}
 
