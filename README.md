@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/iniquity.svg)](https://badge.fury.io/rb/iniquity)
 
-[![Build Status](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source.svg?branch=master)](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source)
+[![Build Status](https://travis-ci.org/iniquitybbs/iniquity.svg?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
 
 </p>
 
