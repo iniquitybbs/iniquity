@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+BEGIN {
+    unless ENV["INIQUITY_HOME"]
+        abort "Please set the INIQUITY_HOME environment variable."
+    end
+}
+
+require "iniquity"
+require "thin"
+require "inifile"
+
+trap("INT") {exit}
+
+EM.run do
+
+    puts "Iniquity: WFC Coming Soon!"
+
+    EM.add_periodic_timer(15) do
+        puts "Iniquity: WFC Coming Soon!"
+    end
+
+    system = IniFile.load("iniquity.ini")
+
+    system.each_section do |section|
+        puts "I want #{myini[section]['somevar']} printed here!"
+    end
+
+    EM.start_server "0.0.0.0", 3023, Terminal
+    EM.start_server '0.0.0.0', 3080, Web
+    EM.start_server '0.0.0.0', 3081, Rest
+
+end
