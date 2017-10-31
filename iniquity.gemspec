@@ -3,7 +3,7 @@ require "rubygems"
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.1"
+    s.version     = "0.0.2"
     s.summary     = "A re-imagining of the iconic BBS software."
     s.description = "Iniquity is a bulletin board software package written in Ruby."
     s.authors     = ["Dan Stephenson"]
