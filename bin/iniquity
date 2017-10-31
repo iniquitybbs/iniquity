@@ -15,20 +15,34 @@ trap("INT") {exit}
 
 EM.run do
 
-    puts "Iniquity: WFC Coming Soon!"
+    config = IniFile.load(ENV["INIQUITY_HOME"] + "/iniquity.ini")
 
-    EM.add_periodic_timer(15) do
+    config.each_section do |section|
+
+        if section == "terminal"
+            if config["terminal"]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", config[section]["port"], Terminal
+            end
+        end
+
+        if section == "web"
+            if config["web"]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", config[section]["port"], Web
+            end
+        end
+
+        if section == "rest"
+            if config["rest"]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", config[section]["port"], Rest
+            end
+        end
+
+        ### WFC Screen
+
         puts "Iniquity: WFC Coming Soon!"
+
+        EM.add_periodic_timer(15) do
+            puts "Iniquity: WFC Coming Soon!"
+        end
     end
-
-    system = IniFile.load("iniquity.ini")
-
-    system.each_section do |section|
-        puts "I want #{myini[section]['somevar']} printed here!"
-    end
-
-    EM.start_server "0.0.0.0", 3023, Terminal
-    EM.start_server '0.0.0.0', 3080, Web
-    EM.start_server '0.0.0.0', 3081, Rest
-
 end

@@ -8,9 +8,11 @@ BEGIN {
 }
 
 require "iniquity"
+require "inifile"
 
 class Answer
     def initialize
+        self.config = IniFile.load(ENV["INIQUITY_HOME"] + "/answer/answer.ini")
     end
 
     self.on_connection {
