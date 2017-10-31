@@ -2,13 +2,15 @@
 A re-imagining of the iconic BBS software.
 
 ## Synopsis
+Iniquity is in early alpha. This package is highly experimental, and,should only be used by the most daring...
+
 Install Iniquity...
 
     gem install iniquity
 
 Start Iniquity...
 
-    iniquity --home /path/to/bbsfiles
+    iniquity /path/to/bbsfiles
 
 Connect to your BBS with a Terminal...
 
