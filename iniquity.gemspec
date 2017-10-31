@@ -1,6 +1,5 @@
 
 require "rubygems"
-require "date"
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
