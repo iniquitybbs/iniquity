@@ -1,10 +1,10 @@
-<p align=center>
-
-[![Gem Version](https://badge.fury.io/rb/iniquity.svg)](https://badge.fury.io/rb/iniquity)
-
-[![Build Status](https://travis-ci.org/iniquitybbs/iniquity.svg?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
-
+<p align="center">
+    <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
+
+[![Gem Version](https://badge.fury.io/rb/iniquity.png)](https://badge.fury.io/rb/iniquity)
+
+[![Build Status](https://travis-ci.org/iniquitybbs/iniquity.png?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
 
 # Iniquity
 A re-imagining of the iconic BBS software.
