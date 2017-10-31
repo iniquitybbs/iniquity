@@ -4,7 +4,7 @@ require "rubygems"
 Gem::Specification.new do |s|
     s.name        = "iniquity"
     s.version     = "0.0.1"
-    s.date        = DateTime.now
+    s.date        = Date.today.to_s
     s.summary     = "A re-imagining of the iconic BBS software."
     s.description = "Iniquity is a bulletin board software package written in Ruby."
     s.authors     = ["Dan Stephenson"]
