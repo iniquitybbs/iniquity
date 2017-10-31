@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/iniquity@2x.png)](https://badge.fury.io/rb/iniquity)
+
 # Iniquity
 A re-imagining of the iconic BBS software.
 
