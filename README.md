@@ -8,7 +8,7 @@ Install Iniquity...
 
 Start Iniquity...
 
-    iniquity
+    iniquity --home /path/to/bbsfiles
 
 Connect to your BBS with a Terminal...
 
@@ -22,24 +22,9 @@ Connect to your BBS over the Web...
 
     http://localhost:3080
 
-Create modules for your BBS using Iniquity's RESTful API...
+Access BBS resources using Iniquity's RESTful API...
 
-    http://localhost:3443/rest/v0/getOnlineUsers.json
-
-Or using Iniquity's Ruby Gem...
-
-    require "iniquity"
-
-    class MyModule < Iniquity::Module do
-        def initialize
-            super
-        end
-
-        # Insert your functions...
-
-    end
-
-    MyModule.start(:supports => ["telnet", "web"])
+    http://localhost:3082/v0/getOnlineUsers.json
 
 # White Paper
 Mostly rough notes at this point. I will expand on these ideas, turning this portion of the README into a formal whitepaper, or design document...

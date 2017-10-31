@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
+BEGIN {
+    unless ENV["INIQUITY_HOME"]
+        abort "Please set the INIQUITY_HOME environment variable."
+    end
+}
+
 class Terminal < EM::Connection
 
     def initialize
@@ -46,7 +52,7 @@ class Web < EM::Connection
     end
 end
 
-class Rest < EM::Connection
+class API < EM::Connection
     def initialize
         super
     end

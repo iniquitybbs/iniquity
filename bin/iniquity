@@ -20,20 +20,20 @@ EM.run do
     config.each_section do |section|
 
         if section == "terminal"
-            if config["terminal"]["enabled"] == "yes"
+            if config[section]["enabled"] == "yes"
                 EM.start_server "0.0.0.0", config[section]["port"], Terminal
             end
         end
 
         if section == "web"
-            if config["web"]["enabled"] == "yes"
+            if config[section]["enabled"] == "yes"
                 EM.start_server "0.0.0.0", config[section]["port"], Web
             end
         end
 
-        if section == "rest"
-            if config["rest"]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], Rest
+        if section == "api"
+            if config[section]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", config[section]["port"], API
             end
         end
 

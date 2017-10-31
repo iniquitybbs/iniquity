@@ -15,7 +15,15 @@ class Answer
         self.config = IniFile.load(ENV["INIQUITY_HOME"] + "/answer/answer.ini")
     end
 
-    self.on_connection {
+    self.terminal {
+
+    }
+
+    self.web {
+
+    }
+
+    self.api {
 
     }
 end
