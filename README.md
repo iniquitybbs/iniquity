@@ -6,6 +6,8 @@
 
 [![Build Status](https://travis-ci.org/iniquitybbs/iniquity.png?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
 
+[![Code Climate](https://codeclimate.com/github/iniquitybbs/iniquity/badges/gpa.svg)](https://codeclimate.com/github/iniquitybbs/iniquity)
+
 # Iniquity
 A re-imagining of the iconic BBS software.
 
