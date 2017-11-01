@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
-</p>
-
 [![Code Climate](https://codeclimate.com/github/dwyl/esta/badges/gpa.png)](https://codeclimate.com/github/iniquitybbs/iniquity)
 
 [![Build Status](https://travis-ci.org/iniquitybbs/iniquity.png?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
@@ -12,6 +8,10 @@
 # Iniquity
 A re-imagining of the iconic BBS software.
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
+</p>
+
 ## Synopsis
 This software is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking. I'd like to have the
 core mechanics ironed out before I elaborate on other features.
@@ -20,13 +20,13 @@ Install Iniquity...
 
     gem install iniquity
 
-Install the default system to get started...
+Install the "simplebbs" ipm package to get started...
 
-    ipm iq-system-default
+    ipm simplebbs
 
 Start Iniquity...
 
-    iniquity iq-system-default
+    iniquity ./simplebbs
 
 Connect to your BBS over Telnet...
 
@@ -48,13 +48,13 @@ Mostly rough notes at this point. I will expand on these ideas, turning this por
 2. Every module should be treated as a unique component. Each module component contains proper
 instructions for its functionality. Every module can be displayed over a Terminal or Web interface.
 
-## Legacy Backlog
+### Legacy Backlog
 As I read about Iniquity, its users, its sysops and past attempts to revive the project, I actively
 1. Have multiple WFC screens.
 2. Allow for custom WFC screens (use tab to rotate through them)
 3.
 
-## Idea Scratch Pad
+### Feature Thoughts...
 
 1. Rumors that allow anonymous replies as well. That could be fun. :)
 2. I like x/84 and how you can use tags for "message" areas.
