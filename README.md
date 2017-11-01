@@ -8,7 +8,7 @@
 # Iniquity
 A re-imagining of the iconic BBS software.
 
-<p align="center">
+<p align="left">
     <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
