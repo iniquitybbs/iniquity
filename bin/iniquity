@@ -1,13 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
-BEGIN {
-    unless ARGV[0] || ENV["INIQUITY_SYSTEM"]
-        abort "Please set the INIQUITY_SYSTEM environment variable."
-    end
-}
-
-SYSTEM = ARGV[0] || ENV["INIQUITY_SYSTEM"]
+SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
 ENV["INIQUITY_SYSTEM"] = SYSTEM
 
 require "inifile"

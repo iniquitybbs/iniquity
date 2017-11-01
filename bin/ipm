@@ -1,19 +1,11 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
-BEGIN {
-    unless ARGV[0] || ENV["INIQUITY_SYSTEM"]
-        abort "Please set the INIQUITY_SYSTEM environment variable."
-    end
-}
-
-HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"]
+HOME = ENV["INIQUITY_SYSTEM"] || Dir.pwd
 ENV["INIQUITY_SYSTEM"] = HOME
 
 require "inifile"
-require "socksify"
 require "github_api"
-require "json"
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
