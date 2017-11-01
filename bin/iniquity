@@ -7,14 +7,17 @@ BEGIN {
     end
 }
 
-HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"] || "."
+HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"]
 ENV["INIQUITY_SYSTEM"] = HOME
 
 require "inifile"
 require "thin"
 require "socksify"
 
-CONFIG = IniFile.load(HOME+ "/iniquity.ini")
+if File.exists?(HOME+ "/iniquity.ini")
+    CONFIG = IniFile.load(HOME+ "/iniquity.ini")
+else
+    abort "An Iniquity system must have an iniquity.ini file."
 
 if CONFIG["tor"]["enabled"] == "yes"
     TCPSocket::socks_server = CONFIG["tor"]["address"]
