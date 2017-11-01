@@ -12,7 +12,7 @@ A re-imagining of the iconic BBS software.
     <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
-## Synopsis
+## Getting Started
 This software is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking. I'd like to have the
 core mechanics ironed out before I elaborate on other features.
 
