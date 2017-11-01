@@ -2,18 +2,24 @@
 # encoding: UTF-8
 
 BEGIN {
-    unless ARGV[0] || ENV["INIQUITY_HOME"]
-        abort "Please set the INIQUITY_HOME environment variable."
+    unless ARGV[0] || ENV["INIQUITY_SYSTEM"]
+        abort "Please set the INIQUITY_SYSTEM environment variable."
     end
 }
 
-HOME = ARGV[0] || ENV["INIQUITY_HOME"] || "."
-ENV["INIQUITY_HOME"] = HOME
+HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"] || "."
+ENV["INIQUITY_SYSTEM"] = HOME
 
 require "inifile"
 require "thin"
+require "socksify"
 
-trap("INT") {exit}
+CONFIG = IniFile.load(HOME+ "/iniquity.ini")
+
+if CONFIG["tor"]["enabled"] == "yes"
+    TCPSocket::socks_server = CONFIG["tor"]["address"]
+    TCPSocket::socks_port = CONFIG["tor"]["port"]
+end
 
 class Telnet < EM::Connection
 
@@ -73,8 +79,6 @@ end
 
 EM.run do
 
-    config = IniFile.load(HOME+ "/iniquity.ini")
-
     ### Events
 
     EM.add_periodic_timer(15) do
@@ -83,24 +87,26 @@ EM.run do
 
     ### Services
 
-    config.each_section do |section|
+    CONFIG.each_section do |section|
 
         if section == "telnet"
-            if config[section]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], Telnet
+            if CONFIG[section]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", CONFIG[section]["port"], Telnet
             end
         end
 
         if section == "http"
-            if config[section]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], Http
+            if CONFIG[section]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", CONFIG[section]["port"], Http
             end
         end
 
         if section == "rest"
-            if config[section]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], Rest
+            if CONFIG[section]["enabled"] == "yes"
+                EM.start_server "0.0.0.0", CONFIG[section]["port"], Rest
             end
         end
     end
 end
+
+trap("INT") {exit}
