@@ -10,8 +10,7 @@
 A re-imagining of the iconic BBS software.
 
 ## Synopsis
-Iniquity is in early alpha. This package is highly experimental. Right now only the telnet service really works. Soon I'll have
-modules loading and then things will really get cooking.
+Iniquity is in early alpha. This package is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking.
 
 Install Iniquity...
 
