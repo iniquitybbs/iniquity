@@ -18,12 +18,14 @@ require "json"
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
 packages = Github.repos.list user: 'iniquitybbs'
-total = []
+
+iq = []
+
 packages.each do |package|
     if package.name.match(/^iq/)
-        total.push(package.name)
+        iq.push(package.name)
         puts package.name
     end
 end
 
-puts "\n#{total.length} total packages available.\n\n"
+puts "\n#{iq.length} total packages available.\n\n"

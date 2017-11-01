@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
     s.email       = "ispyhumanfly@gmail.com"
     s.require_paths = ["./examples", "./docs"]
     s.executables << "iniquity"
+    s.executables << "ipm"
     s.homepage    = "https://iniquitybbs.github.io"
     s.metadata = { "issue_tracker" => "https://github.com/iniquitybbs/iniquity/issues" }
     s.license     = "MIT"
