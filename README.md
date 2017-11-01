@@ -2,11 +2,12 @@
     <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
-[![Gem Version](https://badge.fury.io/rb/iniquity.png)](https://badge.fury.io/rb/iniquity)
+[![Code Climate](https://codeclimate.com/github/dwyl/esta/badges/gpa.png)](https://codeclimate.com/github/iniquitybbs/iniquity)
 
 [![Build Status](https://travis-ci.org/iniquitybbs/iniquity.png?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
 
-[![Code Climate](https://codeclimate.com/github/iniquitybbs/iniquity/badges/gpa.svg)](https://codeclimate.com/github/iniquitybbs/iniquity)
+[![Gem Version](https://badge.fury.io/rb/iniquity.png)](https://badge.fury.io/rb/iniquity)
+
 
 # Iniquity
 A re-imagining of the iconic BBS software.
