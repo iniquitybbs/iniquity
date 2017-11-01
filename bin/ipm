@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+BEGIN {
+    unless ARGV[0] || ENV["INIQUITY_SYSTEM"]
+        abort "Please set the INIQUITY_SYSTEM environment variable."
+    end
+}
+
+HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"]
+ENV["INIQUITY_SYSTEM"] = HOME
+
+require "inifile"
+require "thin"
+require "socksify"
+
+puts "ipm - The Iniquity Package Manager."
