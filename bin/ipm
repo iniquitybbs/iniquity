@@ -11,7 +11,19 @@ HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"]
 ENV["INIQUITY_SYSTEM"] = HOME
 
 require "inifile"
-require "thin"
 require "socksify"
+require "github_api"
+require "json"
 
-puts "ipm - The Iniquity Package Manager."
+puts "\nipm - The Iniquity Package Manager.\n\n"
+
+packages = Github.repos.list user: 'iniquitybbs'
+total = []
+packages.each do |package|
+    if package.name.match(/^iq/)
+        total.push(package.name)
+        puts package.name
+    end
+end
+
+puts "\n#{total.length} total packages available.\n\n"

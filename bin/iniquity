@@ -7,8 +7,8 @@ BEGIN {
     end
 }
 
-HOME = ARGV[0] || ENV["INIQUITY_SYSTEM"]
-ENV["INIQUITY_SYSTEM"] = HOME
+SYSTEM = ARGV[0] || ENV["INIQUITY_SYSTEM"]
+ENV["INIQUITY_SYSTEM"] = SYSTEM
 
 require "inifile"
 require "thin"
@@ -72,8 +72,8 @@ end
 
 ### Iniquity
 
-if File.exists?(HOME+ "/iniquity.ini")
-    CONFIG = IniFile.load(HOME+ "/iniquity.ini")
+if File.exists?(SYSTEM+ "/iniquity.ini")
+    CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
     abort "An Iniquity system must have an iniquity.ini file."
 end
