@@ -14,17 +14,6 @@ require "inifile"
 require "thin"
 require "socksify"
 
-if File.exists?(HOME+ "/iniquity.ini")
-    CONFIG = IniFile.load(HOME+ "/iniquity.ini")
-else
-    abort "An Iniquity system must have an iniquity.ini file."
-end
-
-if CONFIG["tor"]["enabled"] == "yes"
-    TCPSocket::socks_server = CONFIG["tor"]["address"]
-    TCPSocket::socks_port = CONFIG["tor"]["port"]
-end
-
 class Telnet < EM::Connection
 
     def initialize
@@ -34,7 +23,7 @@ class Telnet < EM::Connection
 
     def post_init
 
-        puts "-- Someone connected to the Iniquity..."
+        puts "-- Someone connected to Iniquity..."
 
         #IO.readlines("./modules/welcome.ans").each do |line|
         #    send_data line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
@@ -53,7 +42,7 @@ class Telnet < EM::Connection
     end
 
     def unbind
-        puts "-- Someone disconnected from the Iniquity..."
+        puts "-- Someone disconnected from Iniquity..."
     end
 end
 
@@ -79,6 +68,19 @@ class Rest < EM::Connection
     end
     def unbind
     end
+end
+
+### Iniquity
+
+if File.exists?(HOME+ "/iniquity.ini")
+    CONFIG = IniFile.load(HOME+ "/iniquity.ini")
+else
+    abort "An Iniquity system must have an iniquity.ini file."
+end
+
+if CONFIG["tor"]["enabled"] == "yes"
+    TCPSocket::socks_server = CONFIG["tor"]["address"]
+    TCPSocket::socks_port = CONFIG["tor"]["port"]
 end
 
 EM.run do
