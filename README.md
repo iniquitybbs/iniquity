@@ -10,13 +10,14 @@
 A re-imagining of the iconic BBS software.
 
 ## Synopsis
-Iniquity is in early alpha. This package is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking.
+This software is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking. I'd like to have the
+core mechanics ironed out before I elaborate on other features.
 
 Install Iniquity...
 
     gem install iniquity
 
-Clone a system package to get started...
+Clone the default system to get started...
 
     git clone https://iniquitybbs.github.com/iq-system-default
 
@@ -24,19 +25,19 @@ Start Iniquity...
 
     iniquity iq-system-default
 
-Connect to your BBS with a Telnet...
+Connect to your BBS over Telnet...
 
     telnet localhost 3023
 
-Connect to your BBS over the Http...
+Connect to your BBS over Http...
 
     http://localhost:3080
 
-Access BBS resources using Iniquity's RESTful API...
+Retrieve JSON resources over Iniquity's RESTful service...
 
     http://localhost:3082/v0/getOnlineUsers.json
 
-## White Paper
+## Public Scratch Pad
 Mostly rough notes at this point. I will expand on these ideas, turning this portion of the README into a formal whitepaper, or design document...
 
 ### Core Concepts
