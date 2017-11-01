@@ -20,4 +20,4 @@ repositories.each do |repo|
     end
 end
 
-puts "\nTotal packages: #{packages.length}\n\n"
+puts "\nTotal ipm packages: #{packages.length}\n\n"
