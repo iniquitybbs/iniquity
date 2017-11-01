@@ -1,5 +1,4 @@
-
-require "rubygems"
+# encoding: UTF-8
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"

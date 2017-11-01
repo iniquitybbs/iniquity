@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 source "http://rubygems.org"
 
 gemspec
@@ -10,4 +12,5 @@ gem "highline"
 gem "thin"
 gem "inifile"
 gem "rspec"
-
+gem "git"
+gem "socksify"
