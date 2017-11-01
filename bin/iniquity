@@ -34,7 +34,7 @@ class Telnet < EM::Connection
 
     def post_init
 
-        puts "-- Someone connected to the Iniquity Telnet service."
+        puts "-- Someone connected to the Iniquity..."
 
         #IO.readlines("./modules/welcome.ans").each do |line|
         #    send_data line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
@@ -53,7 +53,7 @@ class Telnet < EM::Connection
     end
 
     def unbind
-        puts "-- Someone disconnected from the Iniquity Telnet service."
+        puts "-- Someone disconnected from the Iniquity..."
     end
 end
 

@@ -10,25 +10,26 @@
 A re-imagining of the iconic BBS software.
 
 ## Synopsis
-Iniquity is in early alpha. This package is highly experimental, and,should only be used by the most daring....
+Iniquity is in early alpha. This package is highly experimental. Right now only the telnet service really works. Soon I'll have
+modules loading and then things will really get cooking.
 
 Install Iniquity...
 
     gem install iniquity
 
+Clone a system package to get started...
+
+    git clone https://iniquitybbs.github.com/iq-system-default
+
 Start Iniquity...
 
-    iniquity /path/to/bbs
+    iniquity iq-system-default
 
-Connect to your BBS with a Terminal...
+Connect to your BBS with a Telnet...
 
     telnet localhost 3023
 
-or
-
-    ssh anonymous@localhost 3022
-
-Connect to your BBS over the Web...
+Connect to your BBS over the Http...
 
     http://localhost:3080
 
