@@ -18,31 +18,33 @@ trap("INT") {exit}
 
 EM.run do
 
-    ### WFC Screen
+    config = IniFile.load(HOME+ "/iniquity.ini")
+
+    ### Events
 
     EM.add_periodic_timer(15) do
-        puts "Iniquity: WFC Coming Soon!"
+        puts "Event: Nothing to see here..."
     end
 
-    config = IniFile.load(HOME+ "/iniquity.ini")
+    ### Services
 
     config.each_section do |section|
 
-        if section == "terminal"
+        if section == "telnet"
             if config[section]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], Terminal
+                EM.start_server "0.0.0.0", config[section]["port"], Telnet
             end
         end
 
-        if section == "web"
+        if section == "http"
             if config[section]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], Web
+                EM.start_server "0.0.0.0", config[section]["port"], Http
             end
         end
 
-        if section == "api"
+        if section == "rest"
             if config[section]["enabled"] == "yes"
-                EM.start_server "0.0.0.0", config[section]["port"], API
+                EM.start_server "0.0.0.0", config[section]["port"], Rest
             end
         end
     end

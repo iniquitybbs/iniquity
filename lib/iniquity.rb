@@ -9,17 +9,16 @@ BEGIN {
 
 require "thin"
 
-class Terminal < EM::Connection
+class Telnet < EM::Connection
 
     def initialize
         super
-        send_data "\nIniquity v3.0.0-alpha1 (c) #{DateTime.now.year} Dan Stephenson [ispyhumanfly]\n"
-        send_data "\nEncoding: UTF_8\n\n"
+        send_data "\nIniquity BBS 0.0.3 - Telnet/UTF_8\n"
     end
 
     def post_init
 
-        puts "-- Someone connected to the Iniquity Terminal service."
+        puts "-- Someone connected to the Iniquity Telnet service."
 
         #IO.readlines("./modules/welcome.ans").each do |line|
         #    send_data line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
@@ -38,11 +37,11 @@ class Terminal < EM::Connection
     end
 
     def unbind
-        puts "-- Someone disconnected from the Iniquity Terminal service."
+        puts "-- Someone disconnected from the Iniquity Telnet service."
     end
 end
 
-class Web < EM::Connection
+class Http < EM::Connection
     def initialize
         super
     end
@@ -54,7 +53,7 @@ class Web < EM::Connection
     end
 end
 
-class API < EM::Connection
+class Rest < EM::Connection
     def initialize
         super
     end

@@ -3,9 +3,9 @@ require "rubygems"
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.2"
-    s.summary     = "A re-imagining of the iconic BBS software."
-    s.description = "Iniquity is a bulletin board software package written in Ruby."
+    s.version     = "0.0.3"
+    s.summary     = "Iniquity BBS"
+    s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]
     s.email       = "ispyhumanfly@gmail.com"
     s.require_paths = ["./bin", "./lib", "./examples", "./docs"]
