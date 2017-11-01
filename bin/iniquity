@@ -72,7 +72,7 @@ end
 
 ### Iniquity
 
-if File.exists?(SYSTEM+ "/iniquity.ini")
+if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
     abort "An Iniquity system must have an iniquity.ini file."
