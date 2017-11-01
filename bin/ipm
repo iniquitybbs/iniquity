@@ -15,12 +15,17 @@ require "socksify"
 require "github_api"
 require "json"
 
-puts "ipm - The Iniquity Package Manager.\n\n"
+puts "\nipm - The Iniquity Package Manager.\n\n"
 
 repositories = Github.repos.list user: "iniquitybbs"
 
+packages = []
+
 repositories.each do |repo|
-    puts repo.name
+    if repo.name.match(/^ip/)
+        puts repo.name
+        packages.push(repo.name_full)
+    end
 end
 
-puts "#{packages.length} total packages.\n"
+puts "\nTotal packages: #{packages.length}\n\n"
