@@ -20,13 +20,13 @@ Install Iniquity...
 
     gem install iniquity
 
-Install the "simplebbs" ipm package to get started...
+Install the "examples" ipm package to help get started...
 
-    ipm simplebbs
+    ipm examples
 
 Start Iniquity...
 
-    iniquity ./simplebbs
+    iniquity examples
 
 Connect to your BBS over Telnet...
 
@@ -40,7 +40,7 @@ Retrieve JSON resources over Iniquity's RESTful service...
 
     http://localhost:3082/v0/getOnlineUsers.json
 
-## Public Scratch Pad
+## Scratch Pad
 Mostly rough notes at this point. I will expand on these ideas, turning this portion of the README into a formal whitepaper, or design document...
 
 ### Core Concepts
