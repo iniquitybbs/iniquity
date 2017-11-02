@@ -7,12 +7,13 @@
 # Iniquity
 A re-imagining of the iconic BBS software.
 
-<p align="left">
-    <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
-</p>
 
 <p align="left">
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
+</p>
+
+<p align="left">
+    <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
 ## Getting Started
