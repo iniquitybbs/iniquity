@@ -53,6 +53,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
+    rubyzip (1.2.1)
     socksify (1.7.1)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -74,6 +75,7 @@ DEPENDENCIES
   rake
   redis
   rspec
+  rubyzip
   socksify
   thin
 
