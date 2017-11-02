@@ -11,6 +11,10 @@ A re-imagining of the iconic BBS software.
     <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
+<p align="left">
+    <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
+</p>
+
 ## Getting Started
 This software is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking. I'd like to have the
 core mechanics ironed out before I elaborate on other features.
