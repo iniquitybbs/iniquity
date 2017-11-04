@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
-#(*
+
 #-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
 # `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
 #-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
@@ -16,12 +16,11 @@
 #      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
 #   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%#$
 #==============================================================================
-#   t h e    i n i q u i t y    b u l l e t i n    b o a r d    s y s t e m
+#   t h e    i n i q u i t y    p a c k a g e    m a n a g e r
 #==============================================================================
-#*)
 
-HOME = ENV["INIQUITY_SYSTEM"] || Dir.pwd
-ENV["INIQUITY_SYSTEM"] = HOME
+SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
+ENV["INIQUITY_SYSTEM"] = SYSTEM
 
 require "inifile"
 require "github_api"
