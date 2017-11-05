@@ -7,7 +7,6 @@
 # Iniquity
 A re-imagining of the iconic BBS software.
 
-
 <p align="left">
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
 </p>
@@ -16,13 +15,23 @@ A re-imagining of the iconic BBS software.
     <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
-## Getting Started
-This software is highly experimental. Right now only the telnet service really works. Soon I'll have modules loading and then things will really get cooking. I'd like to have the
-core mechanics ironed out before I elaborate on other features.
+## Key Features
+1. Cross-platform. Runs anywhere Ruby runs.
+2. Iniquity has been re-imagined as modular system.
+    - Create your BBS using Iniquity's 'ipm' packages.
+    - Install/customize/remove ipm packages easily.
 
-Install Iniquity...
+## Getting Started
+This software is highly experimental. Right now only the telnet service really works.
+
+Install Iniquity from RubyGems...
 
     gem install iniquity
+
+Create a directory for your new BBS and initialize it...
+
+    mkdir MyBBS ; cd MyBBS
+    iniquity init
 
 Install the "examples" ipm package to help get started...
 
@@ -40,34 +49,12 @@ Connect to your BBS over Http...
 
     http://localhost:3080
 
-Retrieve JSON resources over Iniquity's RESTful service...
+Retrieve BBS resources from Iniquity's RESTful service...
 
     http://localhost:3082/v0/getOnlineUsers.json
 
-## Scratch Pad
-Mostly rough notes at this point. I will expand on these ideas, turning this portion of the README into a formal whitepaper, or design document...
-
-### Core Concepts
-1. A modern BBS should be as easy to setup for the novice sysop as it is for the novice user.
-2. Every module should be treated as a unique component. Each module component contains proper
-instructions for its functionality. Every module can be displayed over a Terminal or Web interface.
-
-### Legacy Backlog
-As I read about Iniquity, its users, its sysops and past attempts to revive the project, I actively
-1. Have multiple WFC screens.
-2. Allow for custom WFC screens (use tab to rotate through them)
-3.
-
-### Feature Thoughts...
-
-1. Rumors that allow anonymous replies as well. That could be fun. :)
-2. I like x/84 and how you can use tags for "message" areas.
-3. Sysop pagers should do things like send emails or push notifications to phones, not just play ansi music in a terminal...
-4. The ability to "share" messages/files. (The ability for users to make sure that what they post/upload/download is private, as a converse.)
-    - This would mean that users could connect their social media accounts to the bbs.
-    - This would also mean that users could opt out of message sharing or "keep private" any messages/files/information on the bbs that includes their name.
-5. A sysop/developer should be able to develop Iniquity modules in a "standalone mode". Basically, how it runs in their own environment outside of the bbs is the same as if it was connected.
-    -  Something like `iniquity /path/to/module/dir --standalone`
+## Issues
+https://github.com/iniquitybbs/iniquity/issues
 
 ## License
 MIT
