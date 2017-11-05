@@ -84,10 +84,12 @@ end
 
 ### Iniquity
 
+puts "\niniquity - The Iniquity Bulletin Board System.\n\n"
+
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
-    abort "An Iniquity system must have an iniquity.ini file."
+    abort "An Iniquity system must have an iniquity.ini file.\n"
 end
 
 if CONFIG["tor"]["enabled"] == "yes"

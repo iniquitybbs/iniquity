@@ -24,45 +24,36 @@ ENV["INIQUITY_SYSTEM"] = SYSTEM
 
 require "inifile"
 require "github_api"
-require "zip"
 require "highline"
 require 'net/http'
+require "zip"
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
-repositories = Github.repos.list user: "iniquitybbs"
+if File.exists?(SYSTEM + "/iniquity.ini")
+    CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
+else
+    abort "An Iniquity system must have an iniquity.ini file.\n"
+end
 
 packages = []
 
-repositories.each do |repo|
-    if repo.name.match(/^ip/)
-        puts repo.name
-        packages.push(repo.name_full)
+if CONFIG["ipm"]["sources"]
+    CONFIG["ipm"]["sources"].split(",").each do |source|
+
+        repositories = Github.repos.list user: "#{source}"
+
+        repositories.each do |pkg|
+            if pkg.name.match(/^ip/)
+                puts pkg.name
+                packages.push(pkg)
+            end
+        end
     end
 end
 
-# Must be somedomain.net instead of somedomain.net/, otherwise, it will throw exception.
-Net::HTTP.start("somedomain.net") do |http|
-    resp = http.get("/flv/sample/sample.flv")
-    open("sample.flv", "wb") do |file|
-        file.write(resp.body)
-    end
+packages.each do |ipm|
+    puts ipm.name
+    puts ipm.description
+    puts "https://github.com/#{ipm.full_name}/archive/master.zip"
 end
-puts "Done."
-
-Zip::File.open('foo.zip') do |zip_file|
-    # Handle entries one by one
-    zip_file.each do |entry|
-      # Extract to file/directory/symlink
-      puts "Extracting #{entry.name}"
-      entry.extract(dest_file)
-
-      # Read into memory
-      content = entry.get_input_stream.read
-    end
-
-    # Find specific entry
-    entry = zip_file.glob('*.csv').first
-    puts entry.get_input_stream.read
-  end
-puts "\nTotal ipm packages: #{packages.length}\n\n"

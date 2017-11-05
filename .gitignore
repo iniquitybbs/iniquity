@@ -3,3 +3,4 @@ dump.*
 *.bak
 *.tmp
 iniquity*.gem
+iniquity.ini
