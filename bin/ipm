@@ -26,6 +26,7 @@ require "inifile"
 require "github_api"
 require "zip"
 require "highline"
+require 'net/http'
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
@@ -40,7 +41,6 @@ repositories.each do |repo|
     end
 end
 
-require 'net/http'
 # Must be somedomain.net instead of somedomain.net/, otherwise, it will throw exception.
 Net::HTTP.start("somedomain.net") do |http|
     resp = http.get("/flv/sample/sample.flv")
