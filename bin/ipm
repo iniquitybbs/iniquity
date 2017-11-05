@@ -30,19 +30,13 @@ require "zip"
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
-if ARGV[0] && ARGV[0] == "init"
-    new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
-    new_system_file.puts "[profile]\nname=NewBBS\n"
-    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
-    new_system_file.close
-end
-
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
     abort "An Iniquity system must have an iniquity.ini file.\n"
 end
 
+# Find all available ipm packages across all sources...
 packages = []
 
 if CONFIG["ipm"]["sources"]
@@ -58,9 +52,45 @@ if CONFIG["ipm"]["sources"]
     end
 end
 
-packages.each do |ipm|
-    puts ipm.name
-    puts ipm.description
-    puts "https://github.com/#{ipm.full_name}/archive/master.zip"
-    puts ""
+# If "init" passed...
+if ARGV[0] && ARGV[0] == "init"
+    new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
+    new_system_file.puts "[profile]\nname=NewBBS\n"
+    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
+    new_system_file.close
+end
+
+# If "install" passed
+if ARGV[0] && ARGV[0] == "install"
+
+    ARGV.shift
+
+    if ARGV[0]
+        ARGV.each do |install|
+            packages.each do |ipm|
+
+                if install == ipm.name
+                    Net::HTTP.start("github.com") do |http|
+                        response = http.get("/#{ipm.full_name}/archive/master.zip")
+                        installed = File.new("#{ipm.name}.zip", "w")
+                        installed.print(response.body)
+                        installed.close
+                    end
+                    puts "Installed #{ipm.name}\n\n"
+                end
+            end
+        end
+    else
+        abort "You must specify an ipm package name to install.\n"
+    end
+end
+
+# If no options dipslay the list of packages...
+unless ARGV[0]
+    packages.each do |ipm|
+        puts ipm.name
+        puts ipm.description
+        puts "https://github.com/#{ipm.full_name}/archive/master.zip"
+        puts ""
+    end
 end
