@@ -30,6 +30,13 @@ require "zip"
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
+if ARGV[0] && ARGV[0] == "init"
+    new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
+    new_system_file.puts "[profile]\nname=NewBBS\n"
+    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
+    new_system_file.close
+end
+
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
@@ -45,7 +52,6 @@ if CONFIG["ipm"]["sources"]
 
         repositories.each do |pkg|
             if pkg.name.match(/^ip/)
-                puts pkg.name
                 packages.push(pkg)
             end
         end
@@ -56,4 +62,5 @@ packages.each do |ipm|
     puts ipm.name
     puts ipm.description
     puts "https://github.com/#{ipm.full_name}/archive/master.zip"
+    puts ""
 end

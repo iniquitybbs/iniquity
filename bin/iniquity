@@ -86,6 +86,13 @@ end
 
 puts "\niniquity - The Iniquity Bulletin Board System.\n\n"
 
+if ARGV[0] && ARGV[0] == "init"
+    new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
+    new_system_file.puts "[profile]\nname=NewBBS\n"
+    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
+    new_system_file.close
+end
+
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
