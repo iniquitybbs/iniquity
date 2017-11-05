@@ -30,12 +30,12 @@ class Telnet < EM::Connection
 
     def initialize
         super
-        send_data "\nIniquity BBS 0.0.9 - Telnet/UTF_8\n"
+        send_data "\nIniquity BBS 0.0.10 - Telnet/UTF_8\n"
     end
 
     def post_init
 
-        puts "-- Someone connected to Iniquity..."
+        puts "iniquity - Someone connected to Iniquity..."
 
         #IO.readlines("./modules/welcome.ans").each do |line|
         #    send_data line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
@@ -54,7 +54,7 @@ class Telnet < EM::Connection
     end
 
     def unbind
-        puts "-- Someone disconnected from Iniquity..."
+        puts "iniquity - Someone disconnected from Iniquity..."
     end
 end
 

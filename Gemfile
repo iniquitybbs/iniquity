@@ -16,4 +16,3 @@ gem "git"
 gem "github_api"
 gem "socksify"
 gem "rubyzip"
-

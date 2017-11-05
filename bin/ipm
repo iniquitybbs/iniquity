@@ -25,12 +25,12 @@ ENV["INIQUITY_SYSTEM"] = SYSTEM
 require "inifile"
 require "github_api"
 require "highline"
-require 'net/http'
+require "open-uri"
 require "zip"
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
-# If "init" passed...
+# If "init" passed.
 if ARGV[0] && ARGV[0] == "init"
     new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
     new_system_file.puts "[profile]\nname=NewBBS\n"
@@ -61,7 +61,7 @@ if CONFIG["ipm"]["sources"]
     end
 end
 
-# If "install" passed
+# If "install" passed.
 if ARGV[0] && ARGV[0] == "install"
 
     ARGV.shift
@@ -71,12 +71,8 @@ if ARGV[0] && ARGV[0] == "install"
             packages.each do |ipm|
 
                 if install == ipm.name
-                    Net::HTTP.start("github.com") do |http|
-                        response = http.get("/#{ipm.full_name}/archive/master.zip")
-                        installed = File.new("#{ipm.name}.zip", "w")
-                        installed.print(response.body)
-                        installed.close
-                    end
+                    download = open("https://github.com/#{ipm.full_name}/archive/master.zip")
+                    IO.copy_stream(download, SYSTEM + "/#{ipm.name}.zip")
                     puts "ipm - Installed #{ipm.name}\n\n"
                 end
             end
@@ -86,7 +82,7 @@ if ARGV[0] && ARGV[0] == "install"
     end
 end
 
-# If no options dipslay the list of packages...
+# If no options passed.
 unless ARGV[0]
     packages.each do |ipm|
         puts ipm.name
