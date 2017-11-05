@@ -30,10 +30,19 @@ require "zip"
 
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
+# If "init" passed...
+if ARGV[0] && ARGV[0] == "init"
+    new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
+    new_system_file.puts "[profile]\nname=NewBBS\n"
+    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
+    new_system_file.close
+    abort "ipm - Initialized directory as a new Iniquity BBS.\n\n"
+end
+
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
-    abort "An Iniquity system must have an iniquity.ini file.\n"
+    abort "ipm - An Iniquity system must have an iniquity.ini file.\n\n"
 end
 
 # Find all available ipm packages across all sources...
@@ -52,14 +61,6 @@ if CONFIG["ipm"]["sources"]
     end
 end
 
-# If "init" passed...
-if ARGV[0] && ARGV[0] == "init"
-    new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
-    new_system_file.puts "[profile]\nname=NewBBS\n"
-    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
-    new_system_file.close
-end
-
 # If "install" passed
 if ARGV[0] && ARGV[0] == "install"
 
@@ -76,12 +77,12 @@ if ARGV[0] && ARGV[0] == "install"
                         installed.print(response.body)
                         installed.close
                     end
-                    puts "Installed #{ipm.name}\n\n"
+                    puts "ipm - Installed #{ipm.name}\n\n"
                 end
             end
         end
     else
-        abort "You must specify an ipm package name to install.\n"
+        abort "ipm - You must specify an ipm package name to install.\n\n"
     end
 end
 
