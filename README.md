@@ -1,8 +1,11 @@
 [![Code Climate](https://codeclimate.com/github/dwyl/esta/badges/gpa.png)](https://codeclimate.com/github/iniquitybbs/iniquity)
 
+[![Dependency Status](https://gemnasium.com/badges/github.com/iniquitybbs/iniquity.svg)](https://gemnasium.com/github.com/iniquitybbs/iniquity)
+
 [![Build Status](https://travis-ci.org/iniquitybbs/iniquity.png?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
 
 [![Gem Version](https://badge.fury.io/rb/iniquity.png)](https://badge.fury.io/rb/iniquity)
+
 
 # Iniquity
 A re-imagining of the iconic BBS software.

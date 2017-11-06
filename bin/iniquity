@@ -84,7 +84,7 @@ class Rest < EM::Connection
     end
 end
 
-### Iniquity
+### Iniquity BBS
 
 puts "\niniquity - The Iniquity Bulletin Board System.\n\n"
 
