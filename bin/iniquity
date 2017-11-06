@@ -19,6 +19,8 @@
 #   t h e    i n i q u i t y    b u l l e t i n    b o a r d    s y s t e m
 #==============================================================================
 
+trap("INT") {exit}
+
 SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
 ENV["INIQUITY_SYSTEM"] = SYSTEM
 
@@ -137,5 +139,3 @@ EM.run do
         end
     end
 end
-
-trap("INT") {exit}

@@ -19,6 +19,8 @@
 #   t h e    i n i q u i t y    p a c k a g e    m a n a g e r
 #==============================================================================
 
+trap("INT") {exit}
+
 SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
 ENV["INIQUITY_SYSTEM"] = SYSTEM
 
@@ -71,8 +73,20 @@ if ARGV[0] && ARGV[0] == "install"
             packages.each do |ipm|
 
                 if install == ipm.name
+
+                    # Need to wrap this sequence in a try/catch of some kind...
+
                     download = open("https://github.com/#{ipm.full_name}/archive/master.zip")
                     IO.copy_stream(download, SYSTEM + "/#{ipm.name}.zip")
+
+                    Zip::File.open(SYSTEM + "/#{ipm.name}.zip") do |zip_file|
+                        zip_file.each do |entry|
+                            entry.extract(SYSTEM + "/#{entry.name}")
+                        end
+                    end
+
+                    FileUtils.mv SYSTEM + "/#{ipm.name}-master", SYSTEM + "/#{ipm.name}"
+                    FileUtils.rm SYSTEM + "/#{ipm.name}.zip"
                     puts "ipm - Installed #{ipm.name}\n\n"
                 end
             end
