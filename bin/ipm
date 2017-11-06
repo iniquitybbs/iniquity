@@ -48,7 +48,7 @@ else
 end
 
 # Find all available ipm packages across all sources...
-packages = []
+available_packages = []
 
 if CONFIG["ipm"]["sources"]
     CONFIG["ipm"]["sources"].split(",").each do |source|
@@ -57,11 +57,20 @@ if CONFIG["ipm"]["sources"]
 
         repositories.each do |pkg|
             if pkg.name.match(/^ip/)
-                packages.push(pkg)
+                available_packages.push(pkg)
             end
         end
     end
 end
+
+installed_packages = []
+
+Dir.chdir SYSTEM
+Dir.glob('*').select { |pkg|
+    if File.directory? pkg
+        installed_packages.push pkg
+    end
+}
 
 # If "install" passed.
 if ARGV[0] && ARGV[0] == "install"
@@ -70,7 +79,7 @@ if ARGV[0] && ARGV[0] == "install"
 
     if ARGV[0]
         ARGV.each do |install|
-            packages.each do |ipm|
+            available_packages.each do |ipm|
 
                 if install == ipm.name
 
@@ -98,10 +107,23 @@ end
 
 # If no options passed.
 unless ARGV[0]
-    packages.each do |ipm|
-        puts ipm.name
-        puts ipm.description
-        puts "https://github.com/#{ipm.full_name}/archive/master.zip"
-        puts ""
+
+    if available_packages.length > 0
+        puts "ipm - Packages available for installation.\n\n"
+
+        available_packages.each do |ipm|
+            puts ipm.name
+            puts ipm.description
+            #puts "https://github.com/#{ipm.full_name}/archive/master.zip"
+            puts ""
+        end
+    end
+
+    if installed_packages.length > 0
+        puts "ipm - Packages currently installed.\n\n"
+
+        installed_packages.each do |ipm|
+            puts ipm
+        end
     end
 end
