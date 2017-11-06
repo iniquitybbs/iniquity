@@ -82,6 +82,7 @@ if ARGV[0] && ARGV[0] == "install"
             available_packages.each do |ipm|
 
                 if install == ipm.name
+                    next if Dir.exists? SYSTEM + "/#{ipm.name}"
 
                     # Need to wrap this sequence in a try/catch of some kind...
 
@@ -108,10 +109,11 @@ end
 # If "uninstall" passed.
 if ARGV[0] && ARGV[0] == "uninstall"
 
+    #ARGV.shift
+
     if ARGV[0]
         ARGV.each do |uninstall|
             abort "ipm - Sorry, uninstall doesn't work yet.\n\n"
-
         end
     end
 end
