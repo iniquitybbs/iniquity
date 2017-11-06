@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
     s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]
     s.email       = "ispyhumanfly@gmail.com"
-    s.require_paths = ["./examples", "./docs"]
+    s.require_paths = ["./doc"]
     s.executables << "iniquity"
     s.executables << "ipm"
     s.homepage    = "https://iniquitybbs.github.io"
