@@ -21,7 +21,6 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has 
 2. Iniquity has been re-imagined as a collection of packages.
     - Create and extend your BBS using Iniquity's packaging system.
     - Install/customize/remove popular BBS packages easily.
-        - IPM has oneliners, rumors, file sharing, message posting, etc...
 
 ## Getting Started
 
