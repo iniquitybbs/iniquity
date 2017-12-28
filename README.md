@@ -18,12 +18,15 @@ A re-imagining of the iconic BBS software.
 
 ## Key Features
 1. Cross-platform. Runs anywhere Ruby runs.
-2. Iniquity has been re-imagined as modular system.
+2. Iniquity has been re-imagined as a collection of packages.
     - Create and extend your BBS using Iniquity's packaging system.
-    - Install/customize/remove packages easily.
+    - Install/customize/remove popular BBS packages easily.
+        - IPM has oneliners, rumors, file sharing, message posting, etc...
 
 ## Getting Started
-This software is highly experimental. Right now only the telnet service really works.
+This software is highly experimental. It's not really functional either, however, the core mechanics
+are improving every day. The package management system works, and all services bind and serve their respective
+agents appropriately.
 
 Install Iniquity from RubyGems...
 
