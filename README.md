@@ -6,7 +6,7 @@
 
 
 # Iniquity
-A re-imagining of the iconic BBS software.
+This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration file format, provides telnet, http and restful services, and is easily extended using its package management system.
 
 <p align="left">
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
@@ -24,9 +24,6 @@ A re-imagining of the iconic BBS software.
         - IPM has oneliners, rumors, file sharing, message posting, etc...
 
 ## Getting Started
-This software is highly experimental. It's not really functional either, however, the core mechanics
-are improving every day. The package management system works, and all services bind and serve their respective
-agents appropriately.
 
 Install Iniquity from RubyGems...
 
