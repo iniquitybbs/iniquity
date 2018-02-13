@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.12"
+    s.version     = "0.0.13"
     s.summary     = "Iniquity BBS"
     s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]

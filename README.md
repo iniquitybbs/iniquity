@@ -6,7 +6,7 @@
 
 
 # Iniquity
-This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration file format, provides telnet, http and restful services, and is easily extended using its package management system.
+This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration file format, provides telnet and restful services, and is easily extended using its package management system.
 
 <p align="left">
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
@@ -44,13 +44,9 @@ Connect to your BBS over Telnet...
 
     telnet localhost 3023
 
-Connect to your BBS over Http...
-
-    http://localhost:3080
-
 Retrieve BBS resources from Iniquity's RESTful service...
 
-    http://localhost:3082/v0/getOnlineUsers.json
+    http://localhost:3080/v0/getOnlineUsers.json
 
 ## Issues
 https://github.com/iniquitybbs/iniquity/issues
