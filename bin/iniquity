@@ -82,9 +82,9 @@ if ARGV[0] && ARGV[0] == "init"
     new_system_file.puts "[profile]\nname=NewBBS\n"
     new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
     new_system_file.puts "\n[telnet]\nenabled=yes\n"
-    new_system_file.puts "\nport=3023\n"
+    new_system_file.puts "port=3023\n"
     new_system_file.puts "\n[rest]\nenabled=yes\n"
-    new_system_file.puts "\nport=3080\n"
+    new_system_file.puts "port=3080\n"
     new_system_file.close
     abort "iniquity - Initialized directory as a new Iniquity BBS.\n\n"
 end
