@@ -39,3 +39,9 @@ IO.readlines(artwork).each do |line|
 end
 
 puts "\niqterm - The Iniquity BBS Terminal Utility.\n"
+
+if File.exists?(SYSTEM + "/iniquity.ini")
+    CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
+else
+    abort "iqterm - An Iniquity system must have an iniquity.ini file.\n\n"
+end
