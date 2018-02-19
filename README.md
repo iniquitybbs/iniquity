@@ -32,9 +32,9 @@ Inside of a new directory, initialize it as an Iniquity BBS...
 
     iniquity init
 
-Next, install the "iqdefaults" module to help get things going...
+Next, install the "iqbasemods" package to help get things going...
 
-    iqmod install iqdefaults
+    iqmod install iqbasemods
 
 Now start Iniquity!
 
