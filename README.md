@@ -46,7 +46,7 @@ You can connect to your BBS over Telnet...
 
 Or retrieve BBS resources from Iniquity's RESTful service...
 
-    http://localhost:3080/v0/getOnlineUsers.json
+    curl -L http://localhost:3080/v0/getOnlineUsers.json
 
 ## Issues
 https://github.com/iniquitybbs/iniquity/issues
