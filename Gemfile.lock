@@ -2,6 +2,19 @@ PATH
   remote: .
   specs:
     iniquity (0.0.14)
+      eventmachine
+      git
+      github_api
+      highline
+      inifile
+      json
+      rake
+      redis
+      rspec
+      rubyzip
+      socksify
+      thin
+      zip
 
 GEM
   remote: http://rubygems.org/
