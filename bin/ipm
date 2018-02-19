@@ -32,6 +32,10 @@ require "zip"
 
 ### Iniquity Package Manager
 
+IO.readlines("./artwork/sm!iniq2.asc").each do |line|
+    puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
+end
+
 puts "\nipm - The Iniquity Package Manager.\n\n"
 
 # If "init" passed.
@@ -72,7 +76,7 @@ end
 installed_packages = []
 
 Dir.chdir SYSTEM
-Dir.glob('*').select { |pkg|
+Dir.glob('ipm*').select { |pkg|
     if File.directory? pkg
         installed_packages.push pkg
     end

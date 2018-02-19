@@ -74,6 +74,10 @@ end
 
 ### Iniquity Bulletin Board System
 
+IO.readlines("./artwork/sm!iniq2.asc").each do |line|
+    puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
+end
+
 puts "\niniquity - The Iniquity Bulletin Board System.\n\n"
 
 # If "init" passed...
