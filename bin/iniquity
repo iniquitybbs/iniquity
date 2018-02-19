@@ -74,8 +74,7 @@ end
 
 ### Iniquity Bulletin Board System
 
-$LOAD_PATH.each { |dir|  ... look for resources relative to dir ... }
-IO.readlines("./artwork/sm!iniq2.asc").each do |line|
+IO.readlines(File.join(File.dirname(File.expand_path(__FILE__)), "./artwork/sm!iniq2.asc")).each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
