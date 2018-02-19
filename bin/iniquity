@@ -80,8 +80,6 @@ IO.readlines(artwork).each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
-puts "\niniquity - Started...\n"
-
 # If "init" passed...
 if ARGV[0] && ARGV[0] == "init"
     new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
@@ -100,6 +98,8 @@ if File.exists?(SYSTEM + "/iniquity.ini")
 else
     abort "iniquity - An iniquity system must have an iniquity.ini file.\n\n"
 end
+
+puts "\niniquity - Starting " + CONFIG["profile"]["name"] + "...\n"
 
 if CONFIG["tor"]["enabled"] == "yes"
     TCPSocket::socks_server = CONFIG["tor"]["address"]

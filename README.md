@@ -6,7 +6,7 @@
 
 
 # Iniquity
-This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems or GitHub, uses a simple .ini configuration format, provides telnet and restful services, and is easily extended using its package management system.
+This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create a BBS easily using its various utilities.
 
 <p align="left">
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
@@ -18,9 +18,9 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has 
 
 ## Key Features
 1. Cross-platform. Runs anywhere Ruby runs.
-2. Iniquity has been re-imagined as a collection of packages.
-    - Create and extend your BBS using Iniquity's packaging system.
-    - Install/customize/remove popular BBS packages easily.
+2. Iniquity has been re-imagined as a collection of modules.
+    - Create and extend your BBS using Iniquity's collection of core modules.
+    - Install/customize/remove popular BBS modules easily.
 
 ## Getting Started
 
@@ -32,9 +32,9 @@ Inside of a new directory, initialize it as an Iniquity BBS...
 
     iniquity init
 
-Install the "iq1clone" ipm package to help get started...
+Install the "iqdefaults" module to help get things going...
 
-    ipm install iq1clone
+    iqmod install iqdefaults
 
 Start Iniquity...
 
