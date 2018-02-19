@@ -30,7 +30,7 @@ require "highline"
 require "open-uri"
 require "zip"
 
-### Iniquity Package Manager
+### Iniquity Modules Utility
 
 artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/sm!iniq2.asc")
 
@@ -50,7 +50,7 @@ if ARGV[0] && ARGV[0] == "init"
     new_system_file.puts "\n[rest]\nenabled=yes\n"
     new_system_file.puts "port=3080\n"
     new_system_file.close
-    abort "iqmod - Initialized directory as a new Iniquity BBS.\n\n"
+    abort "iqmod - Initialized directory as a new system.\n\n"
 end
 
 if File.exists?(SYSTEM + "/iniquity.ini")

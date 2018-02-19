@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+#-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+# `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+#-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
+#;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
+#:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+#.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
+# `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
+#%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$#$%$
+#dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
+#%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
+#   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
+#.      .  '$a,          .        a` .   'a          .   .             s` .  . .
+#      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+#   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%#$
+#==============================================================================
+#   t h e    i n i q u i t y    p a c k a g e    m a n a g e r
+#==============================================================================
+
+trap("INT") {exit}
+
+SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
+ENV["INIQUITY_SYSTEM"] = SYSTEM
+
+require "inifile"
+require "github_api"
+require "highline"
+require "open-uri"
+require "zip"
+
+### Iniquity Terminal Utility
+
+artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/sm!iniq2.asc")
+
+IO.readlines(artwork).each do |line|
+    puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
+end
+
+puts "\niqterm - The Iniquity BBS Terminal Utility.\n"
