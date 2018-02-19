@@ -32,7 +32,7 @@ class Telnet < EM::Connection
 
     def initialize
         super
-        send_data "\nIniquity BBS 0.0.14 - Telnet Service\n"
+        send_data "\nIniquity BBS 0.0.15 - Telnet Service\n"
     end
 
     def post_init

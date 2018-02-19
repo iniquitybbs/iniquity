@@ -36,32 +36,32 @@ IO.readlines("./artwork/sm!iniq2.asc").each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
-puts "\nipm - The Iniquity Package Manager.\n\n"
+puts "\niqmod - The Iniquity Package Manager.\n\n"
 
 # If "init" passed.
 if ARGV[0] && ARGV[0] == "init"
     new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
     new_system_file.puts "[profile]\nname=NewBBS\n"
-    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
+    new_system_file.puts "\n[iqmod]\nsources=iniquitybbs\n"
     new_system_file.puts "\n[telnet]\nenabled=yes\n"
     new_system_file.puts "port=3023\n"
     new_system_file.puts "\n[rest]\nenabled=yes\n"
     new_system_file.puts "port=3080\n"
     new_system_file.close
-    abort "ipm - Initialized directory as a new Iniquity BBS.\n\n"
+    abort "iqmod - Initialized directory as a new Iniquity BBS.\n\n"
 end
 
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
-    abort "ipm - An Iniquity system must have an iniquity.ini file.\n\n"
+    abort "iqmod - An Iniquity system must have an iniquity.ini file.\n\n"
 end
 
-# Find all available ipm packages across all sources...
+# Find all available iqmod packages across all sources...
 available_packages = []
 
-if CONFIG["ipm"]["sources"]
-    CONFIG["ipm"]["sources"].split(",").each do |source|
+if CONFIG["iqmod"]["sources"]
+    CONFIG["iqmod"]["sources"].split(",").each do |source|
 
         repositories = Github.repos.list user: "#{source}"
 
@@ -76,7 +76,7 @@ end
 installed_packages = []
 
 Dir.chdir SYSTEM
-Dir.glob('ipm*').select { |pkg|
+Dir.glob('iqmod*').select { |pkg|
     if File.directory? pkg
         installed_packages.push pkg
     end
@@ -89,30 +89,30 @@ if ARGV[0] && ARGV[0] == "install"
 
     if ARGV[0]
         ARGV.each do |install|
-            available_packages.each do |ipm|
+            available_packages.each do |iqmod|
 
-                if install == ipm.name
-                    next if Dir.exists? SYSTEM + "/#{ipm.name}"
+                if install == iqmod.name
+                    next if Dir.exists? SYSTEM + "/#{iqmod.name}"
 
                     # Need to wrap this sequence in a try/catch of some kind...
 
-                    download = open("https://github.com/#{ipm.full_name}/archive/master.zip")
-                    IO.copy_stream(download, SYSTEM + "/#{ipm.name}.zip")
+                    download = open("https://github.com/#{iqmod.full_name}/archive/master.zip")
+                    IO.copy_stream(download, SYSTEM + "/#{iqmod.name}.zip")
 
-                    Zip::File.open(SYSTEM + "/#{ipm.name}.zip") do |zip_file|
+                    Zip::File.open(SYSTEM + "/#{iqmod.name}.zip") do |zip_file|
                         zip_file.each do |entry|
                             entry.extract(SYSTEM + "/#{entry.name}")
                         end
                     end
 
-                    FileUtils.mv SYSTEM + "/#{ipm.name}-master", SYSTEM + "/#{ipm.name}"
-                    FileUtils.rm SYSTEM + "/#{ipm.name}.zip"
-                    puts "ipm - Installed #{ipm.name}\n\n"
+                    FileUtils.mv SYSTEM + "/#{iqmod.name}-master", SYSTEM + "/#{iqmod.name}"
+                    FileUtils.rm SYSTEM + "/#{iqmod.name}.zip"
+                    puts "iqmod - Installed #{iqmod.name}\n\n"
                 end
             end
         end
     else
-        abort "ipm - You must specify an ipm package name to install.\n\n"
+        abort "iqmod - You must specify an iqmod package name to install.\n\n"
     end
 end
 
@@ -123,7 +123,7 @@ if ARGV[0] && ARGV[0] == "uninstall"
 
     if ARGV[0]
         ARGV.each do |uninstall|
-            abort "ipm - Sorry, uninstall doesn't work yet.\n\n"
+            abort "iqmod - Sorry, uninstall doesn't work yet.\n\n"
         end
     end
 end
@@ -132,21 +132,21 @@ end
 unless ARGV[0]
 
     if available_packages.length > 0
-        puts "ipm - Packages available for installation.\n\n"
+        puts "iqmod - Modules available for installation.\n\n"
 
-        available_packages.each do |ipm|
-            puts ipm.name
-            puts ipm.description
-            #puts "https://github.com/#{ipm.full_name}/archive/master.zip"
+        available_packages.each do |iqmod|
+            puts iqmod.name
+            puts iqmod.description
+            #puts "https://github.com/#{iqmod.full_name}/archive/master.zip"
             puts ""
         end
     end
 
     if installed_packages.length > 0
-        puts "ipm - Packages currently installed.\n\n"
+        puts "iqmod - Modules currently installed.\n\n"
 
-        installed_packages.each do |ipm|
-            puts ipm
+        installed_packages.each do |iqmod|
+            puts iqmod
         end
     end
 end

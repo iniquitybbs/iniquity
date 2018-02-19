@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
     s.email       = "ispyhumanfly@gmail.com"
     s.files = ["./artwork/sm!iniq2.asc"]
     s.executables << "iniquity"
-    s.executables << "ipm"
+    s.executables << "iqmod"
+    s.executables << "iqterm"
     s.homepage    = "http://iniquitybbs.org"
     s.metadata = { "issue_tracker" => "https://github.com/iniquitybbs/iniquity/issues" }
     s.license     = "MIT"
