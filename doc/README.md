@@ -15,6 +15,10 @@ As I read about Iniquity, its users, its sysops and past attempts to revive the 
 1. Have multiple WFC screens.
     1. Allow for custom WFC screens (use tab to rotate through them).
     2. This comes from features added by Spec and Jack Phlash with their work on v2 of Iniquity.
+2. Have an iqterm program.
+    1. I've started this. For me, the purpose of iqterm, and other "iq" utilities, are to aid the sysop/developer in creating iniquity systems and modules.
+    2. iqterm will offer a web based client mode. I think this is what can fuel client side rendering over a web browser (likely learn/base it on fTelnet)
+
 
 
 ### Feature Thoughts...
