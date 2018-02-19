@@ -74,11 +74,13 @@ end
 
 ### Iniquity Bulletin Board System
 
-IO.readlines(File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/sm!iniq2.asc")).each do |line|
+artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/sm!iniq2.asc")
+
+IO.readlines(artwork).each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
-puts "\niniquity - Started...\n\n"
+puts "\niniquity - Started...\n"
 
 # If "init" passed...
 if ARGV[0] && ARGV[0] == "init"
