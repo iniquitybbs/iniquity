@@ -108,8 +108,8 @@ EM.run do
 
     ### Events
 
-    EM.add_periodic_timer(15) do
-        puts "iniquity - Event running, nothing to see here..."
+    EM.add_periodic_timer(60 * 3) do
+        puts "iniquity - Periodic timed event example..."
     end
 
     ### Services
