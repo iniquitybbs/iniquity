@@ -6,7 +6,7 @@
 
 
 # Iniquity
-This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create a BBS easily using its various utilities.
+This is the re-imagining of the iconic Iniquity Bulletin Board Software. It has been written from scratch in Ruby, and radically re-invented as a modular BBS system. It is highly experimental, and not very functional (yet). At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniquity BBS easily using the provided utilities.
 
 <p align="left">
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
@@ -32,15 +32,15 @@ Inside of a new directory, initialize it as an Iniquity BBS...
 
     iniquity init
 
-Next, install the "iqbasemods" package to help get things going...
+Next, install the "core-modules" package to help get things going...
 
-    iqmod install iqbasemods
+    iqmod install core-modules
 
-Now start Iniquity!
+Now start your new Iniquity BBS!
 
     iniquity
 
-You can connect to your BBS over Telnet...
+You can connect to your Iniquity BBS over Telnet...
 
     telnet localhost 3023
 
@@ -50,6 +50,9 @@ Or retrieve BBS resources from Iniquity's RESTful service...
 
 ## Issues
 https://github.com/iniquitybbs/iniquity/issues
+
+## Author
+Dan Stephenson (ispyhumanfly)
 
 ## License
 MIT
