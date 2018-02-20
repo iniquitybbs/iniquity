@@ -17,3 +17,5 @@ gem "github_api"
 gem "socksify"
 gem "rubyzip"
 gem "zip"
+gem "sqlite3"
+

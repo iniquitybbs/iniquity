@@ -1,0 +1,14 @@
+[profile]
+name=euphoria
+sysop=ispyhumanfly
+
+[iqmod]
+sources=iniquitybbs, euphoriabbs
+
+[telnet]
+enabled=yes
+port=3023
+
+[rest]
+enabled=yes
+port=3080

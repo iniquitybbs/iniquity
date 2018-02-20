@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.15"
+    s.version     = "0.0.16"
     s.summary     = "Iniquity BBS"
     s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]
@@ -27,4 +27,5 @@ Gem::Specification.new do |s|
     s.add_dependency("socksify")
     s.add_dependency("rubyzip")
     s.add_dependency("zip")
+    s.add_dependency("sqlite3")
 end

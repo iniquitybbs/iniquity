@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    iniquity (0.0.15)
+    iniquity (0.0.16)
       eventmachine
       git
       github_api
@@ -13,6 +13,7 @@ PATH
       rspec
       rubyzip
       socksify
+      sqlite3
       thin
       zip
 
@@ -68,6 +69,7 @@ GEM
     rspec-support (3.7.1)
     rubyzip (1.2.1)
     socksify (1.7.1)
+    sqlite3 (1.3.13)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -91,6 +93,7 @@ DEPENDENCIES
   rspec
   rubyzip
   socksify
+  sqlite3
   thin
   zip
 

@@ -46,7 +46,7 @@ else
     abort "iqmod - An Iniquity system must have an iniquity.ini file.\n\n"
 end
 
-# Find all available iqmod packages across all sources...
+# Find all available modules across all GitHub sources...
 available_packages = []
 
 if CONFIG["iqmod"]["sources"]
@@ -55,7 +55,7 @@ if CONFIG["iqmod"]["sources"]
         repositories = Github.repos.list user: "#{source}"
 
         repositories.each do |pkg|
-            if pkg.name.match(/^ip/)
+            if pkg.name.match(/^iqmod/)
                 available_packages.push(pkg)
             end
         end

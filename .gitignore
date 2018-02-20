@@ -4,3 +4,4 @@ dump.*
 *.tmp
 iniquity*.gem
 iniquity.ini
+iniquity.db

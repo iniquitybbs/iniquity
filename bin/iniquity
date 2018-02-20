@@ -27,6 +27,7 @@ ENV["INIQUITY_SYSTEM"] = SYSTEM
 require "inifile"
 require "thin"
 require "socksify"
+require "sqlite3"
 
 class Telnet < EM::Connection
 
@@ -80,6 +81,8 @@ IO.readlines(artwork).each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
+DB = SQLite3::Database.new "#{SYSTEM}/iniquity.db"
+
 # If "init" passed...
 if ARGV[0] && ARGV[0] == "init"
     new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
@@ -90,7 +93,15 @@ if ARGV[0] && ARGV[0] == "init"
     new_system_file.puts "\n[rest]\nenabled=yes\n"
     new_system_file.puts "port=3080\n"
     new_system_file.close
-    abort "iniquity - Initialized directory as a new system.\n\n"
+
+    DB.execute <<-SQL
+        create table system (
+            name varchar(30),
+            val int
+        );
+    SQL
+
+    abort "\niniquity - Initialized directory as a new system.\n\n"
 end
 
 if File.exists?(SYSTEM + "/iniquity.ini")
