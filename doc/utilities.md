@@ -19,5 +19,3 @@ Connect to a local or remote Iniquity BBS via Telnet.
 
     iqterm [options]
 
-
-

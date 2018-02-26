@@ -47,7 +47,7 @@ else
 end
 
 # Find all available modules across all GitHub sources...
-available_packages = []
+available_modules = []
 
 if CONFIG["iqmod"]["sources"]
     CONFIG["iqmod"]["sources"].split(",").each do |source|
@@ -56,18 +56,18 @@ if CONFIG["iqmod"]["sources"]
 
         repositories.each do |pkg|
             if pkg.name.match(/^iqmod/)
-                available_packages.push(pkg)
+                available_modules.push(pkg)
             end
         end
     end
 end
 
-installed_packages = []
+installed_modules = []
 
 Dir.chdir SYSTEM
-Dir.glob('iqmod*').select { |pkg|
-    if File.directory? pkg
-        installed_packages.push pkg
+Dir.glob('iqmod*').select { |iqmod|
+    if File.directory? iqmod
+        installed_modules.push iqmod
     end
 }
 
@@ -78,7 +78,7 @@ if ARGV[0] && ARGV[0] == "install"
 
     if ARGV[0]
         ARGV.each do |install|
-            available_packages.each do |iqmod|
+            available_modules.each do |iqmod|
 
                 if install == iqmod.name
                     next if Dir.exists? SYSTEM + "/#{iqmod.name}"
@@ -120,10 +120,10 @@ end
 # If no options passed.
 unless ARGV[0]
 
-    if available_packages.length > 0
+    if available_modules.length > 0
         puts "iqmod - Modules available for installation.\n\n"
 
-        available_packages.each do |iqmod|
+        available_modules.each do |iqmod|
             puts iqmod.name
             puts iqmod.description
             #puts "https://github.com/#{iqmod.full_name}/archive/master.zip"
@@ -131,10 +131,10 @@ unless ARGV[0]
         end
     end
 
-    if installed_packages.length > 0
+    if installed_modules.length > 0
         puts "iqmod - Modules currently installed.\n\n"
 
-        installed_packages.each do |iqmod|
+        installed_modules.each do |iqmod|
             puts iqmod
         end
     end
