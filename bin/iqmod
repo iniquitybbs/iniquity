@@ -54,9 +54,9 @@ if CONFIG["iqmod"]["sources"]
 
         repositories = Github.repos.list user: "#{source}"
 
-        repositories.each do |pkg|
-            if pkg.name.match(/^iqmod/)
-                available_modules.push(pkg)
+        repositories.each do |iqmod|
+            if iqmod.name.match(/^iqmod/)
+                available_modules.push(iqmod)
             end
         end
     end
@@ -126,7 +126,7 @@ unless ARGV[0]
         available_modules.each do |iqmod|
             puts iqmod.name
             puts iqmod.description
-            #puts "https://github.com/#{iqmod.full_name}/archive/master.zip"
+            puts "https://github.com/#{iqmod.full_name}/archive/master.zip"
             puts ""
         end
     end

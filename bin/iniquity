@@ -87,19 +87,22 @@ DB = SQLite3::Database.new "#{SYSTEM}/iniquity.db"
 if ARGV[0] && ARGV[0] == "init"
     new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
     new_system_file.puts "[profile]\nname=NewBBS\n"
-    new_system_file.puts "\n[ipm]\nsources=iniquitybbs\n"
+    new_system_file.puts "\n[iqmod]\nsources=iniquitybbs\n"
     new_system_file.puts "\n[telnet]\nenabled=yes\n"
     new_system_file.puts "port=3023\n"
     new_system_file.puts "\n[rest]\nenabled=yes\n"
     new_system_file.puts "port=3080\n"
     new_system_file.close
 
-    DB.execute <<-SQL
-        create table system (
-            name varchar(30),
-            val int
-        );
-    SQL
+    unless File.exists?(SYSTEM + "/iniquity.db")
+
+        DB.execute <<-SQL
+            create table system (
+                name varchar(30),
+                val int
+            );
+        SQL
+    end
 
     abort "\niniquity - Initialized directory as a new system.\n\n"
 end
