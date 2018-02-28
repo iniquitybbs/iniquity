@@ -96,7 +96,7 @@ if ARGV[0] && ARGV[0] == "install"
 
                     FileUtils.mv SYSTEM + "/#{iqmod.name}-master", SYSTEM + "/#{iqmod.name}"
                     FileUtils.rm SYSTEM + "/#{iqmod.name}.zip"
-                    puts "iqmod - Installed #{iqmod.name}\n\n"
+                    puts "iqmod - Installed #{iqmod.name}.\n\n"
                 end
             end
         end
@@ -113,6 +113,18 @@ if ARGV[0] && ARGV[0] == "uninstall"
     if ARGV[0]
         ARGV.each do |uninstall|
             abort "iqmod - Sorry, uninstall doesn't work yet.\n\n"
+        end
+    end
+end
+
+# If "search" passed.
+if ARGV[0] && ARGV[0] == "search"
+
+    #ARGV.shift
+
+    if ARGV[0]
+        ARGV.each do |search|
+            abort "iqmod - Sorry, search doesn't work yet.\n\n"
         end
     end
 end
