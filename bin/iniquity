@@ -94,15 +94,12 @@ if ARGV[0] && ARGV[0] == "init"
     new_system_file.puts "port=3080\n"
     new_system_file.close
 
-    unless File.exists?(SYSTEM + "/iniquity.db")
-
-        DB.execute <<-SQL
-            create table system (
-                name varchar(30),
-                val int
-            );
-        SQL
-    end
+    DB.execute <<-SQL
+        create table system (
+            name varchar(30),
+            val int
+        );
+    SQL
 
     abort "\niniquity - Initialized directory as a new system.\n\n"
 end

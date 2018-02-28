@@ -16,11 +16,19 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is w
     <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
 </p>
 
-## Key Features
+## Key Ideas & Features
 1. Cross-platform. Runs anywhere Ruby runs.
 2. Iniquity has been re-imagined as a collection of modules.
     - Create and extend your BBS using Iniquity's collection of core modules.
     - Install/customize/remove popular BBS modules easily.
+3. Configurable WFC screens (Waiting For Caller).
+    - Supports multiple WFCs.
+    - Easily switch between WFCs using the tab key.
+4. Network Iniquity with other Iniquity BBSs easily.
+    - By its core design, an encrypted network hosts the BBS.
+        - Easily network message bases.
+        - Easily network file bases.
+        - Easily network users.
 
 ## Getting Started
 
