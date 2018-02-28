@@ -34,7 +34,7 @@ Inside of a new directory, initialize it as an Iniquity BBS...
 
 Next, install the "core-modules" package to help get things going...
 
-    iqmod install core-modules
+    iqmod install iqmod-core-modules
 
 Now start your new Iniquity BBS!
 
