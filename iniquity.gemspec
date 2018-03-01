@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.16"
+    s.version     = "0.0.17"
     s.summary     = "Iniquity BBS"
     s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]
     s.email       = "ispyhumanfly@gmail.com"
-    s.files = ["./artwork/sm!iniq2.asc"]
+    s.files = ["./artwork/sm!iniq2.asc", "./artwork/we-iniq3.ans"]
     s.executables << "iniquity"
     s.executables << "iqmod"
     s.executables << "iqterm"
@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
     s.add_dependency("rubyzip")
     s.add_dependency("zip")
     s.add_dependency("sqlite3")
+    s.add_dependency("ansi")
 end

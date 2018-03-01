@@ -18,4 +18,4 @@ gem "socksify"
 gem "rubyzip"
 gem "zip"
 gem "sqlite3"
-
+gem "ansi"
