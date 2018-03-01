@@ -12,10 +12,6 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is w
     <img src="http://disengage.ca/wp-content/uploads/2011/07/Iniquity_BBS_WFC1.jpg" height="300">
 </p>
 
-<p align="left">
-    <img src="https://raw.githubusercontent.com/bertrandom/press-enter/gh-pages/iniquity.png" height="300">
-</p>
-
 ## Key Ideas & Features
 1. Cross-platform. Runs anywhere Ruby runs.
 2. Iniquity has been re-imagined as a collection of modules.

@@ -35,6 +35,12 @@ class Telnet < EM::Connection
     def initialize
         super
 
+        # Disable line-wrapping (SyncTerm does not honor, careful!)
+        send_data "\x1b[7l"
+
+        # Save xterm icon and window title on stack.
+        # send_data "\x1b[22;0"
+
         send_data "\n #{ANSI::Code.white}Iniquity BBS :: #{ANSI::Code.red }Build 0.0.17 - #{ANSI::Code.blue_on_white}Telnet Connection!\n"
 
         artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/we-iniq3.ans")
