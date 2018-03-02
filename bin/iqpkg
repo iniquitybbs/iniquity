@@ -38,25 +38,25 @@ IO.readlines(artwork).each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
-puts "\niqmod - The Iniquity BBS Modules Utility.\n"
+puts "\niqpkg - The Iniquity BBS Modules Utility.\n"
 
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
 else
-    abort "iqmod - An Iniquity system must have an iniquity.ini file.\n\n"
+    abort "iqpkg - An Iniquity system must have an iniquity.ini file.\n\n"
 end
 
 # Find all available modules across all GitHub sources...
 available_modules = []
 
-if CONFIG["iqmod"]["sources"]
-    CONFIG["iqmod"]["sources"].split(",").each do |source|
+if CONFIG["iqpkg"]["sources"]
+    CONFIG["iqpkg"]["sources"].split(",").each do |source|
 
         repositories = Github.repos.list user: "#{source}"
 
-        repositories.each do |iqmod|
-            if iqmod.name.match(/^iqmod/)
-                available_modules.push(iqmod)
+        repositories.each do |iqpkg|
+            if iqpkg.name.match(/^iqpkg/)
+                available_modules.push(iqpkg)
             end
         end
     end
@@ -65,9 +65,9 @@ end
 installed_modules = []
 
 Dir.chdir SYSTEM
-Dir.glob('iqmod*').select { |iqmod|
-    if File.directory? iqmod
-        installed_modules.push iqmod
+Dir.glob('iqpkg*').select { |iqpkg|
+    if File.directory? iqpkg
+        installed_modules.push iqpkg
     end
 }
 
@@ -78,30 +78,30 @@ if ARGV[0] && ARGV[0] == "install"
 
     if ARGV[0]
         ARGV.each do |install|
-            available_modules.each do |iqmod|
+            available_modules.each do |iqpkg|
 
-                if install == iqmod.name
-                    next if Dir.exists? SYSTEM + "/#{iqmod.name}"
+                if install == iqpkg.name
+                    next if Dir.exists? SYSTEM + "/#{iqpkg.name}"
 
                     # Need to wrap this sequence in a try/catch of some kind...
 
-                    download = open("https://github.com/#{iqmod.full_name}/archive/master.zip")
-                    IO.copy_stream(download, SYSTEM + "/#{iqmod.name}.zip")
+                    download = open("https://github.com/#{iqpkg.full_name}/archive/master.zip")
+                    IO.copy_stream(download, SYSTEM + "/#{iqpkg.name}.zip")
 
-                    Zip::File.open(SYSTEM + "/#{iqmod.name}.zip") do |zip_file|
+                    Zip::File.open(SYSTEM + "/#{iqpkg.name}.zip") do |zip_file|
                         zip_file.each do |entry|
                             entry.extract(SYSTEM + "/#{entry.name}")
                         end
                     end
 
-                    FileUtils.mv SYSTEM + "/#{iqmod.name}-master", SYSTEM + "/#{iqmod.name}"
-                    FileUtils.rm SYSTEM + "/#{iqmod.name}.zip"
-                    puts "iqmod - Installed #{iqmod.name}.\n\n"
+                    FileUtils.mv SYSTEM + "/#{iqpkg.name}-master", SYSTEM + "/#{iqpkg.name}"
+                    FileUtils.rm SYSTEM + "/#{iqpkg.name}.zip"
+                    puts "iqpkg - Installed #{iqpkg.name}.\n\n"
                 end
             end
         end
     else
-        abort "iqmod - You must specify an iqmod package name to install.\n\n"
+        abort "iqpkg - You must specify an iqpkg package name to install.\n\n"
     end
 end
 
@@ -112,7 +112,7 @@ if ARGV[0] && ARGV[0] == "uninstall"
 
     if ARGV[0]
         ARGV.each do |uninstall|
-            abort "iqmod - Sorry, uninstall doesn't work yet.\n\n"
+            abort "iqpkg - Sorry, uninstall doesn't work yet.\n\n"
         end
     end
 end
@@ -124,7 +124,7 @@ if ARGV[0] && ARGV[0] == "search"
 
     if ARGV[0]
         ARGV.each do |search|
-            abort "iqmod - Sorry, search doesn't work yet.\n\n"
+            abort "iqpkg - Sorry, search doesn't work yet.\n\n"
         end
     end
 end
@@ -133,21 +133,21 @@ end
 unless ARGV[0]
 
     if available_modules.length > 0
-        puts "iqmod - Modules available for installation.\n\n"
+        puts "iqpkg - Modules available for installation.\n\n"
 
-        available_modules.each do |iqmod|
-            puts iqmod.name
-            puts iqmod.description
-            puts "https://github.com/#{iqmod.full_name}/archive/master.zip"
+        available_modules.each do |iqpkg|
+            puts iqpkg.name
+            puts iqpkg.description
+            puts "https://github.com/#{iqpkg.full_name}/archive/master.zip"
             puts ""
         end
     end
 
     if installed_modules.length > 0
-        puts "iqmod - Modules currently installed.\n\n"
+        puts "iqpkg - Modules currently installed.\n\n"
 
-        installed_modules.each do |iqmod|
-            puts iqmod
+        installed_modules.each do |iqpkg|
+            puts iqpkg
         end
     end
 end

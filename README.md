@@ -36,9 +36,9 @@ Inside of a new directory, initialize it as a new Iniquity BBS...
 
     iniquity init
 
-Next, install the "iqmod-core-modules" package to help get things going...
+Next, install the "iq-examples" package to help get things going...
 
-    iqmod install iqmod-core-modules
+    iqpkg install iq-examples
 
 Now start your new Iniquity BBS!
 
