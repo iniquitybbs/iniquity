@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    iniquity (0.0.17)
+    iniquity (0.0.18)
       ansi
       eventmachine
       git

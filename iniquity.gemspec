@@ -2,14 +2,14 @@
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.17"
+    s.version     = "0.0.18"
     s.summary     = "Iniquity BBS"
     s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]
     s.email       = "ispyhumanfly@gmail.com"
     s.files = ["./artwork/sm!iniq2.asc", "./artwork/we-iniq3.ans"]
     s.executables << "iniquity"
-    s.executables << "iqmod"
+    s.executables << "iqpkg"
     s.executables << "iqterm"
     s.homepage    = "http://iniquitybbs.org"
     s.metadata = { "issue_tracker" => "https://github.com/iniquitybbs/iniquity/issues" }
