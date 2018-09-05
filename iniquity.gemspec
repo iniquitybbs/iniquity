@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
     s.name        = "iniquity"
-    s.version     = "0.0.18"
+    s.version     = "0.0.19"
     s.summary     = "Iniquity BBS"
     s.description = "A re-imagining of the iconic BBS software."
     s.authors     = ["Dan Stephenson"]
@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
     s.metadata = { "issue_tracker" => "https://github.com/iniquitybbs/iniquity/issues" }
     s.license     = "MIT"
     s.add_dependency("rake")
-    s.add_dependency("redis")
     s.add_dependency("json")
     s.add_dependency("eventmachine")
     s.add_dependency("highline")

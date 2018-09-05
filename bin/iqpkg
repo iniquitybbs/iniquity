@@ -38,7 +38,7 @@ IO.readlines(artwork).each do |line|
     puts line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8)
 end
 
-puts "\niqpkg - The Iniquity BBS Modules Utility.\n"
+puts "\niqpkg - The Iniquity BBS Package Manager.\n"
 
 if File.exists?(SYSTEM + "/iniquity.ini")
     CONFIG = IniFile.load(SYSTEM+ "/iniquity.ini")
