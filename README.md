@@ -4,8 +4,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/iniquity.png)](https://badge.fury.io/rb/iniquity)
 
-
 # Iniquity
+
 This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is written in Ruby, and has been radically re-invented as a modular system. At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniquity BBS easily using the provided utilities.
 
 <p align="left">
@@ -13,6 +13,7 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is w
 </p>
 
 ## Key Ideas & Features
+
 1. Cross-platform. Runs anywhere Ruby runs.
 2. Iniquity has been re-imagined as a collection of modules.
     - Create and extend your BBS using Iniquity's collection of core modules.
@@ -53,21 +54,25 @@ Or retrieve BBS resources from Iniquity's RESTful service...
     curl -L http://localhost:3080/v0/getOnlineUsers.json
 
 # Documentation
+
 https://github.com/iniquitybbs/iniquity/doc
 
 ## Issues
+
 https://github.com/iniquitybbs/iniquity/issues
 
-## Author
+## Authors
+
 Dan Stephenson (ispyhumanfly)
+Lawerence Manuel Tony (smooth)
 
 ## Contributors
-    Dan Stephenson
-    Lawerence Manuel Tony
+
     Jack Plash
     Spec
     Mike Pike
     Mike Fricker
 
 ## License
+
 MIT
