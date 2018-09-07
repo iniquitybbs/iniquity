@@ -58,7 +58,13 @@ https://github.com/iniquitybbs/iniquity/issues
 ## Author
 Dan Stephenson (ispyhumanfly)
 
-Contributors
+## Contributors
+    Dan Stephenson
+    Lawerence Manuel Tony
+    Jack Plash
+    Spec
+    Mike Pike
+    Mike Fricker
 
 ## License
 MIT
