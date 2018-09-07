@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
+=begin rdoc
 #-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
 # `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
 #-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
@@ -18,7 +19,7 @@
 #==============================================================================
 #   t h e    i n i q u i t y    b u l l e t i n    b o a r d    s y s t e m
 #==============================================================================
-
+=end
 trap("INT") {exit}
 
 SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
@@ -30,8 +31,7 @@ require "socksify"
 require "sqlite3"
 require "ansi"
 
-class Telnet < EM::Connection
-
+module Telnet
     def initialize
         super
 
@@ -65,13 +65,14 @@ class Telnet < EM::Connection
     end
 end
 
-class Rest < EM::Connection
+module Rest
+
     def initialize
         super
     end
     def post_init
     end
-    def receive_data
+    def receive_dat
     end
     def unbind
     end

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Iniquity">Iniquity</a>
+    <li><a href="#label-Key+Ideas+-26+Features">Key Ideas &amp; Features</a>
+    <li><a href="#label-Getting+Started">Getting Started</a>
+    <li><a href="#label-Issues">Issues</a>
+    <li><a href="#label-Author">Author</a>
+    <li><a href="#label-License">License</a>
+    <li><a href="#label-Contributors">Contributors</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./LICENSE.html">LICENSE</a>
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./artwork/README_md.html">README</a>
+  
+    <li><a href="./artwork/as-ini_asc.html">as-ini.asc</a>
+  
+    <li><a href="./artwork/mailtop_ans.html">mailtop.ans</a>
+  
+    <li><a href="./artwork/sm!iniq2_asc.html">sm!iniq2.asc</a>
+  
+    <li><a href="./artwork/zz-1n1q_asc_txt.html">zz-1n1q.asc</a>
+  
+    <li><a href="./iniquity_gemspec.html">iniquity.gemspec</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<p><a href="https://codeclimate.com/github/iniquitybbs/iniquity"><img
+src="https://codeclimate.com/github/dwyl/esta/badges/gpa.png"></a></p>
+
+<p><a href="https://travis-ci.org/iniquitybbs/iniquity"><img
+src="https://travis-ci.org/iniquitybbs/iniquity.png?branch=master"></a></p>
+
+<p><a href="https://badge.fury.io/rb/iniquity"><img
+src="https://badge.fury.io/rb/iniquity.png"></a></p>
+
+<h1 id="label-Iniquity">Iniquity<span><a href="#label-Iniquity">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>This is the re-imagining of the iconic Iniquity Bulletin Board Software. It
+is written in Ruby, and has been radically re-invented as a modular system.
+At present, Iniquity can be installed onto a computer system via RubyGems,
+uses a simple .ini configuration format, and provides telnet and restful
+interfaces. A new or experienced Sysop can create an Iniquity BBS easily
+using the provided utilities.</p>
+<p align="left">
+
+    <img src="https://github.com/iniquitybbs/iniquity/blob/master/artwork/SyncTERM_-_Iniquity_BBS.png?raw=true" height="300">
+
+</p>
+<h2 id="label-Key+Ideas+-26+Features">Key Ideas &amp; Features<span><a href="#label-Key+Ideas+-26+Features">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ol><li>
+<p>Cross-platform. Runs anywhere Ruby runs.</p>
+</li><li>
+<p>Iniquity has been re-imagined as a collection of modules.</p>
+<ul><li>
+<p>Create and extend your BBS using Iniquity&#39;s collection of core modules.</p>
+</li><li>
+<p>Install/customize/remove popular BBS modules easily.</p>
+</li></ul>
+</li><li>
+<p>Configurable WFC screens (Waiting For Caller).</p>
+<ul><li>
+<p>Supports multiple WFCs.</p>
+</li><li>
+<p>Easily switch between WFCs using the tab key.</p>
+</li></ul>
+</li><li>
+<p>Network Iniquity with other Iniquity BBSs easily.</p>
+<ul><li>
+<p>By its core design, an encrypted network hosts the BBS.</p>
+<ul><li>
+<p>Easily network message bases.</p>
+</li><li>
+<p>Easily network file bases.</p>
+</li><li>
+<p>Easily network users.</p>
+</li></ul>
+</li></ul>
+</li></ol>
+
+<h2 id="label-Getting+Started">Getting Started<span><a href="#label-Getting+Started">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Install Iniquity from RubyGems…</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">iniquity</span>
+</pre>
+
+<p>Inside of a new directory, initialize it as a new Iniquity system…</p>
+
+<pre class="ruby"><span class="ruby-identifier">iniquity</span> <span class="ruby-identifier">init</span>
+</pre>
+
+<p>Next, install the “iniquity package to help get you started.</p>
+
+<pre class="ruby"><span class="ruby-identifier">iqpkg</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">eternity</span>
+</pre>
+
+<p>Now start your new Iniquity BBS!</p>
+
+<pre class="ruby"><span class="ruby-identifier">iniquity</span>
+</pre>
+
+<p>You can connect to your Iniquity BBS over <a href="Telnet.html">Telnet</a>
+<a href="Rest.html">Rest</a> services…</p>
+
+<pre class="ruby"><span class="ruby-identifier">telnet</span> <span class="ruby-identifier">localhost</span> <span class="ruby-value">3023</span>
+</pre>
+
+<p>or  <a href="http://localhost">localhost</a> 3080</p>
+
+<h2 id="label-Issues">Issues<span><a href="#label-Issues">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p><a
+href="https://github.com/iniquitybbs/iniquity/issues">github.com/iniquitybbs/iniquity/issues</a></p>
+
+<h2 id="label-Author">Author<span><a href="#label-Author">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Dan Stephenson (ispyhumanfly) Lawerence Manuel Tony (smooth)</p>
+
+<h2 id="label-License">License<span><a href="#label-License">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>MIT</p>
+
+<h2 id="label-Contributors">Contributors<span><a href="#label-Contributors">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Mike Fricker (Feind) Jack Phlash Spec Mike Pike</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
