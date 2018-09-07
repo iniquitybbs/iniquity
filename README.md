@@ -58,5 +58,7 @@ https://github.com/iniquitybbs/iniquity/issues
 ## Author
 Dan Stephenson (ispyhumanfly)
 
+Contributors
+
 ## License
 MIT
