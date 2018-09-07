@@ -62,7 +62,6 @@
     <li><a href="#label-Issues">Issues</a>
     <li><a href="#label-Author">Author</a>
     <li><a href="#label-License">License</a>
-    <li><a href="#label-Contributors">Contributors</a>
   </ul>
 </div>
 
@@ -121,9 +120,7 @@ uses a simple .ini configuration format, and provides telnet and restful
 interfaces. A new or experienced Sysop can create an Iniquity BBS easily
 using the provided utilities.</p>
 <p align="left">
-
     <img src="https://github.com/iniquitybbs/iniquity/blob/master/artwork/SyncTERM_-_Iniquity_BBS.png?raw=true" height="300">
-
 </p>
 <h2 id="label-Key+Ideas+-26+Features">Key Ideas &amp; Features<span><a href="#label-Key+Ideas+-26+Features">&para;</a> <a href="#top">&uarr;</a></span></h2>
 <ol><li>
@@ -163,14 +160,14 @@ using the provided utilities.</p>
 <pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">iniquity</span>
 </pre>
 
-<p>Inside of a new directory, initialize it as a new Iniquity system…</p>
+<p>Inside of a new directory, initialize it as a new Iniquity BBS…</p>
 
 <pre class="ruby"><span class="ruby-identifier">iniquity</span> <span class="ruby-identifier">init</span>
 </pre>
 
-<p>Next, install the “iniquity package to help get you started.</p>
+<p>Next, install the “iq-examples” package to help get things going…</p>
 
-<pre class="ruby"><span class="ruby-identifier">iqpkg</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">eternity</span>
+<pre class="ruby"><span class="ruby-identifier">iqpkg</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">iq</span><span class="ruby-operator">-</span><span class="ruby-identifier">examples</span>
 </pre>
 
 <p>Now start your new Iniquity BBS!</p>
@@ -178,13 +175,14 @@ using the provided utilities.</p>
 <pre class="ruby"><span class="ruby-identifier">iniquity</span>
 </pre>
 
-<p>You can connect to your Iniquity BBS over <a href="Telnet.html">Telnet</a>
-<a href="Rest.html">Rest</a> services…</p>
+<p>You can connect to your Iniquity BBS over <a href="Telnet.html">Telnet</a>…</p>
 
 <pre class="ruby"><span class="ruby-identifier">telnet</span> <span class="ruby-identifier">localhost</span> <span class="ruby-value">3023</span>
 </pre>
 
-<p>or  <a href="http://localhost">localhost</a> 3080</p>
+<p>Or retrieve BBS resources from Iniquity&#39;s RESTful service…</p>
+
+<pre>curl -L http://localhost:3080/v0/getOnlineUsers.json</pre>
 
 <h2 id="label-Issues">Issues<span><a href="#label-Issues">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
@@ -193,15 +191,11 @@ href="https://github.com/iniquitybbs/iniquity/issues">github.com/iniquitybbs/ini
 
 <h2 id="label-Author">Author<span><a href="#label-Author">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>Dan Stephenson (ispyhumanfly) Lawerence Manuel Tony (smooth)</p>
+<p>Dan Stephenson (ispyhumanfly)</p>
 
 <h2 id="label-License">License<span><a href="#label-License">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>MIT</p>
-
-<h2 id="label-Contributors">Contributors<span><a href="#label-Contributors">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<p>Mike Fricker (Feind) Jack Phlash Spec Mike Pike</p>
 </main>
 
 
