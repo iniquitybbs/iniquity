@@ -53,7 +53,7 @@ Or retrieve BBS resources from Iniquity's RESTful service...
     curl -L http://localhost:3080/v0/getOnlineUsers.json
 
 # Documentation
-https://github.com/iniquitybbs/iniquity/doc/README_md.html
+https://github.com/iniquitybbs/iniquity/doc
 
 ## Issues
 https://github.com/iniquitybbs/iniquity/issues
