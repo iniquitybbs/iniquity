@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
     s.version     = "0.0.20"
     s.summary     = "Iniquity BBS"
     s.description = "A re-imagining of the iconic BBS software."
-    s.authors     = ["Dan Stephenson", "Lawerence Manuel Tony"]
+    s.authors     = ["Dan Stephenson", "Lawrence Manuel"]
     s.email       = "ispyhumanfly@gmail.com"
     s.files = ["./artwork/sm!iniq2.asc", "./artwork/we-iniq3.ans"]
     s.executables << "iniquity"
