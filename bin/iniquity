@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
-=begin rdoc
 #-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
 # `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
 #-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
@@ -19,7 +18,7 @@
 #==============================================================================
 #   t h e    i n i q u i t y    b u l l e t i n    b o a r d    s y s t e m
 #==============================================================================
-=end
+
 trap("INT") {exit}
 
 SYSTEM = ENV["INIQUITY_SYSTEM"] || Dir.pwd
@@ -41,7 +40,7 @@ module Telnet
         # Save xterm icon and window title on stack.
         # send_data "\x1b[22;0"
 
-        send_data "\n #{ANSI::Code.white}Iniquity BBS :: #{ANSI::Code.red }Build 0.0.19 - #{ANSI::Code.blue_on_white}Telnet Connection!\n"
+        send_data "\n #{ANSI::Code.white}Iniquity BBS :: #{ANSI::Code.red }Build 0.0.20 - #{ANSI::Code.blue_on_white}Telnet Connection!\n"
 
         artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/we-iniq3.ans")
 
@@ -65,6 +64,32 @@ module Telnet
     end
 end
 
+class HTTP < EM::HttpServer::Server
+
+    def process_http_request
+          puts  @http_request_method
+          puts  @http_request_uri
+          puts  @http_query_string
+          puts  @http_protocol
+          puts  @http_content
+          puts  @http[:cookie]
+          puts  @http[:content_type]
+          # you have all the http headers in this hash
+          puts  @http.inspect
+
+          response = EM::DelegatedHttpResponse.new(self)
+          response.status = 200
+          response.content_type 'text/html'
+          response.content = 'It works'
+          response.send_response
+    end
+
+    def http_request_errback e
+      # printing the whole exception
+      puts e.inspect
+    end
+
+end
 module Rest
 
     def initialize
@@ -95,8 +120,10 @@ if ARGV[0] && ARGV[0] == "init"
     new_system_file.puts "\n[iqpkg]\nsources=iniquitybbs\n"
     new_system_file.puts "\n[telnet]\nenabled=yes\n"
     new_system_file.puts "port=3023\n"
+    new_system_file.puts "\n[http]\nenabled=yes\n"
+    new_system_file.puts "port=3080\n"    
     new_system_file.puts "\n[rest]\nenabled=yes\n"
-    new_system_file.puts "port=3080\n"
+    new_system_file.puts "port=3443\n"
     new_system_file.close
 
     DB.execute <<-SQL
@@ -105,7 +132,7 @@ if ARGV[0] && ARGV[0] == "init"
             val int
         );
     SQL
-
+ 
     abort "\niniquity - Initialized directory as a new system.\n\n"
 end
 
@@ -139,6 +166,14 @@ EM.run do
 
                 puts "iniquity - Telnet service started."
                 EM.start_server "0.0.0.0", CONFIG[section]["port"], Telnet
+            end
+        end
+
+        if section == "http"
+            if CONFIG[section]["enabled"] == "yes"
+
+                puts "iniquity - HTTP service started."
+                EM.start_server "0.0.0.0", CONFIG[section]["port"], Http
             end
         end
 
