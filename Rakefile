@@ -4,5 +4,13 @@ begin
     task :default => :spec
 
 rescue LoadError
-    # no rspec available
+end
+
+begin
+    require "yard"
+    YARD::Rake::YardocTask.new(:yard) do |t|
+    end
+    task :default => :yard
+
+rescue LoadError
 end

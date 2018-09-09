@@ -35,7 +35,7 @@ Labore ipsum laborum mollit adipisicing eu incididunt ipsum cillum id Lorem. Off
 
     brew install sqlite3 sqlite3-dev make gcc g++ ruby ruby-build
 
-### Ubuntu
+### Ubuntu Linux
 
     apt-get install libsqlite3-dev ruby rub-dev git
 
@@ -55,7 +55,7 @@ Inside of a new directory, initialize it as an Iniquity system...
 
 Next, install the "eternity" package to help get things going...
 
-    iqpkg install iq-examples
+    iqpkg install eternity
 
 Now start your new Iniquity BBS!
 
@@ -69,9 +69,9 @@ Or retrieve BBS resources from Iniquity's RESTful service...
 
     curl -L http://localhost:3080/v0/getOnlineUsers.json
 
-# Documentation
+## Documentation
 
-https://github.com/iniquitybbs/iniquity/doc
+https://www.rubydoc.info/github/iniquitybbs/iniquity/master
 
 ## Issues
 
@@ -89,10 +89,6 @@ https://github.com/iniquitybbs/iniquity/issues
 * Darkwing
 * Mike Pike
 * Mike Fricker
-
-## License
-
-MIT
 
 ## Copyright
 

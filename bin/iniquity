@@ -29,8 +29,12 @@ require "thin"
 require "socksify"
 require "sqlite3"
 require "ansi"
+require "em-http-server"
+require "yard"
 
-module Telnet
+cattr_accessor :publisher
+
+class Telnet < EM::Connection
     def initialize
         super
 
@@ -62,7 +66,10 @@ module Telnet
     def unbind
         puts "iniquity - Someone disconnected from the system..."
     end
+    property :title, String
 end
+
+# @author Loren Segal
 
 class HTTP < EM::HttpServer::Server
 
@@ -90,8 +97,11 @@ class HTTP < EM::HttpServer::Server
     end
 
 end
-module Rest
+class Rest < EM::Connection
 
+    # Handles a request
+    # @param request [Request] the request object
+    # @return [String] the resulting webpage
     def initialize
         super
     end
@@ -101,7 +111,8 @@ module Rest
     end
     def unbind
     end
-end
+
+class_name end
 
 ### Iniquity Bulletin Board System
 

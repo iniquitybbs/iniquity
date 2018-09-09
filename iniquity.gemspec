@@ -13,8 +13,11 @@ Gem::Specification.new do |s|
     s.executables << "iqterm"
     s.homepage    = "http://iniquitybbs.org"
     s.metadata = { "issue_tracker" => "https://github.com/iniquitybbs/iniquity/issues" }
+    s.metadata["yard.run"] = "yri"
     s.license     = "MIT"
     s.add_dependency("rake")
+    s.add_dependency("yard")
+    s.add_dependency("yard-rspec")
     s.add_dependency("json")
     s.add_dependency("eventmachine")
     s.add_dependency("em-http-server")
