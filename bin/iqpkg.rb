@@ -29,8 +29,10 @@ require "github_api"
 require "highline"
 require "open-uri"
 require "zip"
+require "yard"
+require "rdoc"
 
-### Iniquity Modules Utility
+# Iniquity Package Manager
 
 artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/sm!iniq2.asc")
 

@@ -1,2 +1,8 @@
---title "Iniquity BBS Software"
---files "doc/**/*.md"
+--title "Iniquity BBS Documentation"
+--exclude artwork/*
+--files bin/*
+--no-cache
+--no-save
+-r README.md
+-m markdown
+--plugin yard-rspec

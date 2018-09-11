@@ -32,9 +32,13 @@ require "ansi"
 require "em-http-server"
 require "yard"
 
-cattr_accessor :publisher
+# Iniquity BBS Software
 
 class Telnet < EM::Connection
+
+    # Sets the publisher name for the list.
+    cattr_accessor :publisher
+
     def initialize
         super
 
@@ -66,11 +70,10 @@ class Telnet < EM::Connection
     def unbind
         puts "iniquity - Someone disconnected from the system..."
     end
-    property :title, String
-end
 
-# @author Loren Segal
+class_name end
 
+# @note Still a work in progress...
 class HTTP < EM::HttpServer::Server
 
     def process_http_request
@@ -96,12 +99,13 @@ class HTTP < EM::HttpServer::Server
       puts e.inspect
     end
 
-end
+class_name end
+
+##
+# Rest Service Class
+
 class Rest < EM::Connection
 
-    # Handles a request
-    # @param request [Request] the request object
-    # @return [String] the resulting webpage
     def initialize
         super
     end
@@ -111,8 +115,7 @@ class Rest < EM::Connection
     end
     def unbind
     end
-
-class_name end
+end
 
 ### Iniquity Bulletin Board System
 

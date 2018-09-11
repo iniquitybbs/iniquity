@@ -1,30 +1,30 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+#-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+# `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+#-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
+#;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
+#:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+#.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
+# `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
+#%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$#$%$
+#dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
+#%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
+#   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
+#.      .  '$a,          .        a` .   'a          .   .             s` .  . .
+#      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+#   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%#$
+#==============================================================================
+#   t h e    i n i q u i t y    b u l l e t i n    b o a r d    s y s t e m
+#==============================================================================
 
 require "yard"
+require "rdoc"
 
-cattr_accessor :publisher
-
-module IniquityServices 
-
-    class Telnet
-        # Handles a request
-        # @param request [Request] the request object
-        # @return [String] the resulting webpage
-        def get(request) "hello" end
-    class_name end
-        # Handles a request
-        # @param request [Request] the request object
-        # @return [String] the resulting webpage
-        def get(request) "hello" end
-    class Http
-        # Handles a request
-        # @param request [Request] the request object
-        # @return [String] the resulting webpage
-        def get(request) "hello" end
-
-    class_name end
-    class Rest
-    class_name end
-    class Websocket
-    class_name end
-    
-class_name end
+module IniquityLib
+    class oneliners
+        # Sets the publisher name for the list.
+        cattr_accessor :publisher
+    end
+end

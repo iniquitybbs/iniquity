@@ -32,8 +32,10 @@ require "zip"
 require 'rubygems'
 require 'eventmachine'
 require "socksify"
+require "rdoc"
+require "yard"
 
-### Iniquity Terminal Utility
+# Iniquity Terminal Client
 
 artwork = File.join(File.dirname(File.expand_path(__FILE__)), "../artwork/sm!iniq2.asc")
 

@@ -4,6 +4,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/iniquity.png)](https://badge.fury.io/rb/iniquity)
 
+[![Inline docs](http://inch-ci.org/github/iniquitybbs/iniquity.svg?branch=master)](http://inch-ci.org/github/iniquitybbs/iniquity)
+
 # Iniquity
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is written in Ruby, and has been radically re-invented as a modular system. At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniquity BBS easily using the provided utilities.
