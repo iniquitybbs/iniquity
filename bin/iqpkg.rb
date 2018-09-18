@@ -48,8 +48,8 @@ else
     abort "iqpkg - An Iniquity system must have an iniquity.ini file.\n\n"
 end
 
-# Find all available modules across all GitHub sources...
-available_modules = []
+# Find all available packages across all GitHub sources...
+available_packages = []
 
 if CONFIG["iqpkg"]["sources"]
     CONFIG["iqpkg"]["sources"].split(",").each do |source|
@@ -58,7 +58,7 @@ if CONFIG["iqpkg"]["sources"]
 
         repositories.each do |iqpkg|
             if iqpkg.name.match(/^iqpkg/)
-                available_modules.push(iqpkg)
+                available_packages.push(iqpkg)
             end
         end
     end
@@ -80,7 +80,7 @@ if ARGV[0] && ARGV[0] == "install"
 
     if ARGV[0]
         ARGV.each do |install|
-            available_modules.each do |iqpkg|
+            available_packages.each do |iqpkg|
 
                 if install == iqpkg.name
                     next if Dir.exists? SYSTEM + "/#{iqpkg.name}"
@@ -134,10 +134,10 @@ end
 # If no options passed.
 unless ARGV[0]
 
-    if available_modules.length > 0
-        puts "iqpkg - Modules available for installation.\n\n"
+    if available_packages.length > 0
+        puts "iqpkg - Packages available for installation.\n\n"
 
-        available_modules.each do |iqpkg|
+        available_packages.each do |iqpkg|
             puts iqpkg.name
             puts iqpkg.description
             puts "https://github.com/#{iqpkg.full_name}/archive/master.zip"
@@ -146,7 +146,7 @@ unless ARGV[0]
     end
 
     if installed_modules.length > 0
-        puts "iqpkg - Modules currently installed.\n\n"
+        puts "iqpkg - Packages currently installed.\n\n"
 
         installed_modules.each do |iqpkg|
             puts iqpkg

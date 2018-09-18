@@ -71,7 +71,7 @@ class Telnet < EM::Connection
     end
 end
 
-class HTTP < EM::HttpServer::Server
+class Http < EM::HttpServer::Server
 
     def process_http_request
           puts  @http_request_method
