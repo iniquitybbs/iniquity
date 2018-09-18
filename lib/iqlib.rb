@@ -44,24 +44,24 @@ module Iniquity
             # Do Something...
         end
         #
-        # @param [Symbol] the format type, `:object` or `:json`
+        # @param data [Symbol] the format type, `:object` or `:json`
         # @return [Object] the object converted into the expected format.
 
         def read(data = :object || :json)
         end
         # Create a new BBS user.
         #
-        # @param [Symbol] the format type, `:object` or `:html`
+        # @param data [Symbol] the format type, `:object` or `:html`
         # @return [Object] the object converted into the expected format.
 
-        def update(param = :object || :json)
+        def update(data = :object || :json)
         end
         # Update an existing BBS user.
         #
-        # @param [Symbol] the format type, `:object` or `:json`
+        # @param data [Symbol] the format type, `:object` or `:json`
         # @return [Object] the object converted into the expected format.
 
-        def delete(params = :object)
+        def delete(data = :object)
         end
     end
 end

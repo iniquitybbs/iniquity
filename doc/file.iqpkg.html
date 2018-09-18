@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: iqpkg
+  
+    &mdash; Iniquity BBS Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "iqpkg";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: iqpkg</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><pre class="code ruby"><span class='comment'>#!/usr/bin/env ruby
+</span><span class='comment'># encoding: UTF-8
+</span>
+<span class='comment'>#-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+</span><span class='comment'># `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+</span><span class='comment'>#-.aaa$ $$$$&#39;- $$$$$.- $aaa. -.a%$^&quot;$$aa -- .$$$$$&#39;- $$a. $aaa. `$,$ ----------%
+</span><span class='comment'>#;$$$$&#39;,a$a$  d$%$$$$$,&#39;$$$$;$$$$$  $$$$$., $$%$$&quot;  d$a$$ &#39;$$$$; $$$   .a%$  $$a
+</span><span class='comment'>#:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&amp;$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+</span><span class='comment'>#.$$$$ `$$$$.  $$$%$$$&#39; $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$&quot;&quot;$$$&quot; $$$$:  a$$
+</span><span class='comment'># `$$$a.$$%$   $$$$$$&#39;;a$$$`  `¸$$aa$$$$&amp;$&#39;: `$$$$a. $$$$&#39;a$$$`.$$&#39;$  $$$$;  $$$
+</span><span class='comment'>#%-----.------ $$$$&#39;--------------- $$%$$&#39; -- `¸$$$$$%$¸&#39; ---- $$¸$a. `&quot;$&amp;$$#$%$
+</span><span class='comment'>#dz      .   .:&#39;¸&#39;     .        .   $$$$&#39;     .        .       `¸$$$$y.     `$$&amp;
+</span><span class='comment'>#%--------- a`-----------.--------- $$¸&#39; -----.------------.---------------- $$$
+</span><span class='comment'>#   .      !a    . .    .      .   .:&#39;   .  .                  .        .:.a$$$¸
+</span><span class='comment'>#.      .  &#39;$a,          .        a` .   &#39;a          .   .             s` .  . .
+</span><span class='comment'>#      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+</span><span class='comment'>#   .         ¸¸&#39;     . .        &#39;$$Aa.aA$$&#39;        . .               `!$%a.a%#$
+</span><span class='comment'>#==============================================================================
+</span><span class='comment'>#   t h e    i n i q u i t y    p a c k a g e    m a n a g e r
+</span><span class='comment'>#==============================================================================
+</span>
+<span class='id identifier rubyid_trap'>trap</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INT</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='id identifier rubyid_exit'>exit</span><span class='rbrace'>}</span>
+
+<span class='const'>SYSTEM</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INIQUITY_SYSTEM</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_pwd'>pwd</span>
+<span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INIQUITY_SYSTEM</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>SYSTEM</span>
+
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>inifile</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>github_api</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>highline</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open-uri</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>zip</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yard</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rdoc</span><span class='tstring_end'>&quot;</span></span>
+
+<span class='comment'># Iniquity Package Manager
+</span>
+<span class='id identifier rubyid_artwork'>artwork</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>../artwork/sm!iniq2.asc</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+<span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_artwork'>artwork</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='op'>::</span><span class='const'>IBM437</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='op'>::</span><span class='const'>UTF_8</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\niqpkg - The Iniquity BBS Package Manager.\n</span><span class='tstring_end'>&quot;</span></span>
+
+<span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/iniquity.ini</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>CONFIG</span> <span class='op'>=</span> <span class='const'>IniFile</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='const'>SYSTEM</span><span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/iniquity.ini</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>else</span>
+    <span class='id identifier rubyid_abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - An Iniquity system must have an iniquity.ini file.\n\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+
+<span class='comment'># Find all available modules across all GitHub sources...
+</span><span class='id identifier rubyid_available_modules'>available_modules</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+<span class='kw'>if</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sources</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sources</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_source'>source</span><span class='op'>|</span>
+
+        <span class='id identifier rubyid_repositories'>repositories</span> <span class='op'>=</span> <span class='const'>Github</span><span class='period'>.</span><span class='id identifier rubyid_repos'>repos</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span> <span class='label'>user:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source'>source</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+        <span class='id identifier rubyid_repositories'>repositories</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^iqpkg</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_available_modules'>available_modules</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_installed_modules'>installed_modules</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+<span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_chdir'>chdir</span> <span class='const'>SYSTEM</span>
+<span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>iqpkg*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span>
+        <span class='id identifier rubyid_installed_modules'>installed_modules</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span>
+    <span class='kw'>end</span>
+<span class='rbrace'>}</span>
+
+<span class='comment'># If &quot;install&quot; passed.
+</span><span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>install</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='const'>ARGV</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+
+    <span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+        <span class='const'>ARGV</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_install'>install</span><span class='op'>|</span>
+            <span class='id identifier rubyid_available_modules'>available_modules</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='op'>|</span>
+
+                <span class='kw'>if</span> <span class='id identifier rubyid_install'>install</span> <span class='op'>==</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+                    <span class='kw'>next</span> <span class='kw'>if</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span> <span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+                    <span class='comment'># Need to wrap this sequence in a try/catch of some kind...
+</span>
+                    <span class='id identifier rubyid_download'>download</span> <span class='op'>=</span> <span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://github.com/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>/archive/master.zip</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                    <span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_copy_stream'>copy_stream</span><span class='lparen'>(</span><span class='id identifier rubyid_download'>download</span><span class='comma'>,</span> <span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.zip</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+                    <span class='const'>Zip</span><span class='op'>::</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.zip</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_zip_file'>zip_file</span><span class='op'>|</span>
+                        <span class='id identifier rubyid_zip_file'>zip_file</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
+                            <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_extract'>extract</span><span class='lparen'>(</span><span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                        <span class='kw'>end</span>
+                    <span class='kw'>end</span>
+
+                    <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_mv'>mv</span> <span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>-master</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_rm'>rm</span> <span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.zip</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - Installed </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.\n\n</span><span class='tstring_end'>&quot;</span></span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - You must specify an iqpkg package name to install.\n\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># If &quot;uninstall&quot; passed.
+</span><span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>uninstall</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='comment'>#ARGV.shift
+</span>
+    <span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+        <span class='const'>ARGV</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_uninstall'>uninstall</span><span class='op'>|</span>
+            <span class='id identifier rubyid_abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - Sorry, uninstall doesn&#39;t work yet.\n\n</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># If &quot;search&quot; passed.
+</span><span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>search</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='comment'>#ARGV.shift
+</span>
+    <span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+        <span class='const'>ARGV</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_search'>search</span><span class='op'>|</span>
+            <span class='id identifier rubyid_abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - Sorry, search doesn&#39;t work yet.\n\n</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># If no options passed.
+</span><span class='kw'>unless</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_available_modules'>available_modules</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - Modules available for installation.\n\n</span><span class='tstring_end'>&quot;</span></span>
+
+        <span class='id identifier rubyid_available_modules'>available_modules</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='op'>|</span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://github.com/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>/archive/master.zip</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_installed_modules'>installed_modules</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iqpkg - Modules currently installed.\n\n</span><span class='tstring_end'>&quot;</span></span>
+
+        <span class='id identifier rubyid_installed_modules'>installed_modules</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_iqpkg'>iqpkg</span><span class='op'>|</span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_iqpkg'>iqpkg</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre></div></div>
+
+      <div id="footer">
+  Generated on Tue Sep 18 18:12:27 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

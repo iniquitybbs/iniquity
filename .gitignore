@@ -5,5 +5,4 @@ dump.*
 iniquity*.gem
 iniquity.ini
 iniquity.db
-doc/
 .yardoc

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: iniquity
+  
+    &mdash; Iniquity BBS Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "iniquity";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: iniquity</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><pre class="code ruby"><span class='comment'>#!/usr/bin/env ruby
+</span><span class='comment'># encoding: UTF-8
+</span>
+<span class='comment'>#-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+</span><span class='comment'># `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+</span><span class='comment'>#-.aaa$ $$$$&#39;- $$$$$.- $aaa. -.a%$^&quot;$$aa -- .$$$$$&#39;- $$a. $aaa. `$,$ ----------%
+</span><span class='comment'>#;$$$$&#39;,a$a$  d$%$$$$$,&#39;$$$$;$$$$$  $$$$$., $$%$$&quot;  d$a$$ &#39;$$$$; $$$   .a%$  $$a
+</span><span class='comment'>#:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&amp;$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+</span><span class='comment'>#.$$$$ `$$$$.  $$$%$$$&#39; $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$&quot;&quot;$$$&quot; $$$$:  a$$
+</span><span class='comment'># `$$$a.$$%$   $$$$$$&#39;;a$$$`  `¸$$aa$$$$&amp;$&#39;: `$$$$a. $$$$&#39;a$$$`.$$&#39;$  $$$$;  $$$
+</span><span class='comment'>#%-----.------ $$$$&#39;--------------- $$%$$&#39; -- `¸$$$$$%$¸&#39; ---- $$¸$a. `&quot;$&amp;$$#$%$
+</span><span class='comment'>#dz      .   .:&#39;¸&#39;     .        .   $$$$&#39;     .        .       `¸$$$$y.     `$$&amp;
+</span><span class='comment'>#%--------- a`-----------.--------- $$¸&#39; -----.------------.---------------- $$$
+</span><span class='comment'>#   .      !a    . .    .      .   .:&#39;   .  .                  .        .:.a$$$¸
+</span><span class='comment'>#.      .  &#39;$a,          .        a` .   &#39;a          .   .             s` .  . .
+</span><span class='comment'>#      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+</span><span class='comment'>#   .         ¸¸&#39;     . .        &#39;$$Aa.aA$$&#39;        . .               `!$%a.a%#$
+</span><span class='comment'>#==============================================================================
+</span><span class='comment'>#   t h e    i n i q u i t y    b u l l e t i n    b o a r d    s y s t e m
+</span><span class='comment'>#==============================================================================
+</span>
+<span class='id identifier rubyid_trap'>trap</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INT</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='id identifier rubyid_exit'>exit</span><span class='rbrace'>}</span>
+
+<span class='const'>SYSTEM</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INIQUITY_SYSTEM</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_pwd'>pwd</span>
+<span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INIQUITY_SYSTEM</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>SYSTEM</span>
+
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>inifile</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thin</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>socksify</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sqlite3</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ansi</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>em-http-server</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yard</span><span class='tstring_end'>&quot;</span></span>
+
+<span class='comment'>##
+</span><span class='comment'># Iniquity Telnet Service
+</span>
+<span class='kw'>class</span> <span class='const'>Telnet</span> <span class='op'>&lt;</span> <span class='const'>EM</span><span class='op'>::</span><span class='const'>Connection</span>
+    <span class='comment'># @api private
+</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+        <span class='kw'>super</span>
+
+        <span class='comment'># Disable line-wrapping (SyncTerm does not honor, careful!)
+</span>        <span class='id identifier rubyid_send_data'>send_data</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x1b[7l</span><span class='tstring_end'>&quot;</span></span>
+
+        <span class='comment'># Save xterm icon and window title on stack.
+</span>        <span class='comment'># send_data &quot;\x1b[22;0&quot;
+</span>
+        <span class='id identifier rubyid_send_data'>send_data</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n </span><span class='embexpr_beg'>#{</span><span class='const'>ANSI</span><span class='op'>::</span><span class='const'>Code</span><span class='period'>.</span><span class='id identifier rubyid_white'>white</span><span class='embexpr_end'>}</span><span class='tstring_content'>Iniquity BBS :: </span><span class='embexpr_beg'>#{</span><span class='const'>ANSI</span><span class='op'>::</span><span class='const'>Code</span><span class='period'>.</span><span class='id identifier rubyid_red'>red</span> <span class='embexpr_end'>}</span><span class='tstring_content'>Build 0.0.20 - </span><span class='embexpr_beg'>#{</span><span class='const'>ANSI</span><span class='op'>::</span><span class='const'>Code</span><span class='period'>.</span><span class='id identifier rubyid_blue_on_white'>blue_on_white</span><span class='embexpr_end'>}</span><span class='tstring_content'>Telnet Connection!\n</span><span class='tstring_end'>&quot;</span></span>
+
+        <span class='id identifier rubyid_artwork'>artwork</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>../artwork/we-iniq3.ans</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+        <span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_artwork'>artwork</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
+            <span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_next_tick'>next_tick</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_send_data'>send_data</span> <span class='id identifier rubyid_line'>line</span> <span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_post_init'>post_init</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - Someone connected to the system...</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_receive_data'>receive_data</span> <span class='id identifier rubyid_data'>data</span>
+        <span class='comment'>#send_data &quot;&gt;&gt;&gt;you sent: #{data}&quot;
+</span>        <span class='id identifier rubyid_close_connection'>close_connection</span> <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>quit|q|goodbye|g|logoff|l</span><span class='regexp_end'>/i</span></span>
+
+    <span class='kw'>end</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_unbind'>unbind</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - Someone disconnected from the system...</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='kw'>class</span> <span class='const'>HTTP</span> <span class='op'>&lt;</span> <span class='const'>EM</span><span class='op'>::</span><span class='const'>HttpServer</span><span class='op'>::</span><span class='const'>Server</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_process_http_request'>process_http_request</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http_request_method</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http_request_uri</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http_query_string</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http_protocol</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http_content</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http</span><span class='lbracket'>[</span><span class='symbol'>:cookie</span><span class='rbracket'>]</span>
+          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http</span><span class='lbracket'>[</span><span class='symbol'>:content_type</span><span class='rbracket'>]</span>
+          <span class='comment'># you have all the http headers in this hash
+</span>          <span class='id identifier rubyid_puts'>puts</span>  <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+
+          <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>EM</span><span class='op'>::</span><span class='const'>DelegatedHttpResponse</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='int'>200</span>
+          <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content_type'>content_type</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text/html</span><span class='tstring_end'>&#39;</span></span>
+          <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>It works</span><span class='tstring_end'>&#39;</span></span>
+          <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_send_response'>send_response</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_http_request_errback'>http_request_errback</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='comment'># printing the whole exception
+</span>      <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'>##
+</span><span class='comment'># Rest Service Class
+</span>
+<span class='kw'>class</span> <span class='const'>Rest</span> <span class='op'>&lt;</span> <span class='const'>EM</span><span class='op'>::</span><span class='const'>Connection</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+        <span class='kw'>super</span>
+    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_post_init'>post_init</span>
+    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_receive_dat'>receive_dat</span>
+    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_unbind'>unbind</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'>### Iniquity Bulletin Board System
+</span>
+<span class='id identifier rubyid_artwork'>artwork</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>../artwork/sm!iniq2.asc</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+<span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='id identifier rubyid_artwork'>artwork</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='op'>::</span><span class='const'>IBM437</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='op'>::</span><span class='const'>UTF_8</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+
+<span class='const'>DB</span> <span class='op'>=</span> <span class='const'>SQLite3</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>SYSTEM</span><span class='embexpr_end'>}</span><span class='tstring_content'>/iniquity.db</span><span class='tstring_end'>&quot;</span></span>
+
+<span class='comment'># If &quot;init&quot; passed...
+</span><span class='kw'>if</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>init</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/iniquity.ini</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>w</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[profile]\nname=NewBBS\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n[iqpkg]\nsources=iniquitybbs\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n[telnet]\nenabled=yes\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port=3023\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n[http]\nenabled=yes\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port=3080\n</span><span class='tstring_end'>&quot;</span></span>    
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n[rest]\nenabled=yes\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port=3443\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_new_system_file'>new_system_file</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+
+    <span class='const'>DB</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span> <span class='heredoc_beg'>&lt;&lt;-SQL</span>
+<span class='tstring_content'>        create table system (
+            name varchar(30),
+            val int
+        );
+</span><span class='heredoc_end'>    SQL
+</span> 
+    <span class='id identifier rubyid_abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\niniquity - Initialized directory as a new system.\n\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+
+<span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='const'>SYSTEM</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/iniquity.ini</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>CONFIG</span> <span class='op'>=</span> <span class='const'>IniFile</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='const'>SYSTEM</span><span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/iniquity.ini</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>else</span>
+    <span class='id identifier rubyid_abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - An iniquity system must have an iniquity.ini file.\n\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\niniquity - Starting </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>profile</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>...\n</span><span class='tstring_end'>&quot;</span></span>
+
+<span class='kw'>if</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tor</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yes</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'>TCPSocket</span><span class='op'>::</span><span class='id identifier rubyid_socks_server'>socks_server</span> <span class='op'>=</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tor</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>address</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='const'>TCPSocket</span><span class='op'>::</span><span class='id identifier rubyid_socks_port'>socks_port</span> <span class='op'>=</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tor</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span>
+
+<span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+
+    <span class='comment'>### Events
+</span>
+    <span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_add_periodic_timer'>add_periodic_timer</span><span class='lparen'>(</span><span class='int'>60</span> <span class='op'>*</span> <span class='int'>3</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - Periodic timed event example...</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='comment'>### Services
+</span>
+    <span class='const'>CONFIG</span><span class='period'>.</span><span class='id identifier rubyid_each_section'>each_section</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_section'>section</span><span class='op'>|</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_section'>section</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>telnet</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>if</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yes</span><span class='tstring_end'>&quot;</span></span>
+
+                <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - Telnet service started.</span><span class='tstring_end'>&quot;</span></span>
+                <span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_start_server'>start_server</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Telnet</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_section'>section</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>if</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yes</span><span class='tstring_end'>&quot;</span></span>
+
+                <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - HTTP service started.</span><span class='tstring_end'>&quot;</span></span>
+                <span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_start_server'>start_server</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Http</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_section'>section</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rest</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>if</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yes</span><span class='tstring_end'>&quot;</span></span>
+
+                <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>iniquity - Rest service started.</span><span class='tstring_end'>&quot;</span></span>
+                <span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_start_server'>start_server</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Rest</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre></div></div>
+
+      <div id="footer">
+  Generated on Tue Sep 18 18:12:27 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
