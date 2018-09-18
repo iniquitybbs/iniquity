@@ -8,7 +8,8 @@ end
 
 begin
     require "yard"
-    YARD::Rake::YardocTask.new(:yard) do |t|
+    YARD::Rake::YardocTask.new do |t|
+        t.stats_options = ["--list-undoc"]
     end
     task :default => :yard
 
