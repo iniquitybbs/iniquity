@@ -54,6 +54,19 @@ class Telnet < EM::Connection
         IO.readlines(artwork).each do |line|
             EM.next_tick { send_data line }
         end
+
+        if File.exists?(SYSTEM + "/iniquity.ini")
+            system = IniFile.load(SYSTEM+ "/iniquity.ini")
+            script = IO.popen(["ruby", system["profile"]["script"]])
+            #listing = io.read
+            #io.close
+            #raise "it failed!" unless $?.exitstatus == 0
+            #EM.next_tick { send_data listing.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8) }
+            script.readlines.each do |line|
+                EM.next_tick { send_data line.force_encoding(Encoding::IBM437).encode(Encoding::UTF_8) }
+            end
+        end
+
     end
 
     def post_init
@@ -87,7 +100,7 @@ class Http < EM::HttpServer::Server
           response = EM::DelegatedHttpResponse.new(self)
           response.status = 200
           response.content_type 'text/html'
-          response.content = 'It works'
+          response.content = 'Iniquity BBS :: Build 0.0.20'
           response.send_response
     end
 
@@ -98,9 +111,9 @@ class Http < EM::HttpServer::Server
 end
 
 ##
-# Rest Service Class
+# Websocket Service Class
 
-class Rest < EM::Connection
+class Websocket < EM::Connection
 
     def initialize
         super
@@ -127,12 +140,12 @@ DB = SQLite3::Database.new "#{SYSTEM}/iniquity.db"
 if ARGV[0] && ARGV[0] == "init"
     new_system_file = File.new(SYSTEM + "/iniquity.ini", "w")
     new_system_file.puts "[profile]\nname=NewBBS\n"
-    new_system_file.puts "\n[iqpkg]\nsources=iniquitybbs\n"
+    new_system_file.puts "\n[packages]\nsources=iniquitybbs\n"
     new_system_file.puts "\n[telnet]\nenabled=yes\n"
     new_system_file.puts "port=3023\n"
     new_system_file.puts "\n[http]\nenabled=yes\n"
     new_system_file.puts "port=3080\n"    
-    new_system_file.puts "\n[rest]\nenabled=yes\n"
+    new_system_file.puts "\n[websocket]\nenabled=yes\n"
     new_system_file.puts "port=3443\n"
     new_system_file.close
 
@@ -187,11 +200,11 @@ EM.run do
             end
         end
 
-        if section == "rest"
+        if section == "websocket"
             if CONFIG[section]["enabled"] == "yes"
 
-                puts "iniquity - Rest service started."
-                EM.start_server "0.0.0.0", CONFIG[section]["port"], Rest
+                puts "iniquity - Websocket service started."
+                EM.start_server "0.0.0.0", CONFIG[section]["port"], Websocket
             end
         end
     end

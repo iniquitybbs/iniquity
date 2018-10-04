@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
     s.add_dependency("json")
     s.add_dependency("eventmachine")
     s.add_dependency("em-http-server")
+    s.add_dependency("em-websocket")
     s.add_dependency("highline")
     s.add_dependency("thin")
     s.add_dependency("inifile")

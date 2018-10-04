@@ -1,6 +1,5 @@
 --title "Iniquity BBS Documentation"
 --exclude artwork/*
---files bin/*
 --no-cache
 --no-save
 -r README.md
