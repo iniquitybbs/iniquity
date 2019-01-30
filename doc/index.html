@@ -57,87 +57,71 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'>
-<p><a href="https://codeclimate.com/github/iniquitybbs/iniquity"><img
-src="https://codeclimate.com/github/dwyl/esta/badges/gpa.png"></a></p>
+      <div id="content"><div id='filecontents'><p><a href="https://codeclimate.com/github/iniquitybbs/iniquity"><img src="https://codeclimate.com/github/dwyl/esta/badges/gpa.png" alt="Code Climate" /></a></p>
 
-<p><a href="https://travis-ci.org/iniquitybbs/iniquity"><img
-src="https://travis-ci.org/iniquitybbs/iniquity.png?branch=master"></a></p>
+<p><a href="https://travis-ci.org/iniquitybbs/iniquity"><img src="https://travis-ci.org/iniquitybbs/iniquity.png?branch=master" alt="Build Status" /></a></p>
 
-<p><a href="https://badge.fury.io/rb/iniquity"><img
-src="https://badge.fury.io/rb/iniquity.png"></a></p>
+<p><a href="https://badge.fury.io/rb/iniquity"><img src="https://badge.fury.io/rb/iniquity.png" alt="Gem Version" /></a></p>
 
-<p><a href="http://inch-ci.org/github/iniquitybbs/iniquity"><img
-src="http://inch-ci.org/github/iniquitybbs/iniquity.svg?branch=master"></a></p>
+<p><a href="http://inch-ci.org/github/iniquitybbs/iniquity"><img src="http://inch-ci.org/github/iniquitybbs/iniquity.svg?branch=master" alt="Inline docs" /></a></p>
 
-<h1 id="label-Iniquity">Iniquity</h1>
+<h1 id="iniquity">Iniquity</h1>
 
-<p>This is the re-imagining of the iconic Iniquity Bulletin Board Software. It
-is written in Ruby, and has been radically re-invented as a modular system.
-At present, Iniquity can be installed onto a computer system via RubyGems,
-uses a simple .ini configuration format, and provides telnet and restful
-interfaces. A new or experienced Sysop can create an Iniquity BBS easily
-using the provided utilities.</p>
+<p>This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is written in Ruby, and has been radically re-invented as a modular system. At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniquity BBS easily using the provided utilities.</p>
+
 <p align="left">
-    <img src="https://github.com/iniquitybbs/iniquity/blob/master/artwork/SyncTERM_-_Iniquity_BBS.png?raw=true" height="300">
+    <img src="https://github.com/iniquitybbs/iniquity/blob/master/artwork/SyncTERM_-_Iniquity_BBS.png?raw=true" height="300" />
 </p>
-<h2 id="label-Key+Ideas+-26+Features">Key Ideas &amp; Features</h2>
-<ol><li>
-<p>Cross-platform. Runs anywhere Ruby runs.</p>
-</li><li>
-<p>Iniquity has been re-imagined as a collection of modules.</p>
-<ul><li>
-<p>Create and extend your BBS using Iniquity&#39;s package manager.</p>
-</li><li>
-<p>Install/customize/remove popular BBS packages easily.</p>
-</li></ul>
-</li><li>
-<p>Configurable WFC screens (Waiting For Caller)</p>
-<ul><li>
-<p>Supports multiple WFCs.</p>
-</li><li>
-<p>Easily switch between WFCs using the tab key.</p>
-</li></ul>
-</li><li>
-<p>Network Iniquity with other Iniquity BBSs easily.</p>
-<ul><li>
-<p>By its core design, an encrypted network hosts the BBS.</p>
-<ul><li>
-<p>Easily network message bases.</p>
-</li><li>
-<p>Easily network file bases.</p>
-</li><li>
-<p>Easily network users.</p>
-</li></ul>
-</li></ul>
-</li><li>
-<p>Broadcast messages to IRC, Discord and iMessages.</p>
-</li></ol>
 
-<h2 id="label-Supported+Platforms">Supported Platforms</h2>
+<h2 id="key-ideas--features">Key Ideas &amp; Features</h2>
 
-<p>Labore ipsum laborum mollit adipisicing eu incididunt ipsum cillum id
-Lorem. Officia et qui sint laborum pariatur voluptate. Incididunt labore
-culpa occaecat qui consequat sint. Velit irure dolor ut anim ad laboris.
-Quis cillum dolor fugiat ad Lorem eiusmod magna ullamco do magna. Laboris
-do aliqua sint duis enim sunt exercitation id voluptate.</p>
+<ol>
+  <li>Cross-platform. Runs anywhere Ruby runs.</li>
+  <li>Iniquity has been re-imagined as a collection of modules.
+    <ul>
+      <li>Create and extend your BBS using Iniquity’s package manager.</li>
+      <li>Install/customize/remove popular BBS packages easily.</li>
+    </ul>
+  </li>
+  <li>Configurable WFC screens (Waiting For Caller)
+    <ul>
+      <li>Supports multiple WFCs.</li>
+      <li>Easily switch between WFCs using the tab key.</li>
+    </ul>
+  </li>
+  <li>Network Iniquity with other Iniquity BBSs easily.
+    <ul>
+      <li>By its core design, an encrypted network hosts the BBS.
+        <ul>
+          <li>Easily network message bases.</li>
+          <li>Easily network file bases.</li>
+          <li>Easily network users.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Broadcast messages to IRC, Discord and iMessages.</li>
+</ol>
 
-<h3 id="label-macOS">macOS</h3>
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<p>Labore ipsum laborum mollit adipisicing eu incididunt ipsum cillum id Lorem. Officia et qui sint laborum pariatur voluptate. Incididunt labore culpa occaecat qui consequat sint. Velit irure dolor ut anim ad laboris. Quis cillum dolor fugiat ad Lorem eiusmod magna ullamco do magna. Laboris do aliqua sint duis enim sunt exercitation id voluptate.
+### macOS</p>
 
 <pre class="code ruby"><code class="ruby">brew install sqlite3 sqlite3-dev make gcc g++ ruby ruby-build
 </code></pre>
 
-<h3 id="label-Ubuntu+Linux">Ubuntu Linux</h3>
+<h3 id="ubuntu-linux">Ubuntu Linux</h3>
 
 <pre class="code ruby"><code class="ruby">apt-get install libsqlite3-dev ruby rub-dev git
 </code></pre>
 
-<h3 id="label-Windows">Windows</h3>
+<h3 id="windows">Windows</h3>
 
 <pre class="code ruby"><code class="ruby">Coming soon...
 </code></pre>
 
-<h2 id="label-Installation">Installation</h2>
+<h2 id="installation">Installation</h2>
 
 <p>Install Iniquity from RubyGems…</p>
 
@@ -164,48 +148,43 @@ do aliqua sint duis enim sunt exercitation id voluptate.</p>
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_iqterm'>iqterm</span> <span class='id identifier rubyid_localhost'>localhost</span> <span class='int'>3023</span>
 </code></pre>
 
-<p>Or retrieve BBS resources from Iniquity&#39;s RESTful service…</p>
+<p>Or retrieve BBS resources from Iniquity’s RESTful service…</p>
 
 <pre class="code ruby"><code class="ruby">curl -L http://localhost:3080/v0/getOnlineUsers.json
 </code></pre>
 
-<h2 id="label-Documentation">Documentation</h2>
+<h2 id="documentation">Documentation</h2>
 
-<p><a
-href="https://www.rubydoc.info/github/iniquitybbs/iniquity/master">www.rubydoc.info/github/iniquitybbs/iniquity/master</a></p>
+<p>https://www.rubydoc.info/github/iniquitybbs/iniquity/master</p>
 
-<h2 id="label-Issues">Issues</h2>
+<h2 id="issues">Issues</h2>
 
-<p><a
-href="https://github.com/iniquitybbs/iniquity/issues">github.com/iniquitybbs/iniquity/issues</a></p>
+<p>https://github.com/iniquitybbs/iniquity/issues</p>
 
-<h2 id="label-Authors">Authors</h2>
-<ul><li>
-<p>Dan Stephenson (ispyhumanfly)</p>
-</li><li>
-<p>Lawrence Manuel (smooth)</p>
-</li></ul>
+<h2 id="authors">Authors</h2>
 
-<h2 id="label-Contributors">Contributors</h2>
-<ul><li>
-<p>Jack Plash</p>
-</li><li>
-<p>Spec</p>
-</li><li>
-<p>Darkwing</p>
-</li><li>
-<p>Mike Pike</p>
-</li><li>
-<p>Mike Fricker</p>
-</li></ul>
+<ul>
+  <li>Dan Stephenson (ispyhumanfly)</li>
+  <li>Lawrence Manuel (smooth)</li>
+</ul>
 
-<h2 id="label-Copyright">Copyright</h2>
+<h2 id="contributors">Contributors</h2>
 
-<p>© 1991 - 2018 The Iniquity BBS Project</p>
+<ul>
+  <li>Jack Plash</li>
+  <li>Spec</li>
+  <li>Darkwing</li>
+  <li>Mike Pike</li>
+  <li>Mike Fricker</li>
+</ul>
+
+<h2 id="copyright">Copyright</h2>
+
+<p>(c) 1991 - 2018 The Iniquity BBS Project</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Sep 19 16:28:34 2018 by
+  Generated on Tue Jan 29 23:35:59 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>
