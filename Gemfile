@@ -4,7 +4,9 @@ source "http://rubygems.org"
 
 gemspec
 
-gem "rake"
+
+
+gem "rack"
 gem "json"
 gem "eventmachine"
 gem "highline"
