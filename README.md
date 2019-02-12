@@ -17,9 +17,9 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is w
 ## Key Ideas & Features
 
 1. Cross-platform. Runs anywhere Ruby runs.
-2. Iniquity has been re-imagined as a collection of modules.
+2. Iniquity has been re-imagined as a collection of packages (modules).
     - Create and extend your BBS using Iniquity's package manager.
-    - Install/customize/remove popular BBS packages easily.
+    - Install/customize/remove BBS packages easily.
 3. Configurable WFC screens (Waiting For Caller)
     - Supports multiple WFCs.
     - Easily switch between WFCs using the tab key.
@@ -32,18 +32,18 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is w
 
 ## Supported Platforms
 
-Labore ipsum laborum mollit adipisicing eu incididunt ipsum cillum id Lorem. Officia et qui sint laborum pariatur voluptate. Incididunt labore culpa occaecat qui consequat sint. Velit irure dolor ut anim ad laboris. Quis cillum dolor fugiat ad Lorem eiusmod magna ullamco do magna. Laboris do aliqua sint duis enim sunt exercitation id voluptate.
+Iniquity should run on any platform that sup
 ### macOS
 
     brew install sqlite3 sqlite3-dev make gcc g++ ruby ruby-build
 
 ### Ubuntu Linux
 
-    apt-get install libsqlite3-dev ruby rub-dev git
+    apt-get install libsqlite3-dev ruby ruby-dev git
 
 ### Windows
 
-    Coming soon...
+    Should work, we just don't test on Windows just yet. :(
 
 ## Installation
 
