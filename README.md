@@ -94,4 +94,4 @@ https://github.com/iniquitybbs/iniquity/issues
 
 ## Copyright
 
-(c) 1991 - 2018 The Iniquity BBS Project
+(c) 1991 - 2019 The Iniquity BBS Community
