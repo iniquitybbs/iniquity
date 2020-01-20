@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
     s.metadata = { "issue_tracker" => "https://github.com/iniquitybbs/iniquity/issues" }
     s.metadata["yard.run"] = "yri"
     s.license     = "MIT"
+    s.add_dependency("commander")
     s.add_dependency("rake")
     s.add_dependency("yard")
     s.add_dependency("yard-rspec")

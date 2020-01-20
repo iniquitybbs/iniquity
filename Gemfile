@@ -6,6 +6,7 @@ gemspec
 
 
 
+gem "commander"
 gem "rack"
 gem "json"
 gem "eventmachine"

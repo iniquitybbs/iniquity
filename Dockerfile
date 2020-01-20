@@ -16,9 +16,9 @@
 #                 t h e    i n i q u i t y    r u n t i me
 #==============================================================================
 
-FROM ubuntu:latest as IQRuntime
-LABEL name="IQ Runtime"
-LABEL version="edge"
+FROM ubuntu:latest as Iniquity
+LABEL name="Iniquity"
+LABEL version="0.0.20"
 
 WORKDIR /sbbs
 
@@ -36,7 +36,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update nodejs npm \
 WORKDIR /iniquity
 COPY . .
 
-# Start IQ Runtime
+# Start Iniquity
 EXPOSE 21
 EXPOSE 22
 EXPOSE 23
