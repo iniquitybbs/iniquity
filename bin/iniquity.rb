@@ -29,23 +29,21 @@ require "commander"
 require "yard"
 
 class Iniquity
-  include Commander::Methods
+    include Commander::Methods
 
-  def run
-    program :name, 'Iniquity'
-    program :version, '3.0.0'
-    program :description, 'Stupid command that prints foo or bar.'
+    def run
+        program :name, 'Iniquity'
+        program :version, '3.0.0'
+        program :description, 'Stupid command that prints foo or bar.'
 
-    command :foo do |c|
-      c.syntax = 'foobar foo'
-      c.description = 'Displays foo'
-      c.action do |args, options|
-        say 'foo'
-      end
+        command :foo do |c|
+            c.syntax = 'foobar foo'
+            c.description = 'Displays foo'
+            c.action do |args, options|
+                say 'foo'
+            end
+        end
     end
-
-    run!
-  end
 end
 
 Iniquity.new.run if $0 == __FILE__
