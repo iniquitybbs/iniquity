@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/.vscode": false,
+        "**/.yardoc": true
+      },
+      "git.ignoreLimitWarning": true,
+}
