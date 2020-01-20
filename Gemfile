@@ -4,8 +4,6 @@ source "http://rubygems.org"
 
 gemspec
 
-
-
 gem "commander"
 gem "rack"
 gem "json"
@@ -26,3 +24,4 @@ gem "yard"
 gem "yard-rspec"
 gem "em-http-server"
 gem "em-websocket"
+gem "solargraph", group: :development
