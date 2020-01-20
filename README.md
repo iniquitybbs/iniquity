@@ -1,3 +1,6 @@
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=alert_status)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
+
 [![Code Climate](https://codeclimate.com/github/dwyl/esta/badges/gpa.png)](https://codeclimate.com/github/iniquitybbs/iniquity)
 
 [![Build Status](https://travis-ci.org/iniquitybbs/iniquity.png?branch=master)](https://travis-ci.org/iniquitybbs/iniquity)
@@ -8,7 +11,7 @@
 
 # Iniquity
 
-This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is written in Ruby, and has been radically re-invented as a modular system. At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniquity BBS easily using the provided utilities.
+This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is written in Ruby, and has been radically re-invented as a modular system. At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniqu`ity BBS easily using the provided utilities.
 
 <p align="left">
     <img src="https://github.com/iniquitybbs/iniquity/blob/master/artwork/SyncTERM_-_Iniquity_BBS.png?raw=true" height="300">
