@@ -1,3 +1,4 @@
+# Iniquity
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=alert_status)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
@@ -7,17 +8,11 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=code_smells)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=bugs)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 
-# Iniquity
-
-This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is written in Ruby, and has been radically re-invented as a modular system. At present, Iniquity can be installed onto a computer system via RubyGems, uses a simple .ini configuration format, and provides telnet and restful interfaces. A new or experienced Sysop can create an Iniqu`ity BBS easily using the provided utilities.
-
-<p align="left">
-    <img src="https://github.com/iniquitybbs/iniquity/blob/master/artwork/SyncTERM_-_Iniquity_BBS.png?raw=true" height="300">
-</p>
+This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
 ## Key Ideas & Features
 
-1. Cross-platform. Runs anywhere Ruby runs.
+1. Cross-platform. Runs anywhere Ruby and Docker runs.
 2. Iniquity has been re-imagined as a collection of packages (modules).
     - Create and extend your BBS using Iniquity's package manager.
     - Install/customize/remove BBS packages easily.
@@ -31,9 +26,14 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software. It is w
         - Easily network users.
 5. Broadcast messages to IRC, Discord and iMessages.
 
-## Supported Platforms
+## Installation
 
-Iniquity should run on any platform that sup
+![Docker Automated build](https://img.shields.io/docker/automated/iniquitybbs/iniquity)
+
+## Development
+
+Iniquity BBS development can be achieved   platform that can run Ruby, NodeJS, TypeScript and Docker containers. There are a number of ways for
+
 ### macOS
 
     brew install sqlite3 sqlite3-dev make gcc g++ ruby ruby-build
