@@ -13,7 +13,7 @@
         ],
         "baseUrl": ".",
         "typeRoots": [
-            "./lib/iniquity.d.ts"
+            "lib/iniquity.d.ts"
         ],
         "lib": [
             "es2017",

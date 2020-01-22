@@ -1,21 +1,11 @@
 {
     "files.exclude": {
         "**/.vscode": false,
-        "**/.yardoc": true
+        "**/.yardoc": true,
+		"**/vendor": true,
     },
     "git.ignoreLimitWarning": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    },
-	"sonarlint.connectedMode.servers": [
-		{
-			"serverId": "my_sonarqube",
-			"serverUrl": "https://sonar.mycompany.com",
-			"token": "V2VkIE1..."
-		}
-	],
-    "sonarlint.connectedMode.project": {
-        "serverId": "the_server_connection_id",
-        "projectKey": "iniquitybbs_iniquity"
     }
 }

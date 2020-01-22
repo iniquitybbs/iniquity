@@ -17,3 +17,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
    t h e    i n i q u i t y    p r o g r a m m i n g   l a n g u a g e
 ==============================================================================
 */
+
+interface SomethingSimple {
+   
+}

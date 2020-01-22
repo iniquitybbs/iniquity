@@ -6,3 +6,6 @@ iniquity.ini
 iniquity.db
 .yardoc
 node_modules
+vendor
+.bundle
+doc

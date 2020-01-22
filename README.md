@@ -6,7 +6,6 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=sqale_index)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=code_smells)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=bugs)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
