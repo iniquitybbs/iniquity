@@ -1,11 +1,6 @@
 **/node_modules/*
-public/*
-private/*
-platforms/*
-hooks/*
 docs/*
 assets/*
 .vscode/*
 scripts/dist/*
 spec/*
-*.schema.ts
