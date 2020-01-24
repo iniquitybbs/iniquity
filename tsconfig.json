@@ -30,7 +30,6 @@
         "platforms",
         "private",
         "public",
-        "spec",
-        "**/serverless/*"
-    ]
+        "spec"
+   ]
 }

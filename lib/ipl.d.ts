@@ -18,6 +18,27 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-export default class Iniquity {
-    constructor() {}
+function load (library: any){}
+
+interface load {library: Object}
+
+/**
+ * Render options
+ */
+interface RenderOptions {
+    text?: string,
+    encoding?: string,
+    menu?: string,
+    speed?: number,
+    mode?: string,
+    align?: string,
+    file?: string
+}
+
+function screen {
+    this.print = Object
+}
+
+declare namespace screen {
+    function print(string): string
 }

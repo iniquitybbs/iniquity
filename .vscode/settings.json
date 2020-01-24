@@ -3,6 +3,9 @@
         "**/.vscode": false,
         "**/.yardoc": true,
 		"**/vendor": true,
+        "**/node_modules": true,
+        "**/.vagrant": true,
+        "**/.bundle": true,
     },
     "git.ignoreLimitWarning": true,
     "editor.codeActionsOnSave": {

@@ -28,7 +28,6 @@ require "rubygems"
 require "commander"
 require "yard"
 
-
 class Iniquity
     include Commander::Methods
 
@@ -39,7 +38,7 @@ class Iniquity
         program :help, 'Author', 'TJ Holowaychuk <tj@vision-media.ca>'
 
         command :init do |c|
-            c.syntax = 'init'
+            c.syntax = 'init <something>'
             c.description = 'Displays foo'
             c.action do |args, options|
                 say 'foo'

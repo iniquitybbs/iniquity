@@ -1,13 +1,13 @@
 # Iniquity
 
+This is the re-imagining of the iconic Iniquity Bulletin Board Software.
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=alert_status)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=security_rating)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=sqale_index)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=code_smells)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
-
-This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
 ## Key Ideas & Features
 
@@ -28,10 +28,11 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 ## Installation
 
 ![Docker Automated build](https://img.shields.io/docker/automated/iniquitybbs/iniquity)
+![Gem](https://img.shields.io/gem/v/iniquity)
 
 ## Development
 
-Iniquity BBS development can be achieved   platform that can run Ruby, NodeJS, TypeScript and Docker containers. There are a number of ways for
+Iniquity BBS development can be achieved platform that can run Ruby, NodeJS, TypeScript and Docker containers.
 
 ### macOS
 
