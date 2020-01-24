@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
     s.add_dependency("zip")
     s.add_dependency("ansi")
     s.add_dependency("redis")
+    s.add_dependency("docker")
 end

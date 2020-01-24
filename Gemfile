@@ -5,11 +5,10 @@ source "http://rubygems.org"
 gemspec
 
 gem "commander"
+gem "typescript-node"
 gem "rack"
 gem "json"
 gem "highline"
-gem "thin"
-gem "inifile"
 gem "rspec"
 gem "git"
 gem "github_api"
