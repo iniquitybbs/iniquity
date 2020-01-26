@@ -15,13 +15,16 @@ Vagrant.configure("2") do |config|
     end
   
     config.vm.provision "shell", inline: <<-SHELL
-        apt-get update
-        apt-get install -y nodejs
-        apt-get install -y npm
-        apt-get install -y ffmpeg
-        apt-get install -y imagemagick
-        apt-get install -y curl
-        apt-get install -y texlive-base
-        apt-get install -y pandoc
+        mkdir /sbbs \
+        && DEBIAN_FRONTEND=noninteractive apt-get update \
+        && apt-get -y install build-essential python ruby wget \
+        && apt-get -y install libncurses5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu \
+        && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
+        && apt-get -y install libmozjs-38-dev libmozjs-52-dev libcap2-dev lrzsz vim nodejs npm \ 
+        && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \
+        && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/termcap \
+        && tic terminfo && cat termcap >> /etc/termcap \
+        && wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/GNUmakefile' \
+        && make install SYMLINK=1 USE_DOSEMU=1
     SHELL
 end

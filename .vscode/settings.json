@@ -8,8 +8,8 @@
         "**/.bundle": true,
     },
     "git.ignoreLimitWarning": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "SonarSource.sonarlint-vscode",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll": true,
     }
 }
