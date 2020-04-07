@@ -4,6 +4,7 @@ PATH
     iniquity (0.0.20)
       ansi
       commander
+      docker
       git
       github_api
       highline
@@ -13,6 +14,7 @@ PATH
       redis
       rspec
       rubyzip
+      solargraph
       thin
       yard
       yard-rspec
@@ -26,6 +28,7 @@ GEM
     ansi (1.5.0)
     ast (2.4.0)
     backport (1.1.2)
+    backticks (1.0.2)
     benchmark (0.1.0)
     commander (4.4.7)
       highline (~> 2.0.0)
@@ -33,6 +36,8 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
+    docker (0.4.0)
+      backticks (~> 1.0.0)
     e2mmap (0.1.0)
     eventmachine (1.2.7)
     faraday (0.17.3)
@@ -55,7 +60,7 @@ GEM
     multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     oauth2 (1.4.2)
       faraday (>= 0.8, < 2.0)
