@@ -29,9 +29,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install libmozjs-38-dev libmozjs-52-dev libcap2-dev libcap2-bin sudo lrzsz vim nodejs npm \ 
     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \
     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/termcap \
-    #&& tic terminfo && cat termcap >> /etc/termcap \
-    #&& wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/GNUmakefile' \
-    #&& make install SYMLINK=1 USE_DOSEMU=1 \
+    && tic terminfo && cat termcap >> /etc/termcap \
+    && wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/GNUmakefile' \
+    && make install SYMLINK=1 USE_DOSEMU=1 \
     && npm install typescript ts-node -g
 
 WORKDIR /iniquity
