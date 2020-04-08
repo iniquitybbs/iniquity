@@ -11,7 +11,7 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
 ## Key Ideas & Features
 
-1. Cross-platform. Runs anywhere Ruby and Docker runs.
+1. Cross-platform. Runs anywhere Ruby and Docker or Vagrant can run.
 2. Iniquity has been re-imagined as a collection of packages (modules).
     - Create and extend your BBS using Iniquity's package manager.
     - Install/customize/remove BBS packages easily.
@@ -74,11 +74,11 @@ Or retrieve BBS resources from Iniquity's RESTful service...
 
 ## Documentation
 
-https://www.rubydoc.info/github/iniquitybbs/iniquity/master
+<https://www.rubydoc.info/github/iniquitybbs/iniquity/master>
 
 ## Issues
 
-https://github.com/iniquitybbs/iniquity/issues
+<https://github.com/iniquitybbs/iniquity/issues>
 
 ## Authors
 
