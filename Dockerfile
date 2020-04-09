@@ -45,4 +45,4 @@ EXPOSE 443
 EXPOSE 80
 EXPOSE 513
 
-CMD ["/bin/bash"]
+CMD ["/sbbs/exec/sbbs"]
