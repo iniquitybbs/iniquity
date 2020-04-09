@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
     s.add_dependency("yard-rspec")
     s.add_dependency("json")
     s.add_dependency("highline")
-    s.add_dependency("thin")
     s.add_dependency("inifile")
     s.add_dependency("rspec")
     s.add_dependency("git")
@@ -27,7 +26,6 @@ Gem::Specification.new do |s|
     s.add_dependency("rubyzip")
     s.add_dependency("zip")
     s.add_dependency("ansi")
-    s.add_dependency("redis")
     s.add_dependency("docker")
     s.add_dependency("solargraph")
 end
