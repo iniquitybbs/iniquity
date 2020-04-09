@@ -8,5 +8,5 @@ iniquity.db
 node_modules
 vendor
 .bundle
-doc
+
 .vagrant
