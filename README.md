@@ -11,19 +11,23 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
 ## Key Ideas & Features
 
-1. Cross-platform. Runs anywhere Ruby and Docker or Vagrant can run.
-2. Iniquity has been re-imagined as a collection of packages (modules).
+1. A cloud-native and highly portable approach to the BBS architecture.
+2. Cross-platform. Runs anywhere Ruby and Docker or Vagrant can run.
+3. Iniquity has been re-imagined as a collection of packages (modules).
     - Create and extend your BBS using Iniquity's package manager.
     - Install/customize/remove BBS packages easily.
-3. Configurable WFC screens (Waiting For Caller)
+4. Configurable WFC screens (Waiting For Caller)
     - Supports multiple WFCs.
     - Easily switch between WFCs using the tab key.
-4. Network Iniquity with other Iniquity BBSs easily.
+5. Network Iniquity with other Iniquity BBSs easily.
     - By its core design, an encrypted network hosts the BBS.
         - Easily network message bases.
         - Easily network file bases.
         - Easily network users.
-5. Broadcast messages to IRC, Discord and iMessages.
+6. Custom code your BBS using the Iniquity SDK available in multiple languages.
+    - TypeScript
+    - Ruby (_planned)
+    - Python (_planned)
 
 ## Installation
 
@@ -36,11 +40,11 @@ Iniquity BBS development can be achieved platform that can run Ruby, NodeJS, Typ
 
 ### macOS
 
-    brew install sqlite3 sqlite3-dev make gcc g++ ruby ruby-build
+    brew install sqlite3 sqlite3-dev make gcc g++ ruby ruby-build docker
 
 ### Ubuntu Linux
 
-    apt-get install libsqlite3-dev ruby ruby-dev git
+    apt-get install build-essentials libsqlite3-dev ruby ruby-dev git docker
 
 ### Windows
 

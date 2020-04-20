@@ -3,6 +3,7 @@ dump.*
 *.tmp
 iniquity*.gem
 iniquity.ini
+!template/iniquity.ini
 iniquity.db
 .yardoc
 node_modules
