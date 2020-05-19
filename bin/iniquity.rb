@@ -41,7 +41,8 @@ class Iniquity
             c.syntax = 'init <something>'
             c.description = 'Displays foo'
             c.action do |args, options|
-                say 'foo'
+                say 'Wow I made it.'
+                notify 'Something happened...'
             end
         end
 

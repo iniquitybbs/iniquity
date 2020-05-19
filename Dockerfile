@@ -16,7 +16,7 @@
 #                 t h e    i n i q u i t y    r u n t i m e
 #==============================================================================
 
-FROM ubuntu:latest as Iniquity
+FROM ubuntu:18.04 as Iniquity
 LABEL name="Iniquity"
 LABEL version="0.0.20"
 

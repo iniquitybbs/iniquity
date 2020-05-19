@@ -29,9 +29,9 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
     - Ruby (_planned)
     - Python (_planned)
 
-## Installation
+## Setup
 
-![Docker Automated build](https://img.shields.io/docker/automated/iniquitybbs/iniquity)
+![Docker Automated Build](https://img.shields.io/docker/automated/iniquitybbs/iniquity)
 ![Gem](https://img.shields.io/gem/v/iniquity)
 
 ## Development
