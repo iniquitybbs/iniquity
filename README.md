@@ -48,7 +48,7 @@ Iniquity BBS development can be achieved platform that can run Ruby, NodeJS, Typ
 
 ### Windows
 
-    Should work, we just don't test on Windows just yet. :(
+    Should work, we just don't test on Windows yet. :(
 
 ## Installation
 

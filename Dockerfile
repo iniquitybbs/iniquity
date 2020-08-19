@@ -30,8 +30,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \
     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/termcap \
     && tic terminfo && cat termcap >> /etc/termcap \
-    && wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/GNUmakefile' \
-    && make install SYMLINK=1 USE_DOSEMU=1 \
+    && wget ftp://vert.synchro.net/Synchronet/ssrc317b.tgz \
+    && wget ftp://vert.synchro.net/Synchronet/srun317b.tgz \ 
+    && tar -xzf ssrc317b.tgz && tar -xzf srun317b.tgz \
+    && echo RELEASE=1 > src/build/localdefs.mk \
+    && cd src/sbbs3 \
+    && echo USE_DOSEMU=1 > localdefs.mk \
+    && SBBSEXEC=/sbbs/exec make symlinks \
+    && SBBSCTRL=/sbbs/ctrl /sbbs/exec/jsexec update.js \
     && npm install typescript ts-node -g
 
 WORKDIR /iniquity
