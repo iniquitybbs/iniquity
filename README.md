@@ -84,19 +84,6 @@ Or retrieve BBS resources from Iniquity's RESTful service...
 
 <https://github.com/iniquitybbs/iniquity/issues>
 
-## Authors
-
-* Dan Stephenson (ispyhumanfly)
-* Lawrence Manuel (smooth)
-
-## Contributors
-
-* Jack Plash
-* Spec
-* Darkwing
-* Mike Pike
-* Mike Fricker
-
 ## Copyright
 
 (c) 1991 - 2020 The Iniquity BBS Community

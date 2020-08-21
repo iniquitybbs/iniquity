@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    iniquity (0.0.20)
+    iniquity (0.0.21)
       ansi
       commander
       docker

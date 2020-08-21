@@ -18,7 +18,7 @@
 
 FROM ubuntu:18.04 as Iniquity
 LABEL name="Iniquity"
-LABEL version="0.0.20"
+LABEL version="0.0.21"
 
 WORKDIR /sbbs
 

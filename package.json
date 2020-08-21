@@ -1,6 +1,6 @@
 {
   "name": "iniquity",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "A re-imagining of the iconic BBS software.",
   "main": "index.js",
   "directories": {
