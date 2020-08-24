@@ -35,7 +35,7 @@ class Iniquity
         program :name, 'Iniquity'
         program :version, '3.0.0'
         program :description, 'Stupid command that prints foo or bar.'
-        program :help, 'Author', 'Dan Stephenson <@vision-media.ca>'
+        program :help, 'Author', 'Dan Stephenson <ispyhumanfly@iniquitybbs.org>'
 
         command :init do |c|
             c.syntax = 'init <something>'

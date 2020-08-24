@@ -9,6 +9,64 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=sqale_index)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=code_smells)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 
+## Example
+
+```typescript
+load("/iniquity/app/lib.js")
+
+const iq = new Iniquity()
+
+iq.renderText({
+    file: "assets/welcome.ans",
+    clearScreenBefore: true
+})
+
+iq.say(
+    "Welcome to the new Euphoria BBS. You've connected to a prototype of the new Iniquity engine. It's still a real work in progress."
+        .color("bright red")
+        .center()
+)
+let login = iq.ask("What's your username?".newline().color("green"))
+if (login) {
+    switch (login) {
+        case "new":
+            iq.renderText({
+                file: "assets/newuser.ans",
+                clearScreenBefore: false
+            })
+
+            iq.ask("What would you like your handle to be?".newline().color("white"))
+            break
+        default:
+            iq.say(
+                `Hey ${login} thanks for signing in, let's move on to the next menu... Welcome to the Euphoria BBS system.`
+                    .newline()
+                    .color("white")
+                    .center()
+            )
+
+            iq.renderText({
+                file: "assets/welcome2.ans",
+                clearScreenBefore: false
+            })
+
+            iq.say(
+                "Now that we know who you are, let's see if you can input the right password..."
+                    .newline()
+                    .color("green")
+                    .center()
+            )
+
+            let password = iq.ask("Your password".newline().color("white"))
+            if (password) {
+                iq.say("Nice work entering a good password...".newline().color("white"))
+            }
+
+            break
+    }
+}
+```
+
 ## Key Ideas & Features
 
 1. A cloud-native and highly portable approach to the BBS architecture.
