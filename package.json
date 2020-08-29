@@ -1,5 +1,5 @@
 {
-  "name": "infamy",
+  "name": "iniquity",
   "version": "1.0.0",
   "description": "A pure JavaScript command shell powered by Synchronet in Docker",
   "main": "index.js",

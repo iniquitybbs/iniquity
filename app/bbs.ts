@@ -36,13 +36,21 @@ bbs.say(
 bbs.pause({ newlines: 2, center: true })
 
 bbs.renderText({
+    file: "assets/zv_iniq.ans",
+    clearScreenBefore: true,
+    speed: 60
+})
+
+bbs.pause({ newlines: 2, center: true })
+
+bbs.renderText({
     file: "assets/artwork/we-iniq3.ans",
     clearScreenBefore: false
 })
 
-bbs.say("You've connected to a prototype of the new Iniquity BBS Platform.".newlines().color("bright red").center())
+bbs.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
 
-let login = bbs.ask("What's your username?".newlines().color("green"))
+let login = bbs.ask("What's your username?".newlines(1).color("green"))
 if (login) {
     switch (login) {
         case "new":
