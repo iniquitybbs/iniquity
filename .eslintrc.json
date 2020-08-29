@@ -1,0 +1,151 @@
+{
+  "extends": [
+    "prettier/@typescript-eslint",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "eslint-plugin-import",
+    "simple-import-sort",
+    "sort-class-members"
+  ],
+  "rules": {
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/member-delimiter-style": [
+      "warn",
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": false
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-expect-error": true,
+        "ts-ignore": "allow-with-description",
+        "ts-nocheck": true,
+        "ts-check": false,
+        "minimumDescriptionLength": 5
+      }
+    ],
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "block-like",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-expression",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-const",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-let",
+        "next": "*"
+      }
+    ],
+    "spaced-comment": "error",
+    "no-buffer-constructor": "error",
+    "no-eval": "error",
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "eqeqeq": "error",
+    "no-unsafe-finally": "error",
+    "guard-for-in": "error",
+    "curly": ["warn", "multi-or-nest", "consistent"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "one-var-declaration-per-line": "error",
+    "import/order": "off",
+    "sort-imports": "off",
+    "simple-import-sort/sort": "error",
+    "quote-props": "off",
+    "no-redeclare": "error",
+    "no-underscore-dangle": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "jsdoc/require-param-type": 0,
+    "jsdoc/require-returns-type": 0,
+    "jsdoc/check-values": 0,
+    "sort-class-members/sort-class-members": [
+      2,
+      {
+        "order": [
+          "[static-properties]",
+          "[static-methods]",
+          "[properties]",
+          "[getters]",
+          "[setters]",
+          "[conventional-private-properties]",
+          "constructor",
+          "[vue-lifecycle-hooks]",
+          "[methods]",
+          "[conventional-private-methods]"
+        ],
+        "groups": {
+          "vue-lifecycle-hooks": [
+            {
+              "name": "/created|beforeCreate|mounted|beforeMount|destroyed|beforeDestroy|beforeUpdate|updated/",
+              "type": "method"
+            }
+          ]
+        }
+      }
+    ],
+    "import/no-internal-modules": [
+      "error",
+      {
+        "allow": [
+          "lodash/*",
+          "nativescript-ui-dataform/*",
+          "nativescript-ui-listview/*",
+          "nativescript-plugin-firebase/*",
+          "pdfmake/**/*",
+          "nativescript-ui-autocomplete/*",
+          "core-js/*",
+          "@amcharts/amcharts4/*",
+          "@amcharts/amcharts4/**/*",
+          "@nativescript/core/*",
+          "@nativescript/core/**/*",
+          "nativescript-webview-interface/**/*",
+          "nativescript-material-*/*"
+        ]
+      }
+    ]
+  }
+}

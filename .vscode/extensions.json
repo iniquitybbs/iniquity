@@ -1,0 +1,19 @@
+{
+    // Protest VSCode IDE Extensions
+	"recommendations": [
+        "esbenp.prettier-vscode",
+        "salbert.comment-ts",
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "davidanson.vscode-markdownlint",
+        "gruntfuggly.todo-tree",
+        "visualstudioexptteam.vscodeintellicode",
+        "editorconfig.editorconfig",
+        "eamodio.toggle-excluded-files",
+        "pkief.material-icon-theme"
+    ],
+    "unwantedRecommendations": [
+        "hookyqr.beautify",
+        "dbaeumer.jshint"
+    ]
+}

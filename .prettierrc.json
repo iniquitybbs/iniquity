@@ -1,0 +1,16 @@
+{
+    "requirePragma": false,
+    "insertPragma": false,
+    "printWidth": 150,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "useTabs": false,
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "attributeSeparator": "as-needed",
+    "commentPreserveSpaces": "keep-all"
+}
