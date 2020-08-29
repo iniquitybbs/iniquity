@@ -1,6 +1,0 @@
-**/node_modules/*
-docs/*
-assets/*
-.vscode/*
-scripts/dist/*
-spec/*

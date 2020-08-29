@@ -1,7 +1,0 @@
---title "Iniquity BBS Documentation"
---exclude node_modules/*
---no-cache
---no-save
--r README.md
--m markdown
---plugin yard-rspec
