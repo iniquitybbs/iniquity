@@ -47,43 +47,81 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ```typescript
 const bbs = new BBS()
 
-bbs.renderText({
-    file: "assets/welcome.ans",
+bbs.renderArtwork({
+    file: "assets/sm!iniq2.ans",
     clearScreenBefore: true
 })
 
-bbs.say("You've connected to a prototype of the new Iniquity BBS Platform.".color("bright red").center())
+bbs.say(
+    "You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool."
+        .newlines()
+        .color("red")
+        .center()
+)
+bbs.pause({ newlines: 2, center: true })
+```
 
-let login = bbs.ask("What's your username?".newline().color("green"))
+<img src="app/assets/artwork/screenshot-1.png">
+
+```typescript
+bbs.renderArtwork({
+    file: "assets/zv_iniq.ans",
+    clearScreenBefore: true,
+    speed: 60
+})
+
+bbs.pause({ newlines: 2, center: true })
+```
+
+<img src="app/assets/artwork/screenshot-2.png">
+
+```typescript
+bbs.renderArtwork({
+    file: "assets/artwork/we-iniq3.ans",
+    clearScreenBefore: false
+})
+
+bbs.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
+
+let login = bbs.ask("What's your username?".newlines(1).color("green"))
 if (login) {
     switch (login) {
         case "new":
-            bbs.renderText({
-                file: "assets/newuser.ans",
+            bbs.renderArtwork({
+                file: "assets/artwork/newuser.ans",
                 clearScreenBefore: false
             })
 
-            bbs.ask("What would you like your handle to be?".newline().color("white"))
+            bbs.ask("What would you like your handle to be?".newlines(2).color("white"))
             break
         default:
-            bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newline().color("white").center())
+            bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
 
-            bbs.renderText({
-                file: "assets/welcome2.ans",
+            bbs.renderArtwork({
+                file: "assets/artwork/we-iniq3.ans",
                 clearScreenBefore: false
             })
 
-            bbs.say("Now that we know who you are, let's see if you can input the right password...".newline().color("green").center())
+            bbs.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
 
-            let password = bbs.ask("Your password".newline().color("white"))
+            let password = bbs.ask("Your password".newlines().color("white"))
             if (password) {
-                bbs.say("Nice work entering a good password...".newline().color("white"))
+                bbs.say("Nice work entering a good password...".newlines().color("white"))
             }
+
+            bbs.renderArtwork({
+                file: "assets/artwork/4d-iniq1.ans",
+                clearScreenBefore: true
+            })
 
             break
     }
 }
 ```
+
+<img src="app/assets/artwork/screenshot-3.png">
+
+You get the idea...
 
 #### Enhance your Iniquity BBS application using modules
 
