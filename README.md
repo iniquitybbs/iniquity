@@ -136,10 +136,15 @@ Presently you will need to directly work from this repository to experiment with
 ### Your development environment should contain something like this, or similar
 
 -   macOS / Windows / Linux _required_
+    -   These modern operating systems are currently tested.
 -   Docker Desktop for macOS / Windows or Docker Machine _required_
+    -   The Iniquity BBS runtime is executed inside of a Docker container for portability.
 -   Node.js & NPM _required_
+    -   The Node community tools are used for TypeScript transpiling and Iniquity package management.
 -   Visual Studio Code _recommended_
+    -   This repository is specifically tuned to take full advantage of this IDE.
 -   Moebius _recommended_
+    -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
 
 ### Clone this repository into your current working directory using git
 
@@ -159,7 +164,7 @@ npm install
 npm start
 ```
 
-Using your favorite terminal client or web browser, connect to localhost
+Using your favorite terminal client or web browser, connect to localhost.
 
 ## Discord
 
