@@ -129,7 +129,7 @@ You get the idea...
 npm install https://github/iniquitybbs/filesharing https://github.com/iniquitybbs/messaging
 ```
 
-## Setup
+## Getting setup
 
 Presently you will need to directly work from this repository to experiment with Iniquity BBS.
 
@@ -141,23 +141,25 @@ Presently you will need to directly work from this repository to experiment with
 -   Visual Studio Code _recommended_
 -   Moebius _recommended_
 
-### Git
+### Clone this repository into your current working directory using git
 
 ```bash
 git clone https://github.com/iniquitybbs/iniquity.git
 ```
 
-## Install
+## Install all Iniquity BBS dependencies
 
 ```bash
 npm install
 ```
 
-## Run
+## Start the development environment
 
 ```bash
 npm start
 ```
+
+Using your favorite terminal client or web browser, connect to localhost
 
 ## Discord
 
