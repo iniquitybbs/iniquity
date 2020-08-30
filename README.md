@@ -31,14 +31,18 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 ```
 
-## Synopsis
+## Introduction
 
-### What is this
+### Some guidng principles
 
--   Draws inspiration from Iniquity and x84.
--   Easily deploy to AWS/Azure/GCP
+-   Make it easy for sysops to develop and deploy BBS applications.
+-   Easily network files, messages and other forms of communication between other BBS applications.
+-   What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
+    -   Though the ability to do interesting things specific to terminal/web should exist.
 
--
+### Develop an Iniquity BBS application using TypeScript
+
+#### In bbs.ts
 
 ```typescript
 const bbs = new BBS()
@@ -62,24 +66,14 @@ if (login) {
             bbs.ask("What would you like your handle to be?".newline().color("white"))
             break
         default:
-            bbs.say(
-                `Hey ${login} thanks for signing in, let's move on to the next menu...`
-                    .newline()
-                    .color("white")
-                    .center()
-            )
+            bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newline().color("white").center())
 
             bbs.renderText({
                 file: "assets/welcome2.ans",
                 clearScreenBefore: false
             })
 
-            bbs.say(
-                "Now that we know who you are, let's see if you can input the right password..."
-                    .newline()
-                    .color("green")
-                    .center()
-            )
+            bbs.say("Now that we know who you are, let's see if you can input the right password...".newline().color("green").center())
 
             let password = bbs.ask("Your password".newline().color("white"))
             if (password) {
@@ -91,14 +85,23 @@ if (login) {
 }
 ```
 
+#### Enhance your Iniquity BBS application using modules
+
+```bash
+npm install https://github/iniquitybbs/filesharing https://github.com/iniquitybbs/messaging
+```
+
 ## Setup
 
-### Requirements
+Presently you will need to directly work from this repository to experiment with Iniquity BBS.
 
--   macOS / Windows / Linux
+### Your development environment should contain something like this, or similar
+
+-   macOS / Windows / Linux _required_
 -   Docker Desktop for macOS / Windows or Docker Machine _required_
 -   Node.js & NPM _required_
 -   Visual Studio Code _recommended_
+-   Moebius _recommended_
 
 ### Git
 

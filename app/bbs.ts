@@ -22,7 +22,7 @@ load("/iniquity/lib/core.js")
 
 const bbs = new BBS()
 
-bbs.renderText({
+bbs.renderArtwork({
     file: "assets/sm!iniq2.ans",
     clearScreenBefore: true
 })
@@ -35,7 +35,7 @@ bbs.say(
 )
 bbs.pause({ newlines: 2, center: true })
 
-bbs.renderText({
+bbs.renderArtwork({
     file: "assets/zv_iniq.ans",
     clearScreenBefore: true,
     speed: 60
@@ -43,7 +43,7 @@ bbs.renderText({
 
 bbs.pause({ newlines: 2, center: true })
 
-bbs.renderText({
+bbs.renderArtwork({
     file: "assets/artwork/we-iniq3.ans",
     clearScreenBefore: false
 })
@@ -54,7 +54,7 @@ let login = bbs.ask("What's your username?".newlines(1).color("green"))
 if (login) {
     switch (login) {
         case "new":
-            bbs.renderText({
+            bbs.renderArtwork({
                 file: "assets/artwork/newuser.ans",
                 clearScreenBefore: false
             })
@@ -64,7 +64,7 @@ if (login) {
         default:
             bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
 
-            bbs.renderText({
+            bbs.renderArtwork({
                 file: "assets/artwork/we-iniq3.ans",
                 clearScreenBefore: false
             })
@@ -76,7 +76,7 @@ if (login) {
                 bbs.say("Nice work entering a good password...".newlines().color("white"))
             }
 
-            bbs.renderText({
+            bbs.renderArtwork({
                 file: "assets/artwork/4d-iniq1.ans",
                 clearScreenBefore: true
             })

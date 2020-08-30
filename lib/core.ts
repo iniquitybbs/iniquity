@@ -21,7 +21,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 load("sbbsdefs.js")
 
 /**
- * BBS
  * A whole bunch of functions
  */
 class BBS {
@@ -35,11 +34,11 @@ class BBS {
         this.name = system.name
     }
     /**
-     * Renders text
+     * Renders ANSI/ASCII/PETSCII artwork to the client screen.
      * @param options
      * @returns nothing, but displays the text to the console.
      */
-    renderText(options: IRenderOptions): void {
+    renderArtwork(options: IRenderOptions): void {
         let mode = options.mode || "line"
         let encoding = options.encoding || "CP437"
         let speed = options.speed || 30
