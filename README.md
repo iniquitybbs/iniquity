@@ -35,6 +35,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ### Some guidng thoughts surrounding the idea of a new Iniquity BBS
 
+-   Geared more towards a developer or sysop familiar with BBS modding
 -   Make it easy for sysops to develop and deploy BBS applications.
 -   Easily network files, messages and other forms of communication between other BBS applications.
 -   What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
