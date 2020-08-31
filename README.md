@@ -35,15 +35,60 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ### Some guidng thoughts surrounding the idea of a new Iniquity BBS
 
--   Geared more towards a developer or sysop familiar with BBS modding
+-   A BBS software that is geared more towards developers and modders.
 -   Make it easy for sysops to develop and deploy BBS applications.
 -   Easily network files, messages and other forms of communication between other BBS applications.
 -   What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
     -   Though the ability to do interesting things specific to terminal/web should exist.
 
-### Develop an Iniquity BBS application using TypeScript
+## Getting started
 
-#### Describe a simple welcome experience for connecting users
+### Your development environment should contain something like this, or similar
+
+-   macOS / Windows / Linux _required_
+    -   These modern operating systems are currently supported.
+-   Docker Desktop for macOS / Windows or Docker Machine _required_
+    -   The Iniquity BBS runtime is executed inside of a Docker container for portability.
+-   Node.js & NPM _required_
+    -   The Node community tools are used for TypeScript transpiling and Iniquity package management.
+-   Visual Studio Code _recommended_
+    -   This repository is specifically tuned to take full advantage of this IDE.
+-   Moebius _recommended_
+    -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
+
+### Install Iniquity using npm
+
+```bash
+npm install https://github.com/iniquitybbs/iniquity.git
+```
+
+## Initialize your current working directory as a new Iniquity system
+
+```bash
+iniquity init
+```
+
+## Start the system
+
+```bash
+iniquity start
+```
+
+## Using your favorite terminal client or web browser, connect to localhost using standard ports
+
+```bash
+iniquity term localhost
+```
+
+or...
+
+```text
+Go to http://localhost in your favorite web browser
+```
+
+### Developing an Iniquity application
+
+#### A welcome experience for connecting users
 
 ```typescript
 const bbs = new BBS()
@@ -64,7 +109,7 @@ bbs.pause({ newlines: 2, center: true })
 
 <img src="app/assets/artwork/screenshot-1.png">
 
-#### Maybe have it present some larger artwork, and end with prompting the user to pause
+#### Have it present some larger artwork, and end with prompting the user to pause
 
 ```typescript
 bbs.renderArtwork({
@@ -78,7 +123,7 @@ bbs.pause({ newlines: 2, center: true })
 
 <img src="app/assets/artwork/screenshot-2.png">
 
-#### Here you could begin to describe a simple login or new user creation process
+#### Begin to describe a simple login or new user application process
 
 ```typescript
 bbs.renderArtwork({
@@ -126,53 +171,16 @@ if (login) {
 
 <img src="app/assets/artwork/screenshot-3.png">
 
-#### You get the idea. Additionally, you could enhance your BBS using modules
+#### You get the idea. Additionally, you could enhance your Iniquity application using modules
 
 ```bash
-npm install https://github/iniquitybbs/filesharing https://github.com/iniquitybbs/messaging
+iniquity install filesharing messaging
 ```
-
-## Getting setup
-
-Presently you will need to directly work from this repository to experiment with Iniquity BBS.
-
-### Your development environment should contain something like this, or similar
-
--   macOS / Windows / Linux _required_
-    -   These modern operating systems are currently tested.
--   Docker Desktop for macOS / Windows or Docker Machine _required_
-    -   The Iniquity BBS runtime is executed inside of a Docker container for portability.
--   Node.js & NPM _required_
-    -   The Node community tools are used for TypeScript transpiling and Iniquity package management.
--   Visual Studio Code _recommended_
-    -   This repository is specifically tuned to take full advantage of this IDE.
--   Moebius _recommended_
-    -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
-
-### Clone this repository into your current working directory using git
-
-```bash
-git clone https://github.com/iniquitybbs/iniquity.git
-```
-
-## Install all Iniquity BBS dependencies
-
-```bash
-npm install
-```
-
-## Start the development environment
-
-```bash
-npm start
-```
-
-Using your favorite terminal client or web browser, connect to localhost.
 
 ## Discord
 
-[Iniquity Community Discord Server](https://discord.gg/UsyvrSZ)
+[Iniquity Discord Server](https://discord.gg/UsyvrSZ)
 
-## Copyright
+## Issues
 
-(c) 1991 - 2020 The Iniquity BBS Community
+[Iniquity Feedback, Ideas, Bugs](https://github.com/iniquitybbs/iniquity/issues)
