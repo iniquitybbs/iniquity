@@ -171,10 +171,10 @@ if (login) {
 
 <img src="app/assets/artwork/screenshot-3.png">
 
-#### You get the idea. Additionally, you could enhance your Iniquity application using modules
+#### You get the idea. Additionally, you can extend your own BBS using Iniquity's packaging system
 
 ```bash
-iniquity install filesharing messaging
+iniquity install @iniquitybbs/messaging @euphoriabbs/spylister
 ```
 
 ## Discord
