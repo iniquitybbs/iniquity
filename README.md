@@ -33,7 +33,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ## Introduction
 
-### Some guidng principles
+### Some guidng thoughts surrounding the idea of a new Iniquity BBS
 
 -   Make it easy for sysops to develop and deploy BBS applications.
 -   Easily network files, messages and other forms of communication between other BBS applications.
@@ -42,7 +42,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ### Develop an Iniquity BBS application using TypeScript
 
-#### In bbs.ts
+#### Describe a simple welcome experience for connecting users
 
 ```typescript
 const bbs = new BBS()
@@ -63,6 +63,8 @@ bbs.pause({ newlines: 2, center: true })
 
 <img src="app/assets/artwork/screenshot-1.png">
 
+#### Maybe have it present some larger artwork, and end with prompting the user to pause
+
 ```typescript
 bbs.renderArtwork({
     file: "assets/zv_iniq.ans",
@@ -74,6 +76,8 @@ bbs.pause({ newlines: 2, center: true })
 ```
 
 <img src="app/assets/artwork/screenshot-2.png">
+
+#### Here you could begin to describe a simple login or new user creation process
 
 ```typescript
 bbs.renderArtwork({
@@ -121,9 +125,7 @@ if (login) {
 
 <img src="app/assets/artwork/screenshot-3.png">
 
-You get the idea...
-
-#### Enhance your Iniquity BBS application using modules
+#### You get the idea. Additionally, you could enhance your BBS using modules
 
 ```bash
 npm install https://github/iniquitybbs/filesharing https://github.com/iniquitybbs/messaging
