@@ -9,8 +9,7 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=sqale_index)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=code_smells)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 
-```js
-/*
+```text
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
  `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
 -.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
@@ -28,7 +27,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
    t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
 ==============================================================================
-*/
 ```
 
 ## Introduction
