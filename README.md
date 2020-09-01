@@ -91,20 +91,20 @@ Go to http://localhost in your favorite web browser
 #### A welcome experience for connecting users
 
 ```typescript
-const bbs = new BBS()
+const iq = new BBS()
 
-bbs.renderArtwork({
+iq.renderArtwork({
     file: "assets/sm!iniq2.ans",
     clearScreenBefore: true
 })
 
-bbs.say(
+iq.say(
     "You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool."
         .newlines()
         .color("red")
         .center()
 )
-bbs.pause({ newlines: 2, center: true })
+iq.pause({ newlines: 2, center: true })
 ```
 
 <img src="app/assets/artwork/screenshot-1.png">
@@ -112,13 +112,13 @@ bbs.pause({ newlines: 2, center: true })
 #### Have it present some larger artwork, and end with prompting the user to pause
 
 ```typescript
-bbs.renderArtwork({
+iq.renderArtwork({
     file: "assets/zv_iniq.ans",
     clearScreenBefore: true,
     speed: 60
 })
 
-bbs.pause({ newlines: 2, center: true })
+iq.pause({ newlines: 2, center: true })
 ```
 
 <img src="app/assets/artwork/screenshot-2.png">
@@ -126,40 +126,40 @@ bbs.pause({ newlines: 2, center: true })
 #### Begin to describe a simple login or new user application process
 
 ```typescript
-bbs.renderArtwork({
+iq.renderArtwork({
     file: "assets/artwork/we-iniq3.ans",
     clearScreenBefore: false
 })
 
-bbs.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
+iq.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
 
-let login = bbs.ask("What's your username?".newlines(1).color("green"))
+let login = iq.ask("What's your username?".newlines(1).color("green"))
 if (login) {
     switch (login) {
         case "new":
-            bbs.renderArtwork({
+            iq.renderArtwork({
                 file: "assets/artwork/newuser.ans",
                 clearScreenBefore: false
             })
 
-            bbs.ask("What would you like your handle to be?".newlines(2).color("white"))
+            iq.ask("What would you like your handle to be?".newlines(2).color("white"))
             break
         default:
-            bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
+            iq.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
 
-            bbs.renderArtwork({
+            iq.renderArtwork({
                 file: "assets/artwork/we-iniq3.ans",
                 clearScreenBefore: false
             })
 
-            bbs.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
+            iq.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
 
-            let password = bbs.ask("Your password".newlines().color("white"))
+            let password = iq.ask("Your password".newlines().color("white"))
             if (password) {
-                bbs.say("Nice work entering a good password...".newlines().color("white"))
+                iq.say("Nice work entering a good password...".newlines().color("white"))
             }
 
-            bbs.renderArtwork({
+            iq.renderArtwork({
                 file: "assets/artwork/4d-iniq1.ans",
                 clearScreenBefore: true
             })
