@@ -173,6 +173,14 @@ interface String {
             | "bright magenta"
             | "bright cyan"
             | "bright white"
+            | "background black"
+            | "background red"
+            | "background green"
+            | "background yellow"
+            | "background blue"
+            | "background magenta"
+            | "background cyan"
+            | "background white"
             | "reset"
     ): string
     gotoxy(x: number, y: number): string
@@ -189,8 +197,8 @@ interface String {
     center(): string
 }
 String.prototype.color = function (color: string): string {
-    //NOSONAR
     switch (color) {
+        // 16 colors...
         case "black":
             return "\u001b[30m" + this
         case "bright black":
@@ -223,6 +231,25 @@ String.prototype.color = function (color: string): string {
             return "\u001b[37m" + this
         case "bright white":
             return "\u001b[37;1m" + this
+
+        // background colors...
+        case "background black":
+            return "\u001b[40m" + this
+        case "background red":
+            return "\u001b[41m" + this
+        case "background green":
+            return "\u001b[42m" + this
+        case "background yellow":
+            return "\u001b[43m" + this
+        case "background blue":
+            return "\u001b[44m" + this
+        case "background magenta":
+            return "\u001b[45m" + this
+        case "background cyan":
+            return "\u001b[46m" + this
+        case "background white":
+            return "\u001b[46m" + this
+
         case "reset":
             return "\u001b[0m" + this
 
