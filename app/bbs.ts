@@ -27,7 +27,7 @@ bbs.renderArtwork({
     clearScreenBefore: true
 })
 
-bbs.say(
+bbs.print(
     "You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool."
         .newlines()
         .color("red")

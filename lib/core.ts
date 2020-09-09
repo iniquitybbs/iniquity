@@ -88,7 +88,7 @@ class BBS {
     }
 
     /**
-     * Says bbs
+     * Says something to the user. Does not parse MCI/@- codes.
      * @param text
      */
     say(text: string): void {
@@ -96,6 +96,19 @@ class BBS {
         console.print(text)
     }
 
+    /**
+     * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
+     * @param text
+     */
+    print(text: string): void {
+        // @ts-ignore
+        console.putmsg(text)
+    }
+
+    /**
+     * Pauses the client screen
+     * @param options
+     */
     pause(options: { newlines?: number | 0; center?: true }): void {
         this.say("".newlines(options.newlines!))
         // @ts-ignore
@@ -108,7 +121,6 @@ class BBS {
     }
 
     /**
-     * Ask
      * Displays a prompt (value) and returns a string of user input (ala clent-side JS)
      * @param question
      * @returns response
