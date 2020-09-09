@@ -52,35 +52,31 @@ bbs.say("You've connected to a prototype of the new Iniquity BBS Development Pla
 
 let login = bbs.ask("What's your username?".newlines(1).color("green"))
 if (login) {
-    switch (login) {
-        case "new":
-            bbs.renderArtwork({
-                file: "assets/artwork/newuser.ans",
-                clearScreenBefore: false
-            })
+    if (login === "new") {
+        bbs.renderArtwork({
+            file: "assets/artwork/newuser.ans",
+            clearScreenBefore: false
+        })
 
-            bbs.ask("What would you like your handle to be?".newlines(2).color("white"))
-            break
-        default:
-            bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
+        bbs.ask("What would you like your handle to be?".newlines(2).color("white"))
+    } else {
+        bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
 
-            bbs.renderArtwork({
-                file: "assets/artwork/we-iniq3.ans",
-                clearScreenBefore: false
-            })
+        bbs.renderArtwork({
+            file: "assets/artwork/we-iniq3.ans",
+            clearScreenBefore: false
+        })
 
-            bbs.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
+        bbs.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
 
-            let password = bbs.ask("Your password".newlines().color("white"))
-            if (password) {
-                bbs.say("Nice work entering a good password...".newlines().color("white"))
-            }
+        let password = bbs.ask("Your password".newlines().color("white"))
+        if (password) {
+            bbs.say("Nice work entering a good password...".newlines().color("white"))
+        }
 
-            bbs.renderArtwork({
-                file: "assets/artwork/4d-iniq1.ans",
-                clearScreenBefore: true
-            })
-
-            break
+        bbs.renderArtwork({
+            file: "assets/artwork/4d-iniq1.ans",
+            clearScreenBefore: true
+        })
     }
 }

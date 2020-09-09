@@ -40,7 +40,6 @@ class BBS {
      */
     renderArtwork(options: IRenderOptions): void {
         let mode = options.mode || "line"
-        let encoding = options.encoding || "CP437"
         let speed = options.speed || 30
 
         if (options.clearScreenBefore === true) {
