@@ -110,7 +110,7 @@ class BBS {
      * @param options
      */
     pause(options: { newlines?: number | 0; center?: true }): void {
-        this.say("".newlines(options.newlines!))
+        this.say("".newlines(options.newlines))
         // @ts-ignore
         console.pause()
     }
