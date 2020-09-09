@@ -43,5 +43,5 @@ program
             process.exit()
         })
     })
-
+//NOSONAR
 program.parse(process.argv)

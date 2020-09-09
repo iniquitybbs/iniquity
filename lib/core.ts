@@ -189,6 +189,7 @@ interface String {
     center(): string
 }
 String.prototype.color = function (color: string): string {
+    //NOSONAR
     switch (color) {
         case "black":
             return "\u001b[30m" + this
