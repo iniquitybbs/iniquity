@@ -108,7 +108,8 @@ class BBS {
      * Pauses the client screen
      * @param options
      */
-    pause(options: { newlines?: number | 0; center?: true }): void {
+    pause(options: { colorReset?: boolean | false; newlines?: number | 0; center?: true }): void {
+        if (options.colorReset) this.say("".color("reset"))
         this.say("".newlines(options.newlines))
         // @ts-ignore
         console.pause()
