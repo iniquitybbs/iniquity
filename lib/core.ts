@@ -250,6 +250,24 @@ String.prototype.color = function (color: string): string {
         case "background white":
             return "\u001b[46m" + this
 
+        // background bright colors
+        case "background bright black":
+            return "\u001b[40;1m" + this
+        case "background bright red":
+            return "\u001b[41;1m" + this
+        case "background bright green":
+            return "\u001b[42;1m" + this
+        case "background bright yellow":
+            return "\u001b[43;1m" + this
+        case "background bright blue":
+            return "\u001b[44;1m" + this
+        case "background bright magenta":
+            return "\u001b[45;1m" + this
+        case "background bright cyan":
+            return "\u001b[46;1m" + this
+        case "background bright white":
+            return "\u001b[47;1m" + this
+
         case "reset":
             return "\u001b[0m" + this
 
