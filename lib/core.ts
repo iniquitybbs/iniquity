@@ -181,6 +181,14 @@ interface String {
             | "background magenta"
             | "background cyan"
             | "background white"
+            | "background bright black"
+            | "background bright red"
+            | "background bright green"
+            | "background bright yellow"
+            | "background bright blue"
+            | "background bright magenta"
+            | "background bright cyan"
+            | "background bright white"
             | "reset"
     ): string
     gotoxy(x: number, y: number): string

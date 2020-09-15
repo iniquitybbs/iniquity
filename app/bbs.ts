@@ -34,6 +34,8 @@ bbs.print(
         .center()
 )
 
+bbs.print("".color("reset")) // Need to be able to reset colors in a more intuitive way...
+
 bbs.pause({ newlines: 2, center: true })
 
 bbs.renderArtwork({
@@ -41,6 +43,47 @@ bbs.renderArtwork({
     clearScreenBefore: true,
     speed: 60
 })
+
+bbs.say("Let's play with colors!!!".newlines(2).center())
+bbs.say("8 colors...".newlines(2).center())
+bbs.say("The quick brown sysop jumps over the lazy user.".color("black").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("red").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("green").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("yellow").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("blue").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("magenta").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("cyan").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("white").newlines(1))
+
+bbs.say("16 colors...".newlines(2).center())
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright black").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright red").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright green").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright yellow").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright blue").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright magenta").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright cyan").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("bright white").newlines(1))
+
+bbs.say("background colors...".newlines(2).center())
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background black").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background red").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background green").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background yellow").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background blue").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background magenta").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background cyan").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background white").newlines(1))
+
+bbs.say("background BRIGHT colors...".newlines(2).center())
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright black").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright red").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright green").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright yellow").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright blue").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright magenta").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright cyan").newlines(1))
+bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright white").newlines(1))
 
 bbs.pause({ newlines: 2, center: true })
 
