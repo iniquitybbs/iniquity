@@ -24,7 +24,7 @@ const bbs = new BBS()
 
 bbs.renderArtwork({
     file: "assets/sm!iniq2.ans",
-    clearScreenBefore: true
+    clearScreenBefore: false
 })
 
 bbs.print(
@@ -34,9 +34,7 @@ bbs.print(
         .center()
 )
 
-bbs.print("".color("reset")) // Need to be able to reset colors in a more intuitive way...
-
-bbs.pause({ newlines: 2, center: true })
+bbs.pause({ colorReset: true, newlines: 2, center: true })
 
 bbs.renderArtwork({
     file: "assets/zv_iniq.ans",
@@ -84,7 +82,6 @@ bbs.say("The quick brown sysop jumps over the lazy user.".color("background brig
 bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright magenta").newlines(1))
 bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright cyan").newlines(1))
 bbs.say("The quick brown sysop jumps over the lazy user.".color("background bright white").newlines(1))
-
 bbs.pause({ colorReset: true, newlines: 2, center: true })
 
 bbs.renderArtwork({
