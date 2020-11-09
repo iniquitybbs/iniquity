@@ -1,3 +1,5 @@
+load("/iniquity/lib/core.js")
+
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
  `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
@@ -18,14 +20,10 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-load("/iniquity/lib/core.js")
+const welcome = new Artwork("assets/sm!iniq2.ans")
+welcome.render({clearScreenBefore: true})
 
 const bbs = new BBS()
-
-bbs.renderArtwork({
-    file: "assets/sm!iniq2.ans",
-    clearScreenBefore: false
-})
 
 bbs.print(
     "You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool."

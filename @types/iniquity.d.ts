@@ -2,7 +2,7 @@
  * Render options
  */
 interface IRenderOptions {
-    file: string
+    file?: string
     speed?: number
     encoding?: "CP437" | "UTF8"
     mode?: "line" | "character"

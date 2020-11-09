@@ -1,3 +1,5 @@
+load("sbbsdefs.js")
+
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
  `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
@@ -17,8 +19,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
    t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
 ==============================================================================
 */
-
-load("sbbsdefs.js")
 
 /**
  * A whole bunch of functions
@@ -136,7 +136,7 @@ class BBS {
      */
     execScriptPopen(script: string): string[] {
         // @ts-ignore
-        return system.popen(`node /euphoria/scripts/${script}.js`)
+        return system.popen(`node /iniquity/scripts/${script}.js`)
     }
 
     /**
@@ -145,11 +145,83 @@ class BBS {
      */
     execScript(script: string): void {
         // @ts-ignore
-        system.exec(`node /euphoria/scripts/${script}.js`)
+        system.exec(`node /iniquity/scripts/${script}.js`)
         return
     }
 }
 
+class Menu {
+
+}
+
+class Group {
+
+}
+
+class Network {
+
+}
+class User {
+
+}
+
+class Text {
+
+}
+class Artwork {
+
+    public file: string = ""
+
+    constructor(filename: string) {
+        this.file = filename
+    }
+
+    render(options?: IRenderOptions): void {
+        let mode = options?.mode || "line"
+        let speed = options?.speed || 30
+
+        if (options?.clearScreenBefore === true) {
+            console.line_counter = 0
+            console.clear()
+        }
+
+        // @ts-ignore
+        const file = new File(`/iniquity/app/${this.file}`)
+
+        console.line_counter = 0
+
+        // @ts-ignore
+        if (!file.open("r")) {
+            alert("error opening file: " + this.file)
+            return
+        }
+        // @ts-ignore
+        let text = file.readAll()
+
+        for (let i = 0; i < text.length; i++) {
+            switch (mode) {
+                // For character-at-a-time rendering...
+                case "character": {
+                    text[i].split(" ").forEach((character: any) => {
+                        console.putmsg(character)
+                        BBS.prototype.sleep(speed)
+                    })
+                }
+
+                // For line-at-a-time rendering...
+                case "line": {
+                    console.putmsg(text[i])
+                    BBS.prototype.sleep(speed)
+                }
+            }
+            if (i < text.length - 1) console.putmsg("\r\n")
+            console.line_counter = 0
+        }
+
+        // @ts-ignore
+        file.close()
+    }
+}
 interface String {
     /**
      * Sets the color of the text in the string.
