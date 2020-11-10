@@ -15,6 +15,7 @@ interface ISSBSConsole {
     putmsg: any
     line_counter: number
     clear: any
+    pause: any
 }
 /**
  * Isbbssystem

@@ -20,25 +20,25 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-const welcome = new Artwork("assets/sm!iniq2.ans")
-welcome.render({clearScreenBefore: true})
-
 const bbs = new BBS()
 
+const welcomeArt = new Artwork("assets/sm!iniq2.ans")
+welcomeArt.render({clearScreenBefore: true, speed: 100})
+
 bbs.print(
-    "You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool."
+    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool.`
         .newlines()
         .color("background red")
         .center()
-)
+)   
 
 bbs.pause({ colorReset: true, newlines: 2, center: true })
 
-bbs.renderArtwork({
-    file: "assets/zv_iniq.ans",
-    clearScreenBefore: true,
-    speed: 60
-})
+welcomeArt.render().pause()
+
+const loginArt = new Artwork("assets/zv_iniq.ans")
+loginArt.render({speed: 60}).pause({ colorReset: true, newlines: 2, center: true })
+
 
 bbs.say("Let's play with colors!!!".newlines(2).center())
 bbs.say("8 colors...".newlines(2).center().color("reset"))

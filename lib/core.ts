@@ -21,7 +21,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 /**
- * A whole bunch of functions
+ * A whole bunch of functions core to iniquity
  */
 class BBS {
     // public config: IBBSConfigParams
@@ -35,55 +35,13 @@ class BBS {
     }
     /**
      * Renders ANSI/ASCII/PETSCII artwork to the client screen.
-     * @param options
+     * @param IArtworkRenderOptions
      * @returns nothing, but displays the text to the console.
      */
-    renderArtwork(options: IRenderOptions): void {
-        let mode = options.mode || "line"
-        let speed = options.speed || 30
+    renderArtwork(options: IArtworkRenderOptions): void {
+        if(!options.file) return alert("Iniquity: We need to know which file to display.")
+        Artwork.prototype.render(options)
 
-        if (options.clearScreenBefore === true) {
-            console.line_counter = 0
-            console.clear()
-        }
-
-        if (options.file) {
-            // @ts-ignore
-            let file = new File(`/iniquity/app/${options.file}`)
-
-            console.line_counter = 0
-
-            // @ts-ignore
-            if (!file.open("r")) {
-                alert("error opening file: " + options.file)
-                return
-            }
-            // @ts-ignore
-            let text = file.readAll()
-
-            for (let i = 0; i < text.length; i++) {
-                switch (mode) {
-                    // For character-at-a-time rendering...
-                    case "character": {
-                        text[i].split(" ").forEach((character: any) => {
-                            console.putmsg(character)
-                            this.sleep(speed)
-                        })
-                    }
-
-                    // For line-at-a-time rendering...
-                    case "line": {
-                        console.putmsg(text[i])
-                        this.sleep(speed)
-                    }
-                }
-                if (i < text.length - 1) console.putmsg("\r\n")
-                console.line_counter = 0
-            }
-
-            // @ts-ignore
-            file.close()
-        }
     }
 
     /**
@@ -108,9 +66,9 @@ class BBS {
      * Pauses the client screen
      * @param options
      */
-    pause(options: { colorReset?: boolean | false; newlines?: number | 0; center?: true }): void {
-        if (options.colorReset) this.say("".color("reset"))
-        this.say("".newlines(options.newlines))
+    pause(options?: IBBSPauseOptions): void {
+        if (options?.colorReset) this.say("".color("reset"))
+        this.say("".newlines(options?.newlines || 0))
         // @ts-ignore
         console.pause()
     }
@@ -158,45 +116,66 @@ class Group {
 
 }
 
+/**
+ * Core networking possibilities
+ */
 class Network {
 
 }
+
+/**
+ * Core user management functionality
+ */
 class User {
 
 }
 
+/**
+ * Core text file display and manipulation capabilities
+ */
 class Text {
 
 }
+
+/**
+ * Core artwork display and manipulation capabilities
+ */
 class Artwork {
 
-    public file: string = ""
+    public filename: string
+    private fileHandle: any
 
+    /**
+     * The Iniquity Artwork Interface
+     * @param filename The path and file name to be loaded
+     */
     constructor(filename: string) {
-        this.file = filename
+        this.filename = filename
+        
     }
 
-    render(options?: IRenderOptions): void {
+    /**
+     * Render a ANSI/ASCII/PETSCII file to the screen
+     * @param {string} options.file Override the filename set in the Artwork constructor
+     * @param {string} options.mode Choose between "character" or "line" at a time rendering. Defaults to line.
+     * @param {number} options.speed Choose the speed. Can adjust in milliseconds.
+     * @param {boolean} options.clearScreenBefore Clear the screen first before rendering the artwork
+     * @returns {function} pause Will apply a pause prompt after rendering the artwork
+     */
+
+    render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
+        if (options?.clearScreenBefore === true) console.clear()
+
+        let filename = options?.file || this.filename
         let mode = options?.mode || "line"
         let speed = options?.speed || 30
-
-        if (options?.clearScreenBefore === true) {
-            console.line_counter = 0
-            console.clear()
-        }
-
-        // @ts-ignore
-        const file = new File(`/iniquity/app/${this.file}`)
 
         console.line_counter = 0
 
         // @ts-ignore
-        if (!file.open("r")) {
-            alert("error opening file: " + this.file)
-            return
-        }
-        // @ts-ignore
-        let text = file.readAll()
+        this.fileHandle = new File(`/iniquity/app/${filename}`)
+        if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + filename)        
+        let text = this.fileHandle.readAll()
 
         for (let i = 0; i < text.length; i++) {
             switch (mode) {
@@ -219,7 +198,18 @@ class Artwork {
         }
 
         // @ts-ignore
-        file.close()
+        this.fileHandle.close()
+
+        return {
+
+            pause(options?: IBBSPauseOptions): void {
+                if (options) 
+                    BBS.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
+                else 
+                    BBS.prototype.say("".color("reset"))
+                    console.pause()
+            }
+        }
     }
 }
 interface String {
@@ -380,10 +370,4 @@ String.prototype.newlines = function (count?: number | 0): string {
 function Iniquity(constructor: Function) {
     Object.seal(constructor)
     Object.seal(constructor.prototype)
-}
-
-BBS.prototype.pause.prototype.center = function (): object {
-    // @ts-ignore
-    console.center(this)
-    return {}
 }
