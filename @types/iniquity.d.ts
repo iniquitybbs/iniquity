@@ -15,13 +15,40 @@ interface IBBSPauseOptions {
     center?: boolean  | false
 
 }
+interface IBBSPrintOptions {
+    [string]
 
+}
+interface IBBSSayOptions {
+}
+interface  IArtworkOptions {
+    filename: string
+}
+interface IUserOptions {
+    name: string
+    password: string
+}
 /** 
  * Additional functions exported by render
  * @function pause What pause does
 */
 interface IArtworkRenderFunctions {
     pause(options?: IBBSPauseOptions ): void 
+}
+
+interface IMenuOptions {
+    key: string
+    options: object[]
+}
+
+interface IMenuCommands {
+    command: IMenuCommand
+
+}
+
+interface IMenuCommand {
+    key: number
+    name: string
 }
 /**
  * Ibbsconfig params

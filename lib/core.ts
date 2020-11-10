@@ -23,25 +23,18 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 /**
  * A whole bunch of functions core to iniquity
  */
-class BBS {
+class Iniquity {
     // public config: IBBSConfigParams
 
     public name: string
 
+    /**
+     * 
+     */
     constructor() {
         console.inactivity_warning = 9999
         console.inactivity_hangup = 99999
         this.name = system.name
-    }
-    /**
-     * Renders ANSI/ASCII/PETSCII artwork to the client screen.
-     * @param IArtworkRenderOptions
-     * @returns nothing, but displays the text to the console.
-     */
-    renderArtwork(options: IArtworkRenderOptions): void {
-        if(!options.file) return alert("Iniquity: We need to know which file to display.")
-        Artwork.prototype.render(options)
-
     }
 
     /**
@@ -72,6 +65,11 @@ class BBS {
         // @ts-ignore
         console.pause()
     }
+
+    /**
+     * Halt the screen for a specified period of time.
+     * @param speed In miliseconds
+     */
 
     sleep(speed: number): void {
         // @ts-ignore
@@ -106,9 +104,51 @@ class BBS {
         system.exec(`node /iniquity/scripts/${script}.js`)
         return
     }
+
+    /**
+     * User instance
+     * @param IUserOptions
+     * @config name The users name
+     * @config password The uses password 
+     */
+    public user(options: IUserOptions): User {
+        return new User(options)
+    }
+
+    /**
+     * Artwork instance
+     * @param IArtworkOptions
+     * @config filename Tje fio;e
+     */
+    public artwork(options: IArtworkOptions): Artwork {
+        return new Artwork(options)
+    }
+
+    /**
+     * Menu instance
+     * @param IMenuOptions
+     * @config name The users name
+     * @config password The uses password 
+     */
+    public menu(options: IMenuOptions): Menu {
+        return new Menu(options)
+    }
+
 }
 
 class Menu {
+
+    constructor(options: IMenuOptions) {
+        
+    }
+
+    /**
+     * 
+     */
+    public prompt(): void {
+
+    }
+
 
 }
 
@@ -127,7 +167,19 @@ class Network {
  * Core user management functionality
  */
 class User {
+    public name: string = ""
+    public password: string = ""
+    public logins: number = 0
 
+    /**
+     * Mechanisms for working with an individual iniquity user
+     * @param options.name 
+     * @param options.password 
+     */
+    constructor(options: IUserOptions) {
+        this.name = options.name
+        this.password = options.password
+    }
 }
 
 /**
@@ -146,11 +198,11 @@ class Artwork {
     private fileHandle: any
 
     /**
-     * The Iniquity Artwork Interface
-     * @param filename The path and file name to be loaded
+     * The Iniquity Artwork Class
+     * @param IArtworkOptions
      */
-    constructor(filename: string) {
-        this.filename = filename
+    constructor(options: IArtworkOptions) {
+        this.filename = options.filename
         
     }
 
@@ -183,14 +235,14 @@ class Artwork {
                 case "character": {
                     text[i].split(" ").forEach((character: any) => {
                         console.putmsg(character)
-                        BBS.prototype.sleep(speed)
+                        Iniquity.prototype.sleep(speed)
                     })
                 }
 
                 // For line-at-a-time rendering...
                 case "line": {
                     console.putmsg(text[i])
-                    BBS.prototype.sleep(speed)
+                    Iniquity.prototype.sleep(speed)
                 }
             }
             if (i < text.length - 1) console.putmsg("\r\n")
@@ -204,9 +256,9 @@ class Artwork {
 
             pause(options?: IBBSPauseOptions): void {
                 if (options) 
-                    BBS.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
+                    Iniquity.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
                 else 
-                    BBS.prototype.say("".color("reset"))
+                    Iniquity.prototype.say("".color("reset"))
                     console.pause()
             }
         }
@@ -365,9 +417,4 @@ String.prototype.newlines = function (count?: number | 0): string {
         string += "\r\n"
     }
     return string + this
-}
-
-function Iniquity(constructor: Function) {
-    Object.seal(constructor)
-    Object.seal(constructor.prototype)
 }
