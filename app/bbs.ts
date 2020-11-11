@@ -1,3 +1,5 @@
+load("/iniquity/lib/core.js")
+
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
  `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
@@ -17,7 +19,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
    t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
 ==============================================================================
 */
-load("/iniquity/lib/core.js")
+
 const bbs = new Iniquity()
 
 const welcomeArt = bbs.artwork({filename: "assets/sm!iniq2.ans"})
@@ -36,36 +38,36 @@ bbs.artwork({filename: "assets/artwork/we-iniq3.ans"}).render({clearScreenBefore
 
 bbs.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
 
-let login = bbs.ask("What's your username?".newlines(1).color("green"))
-if (login) {
-    if (login === "new") {
+loginMenu()
 
-        bbs.artwork({filename: "assets/newuser.ans"}).render()
+function loginMenu(): void {
 
-        let newUuser = bbs.user(
-            {
-                name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")), 
-                password: bbs.ask("And your password?".newlines(2).color("white")),
+    bbs.artwork({filename: "assets/artwork/4d-iniq1.ans"}).render({speed: 100})
+    const login = bbs.ask("What is your login: ")
+    switch(login) {
+
+        case "new":
+        case "signup":
+
+            bbs.artwork({filename: "assets/newuser.ans"}).render({clearScreenBefore: true})
+
+            let newUser = bbs.user(
+                {
+                    name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")), 
+                    password: bbs.ask("And your password?".newlines(2).color("white")),
+                }
+            )
+
+            bbs.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
+            loginMenu()
+            break
+        default:
+
+            if (bbs.user({name: login, password: bbs.ask("And your password?".newlines(2).color("white"))})) {
+                alert("somethingsync")
             }
-        )
 
-        bbs.say(`Welcome ${newUuser.name}. And goodbye!`.newlines().center())
-
-        
-    } else {
-        bbs.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
-
-        bbs.artwork({filename: "assets/artwork/we-iniq3.ans"}).render()
-
-        bbs.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
-
-        let password = bbs.ask("Your password".newlines().color("white"))
-        if (password) bbs.say("Nice work entering a good password...".newlines().color("white"))
-
-        bbs.artwork({filename: "assets/artwork/4d-iniq1.ans"}).render({clearScreenBefore: true})
+            bbs.artwork({filename: "assets/artwork/4d-iniq1.ans"}).render({clearScreenBefore: true})
+            break
     }
-}
-
-function signin(): void {
-
 }
