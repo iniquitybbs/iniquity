@@ -1,7 +1,9 @@
 declare function load(library: string): void
 declare function alert(text: string): void
+declare function prompt(text: string): string
+declare function sleep(duration: number): void
 
-declare function log(level: LOG_INFO | LOG_WARN, value: string): string
+// declare function log(level: LOG_INFO | LOG_WARN, value: string): string
 declare let console: ISSBSConsole = {}
 declare let system: ISBBSSystem = {}
 /**
