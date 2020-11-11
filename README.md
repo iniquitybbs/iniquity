@@ -94,7 +94,7 @@ const bbs = new Iniquity()
 const welcomeArt = bbs.artwork({ filename: "assets/sm!iniq2.ans" })
 welcomeArt.render({ clearScreenBefore: true, speed: 100 })
 
-bbs.print(
+bbs.say(
     `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool.`
         .newlines()
         .color("background red")
