@@ -30,9 +30,7 @@ bbs.print(
         .newlines()
         .color("background red")
         .center()
-)   
-
-bbs.pause({ colorReset: true, newlines: 2, center: true })
+).pause({ colorReset: true, newlines: 2, center: true })
 
 bbs.artwork({filename: "assets/artwork/we-iniq3.ans"}).render({clearScreenBefore: false})
 

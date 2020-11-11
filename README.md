@@ -99,9 +99,7 @@ bbs.print(
         .newlines()
         .color("background red")
         .center()
-)
-
-bbs.pause({ colorReset: true, newlines: 2, center: true })
+).pause({ colorReset: true, newlines: 2, center: true })
 ```
 
 <img src="app/assets/artwork/screenshot-1.png">

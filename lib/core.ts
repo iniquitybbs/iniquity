@@ -41,25 +41,47 @@ class Iniquity {
      * Says something to the user. Does not parse MCI/@- codes.
      * @param text
      */
-    say(text: string): void {
+    public say(text: string): IBBSSayFunctions {
         // @ts-ignore
         console.print(text)
+
+        return {
+
+            pause(options?: IBBSPauseOptions): void {
+                if (options) 
+                    Iniquity.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
+                else 
+                    Iniquity.prototype.say("".color("reset"))
+                    console.pause()
+            }
+        }
     }
 
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
      * @param text
      */
-    print(text: string): void {
+    public print(text: string): IBBSPrintFunctions {
         // @ts-ignore
         console.putmsg(text)
+
+        return {
+
+            pause(options?: IBBSPauseOptions): void {
+                if (options) 
+                    Iniquity.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
+                else 
+                    Iniquity.prototype.say("".color("reset"))
+                    console.pause()
+            }
+        }
     }
 
     /**
      * Pauses the client screen
      * @param options
      */
-    pause(options?: IBBSPauseOptions): void {
+    public pause(options?: IBBSPauseOptions): void {
         if (options?.colorReset) this.say("".color("reset"))
         this.say("".newlines(options?.newlines || 0))
         // @ts-ignore
@@ -71,7 +93,7 @@ class Iniquity {
      * @param speed In miliseconds
      */
 
-    sleep(speed: number): void {
+    public sleep(speed: number): void {
         // @ts-ignore
         sleep(speed)
     }
@@ -81,44 +103,26 @@ class Iniquity {
      * @param question
      * @returns response
      */
-    ask(question: string): string {
+    public ask(question: string): string {
         // @ts-ignore
         return prompt(question)
     }
-    /**
-     * execScriptPopen
-     * @param script
-     * @returns Output from script executed as an array of strings
-     */
-    execScriptPopen(script: string): string[] {
-        // @ts-ignore
-        return system.popen(`node /iniquity/scripts/${script}.js`)
-    }
 
     /**
-     * Execs script
-     * @param script
-     */
-    execScript(script: string): void {
-        // @ts-ignore
-        system.exec(`node /iniquity/scripts/${script}.js`)
-        return
-    }
-
-    /**
-     * User instance
+     * Iniquity User
      * @param IUserOptions
-     * @config name The users name
-     * @config password The uses password 
+     * @param IUserOptions.name The users name.
+     * @param IUserOptions.password The users password. 
      */
     public user(options: IUserOptions): User {
         return new User(options)
     }
 
     /**
-     * Artwork instance
+     * Iniquity Artwork
      * @param IArtworkOptions
-     * @config filename Tje fio;e
+     * @param IArtworkOptions.filename The relative path to a text document.
+     * @returns Artwork An object which represents an ANSI/ASCII/PETSCII drawing.
      */
     public artwork(options: IArtworkOptions): Artwork {
         return new Artwork(options)
@@ -127,8 +131,9 @@ class Iniquity {
     /**
      * Menu instance
      * @param IMenuOptions
-     * @config name The users name
-     * @config password The uses password 
+     * @param IMenuOptions.name The users name
+     * @param IMenuOptions.password The uses password
+     * @returns Menu  
      */
     public menu(options: IMenuOptions): Menu {
         return new Menu(options)
@@ -200,6 +205,7 @@ class Artwork {
     /**
      * The Iniquity Artwork Class
      * @param IArtworkOptions
+     * @param IArtworkOptions.filename
      */
     constructor(options: IArtworkOptions) {
         this.filename = options.filename
@@ -208,11 +214,12 @@ class Artwork {
 
     /**
      * Render a ANSI/ASCII/PETSCII file to the screen
-     * @param {string} options.file Override the filename set in the Artwork constructor
-     * @param {string} options.mode Choose between "character" or "line" at a time rendering. Defaults to line.
-     * @param {number} options.speed Choose the speed. Can adjust in milliseconds.
-     * @param {boolean} options.clearScreenBefore Clear the screen first before rendering the artwork
-     * @returns {function} pause Will apply a pause prompt after rendering the artwork
+     * @param IArtworkRenderOptions
+     * @config IArtworkRenderOptions.file Override the filename set in the Artwork constructor
+     * @config IArtworkRenderOptions.mode Choose between "character" or "line" at a time rendering. Defaults to line.
+     * @config IArtworkRenderOptions.speed Choose the speed. Can adjust in milliseconds.
+     * @config IArtworkRenderOptions.clearScreenBefore Clear the screen first before rendering the artwork
+     * @returns {IArtworkRenderFunctions} pause Will apply a pause prompt after rendering the artwork
      */
 
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {

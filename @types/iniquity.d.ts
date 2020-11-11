@@ -36,6 +36,12 @@ interface IArtworkRenderFunctions {
     pause(options?: IBBSPauseOptions ): void 
 }
 
+interface IBBSSayFunctions {
+    pause(options?: IBBSPauseOptions): void
+}
+interface IBBSPrintFunctions {
+    pause(options?: IBBSPauseOptions): void
+}
 interface IMenuOptions {
     key: string
     options: object[]
