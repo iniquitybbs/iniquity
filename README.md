@@ -89,20 +89,19 @@ Go to http://localhost in your favorite web browser
 #### A welcome experience for connecting users
 
 ```typescript
-const iq = new BBS()
+const bbs = new Iniquity()
 
-iq.renderArtwork({
-    file: "assets/sm!iniq2.ans",
-    clearScreenBefore: true
-})
+const welcomeArt = bbs.artwork({ filename: "assets/sm!iniq2.ans" })
+welcomeArt.render({ clearScreenBefore: true, speed: 100 })
 
-iq.say(
-    "You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool."
+bbs.print(
+    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool.`
         .newlines()
-        .color("red")
+        .color("background red")
         .center()
 )
-iq.pause({ newlines: 2, center: true })
+
+bbs.pause({ colorReset: true, newlines: 2, center: true })
 ```
 
 <img src="app/assets/artwork/screenshot-1.png">
@@ -110,13 +109,7 @@ iq.pause({ newlines: 2, center: true })
 #### Have it present some larger artwork, and end with prompting the user to pause
 
 ```typescript
-iq.renderArtwork({
-    file: "assets/zv_iniq.ans",
-    clearScreenBefore: true,
-    speed: 60
-})
-
-iq.pause({ newlines: 2, center: true })
+bbs.artwork({ filename: "assets/artwork/we-iniq3.ans" }).render({ clearScreenBefore: false }).pause({ newlines: 2, center: true })
 ```
 
 <img src="app/assets/artwork/screenshot-2.png">
@@ -124,44 +117,28 @@ iq.pause({ newlines: 2, center: true })
 #### Begin to describe a simple login or new user application process
 
 ```typescript
-iq.renderArtwork({
-    file: "assets/artwork/we-iniq3.ans",
-    clearScreenBefore: false
-})
-
-iq.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
-
-let login = iq.ask("What's your username?".newlines(1).color("green"))
-if (login) {
+function loginMenu(): void {
+    bbs.artwork({ filename: "assets/artwork/4d-iniq1.ans" }).render({ speed: 100 })
+    const login = bbs.ask("What is your login: ")
     switch (login) {
         case "new":
-            iq.renderArtwork({
-                file: "assets/artwork/newuser.ans",
-                clearScreenBefore: false
+        case "signup":
+            bbs.artwork({ filename: "assets/newuser.ans" }).render({ clearScreenBefore: true })
+
+            let newUser = bbs.user({
+                name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
+                password: bbs.ask("And your password?".newlines(2).color("white"))
             })
 
-            iq.ask("What would you like your handle to be?".newlines(2).color("white"))
+            bbs.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
+            loginMenu()
             break
         default:
-            iq.say(`Hey ${login} thanks for signing in, let's move on to the next menu...`.newlines().color("white").center())
-
-            iq.renderArtwork({
-                file: "assets/artwork/we-iniq3.ans",
-                clearScreenBefore: false
-            })
-
-            iq.say("Now that we know who you are, let's see if you can input the right password...".newlines().color("green").center())
-
-            let password = iq.ask("Your password".newlines().color("white"))
-            if (password) {
-                iq.say("Nice work entering a good password...".newlines().color("white"))
+            if (bbs.user({ name: login, password: bbs.ask("And your password?".newlines(2).color("white")) })) {
+                bbs.say("You exist in the system!")
             }
 
-            iq.renderArtwork({
-                file: "assets/artwork/4d-iniq1.ans",
-                clearScreenBefore: true
-            })
-
+            bbs.artwork({ filename: "assets/artwork/4d-iniq1.ans" }).render({ clearScreenBefore: true })
             break
     }
 }
