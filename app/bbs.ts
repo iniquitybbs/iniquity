@@ -34,14 +34,14 @@ bbs.print(
 
 bbs.artwork({filename: "assets/artwork/we-iniq3.ans"}).render({clearScreenBefore: false})
 
-bbs.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center())
+bbs.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
 
 loginMenu()
 
 function loginMenu(): void {
 
     bbs.artwork({filename: "assets/artwork/4d-iniq1.ans"}).render({speed: 100})
-    const login = bbs.ask("What is your login: ")
+    const login = bbs.ask("What is your login: ".newlines(1))
     switch(login) {
 
         case "new":

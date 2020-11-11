@@ -24,7 +24,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
  * A whole bunch of functions core to iniquity
  */
 class Iniquity {
-    // public config: IBBSConfigParams
 
     public name: string
 
@@ -41,10 +40,8 @@ class Iniquity {
      * Says something to the user. Does not parse MCI/@- codes.
      * @param text
      */
-    public say(text: string): IBBSSayFunctions {
-        // @ts-ignore
+    public say(text: string): IBBSSayFunctions {        
         console.print(text)
-
         return {
 
             pause(options?: IBBSPauseOptions): void {
@@ -60,9 +57,9 @@ class Iniquity {
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
      * @param text
+     * @returns IBBSPrintFunctions
      */
     public print(text: string): IBBSPrintFunctions {
-        // @ts-ignore
         console.putmsg(text)
 
         return {
@@ -84,7 +81,6 @@ class Iniquity {
     public pause(options?: IBBSPauseOptions): void {
         if (options?.colorReset) this.say("".color("reset"))
         this.say("".newlines(options?.newlines || 0))
-        // @ts-ignore
         console.pause()
     }
 
@@ -94,7 +90,6 @@ class Iniquity {
      */
 
     public sleep(speed: number): void {
-        // @ts-ignore
         sleep(speed)
     }
 
@@ -104,7 +99,6 @@ class Iniquity {
      * @returns response
      */
     public ask(question: string): string {
-        // @ts-ignore
         return prompt(question)
     }
 
@@ -112,7 +106,8 @@ class Iniquity {
      * Iniquity User
      * @param IUserOptions
      * @param IUserOptions.name The users name.
-     * @param IUserOptions.password The users password. 
+     * @param IUserOptions.password The users password.
+     * @returns User 
      */
     public user(options: IUserOptions): User {
         return new User(options)
@@ -122,7 +117,7 @@ class Iniquity {
      * Iniquity Artwork
      * @param IArtworkOptions
      * @param IArtworkOptions.filename The relative path to a text document.
-     * @returns Artwork An object which represents an ANSI/ASCII/PETSCII drawing.
+     * @returns Artwork
      */
     public artwork(options: IArtworkOptions): Artwork {
         return new Artwork(options)
