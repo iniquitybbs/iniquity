@@ -54,39 +54,29 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 -   Moebius _recommended_
     -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
 
-### Install Iniquity using npm
+### First, clone this repository somewhere on your system
 
 ```bash
-npm install https://github.com/iniquitybbs/iniquity.git
+git clone https://github.com/iniquitybbs/iniquity.git
 ```
 
-## Initialize your current working directory as a new Iniquity system
+## Inside of the iniquity directory, install the project dependencies
 
 ```bash
-iniquity init
+npm install
 ```
 
-## Start the system
+## Start iniquity
 
 ```bash
-iniquity start
+npm start
 ```
 
-## Using your favorite terminal client or web browser, connect to localhost using standard ports
+### Developing an iniquity bbs application
 
-```bash
-iniquity term localhost
-```
+Inside of your app/ directory, many things are possible...
 
-or...
-
-```text
-Go to http://localhost in your favorite web browser
-```
-
-### Developing an Iniquity application
-
-#### A welcome experience for connecting users
+#### An example welcome experience for connecting users
 
 ```typescript
 const bbs = new Iniquity()
