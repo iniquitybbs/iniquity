@@ -134,12 +134,6 @@ function loginMenu(): void {
 
 <img src="app/assets/artwork/screenshot-3.png">
 
-#### You get the idea. Additionally, you can extend your own BBS using Iniquity's packaging system
-
-```bash
-iniquity install @iniquitybbs/messaging @euphoriabbs/spylister
-```
-
 ## Discord
 
 [Iniquity Discord Server](https://discord.gg/UsyvrSZ)
