@@ -74,7 +74,9 @@ npm start
 
 ### Developing an iniquity bbs application
 
-This project is designed to be modified using Visual Studio Code. There are recomended settings and plugins for its development that come as part of this repository that Visual Studio Code will make available to you. The main directory you will work out of is your app/ directory. This is where your BBS exists.
+This project is designed to be modified using Visual Studio Code. There are recomended settings and plugins for its development that come as part of this repository that Visual Studio Code will make available to you. You should install all of these plugins! The main directory you will work out of is your app/ directory. This is where your BBS logic exists exists. You can safely ignore all directories outside of the app/ directory for now.
+
+Below you'll find some examples of what could be achieved with iniquity right now. It's not much, but it's a start and fun to play with...
 
 #### An example welcome experience for connecting users
 
