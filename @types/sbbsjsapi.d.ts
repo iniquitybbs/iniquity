@@ -4,6 +4,7 @@ declare function prompt(text: string): string
 declare function sleep(duration: number): void
 declare let console: ISSBSConsole = {}
 declare let system: ISBBSSystem = {}
+
 /**
  * Issbsconsole
  */

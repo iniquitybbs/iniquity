@@ -24,11 +24,10 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
  * A whole bunch of functions core to iniquity
  */
 class Iniquity {
-
     public name: string
 
     /**
-     * 
+     *
      */
     constructor() {
         console.inactivity_warning = 9999
@@ -40,16 +39,13 @@ class Iniquity {
      * Says something to the user. Does not parse MCI/@- codes.
      * @param text
      */
-    public say(text: string): IBBSSayFunctions {        
+    public say(text: string): IBBSSayFunctions {
         console.print(text)
         return {
-
             pause(options?: IBBSPauseOptions): void {
-                if (options) 
-                    Iniquity.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
-                else 
-                    Iniquity.prototype.say("".color("reset"))
-                    console.pause()
+                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else Iniquity.prototype.say("".color("reset"))
+                console.pause()
             }
         }
     }
@@ -63,13 +59,10 @@ class Iniquity {
         console.putmsg(text)
 
         return {
-
             pause(options?: IBBSPauseOptions): void {
-                if (options) 
-                    Iniquity.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
-                else 
-                    Iniquity.prototype.say("".color("reset"))
-                    console.pause()
+                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else Iniquity.prototype.say("".color("reset"))
+                console.pause()
             }
         }
     }
@@ -103,11 +96,21 @@ class Iniquity {
     }
 
     /**
+     * Will disconnect the user immediately.
+     * @param prompt
+     * @returns response
+     */
+    public disconnect(prompt?: boolean): void {
+        // @ts-ignore Because I don't feel like tricking TypeScript right now...
+        return bbs.hangup(prompt)
+    }
+
+    /**
      * Iniquity User
      * @param IUserOptions
      * @param IUserOptions.name The users name.
      * @param IUserOptions.password The users password.
-     * @returns User 
+     * @returns User
      */
     public user(options: IUserOptions): User {
         return new User(options)
@@ -128,40 +131,28 @@ class Iniquity {
      * @param IMenuOptions
      * @param IMenuOptions.name The users name
      * @param IMenuOptions.password The uses password
-     * @returns Menu  
+     * @returns Menu
      */
     public menu(options: IMenuOptions): Menu {
         return new Menu(options)
     }
-
 }
 
 class Menu {
-
-    constructor(options: IMenuOptions) {
-        
-    }
+    constructor(options: IMenuOptions) {}
 
     /**
-     * 
+     *
      */
-    public prompt(): void {
-
-    }
-
-
+    public prompt(): void {}
 }
 
-class Group {
-
-}
+class Group {}
 
 /**
  * Core networking possibilities
  */
-class Network {
-
-}
+class Network {}
 
 /**
  * Core user management functionality
@@ -173,8 +164,8 @@ class User {
 
     /**
      * Mechanisms for working with an individual iniquity user
-     * @param options.name 
-     * @param options.password 
+     * @param options.name
+     * @param options.password
      */
     constructor(options: IUserOptions) {
         this.name = options.name
@@ -185,15 +176,12 @@ class User {
 /**
  * Core text file display and manipulation capabilities
  */
-class Text {
-
-}
+class Text {}
 
 /**
  * Core artwork display and manipulation capabilities
  */
 class Artwork {
-
     public filename: string
     private fileHandle: any
 
@@ -204,7 +192,6 @@ class Artwork {
      */
     constructor(options: IArtworkOptions) {
         this.filename = options.filename
-        
     }
 
     /**
@@ -228,7 +215,7 @@ class Artwork {
 
         // @ts-ignore
         this.fileHandle = new File(`/iniquity/app/${filename}`)
-        if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + filename)        
+        if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + filename)
         let text = this.fileHandle.readAll()
 
         for (let i = 0; i < text.length; i++) {
@@ -255,13 +242,10 @@ class Artwork {
         this.fileHandle.close()
 
         return {
-
             pause(options?: IBBSPauseOptions): void {
-                if (options) 
-                    Iniquity.prototype.pause({colorReset: options?.colorReset || false, center: options?.center || false})
-                else 
-                    Iniquity.prototype.say("".color("reset"))
-                    console.pause()
+                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else Iniquity.prototype.say("".color("reset"))
+                console.pause()
             }
         }
     }
