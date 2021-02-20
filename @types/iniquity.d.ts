@@ -12,28 +12,25 @@ interface IArtworkRenderOptions {
 interface IBBSPauseOptions {
     colorReset?: boolean | false
     newlines?: number | 0
-    center?: boolean  | false
-
+    center?: boolean | false
 }
 interface IBBSPrintOptions {
     [string]
-
 }
-interface IBBSSayOptions {
-}
-interface  IArtworkOptions {
+interface IBBSSayOptions {}
+interface IArtworkOptions {
     filename: string
 }
 interface IUserOptions {
     name: string
     password: string
 }
-/** 
+/**
  * Additional functions exported by render
  * @function pause What pause does
-*/
+ */
 interface IArtworkRenderFunctions {
-    pause(options?: IBBSPauseOptions ): void 
+    pause(options?: IBBSPauseOptions): void
 }
 
 interface IBBSSayFunctions {
@@ -49,7 +46,6 @@ interface IMenuOptions {
 
 interface IMenuCommands {
     command: IMenuCommand
-
 }
 
 interface IMenuCommand {

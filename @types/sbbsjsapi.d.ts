@@ -4,6 +4,7 @@ declare function prompt(text: string): string
 declare function sleep(duration: number): void
 declare let console: ISSBSConsole = {}
 declare let system: ISBBSSystem = {}
+declare let bbs: ISBBSBbs = {}
 
 /**
  * Issbsconsole
@@ -24,4 +25,10 @@ interface ISSBSConsole {
 interface ISBBSSystem {
     name: string
     operator: string
+}
+
+interface ISBBSBbs {
+    logout: any
+    logoff: any
+    hangup: any
 }

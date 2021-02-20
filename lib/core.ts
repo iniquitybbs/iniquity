@@ -97,12 +97,10 @@ class Iniquity {
 
     /**
      * Will disconnect the user immediately.
-     * @param prompt
-     * @returns response
+     * @returns void
      */
-    public disconnect(prompt?: boolean): void {
-        // @ts-ignore Because I don't feel like tricking TypeScript right now...
-        return bbs.hangup(prompt)
+    public disconnect(): void {
+        bbs.logout()
     }
 
     /**
@@ -130,7 +128,7 @@ class Iniquity {
      * Menu instance
      * @param IMenuOptions
      * @param IMenuOptions.name The users name
-     * @param IMenuOptions.password The uses password
+     * @param IMenuOptions.password The users password
      * @returns Menu
      */
     public menu(options: IMenuOptions): Menu {
