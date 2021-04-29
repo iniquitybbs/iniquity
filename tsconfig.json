@@ -10,7 +10,7 @@
         "experimentalDecorators": true,
         "types": ["node"],
         "baseUrl": ".",
-        "typeRoots": ["@types"],
+        "typeRoots": ["packages/iniquity/@types"],
         "lib": ["es2020"],
         "skipLibCheck": true
     },
