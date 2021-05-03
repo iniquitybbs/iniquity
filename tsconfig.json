@@ -1,18 +1,17 @@
 {
     "$schema": "http://json.schemastore.org/tsconfig",
     "compilerOptions": {
+        "incremental": true,
+        "target": "es2019",
+        "module": "commonjs",
+        "declaration": true,
+        "sourceMap": true,
+        "composite": true,
         "strict": true,
-        "strictFunctionTypes": false,
-        "module": "esnext",
-        "allowSyntheticDefaultImports": true,
-        "target": "es5",
         "moduleResolution": "node",
-        "experimentalDecorators": true,
-        "types": ["node"],
-        "baseUrl": ".",
-        "typeRoots": ["packages/iniquity/@types"],
-        "lib": ["es2020"],
-        "skipLibCheck": true
-    },
-    "exclude": [".vscode", "aws", "assets", "docs", "hooks", "node_modules", "platforms", "private", "public", "spec"]
+        "baseUrl": "./packages",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    }
 }

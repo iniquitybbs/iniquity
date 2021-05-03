@@ -18,20 +18,18 @@
   "files.insertFinalNewline": true,
   "files.exclude": {
     "**/node_modules": true,
-    "tsconfig*": true,
     "*lock.json": true,
     "**/*.js": true,
     "**/.e[^n]*": true,
     "**/.p[^n]*": true,
     "Dockerfile": true,
     "docker-compose.yml": true,
-    "package.json": true,
     "**/.gitignore": true,
     "**/.sonarcloud*": true,
     ".vscodeignore": true,
     ".vscode": true,
     "@types": true
-  },
+},
   // Editor
   "editor.quickSuggestions": {
     "strings": true
