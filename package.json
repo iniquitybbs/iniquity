@@ -4,7 +4,7 @@
   "description": "A pure JavaScript command shell powered by Synchronet in Docker",
   "main": "iniquity.js",
   "scripts": {
-    "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n system,compiler \"docker-compose up\" \"tsc --watch\"",
+    "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n system,compiler \"docker-compose up\" \"tsc -p packages/app --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo"
   },
