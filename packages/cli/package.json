@@ -1,6 +1,6 @@
 {
-  "name": "cli",
-  "version": "0.0.0",
+  "name": "@iniquitybbs/cli",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/cli#readme",

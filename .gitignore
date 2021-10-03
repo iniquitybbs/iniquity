@@ -5,3 +5,4 @@ tmp
 *.js
 *.js.*
 dist
+lerna-debug.log
