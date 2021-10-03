@@ -1,3 +1,4 @@
+// @ts-ignore just hiding this
 load("sbbsdefs.js")
 
 /*
@@ -23,7 +24,68 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 /**
  * A whole bunch of functions core to iniquity
  */
-class Iniquity {
+/**
+ * Render options
+ */
+export interface IArtworkRenderOptions {
+    file?: string
+    speed?: number
+    encoding?: "CP437" | "UTF8"
+    mode?: "line" | "character"
+    clearScreenBefore?: boolean
+}
+
+export interface IBBSPauseOptions {
+    colorReset?: boolean | false
+    newlines?: number | 0
+    center?: boolean | false
+}
+export interface IBBSPrintOptions {}
+export interface IBBSSayOptions {}
+export interface IArtworkOptions {
+    filename: string
+}
+export interface IUserOptions {
+    name: string
+    password: string
+}
+/**
+ * Additional functions exported by render
+ * @function pause What pause does
+ */
+export interface IArtworkRenderFunctions {
+    pause(options?: IBBSPauseOptions): void
+}
+
+export interface IBBSSayFunctions {
+    pause(options?: IBBSPauseOptions): void
+}
+export interface IBBSPrintFunctions {
+    pause(options?: IBBSPauseOptions): void
+}
+export interface IMenuOptions {
+    key: string
+    options: object[]
+}
+
+export interface IMenuCommands {
+    command: IMenuCommand
+}
+
+export interface IMenuCommand {
+    key: number
+    name: string
+}
+/**
+ * Ibbsconfig params
+ * @param name Means this
+ */
+export interface IBBSConfigParams {
+    name: string
+    sysop: string
+}
+
+export default class Iniquity {
     public name: string
 
     /**
@@ -136,7 +198,7 @@ class Iniquity {
     }
 }
 
-class Menu {
+export class Menu {
     constructor(options: IMenuOptions) {}
 
     /**
@@ -145,17 +207,17 @@ class Menu {
     public prompt(): void {}
 }
 
-class Group {}
+export class Group {}
 
 /**
  * Core networking possibilities
  */
-class Network {}
+export class Network {}
 
 /**
  * Core user management functionality
  */
-class User {
+export class User {
     public name: string = ""
     public password: string = ""
     public logins: number = 0
@@ -174,12 +236,12 @@ class User {
 /**
  * Core text file display and manipulation capabilities
  */
-class Text {}
+export class Text {}
 
 /**
  * Core artwork display and manipulation capabilities
  */
-class Artwork {
+export class Artwork {
     public filename: string
     private fileHandle: any
 
@@ -401,4 +463,39 @@ String.prototype.newlines = function (count?: number | 0): string {
         string += "\r\n"
     }
     return string + this
+}
+
+export declare function load(library: string): void
+export declare function alert(text: string): void
+export declare function prompt(text: string): string
+export declare function sleep(duration: number): void
+export declare let console: ISSBSConsole
+export declare let system: ISBBSSystem
+export declare let bbs: ISBBSBbs
+
+/**
+ * Issbsconsole
+ */
+export interface ISSBSConsole {
+    log: any
+    print: any
+    inactivity_warning: number
+    inactivity_hangup: number
+    putmsg: any
+    line_counter: number
+    clear: any
+    pause: any
+}
+/**
+ * Isbbssystem
+ */
+export interface ISBBSSystem {
+    name: string
+    operator: string
+}
+
+export interface ISBBSBbs {
+    logout: any
+    logoff: any
+    hangup: any
 }

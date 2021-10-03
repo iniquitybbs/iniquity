@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/euphoriabbs/phoenix.git"
   },
+  "workspaces": [
+    "packages/*"
+    ],
   "author": "",
   "license": "ISC",
   "bugs": {

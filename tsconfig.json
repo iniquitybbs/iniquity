@@ -2,16 +2,30 @@
     "$schema": "http://json.schemastore.org/tsconfig",
     "compilerOptions": {
         "incremental": true,
-        "target": "es2019",
-        "module": "commonjs",
-        "declaration": true,
-        "sourceMap": true,
-        "composite": true,
         "strict": true,
+        "composite": true,
+        "strictFunctionTypes": false,
+        "allowSyntheticDefaultImports": true,
+        "target": "es2019",
         "moduleResolution": "node",
-        "baseUrl": "./packages",
         "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "types": ["node"],
+        "baseUrl": ".",
+        "paths": {
+            "@iniquity/*": ["./packages/*"],
+            "@iniquity": ["./packages"]
+        },
+        "lib": ["es2020", "dom"],
         "skipLibCheck": true,
+        "module": "commonjs",
+        "sourceMap": true,
+        "allowJs": false,
+        "outDir": "dist",
+        "declaration": true,
         "forceConsistentCasingInFileNames": true
-    }
+    },
+    "exclude": [".vscode", "dist", "node_modules"]
 }

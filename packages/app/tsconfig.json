@@ -1,5 +1,6 @@
 {
     "extends": "../../tsconfig.json",
+    "references": [{ "path": "../cli" }],
     "compilerOptions": {
         "strict": true,
         "strictFunctionTypes": false,
@@ -7,12 +8,12 @@
         "allowSyntheticDefaultImports": true,
         "target": "es5",
         "moduleResolution": "node",
-        "experimentalDecorators": true,
         "types": ["node"],
         "baseUrl": ".",
-        "typeRoots": ["../core/@types"],
         "lib": ["es2020"],
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "outDir": "dist"
     },
-    "exclude": [".vscode", "aws", "assets", "docs", "hooks", "node_modules", "platforms", "private", "public", "spec"]
+    "include": ["lib/**/*"],
+    "exclude": [".vscode", "node_modules", "dist"]
 }

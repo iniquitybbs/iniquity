@@ -1,11 +1,3 @@
-# `app`
+# Iniquity App
 
-> TODO: description
-
-## Usage
-
-```
-const app = require('app');
-
-// TODO: DEMONSTRATE API
-```
+The idea here is that this is a standalone app, or, can be used as a library to create your own app

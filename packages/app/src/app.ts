@@ -1,4 +1,4 @@
-load("/iniquity/core/lib/core.js")
+load("/iniquity/core/dist/lib/core.js")
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%

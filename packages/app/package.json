@@ -1,15 +1,19 @@
 {
-  "name": "app",
+  "name": "@iniquitybbs/app",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
-  "homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/app#readme",
-  "license": "ISC",
-  "main": "lib/app.js",
+  "homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/iniquity#readme",
+  "license": "MIT",
+  "main": "./dist/src/app.js",
+  "types": "./dist/src/app.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "files": [
     "lib"
   ],
@@ -22,5 +26,8 @@
   },
   "bugs": {
     "url": "https://github.com/iniquitybbs/iniquity/issues"
+  },
+  "dependencies": {
+    "typescript": "^4.4.3"
   }
 }

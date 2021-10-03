@@ -29,19 +29,28 @@ FROM synchronet as iniquity
 LABEL name="iniquity"
 LABEL version="latest"
 
-WORKDIR /iniquity
+
+WORKDIR /packages
 COPY . .
+
+# Eventually there will be a bundle step for iniquity apps being ran on the cloud. For now, local only.
+# RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash \
+#     && . $HOME/.nvm/nvm.sh || true \
+#     && nvm install 16 \
+#     && nvm install-latest-npm \
+#     && npm version \
+#     && nvm use
 
 RUN cd /sbbs/exec/ \
     && mv login.js login.js-original \
     && mv logon.js logon.js-original \
     && cd /sbbs/text/ \
     && mv answer.msg answer.msg-original ; touch answer.msg \
-    && ln -s /iniquity/app/lib/bbs.js /sbbs/exec/login.js
+    && ln -s /packages/app/dist/src/app.js /sbbs/exec/login.js
 
-VOLUME /iniquity
+VOLUME /packages
 
-# Start Euphoria
+# Start Iniquity
 EXPOSE 22-24
 
 CMD ["/sbbs/exec/sbbs"]
