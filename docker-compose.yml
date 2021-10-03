@@ -1,11 +1,11 @@
 version: "3"
 services:
     app:
-        build:
-            context: .
-        image: iniquitybbs/iniquity:edge
+        build: .
+        image: iniquitybbs/iniquity:latest
         ports:
             - "22:22"
             - "23:23"
+            - "24:24"
         volumes:
-            - .:/iniquity
+            - ./packages:/iniquity

@@ -37,12 +37,11 @@ RUN cd /sbbs/exec/ \
     && mv logon.js logon.js-original \
     && cd /sbbs/text/ \
     && mv answer.msg answer.msg-original ; touch answer.msg \
-    && ln -s /iniquity/app/bbs.js /sbbs/exec/login.js
+    && ln -s /iniquity/app/lib/bbs.js /sbbs/exec/login.js
 
-VOLUME .:/iniquity
+VOLUME /iniquity
 
 # Start Euphoria
-EXPOSE 22
-EXPOSE 23
+EXPOSE 22-24
 
 CMD ["/sbbs/exec/sbbs"]
