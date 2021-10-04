@@ -3,6 +3,8 @@
  * @module Iniquity
  * @example
  * ```typescript
+ * import Iniquity from "@iniquitybbs/iniquity"
+ *
  * const iq = new Iniquity()
  *
  * iq.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })

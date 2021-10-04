@@ -1,9 +1,3 @@
-/**
- * An example bbs written using Iniquity 3
- * @module iq
- */
-
-/** @example */
 import { Iniquity } from "./iniquity"
 import { Assets } from "./assets"
 
