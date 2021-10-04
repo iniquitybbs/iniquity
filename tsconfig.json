@@ -15,12 +15,12 @@
         "types": ["node"],
         "baseUrl": ".",
         "paths": {
-            "@iniquity/*": ["./packages/*"],
-            "@iniquity": ["./packages"]
+            "@iniquitybbs/*": ["./packages/*"],
+            "@iniquitybbs": ["./packages"]
         },
         "lib": ["es2020", "dom"],
         "skipLibCheck": true,
-        "module": "commonjs",
+        "module": "esnext",
         "sourceMap": true,
         "allowJs": false,
         "outDir": "dist",

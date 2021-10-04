@@ -6,14 +6,15 @@
         "strictFunctionTypes": false,
         "module": "esnext",
         "allowSyntheticDefaultImports": true,
-        "target": "es5",
+        "target": "es3",
         "moduleResolution": "node",
         "types": ["node"],
         "baseUrl": ".",
         "lib": ["es2020"],
         "skipLibCheck": true,
+        "resolveJsonModule": false,
         "outDir": "dist"
     },
-    "include": ["lib/**/*"],
-    "exclude": [".vscode", "node_modules", "dist"]
+    "include": ["src/**/*"],
+    "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
 }

@@ -1,33 +1,35 @@
 {
-  "name": "@iniquitybbs/app",
-  "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
-  "homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/iniquity#readme",
-  "license": "MIT",
-  "main": "./dist/src/app.js",
-  "types": "./dist/src/app.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iniquitybbs/iniquity.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/iniquitybbs/iniquity/issues"
-  },
-  "dependencies": {
-    "typescript": "^4.4.3"
-  }
+	"name": "@iniquitybbs/app",
+	"version": "1.0.0",
+	"description": "> TODO: description",
+	"author": "ispyhumanfly <ispyhumanfly@gmail.com>",
+	"homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/iniquity#readme",
+	"license": "MIT",
+	"main": "./dist/src/app.ts",
+	"types": "./dist/src/app.d.ts",
+	"directories": {
+		"lib": "lib",
+		"test": "__tests__"
+	},
+	"files": [
+		"lib"
+	],
+    "scripts": {
+        "build": "npx rollup -c",
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iniquitybbs/iniquity.git"
+	},
+	"bugs": {
+		"url": "https://github.com/iniquitybbs/iniquity/issues"
+	},
+	"devDependencies": {
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^13.0.5",
+        "@rollup/plugin-typescript": "^8.2.5",
+        "rollup": "^2.58.0",
+        "typescript": "^4.4.3"
+      }
 }

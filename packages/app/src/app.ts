@@ -1,4 +1,4 @@
-load("/iniquity/core/dist/lib/core.js")
+import Iniquity from "@iniquitybbs/app/src/core"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%

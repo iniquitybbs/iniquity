@@ -6,3 +6,5 @@ tmp
 *.js.*
 dist
 lerna-debug.log
+.parcel-cache
+.rollup.cache

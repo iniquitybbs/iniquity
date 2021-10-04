@@ -18,13 +18,18 @@
     "url": "git+https://github.com/iniquitybbs/iniquity.git"
   },
   "scripts": {
+
+    "build": "npx rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
-  "dependencies": {
-    "assets": "^3.0.1",
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "rollup": "^2.58.0",
     "typescript": "^4.4.3"
   }
 }

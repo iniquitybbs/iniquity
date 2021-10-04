@@ -30,7 +30,7 @@ LABEL name="iniquity"
 LABEL version="latest"
 
 
-WORKDIR /packages
+WORKDIR /iniquity
 COPY . .
 
 # Eventually there will be a bundle step for iniquity apps being ran on the cloud. For now, local only.
@@ -46,9 +46,9 @@ RUN cd /sbbs/exec/ \
     && mv logon.js logon.js-original \
     && cd /sbbs/text/ \
     && mv answer.msg answer.msg-original ; touch answer.msg \
-    && ln -s /packages/app/dist/src/app.js /sbbs/exec/login.js
+    && ln -s /iniquity/app/dist/bundle.js /sbbs/exec/login.js
 
-VOLUME /packages
+VOLUME /iniquity
 
 # Start Iniquity
 EXPOSE 22-24

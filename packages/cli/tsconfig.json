@@ -1,14 +1,14 @@
 {
     "extends": "../../tsconfig.json",
-    "references": [{ "path": "../core" }],
+    "references": [{ "path": "../app" }],
     "compilerOptions": {
         "strict": true,
         "strictFunctionTypes": false,
-        "module": "none",
+        "module": "esnext",
         "allowSyntheticDefaultImports": true,
-        "target": "es5",
+        "target": "es3",
         "moduleResolution": "node",
-        "experimentalDecorators": true,
+        "resolveJsonModule": false,
         "types": ["node"],
         "baseUrl": ".",
         "lib": ["es2020"],
@@ -16,5 +16,5 @@
         "outDir": "dist"
     },
     "include": ["src/**/*"],
-    "exclude": [".vscode", "node_modules", "dist"]
+    "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
 }

@@ -1,4 +1,3 @@
-// @ts-ignore just hiding this
 load("sbbsdefs.js")
 
 /*
@@ -42,10 +41,10 @@ export interface IBBSPauseOptions {
 }
 export interface IBBSPrintOptions {}
 export interface IBBSSayOptions {}
-export interface IArtworkOptions {
+interface IArtworkOptions {
     filename: string
 }
-export interface IUserOptions {
+interface IUserOptions {
     name: string
     password: string
 }
@@ -53,26 +52,26 @@ export interface IUserOptions {
  * Additional functions exported by render
  * @function pause What pause does
  */
-export interface IArtworkRenderFunctions {
+interface IArtworkRenderFunctions {
     pause(options?: IBBSPauseOptions): void
 }
 
-export interface IBBSSayFunctions {
+interface IBBSSayFunctions {
     pause(options?: IBBSPauseOptions): void
 }
-export interface IBBSPrintFunctions {
+interface IBBSPrintFunctions {
     pause(options?: IBBSPauseOptions): void
 }
-export interface IMenuOptions {
+interface IMenuOptions {
     key: string
     options: object[]
 }
 
-export interface IMenuCommands {
+interface IMenuCommands {
     command: IMenuCommand
 }
 
-export interface IMenuCommand {
+interface IMenuCommand {
     key: number
     name: string
 }
@@ -80,7 +79,7 @@ export interface IMenuCommand {
  * Ibbsconfig params
  * @param name Means this
  */
-export interface IBBSConfigParams {
+interface IBBSConfigParams {
     name: string
     sysop: string
 }
@@ -198,7 +197,7 @@ export default class Iniquity {
     }
 }
 
-export class Menu {
+class Menu {
     constructor(options: IMenuOptions) {}
 
     /**
@@ -207,17 +206,17 @@ export class Menu {
     public prompt(): void {}
 }
 
-export class Group {}
+class Group {}
 
 /**
  * Core networking possibilities
  */
-export class Network {}
+class Network {}
 
 /**
  * Core user management functionality
  */
-export class User {
+class User {
     public name: string = ""
     public password: string = ""
     public logins: number = 0
@@ -236,7 +235,7 @@ export class User {
 /**
  * Core text file display and manipulation capabilities
  */
-export class Text {}
+class Text {}
 
 /**
  * Core artwork display and manipulation capabilities
@@ -310,61 +309,64 @@ export class Artwork {
         }
     }
 }
-interface String {
-    /**
-     * Sets the color of the text in the string.
-     * @param color Choose from any capable ANSI escape sequence which defines a color.
-     * @returns The newly formatted string.
-     */
-    color(
-        color:
-            | "black"
-            | "red"
-            | "green"
-            | "yellow"
-            | "blue"
-            | "magenta"
-            | "cyan"
-            | "white"
-            | "bright black"
-            | "bright red"
-            | "bright green"
-            | "bright yellow"
-            | "bright blue"
-            | "bright magenta"
-            | "bright cyan"
-            | "bright white"
-            | "background black"
-            | "background red"
-            | "background green"
-            | "background yellow"
-            | "background blue"
-            | "background magenta"
-            | "background cyan"
-            | "background white"
-            | "background bright black"
-            | "background bright red"
-            | "background bright green"
-            | "background bright yellow"
-            | "background bright blue"
-            | "background bright magenta"
-            | "background bright cyan"
-            | "background bright white"
-            | "reset"
-    ): string
-    gotoxy(x: number, y: number): string
-    /**
-     * Prepends a newline to the beginning of the text
-     * @param count The total number of newlines. Default to 1.
-     * @returns The newly formatted string
-     */
-    newlines(count?: number): string
-    /**
-     * Will center the text between the available columns on the screen
-     * @returns The newly formatted string
-     */
-    center(): string
+declare global {
+    interface String {
+        /**
+         * Sets the color of the text in the string.
+         * @param color Choose from any capable ANSI escape sequence which defines a color.
+         * @returns The newly formatted string.
+         */
+        color(
+            color:
+                | "black"
+                | "red"
+                | "green"
+                | "yellow"
+                | "blue"
+                | "magenta"
+                | "cyan"
+                | "white"
+                | "bright black"
+                | "bright red"
+                | "bright green"
+                | "bright yellow"
+                | "bright blue"
+                | "bright magenta"
+                | "bright cyan"
+                | "bright white"
+                | "background black"
+                | "background red"
+                | "background green"
+                | "background yellow"
+                | "background blue"
+                | "background magenta"
+                | "background cyan"
+                | "background white"
+                | "background bright black"
+                | "background bright red"
+                | "background bright green"
+                | "background bright yellow"
+                | "background bright blue"
+                | "background bright magenta"
+                | "background bright cyan"
+                | "background bright white"
+                | "reset"
+        ): string
+        gotoxy(x: number, y: number): string
+        /**
+         * Prepends a newline to the beginning of the text
+         * @param count The total number of newlines. Default to 1.
+         * @returns The newly formatted string
+         */
+        newlines(count?: number): string
+        /**
+         * Will center the text between the available columns on the screen
+         * @returns The newly formatted string
+         */
+        center(): string
+    }
 }
+
 String.prototype.color = function (color: string): string {
     switch (color) {
         // 16 colors...
@@ -446,14 +448,12 @@ String.prototype.color = function (color: string): string {
 }
 
 String.prototype.gotoxy = function (x: number, y: number): string {
-    // @ts-ignore
     console.gotoxy(x, y)
     return ""
 }
 
 String.prototype.center = function (): string {
-    // @ts-ignore
-    console.center(this)
+    console.center(this as string)
     return ""
 }
 
@@ -465,8 +465,80 @@ String.prototype.newlines = function (count?: number | 0): string {
     return string + this
 }
 
-export declare function load(library: string): void
-export declare function alert(text: string): void
+declare global {
+    class Iniquity {
+        name: string
+        /**
+         *
+         */
+        constructor()
+        /**
+         * Says something to the user. Does not parse MCI/@- codes.
+         * @param text
+         */
+        say(text: string): IBBSSayFunctions
+        /**
+         * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
+         * @param text
+         * @returns IBBSPrintFunctions
+         */
+        print(text: string): IBBSPrintFunctions
+        /**
+         * Pauses the client screen
+         * @param options
+         */
+        pause(options?: IBBSPauseOptions): void
+        /**
+         * Halt the screen for a specified period of time.
+         * @param speed In miliseconds
+         */
+        sleep(speed: number): void
+        /**
+         * Displays a prompt (value) and returns a string of user input (ala clent-side JS)
+         * @param question
+         * @returns response
+         */
+        ask(question: string): string
+        /**
+         * Will disconnect the user immediately.
+         * @returns void
+         */
+        disconnect(): void
+        /**
+         * Iniquity User
+         * @param IUserOptions
+         * @param IUserOptions.name The users name.
+         * @param IUserOptions.password The users password.
+         * @returns User
+         */
+        user(options: IUserOptions): User
+        /**
+         * Iniquity Artwork
+         * @param IArtworkOptions
+         * @param IArtworkOptions.filename The relative path to a text document.
+         * @returns Artwork
+         */
+        artwork(options: IArtworkOptions): Artwork
+        /**
+         * Menu instance
+         * @param IMenuOptions
+         * @param IMenuOptions.name The users name
+         * @param IMenuOptions.password The users password
+         * @returns Menu
+         */
+        menu(options: IMenuOptions): Menu
+    }
+}
+
+declare global {
+    /**
+     * Synchronet JS library loader
+     * @param library
+     */
+    function load(library: string): void
+    function alert(text: string): void
+}
+
 export declare function prompt(text: string): string
 export declare function sleep(duration: number): void
 export declare let console: ISSBSConsole
@@ -476,7 +548,9 @@ export declare let bbs: ISBBSBbs
 /**
  * Issbsconsole
  */
-export interface ISSBSConsole {
+declare interface ISSBSConsole {
+    center(arg0: string): void
+    gotoxy(x: number, y: number): void
     log: any
     print: any
     inactivity_warning: number
