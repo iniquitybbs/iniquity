@@ -40,7 +40,6 @@
     "semantic-release": "^17.4.2",
     "semantic-release-monorepo": "^7.0.5",
     "typedoc": "^0.22.5",
-    "typedoc-github-wiki-theme": "^0.6.0",
-    "typedoc-plugin-markdown": "^3.11.2"
+    "typedoc-github-wiki-theme": "^0.6.0"
   }
 }
