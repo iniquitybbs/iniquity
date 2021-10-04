@@ -6,7 +6,7 @@
     "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**", "**/rollup.config.ts"],
     "excludeProtected": true,
     "entryPointStrategy": "expand",
-    "json": "docs/docs.json",
+    "json": "docs/api.json",
     "pretty": true,
     "includeVersion": true,
     "cleanOutputDir": false,

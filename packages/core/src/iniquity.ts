@@ -23,7 +23,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 /**
  * Artwork rendering options
  */
-interface IArtworkRenderOptions {
+export interface IArtworkRenderOptions {
     basepath?: string
     file?: string
     speed?: number
@@ -39,7 +39,7 @@ interface IArtworkRenderOptions {
  * @param {boolean} center Shall we center the text?
  */
 
-interface IBBSEnhancements {
+export interface IBBSEnhancements {
     colorReset?: boolean | false
     newlines?: number | 0
     center?: boolean | false
@@ -48,10 +48,10 @@ interface IBBSPauseOptions extends IBBSEnhancements {}
 interface IBBSPrintOptions extends IBBSEnhancements {
     text: string
 }
-interface IBBSSayOptions {
+export interface IBBSSayOptions {
     text: string
 }
-interface IArtworkOptions {
+export interface IArtworkOptions {
     basepath?: string
     filename: string
 }
@@ -61,7 +61,7 @@ interface IArtworkOptions {
  * @param name The name of the user.
  * @param password The users password.
  */
-interface IUserOptions {
+export interface IUserOptions {
     name: string
     password: string
 }
@@ -70,7 +70,7 @@ interface IUserOptions {
  * @function pause What pause does.
  * @function colorReset Resets the current lines screen color back to normal.
  */
-interface IArtworkRenderFunctions {
+export interface IArtworkRenderFunctions {
     /**
      * @param {IBBSPauseOptions} options
      * @see {@link IBBSPauseOptions}
@@ -89,7 +89,7 @@ interface IBBSSayFunctions {
      */
     pause(options?: IBBSPauseOptions): void
 }
-interface IBBSPrintFunctions {
+export interface IBBSPrintFunctions {
     /**
      * @param {IBBSPauseOptions} options
      * @see {@link IBBSPauseOptions}
