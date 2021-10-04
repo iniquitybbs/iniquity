@@ -38,15 +38,19 @@ interface IArtworkRenderOptions {
  * @param {number} newlines How many newlines to display after the pause.
  * @param {boolean} center Shall we center the text?
  */
-interface IBBSPauseOptions {
+
+interface IBBSEnhancements {
     colorReset?: boolean | false
     newlines?: number | 0
     center?: boolean | false
 }
-interface IBBSPrintOptions {
+interface IBBSPauseOptions extends IBBSEnhancements {}
+interface IBBSPrintOptions extends IBBSEnhancements {
     text: string
 }
-interface IBBSSayOptions {}
+interface IBBSSayOptions {
+    text: string
+}
 interface IArtworkOptions {
     basepath?: string
     filename: string
@@ -147,11 +151,12 @@ export default class Iniquity {
 
     /**
      * Says something to the user. Does not parse MCI/@- codes.
-     * @param text
+     * @param {IBBSSayOptions | string} options What you would like to say on the screen.
+     * @see {@link IBBSPrintOptions}
      * @returns {IBBSSayFunctions}
      */
-    public say(text: string): IBBSSayFunctions {
-        console.print(text)
+    public say(options: IBBSSayOptions | string): IBBSSayFunctions {
+        typeof options === "string" ? console.print(options) : console.print(options.text)
         return {
             pause(options?: IBBSPauseOptions): void {
                 if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
@@ -163,13 +168,13 @@ export default class Iniquity {
 
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
-     * @param {string | IBBSPrintOptions} options you would like to print on the screen.
+     * @param {IBBSPrintOptions | string} options you would like to print on the screen.
+     * @see {@link IBBSPrintOptions}
      * @returns {IBBSPrintFunctions}
      */
     public print(options: IBBSPrintOptions | string): IBBSPrintFunctions {
-        if (typeof options === "string") options = options
+        typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text || new Error("Sometthing is wrong with this string."))
 
-        console.putmsg(options)
         return {
             pause(options?: IBBSPauseOptions): void {
                 if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
@@ -232,6 +237,9 @@ export default class Iniquity {
      * @param {IArtworkOptions} options An object containing the various configuration properties.
      * @see {@link IArtworkOptions}
      * @returns {Artwork} An instance of Artwork and its return functions.
+     * @example
+     * iq.artwork({ filename: Assets.we_iniq3 })
+     * iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
      */
     public artwork(options: IArtworkOptions): Artwork {
         return new Artwork({ basepath: options.basepath || this.basepath, filename: options.filename })

@@ -26,12 +26,12 @@ const iq = new Iniquity({ basepath: "/iniquity/core/assets/" })
 const welcomeArt = iq.artwork({ filename: Assets.sm_iniq2 })
 welcomeArt.render({ clearScreenBefore: true, speed: 100 })
 
-iq.print(
-    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
+iq.print({
+    text: `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
         .newlines()
         .color("background red")
         .center()
-).pause({ colorReset: true, newlines: 2, center: true })
+}).pause({ colorReset: true, newlines: 2, center: true })
 
 iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
 
