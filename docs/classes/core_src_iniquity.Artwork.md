@@ -34,11 +34,11 @@ The Iniquity Artwork rendering class
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `IArtworkOptions` | An object containing the various configuration properties. |
+| `options` | [`IArtworkOptions`](../interfaces/core_src_iniquity.IArtworkOptions.md) | An object containing the various configuration properties. |
 
 #### Defined in
 
-[iniquity.ts:315](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L315)
+[iniquity.ts:315](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L315)
 
 ## Properties
 
@@ -48,7 +48,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[iniquity.ts:304](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L304)
+[iniquity.ts:304](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L304)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:306](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L306)
+[iniquity.ts:306](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L306)
 
 ___
 
@@ -68,13 +68,13 @@ ___
 
 #### Defined in
 
-[iniquity.ts:305](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L305)
+[iniquity.ts:305](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L305)
 
 ## Methods
 
 ### render
 
-▸ **render**(`options?`): `IArtworkRenderFunctions`
+▸ **render**(`options?`): [`IArtworkRenderFunctions`](../interfaces/core_src_iniquity.IArtworkRenderFunctions.md)
 
 Render a ANSI/ASCII/PETSCII file to the screen
 
@@ -84,14 +84,14 @@ Render a ANSI/ASCII/PETSCII file to the screen
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | `IArtworkRenderOptions` | An object containing the various configuration parameters. |
+| `options?` | [`IArtworkRenderOptions`](../interfaces/core_src_iniquity.IArtworkRenderOptions.md) | An object containing the various configuration parameters. |
 
 #### Returns
 
-`IArtworkRenderFunctions`
+[`IArtworkRenderFunctions`](../interfaces/core_src_iniquity.IArtworkRenderFunctions.md)
 
 Will render the artwork on the screen as well as provide various render functions.
 
 #### Defined in
 
-[iniquity.ts:327](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L327)
+[iniquity.ts:327](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L327)

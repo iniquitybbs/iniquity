@@ -47,7 +47,7 @@ Iniquity BBS core class
 
 #### Defined in
 
-[iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L145)
+[iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L145)
 
 ## Properties
 
@@ -57,7 +57,7 @@ Iniquity BBS core class
 
 #### Defined in
 
-[iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L137)
+[iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L137)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L138)
+[iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L138)
 
 ## Methods
 
@@ -77,7 +77,7 @@ ___
 
 Will allow you to render artwork to the screen
 
-**`see`** {@link IArtworkOptions}
+**`see`** [IArtworkOptions](../interfaces/core_src_iniquity.IArtworkOptions.md)
 
 **`example`**
 iq.artwork({ filename: Assets.we_iniq3 })
@@ -87,7 +87,7 @@ iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `IArtworkOptions` | An object containing the various configuration properties. |
+| `options` | [`IArtworkOptions`](../interfaces/core_src_iniquity.IArtworkOptions.md) | An object containing the various configuration properties. |
 
 #### Returns
 
@@ -97,7 +97,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[iniquity.ts:244](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L244)
+[iniquity.ts:244](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L244)
 
 ___
 
@@ -121,7 +121,7 @@ response
 
 #### Defined in
 
-[iniquity.ts:213](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L213)
+[iniquity.ts:213](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L213)
 
 ___
 
@@ -139,7 +139,7 @@ void
 
 #### Defined in
 
-[iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L221)
+[iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L221)
 
 ___
 
@@ -163,7 +163,7 @@ An instance of Menu
 
 #### Defined in
 
-[iniquity.ts:255](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L255)
+[iniquity.ts:255](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L255)
 
 ___
 
@@ -187,13 +187,13 @@ Pause the cursor
 
 #### Defined in
 
-[iniquity.ts:192](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L192)
+[iniquity.ts:192](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L192)
 
 ___
 
 ### print
 
-▸ **print**(`options`): `IBBSPrintFunctions`
+▸ **print**(`options`): [`IBBSPrintFunctions`](../interfaces/core_src_iniquity.IBBSPrintFunctions.md)
 
 Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
 
@@ -207,11 +207,11 @@ Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
 
 #### Returns
 
-`IBBSPrintFunctions`
+[`IBBSPrintFunctions`](../interfaces/core_src_iniquity.IBBSPrintFunctions.md)
 
 #### Defined in
 
-[iniquity.ts:175](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L175)
+[iniquity.ts:175](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L175)
 
 ___
 
@@ -227,7 +227,7 @@ Says something to the user. Does not parse MCI/@- codes.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `string` \| `IBBSSayOptions` | What you would like to say on the screen. |
+| `options` | `string` \| [`IBBSSayOptions`](../interfaces/core_src_iniquity.IBBSSayOptions.md) | What you would like to say on the screen. |
 
 #### Returns
 
@@ -235,7 +235,7 @@ Says something to the user. Does not parse MCI/@- codes.
 
 #### Defined in
 
-[iniquity.ts:158](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L158)
+[iniquity.ts:158](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L158)
 
 ___
 
@@ -259,7 +259,7 @@ void
 
 #### Defined in
 
-[iniquity.ts:204](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L204)
+[iniquity.ts:204](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L204)
 
 ___
 
@@ -269,13 +269,13 @@ ___
 
 Will allow you to work with user data.
 
-**`see`** {@link IUserOptions}
+**`see`** [IUserOptions](../interfaces/core_src_iniquity.IUserOptions.md)
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `IUserOptions` | An object containing the various configuration properties. |
+| `options` | [`IUserOptions`](../interfaces/core_src_iniquity.IUserOptions.md) | An object containing the various configuration properties. |
 
 #### Returns
 
@@ -285,4 +285,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[iniquity.ts:231](https://github.com/iniquitybbs/iniquity/blob/49ab15e/packages/core/src/iniquity.ts#L231)
+[iniquity.ts:231](https://github.com/iniquitybbs/iniquity/blob/30dc617/packages/core/src/iniquity.ts#L231)
