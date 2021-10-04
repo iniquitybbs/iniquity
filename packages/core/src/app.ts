@@ -21,7 +21,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-const iq = new Iniquity("/iniquity/core/assets/")
+const iq = new Iniquity({ basepath: "/iniquity/core/assets/" })
 
 const welcomeArt = iq.artwork({ filename: Assets.sm_iniq2 })
 welcomeArt.render({ clearScreenBefore: true, speed: 100 })

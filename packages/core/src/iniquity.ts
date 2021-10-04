@@ -85,18 +85,29 @@ interface IBBSConfigParams {
     sysop: string
 }
 
+interface IIniquityOptions {
+    basepath?: string
+}
+
+/**
+ * Iniquity BBS
+ * @class
+ * @global
+ */
 export default class Iniquity {
     public basepath: string
     public name: string
 
     /**
-     *
+     * Iniquity BBS
+     * @param IIniquityOptions An object representing various options to be past to the constructor.
+     * @config IIniquityOptions.basepath The BBS project root.
      */
-    constructor(basepath?: string) {
+    constructor(options?: IIniquityOptions) {
         console.inactivity_warning = 9999
         console.inactivity_hangup = 99999
-        this.name = system.name
-        this.basepath = basepath || "/"
+        this.name = system.name // NOTE should consider this being set at the constructor level (and how to tell SBBS about it)
+        this.basepath = options?.basepath || "/"
     }
 
     /**
