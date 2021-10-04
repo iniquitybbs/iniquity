@@ -19,7 +19,8 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 /**
- * A collection of Iniquity artwork
+ * The definitive collection of iniquity ansi/asci/pescii text documents.
+ * Collected from various artpacks over the decades, and various incarnations of iniquity.
  */
 enum Assets {
     /**

@@ -34,39 +34,70 @@ interface IArtworkRenderOptions {
 
 /**
  * BBS pause options
- * @param colorReset Reset the screen colors
- * @param newlines How many newlines to display after the pause.
- * @param center Shall we center the text?
+ * @param {boolean} colorReset Reset the screen colors
+ * @param {number} newlines How many newlines to display after the pause.
+ * @param {boolean} center Shall we center the text?
  */
 interface IBBSPauseOptions {
     colorReset?: boolean | false
     newlines?: number | 0
     center?: boolean | false
 }
-interface IBBSPrintOptions {}
+interface IBBSPrintOptions {
+    text: string
+}
 interface IBBSSayOptions {}
 interface IArtworkOptions {
     basepath?: string
     filename: string
 }
+
+/**
+ * User options
+ * @param name The name of the user.
+ * @param password The users password.
+ */
 interface IUserOptions {
     name: string
     password: string
 }
 /**
  * Additional functions exported by render
- * @function pause What pause does
+ * @function pause What pause does.
+ * @function colorReset Resets the current lines screen color back to normal.
  */
 interface IArtworkRenderFunctions {
+    /**
+     * @param {IBBSPauseOptions} options
+     * @see {@link IBBSPauseOptions}
+     */
     pause(options?: IBBSPauseOptions): void
+    /**
+     * Resets the screen color
+     */
+    colorReset(): void
 }
 
 interface IBBSSayFunctions {
+    /**
+     * @param {IBBSPauseOptions} options
+     * @see {@link IBBSPauseOptions}
+     */
     pause(options?: IBBSPauseOptions): void
 }
 interface IBBSPrintFunctions {
+    /**
+     * @param {IBBSPauseOptions} options
+     * @see {@link IBBSPauseOptions}
+     */
     pause(options?: IBBSPauseOptions): void
 }
+
+/**
+ * Menu options
+ * @param {string} key The key for the thing.
+ * @param {object} object An object containing a bunch of stuff.
+ */
 interface IMenuOptions {
     key: string
     options: object[]
@@ -104,8 +135,8 @@ export default class Iniquity {
 
     /**
      * Iniquity BBS core class
-     * @param IIniquityOptions An object representing various options to be past to the constructor.
-     * @config IIniquityOptions.basepath The BBS project root.
+     * @param {IIniquityOptions} options An object containing the various configuration properties.
+     * @param {string} options.basepath The BBS project root.
      */
     constructor(options?: IIniquityOptions) {
         console.inactivity_warning = 9999
@@ -117,7 +148,7 @@ export default class Iniquity {
     /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param text
-     * @returns IBBSSayFunctions
+     * @returns {IBBSSayFunctions}
      */
     public say(text: string): IBBSSayFunctions {
         console.print(text)
@@ -132,18 +163,14 @@ export default class Iniquity {
 
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
-     * @param text
-     * @returns IBBSPrintFunctions
+     * @param {string | IBBSPrintOptions} options you would like to print on the screen.
+     * @returns {IBBSPrintFunctions}
      */
-    public print(text: string): IBBSPrintFunctions {
-        console.putmsg(text)
+    public print(options: IBBSPrintOptions | string): IBBSPrintFunctions {
+        if (typeof options === "string") options = options
 
+        console.putmsg(options)
         return {
-            /**
-             * Pause the screen directly after printing to it.
-             * @borrows IBBSPauseOptions
-             * @param options
-             */
             pause(options?: IBBSPauseOptions): void {
                 if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else Iniquity.prototype.say("".color("reset"))
@@ -153,12 +180,9 @@ export default class Iniquity {
     }
 
     /**
-     * Pauses the client screen
-     * @param {IBBSPauseOptions} options An object representing multiple configuration parameters.
-     * @config IBBSPauseOptions.colorReset Should we reset the screen colors after pause?
-     * @config IBBSPauseOptions.newlines How many newlines should we append?
-     * @config IBBSPauseOptions.center Centers the text on the screen
-     * @returns void
+     * Pause the cursor
+     * @param {IBBSPauseOptions}
+     * @see {@link IBBSPauseOptions}
      */
     public pause(options?: IBBSPauseOptions): void {
         if (options?.colorReset) this.say("".color("reset"))
@@ -194,22 +218,20 @@ export default class Iniquity {
     }
 
     /**
-     * Iniquity User
-     * @param IUserOptions
-     * @param IUserOptions.name The users name.
-     * @param IUserOptions.password The users password.
-     * @returns User
+     * Will allow you to work with user data.
+     * @param {IUserOptions} options An object containing the various configuration properties.
+     * @see {@link IUserOptions}
+     * @returns {User} An instance of User and its return functions.
      */
     public user(options: IUserOptions): User {
         return new User(options)
     }
 
     /**
-     * Iniquity Artwork
-     * @param IArtworkOptions
-     * @param IArtworkOptions.basepath The root location of all assets.
-     * @param IArtworkOptions.filename the name of the asset. Can also be used in place of basepath.
-     * @returns Artwork
+     * Will allow you to render artwork to the screen
+     * @param {IArtworkOptions} options An object containing the various configuration properties.
+     * @see {@link IArtworkOptions}
+     * @returns {Artwork} An instance of Artwork and its return functions.
      */
     public artwork(options: IArtworkOptions): Artwork {
         return new Artwork({ basepath: options.basepath || this.basepath, filename: options.filename })
@@ -217,10 +239,10 @@ export default class Iniquity {
 
     /**
      * Menu instance
-     * @param IMenuOptions
-     * @param IMenuOptions.name The users name
-     * @param IMenuOptions.password The users password
-     * @returns Menu
+     * @param {IMenuOptions} options An object containing the various configuration properties.
+     * @param {string} options.name The users name
+     * @param {string} options.password The users password
+     * @returns {Menu} An instance of Menu
      */
     public menu(options: IMenuOptions): Menu {
         return new Menu(options)
@@ -277,9 +299,10 @@ class Artwork {
 
     /**
      * The Iniquity Artwork rendering class
-     * @param IArtworkOptions
-     * @param IArtworkOptions.basepath The base path to where the assets are located
-     * @param IArtworkOptions.filename The name of the specific asset to display
+     * @param {IArtworkOptions} options An object containing the various configuration properties.
+     * @param {string} options.basepath The base path to where the assets are located
+     * @param {string} options.filename The name of the specific asset to display
+     * @returns {Artwork} An instance of Artwork
      */
     constructor(options: IArtworkOptions) {
         this.basepath = options.basepath || Iniquity.prototype.basepath || ""
@@ -288,12 +311,9 @@ class Artwork {
 
     /**
      * Render a ANSI/ASCII/PETSCII file to the screen
-     * @param IArtworkRenderOptions
-     * @config IArtworkRenderOptions.file Override the filename set in the Artwork constructor
-     * @config IArtworkRenderOptions.mode Choose between "character" or "line" at a time rendering. Defaults to line.
-     * @config IArtworkRenderOptions.speed Choose the speed. Can adjust in milliseconds.
-     * @config IArtworkRenderOptions.clearScreenBefore Clear the screen first before rendering the artwork
-     * @returns {IArtworkRenderFunctions} pause Will apply a pause prompt after rendering the artwork
+     * @param {IArtworkRenderOptions} options An object containing the various configuration parameters.
+     * @see @{link IArtworkRenderOptions}
+     * @returns {IArtworkRenderFunctions} Will render the artwork on the screen as well as provide various render functions.
      */
 
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
@@ -331,7 +351,6 @@ class Artwork {
             console.line_counter = 0
         }
 
-        // @ts-ignore
         this.fileHandle.close()
 
         return {
@@ -339,10 +358,14 @@ class Artwork {
                 if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else Iniquity.prototype.say("".color("reset"))
                 console.pause()
+            },
+            colorReset(): void {
+                Iniquity.prototype.say("".color("reset"))
             }
         }
     }
 }
+
 declare global {
     interface String {
         /**

@@ -27,7 +27,7 @@ const welcomeArt = iq.artwork({ filename: Assets.sm_iniq2 })
 welcomeArt.render({ clearScreenBefore: true, speed: 100 })
 
 iq.print(
-    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool.`
+    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
         .newlines()
         .color("background red")
         .center()
@@ -56,6 +56,8 @@ switch (login) {
         if (iq.user({ name: login, password: iq.ask("And your password?".newlines(2).color("white")) })) {
             alert("somethingsync")
         }
+
+        iq.pause()
 
         iq.artwork({ filename: Assets.d_iniq1 }).render({ clearScreenBefore: true })
         break
