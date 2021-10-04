@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[iniquity.ts:115](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L115)
+[iniquity.ts:115](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L115)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:116](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L116)
+[iniquity.ts:116](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L116)

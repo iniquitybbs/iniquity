@@ -53,7 +53,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[iniquity.ts:150](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L150)
+[iniquity.ts:150](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L150)
 
 ## Properties
 
@@ -63,7 +63,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L137)
+[iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L137)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L138)
+[iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L138)
 
 ## Methods
 
@@ -105,7 +105,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[iniquity.ts:262](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L262)
+[iniquity.ts:262](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L262)
 
 ___
 
@@ -129,7 +129,7 @@ response
 
 #### Defined in
 
-[iniquity.ts:229](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L229)
+[iniquity.ts:229](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L229)
 
 ___
 
@@ -147,13 +147,13 @@ void
 
 #### Defined in
 
-[iniquity.ts:237](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L237)
+[iniquity.ts:237](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L237)
 
 ___
 
 ### menu
 
-▸ **menu**(`options`): `Menu`
+▸ **menu**(`options`): [`Menu`](core_src_iniquity.Menu.md)
 
 Menu instance
 
@@ -161,17 +161,17 @@ Menu instance
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `IMenuOptions` | An object containing the various configuration properties. |
+| `options` | [`IMenuOptions`](../interfaces/core_src_iniquity.IMenuOptions.md) | An object containing the various configuration properties. |
 
 #### Returns
 
-`Menu`
+[`Menu`](core_src_iniquity.Menu.md)
 
 An instance of Menu
 
 #### Defined in
 
-[iniquity.ts:273](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L273)
+[iniquity.ts:273](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L273)
 
 ___
 
@@ -181,13 +181,13 @@ ___
 
 Pause the cursor
 
-**`see`** {@link IBBSPauseOptions}
+**`see`** [IBBSPauseOptions](../interfaces/core_src_iniquity.IBBSPauseOptions.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `IBBSPauseOptions` |
+| `options?` | [`IBBSPauseOptions`](../interfaces/core_src_iniquity.IBBSPauseOptions.md) |
 
 #### Returns
 
@@ -195,7 +195,7 @@ Pause the cursor
 
 #### Defined in
 
-[iniquity.ts:208](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L208)
+[iniquity.ts:208](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L208)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
 
-**`see`** {@link IBBSPrintOptions}
+**`see`** [IBBSPrintOptions](../interfaces/core_src_iniquity.IBBSPrintOptions.md)
 
 **`example`**
 ```typescript
@@ -218,7 +218,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `string` \| `IBBSPrintOptions` | you would like to print on the screen. |
+| `options` | `string` \| [`IBBSPrintOptions`](../interfaces/core_src_iniquity.IBBSPrintOptions.md) | you would like to print on the screen. |
 
 #### Returns
 
@@ -226,17 +226,17 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-[iniquity.ts:191](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L191)
+[iniquity.ts:191](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L191)
 
 ___
 
 ### say
 
-▸ **say**(`options`): `IBBSSayFunctions`
+▸ **say**(`options`): [`IBBSSayFunctions`](../interfaces/core_src_iniquity.IBBSSayFunctions.md)
 
 Says something to the user. Does not parse MCI/@- codes.
 
-**`see`** {@link IBBSPrintOptions}
+**`see`** [IBBSPrintOptions](../interfaces/core_src_iniquity.IBBSPrintOptions.md)
 
 **`example`**
 ```typescript
@@ -252,11 +252,11 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Returns
 
-`IBBSSayFunctions`
+[`IBBSSayFunctions`](../interfaces/core_src_iniquity.IBBSSayFunctions.md)
 
 #### Defined in
 
-[iniquity.ts:168](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L168)
+[iniquity.ts:168](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L168)
 
 ___
 
@@ -280,13 +280,13 @@ void
 
 #### Defined in
 
-[iniquity.ts:220](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L220)
+[iniquity.ts:220](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L220)
 
 ___
 
 ### user
 
-▸ **user**(`options`): `User`
+▸ **user**(`options`): [`User`](core_src_iniquity.User.md)
 
 Will allow you to work with user data.
 
@@ -300,10 +300,10 @@ Will allow you to work with user data.
 
 #### Returns
 
-`User`
+[`User`](core_src_iniquity.User.md)
 
 An instance of User and its return functions.
 
 #### Defined in
 
-[iniquity.ts:247](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L247)
+[iniquity.ts:247](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L247)

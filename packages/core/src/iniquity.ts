@@ -44,8 +44,8 @@ export interface IBBSEnhancements {
     newlines?: number | 0
     center?: boolean | false
 }
-interface IBBSPauseOptions extends IBBSEnhancements {}
-interface IBBSPrintOptions extends IBBSEnhancements {
+export interface IBBSPauseOptions extends IBBSEnhancements {}
+export interface IBBSPrintOptions extends IBBSEnhancements {
     text: string
 }
 export interface IBBSSayOptions {
@@ -82,7 +82,7 @@ export interface IArtworkRenderFunctions {
     colorReset(): void
 }
 
-interface IBBSSayFunctions {
+export interface IBBSSayFunctions {
     /**
      * @param {IBBSPauseOptions} options
      * {@link IBBSPauseOptions}
@@ -102,7 +102,7 @@ export interface IBBSPrintFunctions {
  * @param {string} key The key for the thing.
  * @param {object} object An object containing a bunch of stuff.
  */
-interface IMenuOptions {
+export interface IMenuOptions {
     key: string
     options: object[]
 }
@@ -275,7 +275,7 @@ export class Iniquity {
     }
 }
 
-class Menu {
+export class Menu {
     constructor(options: IMenuOptions) {}
 
     /**
@@ -284,17 +284,17 @@ class Menu {
     public prompt(): void {}
 }
 
-class Group {}
+export class Group {}
 
 /**
  * Core networking possibilities
  */
-class Network {}
+export class Network {}
 
 /**
  * Core user management functionality
  */
-class User {
+export class User {
     public name: string = ""
     public password: string = ""
     public logins: number = 0
@@ -313,7 +313,7 @@ class User {
 /**
  * Core text file display and manipulation capabilities
  */
-class Text {}
+export class Text {}
 
 /**
  * Core artwork display and manipulation capabilities
@@ -393,7 +393,7 @@ export class Artwork {
 }
 
 declare global {
-    interface String {
+    export interface String {
         /**
          * Sets the color of the text in the string.
          * @param color Choose from any capable ANSI escape sequence which defines a color.

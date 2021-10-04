@@ -31,7 +31,7 @@ Resets the screen color
 
 #### Defined in
 
-[iniquity.ts:82](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L82)
+[iniquity.ts:82](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L82)
 
 ___
 
@@ -39,13 +39,13 @@ ___
 
 ▸ **pause**(`options?`): `void`
 
-**`see`** {@link IBBSPauseOptions}
+**`see`** [IBBSPauseOptions](core_src_iniquity.IBBSPauseOptions.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `IBBSPauseOptions` |
+| `options?` | [`IBBSPauseOptions`](core_src_iniquity.IBBSPauseOptions.md) |
 
 #### Returns
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:78](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L78)
+[iniquity.ts:78](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L78)

@@ -16,13 +16,13 @@
 
 ▸ **pause**(`options?`): `void`
 
-**`see`** {@link IBBSPauseOptions}
+**`see`** [IBBSPauseOptions](core_src_iniquity.IBBSPauseOptions.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `IBBSPauseOptions` |
+| `options?` | [`IBBSPauseOptions`](core_src_iniquity.IBBSPauseOptions.md) |
 
 #### Returns
 
@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[iniquity.ts:97](https://github.com/iniquitybbs/iniquity/blob/aa6049a/packages/core/src/iniquity.ts#L97)
+[iniquity.ts:97](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L97)
