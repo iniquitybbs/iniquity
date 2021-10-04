@@ -1,20 +1,17 @@
 {
-	"name": "@iniquitybbs/app",
+	"name": "@iniquitybbs/core",
 	"version": "1.0.0",
 	"description": "> TODO: description",
 	"author": "ispyhumanfly <ispyhumanfly@gmail.com>",
 	"homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/iniquity#readme",
 	"license": "MIT",
-	"main": "./dist/src/app.ts",
-	"types": "./dist/src/app.d.ts",
-	"directories": {
-		"lib": "lib",
-		"test": "__tests__"
-	},
+    "main": "./dist/index.js",
+    "types": "./dist",
 	"files": [
-		"lib"
+		"dist"
 	],
     "scripts": {
+        "prepare": "npm install @types/node typescript --no-save && node ./node_modules/.bin/tsc -p tsconfig.json",
         "build": "npx rollup -c",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },

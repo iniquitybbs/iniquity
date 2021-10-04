@@ -1,4 +1,5 @@
-import Iniquity from "@iniquitybbs/app/src/core"
+import Iniquity from "./iniquity"
+import Assets from "./assets"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
@@ -22,7 +23,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 const iq = new Iniquity()
 
-const welcomeArt = iq.artwork({ filename: "assets/sm!iniq2.ans" })
+const welcomeArt = iq.artwork({ filename: Assets.sm_iniq2 })
 welcomeArt.render({ clearScreenBefore: true, speed: 100 })
 
 iq.print(
@@ -32,16 +33,16 @@ iq.print(
         .center()
 ).pause({ colorReset: true, newlines: 2, center: true })
 
-iq.artwork({ filename: "assets/artwork/we-iniq3.ans" }).render({ clearScreenBefore: false })
+iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
 
 iq.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
 
-iq.artwork({ filename: "assets/artwork/4d-iniq1.ans" }).render({ speed: 100 })
+iq.artwork({ filename: Assets.d_iniq1 }).render({ speed: 100 })
 const login = iq.ask("What is your login: ".newlines(1))
 switch (login) {
     case "new":
     case "signup":
-        iq.artwork({ filename: "assets/newuser.ans" }).render({ clearScreenBefore: true })
+        iq.artwork({ filename: Assets.newuser1 }).render({ clearScreenBefore: true })
 
         let newUser = iq.user({
             name: iq.ask("What would you like your handle to be?".newlines(2).color("white")),
@@ -56,6 +57,6 @@ switch (login) {
             alert("somethingsync")
         }
 
-        iq.artwork({ filename: "assets/artwork/4d-iniq1.ans" }).render({ clearScreenBefore: true })
+        iq.artwork({ filename: Assets.d_iniq1 }).render({ clearScreenBefore: true })
         break
 }

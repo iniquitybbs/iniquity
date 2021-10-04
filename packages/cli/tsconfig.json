@@ -1,6 +1,5 @@
 {
     "extends": "../../tsconfig.json",
-    "references": [{ "path": "../app" }],
     "compilerOptions": {
         "strict": true,
         "strictFunctionTypes": false,

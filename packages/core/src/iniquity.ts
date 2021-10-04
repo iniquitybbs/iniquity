@@ -26,21 +26,20 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 /**
  * Render options
  */
-export interface IArtworkRenderOptions {
+interface IArtworkRenderOptions {
     file?: string
     speed?: number
     encoding?: "CP437" | "UTF8"
     mode?: "line" | "character"
     clearScreenBefore?: boolean
 }
-
-export interface IBBSPauseOptions {
+interface IBBSPauseOptions {
     colorReset?: boolean | false
     newlines?: number | 0
     center?: boolean | false
 }
-export interface IBBSPrintOptions {}
-export interface IBBSSayOptions {}
+interface IBBSPrintOptions {}
+interface IBBSSayOptions {}
 interface IArtworkOptions {
     filename: string
 }
@@ -240,7 +239,7 @@ class Text {}
 /**
  * Core artwork display and manipulation capabilities
  */
-export class Artwork {
+class Artwork {
     public filename: string
     private fileHandle: any
 
@@ -302,7 +301,7 @@ export class Artwork {
 
         return {
             pause(options?: IBBSPauseOptions): void {
-                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else Iniquity.prototype.say("".color("reset"))
                 console.pause()
             }
@@ -466,71 +465,6 @@ String.prototype.newlines = function (count?: number | 0): string {
 }
 
 declare global {
-    class Iniquity {
-        name: string
-        /**
-         *
-         */
-        constructor()
-        /**
-         * Says something to the user. Does not parse MCI/@- codes.
-         * @param text
-         */
-        say(text: string): IBBSSayFunctions
-        /**
-         * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
-         * @param text
-         * @returns IBBSPrintFunctions
-         */
-        print(text: string): IBBSPrintFunctions
-        /**
-         * Pauses the client screen
-         * @param options
-         */
-        pause(options?: IBBSPauseOptions): void
-        /**
-         * Halt the screen for a specified period of time.
-         * @param speed In miliseconds
-         */
-        sleep(speed: number): void
-        /**
-         * Displays a prompt (value) and returns a string of user input (ala clent-side JS)
-         * @param question
-         * @returns response
-         */
-        ask(question: string): string
-        /**
-         * Will disconnect the user immediately.
-         * @returns void
-         */
-        disconnect(): void
-        /**
-         * Iniquity User
-         * @param IUserOptions
-         * @param IUserOptions.name The users name.
-         * @param IUserOptions.password The users password.
-         * @returns User
-         */
-        user(options: IUserOptions): User
-        /**
-         * Iniquity Artwork
-         * @param IArtworkOptions
-         * @param IArtworkOptions.filename The relative path to a text document.
-         * @returns Artwork
-         */
-        artwork(options: IArtworkOptions): Artwork
-        /**
-         * Menu instance
-         * @param IMenuOptions
-         * @param IMenuOptions.name The users name
-         * @param IMenuOptions.password The users password
-         * @returns Menu
-         */
-        menu(options: IMenuOptions): Menu
-    }
-}
-
-declare global {
     /**
      * Synchronet JS library loader
      * @param library
@@ -539,11 +473,11 @@ declare global {
     function alert(text: string): void
 }
 
-export declare function prompt(text: string): string
-export declare function sleep(duration: number): void
-export declare let console: ISSBSConsole
-export declare let system: ISBBSSystem
-export declare let bbs: ISBBSBbs
+declare function prompt(text: string): string
+declare function sleep(duration: number): void
+declare let console: ISSBSConsole
+declare let system: ISBBSSystem
+declare let bbs: ISBBSBbs
 
 /**
  * Issbsconsole
@@ -563,12 +497,12 @@ declare interface ISSBSConsole {
 /**
  * Isbbssystem
  */
-export interface ISBBSSystem {
+interface ISBBSSystem {
     name: string
     operator: string
 }
 
-export interface ISBBSBbs {
+interface ISBBSBbs {
     logout: any
     logoff: any
     hangup: any

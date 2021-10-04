@@ -1,6 +1,5 @@
 {
     "extends": "../../tsconfig.json",
-    "references": [{ "path": "../cli" }],
     "compilerOptions": {
         "strict": true,
         "strictFunctionTypes": false,
@@ -13,7 +12,8 @@
         "lib": ["es2020"],
         "skipLibCheck": true,
         "resolveJsonModule": false,
-        "outDir": "dist"
+        "outDir": "dist",
+        "rootDir": "src"
     },
     "include": ["src/**/*"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]

@@ -17,18 +17,19 @@
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
   "files.exclude": {
-    "**/node_modules": false,
-    "*lock.json": false,
-    "**/.e[^n]*": false,
-    "**/.p[^n]*": false,
-    "Dockerfile": false,
-    "docker-compose.yml": false,
-    "**/.gitignore": false,
-    "**/.sonarcloud*": false,
-    ".vscodeignore": false,
-    ".vscode": false,
-    ".parcel-cache": false,
-    ".rollup.cache": false
+    "**/node_modules": true,
+    "*lock.json": true,
+    "**/.e[^n]*": true,
+    "**/.p[^n]*": true,
+    "Dockerfile": true,
+    "docker-compose.yml": true,
+    "**/.gitignore": true,
+    "**/.sonarcloud*": true,
+    ".vscodeignore": true,
+    ".vscode": true,
+    ".parcel-cache": true,
+    ".rollup.cache": true,
+    "tsconfig.tsbuildinfo": true
 },
   // Editor
   "editor.quickSuggestions": {
