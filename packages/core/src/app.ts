@@ -1,6 +1,6 @@
 /**
  * An example bbs written using Iniquity 3
- * @module app
+ * @module iq
  */
 
 /** @example */
@@ -68,5 +68,3 @@ switch (login) {
         iq.artwork({ filename: Assets.d_iniq1 }).render({ clearScreenBefore: true })
         break
 }
-
-export { iq as app }

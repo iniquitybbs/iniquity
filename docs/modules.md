@@ -6,6 +6,5 @@
 
 ### Modules
 
-- [app](modules/app.md)
 - [core/src/assets](modules/core_src_assets.md)
 - [core/src/iniquity](modules/core_src_iniquity.md)

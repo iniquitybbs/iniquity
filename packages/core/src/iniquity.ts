@@ -1,4 +1,17 @@
-load("sbbsdefs.js")
+/**
+ * Iniquity BBS
+ * @module Iniquity
+ * @example
+ * ```typescript
+ * const iq = new Iniquity()
+ *
+ * iq.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
+ *
+ * iq.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
+ *
+ * iq.disconnect()
+ * ```
+ */
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
@@ -19,6 +32,8 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
    t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
 ==============================================================================
 */
+
+load("sbbsdefs.js")
 
 /**
  * Artwork rendering options
