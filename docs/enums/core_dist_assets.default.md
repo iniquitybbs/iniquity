@@ -1,6 +1,8 @@
+[Iniquity BBS Developer Guide](../README.md) / [Exports](../modules.md) / [core/dist/assets](../modules/core_dist_assets.md) / default
+
 # Enumeration: default
 
-[core/dist/assets](../wiki/core.dist.assets).default
+[core/dist/assets](../modules/core_dist_assets.md).default
 
 The definitive collection of iniquity ansi/asci/pescii text documents.
 Collected from various artpacks over the decades, and various incarnations of iniquity.
@@ -9,10 +11,10 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 ### Enumeration members
 
-- [d\_iniq1](../wiki/core.dist.assets.default#d_iniq1)
-- [newuser1](../wiki/core.dist.assets.default#newuser1)
-- [sm\_iniq2](../wiki/core.dist.assets.default#sm_iniq2)
-- [we\_iniq3](../wiki/core.dist.assets.default#we_iniq3)
+- [d\_iniq1](core_dist_assets.default.md#d_iniq1)
+- [newuser1](core_dist_assets.default.md#newuser1)
+- [sm\_iniq2](core_dist_assets.default.md#sm_iniq2)
+- [we\_iniq3](core_dist_assets.default.md#we_iniq3)
 
 ## Enumeration members
 

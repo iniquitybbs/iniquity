@@ -1,6 +1,8 @@
+[Iniquity BBS Developer Guide](../README.md) / [Exports](../modules.md) / [core/dist/iniquity](../modules/core_dist_iniquity.md) / default
+
 # Class: default
 
-[core/dist/iniquity](../wiki/core.dist.iniquity).default
+[core/dist/iniquity](../modules/core_dist_iniquity.md).default
 
 Iniquity BBS
 
@@ -10,24 +12,24 @@ Iniquity BBS
 
 ### Constructors
 
-- [constructor](../wiki/core.dist.iniquity.default#constructor)
+- [constructor](core_dist_iniquity.default.md#constructor)
 
 ### Properties
 
-- [basepath](../wiki/core.dist.iniquity.default#basepath)
-- [name](../wiki/core.dist.iniquity.default#name)
+- [basepath](core_dist_iniquity.default.md#basepath)
+- [name](core_dist_iniquity.default.md#name)
 
 ### Methods
 
-- [artwork](../wiki/core.dist.iniquity.default#artwork)
-- [ask](../wiki/core.dist.iniquity.default#ask)
-- [disconnect](../wiki/core.dist.iniquity.default#disconnect)
-- [menu](../wiki/core.dist.iniquity.default#menu)
-- [pause](../wiki/core.dist.iniquity.default#pause)
-- [print](../wiki/core.dist.iniquity.default#print)
-- [say](../wiki/core.dist.iniquity.default#say)
-- [sleep](../wiki/core.dist.iniquity.default#sleep)
-- [user](../wiki/core.dist.iniquity.default#user)
+- [artwork](core_dist_iniquity.default.md#artwork)
+- [ask](core_dist_iniquity.default.md#ask)
+- [disconnect](core_dist_iniquity.default.md#disconnect)
+- [menu](core_dist_iniquity.default.md#menu)
+- [pause](core_dist_iniquity.default.md#pause)
+- [print](core_dist_iniquity.default.md#print)
+- [say](core_dist_iniquity.default.md#say)
+- [sleep](core_dist_iniquity.default.md#sleep)
+- [user](core_dist_iniquity.default.md#user)
 
 ## Constructors
 

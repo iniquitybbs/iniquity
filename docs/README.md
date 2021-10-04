@@ -1,3 +1,5 @@
+Iniquity BBS Developer Guide / [Exports](modules.md)
+
 # Iniquity
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software.
