@@ -21,10 +21,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 /**
- * A whole bunch of functions core to iniquity
- */
-/**
- * Render options
+ * Artwork rendering options
  */
 interface IArtworkRenderOptions {
     basepath?: string
@@ -34,6 +31,13 @@ interface IArtworkRenderOptions {
     mode?: "line" | "character"
     clearScreenBefore?: boolean
 }
+
+/**
+ * BBS pause options
+ * @param colorReset Reset the screen colors
+ * @param newlines How many newlines to display after the pause.
+ * @param center Shall we center the text?
+ */
 interface IBBSPauseOptions {
     colorReset?: boolean | false
     newlines?: number | 0
@@ -99,7 +103,7 @@ export default class Iniquity {
     public name: string
 
     /**
-     * Iniquity BBS
+     * Iniquity BBS core class
      * @param IIniquityOptions An object representing various options to be past to the constructor.
      * @config IIniquityOptions.basepath The BBS project root.
      */
@@ -113,6 +117,7 @@ export default class Iniquity {
     /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param text
+     * @returns IBBSSayFunctions
      */
     public say(text: string): IBBSSayFunctions {
         console.print(text)
@@ -134,6 +139,11 @@ export default class Iniquity {
         console.putmsg(text)
 
         return {
+            /**
+             * Pause the screen directly after printing to it.
+             * @borrows IBBSPauseOptions
+             * @param options
+             */
             pause(options?: IBBSPauseOptions): void {
                 if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else Iniquity.prototype.say("".color("reset"))
@@ -144,7 +154,11 @@ export default class Iniquity {
 
     /**
      * Pauses the client screen
-     * @param options
+     * @param {IBBSPauseOptions} options An object representing multiple configuration parameters.
+     * @config IBBSPauseOptions.colorReset Should we reset the screen colors after pause?
+     * @config IBBSPauseOptions.newlines How many newlines should we append?
+     * @config IBBSPauseOptions.center Centers the text on the screen
+     * @returns void
      */
     public pause(options?: IBBSPauseOptions): void {
         if (options?.colorReset) this.say("".color("reset"))
@@ -155,6 +169,7 @@ export default class Iniquity {
     /**
      * Halt the screen for a specified period of time.
      * @param speed In miliseconds
+     * @returns void
      */
 
     public sleep(speed: number): void {
@@ -261,7 +276,7 @@ class Artwork {
     private fileHandle: any
 
     /**
-     * The Iniquity Artwork Class
+     * The Iniquity Artwork rendering class
      * @param IArtworkOptions
      * @param IArtworkOptions.basepath The base path to where the assets are located
      * @param IArtworkOptions.filename The name of the specific asset to display
