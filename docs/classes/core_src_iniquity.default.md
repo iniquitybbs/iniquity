@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / default
+[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / default
 
 # Class: default
 
@@ -47,7 +47,7 @@ Iniquity BBS core class
 
 #### Defined in
 
-[src/iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L145)
+[iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L145)
 
 ## Properties
 
@@ -57,7 +57,7 @@ Iniquity BBS core class
 
 #### Defined in
 
-[src/iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L137)
+[iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L137)
 
 ___
 
@@ -67,13 +67,13 @@ ___
 
 #### Defined in
 
-[src/iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L138)
+[iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L138)
 
 ## Methods
 
 ### artwork
 
-▸ **artwork**(`options`): `Artwork`
+▸ **artwork**(`options`): [`Artwork`](core_src_iniquity.Artwork.md)
 
 Will allow you to render artwork to the screen
 
@@ -91,13 +91,13 @@ iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
 
 #### Returns
 
-`Artwork`
+[`Artwork`](core_src_iniquity.Artwork.md)
 
 An instance of Artwork and its return functions.
 
 #### Defined in
 
-[src/iniquity.ts:244](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L244)
+[iniquity.ts:244](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L244)
 
 ___
 
@@ -121,7 +121,7 @@ response
 
 #### Defined in
 
-[src/iniquity.ts:213](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L213)
+[iniquity.ts:213](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L213)
 
 ___
 
@@ -139,7 +139,7 @@ void
 
 #### Defined in
 
-[src/iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L221)
+[iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L221)
 
 ___
 
@@ -163,7 +163,7 @@ An instance of Menu
 
 #### Defined in
 
-[src/iniquity.ts:255](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L255)
+[iniquity.ts:255](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L255)
 
 ___
 
@@ -187,7 +187,7 @@ Pause the cursor
 
 #### Defined in
 
-[src/iniquity.ts:192](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L192)
+[iniquity.ts:192](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L192)
 
 ___
 
@@ -211,7 +211,7 @@ Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
 
 #### Defined in
 
-[src/iniquity.ts:175](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L175)
+[iniquity.ts:175](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L175)
 
 ___
 
@@ -235,7 +235,7 @@ Says something to the user. Does not parse MCI/@- codes.
 
 #### Defined in
 
-[src/iniquity.ts:158](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L158)
+[iniquity.ts:158](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L158)
 
 ___
 
@@ -259,7 +259,7 @@ void
 
 #### Defined in
 
-[src/iniquity.ts:204](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L204)
+[iniquity.ts:204](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L204)
 
 ___
 
@@ -285,4 +285,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[src/iniquity.ts:231](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/iniquity.ts#L231)
+[iniquity.ts:231](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/iniquity.ts#L231)

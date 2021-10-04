@@ -1,4 +1,4 @@
-Iniquity BBS Developer Guide / [Exports](modules.md)
+Iniquity BBS Developer Guide - v1.0.0 / [Exports](modules.md)
 
 # Iniquity
 

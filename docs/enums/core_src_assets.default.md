@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide](../README.md) / [Exports](../modules.md) / [core/src/assets](../modules/core_src_assets.md) / default
+[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/assets](../modules/core_src_assets.md) / default
 
 # Enumeration: default
 
@@ -24,7 +24,7 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 #### Defined in
 
-[src/assets.ts:31](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/assets.ts#L31)
+[assets.ts:31](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/assets.ts#L31)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/assets.ts:32](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/assets.ts#L32)
+[assets.ts:32](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/assets.ts#L32)
 
 ___
 
@@ -46,7 +46,7 @@ This one.
 
 #### Defined in
 
-[src/assets.ts:29](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/assets.ts#L29)
+[assets.ts:29](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/assets.ts#L29)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[src/assets.ts:30](https://github.com/iniquitybbs/iniquity/blob/9aa3ccc/packages/core/src/assets.ts#L30)
+[assets.ts:30](https://github.com/iniquitybbs/iniquity/blob/d3fb53d/packages/core/src/assets.ts#L30)

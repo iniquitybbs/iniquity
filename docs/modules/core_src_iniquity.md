@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide](../README.md) / [Exports](../modules.md) / core/src/iniquity
+[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / core/src/iniquity
 
 # Module: core/src/iniquity
 
@@ -6,4 +6,5 @@
 
 ### Classes
 
+- [Artwork](../classes/core_src_iniquity.Artwork.md)
 - [default](../classes/core_src_iniquity.default.md)

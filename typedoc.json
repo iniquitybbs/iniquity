@@ -3,8 +3,12 @@
     "readme": "README.md",
     "name": "Iniquity BBS Developer Guide",
     "defaultCategory": "Classes",
-    "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**"],
+    "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**", "**/rollup.config.ts"],
     "excludeProtected": true,
     "entryPointStrategy": "expand",
-    "json": "docs/docs.json"
+    "json": "docs/docs.json",
+    "pretty": true,
+    "includeVersion": true,
+    "cleanOutputDir": false,
+    "githubPages": false
 }

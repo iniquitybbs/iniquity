@@ -1,225 +1,19 @@
 {
 	"id": 0,
-	"name": "Iniquity BBS Developer Guide",
+	"name": "Iniquity BBS Developer Guide - v1.0.0",
 	"kind": 1,
 	"flags": {},
+	"originalName": "Iniquity BBS Developer Guide",
 	"children": [
 		{
 			"id": 1,
-			"name": "core/rollup.config",
-			"kind": 2,
-			"kindString": "Module",
-			"flags": {},
-			"children": [
-				{
-					"id": 2,
-					"name": "default",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {},
-					"type": {
-						"type": "reflection",
-						"declaration": {
-							"id": 3,
-							"name": "__type",
-							"kind": 65536,
-							"kindString": "Type literal",
-							"flags": {},
-							"children": [
-								{
-									"id": 14,
-									"name": "external",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "array",
-										"elementType": {
-											"type": "intrinsic",
-											"name": "string"
-										}
-									},
-									"defaultValue": "..."
-								},
-								{
-									"id": 4,
-									"name": "input",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									},
-									"defaultValue": "\"packages/core/src/app.ts\""
-								},
-								{
-									"id": 5,
-									"name": "output",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 6,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"children": [
-												{
-													"id": 7,
-													"name": "file",
-													"kind": 1024,
-													"kindString": "Property",
-													"flags": {},
-													"type": {
-														"type": "intrinsic",
-														"name": "string"
-													},
-													"defaultValue": "\"packages/core/dist/bundle.js\""
-												},
-												{
-													"id": 8,
-													"name": "format",
-													"kind": 1024,
-													"kindString": "Property",
-													"flags": {},
-													"type": {
-														"type": "intrinsic",
-														"name": "string"
-													},
-													"defaultValue": "\"cjs\""
-												},
-												{
-													"id": 9,
-													"name": "sourcemap",
-													"kind": 1024,
-													"kindString": "Property",
-													"flags": {},
-													"type": {
-														"type": "intrinsic",
-														"name": "string"
-													},
-													"defaultValue": "\"inline\""
-												}
-											],
-											"groups": [
-												{
-													"title": "Properties",
-													"kind": 1024,
-													"children": [
-														7,
-														8,
-														9
-													]
-												}
-											]
-										}
-									},
-									"defaultValue": "..."
-								},
-								{
-									"id": 13,
-									"name": "plugins",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "array",
-										"elementType": {
-											"type": "reference",
-											"name": "Plugin"
-										}
-									},
-									"defaultValue": "..."
-								},
-								{
-									"id": 10,
-									"name": "watch",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 11,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"children": [
-												{
-													"id": 12,
-													"name": "include",
-													"kind": 1024,
-													"kindString": "Property",
-													"flags": {},
-													"type": {
-														"type": "intrinsic",
-														"name": "string"
-													},
-													"defaultValue": "\"packages/core/src/*\""
-												}
-											],
-											"groups": [
-												{
-													"title": "Properties",
-													"kind": 1024,
-													"children": [
-														12
-													]
-												}
-											]
-										}
-									},
-									"defaultValue": "..."
-								}
-							],
-							"groups": [
-								{
-									"title": "Properties",
-									"kind": 1024,
-									"children": [
-										14,
-										4,
-										5,
-										13,
-										10
-									]
-								}
-							]
-						}
-					}
-				}
-			],
-			"groups": [
-				{
-					"title": "Properties",
-					"kind": 1024,
-					"children": [
-						2
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "rollup.config.ts",
-					"line": 1,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 15,
 			"name": "core/src/assets",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 16,
+					"id": 2,
 					"name": "default",
 					"kind": 8,
 					"kindString": "Enumeration",
@@ -229,14 +23,14 @@
 					},
 					"children": [
 						{
-							"id": 19,
+							"id": 5,
 							"name": "d_iniq1",
 							"kind": 16,
 							"kindString": "Enumeration member",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/assets.ts",
+									"fileName": "assets.ts",
 									"line": 31,
 									"character": 4
 								}
@@ -244,14 +38,14 @@
 							"defaultValue": "\"4d-iniq1.ans\""
 						},
 						{
-							"id": 20,
+							"id": 6,
 							"name": "newuser1",
 							"kind": 16,
 							"kindString": "Enumeration member",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/assets.ts",
+									"fileName": "assets.ts",
 									"line": 32,
 									"character": 4
 								}
@@ -259,7 +53,7 @@
 							"defaultValue": "\"newuser.ans\""
 						},
 						{
-							"id": 17,
+							"id": 3,
 							"name": "sm_iniq2",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -269,7 +63,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/assets.ts",
+									"fileName": "assets.ts",
 									"line": 29,
 									"character": 4
 								}
@@ -277,14 +71,14 @@
 							"defaultValue": "\"sm!iniq2.ans\""
 						},
 						{
-							"id": 18,
+							"id": 4,
 							"name": "we_iniq3",
 							"kind": 16,
 							"kindString": "Enumeration member",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/assets.ts",
+									"fileName": "assets.ts",
 									"line": 30,
 									"character": 4
 								}
@@ -297,16 +91,16 @@
 							"title": "Enumeration members",
 							"kind": 16,
 							"children": [
-								19,
-								20,
-								17,
-								18
+								5,
+								6,
+								3,
+								4
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "src/assets.ts",
+							"fileName": "assets.ts",
 							"line": 25,
 							"character": 5
 						}
@@ -318,27 +112,234 @@
 					"title": "Enumerations",
 					"kind": 8,
 					"children": [
-						16
+						2
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "src/assets.ts",
+					"fileName": "assets.ts",
 					"line": 25,
 					"character": 0
 				}
 			]
 		},
 		{
-			"id": 21,
+			"id": 7,
 			"name": "core/src/iniquity",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 22,
+					"id": 40,
+					"name": "Artwork",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Core artwork display and manipulation capabilities"
+					},
+					"children": [
+						{
+							"id": 41,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "iniquity.ts",
+									"line": 315,
+									"character": 4
+								}
+							],
+							"signatures": [
+								{
+									"id": 42,
+									"name": "new Artwork",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"comment": {
+										"shortText": "The Iniquity Artwork rendering class",
+										"returns": "An instance of Artwork\n"
+									},
+									"parameters": [
+										{
+											"id": 43,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"shortText": "An object containing the various configuration properties."
+											},
+											"type": {
+												"type": "reference",
+												"name": "IArtworkOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 40,
+										"name": "Artwork"
+									}
+								}
+							]
+						},
+						{
+							"id": 44,
+							"name": "basepath",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "iniquity.ts",
+									"line": 304,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 46,
+							"name": "fileHandle",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "iniquity.ts",
+									"line": 306,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 45,
+							"name": "filename",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "iniquity.ts",
+									"line": 305,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 47,
+							"name": "render",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "iniquity.ts",
+									"line": 327,
+									"character": 4
+								}
+							],
+							"signatures": [
+								{
+									"id": 48,
+									"name": "render",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Render a ANSI/ASCII/PETSCII file to the screen",
+										"returns": "Will render the artwork on the screen as well as provide various render functions.\n",
+										"tags": [
+											{
+												"tag": "see",
+												"text": "@{link IArtworkRenderOptions}"
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 49,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"shortText": "An object containing the various configuration parameters."
+											},
+											"type": {
+												"type": "reference",
+												"name": "IArtworkRenderOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "IArtworkRenderFunctions"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								41
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								44,
+								46,
+								45
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								47
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "iniquity.ts",
+							"line": 303,
+							"character": 13
+						}
+					]
+				},
+				{
+					"id": 8,
 					"name": "default",
 					"kind": 128,
 					"kindString": "Class",
@@ -354,21 +355,21 @@
 					},
 					"children": [
 						{
-							"id": 23,
+							"id": 9,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 145,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
-									"id": 24,
+									"id": 10,
 									"name": "new default",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -378,7 +379,7 @@
 									},
 									"parameters": [
 										{
-											"id": 25,
+											"id": 11,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -396,14 +397,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 22,
+										"id": 8,
 										"name": "default"
 									}
 								}
 							]
 						},
 						{
-							"id": 26,
+							"id": 12,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -412,7 +413,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 137,
 									"character": 11
 								}
@@ -423,7 +424,7 @@
 							}
 						},
 						{
-							"id": 27,
+							"id": 13,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -432,7 +433,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 138,
 									"character": 11
 								}
@@ -443,7 +444,7 @@
 							}
 						},
 						{
-							"id": 48,
+							"id": 34,
 							"name": "artwork",
 							"kind": 2048,
 							"kindString": "Method",
@@ -452,14 +453,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 244,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 49,
+									"id": 35,
 									"name": "artwork",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -480,7 +481,7 @@
 									},
 									"parameters": [
 										{
-											"id": 50,
+											"id": 36,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -496,13 +497,14 @@
 									],
 									"type": {
 										"type": "reference",
+										"id": 40,
 										"name": "Artwork"
 									}
 								}
 							]
 						},
 						{
-							"id": 40,
+							"id": 26,
 							"name": "ask",
 							"kind": 2048,
 							"kindString": "Method",
@@ -511,14 +513,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 213,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 41,
+									"id": 27,
 									"name": "ask",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -529,7 +531,7 @@
 									},
 									"parameters": [
 										{
-											"id": 42,
+											"id": 28,
 											"name": "question",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -549,7 +551,7 @@
 							]
 						},
 						{
-							"id": 43,
+							"id": 29,
 							"name": "disconnect",
 							"kind": 2048,
 							"kindString": "Method",
@@ -558,14 +560,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 221,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 44,
+									"id": 30,
 									"name": "disconnect",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -582,7 +584,7 @@
 							]
 						},
 						{
-							"id": 51,
+							"id": 37,
 							"name": "menu",
 							"kind": 2048,
 							"kindString": "Method",
@@ -591,14 +593,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 255,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 52,
+									"id": 38,
 									"name": "menu",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -609,7 +611,7 @@
 									},
 									"parameters": [
 										{
-											"id": 53,
+											"id": 39,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -631,7 +633,7 @@
 							]
 						},
 						{
-							"id": 34,
+							"id": 20,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
@@ -640,14 +642,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 192,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 35,
+									"id": 21,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -663,7 +665,7 @@
 									},
 									"parameters": [
 										{
-											"id": 36,
+											"id": 22,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -684,7 +686,7 @@
 							]
 						},
 						{
-							"id": 31,
+							"id": 17,
 							"name": "print",
 							"kind": 2048,
 							"kindString": "Method",
@@ -693,14 +695,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 175,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 32,
+									"id": 18,
 									"name": "print",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -717,7 +719,7 @@
 									},
 									"parameters": [
 										{
-											"id": 33,
+											"id": 19,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -748,7 +750,7 @@
 							]
 						},
 						{
-							"id": 28,
+							"id": 14,
 							"name": "say",
 							"kind": 2048,
 							"kindString": "Method",
@@ -757,14 +759,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 158,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 29,
+									"id": 15,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -781,7 +783,7 @@
 									},
 									"parameters": [
 										{
-											"id": 30,
+											"id": 16,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -812,7 +814,7 @@
 							]
 						},
 						{
-							"id": 37,
+							"id": 23,
 							"name": "sleep",
 							"kind": 2048,
 							"kindString": "Method",
@@ -821,14 +823,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 204,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 38,
+									"id": 24,
 									"name": "sleep",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -839,7 +841,7 @@
 									},
 									"parameters": [
 										{
-											"id": 39,
+											"id": 25,
 											"name": "speed",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -861,7 +863,7 @@
 							]
 						},
 						{
-							"id": 45,
+							"id": 31,
 							"name": "user",
 							"kind": 2048,
 							"kindString": "Method",
@@ -870,14 +872,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/iniquity.ts",
+									"fileName": "iniquity.ts",
 									"line": 231,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 46,
+									"id": 32,
 									"name": "user",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -894,7 +896,7 @@
 									},
 									"parameters": [
 										{
-											"id": 47,
+											"id": 33,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -921,36 +923,36 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								23
+								9
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								26,
-								27
+								12,
+								13
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								48,
-								40,
-								43,
-								51,
 								34,
-								31,
-								28,
+								26,
+								29,
 								37,
-								45
+								20,
+								17,
+								14,
+								23,
+								31
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "src/iniquity.ts",
+							"fileName": "iniquity.ts",
 							"line": 136,
 							"character": 21
 						}
@@ -962,13 +964,14 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						22
+						40,
+						8
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "src/iniquity.ts",
+					"fileName": "iniquity.ts",
 					"line": 1,
 					"character": 0
 				}
@@ -981,8 +984,7 @@
 			"kind": 2,
 			"children": [
 				1,
-				15,
-				21
+				7
 			]
 		}
 	]

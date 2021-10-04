@@ -300,7 +300,7 @@ class Text {}
 /**
  * Core artwork display and manipulation capabilities
  */
-class Artwork {
+export class Artwork {
     public basepath: string
     public filename: string
     private fileHandle: any
