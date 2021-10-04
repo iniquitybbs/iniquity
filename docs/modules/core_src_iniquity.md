@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / core/src/iniquity
+[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / core/src/iniquity
 
 # Module: core/src/iniquity
 

@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IArtworkRenderFunctions
+[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IArtworkRenderFunctions
 
 # Interface: IArtworkRenderFunctions
 
@@ -31,7 +31,7 @@ Resets the screen color
 
 #### Defined in
 
-[iniquity.ts:82](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L82)
+[iniquity.ts:82](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L82)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:78](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L78)
+[iniquity.ts:78](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L78)

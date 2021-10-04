@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IArtworkRenderOptions
+[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IArtworkRenderOptions
 
 # Interface: IArtworkRenderOptions
 
@@ -25,7 +25,7 @@ Artwork rendering options
 
 #### Defined in
 
-[iniquity.ts:27](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L27)
+[iniquity.ts:27](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L27)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:32](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L32)
+[iniquity.ts:32](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L32)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:30](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L30)
+[iniquity.ts:30](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L30)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:28](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L28)
+[iniquity.ts:28](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L28)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:31](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L31)
+[iniquity.ts:31](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L31)
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:29](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L29)
+[iniquity.ts:29](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L29)

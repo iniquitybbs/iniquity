@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IBBSEnhancements
+[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IBBSEnhancements
 
 # Interface: IBBSEnhancements
 
@@ -36,7 +36,7 @@ BBS pause options
 
 #### Defined in
 
-[iniquity.ts:45](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L45)
+[iniquity.ts:45](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L45)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:43](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L43)
+[iniquity.ts:43](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L43)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:44](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L44)
+[iniquity.ts:44](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L44)

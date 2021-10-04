@@ -1,6 +1,6 @@
 {
   "name": "iniquity",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "A re-imagining of the iconic BBS software.",
   "scripts": {
     "prepublish": "npx typedoc --theme default ./packages",

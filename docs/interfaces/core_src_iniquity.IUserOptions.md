@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IUserOptions
+[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IUserOptions
 
 # Interface: IUserOptions
 
@@ -25,7 +25,7 @@ User options
 
 #### Defined in
 
-[iniquity.ts:65](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L65)
+[iniquity.ts:65](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L65)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:66](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L66)
+[iniquity.ts:66](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L66)

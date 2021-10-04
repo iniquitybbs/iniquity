@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v1.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IBBSSayOptions
+[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [core/src/iniquity](../modules/core_src_iniquity.md) / IBBSSayOptions
 
 # Interface: IBBSSayOptions
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[iniquity.ts:52](https://github.com/iniquitybbs/iniquity/blob/41dba24/packages/core/src/iniquity.ts#L52)
+[iniquity.ts:52](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L52)
