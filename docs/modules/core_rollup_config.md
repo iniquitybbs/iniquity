@@ -1,10 +1,12 @@
+[Iniquity BBS Developer Guide](../README.md) / [Exports](../modules.md) / core/rollup.config
+
 # Module: core/rollup.config
 
 ## Table of contents
 
 ### Properties
 
-- [default](../wiki/core.rollup.config#default)
+- [default](core_rollup_config.md#default)
 
 ## Properties
 
