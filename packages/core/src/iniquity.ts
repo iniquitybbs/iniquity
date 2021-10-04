@@ -27,6 +27,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
  * Render options
  */
 interface IArtworkRenderOptions {
+    basepath?: string
     file?: string
     speed?: number
     encoding?: "CP437" | "UTF8"
@@ -41,6 +42,7 @@ interface IBBSPauseOptions {
 interface IBBSPrintOptions {}
 interface IBBSSayOptions {}
 interface IArtworkOptions {
+    basepath?: string
     filename: string
 }
 interface IUserOptions {
@@ -84,15 +86,17 @@ interface IBBSConfigParams {
 }
 
 export default class Iniquity {
+    public basepath: string
     public name: string
 
     /**
      *
      */
-    constructor() {
+    constructor(basepath?: string) {
         console.inactivity_warning = 9999
         console.inactivity_hangup = 99999
         this.name = system.name
+        this.basepath = basepath || "/"
     }
 
     /**
@@ -177,11 +181,12 @@ export default class Iniquity {
     /**
      * Iniquity Artwork
      * @param IArtworkOptions
-     * @param IArtworkOptions.filename The relative path to a text document.
+     * @param IArtworkOptions.basepath The root location of all assets.
+     * @param IArtworkOptions.filename the name of the asset. Can also be used in place of basepath.
      * @returns Artwork
      */
     public artwork(options: IArtworkOptions): Artwork {
-        return new Artwork(options)
+        return new Artwork({ basepath: options.basepath || this.basepath, filename: options.filename })
     }
 
     /**
@@ -240,15 +245,18 @@ class Text {}
  * Core artwork display and manipulation capabilities
  */
 class Artwork {
+    public basepath: string
     public filename: string
     private fileHandle: any
 
     /**
      * The Iniquity Artwork Class
      * @param IArtworkOptions
-     * @param IArtworkOptions.filename
+     * @param IArtworkOptions.basepath The base path to where the assets are located
+     * @param IArtworkOptions.filename The name of the specific asset to display
      */
     constructor(options: IArtworkOptions) {
+        this.basepath = options.basepath || Iniquity.prototype.basepath || ""
         this.filename = options.filename
     }
 
@@ -265,14 +273,15 @@ class Artwork {
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
         if (options?.clearScreenBefore === true) console.clear()
 
+        let basepath = options?.basepath || this.basepath
         let filename = options?.file || this.filename
         let mode = options?.mode || "line"
         let speed = options?.speed || 30
 
         console.line_counter = 0
 
-        // @ts-ignore
-        this.fileHandle = new File(`/iniquity/app/${filename}`)
+        // @ts-ignore Using Synchronet's JS File operations
+        this.fileHandle = new File(`${this.basepath}/${filename}`)
         if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + filename)
         let text = this.fileHandle.readAll()
 

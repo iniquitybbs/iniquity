@@ -77,7 +77,7 @@ npm start
 
 ### Developing an iniquity bbs application
 
-This project is designed to be modified using Visual Studio Code. There are recomended settings and plugins for its development that come as part of this repository that Visual Studio Code will make available to you. You should install all of these plugins! The main directory you will work out of is your app/ directory. This is where your BBS logic exists exists. You can safely ignore all directories outside of the app/ directory for now.
+This project is designed to be modified using Visual Studio Code. There are recomended settings and plugins for its development that come as part of this repository that Visual Studio Code will make available to you. You should install all of these plugins! The main directory you will work out of is your app/ directory. This is where your BBS logic exists. You can safely ignore all directories outside of the app/ directory for now.
 
 Below you'll find some examples of what could be achieved with iniquity right now. It's not much, but it's a start and fun to play with...
 
@@ -97,15 +97,15 @@ bbs.say(
 ).pause({ colorReset: true, newlines: 2, center: true })
 ```
 
-<img src="app/assets/artwork/screenshot-1.png">
+<img src="packages/core/assets/screenshot-1.png">
 
 #### Have it present some larger artwork, and end with prompting the user to pause
 
 ```typescript
-bbs.artwork({ filename: "assets/artwork/we-iniq3.ans" }).render({ clearScreenBefore: false }).pause({ newlines: 2, center: true })
+bbs.artwork({ filename: "packages/core/assets/we-iniq3.ans" }).render({ clearScreenBefore: false }).pause({ newlines: 2, center: true })
 ```
 
-<img src="app/assets/artwork/screenshot-2.png">
+<img src="packages/core/assets/screenshot-2.png">
 
 #### Begin to describe a simple login or new user application process
 
@@ -137,7 +137,7 @@ function loginMenu(): void {
 }
 ```
 
-<img src="app/assets/artwork/screenshot-3.png">
+<img src="packages/core/assets/screenshot-3.png">
 
 ## Discord
 

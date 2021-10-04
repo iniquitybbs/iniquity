@@ -1,3 +1,3 @@
-import Iniquity from "../dist/iniquity"
-import Assets from "../dist/assets"
+import Iniquity from "./iniquity"
+import Assets from "./assets"
 export { Iniquity, Assets }
