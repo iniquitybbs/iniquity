@@ -150,7 +150,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 315,
+									"line": 317,
 									"character": 4
 								}
 							],
@@ -201,7 +201,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 304,
+									"line": 306,
 									"character": 11
 								}
 							],
@@ -221,7 +221,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 306,
+									"line": 308,
 									"character": 12
 								}
 							],
@@ -241,7 +241,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 305,
+									"line": 307,
 									"character": 11
 								}
 							],
@@ -259,7 +259,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 327,
+									"line": 329,
 									"character": 4
 								}
 							],
@@ -336,7 +336,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity.ts",
-							"line": 303,
+							"line": 305,
 							"character": 13
 						}
 					]
@@ -457,7 +457,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 244,
+									"line": 246,
 									"character": 11
 								}
 							],
@@ -478,7 +478,7 @@
 											},
 											{
 												"tag": "example",
-												"text": "\niq.artwork({ filename: Assets.we_iniq3 })\niq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })\n"
+												"text": "\n```typescript\niq.artwork({ filename: Assets.we_iniq3 })\niq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })\n```\n"
 											}
 										]
 									},
@@ -598,7 +598,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 255,
+									"line": 257,
 									"character": 11
 								}
 							],
@@ -713,13 +713,7 @@
 									"flags": {},
 									"comment": {
 										"shortText": "Prints something to the user. Parses Renegade MCI/Synchronet @- codes.",
-										"returns": "\n",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IBBSPrintOptions}"
-											}
-										]
+										"returns": "\n"
 									},
 									"parameters": [
 										{
@@ -729,7 +723,7 @@
 											"kindString": "Parameter",
 											"flags": {},
 											"comment": {
-												"shortText": "you would like to print on the screen."
+												"shortText": "you would like to print on the screen.\n{@link IBBSPrintOptions}"
 											},
 											"type": {
 												"type": "union",
@@ -778,13 +772,7 @@
 									"flags": {},
 									"comment": {
 										"shortText": "Says something to the user. Does not parse MCI/@- codes.",
-										"returns": "\n",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IBBSPrintOptions}"
-											}
-										]
+										"returns": "\n"
 									},
 									"parameters": [
 										{
@@ -794,7 +782,7 @@
 											"kindString": "Parameter",
 											"flags": {},
 											"comment": {
-												"shortText": "What you would like to say on the screen."
+												"shortText": "What you would like to say on the screen.\n{@link IBBSPrintOptions}"
 											},
 											"type": {
 												"type": "union",

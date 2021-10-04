@@ -85,7 +85,7 @@ export interface IArtworkRenderFunctions {
 interface IBBSSayFunctions {
     /**
      * @param {IBBSPauseOptions} options
-     * @see {@link IBBSPauseOptions}
+     * {@link IBBSPauseOptions}
      */
     pause(options?: IBBSPauseOptions): void
 }
@@ -152,7 +152,7 @@ export default class Iniquity {
     /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param {IBBSSayOptions | string} options What you would like to say on the screen.
-     * @see {@link IBBSPrintOptions}
+     * {@link IBBSPrintOptions}
      * @returns {IBBSSayFunctions}
      */
     public say(options: IBBSSayOptions | string): IBBSSayFunctions {
@@ -169,7 +169,7 @@ export default class Iniquity {
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
      * @param {IBBSPrintOptions | string} options you would like to print on the screen.
-     * @see {@link IBBSPrintOptions}
+     * {@link IBBSPrintOptions}
      * @returns {IBBSPrintFunctions}
      */
     public print(options: IBBSPrintOptions | string): IBBSPrintFunctions {
@@ -238,8 +238,10 @@ export default class Iniquity {
      * @see {@link IArtworkOptions}
      * @returns {Artwork} An instance of Artwork and its return functions.
      * @example
+     * ```typescript
      * iq.artwork({ filename: Assets.we_iniq3 })
      * iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
+     * ```
      */
     public artwork(options: IArtworkOptions): Artwork {
         return new Artwork({ basepath: options.basepath || this.basepath, filename: options.filename })
