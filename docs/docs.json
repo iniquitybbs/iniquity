@@ -6,7 +6,7 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "core/dist/assets",
+			"name": "core/rollup.config",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
@@ -14,761 +14,20 @@
 				{
 					"id": 2,
 					"name": "default",
-					"kind": 8,
-					"kindString": "Enumeration",
-					"flags": {},
-					"comment": {
-						"shortText": "The definitive collection of iniquity ansi/asci/pescii text documents.\nCollected from various artpacks over the decades, and various incarnations of iniquity."
-					},
-					"children": [
-						{
-							"id": 5,
-							"name": "d_iniq1",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/assets.d.ts",
-									"line": 11,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"4d-iniq1.ans\""
-						},
-						{
-							"id": 6,
-							"name": "newuser1",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/assets.d.ts",
-									"line": 12,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"newuser.ans\""
-						},
-						{
-							"id": 3,
-							"name": "sm_iniq2",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"comment": {
-								"shortText": "This one."
-							},
-							"sources": [
-								{
-									"fileName": "dist/assets.d.ts",
-									"line": 9,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"sm!iniq2.ans\""
-						},
-						{
-							"id": 4,
-							"name": "we_iniq3",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/assets.d.ts",
-									"line": 10,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"we-iniq3.ans\""
-						}
-					],
-					"groups": [
-						{
-							"title": "Enumeration members",
-							"kind": 16,
-							"children": [
-								5,
-								6,
-								3,
-								4
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "dist/assets.d.ts",
-							"line": 5,
-							"character": 13
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Enumerations",
-					"kind": 8,
-					"children": [
-						2
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "dist/assets.d.ts",
-					"line": 5,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 7,
-			"name": "core/dist/iniquity",
-			"kind": 2,
-			"kindString": "Module",
-			"flags": {},
-			"children": [
-				{
-					"id": 8,
-					"name": "default",
-					"kind": 128,
-					"kindString": "Class",
-					"flags": {},
-					"comment": {
-						"shortText": "Iniquity BBS",
-						"tags": [
-							{
-								"tag": "global",
-								"text": "\n"
-							}
-						]
-					},
-					"children": [
-						{
-							"id": 9,
-							"name": "constructor",
-							"kind": 512,
-							"kindString": "Constructor",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 99,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 10,
-									"name": "new default",
-									"kind": 16384,
-									"kindString": "Constructor signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Iniquity BBS core class"
-									},
-									"parameters": [
-										{
-											"id": 11,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isOptional": true
-											},
-											"comment": {
-												"shortText": "An object containing the various configuration properties."
-											},
-											"type": {
-												"type": "reference",
-												"name": "IIniquityOptions"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"id": 8,
-										"name": "default"
-									}
-								}
-							]
-						},
-						{
-							"id": 12,
-							"name": "basepath",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 92,
-									"character": 4
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						},
-						{
-							"id": 13,
-							"name": "name",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 93,
-									"character": 4
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						},
-						{
-							"id": 34,
-							"name": "artwork",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 153,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 35,
-									"name": "artwork",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Will allow you to render artwork to the screen",
-										"returns": "An instance of Artwork and its return functions.",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IArtworkOptions}"
-											},
-											{
-												"tag": "example",
-												"text": "\niq.artwork({ filename: Assets.we_iniq3 })\niq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })\n"
-											}
-										]
-									},
-									"parameters": [
-										{
-											"id": 36,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {
-												"shortText": "An object containing the various configuration properties."
-											},
-											"type": {
-												"type": "reference",
-												"name": "IArtworkOptions"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"name": "Artwork"
-									}
-								}
-							]
-						},
-						{
-							"id": 26,
-							"name": "ask",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 131,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 27,
-									"name": "ask",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Displays a prompt (value) and returns a string of user input (ala clent-side JS)",
-										"returns": "response\n"
-									},
-									"parameters": [
-										{
-											"id": 28,
-											"name": "question",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							]
-						},
-						{
-							"id": 29,
-							"name": "disconnect",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 136,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 30,
-									"name": "disconnect",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Will disconnect the user immediately.",
-										"returns": "void\n"
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							]
-						},
-						{
-							"id": 37,
-							"name": "menu",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 161,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 38,
-									"name": "menu",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Menu instance",
-										"returns": "An instance of Menu\n"
-									},
-									"parameters": [
-										{
-											"id": 39,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {
-												"shortText": "An object containing the various configuration properties."
-											},
-											"type": {
-												"type": "reference",
-												"name": "IMenuOptions"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"name": "Menu"
-									}
-								}
-							]
-						},
-						{
-							"id": 20,
-							"name": "pause",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 119,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 21,
-									"name": "pause",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Pause the cursor",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IBBSPauseOptions}\n"
-											}
-										]
-									},
-									"parameters": [
-										{
-											"id": 22,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isOptional": true
-											},
-											"type": {
-												"type": "reference",
-												"name": "IBBSPauseOptions"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							]
-						},
-						{
-							"id": 17,
-							"name": "print",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 113,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 18,
-									"name": "print",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Prints something to the user. Parses Renegade MCI/Synchronet @- codes.",
-										"returns": "\n",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IBBSPrintOptions}"
-											}
-										]
-									},
-									"parameters": [
-										{
-											"id": 19,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {
-												"shortText": "you would like to print on the screen."
-											},
-											"type": {
-												"type": "union",
-												"types": [
-													{
-														"type": "intrinsic",
-														"name": "string"
-													},
-													{
-														"type": "reference",
-														"name": "IBBSPrintOptions"
-													}
-												]
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"name": "IBBSPrintFunctions"
-									}
-								}
-							]
-						},
-						{
-							"id": 14,
-							"name": "say",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 106,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 15,
-									"name": "say",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Says something to the user. Does not parse MCI/@- codes.",
-										"returns": "\n",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IBBSPrintOptions}"
-											}
-										]
-									},
-									"parameters": [
-										{
-											"id": 16,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {
-												"shortText": "What you would like to say on the screen."
-											},
-											"type": {
-												"type": "union",
-												"types": [
-													{
-														"type": "intrinsic",
-														"name": "string"
-													},
-													{
-														"type": "reference",
-														"name": "IBBSSayOptions"
-													}
-												]
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"name": "IBBSSayFunctions"
-									}
-								}
-							]
-						},
-						{
-							"id": 23,
-							"name": "sleep",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 125,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 24,
-									"name": "sleep",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Halt the screen for a specified period of time.",
-										"returns": "void\n"
-									},
-									"parameters": [
-										{
-											"id": 25,
-											"name": "speed",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {
-												"shortText": "In miliseconds"
-											},
-											"type": {
-												"type": "intrinsic",
-												"name": "number"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							]
-						},
-						{
-							"id": 31,
-							"name": "user",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "dist/iniquity.d.ts",
-									"line": 143,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 32,
-									"name": "user",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Will allow you to work with user data.",
-										"returns": "An instance of User and its return functions.\n",
-										"tags": [
-											{
-												"tag": "see",
-												"text": "{@link IUserOptions}"
-											}
-										]
-									},
-									"parameters": [
-										{
-											"id": 33,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"comment": {
-												"shortText": "An object containing the various configuration properties."
-											},
-											"type": {
-												"type": "reference",
-												"name": "IUserOptions"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"name": "User"
-									}
-								}
-							]
-						}
-					],
-					"groups": [
-						{
-							"title": "Constructors",
-							"kind": 512,
-							"children": [
-								9
-							]
-						},
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								12,
-								13
-							]
-						},
-						{
-							"title": "Methods",
-							"kind": 2048,
-							"children": [
-								34,
-								26,
-								29,
-								37,
-								20,
-								17,
-								14,
-								23,
-								31
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "dist/iniquity.d.ts",
-							"line": 91,
-							"character": 21
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Classes",
-					"kind": 128,
-					"children": [
-						8
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "dist/iniquity.d.ts",
-					"line": 4,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 40,
-			"name": "core/rollup.config",
-			"kind": 2,
-			"kindString": "Module",
-			"flags": {},
-			"children": [
-				{
-					"id": 41,
-					"name": "default",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 42,
+							"id": 3,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 53,
+									"id": 14,
 									"name": "external",
 									"kind": 1024,
 									"kindString": "Property",
@@ -783,7 +42,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 43,
+									"id": 4,
 									"name": "input",
 									"kind": 1024,
 									"kindString": "Property",
@@ -795,7 +54,7 @@
 									"defaultValue": "\"packages/core/src/app.ts\""
 								},
 								{
-									"id": 44,
+									"id": 5,
 									"name": "output",
 									"kind": 1024,
 									"kindString": "Property",
@@ -803,14 +62,14 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 45,
+											"id": 6,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
 											"flags": {},
 											"children": [
 												{
-													"id": 46,
+													"id": 7,
 													"name": "file",
 													"kind": 1024,
 													"kindString": "Property",
@@ -822,7 +81,7 @@
 													"defaultValue": "\"packages/core/dist/bundle.js\""
 												},
 												{
-													"id": 47,
+													"id": 8,
 													"name": "format",
 													"kind": 1024,
 													"kindString": "Property",
@@ -834,7 +93,7 @@
 													"defaultValue": "\"cjs\""
 												},
 												{
-													"id": 48,
+													"id": 9,
 													"name": "sourcemap",
 													"kind": 1024,
 													"kindString": "Property",
@@ -851,9 +110,9 @@
 													"title": "Properties",
 													"kind": 1024,
 													"children": [
-														46,
-														47,
-														48
+														7,
+														8,
+														9
 													]
 												}
 											]
@@ -862,7 +121,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 52,
+									"id": 13,
 									"name": "plugins",
 									"kind": 1024,
 									"kindString": "Property",
@@ -877,7 +136,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 49,
+									"id": 10,
 									"name": "watch",
 									"kind": 1024,
 									"kindString": "Property",
@@ -885,14 +144,14 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 50,
+											"id": 11,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
 											"flags": {},
 											"children": [
 												{
-													"id": 51,
+													"id": 12,
 													"name": "include",
 													"kind": 1024,
 													"kindString": "Property",
@@ -909,7 +168,7 @@
 													"title": "Properties",
 													"kind": 1024,
 													"children": [
-														51
+														12
 													]
 												}
 											]
@@ -923,11 +182,11 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										53,
-										43,
-										44,
-										52,
-										49
+										14,
+										4,
+										5,
+										13,
+										10
 									]
 								}
 							]
@@ -940,7 +199,7 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						41
+						2
 					]
 				}
 			],
@@ -953,14 +212,14 @@
 			]
 		},
 		{
-			"id": 54,
+			"id": 15,
 			"name": "core/src/assets",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 55,
+					"id": 16,
 					"name": "default",
 					"kind": 8,
 					"kindString": "Enumeration",
@@ -970,7 +229,7 @@
 					},
 					"children": [
 						{
-							"id": 58,
+							"id": 19,
 							"name": "d_iniq1",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -985,7 +244,7 @@
 							"defaultValue": "\"4d-iniq1.ans\""
 						},
 						{
-							"id": 59,
+							"id": 20,
 							"name": "newuser1",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -1000,7 +259,7 @@
 							"defaultValue": "\"newuser.ans\""
 						},
 						{
-							"id": 56,
+							"id": 17,
 							"name": "sm_iniq2",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -1018,7 +277,7 @@
 							"defaultValue": "\"sm!iniq2.ans\""
 						},
 						{
-							"id": 57,
+							"id": 18,
 							"name": "we_iniq3",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -1038,10 +297,10 @@
 							"title": "Enumeration members",
 							"kind": 16,
 							"children": [
-								58,
-								59,
-								56,
-								57
+								19,
+								20,
+								17,
+								18
 							]
 						}
 					],
@@ -1059,7 +318,7 @@
 					"title": "Enumerations",
 					"kind": 8,
 					"children": [
-						55
+						16
 					]
 				}
 			],
@@ -1072,14 +331,14 @@
 			]
 		},
 		{
-			"id": 60,
+			"id": 21,
 			"name": "core/src/iniquity",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 61,
+					"id": 22,
 					"name": "default",
 					"kind": 128,
 					"kindString": "Class",
@@ -1095,7 +354,7 @@
 					},
 					"children": [
 						{
-							"id": 62,
+							"id": 23,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -1109,7 +368,7 @@
 							],
 							"signatures": [
 								{
-									"id": 63,
+									"id": 24,
 									"name": "new default",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -1119,7 +378,7 @@
 									},
 									"parameters": [
 										{
-											"id": 64,
+											"id": 25,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1137,14 +396,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 61,
+										"id": 22,
 										"name": "default"
 									}
 								}
 							]
 						},
 						{
-							"id": 65,
+							"id": 26,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1164,7 +423,7 @@
 							}
 						},
 						{
-							"id": 66,
+							"id": 27,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1184,7 +443,7 @@
 							}
 						},
 						{
-							"id": 87,
+							"id": 48,
 							"name": "artwork",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1200,7 +459,7 @@
 							],
 							"signatures": [
 								{
-									"id": 88,
+									"id": 49,
 									"name": "artwork",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1221,7 +480,7 @@
 									},
 									"parameters": [
 										{
-											"id": 89,
+											"id": 50,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1243,7 +502,7 @@
 							]
 						},
 						{
-							"id": 79,
+							"id": 40,
 							"name": "ask",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1259,7 +518,7 @@
 							],
 							"signatures": [
 								{
-									"id": 80,
+									"id": 41,
 									"name": "ask",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1270,7 +529,7 @@
 									},
 									"parameters": [
 										{
-											"id": 81,
+											"id": 42,
 											"name": "question",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1290,7 +549,7 @@
 							]
 						},
 						{
-							"id": 82,
+							"id": 43,
 							"name": "disconnect",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1306,7 +565,7 @@
 							],
 							"signatures": [
 								{
-									"id": 83,
+									"id": 44,
 									"name": "disconnect",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1323,7 +582,7 @@
 							]
 						},
 						{
-							"id": 90,
+							"id": 51,
 							"name": "menu",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1339,7 +598,7 @@
 							],
 							"signatures": [
 								{
-									"id": 91,
+									"id": 52,
 									"name": "menu",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1350,7 +609,7 @@
 									},
 									"parameters": [
 										{
-											"id": 92,
+											"id": 53,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1372,7 +631,7 @@
 							]
 						},
 						{
-							"id": 73,
+							"id": 34,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1388,7 +647,7 @@
 							],
 							"signatures": [
 								{
-									"id": 74,
+									"id": 35,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1404,7 +663,7 @@
 									},
 									"parameters": [
 										{
-											"id": 75,
+											"id": 36,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1425,7 +684,7 @@
 							]
 						},
 						{
-							"id": 70,
+							"id": 31,
 							"name": "print",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1441,7 +700,7 @@
 							],
 							"signatures": [
 								{
-									"id": 71,
+									"id": 32,
 									"name": "print",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1458,7 +717,7 @@
 									},
 									"parameters": [
 										{
-											"id": 72,
+											"id": 33,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1489,7 +748,7 @@
 							]
 						},
 						{
-							"id": 67,
+							"id": 28,
 							"name": "say",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1505,7 +764,7 @@
 							],
 							"signatures": [
 								{
-									"id": 68,
+									"id": 29,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1522,7 +781,7 @@
 									},
 									"parameters": [
 										{
-											"id": 69,
+											"id": 30,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1553,7 +812,7 @@
 							]
 						},
 						{
-							"id": 76,
+							"id": 37,
 							"name": "sleep",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1569,7 +828,7 @@
 							],
 							"signatures": [
 								{
-									"id": 77,
+									"id": 38,
 									"name": "sleep",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1580,7 +839,7 @@
 									},
 									"parameters": [
 										{
-											"id": 78,
+											"id": 39,
 											"name": "speed",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1602,7 +861,7 @@
 							]
 						},
 						{
-							"id": 84,
+							"id": 45,
 							"name": "user",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1618,7 +877,7 @@
 							],
 							"signatures": [
 								{
-									"id": 85,
+									"id": 46,
 									"name": "user",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1635,7 +894,7 @@
 									},
 									"parameters": [
 										{
-											"id": 86,
+											"id": 47,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1662,30 +921,30 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								62
+								23
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								65,
-								66
+								26,
+								27
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								87,
-								79,
-								82,
-								90,
-								73,
-								70,
-								67,
-								76,
-								84
+								48,
+								40,
+								43,
+								51,
+								34,
+								31,
+								28,
+								37,
+								45
 							]
 						}
 					],
@@ -1703,7 +962,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						61
+						22
 					]
 				}
 			],
@@ -1722,10 +981,8 @@
 			"kind": 2,
 			"children": [
 				1,
-				7,
-				40,
-				54,
-				60
+				15,
+				21
 			]
 		}
 	]
