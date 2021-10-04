@@ -22,7 +22,7 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 #### Defined in
 
-[src/assets.ts:31](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/assets.ts#L31)
+[src/assets.ts:31](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/assets.ts#L31)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/assets.ts:32](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/assets.ts#L32)
+[src/assets.ts:32](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/assets.ts#L32)
 
 ___
 
@@ -44,7 +44,7 @@ This one.
 
 #### Defined in
 
-[src/assets.ts:29](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/assets.ts#L29)
+[src/assets.ts:29](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/assets.ts#L29)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/assets.ts:30](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/assets.ts#L30)
+[src/assets.ts:30](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/assets.ts#L30)

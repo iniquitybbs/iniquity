@@ -7,5 +7,5 @@
     "excludeProtected": true,
     "entryPointStrategy": "expand",
     "json": "docs/docs.json",
-    "githubPages": "false"
+    "githubPages": "true"
 }

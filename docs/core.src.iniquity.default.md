@@ -45,7 +45,7 @@ Iniquity BBS core class
 
 #### Defined in
 
-[src/iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L145)
+[src/iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L145)
 
 ## Properties
 
@@ -55,7 +55,7 @@ Iniquity BBS core class
 
 #### Defined in
 
-[src/iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L137)
+[src/iniquity.ts:137](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L137)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L138)
+[src/iniquity.ts:138](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L138)
 
 ## Methods
 
@@ -95,7 +95,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[src/iniquity.ts:244](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L244)
+[src/iniquity.ts:244](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L244)
 
 ___
 
@@ -119,7 +119,7 @@ response
 
 #### Defined in
 
-[src/iniquity.ts:213](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L213)
+[src/iniquity.ts:213](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L213)
 
 ___
 
@@ -137,7 +137,7 @@ void
 
 #### Defined in
 
-[src/iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L221)
+[src/iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L221)
 
 ___
 
@@ -161,7 +161,7 @@ An instance of Menu
 
 #### Defined in
 
-[src/iniquity.ts:255](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L255)
+[src/iniquity.ts:255](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L255)
 
 ___
 
@@ -185,7 +185,7 @@ Pause the cursor
 
 #### Defined in
 
-[src/iniquity.ts:192](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L192)
+[src/iniquity.ts:192](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L192)
 
 ___
 
@@ -209,7 +209,7 @@ Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
 
 #### Defined in
 
-[src/iniquity.ts:175](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L175)
+[src/iniquity.ts:175](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L175)
 
 ___
 
@@ -233,7 +233,7 @@ Says something to the user. Does not parse MCI/@- codes.
 
 #### Defined in
 
-[src/iniquity.ts:158](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L158)
+[src/iniquity.ts:158](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L158)
 
 ___
 
@@ -257,7 +257,7 @@ void
 
 #### Defined in
 
-[src/iniquity.ts:204](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L204)
+[src/iniquity.ts:204](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L204)
 
 ___
 
@@ -283,4 +283,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[src/iniquity.ts:231](https://github.com/iniquitybbs/iniquity/blob/7aadaa3/packages/core/src/iniquity.ts#L231)
+[src/iniquity.ts:231](https://github.com/iniquitybbs/iniquity/blob/df6fae7/packages/core/src/iniquity.ts#L231)
