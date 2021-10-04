@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[iniquity.ts:279](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L279)
+[iniquity.ts:279](https://github.com/iniquitybbs/iniquity/blob/03d7ad1/packages/core/src/iniquity.ts#L279)
 
 ## Methods
 
@@ -42,4 +42,4 @@
 
 #### Defined in
 
-[iniquity.ts:284](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/iniquity.ts#L284)
+[iniquity.ts:284](https://github.com/iniquitybbs/iniquity/blob/03d7ad1/packages/core/src/iniquity.ts#L284)

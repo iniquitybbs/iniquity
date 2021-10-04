@@ -18,14 +18,14 @@
 			"children": [
 				{
 					"id": 2,
-					"name": "default",
+					"name": "app",
 					"kind": 32,
 					"kindString": "Variable",
 					"flags": {},
 					"sources": [
 						{
 							"fileName": "app.ts",
-							"line": 28,
+							"line": 30,
 							"character": 6
 						}
 					],
@@ -49,7 +49,7 @@
 			"sources": [
 				{
 					"fileName": "app.ts",
-					"line": 5,
+					"line": 7,
 					"character": 0
 				}
 			]

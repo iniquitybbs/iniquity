@@ -2,6 +2,8 @@
  * An example bbs written using Iniquity 3
  * @module app
  */
+
+/** @example */
 import { Iniquity } from "./iniquity"
 import { Assets } from "./assets"
 
@@ -67,4 +69,4 @@ switch (login) {
         break
 }
 
-export default iq
+export { iq as app }

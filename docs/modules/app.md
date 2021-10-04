@@ -8,14 +8,14 @@ An example bbs written using Iniquity 3
 
 ### Variables
 
-- [default](app.md#default)
+- [app](app.md#app)
 
 ## Variables
 
-### default
+### app
 
-• **default**: [`Iniquity`](../classes/core_src_iniquity.Iniquity.md)
+• **app**: [`Iniquity`](../classes/core_src_iniquity.Iniquity.md)
 
 #### Defined in
 
-[app.ts:28](https://github.com/iniquitybbs/iniquity/blob/37cea5c/packages/core/src/app.ts#L28)
+[app.ts:30](https://github.com/iniquitybbs/iniquity/blob/03d7ad1/packages/core/src/app.ts#L30)

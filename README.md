@@ -146,3 +146,7 @@ function loginMenu(): void {
 ## Issues
 
 [Iniquity Feedback, Ideas, Bugs](https://github.com/iniquitybbs/iniquity/issues)
+
+## Documentation
+
+[Iniquity Documentation](https://iniquitybbs.org)
