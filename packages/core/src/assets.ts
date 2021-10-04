@@ -22,7 +22,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
  * The definitive collection of iniquity ansi/asci/pescii text documents.
  * Collected from various artpacks over the decades, and various incarnations of iniquity.
  */
-enum Assets {
+export enum Assets {
     /**
      * This one.
      */
@@ -31,5 +31,3 @@ enum Assets {
     d_iniq1 = "4d-iniq1.ans",
     newuser1 = "newuser.ans"
 }
-
-export default Assets

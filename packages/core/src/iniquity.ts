@@ -107,11 +107,11 @@ interface IMenuOptions {
     options: object[]
 }
 
-interface IMenuCommands {
+export interface IMenuCommands {
     command: IMenuCommand
 }
 
-interface IMenuCommand {
+export interface IMenuCommand {
     key: number
     name: string
 }
@@ -119,12 +119,12 @@ interface IMenuCommand {
  * Ibbsconfig params
  * @param name Means this
  */
-interface IBBSConfigParams {
+export interface IBBSConfigParams {
     name: string
     sysop: string
 }
 
-interface IIniquityOptions {
+export interface IIniquityOptions {
     basepath?: string
 }
 
@@ -133,7 +133,7 @@ interface IIniquityOptions {
  * @class
  * @global
  */
-export default class Iniquity {
+export class Iniquity {
     public basepath: string
     public name: string
 
@@ -141,6 +141,11 @@ export default class Iniquity {
      * Iniquity BBS core class
      * @param {IIniquityOptions} options An object containing the various configuration properties.
      * @param {string} options.basepath The BBS project root.
+     * @example
+     * ```typescript
+     * const iq = new Iniquity()
+     * const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
+     * ```
      */
     constructor(options?: IIniquityOptions) {
         console.inactivity_warning = 9999
@@ -152,8 +157,13 @@ export default class Iniquity {
     /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param {IBBSSayOptions | string} options What you would like to say on the screen.
-     * {@link IBBSPrintOptions}
+     * @see {@link IBBSPrintOptions}
      * @returns {IBBSSayFunctions}
+     * @example
+     * ```typescript
+     * iq.say("Say something to the terminal!")
+     * iq.say("This time say something but do some cool string manipulation.".newlines(2).color("bright red").center()).pause()
+     * ```
      */
     public say(options: IBBSSayOptions | string): IBBSSayFunctions {
         typeof options === "string" ? console.print(options) : console.print(options.text)
@@ -169,8 +179,14 @@ export default class Iniquity {
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
      * @param {IBBSPrintOptions | string} options you would like to print on the screen.
-     * {@link IBBSPrintOptions}
+     * @see {@link IBBSPrintOptions}
      * @returns {IBBSPrintFunctions}
+     * @example
+     * ```typescript
+     * iq.print("Display some text on the screen that can parse @ codes.").center()
+     * iq.print("Display some text on the screen that can parse @ codes.".newlines(2).color("background red"))
+     * iq.print("Display some text on the screen that can parse @ codes.".color("cyan")).pause()
+     * ```
      */
     public print(options: IBBSPrintOptions | string): IBBSPrintFunctions {
         typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text || new Error("Sometthing is wrong with this string."))
@@ -575,3 +591,5 @@ interface ISBBSBbs {
     logoff: any
     hangup: any
 }
+
+export default Iniquity

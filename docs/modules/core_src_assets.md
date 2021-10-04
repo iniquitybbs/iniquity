@@ -6,4 +6,4 @@
 
 ### Enumerations
 
-- [default](../enums/core_src_assets.default.md)
+- [Assets](../enums/core_src_assets.Assets.md)

@@ -1,5 +1,5 @@
-import Iniquity from "./iniquity"
-import Assets from "./assets"
+import { Iniquity } from "./iniquity"
+import { Assets } from "./assets"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
