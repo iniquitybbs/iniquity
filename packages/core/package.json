@@ -1,14 +1,14 @@
 {
 	"name": "@iniquitybbs/core",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"description": "> TODO: description",
 	"author": "ispyhumanfly <ispyhumanfly@gmail.com>",
 	"homepage": "http://iniquitybbs.org",
 	"license": "MIT",
-    "private": false,
-    "publishConfig": {
-        "access": "public"
-    },
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
 	"files": [
 		"dist",
 		"assets"
