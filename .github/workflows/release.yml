@@ -25,7 +25,7 @@ jobs:
                   npm i -g lerna
                   lerna bootstrap
                   lerna run build
-                  lerna publish patch
+                  lerna publish patch --yes
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
