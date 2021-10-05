@@ -5,7 +5,7 @@ import multi from "@rollup/plugin-multi-entry"
 export default {
     input: "src/**/*.ts",
     output: {
-        file: "dist/index.js",
+        file: "dist/bundle.js",
         format: "cjs",
         sourcemap: "inline"
     },

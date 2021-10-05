@@ -27,7 +27,7 @@
     ".vscode": true,
     ".parcel-cache": true,
     "**/.rollup.cache": true,
-    "tsconfig.tsbuildinfo": true,
+    "**/tsconfig.tsbuildinfo": true,
     "lerna.json": true,
     ".nvmrc": true
 },
