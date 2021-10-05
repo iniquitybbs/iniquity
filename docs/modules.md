@@ -1,4 +1,4 @@
-# Iniquity - vundefined
+# Iniquity
 
 ## Table of contents
 
