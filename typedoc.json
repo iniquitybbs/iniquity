@@ -11,7 +11,7 @@
     "entryPointStrategy": "expand",
     "json": "docs/api.json",
     "pretty": true,
-    "includeVersion": true,
+    "includeVersion": false,
     "cleanOutputDir": false,
     "githubPages": false
 }
