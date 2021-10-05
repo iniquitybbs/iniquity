@@ -5,6 +5,10 @@
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.org",
   "license": "MIT",
+  "private": "false",
+  "publishConfig": {
+    "access": "public"
+},
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -34,5 +38,6 @@
   },
   "dependencies": {
     "yargs": "^17.2.1"
-  }
+  },
+  "gitHead": "11fe461527a2e0f0c600ecf3b41d585fd3106ff4"
 }

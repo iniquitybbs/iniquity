@@ -63,7 +63,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[iniquity.ts:180](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L180)
+[iniquity.ts:180](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L180)
 
 ## Properties
 
@@ -73,7 +73,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[iniquity.ts:167](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L167)
+[iniquity.ts:167](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L167)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:168](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L168)
+[iniquity.ts:168](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L168)
 
 ## Methods
 
@@ -115,7 +115,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[iniquity.ts:294](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L294)
+[iniquity.ts:294](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L294)
 
 ___
 
@@ -139,7 +139,7 @@ response
 
 #### Defined in
 
-[iniquity.ts:260](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L260)
+[iniquity.ts:260](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L260)
 
 ___
 
@@ -157,7 +157,7 @@ void
 
 #### Defined in
 
-[iniquity.ts:268](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L268)
+[iniquity.ts:268](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L268)
 
 ___
 
@@ -181,7 +181,7 @@ An instance of Menu
 
 #### Defined in
 
-[iniquity.ts:305](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L305)
+[iniquity.ts:305](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L305)
 
 ___
 
@@ -207,7 +207,7 @@ Display a pause prompt on the screen.
 
 #### Defined in
 
-[iniquity.ts:239](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L239)
+[iniquity.ts:239](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L239)
 
 ___
 
@@ -238,7 +238,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-[iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L221)
+[iniquity.ts:221](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L221)
 
 ___
 
@@ -268,7 +268,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-[iniquity.ts:198](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L198)
+[iniquity.ts:198](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L198)
 
 ___
 
@@ -292,7 +292,7 @@ void
 
 #### Defined in
 
-[iniquity.ts:251](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L251)
+[iniquity.ts:251](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L251)
 
 ___
 
@@ -320,4 +320,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[iniquity.ts:279](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L279)
+[iniquity.ts:279](https://github.com/iniquitybbs/iniquity/blob/11fe461/packages/core/src/iniquity.ts#L279)
