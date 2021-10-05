@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[iniquity.ts:132](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L132)
+[iniquity.ts:132](https://github.com/iniquitybbs/iniquity/blob/25a281e/packages/core/src/iniquity.ts#L132)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:133](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L133)
+[iniquity.ts:133](https://github.com/iniquitybbs/iniquity/blob/25a281e/packages/core/src/iniquity.ts#L133)

@@ -63,23 +63,65 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 git clone https://github.com/iniquitybbs/iniquity.git
 ```
 
-## Inside of the iniquity directory, install the project dependencies
+### Inside of the iniquity directory, install the project dependencies
 
 ```bash
 npm install
 ```
 
-## Start iniquity
+### Start iniquity
 
 ```bash
 npm start
 ```
 
-### Developing an iniquity bbs application
+## Example
 
 This project is designed to be modified using Visual Studio Code. There are recomended settings and plugins for its development that come as part of this repository that Visual Studio Code will make available to you. You should install all of these plugins! The main directory you will work out of is your app/ directory. This is where your BBS logic exists. You can safely ignore all directories outside of the app/ directory for now.
 
-Below you'll find some examples of what could be achieved with iniquity right now. It's not much, but it's a start and fun to play with...
+```typescript
+const iq = new Iniquity({ basepath: "/iniquity/core/assets/" })
+
+const welcomeArt = iq.artwork({ filename: Assets.sm_iniq2 })
+welcomeArt.render({ clearScreenBefore: true, speed: 100 })
+
+iq.print({
+    text: `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
+        .newlines()
+        .color("background red")
+        .center()
+}).pause({ colorReset: true, newlines: 2, center: true })
+
+iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
+
+iq.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
+
+iq.artwork({ filename: Assets.d_iniq1 }).render({ speed: 100 })
+const login = iq.ask("What is your login: ".newlines(1))
+switch (login) {
+    case "new":
+    case "signup":
+        iq.artwork({ filename: Assets.newuser1 }).render({ clearScreenBefore: true })
+
+        let newUser = iq.user({
+            name: iq.ask("What would you like your handle to be?".newlines(2).color("white")),
+            password: iq.ask("And your password?".newlines(2).color("white"))
+        })
+
+        iq.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
+        iq.disconnect()
+        break
+    default:
+        if (iq.user({ name: login, password: iq.ask("And your password?".newlines(2).color("white")) })) {
+            alert("somethingsync")
+        }
+
+        iq.pause()
+
+        iq.artwork({ filename: Assets.d_iniq1 }).render({ clearScreenBefore: true })
+        break
+}
+```
 
 ## Discord
 
