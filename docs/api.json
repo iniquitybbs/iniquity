@@ -345,6 +345,14 @@
 			"originalName": "core/src/iniquity",
 			"children": [
 				{
+					"id": 136,
+					"name": "default",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 72
+				},
+				{
 					"id": 126,
 					"name": "Artwork",
 					"kind": 128,
@@ -2871,32 +2879,16 @@
 							"character": 17
 						}
 					]
-				},
-				{
-					"id": 136,
-					"name": "default",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "iniquity.ts",
-							"line": 630,
-							"character": 6
-						}
-					],
-					"type": {
-						"type": "query",
-						"queryType": {
-							"type": "reference",
-							"id": 72,
-							"name": "BBS"
-						}
-					},
-					"defaultValue": "..."
 				}
 			],
 			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						136
+					]
+				},
 				{
 					"title": "Classes",
 					"kind": 128,
@@ -2929,13 +2921,6 @@
 						32,
 						24,
 						42
-					]
-				},
-				{
-					"title": "Variables",
-					"kind": 32,
-					"children": [
-						136
 					]
 				}
 			],

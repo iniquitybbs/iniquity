@@ -17,7 +17,7 @@
 
 #### Defined in
 
-iniquity.ts:135
+[iniquity.ts:135](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L135)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-iniquity.ts:136
+[iniquity.ts:136](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L136)

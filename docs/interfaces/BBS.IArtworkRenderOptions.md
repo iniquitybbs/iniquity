@@ -23,7 +23,7 @@ Iniquity artwork rendering options
 
 #### Defined in
 
-iniquity.ts:45
+[iniquity.ts:45](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L45)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-iniquity.ts:50
+[iniquity.ts:50](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L50)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-iniquity.ts:48
+[iniquity.ts:48](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L48)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-iniquity.ts:46
+[iniquity.ts:46](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L46)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-iniquity.ts:49
+[iniquity.ts:49](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L49)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-iniquity.ts:47
+[iniquity.ts:47](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L47)

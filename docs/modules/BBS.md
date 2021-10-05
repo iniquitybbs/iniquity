@@ -19,6 +19,10 @@ mybbs.disconnect()
 
 ## Table of contents
 
+### References
+
+- [default](BBS.md#default)
+
 ### Classes
 
 - [Artwork](../classes/BBS.Artwork.md)
@@ -47,16 +51,8 @@ mybbs.disconnect()
 - [IQStringUtils](../interfaces/BBS.IQStringUtils.md)
 - [IUserOptions](../interfaces/BBS.IUserOptions.md)
 
-### Variables
-
-- [default](BBS.md#default)
-
-## Variables
+## References
 
 ### default
 
-• **default**: typeof [`BBS`](../classes/BBS.BBS-1.md)
-
-#### Defined in
-
-iniquity.ts:630
+• **default**: `Object`

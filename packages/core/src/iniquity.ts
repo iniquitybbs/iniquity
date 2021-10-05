@@ -627,5 +627,5 @@ interface ISBBSBbs {
     logoff: any
     hangup: any
 }
-const Iniquity = BBS
-export default Iniquity
+
+export default BBS
