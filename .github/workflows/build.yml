@@ -16,10 +16,10 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-            - name: npm install, build, and test
+            - name: Build
               run: |
                   npm i -g npm@7
-                  npm i -f lerna
+                  npm i -g lerna
                   lerna bootstrap
               env:
                   CI: true
