@@ -1,6 +1,6 @@
 /**
- * The Iniquity Bulletin Board Software
- * @module Iniquity
+ * Iniquity Core
+ * @module Core
  * @summary This is the Iniquity core bbs library. It's the foundation of any Iniquity application.
  * @example
  * ```typescript

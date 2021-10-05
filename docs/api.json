@@ -24,7 +24,7 @@
 					}
 				]
 			},
-			"originalName": "archives/src",
+			"originalName": "archive/src",
 			"children": [
 				{
 					"id": 2,
@@ -44,7 +44,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 51,
 									"character": 4
 								}
@@ -59,7 +59,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 52,
 									"character": 4
 								}
@@ -77,7 +77,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 49,
 									"character": 4
 								}
@@ -92,7 +92,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 50,
 									"character": 4
 								}
@@ -114,7 +114,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "archives/src/index.ts",
+							"fileName": "archive/src/index.ts",
 							"line": 45,
 							"character": 12
 						}
@@ -144,7 +144,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 67,
 									"character": 4
 								}
@@ -190,7 +190,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 69,
 									"character": 11
 								}
@@ -228,7 +228,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "archives/src/index.ts",
+							"fileName": "archive/src/index.ts",
 							"line": 66,
 							"character": 13
 						}
@@ -252,7 +252,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "archives/src/index.ts",
+									"fileName": "archive/src/index.ts",
 									"line": 59,
 									"character": 4
 								}
@@ -274,7 +274,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "archives/src/index.ts",
+							"fileName": "archive/src/index.ts",
 							"line": 58,
 							"character": 17
 						}
@@ -306,7 +306,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "archives/src/index.ts",
+					"fileName": "archive/src/index.ts",
 					"line": 45,
 					"character": 0
 				}
@@ -314,12 +314,12 @@
 		},
 		{
 			"id": 15,
-			"name": "Iniquity",
+			"name": "Core",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"comment": {
-				"shortText": "The Iniquity Bulletin Board Software",
+				"shortText": "Iniquity Core",
 				"tags": [
 					{
 						"tag": "summary",

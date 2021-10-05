@@ -5,4 +5,4 @@
 ### Modules
 
 - [Archives](modules/Archives.md)
-- [Iniquity](modules/Iniquity.md)
+- [Core](modules/Core.md)

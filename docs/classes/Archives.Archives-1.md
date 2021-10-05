@@ -30,7 +30,7 @@ Iniquity Archives
 
 #### Defined in
 
-archives/src/index.ts:67
+archive/src/index.ts:67
 
 ## Methods
 
@@ -44,4 +44,4 @@ archives/src/index.ts:67
 
 #### Defined in
 
-archives/src/index.ts:69
+archive/src/index.ts:69

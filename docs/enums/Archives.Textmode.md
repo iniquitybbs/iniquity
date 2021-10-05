@@ -22,7 +22,7 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 #### Defined in
 
-archives/src/index.ts:51
+archive/src/index.ts:51
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-archives/src/index.ts:52
+archive/src/index.ts:52
 
 ___
 
@@ -44,7 +44,7 @@ This one.
 
 #### Defined in
 
-archives/src/index.ts:49
+archive/src/index.ts:49
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-archives/src/index.ts:50
+archive/src/index.ts:50

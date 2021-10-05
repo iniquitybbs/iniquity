@@ -18,4 +18,4 @@ Assets constructor options
 
 #### Defined in
 
-archives/src/index.ts:59
+archive/src/index.ts:59

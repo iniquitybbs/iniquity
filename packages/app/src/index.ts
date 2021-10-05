@@ -1,5 +1,5 @@
 import { BBS } from "@iniquitybbs/core"
-import { Textmode } from "@iniquitybbs/archives"
+import { Textmode } from "@iniquitybbs/archive"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
@@ -23,7 +23,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 const bbs = new BBS()
 
-const welcomeArt = bbs.artwork({ basepath: "/iniquity/archives/src/textmode" })
+const welcomeArt = bbs.artwork({ basepath: "/iniquity/archive/src/textmode" })
 welcomeArt.render({ filename: Textmode.sm_iniq2, clearScreenBefore: true, speed: 100 })
 
 bbs.print(
@@ -33,16 +33,16 @@ bbs.print(
         .center()
 ).pause({ colorReset: true, newlines: 2, center: true })
 
-bbs.artwork({ basepath: "/iniquity/archives/src/textmode/", filename: Textmode.we_iniq3 }).render({ clearScreenBefore: false })
+bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.we_iniq3 }).render({ clearScreenBefore: false })
 
 bbs.say("You've connected to a prototype of the new iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
 
-bbs.artwork({ basepath: "/iniquity/archives/src/textmode/", filename: Textmode.d_iniq1 }).render({ speed: 100 })
+bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.d_iniq1 }).render({ speed: 100 })
 const login = bbs.ask("What is your login: ".newlines(1))
 switch (login) {
     case "new":
     case "signup":
-        bbs.artwork({ basepath: "/iniquity/archives/src/textmode/", filename: Textmode.newuser1 }).render({ clearScreenBefore: true })
+        bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.newuser1 }).render({ clearScreenBefore: true })
 
         let newUser = bbs.user({
             name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
@@ -59,6 +59,6 @@ switch (login) {
 
         bbs.pause()
 
-        bbs.artwork({ basepath: "/iniquity/archives/src/textmode/", filename: Textmode.d_iniq1 }).render({ clearScreenBefore: true })
+        bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.d_iniq1 }).render({ clearScreenBefore: true })
         break
 }
