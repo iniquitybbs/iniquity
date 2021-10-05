@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
-  "homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/cli#readme",
+  "homepage": "http://iniquitybbs.org",
   "license": "MIT",
-  "main": "lib/cli.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
