@@ -1,4 +1,4 @@
-# Iniquity - v3.0.0
+# Iniquity - vundefined
 
 ## Table of contents
 
