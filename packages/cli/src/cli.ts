@@ -1,1 +1,1 @@
-export {}
+const food = "asd"
