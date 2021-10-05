@@ -6,6 +6,9 @@
   "homepage": "http://iniquitybbs.org",
   "license": "MIT",
   "private": false,
+  "release": {
+    "extends": "semantic-release-monorepo"
+},
   "publishConfig": {
     "access": "public"
   },
