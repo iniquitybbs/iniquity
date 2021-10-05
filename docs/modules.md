@@ -4,5 +4,5 @@
 
 ### Modules
 
-- [Archives](modules/Archives.md)
+- [Archive](modules/Archive.md)
 - [Core](modules/Core.md)

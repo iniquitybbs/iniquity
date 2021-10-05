@@ -23,7 +23,7 @@ Menu options
 
 #### Defined in
 
-[core/src/index.ts:126](https://github.com/iniquitybbs/iniquity/blob/f0fbc7c/packages/core/src/index.ts#L126)
+[core/src/index.ts:126](https://github.com/iniquitybbs/iniquity/blob/f62c5c3/packages/core/src/index.ts#L126)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:127](https://github.com/iniquitybbs/iniquity/blob/f0fbc7c/packages/core/src/index.ts#L127)
+[core/src/index.ts:127](https://github.com/iniquitybbs/iniquity/blob/f62c5c3/packages/core/src/index.ts#L127)

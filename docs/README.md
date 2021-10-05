@@ -116,7 +116,7 @@ switch (login) {
 }
 ```
 
-[Want to learn more? Read the docs!](https://iniquitybbs.org/modules/Iniquity.html)
+[Want to learn more? Read the docs!](https://iniquitybbs.org/modules/Core.html)
 
 ## Discord
 

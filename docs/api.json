@@ -7,12 +7,12 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "Archives",
+			"name": "Archive",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"comment": {
-				"shortText": "Iniquity Archives",
+				"shortText": "Iniquity Archive",
 				"tags": [
 					{
 						"tag": "summary",
@@ -122,7 +122,7 @@
 				},
 				{
 					"id": 9,
-					"name": "Archives",
+					"name": "Archive",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
@@ -152,7 +152,7 @@
 							"signatures": [
 								{
 									"id": 11,
-									"name": "new Archives",
+									"name": "new Archive",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
@@ -175,7 +175,7 @@
 									"type": {
 										"type": "reference",
 										"id": 9,
-										"name": "Archives"
+										"name": "Archive"
 									}
 								}
 							]
