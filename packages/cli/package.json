@@ -5,7 +5,7 @@
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.org",
   "license": "MIT",
-  "private": "false",
+  "private": false,
   "publishConfig": {
     "access": "public"
 },
