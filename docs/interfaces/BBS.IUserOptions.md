@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IUserOptions
-
 # Interface: IUserOptions
 
 [BBS](../modules/BBS.md).IUserOptions
@@ -25,7 +23,7 @@ User options
 
 #### Defined in
 
-modules/iniquity.ts:85
+iniquity.ts:85
 
 ___
 
@@ -35,4 +33,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:86
+iniquity.ts:86

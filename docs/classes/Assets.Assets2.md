@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [Assets](../modules/Assets.md) / Assets2
-
 # Class: Assets2
 
 [Assets](../modules/Assets.md).Assets2
@@ -32,7 +30,7 @@ Assets2
 
 #### Defined in
 
-modules/assets.ts:66
+assets.ts:66
 
 ## Methods
 
@@ -46,4 +44,4 @@ modules/assets.ts:66
 
 #### Defined in
 
-modules/assets.ts:68
+assets.ts:68

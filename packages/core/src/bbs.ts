@@ -1,5 +1,5 @@
-import BBS from "./modules/iniquity"
-import { Directory as textfiles } from "./modules/assets"
+import BBS from "./iniquity"
+import { Directory as textfiles } from "./assets"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%

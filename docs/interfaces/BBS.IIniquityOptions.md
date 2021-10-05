@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IIniquityOptions
-
 # Interface: IIniquityOptions
 
 [BBS](../modules/BBS.md).IIniquityOptions
@@ -18,4 +16,4 @@
 
 #### Defined in
 
-modules/iniquity.ts:148
+iniquity.ts:148

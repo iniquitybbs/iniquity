@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / Assets
-
 # Module: Assets
 
 Iniquity Assets

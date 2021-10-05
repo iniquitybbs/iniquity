@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / BBS
-
 # Module: BBS
 
 The Iniquity Bulletin Board Software
@@ -61,4 +59,4 @@ mybbs.disconnect()
 
 #### Defined in
 
-modules/iniquity.ts:630
+iniquity.ts:630

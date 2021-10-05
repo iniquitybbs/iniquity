@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / BBS
-
 # Class: BBS
 
 [BBS](../modules/BBS.md).BBS
@@ -65,7 +63,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-modules/iniquity.ts:180
+iniquity.ts:180
 
 ## Properties
 
@@ -75,7 +73,7 @@ modules/iniquity.ts:180
 
 #### Defined in
 
-modules/iniquity.ts:167
+iniquity.ts:167
 
 ___
 
@@ -85,7 +83,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:168
+iniquity.ts:168
 
 ## Methods
 
@@ -117,7 +115,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-modules/iniquity.ts:294
+iniquity.ts:294
 
 ___
 
@@ -141,7 +139,7 @@ response
 
 #### Defined in
 
-modules/iniquity.ts:260
+iniquity.ts:260
 
 ___
 
@@ -159,7 +157,7 @@ void
 
 #### Defined in
 
-modules/iniquity.ts:268
+iniquity.ts:268
 
 ___
 
@@ -183,7 +181,7 @@ An instance of Menu
 
 #### Defined in
 
-modules/iniquity.ts:305
+iniquity.ts:305
 
 ___
 
@@ -209,7 +207,7 @@ Display a pause prompt on the screen.
 
 #### Defined in
 
-modules/iniquity.ts:239
+iniquity.ts:239
 
 ___
 
@@ -240,7 +238,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-modules/iniquity.ts:221
+iniquity.ts:221
 
 ___
 
@@ -270,7 +268,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-modules/iniquity.ts:198
+iniquity.ts:198
 
 ___
 
@@ -294,7 +292,7 @@ void
 
 #### Defined in
 
-modules/iniquity.ts:251
+iniquity.ts:251
 
 ___
 
@@ -322,4 +320,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-modules/iniquity.ts:279
+iniquity.ts:279

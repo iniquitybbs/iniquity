@@ -1,8 +1,8 @@
 {
     "out": "docs",
     "readme": "README.md",
-    "name": "Iniquity API reference",
-    "hideBreadcrumbs": false,
+    "name": "Iniquity",
+    "hideBreadcrumbs": true,
     "defaultCategory": "Classes",
     "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**", "**/rollup.config.ts"],
     "excludeProtected": true,

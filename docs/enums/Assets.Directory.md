@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [Assets](../modules/Assets.md) / Directory
-
 # Enumeration: Directory
 
 [Assets](../modules/Assets.md).Directory
@@ -24,7 +22,7 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 #### Defined in
 
-modules/assets.ts:50
+assets.ts:50
 
 ___
 
@@ -34,7 +32,7 @@ ___
 
 #### Defined in
 
-modules/assets.ts:51
+assets.ts:51
 
 ___
 
@@ -46,7 +44,7 @@ This one.
 
 #### Defined in
 
-modules/assets.ts:48
+assets.ts:48
 
 ___
 
@@ -56,4 +54,4 @@ ___
 
 #### Defined in
 
-modules/assets.ts:49
+assets.ts:49

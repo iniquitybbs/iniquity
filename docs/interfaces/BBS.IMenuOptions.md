@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IMenuOptions
-
 # Interface: IMenuOptions
 
 [BBS](../modules/BBS.md).IMenuOptions
@@ -25,7 +23,7 @@ Menu options
 
 #### Defined in
 
-modules/iniquity.ts:126
+iniquity.ts:126
 
 ___
 
@@ -35,4 +33,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:127
+iniquity.ts:127

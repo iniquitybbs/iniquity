@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / User
-
 # Class: User
 
 [BBS](../modules/BBS.md).User
@@ -34,7 +32,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-modules/iniquity.ts:339
+iniquity.ts:339
 
 ## Properties
 
@@ -44,7 +42,7 @@ modules/iniquity.ts:339
 
 #### Defined in
 
-modules/iniquity.ts:332
+iniquity.ts:332
 
 ___
 
@@ -54,7 +52,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:330
+iniquity.ts:330
 
 ___
 
@@ -64,4 +62,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:331
+iniquity.ts:331

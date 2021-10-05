@@ -1,5 +1,3 @@
-Iniquity API reference - v3.0.0 / [Exports](modules.md)
-
 # Iniquity
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software.

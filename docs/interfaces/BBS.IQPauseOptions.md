@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IQPauseOptions
-
 # Interface: IQPauseOptions
 
 [BBS](../modules/BBS.md).IQPauseOptions
@@ -30,7 +28,7 @@
 
 #### Defined in
 
-modules/iniquity.ts:65
+iniquity.ts:65
 
 ___
 
@@ -44,7 +42,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:63
+iniquity.ts:63
 
 ___
 
@@ -58,4 +56,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:64
+iniquity.ts:64

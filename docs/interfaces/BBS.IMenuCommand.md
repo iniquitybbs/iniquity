@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IMenuCommand
-
 # Interface: IMenuCommand
 
 [BBS](../modules/BBS.md).IMenuCommand
@@ -19,7 +17,7 @@
 
 #### Defined in
 
-modules/iniquity.ts:135
+iniquity.ts:135
 
 ___
 
@@ -29,4 +27,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:136
+iniquity.ts:136

@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / Artwork
-
 # Class: Artwork
 
 [BBS](../modules/BBS.md).Artwork
@@ -43,7 +41,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-modules/iniquity.ts:369
+iniquity.ts:369
 
 ## Properties
 
@@ -53,7 +51,7 @@ modules/iniquity.ts:369
 
 #### Defined in
 
-modules/iniquity.ts:358
+iniquity.ts:358
 
 ___
 
@@ -63,7 +61,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:360
+iniquity.ts:360
 
 ___
 
@@ -73,7 +71,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:359
+iniquity.ts:359
 
 ## Methods
 
@@ -99,4 +97,4 @@ Will render the artwork on the screen as well as provide various render function
 
 #### Defined in
 
-modules/iniquity.ts:381
+iniquity.ts:381

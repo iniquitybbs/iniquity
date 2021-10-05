@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IArtworkRenderFunctions
-
 # Interface: IArtworkRenderFunctions
 
 [BBS](../modules/BBS.md).IArtworkRenderFunctions
@@ -31,7 +29,7 @@ Resets the screen color
 
 #### Defined in
 
-modules/iniquity.ts:102
+iniquity.ts:102
 
 ___
 
@@ -53,4 +51,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:98
+iniquity.ts:98

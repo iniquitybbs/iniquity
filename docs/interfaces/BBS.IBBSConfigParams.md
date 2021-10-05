@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IBBSConfigParams
-
 # Interface: IBBSConfigParams
 
 [BBS](../modules/BBS.md).IBBSConfigParams
@@ -23,7 +21,7 @@ Ibbsconfig params
 
 #### Defined in
 
-modules/iniquity.ts:143
+iniquity.ts:143
 
 ___
 
@@ -33,4 +31,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:144
+iniquity.ts:144

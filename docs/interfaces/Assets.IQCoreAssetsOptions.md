@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [Assets](../modules/Assets.md) / IQCoreAssetsOptions
-
 # Interface: IQCoreAssetsOptions
 
 [Assets](../modules/Assets.md).IQCoreAssetsOptions
@@ -20,4 +18,4 @@ Assets constructor options
 
 #### Defined in
 
-modules/assets.ts:58
+assets.ts:58

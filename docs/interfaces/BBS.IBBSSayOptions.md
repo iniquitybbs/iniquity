@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IBBSSayOptions
-
 # Interface: IBBSSayOptions
 
 [BBS](../modules/BBS.md).IBBSSayOptions
@@ -18,4 +16,4 @@
 
 #### Defined in
 
-modules/iniquity.ts:72
+iniquity.ts:72

@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / Menu
-
 # Class: Menu
 
 [BBS](../modules/BBS.md).Menu
@@ -28,7 +26,7 @@
 
 #### Defined in
 
-modules/iniquity.ts:311
+iniquity.ts:311
 
 ## Methods
 
@@ -42,4 +40,4 @@ modules/iniquity.ts:311
 
 #### Defined in
 
-modules/iniquity.ts:316
+iniquity.ts:316

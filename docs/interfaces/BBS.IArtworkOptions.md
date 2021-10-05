@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IArtworkOptions
-
 # Interface: IArtworkOptions
 
 [BBS](../modules/BBS.md).IArtworkOptions
@@ -19,7 +17,7 @@
 
 #### Defined in
 
-modules/iniquity.ts:75
+iniquity.ts:75
 
 ___
 
@@ -29,4 +27,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:76
+iniquity.ts:76

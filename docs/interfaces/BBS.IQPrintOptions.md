@@ -1,5 +1,3 @@
-[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / [BBS](../modules/BBS.md) / IQPrintOptions
-
 # Interface: IQPrintOptions
 
 [BBS](../modules/BBS.md).IQPrintOptions
@@ -31,7 +29,7 @@
 
 #### Defined in
 
-modules/iniquity.ts:65
+iniquity.ts:65
 
 ___
 
@@ -45,7 +43,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:63
+iniquity.ts:63
 
 ___
 
@@ -59,7 +57,7 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:64
+iniquity.ts:64
 
 ___
 
@@ -69,4 +67,4 @@ ___
 
 #### Defined in
 
-modules/iniquity.ts:69
+iniquity.ts:69

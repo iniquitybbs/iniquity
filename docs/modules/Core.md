@@ -6,6 +6,17 @@ Iniquity BBS Core
 
 **`summary`** Some more info to follow
 
+**`example`**
+```typescript
+import { BBS } from "@iniquitybbs/core"
+
+const bbs = new BBS()
+
+bbs.say("Hello!")
+
+bbs.hangup()
+```
+
 ## Table of contents
 
 ### References
@@ -37,7 +48,7 @@ Iniquity BBS Core
 
 #### Defined in
 
-index.ts:28
+[index.ts:35](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L35)
 
 ___
 
@@ -47,7 +58,7 @@ ___
 
 #### Defined in
 
-index.ts:28
+[index.ts:35](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L35)
 
 ___
 
@@ -57,7 +68,7 @@ ___
 
 #### Defined in
 
-index.ts:11
+[index.ts:18](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L18)
 
 ___
 
@@ -67,7 +78,7 @@ ___
 
 #### Defined in
 
-index.ts:12
+[index.ts:19](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L19)
 
 ___
 
@@ -77,7 +88,7 @@ ___
 
 #### Defined in
 
-index.ts:13
+[index.ts:20](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L20)
 
 ___
 
@@ -87,7 +98,7 @@ ___
 
 #### Defined in
 
-index.ts:14
+[index.ts:21](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L21)
 
 ___
 
@@ -97,7 +108,7 @@ ___
 
 #### Defined in
 
-index.ts:15
+[index.ts:22](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L22)
 
 ___
 
@@ -107,7 +118,7 @@ ___
 
 #### Defined in
 
-index.ts:16
+[index.ts:23](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L23)
 
 ___
 
@@ -117,7 +128,7 @@ ___
 
 #### Defined in
 
-index.ts:17
+[index.ts:24](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L24)
 
 ___
 
@@ -127,7 +138,7 @@ ___
 
 #### Defined in
 
-index.ts:18
+[index.ts:25](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L25)
 
 ___
 
@@ -137,7 +148,7 @@ ___
 
 #### Defined in
 
-index.ts:19
+[index.ts:26](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L26)
 
 ___
 
@@ -147,7 +158,7 @@ ___
 
 #### Defined in
 
-index.ts:20
+[index.ts:27](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L27)
 
 ___
 
@@ -157,7 +168,7 @@ ___
 
 #### Defined in
 
-index.ts:21
+[index.ts:28](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L28)
 
 ___
 
@@ -167,7 +178,7 @@ ___
 
 #### Defined in
 
-index.ts:28
+[index.ts:35](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L35)
 
 ___
 
@@ -177,7 +188,7 @@ ___
 
 #### Defined in
 
-index.ts:22
+[index.ts:29](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L29)
 
 ___
 
@@ -187,7 +198,7 @@ ___
 
 #### Defined in
 
-index.ts:23
+[index.ts:30](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L30)
 
 ___
 
@@ -197,7 +208,7 @@ ___
 
 #### Defined in
 
-index.ts:24
+[index.ts:31](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L31)
 
 ___
 
@@ -207,4 +218,4 @@ ___
 
 #### Defined in
 
-index.ts:25
+[index.ts:32](https://github.com/iniquitybbs/iniquity/blob/68eb87e/packages/core/src/index.ts#L32)
