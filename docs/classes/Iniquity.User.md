@@ -2,7 +2,9 @@
 
 [Iniquity](../modules/Iniquity.md).User
 
-Core user management functionality
+User
+
+**`summary`** Some basic user utils. More to follow.
 
 ## Table of contents
 
@@ -32,7 +34,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[iniquity.ts:339](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L339)
+[iniquity.ts:341](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L341)
 
 ## Properties
 
@@ -42,7 +44,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[iniquity.ts:332](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L332)
+[iniquity.ts:334](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L334)
 
 ___
 
@@ -52,7 +54,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:330](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L330)
+[iniquity.ts:332](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L332)
 
 ___
 
@@ -62,4 +64,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:331](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L331)
+[iniquity.ts:333](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L333)

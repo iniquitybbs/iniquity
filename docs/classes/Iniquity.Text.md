@@ -2,7 +2,9 @@
 
 [Iniquity](../modules/Iniquity.md).Text
 
-Core text file display and manipulation capabilities
+Text
+
+**`summary`** Core text file display and manipulation capabilities
 
 ## Table of contents
 

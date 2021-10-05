@@ -344,7 +344,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n```typescript\nimport { Artwork } from \"@iniquitybbs/core\"\n\nconst art = new Artwork({ filename: \"./path/to/file.ans\"})\nart.render().pause()\n\n```\n"
+								"text": "\n```typescript\nimport { Artwork } from \"@iniquitybbs/core\"\n\nconst art = new Artwork({ filename: \"./path/to/file.ans\"})\n\nart.render({ speed: 50}).pause()\n\nart.render({ mode: \"line\", clearScreenBefore: true }).colorReset().pause()\n\n```\n"
 							}
 						]
 					},
@@ -358,7 +358,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 374,
+									"line": 379,
 									"character": 4
 								}
 							],
@@ -371,7 +371,13 @@
 									"flags": {},
 									"comment": {
 										"shortText": "The Iniquity Artwork rendering class",
-										"returns": "An instance of Artwork\n"
+										"returns": "An instance of Artwork\n",
+										"tags": [
+											{
+												"tag": "see",
+												"text": "{@link IArtworkOptions}"
+											}
+										]
 									},
 									"parameters": [
 										{
@@ -409,7 +415,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 363,
+									"line": 369,
 									"character": 11
 								}
 							],
@@ -429,7 +435,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 364,
+									"line": 370,
 									"character": 11
 								}
 							],
@@ -447,7 +453,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 386,
+									"line": 399,
 									"character": 4
 								}
 							],
@@ -459,12 +465,20 @@
 									"kindString": "Call signature",
 									"flags": {},
 									"comment": {
-										"shortText": "Render a ANSI/ASCII/PETSCII file to the screen",
-										"returns": "Will render the artwork on the screen as well as provide various render functions.\n",
+										"shortText": "Render",
+										"returns": "Will render the artwork on the screen as well as provide various render functions.",
 										"tags": [
+											{
+												"tag": "summary",
+												"text": "Display ANSI/ASCII/PETSCII text files onto the screen"
+											},
 											{
 												"tag": "see",
 												"text": "{@link IArtworkRenderOptions}"
+											},
+											{
+												"tag": "example",
+												"text": "\n```typescript\nimport { Artwork } from \"@iniquitybbs/core\"\n\nconst art = new Artwork()\nart.render({ mode: \"line\", speed: 100 }).clearScreen().pause()\n```\n"
 											}
 										]
 									},
@@ -523,7 +537,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity.ts",
-							"line": 362,
+							"line": 368,
 							"character": 13
 						}
 					]
@@ -1340,7 +1354,13 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Core networking possibilities"
+						"shortText": "Network",
+						"tags": [
+							{
+								"tag": "summary",
+								"text": "I can't wait to get started on this!\n"
+							}
+						]
 					},
 					"children": [
 						{
@@ -1377,7 +1397,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity.ts",
-							"line": 324,
+							"line": 325,
 							"character": 13
 						}
 					]
@@ -1389,7 +1409,13 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Core text file display and manipulation capabilities"
+						"shortText": "Text",
+						"tags": [
+							{
+								"tag": "summary",
+								"text": "Core text file display and manipulation capabilities\n"
+							}
+						]
 					},
 					"children": [
 						{
@@ -1426,7 +1452,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity.ts",
-							"line": 348,
+							"line": 351,
 							"character": 13
 						}
 					]
@@ -1438,7 +1464,13 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Core user management functionality"
+						"shortText": "User",
+						"tags": [
+							{
+								"tag": "summary",
+								"text": "Some basic user utils. More to follow.\n"
+							}
+						]
 					},
 					"children": [
 						{
@@ -1450,7 +1482,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 339,
+									"line": 341,
 									"character": 4
 								}
 							],
@@ -1497,7 +1529,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 332,
+									"line": 334,
 									"character": 11
 								}
 							],
@@ -1518,7 +1550,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 330,
+									"line": 332,
 									"character": 11
 								}
 							],
@@ -1539,7 +1571,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 331,
+									"line": 333,
 									"character": 11
 								}
 							],
@@ -1571,7 +1603,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity.ts",
-							"line": 329,
+							"line": 331,
 							"character": 13
 						}
 					]

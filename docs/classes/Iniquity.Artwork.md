@@ -11,7 +11,10 @@ Iniquity Core Artwork
 import { Artwork } from "@iniquitybbs/core"
 
 const art = new Artwork({ filename: "./path/to/file.ans"})
-art.render().pause()
+
+art.render({ speed: 50}).pause()
+
+art.render({ mode: "line", clearScreenBefore: true }).colorReset().pause()
 
 ```
 
@@ -38,6 +41,8 @@ art.render().pause()
 
 The Iniquity Artwork rendering class
 
+**`see`** [IArtworkOptions](../interfaces/Iniquity.IArtworkOptions.md)
+
 #### Parameters
 
 | Name | Type | Description |
@@ -46,7 +51,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[iniquity.ts:374](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L374)
+[iniquity.ts:379](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L379)
 
 ## Properties
 
@@ -56,7 +61,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[iniquity.ts:363](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L363)
+[iniquity.ts:369](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L369)
 
 ___
 
@@ -66,7 +71,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:364](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L364)
+[iniquity.ts:370](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L370)
 
 ## Methods
 
@@ -74,9 +79,19 @@ ___
 
 ▸ **render**(`options?`): [`IArtworkRenderFunctions`](../interfaces/Iniquity.IArtworkRenderFunctions.md)
 
-Render a ANSI/ASCII/PETSCII file to the screen
+Render
+
+**`summary`** Display ANSI/ASCII/PETSCII text files onto the screen
 
 **`see`** [IArtworkRenderOptions](../interfaces/Iniquity.IArtworkRenderOptions.md)
+
+**`example`**
+```typescript
+import { Artwork } from "@iniquitybbs/core"
+
+const art = new Artwork()
+art.render({ mode: "line", speed: 100 }).clearScreen().pause()
+```
 
 #### Parameters
 
@@ -92,4 +107,4 @@ Will render the artwork on the screen as well as provide various render function
 
 #### Defined in
 
-[iniquity.ts:386](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L386)
+[iniquity.ts:399](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L399)

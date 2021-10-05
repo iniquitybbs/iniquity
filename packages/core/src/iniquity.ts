@@ -319,12 +319,14 @@ export class Menu {
 export class Group {}
 
 /**
- * Core networking possibilities
+ * Network
+ * @summary I can't wait to get started on this!
  */
 export class Network {}
 
 /**
- * Core user management functionality
+ * User
+ * @summary Some basic user utils. More to follow.
  */
 export class User {
     public name: string = ""
@@ -343,7 +345,8 @@ export class User {
 }
 
 /**
- * Core text file display and manipulation capabilities
+ * Text
+ * @summary Core text file display and manipulation capabilities
  */
 export class Text {}
 
@@ -355,7 +358,10 @@ export class Text {}
  * import { Artwork } from "@iniquitybbs/core"
  *
  * const art = new Artwork({ filename: "./path/to/file.ans"})
- * art.render().pause()
+ *
+ * art.render({ speed: 50}).pause()
+ *
+ * art.render({ mode: "line", clearScreenBefore: true }).colorReset().pause()
  *
  * ```
  */
@@ -367,8 +373,7 @@ export class Artwork {
     /**
      * The Iniquity Artwork rendering class
      * @param {IArtworkOptions} options An object containing the various configuration properties.
-     * @param {string} options.basepath The base path to where the assets are located
-     * @param {string} options.filename The name of the specific asset to display
+     * @see {@link IArtworkOptions}
      * @returns {Artwork} An instance of Artwork
      */
     constructor(options: IArtworkOptions) {
@@ -377,10 +382,18 @@ export class Artwork {
     }
 
     /**
-     * Render a ANSI/ASCII/PETSCII file to the screen
+     * Render
+     * @summary Display ANSI/ASCII/PETSCII text files onto the screen
      * @param {IArtworkRenderOptions} options An object containing the various configuration parameters.
      * @see {@link IArtworkRenderOptions}
      * @returns {IArtworkRenderFunctions} Will render the artwork on the screen as well as provide various render functions.
+     * @example
+     * ```typescript
+     * import { Artwork } from "@iniquitybbs/core"
+     *
+     * const art = new Artwork()
+     * art.render({ mode: "line", speed: 100 }).clearScreen().pause()
+     * ```
      */
 
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {

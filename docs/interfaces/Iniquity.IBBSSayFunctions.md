@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[iniquity.ts:110](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L110)
+[iniquity.ts:110](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L110)

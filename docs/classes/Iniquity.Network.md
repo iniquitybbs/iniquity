@@ -2,7 +2,9 @@
 
 [Iniquity](../modules/Iniquity.md).Network
 
-Core networking possibilities
+Network
+
+**`summary`** I can't wait to get started on this!
 
 ## Table of contents
 
