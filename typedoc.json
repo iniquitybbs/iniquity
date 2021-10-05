@@ -1,6 +1,7 @@
 {
     "out": "docs",
     "readme": "README.md",
+    "hideBreadcrumbs": true,
     "name": "Documentation",
     "defaultCategory": "Classes",
     "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**", "**/rollup.config.ts"],

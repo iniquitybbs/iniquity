@@ -1,5 +1,3 @@
-[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IArtworkRenderFunctions
-
 # Interface: IArtworkRenderFunctions
 
 [Iniquity](../modules/Iniquity.md).IArtworkRenderFunctions
@@ -31,7 +29,7 @@ Resets the screen color
 
 #### Defined in
 
-[iniquity.ts:99](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L99)
+[iniquity.ts:99](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L99)
 
 ___
 
@@ -53,4 +51,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:95](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L95)
+[iniquity.ts:95](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L95)

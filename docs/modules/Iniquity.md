@@ -1,5 +1,3 @@
-[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / Iniquity
-
 # Module: Iniquity
 
 Iniquity BBS

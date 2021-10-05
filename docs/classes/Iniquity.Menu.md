@@ -1,5 +1,3 @@
-[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / Menu
-
 # Class: Menu
 
 [Iniquity](../modules/Iniquity.md).Menu
@@ -28,7 +26,7 @@
 
 #### Defined in
 
-[iniquity.ts:306](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L306)
+[iniquity.ts:306](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L306)
 
 ## Methods
 
@@ -42,4 +40,4 @@
 
 #### Defined in
 
-[iniquity.ts:311](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L311)
+[iniquity.ts:311](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L311)

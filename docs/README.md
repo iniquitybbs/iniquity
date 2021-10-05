@@ -1,5 +1,3 @@
-Documentation - v3.0.0 / [Developer Guide](modules.md)
-
 # Iniquity
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software.

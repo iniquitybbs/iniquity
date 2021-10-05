@@ -1,5 +1,3 @@
-[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IUserOptions
-
 # Interface: IUserOptions
 
 [Iniquity](../modules/Iniquity.md).IUserOptions
@@ -25,7 +23,7 @@ User options
 
 #### Defined in
 
-[iniquity.ts:82](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L82)
+[iniquity.ts:82](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L82)
 
 ___
 
@@ -35,4 +33,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:83](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L83)
+[iniquity.ts:83](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L83)

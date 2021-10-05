@@ -1,5 +1,3 @@
-[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSSayOptions
-
 # Interface: IBBSSayOptions
 
 [Iniquity](../modules/Iniquity.md).IBBSSayOptions
@@ -18,4 +16,4 @@
 
 #### Defined in
 
-[iniquity.ts:69](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L69)
+[iniquity.ts:69](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L69)

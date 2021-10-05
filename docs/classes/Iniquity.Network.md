@@ -1,5 +1,3 @@
-[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / Network
-
 # Class: Network
 
 [Iniquity](../modules/Iniquity.md).Network
