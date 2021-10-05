@@ -12,7 +12,6 @@
       "master",
       "next"
     ]
-      
   },
   "repository": {
     "type": "git",
@@ -49,5 +48,6 @@
     "semantic-release-monorepo": "^7.0.5",
     "typedoc": "^0.22.5",
     "typedoc-github-wiki-theme": "^0.6.0"
-  }
+  },
+  "version": "0.0.1"
 }
