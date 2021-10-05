@@ -23,13 +23,17 @@ jobs:
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+                  echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: Release
               run: |
                   npm i -g npm@7
                   npm i -g lerna
                   lerna bootstrap
                   lerna run build
-                  lerna publish patch --yes
+                  lerna publish --canary --yes
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
