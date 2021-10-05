@@ -29,7 +29,7 @@ Resets the screen color
 
 #### Defined in
 
-[iniquity.ts:99](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L99)
+[iniquity.ts:99](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L99)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:95](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L95)
+[iniquity.ts:95](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L95)

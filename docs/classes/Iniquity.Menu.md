@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[iniquity.ts:306](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L306)
+[iniquity.ts:306](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L306)
 
 ## Methods
 
@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[iniquity.ts:311](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L311)
+[iniquity.ts:311](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L311)

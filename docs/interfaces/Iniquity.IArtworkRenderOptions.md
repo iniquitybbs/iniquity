@@ -23,7 +23,7 @@ Artwork rendering options
 
 #### Defined in
 
-[iniquity.ts:44](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L44)
+[iniquity.ts:44](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L44)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:49](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L49)
+[iniquity.ts:49](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L49)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:47](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L47)
+[iniquity.ts:47](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L47)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:45](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L45)
+[iniquity.ts:45](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L45)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:48](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L48)
+[iniquity.ts:48](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L48)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:46](https://github.com/iniquitybbs/iniquity/blob/f12cb99/packages/core/src/iniquity.ts#L46)
+[iniquity.ts:46](https://github.com/iniquitybbs/iniquity/blob/3ba3fee/packages/core/src/iniquity.ts#L46)
