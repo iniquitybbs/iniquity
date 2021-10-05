@@ -1,5 +1,3 @@
-[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IArtworkOptions
-
 # Interface: IArtworkOptions
 
 [Iniquity](../modules/Iniquity.md).IArtworkOptions
@@ -19,7 +17,7 @@
 
 #### Defined in
 
-[iniquity.ts:75](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L75)
+[iniquity.ts:75](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L75)
 
 ___
 
@@ -29,4 +27,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:76](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L76)
+[iniquity.ts:76](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L76)

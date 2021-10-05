@@ -1,5 +1,3 @@
-[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / Text
-
 # Class: Text
 
 [Iniquity](../modules/Iniquity.md).Text

@@ -1,5 +1,3 @@
-[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IMenuOptions
-
 # Interface: IMenuOptions
 
 [Iniquity](../modules/Iniquity.md).IMenuOptions
@@ -25,7 +23,7 @@ Menu options
 
 #### Defined in
 
-[iniquity.ts:126](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L126)
+[iniquity.ts:126](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L126)
 
 ___
 
@@ -35,4 +33,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:127](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L127)
+[iniquity.ts:127](https://github.com/iniquitybbs/iniquity/blob/eae5032/packages/core/src/iniquity.ts#L127)

@@ -1,5 +1,3 @@
-[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / Iniquity
-
 # Module: Iniquity
 
 The Iniquity Bulletin Board Software

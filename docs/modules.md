@@ -1,5 +1,3 @@
-[Iniquity - v3.0.0](README.md) / Exports
-
 # Iniquity - v3.0.0
 
 ## Table of contents

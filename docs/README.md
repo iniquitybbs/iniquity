@@ -1,5 +1,3 @@
-Iniquity - v3.0.0 / [Exports](modules.md)
-
 # Iniquity
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software.
@@ -74,8 +72,6 @@ npm start
 
 ## Example
 
-This project is designed to be modified using Visual Studio Code. There are recomended settings and plugins for its development that come as part of this repository that Visual Studio Code will make available to you. You should install all of these plugins! The main directory you will work out of is your app/ directory. This is where your BBS logic exists. You can safely ignore all directories outside of the app/ directory for now.
-
 ```typescript
 const iq = new Iniquity({ basepath: "/iniquity/core/assets/" })
 
@@ -120,16 +116,16 @@ switch (login) {
 }
 ```
 
+[Want to learn more? Read the docs!](https://iniquitybbs.org/modules/Iniquity.html)
+
 ## Discord
 
-![Discord](https://img.shields.io/discord/499484963587096597?label=Iniquity%20Discord%20Server&style=for-the-badge)
-
-[Iniquity Discord Server](https://discord.gg/UsyvrSZ)
+[Join us on Discord.](https://discord.gg/UsyvrSZ)
 
 ## Issues
 
-[Iniquity Feedback, Ideas, Bugs](https://github.com/iniquitybbs/iniquity/issues)
+[Share your ideas, feedback and bug reports.](https://github.com/iniquitybbs/iniquity/issues)
 
 ## Documentation
 
-[Iniquity Documentation](https://iniquitybbs.org/modules.html)
+[Read the Iniquity documentation.](https://iniquitybbs.org/modules.html)
