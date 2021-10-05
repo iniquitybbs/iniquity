@@ -1,7 +1,7 @@
 /**
- * Iniquity Archives
+ * Iniquity Archive
  * @summary A growing collection of all things Iniquity. Past and present. For use in helping build your bbs.
- * @module Archives
+ * @module Archive
  * @example
  * ```typescript
  * import { Iniquity } from "@iniquitybbs/core"
@@ -63,7 +63,7 @@ export interface IQCoreAssetsOptions {
  * Iniquity Archives
  * @summary What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCII/GIF/JPEG whatever files.
  */
-export class Archives {
+export class Archive {
     constructor(options?: IQCoreAssetsOptions) {}
 
     public load() {}
