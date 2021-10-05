@@ -24,7 +24,7 @@ jobs:
                   npm i -g npm@7
                   npm i -g lerna
                   lerna bootstrap
-                  lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo
+                  lerna changed
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
