@@ -1,6 +1,6 @@
 {
   "name": "@iniquitybbs/archives",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "Where all the old Iniquity stuff lives. Maybe we can use some of it?",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.org",
@@ -26,9 +26,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.2.5",
-    "@rollup/plugin-multi-entry": "^4.1.0",
     "@types/yargs": "^17.0.3",
     "rollup": "^2.58.0",
     "typescript": "^4.4.3"

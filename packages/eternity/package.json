@@ -1,6 +1,6 @@
 {
   "name": "@iniquitybbs/eternity",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "An attempt at recreating the original Iniquity demo board.",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.org",
@@ -25,8 +25,8 @@
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
   "devDependencies": {
-    "@iniquitybbs/archives": "^3.0.8",
-    "@iniquitybbs/core": "^3.0.8",
+    "@iniquitybbs/archives": "^3.0.9",
+    "@iniquitybbs/core": "^3.0.9",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
