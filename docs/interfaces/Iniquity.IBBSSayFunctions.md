@@ -1,3 +1,5 @@
+[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSSayFunctions
+
 # Interface: IBBSSayFunctions
 
 [Iniquity](../modules/Iniquity.md).IBBSSayFunctions
@@ -26,4 +28,4 @@
 
 #### Defined in
 
-[iniquity.ts:110](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L110)
+[iniquity.ts:110](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L110)

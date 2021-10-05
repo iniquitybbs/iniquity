@@ -1,3 +1,5 @@
+[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / User
+
 # Class: User
 
 [Iniquity](../modules/Iniquity.md).User
@@ -34,7 +36,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[iniquity.ts:341](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L341)
+[iniquity.ts:341](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L341)
 
 ## Properties
 
@@ -44,7 +46,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[iniquity.ts:334](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L334)
+[iniquity.ts:334](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L334)
 
 ___
 
@@ -54,7 +56,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:332](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L332)
+[iniquity.ts:332](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L332)
 
 ___
 
@@ -64,4 +66,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:333](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L333)
+[iniquity.ts:333](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L333)

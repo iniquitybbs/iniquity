@@ -1,3 +1,5 @@
+[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Assets](../modules/Assets.md) / Assets2
+
 # Class: Assets2
 
 [Assets](../modules/Assets.md).Assets2
@@ -30,7 +32,7 @@ Assets2
 
 #### Defined in
 
-[assets.ts:66](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/assets.ts#L66)
+[assets.ts:66](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/assets.ts#L66)
 
 ## Methods
 
@@ -44,4 +46,4 @@ Assets2
 
 #### Defined in
 
-[assets.ts:68](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/assets.ts#L68)
+[assets.ts:68](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/assets.ts#L68)

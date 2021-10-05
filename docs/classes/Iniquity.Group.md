@@ -1,3 +1,5 @@
+[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / Group
+
 # Class: Group
 
 [Iniquity](../modules/Iniquity.md).Group

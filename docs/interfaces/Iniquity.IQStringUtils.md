@@ -1,3 +1,5 @@
+[Iniquity - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IQStringUtils
+
 # Interface: IQStringUtils
 
 [Iniquity](../modules/Iniquity.md).IQStringUtils
@@ -38,7 +40,7 @@ Iniquity bbs string operations
 
 #### Defined in
 
-[iniquity.ts:65](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L65)
+[iniquity.ts:65](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L65)
 
 ___
 
@@ -48,7 +50,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:63](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L63)
+[iniquity.ts:63](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L63)
 
 ___
 
@@ -58,4 +60,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:64](https://github.com/iniquitybbs/iniquity/blob/c906f17/packages/core/src/iniquity.ts#L64)
+[iniquity.ts:64](https://github.com/iniquitybbs/iniquity/blob/015f263/packages/core/src/iniquity.ts#L64)
