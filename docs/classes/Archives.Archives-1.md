@@ -30,7 +30,7 @@ Iniquity Archives
 
 #### Defined in
 
-archive/src/index.ts:67
+[archive/src/index.ts:67](https://github.com/iniquitybbs/iniquity/blob/f0fbc7c/packages/archive/src/index.ts#L67)
 
 ## Methods
 
@@ -44,4 +44,4 @@ archive/src/index.ts:67
 
 #### Defined in
 
-archive/src/index.ts:69
+[archive/src/index.ts:69](https://github.com/iniquitybbs/iniquity/blob/f0fbc7c/packages/archive/src/index.ts#L69)
