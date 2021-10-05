@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/29930b0/packages/core/src/iniquity.ts#L145)
+[iniquity.ts:145](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L145)

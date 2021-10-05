@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[iniquity.ts:114](https://github.com/iniquitybbs/iniquity/blob/29930b0/packages/core/src/iniquity.ts#L114)
+[iniquity.ts:114](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L114)

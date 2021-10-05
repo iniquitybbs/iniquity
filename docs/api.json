@@ -16,7 +16,7 @@
 				"tags": [
 					{
 						"tag": "example",
-						"text": "\n```typescript\nimport { Iniquity } from \"@iniquitybbs/iniquity\"\nimport { Assets } from \"@iniquitybbs/assets\"\n\nconst iq = new Iniquity()\n\nconst welcomeArt = iq.artwork({ basepath: \"./iniquity/bbs/assets\", filename: Assets.sm_iniq2 })\nwelcomeArt.render({ clearScreenBefore: true, speed: 100 })\n\niq.print(\"Iniquity makes it easy to work with text assets like ${welcomeArt.filename}\").pause()\n\niq.hangup()\n```\n"
+						"text": "\n```typescript\nimport { Iniquity } from \"@iniquitybbs/iniquity\"\nimport { Assets } from \"@iniquitybbs/assets\"\n\nconst iq = new Iniquity()\n\nconst welcomeArt = iq.artwork({ basepath: \"./iniquity/bbs/assets\", filename: Assets.sm_iniq2 })\nwelcomeArt.render({ clearScreenBefore: true, speed: 100 })\n\niq.print(`Iniquity comes packed with easy to use assets like ${welcomeArt.filename}`).pause()\n\niq.hangup()\n```\n"
 					}
 				]
 			},

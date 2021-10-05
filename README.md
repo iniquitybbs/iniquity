@@ -81,64 +81,6 @@ This project is designed to be modified using Visual Studio Code. There are reco
 
 Below you'll find some examples of what could be achieved with iniquity right now. It's not much, but it's a start and fun to play with...
 
-#### An example welcome experience for connecting users
-
-```typescript
-const bbs = new Iniquity()
-
-const welcomeArt = bbs.artwork({ filename: "assets/sm!iniq2.ans" })
-welcomeArt.render({ clearScreenBefore: true, speed: 100 })
-
-bbs.say(
-    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk; it's not even finished. But maybe you'll still think it's cool.`
-        .newlines()
-        .color("background red")
-        .center()
-).pause({ colorReset: true, newlines: 2, center: true })
-```
-
-<img src="packages/core/assets/screenshot-1.png">
-
-#### Have it present some larger artwork, and end with prompting the user to pause
-
-```typescript
-bbs.artwork({ filename: "packages/core/assets/we-iniq3.ans" }).render({ clearScreenBefore: false }).pause({ newlines: 2, center: true })
-```
-
-<img src="packages/core/assets/screenshot-2.png">
-
-#### Begin to describe a simple login or new user application process
-
-```typescript
-function loginMenu(): void {
-    bbs.artwork({ filename: "assets/artwork/4d-iniq1.ans" }).render({ speed: 100 })
-    const login = bbs.ask("What is your login: ")
-    switch (login) {
-        case "new":
-        case "signup":
-            bbs.artwork({ filename: "assets/newuser.ans" }).render({ clearScreenBefore: true })
-
-            let newUser = bbs.user({
-                name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
-                password: bbs.ask("And your password?".newlines(2).color("white"))
-            })
-
-            bbs.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
-            loginMenu()
-            break
-        default:
-            if (bbs.user({ name: login, password: bbs.ask("And your password?".newlines(2).color("white")) })) {
-                bbs.say("You exist in the system!")
-            }
-
-            bbs.artwork({ filename: "assets/artwork/4d-iniq1.ans" }).render({ clearScreenBefore: true })
-            break
-    }
-}
-```
-
-<img src="packages/core/assets/screenshot-3.png">
-
 ## Discord
 
 [Iniquity Discord Server](https://discord.gg/UsyvrSZ)

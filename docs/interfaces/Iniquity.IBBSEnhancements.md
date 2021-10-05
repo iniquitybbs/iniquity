@@ -36,7 +36,7 @@ BBS pause options
 
 #### Defined in
 
-[iniquity.ts:62](https://github.com/iniquitybbs/iniquity/blob/29930b0/packages/core/src/iniquity.ts#L62)
+[iniquity.ts:62](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L62)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:60](https://github.com/iniquitybbs/iniquity/blob/29930b0/packages/core/src/iniquity.ts#L60)
+[iniquity.ts:60](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L60)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:61](https://github.com/iniquitybbs/iniquity/blob/29930b0/packages/core/src/iniquity.ts#L61)
+[iniquity.ts:61](https://github.com/iniquitybbs/iniquity/blob/edf0e91/packages/core/src/iniquity.ts#L61)
