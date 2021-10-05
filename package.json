@@ -6,14 +6,18 @@
     "prepublish": "npx typedoc --theme default ./packages && npx rollup -c packages/core/rollup.config.ts",
     "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n system,bundler \"docker-compose up --build\" \"npx rollup -c packages/core/rollup.config.ts --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo"
+    "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo",
+    "semantic-release": "semantic-release"
   },
   "release": {
-    "branches": ["master", "next"]
+    "branches": [
+      "master",
+      "next"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iniquitybbs/iniquity.git"
+    "url": "https://github.com/iniquitybbs/iniquity.git"
   },
   "workspaces": [
     "packages/*"
@@ -42,9 +46,10 @@
     "eslint-plugin-prettier": "^3.1.4",
     "lerna": "^4.0.0",
     "prettier": "2.2.1",
-    "semantic-release": "^17.4.2",
+    "semantic-release": "^18.0.0",
     "semantic-release-monorepo": "^7.0.5",
     "typedoc": "^0.22.5",
     "typedoc-github-wiki-theme": "^0.6.0"
-  }
+  },
+  "version": "0.0.0-development"
 }
