@@ -1,6 +1,6 @@
 # Interface: IQStringUtils
 
-[BBS](../modules/BBS.md).IQStringUtils
+[Iniquity](../modules/Iniquity.md).IQStringUtils
 
 Iniquity bbs string operations
 
@@ -18,17 +18,17 @@ Iniquity bbs string operations
 
 - **`IQStringUtils`**
 
-  ↳ [`IQPauseOptions`](BBS.IQPauseOptions.md)
+  ↳ [`IQPauseOptions`](Iniquity.IQPauseOptions.md)
 
-  ↳ [`IQPrintOptions`](BBS.IQPrintOptions.md)
+  ↳ [`IQPrintOptions`](Iniquity.IQPrintOptions.md)
 
 ## Table of contents
 
 ### Properties
 
-- [center](BBS.IQStringUtils.md#center)
-- [colorReset](BBS.IQStringUtils.md#colorreset)
-- [newlines](BBS.IQStringUtils.md#newlines)
+- [center](Iniquity.IQStringUtils.md#center)
+- [colorReset](Iniquity.IQStringUtils.md#colorreset)
+- [newlines](Iniquity.IQStringUtils.md#newlines)
 
 ## Properties
 
@@ -38,7 +38,7 @@ Iniquity bbs string operations
 
 #### Defined in
 
-[iniquity.ts:65](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L65)
+[iniquity.ts:65](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L65)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:63](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L63)
+[iniquity.ts:63](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L63)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:64](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L64)
+[iniquity.ts:64](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L64)

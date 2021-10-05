@@ -310,7 +310,7 @@
 		},
 		{
 			"id": 15,
-			"name": "BBS",
+			"name": "Iniquity",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
@@ -336,11 +336,15 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Core artwork display and manipulation capabilities",
+						"shortText": "Iniquity Core Artwork",
 						"tags": [
 							{
+								"tag": "summary",
+								"text": "Core artwork display and manipulation capabilities"
+							},
+							{
 								"tag": "example",
-								"text": "\n```typedoc\nimport { Artwork } from \"@iniquitybbs/\"\n```\n"
+								"text": "\n```typescript\nimport { Artwork } from \"@iniquitybbs/core\"\n\nconst art = new Artwork({ filename: \"./path/to/file.ans\"})\nart.render().pause()\n\n```\n"
 							}
 						]
 					},
@@ -354,7 +358,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 369,
+									"line": 374,
 									"character": 4
 								}
 							],
@@ -405,33 +409,13 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 358,
+									"line": 363,
 									"character": 11
 								}
 							],
 							"type": {
 								"type": "intrinsic",
 								"name": "string"
-							}
-						},
-						{
-							"id": 131,
-							"name": "fileHandle",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPrivate": true
-							},
-							"sources": [
-								{
-									"fileName": "iniquity.ts",
-									"line": 360,
-									"character": 12
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
 							}
 						},
 						{
@@ -445,7 +429,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 359,
+									"line": 364,
 									"character": 11
 								}
 							],
@@ -463,7 +447,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity.ts",
-									"line": 381,
+									"line": 386,
 									"character": 4
 								}
 							],
@@ -525,7 +509,6 @@
 							"kind": 1024,
 							"children": [
 								129,
-								131,
 								130
 							]
 						},
@@ -540,7 +523,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity.ts",
-							"line": 357,
+							"line": 362,
 							"character": 13
 						}
 					]
@@ -552,7 +535,7 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "BBS",
+						"shortText": "Iniquity Core BBS",
 						"tags": [
 							{
 								"tag": "summary",

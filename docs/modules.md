@@ -5,4 +5,4 @@
 ### Modules
 
 - [Assets](modules/Assets.md)
-- [BBS](modules/BBS.md)
+- [Iniquity](modules/Iniquity.md)

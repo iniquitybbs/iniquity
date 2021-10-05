@@ -6,6 +6,7 @@
     "defaultCategory": "Classes",
     "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**", "**/rollup.config.ts"],
     "excludeProtected": true,
+    "excludePrivate": true,
     "externalPattern": "app.ts",
     "entryPointStrategy": "expand",
     "json": "docs/api.json",

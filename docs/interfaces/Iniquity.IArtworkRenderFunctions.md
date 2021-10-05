@@ -1,6 +1,6 @@
 # Interface: IArtworkRenderFunctions
 
-[BBS](../modules/BBS.md).IArtworkRenderFunctions
+[Iniquity](../modules/Iniquity.md).IArtworkRenderFunctions
 
 Additional functions exported by render
 
@@ -12,8 +12,8 @@ Additional functions exported by render
 
 ### Methods
 
-- [colorReset](BBS.IArtworkRenderFunctions.md#colorreset)
-- [pause](BBS.IArtworkRenderFunctions.md#pause)
+- [colorReset](Iniquity.IArtworkRenderFunctions.md#colorreset)
+- [pause](Iniquity.IArtworkRenderFunctions.md#pause)
 
 ## Methods
 
@@ -29,7 +29,7 @@ Resets the screen color
 
 #### Defined in
 
-[iniquity.ts:102](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L102)
+[iniquity.ts:102](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L102)
 
 ___
 
@@ -37,13 +37,13 @@ ___
 
 ▸ **pause**(`options?`): `void`
 
-**`see`** [IQPauseOptions](BBS.IQPauseOptions.md)
+**`see`** [IQPauseOptions](Iniquity.IQPauseOptions.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`IQPauseOptions`](BBS.IQPauseOptions.md) |
+| `options?` | [`IQPauseOptions`](Iniquity.IQPauseOptions.md) |
 
 #### Returns
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:98](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L98)
+[iniquity.ts:98](https://github.com/iniquitybbs/iniquity/blob/1e096e6/packages/core/src/iniquity.ts#L98)

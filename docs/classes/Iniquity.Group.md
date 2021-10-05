@@ -1,12 +1,12 @@
 # Class: Group
 
-[BBS](../modules/BBS.md).Group
+[Iniquity](../modules/Iniquity.md).Group
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](BBS.Group.md#constructor)
+- [constructor](Iniquity.Group.md#constructor)
 
 ## Constructors
 

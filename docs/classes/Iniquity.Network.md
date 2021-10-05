@@ -1,6 +1,6 @@
 # Class: Network
 
-[BBS](../modules/BBS.md).Network
+[Iniquity](../modules/Iniquity.md).Network
 
 Core networking possibilities
 
@@ -8,7 +8,7 @@ Core networking possibilities
 
 ### Constructors
 
-- [constructor](BBS.Network.md#constructor)
+- [constructor](Iniquity.Network.md#constructor)
 
 ## Constructors
 

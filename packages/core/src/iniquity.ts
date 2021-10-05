@@ -1,6 +1,6 @@
 /**
  * The Iniquity Bulletin Board Software
- * @module BBS
+ * @module Iniquity
  * @summary This is the Iniquity core bbs library. It's the foundation of any Iniquity application.
  * @example
  * ```typescript
@@ -149,7 +149,7 @@ export interface IIniquityOptions {
 }
 
 /**
- * BBS
+ * Iniquity Core BBS
  * @summary The main class you will use as it wraps all the other classes in a unified API.
  * @example
  * ```typescript
@@ -348,10 +348,15 @@ export class User {
 export class Text {}
 
 /**
- * Core artwork display and manipulation capabilities
+ * Iniquity Core Artwork
+ * @summary Core artwork display and manipulation capabilities
  * @example
- * ```typedoc
- * import { Artwork } from "@iniquitybbs/"
+ * ```typescript
+ * import { Artwork } from "@iniquitybbs/core"
+ *
+ * const art = new Artwork({ filename: "./path/to/file.ans"})
+ * art.render().pause()
+ *
  * ```
  */
 export class Artwork {

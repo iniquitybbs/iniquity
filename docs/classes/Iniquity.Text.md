@@ -1,6 +1,6 @@
 # Class: Text
 
-[BBS](../modules/BBS.md).Text
+[Iniquity](../modules/Iniquity.md).Text
 
 Core text file display and manipulation capabilities
 
@@ -8,7 +8,7 @@ Core text file display and manipulation capabilities
 
 ### Constructors
 
-- [constructor](BBS.Text.md#constructor)
+- [constructor](Iniquity.Text.md#constructor)
 
 ## Constructors
 
