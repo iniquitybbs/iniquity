@@ -5,22 +5,12 @@
   "scripts": {
     "prepublish": "npx typedoc --theme default ./packages && npx rollup -c packages/core/rollup.config.ts",
     "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n system,bundler \"docker-compose up --build\" \"npx rollup -c packages/core/rollup.config.ts --watch\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "semantic-release": "semantic-release"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "release": {
     "branches": [
       "master",
       "next"
-    ],
-    "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
-        ["@semantic-release/git", {
-        "assets": ["dist/**/*.{js,css}", "docs", "package.json"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }]
     ]
       
   },
