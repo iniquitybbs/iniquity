@@ -32,7 +32,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[iniquity.ts:339](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L339)
+[iniquity.ts:339](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L339)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[iniquity.ts:332](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L332)
+[iniquity.ts:332](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L332)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:330](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L330)
+[iniquity.ts:330](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L330)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:331](https://github.com/iniquitybbs/iniquity/blob/3c8f3dc/packages/core/src/iniquity.ts#L331)
+[iniquity.ts:331](https://github.com/iniquitybbs/iniquity/blob/fe27628/packages/core/src/iniquity.ts#L331)

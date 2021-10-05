@@ -19,10 +19,6 @@ mybbs.disconnect()
 
 ## Table of contents
 
-### References
-
-- [default](BBS.md#default)
-
 ### Classes
 
 - [Artwork](../classes/BBS.Artwork.md)
@@ -50,9 +46,3 @@ mybbs.disconnect()
 - [IQPrintOptions](../interfaces/BBS.IQPrintOptions.md)
 - [IQStringUtils](../interfaces/BBS.IQStringUtils.md)
 - [IUserOptions](../interfaces/BBS.IUserOptions.md)
-
-## References
-
-### default
-
-• **default**: `Object`

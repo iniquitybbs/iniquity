@@ -1,4 +1,4 @@
-import BBS from "./iniquity"
+import { BBS } from "./iniquity"
 import { Directory as textfiles } from "./assets"
 
 /*

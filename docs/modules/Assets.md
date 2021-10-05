@@ -19,10 +19,6 @@ iq.hangup()
 
 ## Table of contents
 
-### References
-
-- [default](Assets.md#default)
-
 ### Enumerations
 
 - [Directory](../enums/Assets.Directory.md)
@@ -34,9 +30,3 @@ iq.hangup()
 ### Interfaces
 
 - [IQCoreAssetsOptions](../interfaces/Assets.IQCoreAssetsOptions.md)
-
-## References
-
-### default
-
-• **default**: `Object`

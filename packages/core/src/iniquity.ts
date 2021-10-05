@@ -627,5 +627,3 @@ interface ISBBSBbs {
     logoff: any
     hangup: any
 }
-
-export default BBS

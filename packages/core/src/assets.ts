@@ -67,5 +67,3 @@ export class Assets2 {
 
     public load() {}
 }
-
-export default Assets2

@@ -23,14 +23,6 @@
 			"originalName": "core/src/assets",
 			"children": [
 				{
-					"id": 15,
-					"name": "default",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 9
-				},
-				{
 					"id": 2,
 					"name": "Directory",
 					"kind": 8,
@@ -287,13 +279,6 @@
 			],
 			"groups": [
 				{
-					"title": "References",
-					"kind": 16777216,
-					"children": [
-						15
-					]
-				},
-				{
 					"title": "Enumerations",
 					"kind": 8,
 					"children": [
@@ -324,7 +309,7 @@
 			]
 		},
 		{
-			"id": 16,
+			"id": 15,
 			"name": "BBS",
 			"kind": 2,
 			"kindString": "Module",
@@ -345,15 +330,7 @@
 			"originalName": "core/src/iniquity",
 			"children": [
 				{
-					"id": 136,
-					"name": "default",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 72
-				},
-				{
-					"id": 126,
+					"id": 125,
 					"name": "Artwork",
 					"kind": 128,
 					"kindString": "Class",
@@ -369,7 +346,7 @@
 					},
 					"children": [
 						{
-							"id": 127,
+							"id": 126,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -383,7 +360,7 @@
 							],
 							"signatures": [
 								{
-									"id": 128,
+									"id": 127,
 									"name": "new Artwork",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -394,7 +371,7 @@
 									},
 									"parameters": [
 										{
-											"id": 129,
+											"id": 128,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -404,21 +381,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 39,
+												"id": 38,
 												"name": "IArtworkOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 126,
+										"id": 125,
 										"name": "Artwork"
 									}
 								}
 							]
 						},
 						{
-							"id": 130,
+							"id": 129,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -438,7 +415,7 @@
 							}
 						},
 						{
-							"id": 132,
+							"id": 131,
 							"name": "fileHandle",
 							"kind": 1024,
 							"kindString": "Property",
@@ -458,7 +435,7 @@
 							}
 						},
 						{
-							"id": 131,
+							"id": 130,
 							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
@@ -478,7 +455,7 @@
 							}
 						},
 						{
-							"id": 133,
+							"id": 132,
 							"name": "render",
 							"kind": 2048,
 							"kindString": "Method",
@@ -492,7 +469,7 @@
 							],
 							"signatures": [
 								{
-									"id": 134,
+									"id": 133,
 									"name": "render",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -509,7 +486,7 @@
 									},
 									"parameters": [
 										{
-											"id": 135,
+											"id": 134,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -521,14 +498,14 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 17,
+												"id": 16,
 												"name": "IArtworkRenderOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 45,
+										"id": 44,
 										"name": "IArtworkRenderFunctions"
 									}
 								}
@@ -540,23 +517,23 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								127
+								126
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								130,
-								132,
-								131
+								129,
+								131,
+								130
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								133
+								132
 							]
 						}
 					],
@@ -569,7 +546,7 @@
 					]
 				},
 				{
-					"id": 72,
+					"id": 71,
 					"name": "BBS",
 					"kind": 128,
 					"kindString": "Class",
@@ -589,7 +566,7 @@
 					},
 					"children": [
 						{
-							"id": 73,
+							"id": 72,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -603,7 +580,7 @@
 							],
 							"signatures": [
 								{
-									"id": 74,
+									"id": 73,
 									"name": "new BBS",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -619,7 +596,7 @@
 									},
 									"parameters": [
 										{
-											"id": 75,
+											"id": 74,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -631,21 +608,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 70,
+												"id": 69,
 												"name": "IIniquityOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 72,
+										"id": 71,
 										"name": "BBS"
 									}
 								}
 							]
 						},
 						{
-							"id": 76,
+							"id": 75,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -665,7 +642,7 @@
 							}
 						},
 						{
-							"id": 77,
+							"id": 76,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -685,7 +662,7 @@
 							}
 						},
 						{
-							"id": 98,
+							"id": 97,
 							"name": "artwork",
 							"kind": 2048,
 							"kindString": "Method",
@@ -701,7 +678,7 @@
 							],
 							"signatures": [
 								{
-									"id": 99,
+									"id": 98,
 									"name": "artwork",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -722,7 +699,7 @@
 									},
 									"parameters": [
 										{
-											"id": 100,
+											"id": 99,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -732,21 +709,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 39,
+												"id": 38,
 												"name": "IArtworkOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 126,
+										"id": 125,
 										"name": "Artwork"
 									}
 								}
 							]
 						},
 						{
-							"id": 90,
+							"id": 89,
 							"name": "ask",
 							"kind": 2048,
 							"kindString": "Method",
@@ -762,7 +739,7 @@
 							],
 							"signatures": [
 								{
-									"id": 91,
+									"id": 90,
 									"name": "ask",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -773,7 +750,7 @@
 									},
 									"parameters": [
 										{
-											"id": 92,
+											"id": 91,
 											"name": "question",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -793,7 +770,7 @@
 							]
 						},
 						{
-							"id": 93,
+							"id": 92,
 							"name": "disconnect",
 							"kind": 2048,
 							"kindString": "Method",
@@ -809,7 +786,7 @@
 							],
 							"signatures": [
 								{
-									"id": 94,
+									"id": 93,
 									"name": "disconnect",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -826,7 +803,7 @@
 							]
 						},
 						{
-							"id": 101,
+							"id": 100,
 							"name": "menu",
 							"kind": 2048,
 							"kindString": "Method",
@@ -842,7 +819,7 @@
 							],
 							"signatures": [
 								{
-									"id": 102,
+									"id": 101,
 									"name": "menu",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -853,7 +830,7 @@
 									},
 									"parameters": [
 										{
-											"id": 103,
+											"id": 102,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -863,21 +840,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 59,
+												"id": 58,
 												"name": "IMenuOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 104,
+										"id": 103,
 										"name": "Menu"
 									}
 								}
 							]
 						},
 						{
-							"id": 84,
+							"id": 83,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
@@ -893,7 +870,7 @@
 							],
 							"signatures": [
 								{
-									"id": 85,
+									"id": 84,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -913,7 +890,7 @@
 									},
 									"parameters": [
 										{
-											"id": 86,
+											"id": 85,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -922,7 +899,7 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 28,
+												"id": 27,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -935,7 +912,7 @@
 							]
 						},
 						{
-							"id": 81,
+							"id": 80,
 							"name": "print",
 							"kind": 2048,
 							"kindString": "Method",
@@ -951,7 +928,7 @@
 							],
 							"signatures": [
 								{
-									"id": 82,
+									"id": 81,
 									"name": "print",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -971,7 +948,7 @@
 									},
 									"parameters": [
 										{
-											"id": 83,
+											"id": 82,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -988,7 +965,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 32,
+														"id": 31,
 														"name": "IQPrintOptions"
 													}
 												]
@@ -997,14 +974,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 55,
+										"id": 54,
 										"name": "IBBSPrintFunctions"
 									}
 								}
 							]
 						},
 						{
-							"id": 78,
+							"id": 77,
 							"name": "say",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1020,7 +997,7 @@
 							],
 							"signatures": [
 								{
-									"id": 79,
+									"id": 78,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1040,7 +1017,7 @@
 									},
 									"parameters": [
 										{
-											"id": 80,
+											"id": 79,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1057,7 +1034,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 37,
+														"id": 36,
 														"name": "IBBSSayOptions"
 													}
 												]
@@ -1066,14 +1043,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 51,
+										"id": 50,
 										"name": "IBBSSayFunctions"
 									}
 								}
 							]
 						},
 						{
-							"id": 87,
+							"id": 86,
 							"name": "sleep",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1089,7 +1066,7 @@
 							],
 							"signatures": [
 								{
-									"id": 88,
+									"id": 87,
 									"name": "sleep",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1100,7 +1077,7 @@
 									},
 									"parameters": [
 										{
-											"id": 89,
+											"id": 88,
 											"name": "speed",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1122,7 +1099,7 @@
 							]
 						},
 						{
-							"id": 95,
+							"id": 94,
 							"name": "user",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1138,7 +1115,7 @@
 							],
 							"signatures": [
 								{
-									"id": 96,
+									"id": 95,
 									"name": "user",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1159,7 +1136,7 @@
 									},
 									"parameters": [
 										{
-											"id": 97,
+											"id": 96,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1169,14 +1146,14 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 42,
+												"id": 41,
 												"name": "IUserOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 116,
+										"id": 115,
 										"name": "User"
 									}
 								}
@@ -1188,30 +1165,30 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								73
+								72
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								76,
-								77
+								75,
+								76
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								98,
-								90,
-								93,
-								101,
-								84,
-								81,
-								78,
-								87,
-								95
+								97,
+								89,
+								92,
+								100,
+								83,
+								80,
+								77,
+								86,
+								94
 							]
 						}
 					],
@@ -1224,28 +1201,28 @@
 					]
 				},
 				{
-					"id": 110,
+					"id": 109,
 					"name": "Group",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"children": [
 						{
-							"id": 111,
+							"id": 110,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 112,
+									"id": 111,
 									"name": "new Group",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 110,
+										"id": 109,
 										"name": "Group"
 									}
 								}
@@ -1257,7 +1234,7 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								111
+								110
 							]
 						}
 					],
@@ -1270,14 +1247,14 @@
 					]
 				},
 				{
-					"id": 104,
+					"id": 103,
 					"name": "Menu",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"children": [
 						{
-							"id": 105,
+							"id": 104,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -1291,35 +1268,35 @@
 							],
 							"signatures": [
 								{
-									"id": 106,
+									"id": 105,
 									"name": "new Menu",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 107,
+											"id": 106,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 59,
+												"id": 58,
 												"name": "IMenuOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 104,
+										"id": 103,
 										"name": "Menu"
 									}
 								}
 							]
 						},
 						{
-							"id": 108,
+							"id": 107,
 							"name": "prompt",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1335,7 +1312,7 @@
 							],
 							"signatures": [
 								{
-									"id": 109,
+									"id": 108,
 									"name": "prompt",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1354,14 +1331,14 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								105
+								104
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								108
+								107
 							]
 						}
 					],
@@ -1374,7 +1351,7 @@
 					]
 				},
 				{
-					"id": 113,
+					"id": 112,
 					"name": "Network",
 					"kind": 128,
 					"kindString": "Class",
@@ -1384,21 +1361,21 @@
 					},
 					"children": [
 						{
-							"id": 114,
+							"id": 113,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 115,
+									"id": 114,
 									"name": "new Network",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 113,
+										"id": 112,
 										"name": "Network"
 									}
 								}
@@ -1410,7 +1387,7 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								114
+								113
 							]
 						}
 					],
@@ -1423,7 +1400,7 @@
 					]
 				},
 				{
-					"id": 123,
+					"id": 122,
 					"name": "Text",
 					"kind": 128,
 					"kindString": "Class",
@@ -1433,21 +1410,21 @@
 					},
 					"children": [
 						{
-							"id": 124,
+							"id": 123,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 125,
+									"id": 124,
 									"name": "new Text",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 123,
+										"id": 122,
 										"name": "Text"
 									}
 								}
@@ -1459,7 +1436,7 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								124
+								123
 							]
 						}
 					],
@@ -1472,7 +1449,7 @@
 					]
 				},
 				{
-					"id": 116,
+					"id": 115,
 					"name": "User",
 					"kind": 128,
 					"kindString": "Class",
@@ -1482,7 +1459,7 @@
 					},
 					"children": [
 						{
-							"id": 117,
+							"id": 116,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -1496,7 +1473,7 @@
 							],
 							"signatures": [
 								{
-									"id": 118,
+									"id": 117,
 									"name": "new User",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -1506,28 +1483,28 @@
 									},
 									"parameters": [
 										{
-											"id": 119,
+											"id": 118,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 42,
+												"id": 41,
 												"name": "IUserOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 116,
+										"id": 115,
 										"name": "User"
 									}
 								}
 							]
 						},
 						{
-							"id": 122,
+							"id": 121,
 							"name": "logins",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1548,7 +1525,7 @@
 							"defaultValue": "0"
 						},
 						{
-							"id": 120,
+							"id": 119,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1569,7 +1546,7 @@
 							"defaultValue": "\"\""
 						},
 						{
-							"id": 121,
+							"id": 120,
 							"name": "password",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1595,16 +1572,16 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								117
+								116
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								122,
-								120,
-								121
+								121,
+								119,
+								120
 							]
 						}
 					],
@@ -1617,14 +1594,14 @@
 					]
 				},
 				{
-					"id": 39,
+					"id": 38,
 					"name": "IArtworkOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 40,
+							"id": 39,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1644,7 +1621,7 @@
 							}
 						},
 						{
-							"id": 41,
+							"id": 40,
 							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1667,8 +1644,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								40,
-								41
+								39,
+								40
 							]
 						}
 					],
@@ -1681,7 +1658,7 @@
 					]
 				},
 				{
-					"id": 45,
+					"id": 44,
 					"name": "IArtworkRenderFunctions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1701,14 +1678,14 @@
 					},
 					"children": [
 						{
-							"id": 49,
+							"id": 48,
 							"name": "colorReset",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 50,
+									"id": 49,
 									"name": "colorReset",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1724,14 +1701,14 @@
 							]
 						},
 						{
-							"id": 46,
+							"id": 45,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 47,
+									"id": 46,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1746,7 +1723,7 @@
 									},
 									"parameters": [
 										{
-											"id": 48,
+											"id": 47,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1756,7 +1733,7 @@
 											"comment": {},
 											"type": {
 												"type": "reference",
-												"id": 28,
+												"id": 27,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -1774,8 +1751,8 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								49,
-								46
+								48,
+								45
 							]
 						}
 					],
@@ -1788,7 +1765,7 @@
 					]
 				},
 				{
-					"id": 17,
+					"id": 16,
 					"name": "IArtworkRenderOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1798,7 +1775,7 @@
 					},
 					"children": [
 						{
-							"id": 18,
+							"id": 17,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1818,7 +1795,7 @@
 							}
 						},
 						{
-							"id": 23,
+							"id": 22,
 							"name": "clearScreenBefore",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1838,7 +1815,7 @@
 							}
 						},
 						{
-							"id": 21,
+							"id": 20,
 							"name": "encoding",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1867,7 +1844,7 @@
 							}
 						},
 						{
-							"id": 19,
+							"id": 18,
 							"name": "file",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1887,7 +1864,7 @@
 							}
 						},
 						{
-							"id": 22,
+							"id": 21,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1916,7 +1893,7 @@
 							}
 						},
 						{
-							"id": 20,
+							"id": 19,
 							"name": "speed",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1941,12 +1918,12 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								18,
-								23,
-								21,
-								19,
+								17,
 								22,
-								20
+								20,
+								18,
+								21,
+								19
 							]
 						}
 					],
@@ -1959,7 +1936,7 @@
 					]
 				},
 				{
-					"id": 67,
+					"id": 66,
 					"name": "IBBSConfigParams",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1976,7 +1953,7 @@
 					},
 					"children": [
 						{
-							"id": 68,
+							"id": 67,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1994,7 +1971,7 @@
 							}
 						},
 						{
-							"id": 69,
+							"id": 68,
 							"name": "sysop",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2017,8 +1994,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								68,
-								69
+								67,
+								68
 							]
 						}
 					],
@@ -2031,21 +2008,21 @@
 					]
 				},
 				{
-					"id": 55,
+					"id": 54,
 					"name": "IBBSPrintFunctions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 56,
+							"id": 55,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 57,
+									"id": 56,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2060,7 +2037,7 @@
 									},
 									"parameters": [
 										{
-											"id": 58,
+											"id": 57,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2070,7 +2047,7 @@
 											"comment": {},
 											"type": {
 												"type": "reference",
-												"id": 28,
+												"id": 27,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -2088,7 +2065,7 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								56
+								55
 							]
 						}
 					],
@@ -2101,21 +2078,21 @@
 					]
 				},
 				{
-					"id": 51,
+					"id": 50,
 					"name": "IBBSSayFunctions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 52,
+							"id": 51,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 53,
+									"id": 52,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2123,7 +2100,7 @@
 									"comment": {},
 									"parameters": [
 										{
-											"id": 54,
+											"id": 53,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2135,7 +2112,7 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 28,
+												"id": 27,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -2153,7 +2130,7 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								52
+								51
 							]
 						}
 					],
@@ -2166,14 +2143,14 @@
 					]
 				},
 				{
-					"id": 37,
+					"id": 36,
 					"name": "IBBSSayOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 38,
+							"id": 37,
 							"name": "text",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2196,7 +2173,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								38
+								37
 							]
 						}
 					],
@@ -2209,14 +2186,14 @@
 					]
 				},
 				{
-					"id": 70,
+					"id": 69,
 					"name": "IIniquityOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 71,
+							"id": 70,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2241,7 +2218,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								71
+								70
 							]
 						}
 					],
@@ -2254,14 +2231,14 @@
 					]
 				},
 				{
-					"id": 64,
+					"id": 63,
 					"name": "IMenuCommand",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 65,
+							"id": 64,
 							"name": "key",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2279,7 +2256,7 @@
 							}
 						},
 						{
-							"id": 66,
+							"id": 65,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2302,8 +2279,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								65,
-								66
+								64,
+								65
 							]
 						}
 					],
@@ -2316,14 +2293,14 @@
 					]
 				},
 				{
-					"id": 62,
+					"id": 61,
 					"name": "IMenuCommands",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 63,
+							"id": 62,
 							"name": "command",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2337,7 +2314,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 64,
+								"id": 63,
 								"name": "IMenuCommand"
 							}
 						}
@@ -2347,7 +2324,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								63
+								62
 							]
 						}
 					],
@@ -2360,7 +2337,7 @@
 					]
 				},
 				{
-					"id": 59,
+					"id": 58,
 					"name": "IMenuOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -2382,7 +2359,7 @@
 					},
 					"children": [
 						{
-							"id": 60,
+							"id": 59,
 							"name": "key",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2400,7 +2377,7 @@
 							}
 						},
 						{
-							"id": 61,
+							"id": 60,
 							"name": "options",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2426,8 +2403,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								60,
-								61
+								59,
+								60
 							]
 						}
 					],
@@ -2440,14 +2417,14 @@
 					]
 				},
 				{
-					"id": 28,
+					"id": 27,
 					"name": "IQPauseOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 31,
+							"id": 30,
 							"name": "center",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2467,12 +2444,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 27,
+								"id": 26,
 								"name": "IQStringUtils.center"
 							}
 						},
 						{
-							"id": 29,
+							"id": 28,
 							"name": "colorReset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2492,12 +2469,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 25,
+								"id": 24,
 								"name": "IQStringUtils.colorReset"
 							}
 						},
 						{
-							"id": 30,
+							"id": 29,
 							"name": "newlines",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2517,7 +2494,7 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 26,
+								"id": 25,
 								"name": "IQStringUtils.newlines"
 							}
 						}
@@ -2527,9 +2504,9 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								31,
-								29,
-								30
+								30,
+								28,
+								29
 							]
 						}
 					],
@@ -2543,20 +2520,20 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"id": 24,
+							"id": 23,
 							"name": "IQStringUtils"
 						}
 					]
 				},
 				{
-					"id": 32,
+					"id": 31,
 					"name": "IQPrintOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 36,
+							"id": 35,
 							"name": "center",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2576,12 +2553,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 27,
+								"id": 26,
 								"name": "IQStringUtils.center"
 							}
 						},
 						{
-							"id": 34,
+							"id": 33,
 							"name": "colorReset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2601,12 +2578,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 25,
+								"id": 24,
 								"name": "IQStringUtils.colorReset"
 							}
 						},
 						{
-							"id": 35,
+							"id": 34,
 							"name": "newlines",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2626,12 +2603,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 26,
+								"id": 25,
 								"name": "IQStringUtils.newlines"
 							}
 						},
 						{
-							"id": 33,
+							"id": 32,
 							"name": "text",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2654,10 +2631,10 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								36,
-								34,
 								35,
-								33
+								33,
+								34,
+								32
 							]
 						}
 					],
@@ -2671,13 +2648,13 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"id": 24,
+							"id": 23,
 							"name": "IQStringUtils"
 						}
 					]
 				},
 				{
-					"id": 24,
+					"id": 23,
 					"name": "IQStringUtils",
 					"kind": 256,
 					"kindString": "Interface",
@@ -2712,7 +2689,7 @@
 					},
 					"children": [
 						{
-							"id": 27,
+							"id": 26,
 							"name": "center",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2732,7 +2709,7 @@
 							}
 						},
 						{
-							"id": 25,
+							"id": 24,
 							"name": "colorReset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2752,7 +2729,7 @@
 							}
 						},
 						{
-							"id": 26,
+							"id": 25,
 							"name": "newlines",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2777,9 +2754,9 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								27,
-								25,
-								26
+								26,
+								24,
+								25
 							]
 						}
 					],
@@ -2793,18 +2770,18 @@
 					"extendedBy": [
 						{
 							"type": "reference",
-							"id": 28,
+							"id": 27,
 							"name": "IQPauseOptions"
 						},
 						{
 							"type": "reference",
-							"id": 32,
+							"id": 31,
 							"name": "IQPrintOptions"
 						}
 					]
 				},
 				{
-					"id": 42,
+					"id": 41,
 					"name": "IUserOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -2826,7 +2803,7 @@
 					},
 					"children": [
 						{
-							"id": 43,
+							"id": 42,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2844,7 +2821,7 @@
 							}
 						},
 						{
-							"id": 44,
+							"id": 43,
 							"name": "password",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2867,8 +2844,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								43,
-								44
+								42,
+								43
 							]
 						}
 					],
@@ -2883,44 +2860,37 @@
 			],
 			"groups": [
 				{
-					"title": "References",
-					"kind": 16777216,
-					"children": [
-						136
-					]
-				},
-				{
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						126,
-						72,
-						110,
-						104,
-						113,
-						123,
-						116
+						125,
+						71,
+						109,
+						103,
+						112,
+						122,
+						115
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						39,
-						45,
-						17,
-						67,
-						55,
-						51,
-						37,
-						70,
-						64,
-						62,
-						59,
-						28,
-						32,
-						24,
-						42
+						38,
+						44,
+						16,
+						66,
+						54,
+						50,
+						36,
+						69,
+						63,
+						61,
+						58,
+						27,
+						31,
+						23,
+						41
 					]
 				}
 			],
@@ -2939,7 +2909,7 @@
 			"kind": 2,
 			"children": [
 				1,
-				16
+				15
 			]
 		}
 	]
