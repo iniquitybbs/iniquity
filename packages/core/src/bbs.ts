@@ -1,5 +1,5 @@
 import { BBS } from "./iniquity"
-import { Directory as textfiles } from "./assets"
+import { Directory as files } from "./assets"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
@@ -23,7 +23,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 const iq3bbs = new BBS({ basepath: "/iniquity/core/assets/" })
 
-const welcomeArt = iq3bbs.artwork({ filename: textfiles.sm_iniq2 })
+const welcomeArt = iq3bbs.artwork({ filename: files.sm_iniq2 })
 welcomeArt.render({ clearScreenBefore: true, speed: 100 })
 
 iq3bbs
@@ -35,16 +35,16 @@ iq3bbs
     })
     .pause({ colorReset: true, newlines: 2, center: true })
 
-iq3bbs.artwork({ filename: textfiles.we_iniq3 }).render({ clearScreenBefore: false })
+iq3bbs.artwork({ filename: files.we_iniq3 }).render({ clearScreenBefore: false })
 
 iq3bbs.say("You've connected to a prototype of the new iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
 
-iq3bbs.artwork({ filename: textfiles.d_iniq1 }).render({ speed: 100 })
+iq3bbs.artwork({ filename: files.d_iniq1 }).render({ speed: 100 })
 const login = iq3bbs.ask("What is your login: ".newlines(1))
 switch (login) {
     case "new":
     case "signup":
-        iq3bbs.artwork({ filename: textfiles.newuser1 }).render({ clearScreenBefore: true })
+        iq3bbs.artwork({ filename: files.newuser1 }).render({ clearScreenBefore: true })
 
         let newUser = iq3bbs.user({
             name: iq3bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
@@ -61,6 +61,6 @@ switch (login) {
 
         iq3bbs.pause()
 
-        iq3bbs.artwork({ filename: textfiles.d_iniq1 }).render({ clearScreenBefore: true })
+        iq3bbs.artwork({ filename: files.d_iniq1 }).render({ clearScreenBefore: true })
         break
 }
