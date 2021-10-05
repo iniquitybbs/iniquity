@@ -6,25 +6,19 @@
   "homepage": "http://iniquitybbs.org",
   "license": "MIT",
   "private": false,
-  "release": {
-    "extends": "semantic-release-monorepo"
-  },
+  
   "publishConfig": {
     "access": "public"
   },
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "files": [
-    "lib"
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iniquitybbs/iniquity.git"
   },
   "scripts": {
-    "prepare": "npm install @types/node typescript --no-save && node ./node_modules/.bin/tsc -p tsconfig.json",
     "build": "npx rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
@@ -39,10 +33,5 @@
     "rollup": "^2.58.0",
     "typescript": "^4.4.3"
   },
-  "dependencies": {
-    "semantic-release": "^18.0.0",
-    "semantic-release-monorepo": "^7.0.5",
-    "yargs": "^17.2.1"
-  },
-  "gitHead": "11fe461527a2e0f0c600ecf3b41d585fd3106ff4"
+  "main": "index.js"
 }

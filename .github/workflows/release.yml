@@ -12,6 +12,9 @@ jobs:
                 node-version: [16]
         steps:
             - uses: actions/checkout@v2
+              # https://raulmelo.dev/til/when-publishing-npm-packages-with-lerna-through-gh-actions-we-need-more-params-to-checkout
+              with:
+                  fetch-depth: "0"
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
               with:

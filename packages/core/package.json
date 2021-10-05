@@ -1,43 +1,36 @@
 {
-	"name": "@iniquitybbs/core",
-	"version": "3.0.8",
-	"description": "> TODO: description",
-	"author": "ispyhumanfly <ispyhumanfly@gmail.com>",
-	"homepage": "http://iniquitybbs.org",
-	"license": "MIT",
-	"private": false,
-	"release": {
-		"extends": "semantic-release-monorepo"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": [
-		"dist",
-		"assets"
-	],
-	"scripts": {
-		"prepare": "npm install @types/node typescript --no-save && node ./node_modules/.bin/tsc -p tsconfig.json",
-		"build": "npx rollup -c",
-		"test": "echo \"Error: run tests from root\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/iniquitybbs/iniquity.git"
-	},
-	"bugs": {
-		"url": "https://github.com/iniquitybbs/iniquity/issues"
-	},
-	"devDependencies": {
-		"@rollup/plugin-json": "^4.1.0",
-		"@rollup/plugin-node-resolve": "^13.0.5",
-		"@rollup/plugin-typescript": "^8.2.5",
-		"rollup": "^2.58.0",
-		"typescript": "^4.4.3"
-	},
-	"gitHead": "11fe461527a2e0f0c600ecf3b41d585fd3106ff4",
-	"dependencies": {
-		"semantic-release": "^18.0.0",
-		"semantic-release-monorepo": "^7.0.5"
-	}
+  "name": "@iniquitybbs/core",
+  "version": "3.0.8",
+  "description": "The foundation of an Iniquity bbs application.",
+  "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
+  "homepage": "http://iniquitybbs.org",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "src"
+  ],
+  "scripts": {
+    "build": "npx rollup -c",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iniquitybbs/iniquity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iniquitybbs/iniquity/issues"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "rollup": "^2.58.0",
+    "typescript": "^4.4.3"
+  },
+  "main": "index.js"
 }
