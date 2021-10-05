@@ -7,24 +7,28 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "Assets",
+			"name": "Archives",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"comment": {
-				"shortText": "Iniquity Assets",
+				"shortText": "Iniquity Archives",
 				"tags": [
 					{
+						"tag": "summary",
+						"text": "A growing collection of all things Iniquity. Past and present. For use in helping build your bbs."
+					},
+					{
 						"tag": "example",
-						"text": "\n```typescript\nimport { Iniquity } from \"@iniquitybbs/iniquity\"\nimport { Assets } from \"@iniquitybbs/assets\"\n\nconst iq = new Iniquity()\n\nconst welcomeArt = iq.artwork({ basepath: \"./iniquity/bbs/assets\", filename: Assets.sm_iniq2 })\nwelcomeArt.render({ clearScreenBefore: true, speed: 100 })\n\niq.print(`Iniquity comes packed with easy to use assets like ${welcomeArt.filename}`).pause()\n\niq.hangup()\n```\n"
+						"text": "\n```typescript\nimport { Iniquity } from \"@iniquitybbs/core\"\nimport { Assets } from \"@iniquitybbs/assets\"\n\nconst iq = new Iniquity()\n\nconst welcomeArt = iq.artwork({ basepath: \"./iniquity/bbs/assets\", filename: Assets.sm_iniq2 })\nwelcomeArt.render({ clearScreenBefore: true, speed: 100 })\n\niq.print(`Iniquity comes packed with easy to use assets like ${welcomeArt.filename}`).pause()\n\niq.hangup()\n```\n"
 					}
 				]
 			},
-			"originalName": "core/src/assets",
+			"originalName": "archives/src",
 			"children": [
 				{
 					"id": 2,
-					"name": "Directory",
+					"name": "Textmode",
 					"kind": 8,
 					"kindString": "Enumeration",
 					"flags": {},
@@ -40,8 +44,8 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 50,
+									"fileName": "archives/src/index.ts",
+									"line": 51,
 									"character": 4
 								}
 							],
@@ -55,8 +59,8 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 51,
+									"fileName": "archives/src/index.ts",
+									"line": 52,
 									"character": 4
 								}
 							],
@@ -73,8 +77,8 @@
 							},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 48,
+									"fileName": "archives/src/index.ts",
+									"line": 49,
 									"character": 4
 								}
 							],
@@ -88,8 +92,8 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 49,
+									"fileName": "archives/src/index.ts",
+									"line": 50,
 									"character": 4
 								}
 							],
@@ -110,20 +114,20 @@
 					],
 					"sources": [
 						{
-							"fileName": "assets.ts",
-							"line": 44,
+							"fileName": "archives/src/index.ts",
+							"line": 45,
 							"character": 12
 						}
 					]
 				},
 				{
 					"id": 9,
-					"name": "Assets2",
+					"name": "Archives",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Assets2",
+						"shortText": "Iniquity Archives",
 						"tags": [
 							{
 								"tag": "summary",
@@ -140,15 +144,15 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 66,
+									"fileName": "archives/src/index.ts",
+									"line": 67,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
 									"id": 11,
-									"name": "new Assets2",
+									"name": "new Archives",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
@@ -171,7 +175,7 @@
 									"type": {
 										"type": "reference",
 										"id": 9,
-										"name": "Assets2"
+										"name": "Archives"
 									}
 								}
 							]
@@ -186,8 +190,8 @@
 							},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 68,
+									"fileName": "archives/src/index.ts",
+									"line": 69,
 									"character": 11
 								}
 							],
@@ -224,8 +228,8 @@
 					],
 					"sources": [
 						{
-							"fileName": "assets.ts",
-							"line": 65,
+							"fileName": "archives/src/index.ts",
+							"line": 66,
 							"character": 13
 						}
 					]
@@ -248,8 +252,8 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "assets.ts",
-									"line": 58,
+									"fileName": "archives/src/index.ts",
+									"line": 59,
 									"character": 4
 								}
 							],
@@ -270,8 +274,8 @@
 					],
 					"sources": [
 						{
-							"fileName": "assets.ts",
-							"line": 57,
+							"fileName": "archives/src/index.ts",
+							"line": 58,
 							"character": 17
 						}
 					]
@@ -302,8 +306,8 @@
 			],
 			"sources": [
 				{
-					"fileName": "assets.ts",
-					"line": 44,
+					"fileName": "archives/src/index.ts",
+					"line": 45,
 					"character": 0
 				}
 			]
@@ -327,7 +331,7 @@
 					}
 				]
 			},
-			"originalName": "core/src/iniquity",
+			"originalName": "core/src",
 			"children": [
 				{
 					"id": 125,
@@ -357,7 +361,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 379,
 									"character": 4
 								}
@@ -414,14 +418,23 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 369,
 									"character": 11
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "string"
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
 							}
 						},
 						{
@@ -434,14 +447,23 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 370,
 									"character": 11
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "string"
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
 							}
 						},
 						{
@@ -452,7 +474,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 399,
 									"character": 4
 								}
@@ -536,7 +558,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 368,
 							"character": 13
 						}
@@ -570,7 +592,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 180,
 									"character": 4
 								}
@@ -628,7 +650,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 167,
 									"character": 11
 								}
@@ -648,7 +670,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 168,
 									"character": 11
 								}
@@ -668,7 +690,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 294,
 									"character": 11
 								}
@@ -729,7 +751,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 260,
 									"character": 11
 								}
@@ -776,7 +798,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 268,
 									"character": 11
 								}
@@ -809,7 +831,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 305,
 									"character": 11
 								}
@@ -860,7 +882,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 239,
 									"character": 11
 								}
@@ -918,7 +940,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 221,
 									"character": 11
 								}
@@ -987,7 +1009,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 198,
 									"character": 11
 								}
@@ -1056,7 +1078,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 251,
 									"character": 11
 								}
@@ -1105,7 +1127,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 279,
 									"character": 11
 								}
@@ -1191,7 +1213,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 166,
 							"character": 13
 						}
@@ -1237,7 +1259,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 319,
 							"character": 13
 						}
@@ -1258,7 +1280,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 311,
 									"character": 4
 								}
@@ -1302,7 +1324,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 316,
 									"character": 11
 								}
@@ -1341,7 +1363,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 310,
 							"character": 13
 						}
@@ -1396,7 +1418,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 325,
 							"character": 13
 						}
@@ -1451,7 +1473,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 351,
 							"character": 13
 						}
@@ -1481,7 +1503,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 341,
 									"character": 4
 								}
@@ -1528,7 +1550,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 334,
 									"character": 11
 								}
@@ -1549,7 +1571,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 332,
 									"character": 11
 								}
@@ -1570,7 +1592,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 333,
 									"character": 11
 								}
@@ -1602,7 +1624,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 331,
 							"character": 13
 						}
@@ -1625,7 +1647,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 75,
 									"character": 4
 								}
@@ -1640,10 +1662,12 @@
 							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
-							"flags": {},
+							"flags": {
+								"isOptional": true
+							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 76,
 									"character": 4
 								}
@@ -1666,7 +1690,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 74,
 							"character": 17
 						}
@@ -1773,7 +1797,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 93,
 							"character": 17
 						}
@@ -1799,7 +1823,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 45,
 									"character": 4
 								}
@@ -1819,7 +1843,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 50,
 									"character": 4
 								}
@@ -1839,7 +1863,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 48,
 									"character": 4
 								}
@@ -1860,7 +1884,7 @@
 						},
 						{
 							"id": 18,
-							"name": "file",
+							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
@@ -1868,7 +1892,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 46,
 									"character": 4
 								}
@@ -1888,7 +1912,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 49,
 									"character": 4
 								}
@@ -1917,7 +1941,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 47,
 									"character": 4
 								}
@@ -1944,7 +1968,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 44,
 							"character": 17
 						}
@@ -1975,7 +1999,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 143,
 									"character": 4
 								}
@@ -1993,7 +2017,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 144,
 									"character": 4
 								}
@@ -2016,7 +2040,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 142,
 							"character": 17
 						}
@@ -2086,7 +2110,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 112,
 							"character": 17
 						}
@@ -2151,7 +2175,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 105,
 							"character": 17
 						}
@@ -2172,7 +2196,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 72,
 									"character": 4
 								}
@@ -2194,7 +2218,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 71,
 							"character": 17
 						}
@@ -2217,7 +2241,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 148,
 									"character": 4
 								}
@@ -2239,7 +2263,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 147,
 							"character": 17
 						}
@@ -2260,7 +2284,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 135,
 									"character": 4
 								}
@@ -2278,7 +2302,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 136,
 									"character": 4
 								}
@@ -2301,7 +2325,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 134,
 							"character": 17
 						}
@@ -2322,7 +2346,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 131,
 									"character": 4
 								}
@@ -2345,7 +2369,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 130,
 							"character": 17
 						}
@@ -2381,7 +2405,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 126,
 									"character": 4
 								}
@@ -2399,7 +2423,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 127,
 									"character": 4
 								}
@@ -2425,7 +2449,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 125,
 							"character": 17
 						}
@@ -2448,7 +2472,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 65,
 									"character": 4
 								}
@@ -2473,7 +2497,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 63,
 									"character": 4
 								}
@@ -2498,7 +2522,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 64,
 									"character": 4
 								}
@@ -2527,7 +2551,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 67,
 							"character": 17
 						}
@@ -2557,7 +2581,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 65,
 									"character": 4
 								}
@@ -2582,7 +2606,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 63,
 									"character": 4
 								}
@@ -2607,7 +2631,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 64,
 									"character": 4
 								}
@@ -2630,7 +2654,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 69,
 									"character": 4
 								}
@@ -2655,7 +2679,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 68,
 							"character": 17
 						}
@@ -2713,7 +2737,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 65,
 									"character": 4
 								}
@@ -2733,7 +2757,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 63,
 									"character": 4
 								}
@@ -2753,7 +2777,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 64,
 									"character": 4
 								}
@@ -2777,7 +2801,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 62,
 							"character": 17
 						}
@@ -2825,7 +2849,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 85,
 									"character": 4
 								}
@@ -2843,7 +2867,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "iniquity.ts",
+									"fileName": "core/src/index.ts",
 									"line": 86,
 									"character": 4
 								}
@@ -2866,7 +2890,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "iniquity.ts",
+							"fileName": "core/src/index.ts",
 							"line": 84,
 							"character": 17
 						}
@@ -2911,7 +2935,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "iniquity.ts",
+					"fileName": "core/src/index.ts",
 					"line": 39,
 					"character": 0
 				}

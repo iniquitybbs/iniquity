@@ -46,7 +46,7 @@ RUN cd /sbbs/exec/ \
     && mv logon.js logon.js-original \
     && cd /sbbs/text/ \
     && mv answer.msg answer.msg-original ; touch answer.msg \
-    && ln -s /iniquity/core/dist/bundle.js /sbbs/exec/login.js
+    && ln -s /iniquity/eternity/dist/bundle.js /sbbs/exec/login.js
 
 VOLUME /iniquity
 

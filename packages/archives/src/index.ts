@@ -1,9 +1,10 @@
 /**
- * Iniquity Assets
- * @module Assets
+ * Iniquity Archives
+ * @summary A growing collection of all things Iniquity. Past and present. For use in helping build your bbs.
+ * @module Archives
  * @example
  * ```typescript
- * import { Iniquity } from "@iniquitybbs/iniquity"
+ * import { Iniquity } from "@iniquitybbs/core"
  * import { Assets } from "@iniquitybbs/assets"
  *
  * const iq = new Iniquity()
@@ -41,7 +42,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
  * The definitive collection of iniquity ansi/asci/pescii text documents.
  * Collected from various artpacks over the decades, and various incarnations of iniquity.
  */
-export enum Directory {
+export enum Textmode {
     /**
      * This one.
      */
@@ -59,10 +60,10 @@ export interface IQCoreAssetsOptions {
 }
 
 /**
- * Assets2
+ * Iniquity Archives
  * @summary What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCII/GIF/JPEG whatever files.
  */
-export class Assets2 {
+export class Archives {
     constructor(options?: IQCoreAssetsOptions) {}
 
     public load() {}

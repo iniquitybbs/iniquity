@@ -4,5 +4,5 @@
 
 ### Modules
 
-- [Assets](modules/Assets.md)
+- [Archives](modules/Archives.md)
 - [Iniquity](modules/Iniquity.md)

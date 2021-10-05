@@ -30,7 +30,7 @@ Assets2
 
 #### Defined in
 
-[assets.ts:66](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/assets.ts#L66)
+[assets/src/index.ts:66](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/assets/src/index.ts#L66)
 
 ## Methods
 
@@ -44,4 +44,4 @@ Assets2
 
 #### Defined in
 
-[assets.ts:68](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/assets.ts#L68)
+[assets/src/index.ts:68](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/assets/src/index.ts#L68)

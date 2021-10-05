@@ -10,5 +10,5 @@
     },
     "include": ["src/**/*"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"],
-    "references": [{ "path": "../core" }, { "path": "../assets" }]
+    "references": [{ "path": "../core" }, { "path": "../archives" }]
 }

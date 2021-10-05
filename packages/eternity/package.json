@@ -25,7 +25,7 @@
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
   "devDependencies": {
-    "@iniquitybbs/assets": "^3.0.8",
+    "@iniquitybbs/archives": "^3.0.8",
     "@iniquitybbs/core": "^3.0.8",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-multi-entry": "^4.1.0",

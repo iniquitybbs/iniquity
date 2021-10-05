@@ -21,7 +21,7 @@ Ibbsconfig params
 
 #### Defined in
 
-[iniquity.ts:143](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L143)
+[core/src/index.ts:143](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L143)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:144](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L144)
+[core/src/index.ts:144](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L144)

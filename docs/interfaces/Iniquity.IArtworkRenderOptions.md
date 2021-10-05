@@ -11,7 +11,7 @@ Iniquity artwork rendering options
 - [basepath](Iniquity.IArtworkRenderOptions.md#basepath)
 - [clearScreenBefore](Iniquity.IArtworkRenderOptions.md#clearscreenbefore)
 - [encoding](Iniquity.IArtworkRenderOptions.md#encoding)
-- [file](Iniquity.IArtworkRenderOptions.md#file)
+- [filename](Iniquity.IArtworkRenderOptions.md#filename)
 - [mode](Iniquity.IArtworkRenderOptions.md#mode)
 - [speed](Iniquity.IArtworkRenderOptions.md#speed)
 
@@ -23,7 +23,7 @@ Iniquity artwork rendering options
 
 #### Defined in
 
-[iniquity.ts:45](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L45)
+[core/src/index.ts:45](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L45)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:50](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L50)
+[core/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L50)
 
 ___
 
@@ -43,17 +43,17 @@ ___
 
 #### Defined in
 
-[iniquity.ts:48](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L48)
+[core/src/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L48)
 
 ___
 
-### file
+### filename
 
-• `Optional` **file**: `string`
+• `Optional` **filename**: `string`
 
 #### Defined in
 
-[iniquity.ts:46](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L46)
+[core/src/index.ts:46](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L46)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:49](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L49)
+[core/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L49)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:47](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L47)
+[core/src/index.ts:47](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L47)

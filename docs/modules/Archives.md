@@ -1,6 +1,8 @@
-# Module: Assets
+# Module: Archives
 
-Iniquity Assets
+Iniquity Archives
+
+**`summary`** A growing collection of all things Iniquity. Past and present. For use in helping build your bbs.
 
 **`example`**
 ```typescript
@@ -21,12 +23,12 @@ iq.hangup()
 
 ### Enumerations
 
-- [Directory](../enums/Assets.Directory.md)
+- [Textmode](../enums/Archives.Textmode.md)
 
 ### Classes
 
-- [Assets2](../classes/Assets.Assets2.md)
+- [Archives](../classes/Archives.Archives-1.md)
 
 ### Interfaces
 
-- [IQCoreAssetsOptions](../interfaces/Assets.IQCoreAssetsOptions.md)
+- [IQCoreAssetsOptions](../interfaces/Archives.IQCoreAssetsOptions.md)

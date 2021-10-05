@@ -28,4 +28,4 @@
 
 #### Defined in
 
-[iniquity.ts:117](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L117)
+[core/src/index.ts:117](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L117)

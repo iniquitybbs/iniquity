@@ -17,14 +17,14 @@
 
 #### Defined in
 
-[iniquity.ts:75](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L75)
+[core/src/index.ts:75](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L75)
 
 ___
 
 ### filename
 
-• **filename**: `string`
+• `Optional` **filename**: `string`
 
 #### Defined in
 
-[iniquity.ts:76](https://github.com/iniquitybbs/iniquity/blob/467b1b4/packages/core/src/iniquity.ts#L76)
+[core/src/index.ts:76](https://github.com/iniquitybbs/iniquity/blob/f664381/packages/core/src/index.ts#L76)

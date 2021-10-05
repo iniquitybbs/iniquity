@@ -1,7 +1,7 @@
 {
-  "name": "@iniquitybbs/assets",
+  "name": "@iniquitybbs/archives",
   "version": "3.0.8",
-  "description": "> TODO: description",
+  "description": "Where all the old Iniquity stuff lives. Maybe we can use some of it?",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.org",
   "license": "MIT",

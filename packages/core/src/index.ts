@@ -42,9 +42,9 @@ load("sbbsdefs.js")
  * Iniquity artwork rendering options
  */
 export interface IArtworkRenderOptions {
-    basepath?: string
-    file?: string
-    speed?: number
+    basepath?: string | undefined
+    filename?: string | undefined
+    speed?: number | undefined
     encoding?: "CP437" | "UTF8"
     mode?: "line" | "character"
     clearScreenBefore?: boolean
@@ -73,7 +73,7 @@ export interface IBBSSayOptions {
 }
 export interface IArtworkOptions {
     basepath?: string
-    filename: string
+    filename?: string
 }
 
 /**
@@ -292,7 +292,7 @@ export class BBS {
      * ```
      */
     public artwork(options: IArtworkOptions): Artwork {
-        return new Artwork({ basepath: options.basepath || this.basepath, filename: options.filename })
+        return new Artwork({ basepath: options.basepath || this.basepath || undefined, filename: options.filename || undefined })
     }
 
     /**
@@ -366,8 +366,8 @@ export class Text {}
  * ```
  */
 export class Artwork {
-    public basepath: string
-    public filename: string
+    public basepath: string | undefined
+    public filename: string | undefined
     private fileHandle: any
 
     /**
@@ -377,8 +377,8 @@ export class Artwork {
      * @returns {Artwork} An instance of Artwork
      */
     constructor(options: IArtworkOptions) {
-        this.basepath = options.basepath || BBS.prototype.basepath || ""
-        this.filename = options.filename
+        this.basepath = options.basepath || BBS.prototype.basepath || undefined
+        this.filename = options.filename || undefined
     }
 
     /**
@@ -399,8 +399,8 @@ export class Artwork {
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
         if (options?.clearScreenBefore === true) console.clear()
 
-        let basepath = options?.basepath || this.basepath
-        let filename = options?.file || this.filename
+        let basepath = options?.basepath || this.basepath || new Error("I need to know where the archives folder is located!")
+        let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
         let mode = options?.mode || "line"
         let speed = options?.speed || 30
 
@@ -408,7 +408,7 @@ export class Artwork {
 
         // @ts-ignore Using Synchronet's JS File operations
         this.fileHandle = new File(`${this.basepath}/${filename}`)
-        if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + filename)
+        if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + `${this.basepath}/${filename}`)
         let text = this.fileHandle.readAll()
 
         for (let i = 0; i < text.length; i++) {
