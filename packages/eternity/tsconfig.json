@@ -3,11 +3,12 @@
     "compilerOptions": {
         "target": "es5",
         "types": ["node"],
-        "rootDir": "src",
-        "lib": ["es2020"],
         "skipLibCheck": true,
+        "resolveJsonModule": false,
+        "rootDir": "src",
         "outDir": "dist"
     },
     "include": ["src/**/*"],
-    "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
+    "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"],
+    "references": [{ "path": "../core" }, { "path": "../assets" }]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@iniquitybbs/cli",
+  "name": "@iniquitybbs/assets",
   "version": "3.0.8",
   "description": "> TODO: description",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
@@ -26,9 +26,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@rollup/plugin-multi-entry": "^4.1.0",
     "@types/yargs": "^17.0.3",
     "rollup": "^2.58.0",
     "typescript": "^4.4.3"

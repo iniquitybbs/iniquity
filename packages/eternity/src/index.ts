@@ -1,5 +1,5 @@
-import { BBS } from "./iniquity"
-import { Directory as files } from "./assets"
+import { BBS } from "@iniquitybbs/core"
+import { Directory as files } from "@iniquitybbs/assets"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%

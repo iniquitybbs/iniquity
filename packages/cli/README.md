@@ -1,4 +1,1 @@
-# `cli`
-
-And some other stuff
-```
+# Iniquity CLI

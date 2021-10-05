@@ -1,20 +1,15 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "strict": true,
-        "strictFunctionTypes": false,
-        "module": "esnext",
         "allowSyntheticDefaultImports": true,
-        "target": "es3",
-        "moduleResolution": "node",
+        "target": "es5",
         "types": ["node"],
-        "baseUrl": ".",
         "lib": ["es2020"],
         "skipLibCheck": true,
         "resolveJsonModule": false,
-        "outDir": "dist",
-        "rootDir": "src"
+        "rootDir": "src",
+        "outDir": "dist"
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "../assets/src/assets.ts"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
 }

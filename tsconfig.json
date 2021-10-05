@@ -27,5 +27,5 @@
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
-    "exclude": [".vscode", "dist", "node_modules"]
+    "exclude": [".vscode", "**/node_modules/**", "**/dist/**/*", "**/*.spec.ts"]
 }

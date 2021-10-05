@@ -1,1 +1,0 @@
-const food = "asd"
