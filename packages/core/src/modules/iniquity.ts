@@ -1,17 +1,18 @@
 /**
- * Iniquity BBS
- * @module Iniquity
+ * The Iniquity Bulletin Board Software
+ * @module BBS
+ * @summary This is the Iniquity core bbs library. It's the foundation of any Iniquity application.
  * @example
  * ```typescript
- * import Iniquity from "@iniquitybbs/iniquity"
+ * import BBS from "@iniquitybbs/core"
  *
- * const iq = new Iniquity()
+ * const mybbs = new BBS()
  *
- * iq.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
+ * mybbs.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
  *
- * iq.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
+ * mybbs.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
  *
- * iq.disconnect()
+ * mybbs.disconnect()
  * ```
  */
 
@@ -38,7 +39,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 load("sbbsdefs.js")
 
 /**
- * Artwork rendering options
+ * Iniquity artwork rendering options
  */
 export interface IArtworkRenderOptions {
     basepath?: string
@@ -50,19 +51,21 @@ export interface IArtworkRenderOptions {
 }
 
 /**
- * BBS pause options
- * @param {boolean} colorReset Reset the screen colors
- * @param {number} newlines How many newlines to display after the pause.
- * @param {boolean} center Shall we center the text?
+ * Iniquity bbs string operations
+ * @interface
+ * @summary Some pretty typical operations most sysops end up wanting apply to strings. Got more ideas? Let me know.
+ * @param {boolean} colorReset Make sure that colors don't bleed on to the terminal after displaying the text.
+ * @param {number} newlines How many newlines to display after the text has been displayed.
+ * @param {boolean} center Will attempt to center the text on the clients terminal.
  */
 
-export interface IBBSEnhancements {
+export interface IQStringUtils {
     colorReset?: boolean | false
     newlines?: number | 0
     center?: boolean | false
 }
-export interface IBBSPauseOptions extends IBBSEnhancements {}
-export interface IBBSPrintOptions extends IBBSEnhancements {
+export interface IQPauseOptions extends IQStringUtils {}
+export interface IQPrintOptions extends IQStringUtils {
     text: string
 }
 export interface IBBSSayOptions {
@@ -89,10 +92,10 @@ export interface IUserOptions {
  */
 export interface IArtworkRenderFunctions {
     /**
-     * @param {IBBSPauseOptions} options
-     * @see {@link IBBSPauseOptions}
+     * @param {IQPauseOptions} options
+     * @see {@link IQPauseOptions}
      */
-    pause(options?: IBBSPauseOptions): void
+    pause(options?: IQPauseOptions): void
     /**
      * Resets the screen color
      */
@@ -101,17 +104,17 @@ export interface IArtworkRenderFunctions {
 
 export interface IBBSSayFunctions {
     /**
-     * @param {IBBSPauseOptions} options
-     * {@link IBBSPauseOptions}
+     * @param {IQPauseOptions} options
+     * {@link IQPauseOptions}
      */
-    pause(options?: IBBSPauseOptions): void
+    pause(options?: IQPauseOptions): void
 }
 export interface IBBSPrintFunctions {
     /**
-     * @param {IBBSPauseOptions} options
-     * @see {@link IBBSPauseOptions}
+     * @param {IQPauseOptions} options
+     * @see {@link IQPauseOptions}
      */
-    pause(options?: IBBSPauseOptions): void
+    pause(options?: IQPauseOptions): void
 }
 
 /**
@@ -146,21 +149,21 @@ export interface IIniquityOptions {
 }
 
 /**
- * Iniquity BBS
+ * BBS
  * @summary The main class you will use as it wraps all the other classes in a unified API.
  * @example
  * ```typescript
- * import Iniquity from "@iniquitybbs/iniquity"
+ * import BBS from "@iniquitybbs/core/dist/iniquity"
  *
- * const iq = new Iniquity()
+ * const mybbs = new BBS()
  *
- * iq.say("Say hi!").pause()
+ * mybbs.say("Say hi!").pause()
  *
- * iq.hangup()
+ * mybbs.hangup()
+ *
  * ```
-
  */
-class Iniquity {
+export class BBS {
     public basepath: string
     public name: string
 
@@ -184,7 +187,7 @@ class Iniquity {
     /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param {IBBSSayOptions | string} options What you would like to say on the screen.
-     * @see {@link IBBSPrintOptions}
+     * @see {@link IQPrintOptions} to learn more about the available options.
      * @returns {IBBSSayFunctions}
      * @example
      * ```typescript
@@ -195,9 +198,9 @@ class Iniquity {
     public say(options: IBBSSayOptions | string): IBBSSayFunctions {
         typeof options === "string" ? console.print(options) : console.print(options.text)
         return {
-            pause(options?: IBBSPauseOptions): void {
-                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else Iniquity.prototype.say("".color("reset"))
+            pause(options?: IQPauseOptions): void {
+                if (options) BBS.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else BBS.prototype.say("".color("reset"))
                 console.pause()
             }
         }
@@ -205,8 +208,8 @@ class Iniquity {
 
     /**
      * Prints something to the user. Parses Renegade MCI/Synchronet @- codes.
-     * @param {IBBSPrintOptions | string} options you would like to print on the screen.
-     * @see {@link IBBSPrintOptions}
+     * @param {IQPrintOptions | string} options you would like to print on the screen.
+     * @see {@link IQPrintOptions} to learn more about the available options.
      * @returns {IBBSPrintFunctions}
      * @example
      * ```typescript
@@ -215,24 +218,25 @@ class Iniquity {
      * iq.print("Display some text on the screen that can parse @ codes.".color("cyan")).pause()
      * ```
      */
-    public print(options: IBBSPrintOptions | string): IBBSPrintFunctions {
+    public print(options: IQPrintOptions | string): IBBSPrintFunctions {
         typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text || new Error("Sometthing is wrong with this string."))
 
         return {
-            pause(options?: IBBSPauseOptions): void {
-                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else Iniquity.prototype.say("".color("reset"))
+            pause(options?: IQPauseOptions): void {
+                if (options) BBS.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else BBS.prototype.say("".color("reset"))
                 console.pause()
             }
         }
     }
 
     /**
-     * Pause the cursor
-     * @param {IBBSPauseOptions}
-     * @see {@link IBBSPauseOptions}
+     * Display a pause prompt on the screen.
+     * @summary This pause prompt does the usual stuff. It also provides a few helpers via its return functions.
+     * @param {IQPauseOptions}
+     * @see {@link IQPauseOptions} to learn more about the available options.
      */
-    public pause(options?: IBBSPauseOptions): void {
+    public pause(options?: IQPauseOptions): void {
         if (options?.colorReset) this.say("".color("reset"))
         this.say("".newlines(options?.newlines || 0))
         console.pause()
@@ -266,9 +270,10 @@ class Iniquity {
     }
 
     /**
-     * Will allow you to work with user data.
+     * User stuff
+     * @summary It doesn't do much right now. But it does create new users and store them in the SBBS backend.
      * @param {IUserOptions} options An object containing the various configuration properties.
-     * @see {@link IUserOptions}
+     * @see {@link IUserOptions} to learn more about the available options.
      * @returns {User} An instance of User and its return functions.
      */
     public user(options: IUserOptions): User {
@@ -278,7 +283,7 @@ class Iniquity {
     /**
      * Will allow you to render artwork to the screen
      * @param {IArtworkOptions} options An object containing the various configuration properties.
-     * @see {@link IArtworkOptions}
+     * @see {@link IArtworkOptions} to learn more about the available options.
      * @returns {Artwork} An instance of Artwork and its return functions.
      * @example
      * ```typescript
@@ -344,6 +349,10 @@ export class Text {}
 
 /**
  * Core artwork display and manipulation capabilities
+ * @example
+ * ```typedoc
+ * import { Artwork } from "@iniquitybbs/"
+ * ```
  */
 export class Artwork {
     public basepath: string
@@ -358,14 +367,14 @@ export class Artwork {
      * @returns {Artwork} An instance of Artwork
      */
     constructor(options: IArtworkOptions) {
-        this.basepath = options.basepath || Iniquity.prototype.basepath || ""
+        this.basepath = options.basepath || BBS.prototype.basepath || ""
         this.filename = options.filename
     }
 
     /**
      * Render a ANSI/ASCII/PETSCII file to the screen
      * @param {IArtworkRenderOptions} options An object containing the various configuration parameters.
-     * @see @{link IArtworkRenderOptions}
+     * @see {@link IArtworkRenderOptions}
      * @returns {IArtworkRenderFunctions} Will render the artwork on the screen as well as provide various render functions.
      */
 
@@ -390,14 +399,14 @@ export class Artwork {
                 case "character": {
                     text[i].split(" ").forEach((character: any) => {
                         console.putmsg(character)
-                        Iniquity.prototype.sleep(speed)
+                        BBS.prototype.sleep(speed)
                     })
                 }
 
                 // For line-at-a-time rendering...
                 case "line": {
                     console.putmsg(text[i])
-                    Iniquity.prototype.sleep(speed)
+                    BBS.prototype.sleep(speed)
                 }
             }
             if (i < text.length - 1) console.putmsg("\r\n")
@@ -407,13 +416,13 @@ export class Artwork {
         this.fileHandle.close()
 
         return {
-            pause(options?: IBBSPauseOptions): void {
+            pause(options?: IQPauseOptions): void {
                 if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else Iniquity.prototype.say("".color("reset"))
+                else BBS.prototype.say("".color("reset"))
                 console.pause()
             },
             colorReset(): void {
-                Iniquity.prototype.say("".color("reset"))
+                BBS.prototype.say("".color("reset"))
             }
         }
     }
@@ -618,5 +627,5 @@ interface ISBBSBbs {
     logoff: any
     hangup: any
 }
-
+const Iniquity = BBS
 export default Iniquity

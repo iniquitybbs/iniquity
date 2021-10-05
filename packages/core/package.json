@@ -5,10 +5,10 @@
 	"author": "ispyhumanfly <ispyhumanfly@gmail.com>",
 	"homepage": "https://github.com/euphoriabbs/phoenix/tree/main/packages/iniquity#readme",
 	"license": "MIT",
-    "main": "./dist/index.js",
-    "types": "./dist",
+    "main": "./dist/index.d.js",
 	"files": [
-		"dist"
+		"dist",
+        "assets"
 	],
     "scripts": {
         "prepare": "npm install @types/node typescript --no-save && node ./node_modules/.bin/tsc -p tsconfig.json",

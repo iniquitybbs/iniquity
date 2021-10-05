@@ -41,7 +41,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
  * The definitive collection of iniquity ansi/asci/pescii text documents.
  * Collected from various artpacks over the decades, and various incarnations of iniquity.
  */
-export enum Assets {
+export enum Directory {
     /**
      * This one.
      */
@@ -50,3 +50,22 @@ export enum Assets {
     d_iniq1 = "4d-iniq1.ans",
     newuser1 = "newuser.ans"
 }
+
+/**
+ * Assets constructor options
+ */
+export interface IQCoreAssetsOptions {
+    folder: string
+}
+
+/**
+ * Assets2
+ * @summary What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCII/GIF/JPEG whatever files.
+ */
+export class Assets2 {
+    constructor(options?: IQCoreAssetsOptions) {}
+
+    public load() {}
+}
+
+export default Assets2

@@ -2,7 +2,7 @@ import resolve from "@rollup/plugin-node-resolve"
 import typescript from "@rollup/plugin-typescript"
 
 export default {
-    input: "packages/core/src/app.ts",
+    input: "packages/core/src/bbs.ts",
     output: {
         file: "packages/core/dist/bundle.js",
         format: "cjs",

@@ -1,8 +1,11 @@
-# Documentation - v3.0.0
+[Iniquity API reference - v3.0.0](README.md) / Exports
+
+# Iniquity API reference - v3.0.0
 
 ## Table of contents
 
 ### Modules
 
 - [Assets](modules/Assets.md)
-- [Iniquity](modules/Iniquity.md)
+- [BBS](modules/BBS.md)
+- [Core](modules/Core.md)

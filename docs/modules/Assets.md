@@ -1,3 +1,5 @@
+[Iniquity API reference - v3.0.0](../README.md) / [Exports](../modules.md) / Assets
+
 # Module: Assets
 
 Iniquity Assets
@@ -19,6 +21,24 @@ iq.hangup()
 
 ## Table of contents
 
+### References
+
+- [default](Assets.md#default)
+
 ### Enumerations
 
-- [Assets](../enums/Assets.Assets-1.md)
+- [Directory](../enums/Assets.Directory.md)
+
+### Classes
+
+- [Assets2](../classes/Assets.Assets2.md)
+
+### Interfaces
+
+- [IQCoreAssetsOptions](../interfaces/Assets.IQCoreAssetsOptions.md)
+
+## References
+
+### default
+
+• **default**: `Object`
