@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IArtworkOptions
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IArtworkOptions
 
 # Interface: IArtworkOptions
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[iniquity.ts:72](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L72)
+[iniquity.ts:72](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L72)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:73](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L73)
+[iniquity.ts:73](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L73)

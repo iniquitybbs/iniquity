@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSPrintFunctions
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSPrintFunctions
 
 # Interface: IBBSPrintFunctions
 
@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[iniquity.ts:114](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L114)
+[iniquity.ts:114](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L114)

@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSPrintOptions
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSPrintOptions
 
 # Interface: IBBSPrintOptions
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[iniquity.ts:62](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L62)
+[iniquity.ts:62](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L62)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:60](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L60)
+[iniquity.ts:60](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L60)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:61](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L61)
+[iniquity.ts:61](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L61)
 
 ___
 
@@ -69,4 +69,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:66](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L66)
+[iniquity.ts:66](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L66)

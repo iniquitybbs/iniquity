@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IMenuCommands
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IMenuCommands
 
 # Interface: IMenuCommands
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[iniquity.ts:128](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L128)
+[iniquity.ts:128](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L128)

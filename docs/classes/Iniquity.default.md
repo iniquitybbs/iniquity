@@ -1,41 +1,52 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / Iniquity
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / default
 
-# Class: Iniquity
+# Class: default
 
-[Iniquity](../modules/Iniquity.md).Iniquity
+[Iniquity](../modules/Iniquity.md).default
 
 Iniquity BBS
 
-**`global`**
+**`summary`** The main class you will use as it wraps all the other classes in a unified API.
+
+**`example`**
+```typescript
+import Iniquity from "@iniquitybbs/iniquity"
+
+const iq = new Iniquity()
+
+iq.say("Say hi!").pause()
+
+iq.hangup()
+```
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Iniquity.Iniquity-1.md#constructor)
+- [constructor](Iniquity.default.md#constructor)
 
 ### Properties
 
-- [basepath](Iniquity.Iniquity-1.md#basepath)
-- [name](Iniquity.Iniquity-1.md#name)
+- [basepath](Iniquity.default.md#basepath)
+- [name](Iniquity.default.md#name)
 
 ### Methods
 
-- [artwork](Iniquity.Iniquity-1.md#artwork)
-- [ask](Iniquity.Iniquity-1.md#ask)
-- [disconnect](Iniquity.Iniquity-1.md#disconnect)
-- [menu](Iniquity.Iniquity-1.md#menu)
-- [pause](Iniquity.Iniquity-1.md#pause)
-- [print](Iniquity.Iniquity-1.md#print)
-- [say](Iniquity.Iniquity-1.md#say)
-- [sleep](Iniquity.Iniquity-1.md#sleep)
-- [user](Iniquity.Iniquity-1.md#user)
+- [artwork](Iniquity.default.md#artwork)
+- [ask](Iniquity.default.md#ask)
+- [disconnect](Iniquity.default.md#disconnect)
+- [menu](Iniquity.default.md#menu)
+- [pause](Iniquity.default.md#pause)
+- [print](Iniquity.default.md#print)
+- [say](Iniquity.default.md#say)
+- [sleep](Iniquity.default.md#sleep)
+- [user](Iniquity.default.md#user)
 
 ## Constructors
 
 ### constructor
 
-• **new Iniquity**(`options?`)
+• **new default**(`options?`)
 
 Iniquity BBS core class
 
@@ -53,7 +64,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[iniquity.ts:167](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L167)
+[iniquity.ts:177](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L177)
 
 ## Properties
 
@@ -63,7 +74,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[iniquity.ts:154](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L154)
+[iniquity.ts:164](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L164)
 
 ___
 
@@ -73,7 +84,7 @@ ___
 
 #### Defined in
 
-[iniquity.ts:155](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L155)
+[iniquity.ts:165](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L165)
 
 ## Methods
 
@@ -105,7 +116,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[iniquity.ts:279](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L279)
+[iniquity.ts:289](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L289)
 
 ___
 
@@ -129,7 +140,7 @@ response
 
 #### Defined in
 
-[iniquity.ts:246](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L246)
+[iniquity.ts:256](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L256)
 
 ___
 
@@ -147,7 +158,7 @@ void
 
 #### Defined in
 
-[iniquity.ts:254](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L254)
+[iniquity.ts:264](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L264)
 
 ___
 
@@ -171,7 +182,7 @@ An instance of Menu
 
 #### Defined in
 
-[iniquity.ts:290](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L290)
+[iniquity.ts:300](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L300)
 
 ___
 
@@ -195,7 +206,7 @@ Pause the cursor
 
 #### Defined in
 
-[iniquity.ts:225](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L225)
+[iniquity.ts:235](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L235)
 
 ___
 
@@ -226,7 +237,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-[iniquity.ts:208](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L208)
+[iniquity.ts:218](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L218)
 
 ___
 
@@ -256,7 +267,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-[iniquity.ts:185](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L185)
+[iniquity.ts:195](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L195)
 
 ___
 
@@ -280,7 +291,7 @@ void
 
 #### Defined in
 
-[iniquity.ts:237](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L237)
+[iniquity.ts:247](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L247)
 
 ___
 
@@ -306,4 +317,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[iniquity.ts:264](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L264)
+[iniquity.ts:274](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L274)

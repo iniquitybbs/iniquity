@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / Iniquity
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / Iniquity
 
 # Module: Iniquity
 
@@ -19,19 +19,15 @@ iq.disconnect()
 
 ## Table of contents
 
-### References
-
-- [default](Iniquity.md#default)
-
 ### Classes
 
 - [Artwork](../classes/Iniquity.Artwork.md)
 - [Group](../classes/Iniquity.Group.md)
-- [Iniquity](../classes/Iniquity.Iniquity-1.md)
 - [Menu](../classes/Iniquity.Menu.md)
 - [Network](../classes/Iniquity.Network.md)
 - [Text](../classes/Iniquity.Text.md)
 - [User](../classes/Iniquity.User.md)
+- [default](../classes/Iniquity.default.md)
 
 ### Interfaces
 
@@ -50,9 +46,3 @@ iq.disconnect()
 - [IMenuCommands](../interfaces/Iniquity.IMenuCommands.md)
 - [IMenuOptions](../interfaces/Iniquity.IMenuOptions.md)
 - [IUserOptions](../interfaces/Iniquity.IUserOptions.md)
-
-## References
-
-### default
-
-• **default**: `Object`

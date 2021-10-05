@@ -1,10 +1,11 @@
 {
     "out": "docs",
     "readme": "README.md",
-    "name": "Iniquity BBS Developer Guide",
+    "name": "Documentation",
     "defaultCategory": "Classes",
     "exclude": ["**/node_modules/**", ".vscode", ".github", "**/dist/**", "**/rollup.config.ts"],
     "excludeProtected": true,
+    "externalPattern": "app.ts",
     "entryPointStrategy": "expand",
     "json": "docs/api.json",
     "pretty": true,

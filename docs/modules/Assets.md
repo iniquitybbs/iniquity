@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / Assets
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / Assets
 
 # Module: Assets
 

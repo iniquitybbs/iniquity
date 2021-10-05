@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSConfigParams
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSConfigParams
 
 # Interface: IBBSConfigParams
 
@@ -23,7 +23,7 @@ Ibbsconfig params
 
 #### Defined in
 
-[iniquity.ts:140](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L140)
+[iniquity.ts:140](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L140)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[iniquity.ts:141](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L141)
+[iniquity.ts:141](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L141)

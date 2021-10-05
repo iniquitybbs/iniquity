@@ -1,4 +1,4 @@
-[Iniquity BBS Developer Guide - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSSayFunctions
+[Documentation - v3.0.0](../README.md) / [Exports](../modules.md) / [Iniquity](../modules/Iniquity.md) / IBBSSayFunctions
 
 # Interface: IBBSSayFunctions
 
@@ -28,4 +28,4 @@
 
 #### Defined in
 
-[iniquity.ts:107](https://github.com/iniquitybbs/iniquity/blob/996930f/packages/core/src/iniquity.ts#L107)
+[iniquity.ts:107](https://github.com/iniquitybbs/iniquity/blob/1b7703d/packages/core/src/iniquity.ts#L107)

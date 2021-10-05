@@ -147,10 +147,20 @@ export interface IIniquityOptions {
 
 /**
  * Iniquity BBS
- * @class
- * @global
+ * @summary The main class you will use as it wraps all the other classes in a unified API.
+ * @example
+ * ```typescript
+ * import Iniquity from "@iniquitybbs/iniquity"
+ *
+ * const iq = new Iniquity()
+ *
+ * iq.say("Say hi!").pause()
+ *
+ * iq.hangup()
+ * ```
+
  */
-export class Iniquity {
+class Iniquity {
     public basepath: string
     public name: string
 
