@@ -18,8 +18,8 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: npm install, build, and test
               run: |
-                  # remove after stable version released
                   npm i -g npm@7
-                  npm install
+                  npm i -f lerna
+                  lerna bootstrap
               env:
                   CI: true
