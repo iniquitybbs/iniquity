@@ -3,9 +3,13 @@
  * Iniquity CLI
  * @module CLI
  * @summary The super cool command line interface to Iniquity.
- * @example
+ * @example Invoking via the shell
+ * ```shell
+ * iq cli -h
+ * ```
+ * @example Invoking via yargs programatically
  * ```typescript
- *
+ * const cli: yargs.CommandModule = new CLI()
  * ```
  */
 
@@ -34,26 +38,25 @@ import * as path from "path"
 
 /**
  * Iniquity CLI
- * @class
- * @implements yargs.CommandModule
+ * @summary The main entry into all iniquity cli commands that are available.
+ * @implements {yargs.CommandModule}
  */
-class Init implements yargs.CommandModule {
-    public command = "cli [command]"
+export class CLI implements yargs.CommandModule {
+    public command = "cli [option]"
     public describe = "make a get HTTP request"
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
-            .options("test", {
+            .options("init", {
                 type: "string",
-                describe: "This is a test.",
+                describe: "Eventually I will initialize a new Iniquity bbs.",
                 demandOption: true
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
         console.log("here")
-
-        if (argv.test === "yes") {
+        if (argv.init === "bbs") {
             console.log("yay")
             console.log("yay")
             console.log("yay")
@@ -61,7 +64,7 @@ class Init implements yargs.CommandModule {
     }
 }
 
-const init: yargs.CommandModule = new Init()
+const cli: yargs.CommandModule = new CLI()
 
-if (process.argv.length > 2) yargs.command(init).pkgConf("iniquity").help().argv
-export default init
+if (process.argv.length > 2) yargs.command(cli).pkgConf("iniquity").help().argv
+export default cli
