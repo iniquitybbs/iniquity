@@ -31,6 +31,7 @@
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^16.10.3",
     "@types/yargs": "^17.0.3",
     "rollup": "^2.58.0",
     "typescript": "^4.4.3"
@@ -39,6 +40,7 @@
   "types": "dist/index",
   "dependencies": {
     "@bbs/synchronet": "^0.2.0",
-    "docker-cli": "^0.0.2"
+    "docker-cli": "^0.0.2",
+    "yargs": "^17.2.1"
   }
 }
