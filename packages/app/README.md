@@ -1,6 +1,6 @@
 # Iniquity App
 
-An attempt at re-creating Eternity, the original Iniquity demo board.
+A remake of Eternity, the original Iniquity bbs setup.
 
 ```text
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%

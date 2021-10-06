@@ -1,4 +1,3 @@
-
 FROM ubuntu:18.04 as synchronet
 LABEL name="synchronet"
 LABEL version="3.17b"

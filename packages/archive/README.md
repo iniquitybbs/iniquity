@@ -21,3 +21,16 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
    t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
 ==============================================================================
 ```
+
+## Synopsis
+
+I'm thinking this is like, Iniquity's built in backpack.
+
+-   Filled with all kinds of random ansi, ascii, whatever _textmode_ files.
+-   Maybe eventually it could also do some processing on these files by way of some of Synchronet's lower level text file utils. Hmm...
+
+## Install
+
+### NPM
+
+    npm install -g @iniquitybbs/archive
