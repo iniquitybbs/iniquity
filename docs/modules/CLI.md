@@ -23,4 +23,4 @@ Iniquity CLI
 
 #### Defined in
 
-[cli/src/index.ts:63](https://github.com/iniquitybbs/iniquity/blob/54dca2e/packages/cli/src/index.ts#L63)
+[cli/src/index.ts:63](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/cli/src/index.ts#L63)

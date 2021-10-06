@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[core/src/index.ts:65](https://github.com/iniquitybbs/iniquity/blob/54dca2e/packages/core/src/index.ts#L65)
+[core/src/index.ts:65](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L65)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:63](https://github.com/iniquitybbs/iniquity/blob/54dca2e/packages/core/src/index.ts#L63)
+[core/src/index.ts:63](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L63)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:64](https://github.com/iniquitybbs/iniquity/blob/54dca2e/packages/core/src/index.ts#L64)
+[core/src/index.ts:64](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L64)
