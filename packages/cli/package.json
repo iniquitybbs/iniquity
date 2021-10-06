@@ -18,7 +18,7 @@
     "url": "git+https://github.com/iniquitybbs/iniquity.git"
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build": "npm install @types/node typescript --no-save && node ./node_modules/.bin/tsc -p tsconfig.json && npx rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
@@ -38,8 +38,8 @@
   "main": "dist/index",
   "types": "dist/index",
   "bin": {
-    "iniquity": "dist/index",
-    "iq": "dist/index"
+    "iniquity": "./dist/index.js",
+    "iq": "./dist/index.js"
   },
   "dependencies": {
     "@bbs/synchronet": "^0.2.0",
