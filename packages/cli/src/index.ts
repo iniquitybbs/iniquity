@@ -1,3 +1,4 @@
+#!/bin/env node
 /**
  * Iniquity CLI
  * @module CLI
