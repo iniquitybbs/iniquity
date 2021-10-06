@@ -1,7 +1,7 @@
 /**
  * Iniquity CLI
  * @module CLI
- * @summary The super cool command line interface for all things Iniquity.
+ * @summary The super cool command line interface to Iniquity.
  * @example
  * ```typescript
  *
