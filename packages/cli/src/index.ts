@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /**
+ *
  * Iniquity CLI
  * @module CLI
  * @summary The super cool command line interface to Iniquity.
@@ -9,6 +10,7 @@
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
+ * import CLI from "@iniquitybbs/cli"
  * const cli: yargs.CommandModule = new CLI()
  * ```
  */
@@ -35,6 +37,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 import yargs from "yargs"
 import * as path from "path"
+import { exec } from "child_process"
 
 /**
  * Iniquity CLI
@@ -42,24 +45,55 @@ import * as path from "path"
  * @implements {yargs.CommandModule}
  */
 export class CLI implements yargs.CommandModule {
-    public command = "cli [option]"
-    public describe = "make a get HTTP request"
+    public command = "cli [options]"
+    public describe = "Invoke CLI commands."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
             .options("init", {
                 type: "string",
+                choices: ["name"],
                 describe: "Eventually I will initialize a new Iniquity bbs.",
-                demandOption: true
+                demandOption: false
+            })
+            .options("packages", {
+                type: "string",
+                choices: ["available", "installed"],
+                describe: "Displays a list of all packages available for use with Iniquity.",
+                demandOption: false
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
-        console.log("here")
-        if (argv.init === "bbs") {
+        if (argv.init === "food") {
             console.log("yay")
             console.log("yay")
             console.log("yay")
+        }
+        if (argv.packages) {
+            switch (argv.packages) {
+                case "available":
+                    exec("npm search @iniquitybbs", (error, stdout, stderr) => {
+                        if (error) {
+                            console.error(`exec error: ${error}`)
+                            return
+                        }
+                        console.info(stdout)
+                        console.error(stderr)
+                    })
+                    break
+                case "installed": {
+                    exec("npm list --depth 0", (error, stdout, stderr) => {
+                        if (error) {
+                            console.error(`exec error: ${error}`)
+                            return
+                        }
+                        console.info(stdout)
+                        console.error(stderr)
+                    })
+                    break
+                }
+            }
         }
     }
 }
