@@ -1,6 +1,6 @@
 {
   "name": "@iniquitybbs/app",
-  "version": "3.0.14",
+  "version": "3.0.18",
   "description": "A remake of Eternity, the original Iniquity bbs setup.",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.org",
@@ -26,7 +26,7 @@
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
   "devDependencies": {
-    "@iniquitybbs/archive": "^3.0.14",
+    "@iniquitybbs/archive": "^3.0.18",
     "@iniquitybbs/core": "^3.0.13",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
