@@ -38,7 +38,6 @@
   "main": "dist/index",
   "types": "dist/index",
   "dependencies": {
-    "@bbs/synchronet": "^0.2.0",
     "docker-cli": "^0.0.2",
     "yargs": "^17.2.1"
   }
