@@ -2,47 +2,192 @@
 
 Iniquity Core
 
-**`summary`** This is the Iniquity core bbs library. It's the foundation of any Iniquity application.
+**`summary`** The super cool command line interface to Iniquity.
 
-**`example`**
+**`example`** Invoking via the shell
+```shell
+iq cli -h
+```
+
+**`example`** Invoking via yargs programatically
 ```typescript
-import BBS from "@iniquitybbs/core"
-
-const mybbs = new BBS()
-
-mybbs.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
-
-mybbs.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
-
-mybbs.disconnect()
+import CLI from "@iniquitybbs/cli"
+const cli: yargs.CommandModule = new CLI()
 ```
 
 ## Table of contents
 
+### References
+
+- [Artwork](Core.md#artwork)
+- [BBS](Core.md#bbs)
+- [Group](Core.md#group)
+- [IArtworkOptions](Core.md#iartworkoptions)
+- [IArtworkRenderFunctions](Core.md#iartworkrenderfunctions)
+- [IArtworkRenderOptions](Core.md#iartworkrenderoptions)
+- [IBBSConfigParams](Core.md#ibbsconfigparams)
+- [IBBSPrintFunctions](Core.md#ibbsprintfunctions)
+- [IBBSSayFunctions](Core.md#ibbssayfunctions)
+- [IBBSSayOptions](Core.md#ibbssayoptions)
+- [IIniquityOptions](Core.md#iiniquityoptions)
+- [IMenuCommand](Core.md#imenucommand)
+- [IMenuCommands](Core.md#imenucommands)
+- [IMenuOptions](Core.md#imenuoptions)
+- [IQPauseOptions](Core.md#iqpauseoptions)
+- [IQPrintOptions](Core.md#iqprintoptions)
+- [IQStringUtils](Core.md#iqstringutils)
+- [IUserOptions](Core.md#iuseroptions)
+- [Menu](Core.md#menu)
+- [Network](Core.md#network)
+- [Text](Core.md#text)
+- [User](Core.md#user)
+
 ### Classes
 
-- [Artwork](../classes/Core.Artwork.md)
-- [BBS](../classes/Core.BBS.md)
-- [Group](../classes/Core.Group.md)
-- [Menu](../classes/Core.Menu.md)
-- [Network](../classes/Core.Network.md)
-- [Text](../classes/Core.Text.md)
-- [User](../classes/Core.User.md)
+- [CLI](../classes/Core.CLI.md)
 
-### Interfaces
+### Variables
 
-- [IArtworkOptions](../interfaces/Core.IArtworkOptions.md)
-- [IArtworkRenderFunctions](../interfaces/Core.IArtworkRenderFunctions.md)
-- [IArtworkRenderOptions](../interfaces/Core.IArtworkRenderOptions.md)
-- [IBBSConfigParams](../interfaces/Core.IBBSConfigParams.md)
-- [IBBSPrintFunctions](../interfaces/Core.IBBSPrintFunctions.md)
-- [IBBSSayFunctions](../interfaces/Core.IBBSSayFunctions.md)
-- [IBBSSayOptions](../interfaces/Core.IBBSSayOptions.md)
-- [IIniquityOptions](../interfaces/Core.IIniquityOptions.md)
-- [IMenuCommand](../interfaces/Core.IMenuCommand.md)
-- [IMenuCommands](../interfaces/Core.IMenuCommands.md)
-- [IMenuOptions](../interfaces/Core.IMenuOptions.md)
-- [IQPauseOptions](../interfaces/Core.IQPauseOptions.md)
-- [IQPrintOptions](../interfaces/Core.IQPrintOptions.md)
-- [IQStringUtils](../interfaces/Core.IQStringUtils.md)
-- [IUserOptions](../interfaces/Core.IUserOptions.md)
+- [default](Core.md#default)
+
+## References
+
+### Artwork
+
+• **Artwork**: `Object`
+
+___
+
+### BBS
+
+• **BBS**: `Object`
+
+___
+
+### Group
+
+• **Group**: `Object`
+
+___
+
+### IArtworkOptions
+
+• **IArtworkOptions**: `Object`
+
+___
+
+### IArtworkRenderFunctions
+
+• **IArtworkRenderFunctions**: `Object`
+
+___
+
+### IArtworkRenderOptions
+
+• **IArtworkRenderOptions**: `Object`
+
+___
+
+### IBBSConfigParams
+
+• **IBBSConfigParams**: `Object`
+
+___
+
+### IBBSPrintFunctions
+
+• **IBBSPrintFunctions**: `Object`
+
+___
+
+### IBBSSayFunctions
+
+• **IBBSSayFunctions**: `Object`
+
+___
+
+### IBBSSayOptions
+
+• **IBBSSayOptions**: `Object`
+
+___
+
+### IIniquityOptions
+
+• **IIniquityOptions**: `Object`
+
+___
+
+### IMenuCommand
+
+• **IMenuCommand**: `Object`
+
+___
+
+### IMenuCommands
+
+• **IMenuCommands**: `Object`
+
+___
+
+### IMenuOptions
+
+• **IMenuOptions**: `Object`
+
+___
+
+### IQPauseOptions
+
+• **IQPauseOptions**: `Object`
+
+___
+
+### IQPrintOptions
+
+• **IQPrintOptions**: `Object`
+
+___
+
+### IQStringUtils
+
+• **IQStringUtils**: `Object`
+
+___
+
+### IUserOptions
+
+• **IUserOptions**: `Object`
+
+___
+
+### Menu
+
+• **Menu**: `Object`
+
+___
+
+### Network
+
+• **Network**: `Object`
+
+___
+
+### Text
+
+• **Text**: `Object`
+
+___
+
+### User
+
+• **User**: `Object`
+
+## Variables
+
+### default
+
+• **default**: `yargs.CommandModule`
+
+#### Defined in
+
+[packages/core/src/index.ts:101](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/core/src/index.ts#L101)

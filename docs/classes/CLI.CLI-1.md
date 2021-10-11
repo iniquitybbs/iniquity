@@ -1,6 +1,6 @@
-# Class: Archive
+# Class: CLI
 
-[Archive](../modules/Archive.md).Archive
+[CLI](../modules/CLI.md).CLI
 
 Iniquity CLI
 
@@ -16,23 +16,23 @@ Iniquity CLI
 
 ### Constructors
 
-- [constructor](Archive.Archive-1.md#constructor)
+- [constructor](CLI.CLI-1.md#constructor)
 
 ### Properties
 
-- [command](Archive.Archive-1.md#command)
-- [describe](Archive.Archive-1.md#describe)
+- [command](CLI.CLI-1.md#command)
+- [describe](CLI.CLI-1.md#describe)
 
 ### Methods
 
-- [builder](Archive.Archive-1.md#builder)
-- [handler](Archive.Archive-1.md#handler)
+- [builder](CLI.CLI-1.md#builder)
+- [handler](CLI.CLI-1.md#handler)
 
 ## Constructors
 
 ### constructor
 
-• **new Archive**()
+• **new CLI**()
 
 ## Properties
 
@@ -46,7 +46,7 @@ yargs.CommandModule.command
 
 #### Defined in
 
-[packages/archive/src/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/archive/src/index.ts#L48)
+[packages/cli/src/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/cli/src/index.ts#L48)
 
 ___
 
@@ -60,7 +60,7 @@ yargs.CommandModule.describe
 
 #### Defined in
 
-[packages/archive/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/archive/src/index.ts#L49)
+[packages/cli/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/cli/src/index.ts#L49)
 
 ## Methods
 
@@ -84,7 +84,7 @@ yargs.CommandModule.builder
 
 #### Defined in
 
-[packages/archive/src/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/archive/src/index.ts#L51)
+[packages/cli/src/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/cli/src/index.ts#L51)
 
 ___
 
@@ -108,4 +108,4 @@ yargs.CommandModule.handler
 
 #### Defined in
 
-[packages/archive/src/index.ts:67](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/archive/src/index.ts#L67)
+[packages/cli/src/index.ts:67](https://github.com/iniquitybbs/iniquity/blob/3ed1cb9/packages/cli/src/index.ts#L67)

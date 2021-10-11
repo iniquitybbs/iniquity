@@ -9,4 +9,4 @@ services:
             - ./dist:/iniquity
             - ./data:/sbbs/data
         entrypoint: node /iniquity/core/dist/index.js
-        command: "ls -alh"
+        command: "core --help"

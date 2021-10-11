@@ -23,7 +23,7 @@ User options
 
 #### Defined in
 
-[core/src/index.ts:85](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L85)
+packages/core/src/core.ts:85
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:86](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L86)
+packages/core/src/core.ts:86

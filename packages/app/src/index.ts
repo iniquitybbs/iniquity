@@ -1,5 +1,19 @@
-import { BBS } from "@iniquitybbs/core"
-import { Textmode } from "@iniquitybbs/archive"
+#!/usr/bin/env node
+/**
+ *
+ * Iniquity CLI
+ * @module CLI
+ * @summary The super cool command line interface to Iniquity.
+ * @example Invoking via the shell
+ * ```shell
+ * iq cli -h
+ * ```
+ * @example Invoking via yargs programatically
+ * ```typescript
+ * import CLI from "@iniquitybbs/cli"
+ * const cli: yargs.CommandModule = new CLI()
+ * ```
+ */
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
@@ -21,44 +35,71 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-const bbs = new BBS()
+import yargs from "yargs"
+import * as path from "path"
+import { exec } from "child_process"
 
-const welcomeArt = bbs.artwork({ basepath: "/iniquity/archive/src/textmode" })
-welcomeArt.render({ filename: Textmode.sm_iniq2, clearScreenBefore: true, speed: 100 })
+/**
+ * Iniquity CLI
+ * @summary The main entry into all iniquity cli commands that are available.
+ * @implements {yargs.CommandModule}
+ */
+export class CLI implements yargs.CommandModule {
+    public command = "cli [options]"
+    public describe = "Invoke CLI commands."
 
-bbs.print(
-    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
-        .newlines()
-        .color("background red")
-        .center()
-).pause({ colorReset: true, newlines: 2, center: true })
-
-bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.we_iniq3 }).render({ clearScreenBefore: false })
-
-bbs.say("You've connected to a prototype of the new iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
-
-bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.d_iniq1 }).render({ speed: 100 })
-const login = bbs.ask("What is your login: ".newlines(1))
-switch (login) {
-    case "new":
-    case "signup":
-        bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.newuser1 }).render({ clearScreenBefore: true })
-
-        let newUser = bbs.user({
-            name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
-            password: bbs.ask("And your password?".newlines(2).color("white"))
-        })
-
-        bbs.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
-        bbs.disconnect()
-        break
-    default:
-        if (bbs.user({ name: login, password: bbs.ask("And your password?".newlines(2).color("white")) })) {
-            alert("somethingsync")
+    public builder = (yargs: yargs.Argv) => {
+        return yargs
+            .options("init", {
+                type: "string",
+                choices: ["name"],
+                describe: "Eventually I will initialize a new Iniquity bbs.",
+                demandOption: false
+            })
+            .options("packages", {
+                type: "string",
+                choices: ["available", "installed"],
+                describe: "Displays a list of all packages available for use with Iniquity.",
+                demandOption: false
+            })
+            .pkgConf("iniquity", path.join(__dirname))
+    }
+    public handler(argv: yargs.Arguments) {
+        if (argv.init === "food") {
+            console.log("yay")
+            console.log("yay")
+            console.log("yay")
         }
-
-        bbs.pause()
-
-        bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.d_iniq1 }).render({ clearScreenBefore: true })
-        break
+        if (argv.packages) {
+            switch (argv.packages) {
+                case "available":
+                    exec("npm search @iniquitybbs", (error, stdout, stderr) => {
+                        if (error) {
+                            console.error(`exec error: ${error}`)
+                            return
+                        }
+                        console.info(stdout)
+                        console.error(stderr)
+                    })
+                    break
+                case "installed": {
+                    exec("npm list --depth 0", (error, stdout, stderr) => {
+                        if (error) {
+                            console.error(`exec error: ${error}`)
+                            return
+                        }
+                        console.info(stdout)
+                        console.error(stderr)
+                    })
+                    break
+                }
+            }
+        }
+    }
 }
+
+const cli: yargs.CommandModule = new CLI()
+
+if (process.argv.length > 2) yargs.command(cli).pkgConf("iniquity").help().argv
+export default cli
+export * from "./app"

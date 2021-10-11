@@ -11,11 +11,10 @@
   },
   "files": [
     "dist",
-    "assets",
     "src"
   ],
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build": "npx tsc -p tsconfig.json && npx rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },

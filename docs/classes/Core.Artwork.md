@@ -51,7 +51,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[core/src/index.ts:379](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L379)
+packages/core/src/core.ts:379
 
 ## Properties
 
@@ -61,7 +61,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[core/src/index.ts:369](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L369)
+packages/core/src/core.ts:369
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:370](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L370)
+packages/core/src/core.ts:370
 
 ## Methods
 
@@ -107,4 +107,4 @@ Will render the artwork on the screen as well as provide various render function
 
 #### Defined in
 
-[core/src/index.ts:399](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L399)
+packages/core/src/core.ts:399

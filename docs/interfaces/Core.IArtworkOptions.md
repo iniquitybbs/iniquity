@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[core/src/index.ts:75](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L75)
+packages/core/src/core.ts:75
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:76](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L76)
+packages/core/src/core.ts:76

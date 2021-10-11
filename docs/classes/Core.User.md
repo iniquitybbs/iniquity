@@ -34,7 +34,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[core/src/index.ts:341](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L341)
+packages/core/src/core.ts:341
 
 ## Properties
 
@@ -44,7 +44,7 @@ Mechanisms for working with an individual iniquity user
 
 #### Defined in
 
-[core/src/index.ts:334](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L334)
+packages/core/src/core.ts:334
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:332](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L332)
+packages/core/src/core.ts:332
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:333](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L333)
+packages/core/src/core.ts:333

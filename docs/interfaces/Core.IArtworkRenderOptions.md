@@ -23,7 +23,7 @@ Iniquity artwork rendering options
 
 #### Defined in
 
-[core/src/index.ts:45](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L45)
+packages/core/src/core.ts:45
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L50)
+packages/core/src/core.ts:50
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L48)
+packages/core/src/core.ts:48
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:46](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L46)
+packages/core/src/core.ts:46
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L49)
+packages/core/src/core.ts:49
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:47](https://github.com/iniquitybbs/iniquity/blob/9e5241d/packages/core/src/index.ts#L47)
+packages/core/src/core.ts:47

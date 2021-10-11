@@ -1,20 +1,17 @@
+#!/usr/bin/env node
 /**
+ *
  * Iniquity Archive
- * @summary A growing collection of all things Iniquity. Past and present. For use in helping build your bbs.
  * @module Archive
- * @example
+ * @summary The super cool command line interface to Iniquity.
+ * @example Invoking via the shell
+ * ```shell
+ * iq cli -h
+ * ```
+ * @example Invoking via yargs programatically
  * ```typescript
- * import { Iniquity } from "@iniquitybbs/core"
- * import { Assets } from "@iniquitybbs/assets"
- *
- * const iq = new Iniquity()
- *
- * const welcomeArt = iq.artwork({ basepath: "./iniquity/bbs/assets", filename: Assets.sm_iniq2 })
- * welcomeArt.render({ clearScreenBefore: true, speed: 100 })
- *
- * iq.print(`Iniquity comes packed with easy to use assets like ${welcomeArt.filename}`).pause()
- *
- * iq.hangup()
+ * import CLI from "@iniquitybbs/cli"
+ * const cli: yargs.CommandModule = new CLI()
  * ```
  */
 
@@ -38,33 +35,71 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-/**
- * The definitive collection of iniquity ansi/asci/pescii text documents.
- * Collected from various artpacks over the decades, and various incarnations of iniquity.
- */
-export enum Textmode {
-    /**
-     * This one.
-     */
-    sm_iniq2 = "sm!iniq2.ans",
-    we_iniq3 = "we-iniq3.ans",
-    d_iniq1 = "4d-iniq1.ans",
-    newuser1 = "newuser.ans"
-}
+import yargs from "yargs"
+import * as path from "path"
+import { exec } from "child_process"
 
 /**
- * Assets constructor options
+ * Iniquity CLI
+ * @summary The main entry into all iniquity cli commands that are available.
+ * @implements {yargs.CommandModule}
  */
-export interface IQCoreAssetsOptions {
-    folder: string
+export class Archive implements yargs.CommandModule {
+    public command = "cli [options]"
+    public describe = "Invoke CLI commands."
+
+    public builder = (yargs: yargs.Argv) => {
+        return yargs
+            .options("init", {
+                type: "string",
+                choices: ["name"],
+                describe: "Eventually I will initialize a new Iniquity bbs.",
+                demandOption: false
+            })
+            .options("packages", {
+                type: "string",
+                choices: ["available", "installed"],
+                describe: "Displays a list of all packages available for use with Iniquity.",
+                demandOption: false
+            })
+            .pkgConf("iniquity", path.join(__dirname))
+    }
+    public handler(argv: yargs.Arguments) {
+        if (argv.init === "food") {
+            console.log("yay")
+            console.log("yay")
+            console.log("yay")
+        }
+        if (argv.packages) {
+            switch (argv.packages) {
+                case "available":
+                    exec("npm search @iniquitybbs", (error, stdout, stderr) => {
+                        if (error) {
+                            console.error(`exec error: ${error}`)
+                            return
+                        }
+                        console.info(stdout)
+                        console.error(stderr)
+                    })
+                    break
+                case "installed": {
+                    exec("npm list --depth 0", (error, stdout, stderr) => {
+                        if (error) {
+                            console.error(`exec error: ${error}`)
+                            return
+                        }
+                        console.info(stdout)
+                        console.error(stderr)
+                    })
+                    break
+                }
+            }
+        }
+    }
 }
 
-/**
- * Iniquity Archives
- * @summary What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCII/GIF/JPEG whatever files.
- */
-export class Archive {
-    constructor(options?: IQCoreAssetsOptions) {}
+const archive: yargs.CommandModule = new Archive()
 
-    public load() {}
-}
+if (process.argv.length > 2) yargs.command(archive).pkgConf("iniquity").help().argv
+export default archive
+export * from "./archive"
