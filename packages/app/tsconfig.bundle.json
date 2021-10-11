@@ -1,5 +1,5 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "../../tsconfig.bundle.json",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "target": "es5",
