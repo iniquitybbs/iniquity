@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 as synchronet
+FROM ubuntu:bionic as synchronet
 LABEL name="synchronet"
 LABEL version="3.17b"
 
@@ -8,7 +8,7 @@ ENV SBBSEXEC=/sbbs/exec
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install build-essential python ruby wget \
-    && apt-get -y install libncurses5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu \
+    && apt-get -y install libncurses5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu libarchive-dev \
     && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
     && apt-get -y install libmozjs-38-dev libmozjs-52-dev libcap2-dev libcap2-bin sudo lrzsz vim \ 
     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \
@@ -20,8 +20,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && echo RELEASE=1 > src/build/localdefs.mk \
     && cd src/sbbs3 \
     && echo USE_DOSEMU=1 > localdefs.mk \
-    && SBBSEXEC=/sbbs/exec make symlinks \
-    && SBBSCTRL=/sbbs/ctrl /sbbs/exec/jsexec update.js \
+    && make symlinks \
+    && /sbbs/exec/jsexec update.js \
     && apt-get -y autoremove
 
 FROM synchronet as iniquity
@@ -47,6 +47,7 @@ RUN cd /sbbs/exec/ \
     && mv answer.msg answer.msg-original ; touch answer.msg \
     && ln -s /iniquity/app/dist/bundle.js /sbbs/exec/login.js
 
+VOLUME /sbbs
 VOLUME /iniquity
 
 # Start Iniquity

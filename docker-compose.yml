@@ -9,3 +9,4 @@ services:
             - "24:24"
         volumes:
             - ./packages:/iniquity
+            - ./data:/sbbs/data

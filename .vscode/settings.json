@@ -30,6 +30,7 @@
     "**/.rollup.cache": true,
     "**/tsconfig.tsbuildinfo": true,
     "lerna.json": true,
+    "data": true,
     ".nvmrc": true
 },
   // Editor

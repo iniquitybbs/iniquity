@@ -8,3 +8,4 @@ lerna-debug.log
 .parcel-cache
 .rollup.cache
 .env
+data
