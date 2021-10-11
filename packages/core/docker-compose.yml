@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 services:
     app:
         extends:
@@ -8,3 +8,5 @@ services:
         volumes:
             - ./dist:/iniquity
             - ./data:/sbbs/data
+        entrypoint: node /iniquity/core/dist/index.js
+        command: "ls -alh"
