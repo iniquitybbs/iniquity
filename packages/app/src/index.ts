@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  *
- * Iniquity CLI
- * @module CLI
+ * Iniquity App
+ * @module App
  * @summary The super cool command line interface to Iniquity.
  * @example Invoking via the shell
  * ```shell
@@ -44,7 +44,7 @@ import { exec } from "child_process"
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class CLI implements yargs.CommandModule {
+export class App implements yargs.CommandModule {
     public command = "cli [options]"
     public describe = "Invoke CLI commands."
 
@@ -98,8 +98,7 @@ export class CLI implements yargs.CommandModule {
     }
 }
 
-const cli: yargs.CommandModule = new CLI()
+const app: yargs.CommandModule = new App()
 
-if (process.argv.length > 2) yargs.command(cli).pkgConf("iniquity").help().argv
-export default cli
-export * from "./app"
+if (process.argv.length > 2) yargs.command(app).pkgConf("iniquity").help().argv
+export default app

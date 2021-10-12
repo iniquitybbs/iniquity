@@ -1,4 +1,4 @@
-import { BBS } from "@iniquitybbs/core"
+import { BBS } from "@iniquitybbs/core/dist/core"
 import { Textmode } from "@iniquitybbs/archive"
 
 /*

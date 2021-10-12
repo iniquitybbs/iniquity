@@ -10,6 +10,6 @@
         "rootDir": "src",
         "outDir": "dist"
     },
-    "include": ["src/**/*"],
+    "include": ["src/core.ts"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
 }

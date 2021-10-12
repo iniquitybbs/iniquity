@@ -5,12 +5,12 @@
  * @summary The super cool command line interface to Iniquity.
  * @example Invoking via the shell
  * ```shell
- * iq cli -h
+ * iq core -h
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
- * import CLI from "@iniquitybbs/cli"
- * const cli: yargs.CommandModule = new CLI()
+ * import core from "@iniquitybbs/core"
+ * const core: yargs.CommandModule = new core()
  * ```
  */
 
@@ -39,13 +39,13 @@ import * as path from "path"
 import { exec } from "child_process"
 
 /**
- * Iniquity CLI
- * @summary The main entry into all iniquity cli commands that are available.
+ * Iniquity core
+ * @summary The main entry into all iniquity core commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class CLI implements yargs.CommandModule {
-    public command = "cli [options]"
-    public describe = "Invoke CLI commands."
+export class Core implements yargs.CommandModule {
+    public command = "core [options]"
+    public describe = "Invoke Core core commands."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
@@ -97,8 +97,7 @@ export class CLI implements yargs.CommandModule {
     }
 }
 
-const cli: yargs.CommandModule = new CLI()
+const core: yargs.CommandModule = new Core()
 
-if (process.argv.length > 2) yargs.command(cli).pkgConf("iniquity").help().argv
-export default cli
-export * from "./core"
+if (process.argv.length > 2) yargs.command(core).pkgConf("iniquity").help().argv
+export default core
