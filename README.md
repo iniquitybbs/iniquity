@@ -61,7 +61,7 @@ npm install -g @iniquitybbs/core
 Then...
 
 ```bash
-iniquity init --name MyBBS --template eternity
+iniquity init --name MyBBS --template euphoria
 ```
 
 Then start iniquity
