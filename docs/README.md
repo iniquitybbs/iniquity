@@ -31,7 +31,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ### Some guidng thoughts surrounding the idea of a new Iniquity BBS
 
--   A BBS software that is geared towards developers and modders.
+-   A BBS software framework that is geared towards developers and modders.
 -   Make it easy for sysops to develop and deploy BBS applications.
 -   Easily network files, messages and other forms of communication between other BBS applications.
 -   What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
@@ -52,25 +52,27 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 -   Moebius _recommended_
     -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
 
-### First, clone this repository somewhere on your system
+### Developing your own iniquity bbs
 
 ```bash
-git clone https://github.com/iniquitybbs/iniquity.git
+npm install -g @iniquitybbs/core
 ```
 
-### Inside of the iniquity directory, install the project dependencies
+Then...
 
 ```bash
-npm install
+iniquity init --name MyBBS --template euphoria
 ```
 
-### Start iniquity
+Then start iniquity
 
 ```bash
-npm start
+iniquity start
 ```
 
-## Example
+For further development and customization of your iniquity bbs, it's recommended that you use VS Code. Open up your bbs directory in VSC to take advantage of the development tooling made available by this project.
+
+### An example script representing a simple iniquity bbs
 
 ```typescript
 const iq = new Iniquity({ basepath: "/iniquity/core/assets/" })
@@ -117,6 +119,32 @@ switch (login) {
 ```
 
 [Want to learn more? Read the docs!](https://iniquitybbs.org/modules/Core.html)
+
+### Development of this project
+
+This is a monorepo project. It uses lerna for management of its packages.
+
+#### First, clone this repository somewhere on your system
+
+```bash
+git clone https://github.com/iniquitybbs/iniquity.git
+```
+
+#### Inside of the iniquity directory, install the project dependencies
+
+Will install all dependencies and bootstrap and build all packages.
+
+```bash
+npm install
+```
+
+#### Start iniquity
+
+Inside of VS Code, fire up the development server.
+
+```bash
+npm start
+```
 
 ## Discord
 

@@ -18,7 +18,7 @@
         "module": "commonjs",
         "sourceMap": true,
         "allowJs": false,
-        "rootDir": "src",
+        "rootDirs": ["src", "src/commands", "src/templates"],
         "outDir": "dist",
         "declaration": true,
         "forceConsistentCasingInFileNames": true

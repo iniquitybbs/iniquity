@@ -63,7 +63,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-packages/core/src/core.ts:180
+[core/src/index.ts:180](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L180)
 
 ## Properties
 
@@ -73,7 +73,7 @@ packages/core/src/core.ts:180
 
 #### Defined in
 
-packages/core/src/core.ts:167
+[core/src/index.ts:167](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L167)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-packages/core/src/core.ts:168
+[core/src/index.ts:168](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L168)
 
 ## Methods
 
@@ -115,7 +115,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-packages/core/src/core.ts:294
+[core/src/index.ts:294](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L294)
 
 ___
 
@@ -139,7 +139,7 @@ response
 
 #### Defined in
 
-packages/core/src/core.ts:260
+[core/src/index.ts:260](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L260)
 
 ___
 
@@ -157,7 +157,7 @@ void
 
 #### Defined in
 
-packages/core/src/core.ts:268
+[core/src/index.ts:268](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L268)
 
 ___
 
@@ -181,7 +181,7 @@ An instance of Menu
 
 #### Defined in
 
-packages/core/src/core.ts:305
+[core/src/index.ts:305](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L305)
 
 ___
 
@@ -207,7 +207,7 @@ Display a pause prompt on the screen.
 
 #### Defined in
 
-packages/core/src/core.ts:239
+[core/src/index.ts:239](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L239)
 
 ___
 
@@ -238,7 +238,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-packages/core/src/core.ts:221
+[core/src/index.ts:221](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L221)
 
 ___
 
@@ -268,7 +268,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-packages/core/src/core.ts:198
+[core/src/index.ts:198](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L198)
 
 ___
 
@@ -292,7 +292,7 @@ void
 
 #### Defined in
 
-packages/core/src/core.ts:251
+[core/src/index.ts:251](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L251)
 
 ___
 
@@ -320,4 +320,4 @@ An instance of User and its return functions.
 
 #### Defined in
 
-packages/core/src/core.ts:279
+[core/src/index.ts:279](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/index.ts#L279)

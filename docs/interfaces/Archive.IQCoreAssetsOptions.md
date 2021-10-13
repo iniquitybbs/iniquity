@@ -18,4 +18,4 @@ Assets constructor options
 
 #### Defined in
 
-packages/archive/src/archive.ts:59
+[archive/src/index.ts:59](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/archive/src/index.ts#L59)

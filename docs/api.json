@@ -5,320 +5,13 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 22,
-			"name": "Archive",
+			"id": 156,
+			"name": "App",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"comment": {
-				"shortText": "Iniquity Archive",
-				"tags": [
-					{
-						"tag": "summary",
-						"text": "A growing collection of all things Iniquity. Past and present. For use in helping build your bbs."
-					},
-					{
-						"tag": "example",
-						"text": "\n```typescript\nimport { Iniquity } from \"@iniquitybbs/core\"\nimport { Assets } from \"@iniquitybbs/assets\"\n\nconst iq = new Iniquity()\n\nconst welcomeArt = iq.artwork({ basepath: \"./iniquity/bbs/assets\", filename: Assets.sm_iniq2 })\nwelcomeArt.render({ clearScreenBefore: true, speed: 100 })\n\niq.print(`Iniquity comes packed with easy to use assets like ${welcomeArt.filename}`).pause()\n\niq.hangup()\n```\n"
-					}
-				]
-			},
-			"originalName": "archive/src/archive",
-			"children": [
-				{
-					"id": 23,
-					"name": "Textmode",
-					"kind": 8,
-					"kindString": "Enumeration",
-					"flags": {},
-					"comment": {
-						"shortText": "The definitive collection of iniquity ansi/asci/pescii text documents.\nCollected from various artpacks over the decades, and various incarnations of iniquity."
-					},
-					"children": [
-						{
-							"id": 26,
-							"name": "d_iniq1",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 51,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"4d-iniq1.ans\""
-						},
-						{
-							"id": 27,
-							"name": "newuser1",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 52,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"newuser.ans\""
-						},
-						{
-							"id": 24,
-							"name": "sm_iniq2",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"comment": {
-								"shortText": "This one."
-							},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 49,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"sm!iniq2.ans\""
-						},
-						{
-							"id": 25,
-							"name": "we_iniq3",
-							"kind": 16,
-							"kindString": "Enumeration member",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 50,
-									"character": 4
-								}
-							],
-							"defaultValue": "\"we-iniq3.ans\""
-						}
-					],
-					"groups": [
-						{
-							"title": "Enumeration members",
-							"kind": 16,
-							"children": [
-								26,
-								27,
-								24,
-								25
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "packages/archive/src/archive.ts",
-							"line": 45,
-							"character": 12
-						}
-					]
-				},
-				{
-					"id": 30,
-					"name": "Archive",
-					"kind": 128,
-					"kindString": "Class",
-					"flags": {},
-					"comment": {
-						"shortText": "Iniquity Archives",
-						"tags": [
-							{
-								"tag": "summary",
-								"text": "What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCII/GIF/JPEG whatever files.\n"
-							}
-						]
-					},
-					"children": [
-						{
-							"id": 31,
-							"name": "constructor",
-							"kind": 512,
-							"kindString": "Constructor",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 67,
-									"character": 4
-								}
-							],
-							"signatures": [
-								{
-									"id": 32,
-									"name": "new Archive",
-									"kind": 16384,
-									"kindString": "Constructor signature",
-									"flags": {},
-									"parameters": [
-										{
-											"id": 33,
-											"name": "options",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isOptional": true
-											},
-											"type": {
-												"type": "reference",
-												"id": 28,
-												"name": "IQCoreAssetsOptions"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"id": 30,
-										"name": "Archive"
-									}
-								}
-							]
-						},
-						{
-							"id": 34,
-							"name": "load",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 69,
-									"character": 11
-								}
-							],
-							"signatures": [
-								{
-									"id": 35,
-									"name": "load",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							]
-						}
-					],
-					"groups": [
-						{
-							"title": "Constructors",
-							"kind": 512,
-							"children": [
-								31
-							]
-						},
-						{
-							"title": "Methods",
-							"kind": 2048,
-							"children": [
-								34
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "packages/archive/src/archive.ts",
-							"line": 66,
-							"character": 13
-						}
-					]
-				},
-				{
-					"id": 28,
-					"name": "IQCoreAssetsOptions",
-					"kind": 256,
-					"kindString": "Interface",
-					"flags": {},
-					"comment": {
-						"shortText": "Assets constructor options"
-					},
-					"children": [
-						{
-							"id": 29,
-							"name": "folder",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "packages/archive/src/archive.ts",
-									"line": 59,
-									"character": 4
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						}
-					],
-					"groups": [
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								29
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "packages/archive/src/archive.ts",
-							"line": 58,
-							"character": 17
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Enumerations",
-					"kind": 8,
-					"children": [
-						23
-					]
-				},
-				{
-					"title": "Classes",
-					"kind": 128,
-					"children": [
-						30
-					]
-				},
-				{
-					"title": "Interfaces",
-					"kind": 256,
-					"children": [
-						28
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "packages/archive/src/archive.ts",
-					"line": 45,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 36,
-			"name": "Archive",
-			"kind": 2,
-			"kindString": "Module",
-			"flags": {},
-			"comment": {
-				"shortText": "Iniquity Archive",
+				"shortText": "Iniquity App",
 				"tags": [
 					{
 						"tag": "summary",
@@ -334,27 +27,11 @@
 					}
 				]
 			},
-			"originalName": "archive/src",
+			"originalName": "core/src/templates/euphoria",
 			"children": [
 				{
-					"id": 220,
-					"name": "IQCoreAssetsOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 28
-				},
-				{
-					"id": 219,
-					"name": "Textmode",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 23
-				},
-				{
-					"id": 37,
-					"name": "Archive",
+					"id": 157,
+					"name": "App",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
@@ -373,28 +50,28 @@
 					},
 					"children": [
 						{
-							"id": 38,
+							"id": 158,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 39,
-									"name": "new Archive",
+									"id": 159,
+									"name": "new App",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 37,
-										"name": "Archive"
+										"id": 157,
+										"name": "App"
 									}
 								}
 							]
 						},
 						{
-							"id": 40,
+							"id": 160,
 							"name": "command",
 							"kind": 1024,
 							"kindString": "Property",
@@ -403,7 +80,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/archive/src/index.ts",
+									"fileName": "core/src/templates/euphoria.ts",
 									"line": 48,
 									"character": 11
 								}
@@ -419,7 +96,7 @@
 							}
 						},
 						{
-							"id": 41,
+							"id": 161,
 							"name": "describe",
 							"kind": 1024,
 							"kindString": "Property",
@@ -428,7 +105,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/archive/src/index.ts",
+									"fileName": "core/src/templates/euphoria.ts",
 									"line": 49,
 									"character": 11
 								}
@@ -444,7 +121,7 @@
 							}
 						},
 						{
-							"id": 42,
+							"id": 162,
 							"name": "builder",
 							"kind": 2048,
 							"kindString": "Method",
@@ -453,21 +130,21 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/archive/src/index.ts",
+									"fileName": "core/src/templates/euphoria.ts",
 									"line": 51,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 43,
+									"id": 163,
 									"name": "builder",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 44,
+											"id": 164,
 											"name": "yargs",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -478,7 +155,7 @@
 													{
 														"type": "reflection",
 														"declaration": {
-															"id": 45,
+															"id": 165,
 															"name": "__type",
 															"kind": 65536,
 															"kindString": "Type literal",
@@ -499,14 +176,14 @@
 													{
 														"type": "reflection",
 														"declaration": {
-															"id": 46,
+															"id": 166,
 															"name": "__type",
 															"kind": 65536,
 															"kindString": "Type literal",
 															"flags": {},
 															"children": [
 																{
-																	"id": 47,
+																	"id": 167,
 																	"name": "init",
 																	"kind": 1024,
 																	"kindString": "Property",
@@ -531,7 +208,7 @@
 																	"title": "Properties",
 																	"kind": 1024,
 																	"children": [
-																		47
+																		167
 																	]
 																}
 															]
@@ -540,14 +217,14 @@
 													{
 														"type": "reflection",
 														"declaration": {
-															"id": 48,
+															"id": 168,
 															"name": "__type",
 															"kind": 65536,
 															"kindString": "Type literal",
 															"flags": {},
 															"children": [
 																{
-																	"id": 49,
+																	"id": 169,
 																	"name": "packages",
 																	"kind": 1024,
 																	"kindString": "Property",
@@ -572,7 +249,7 @@
 																	"title": "Properties",
 																	"kind": 1024,
 																	"children": [
-																		49
+																		169
 																	]
 																}
 															]
@@ -595,7 +272,7 @@
 							}
 						},
 						{
-							"id": 50,
+							"id": 170,
 							"name": "handler",
 							"kind": 2048,
 							"kindString": "Method",
@@ -604,21 +281,21 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/archive/src/index.ts",
+									"fileName": "core/src/templates/euphoria.ts",
 									"line": 67,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 51,
+									"id": 171,
 									"name": "handler",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 52,
+											"id": 172,
 											"name": "argv",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -626,13 +303,13 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 53,
+													"id": 173,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
 													"flags": {},
 													"indexSignature": {
-														"id": 54,
+														"id": 174,
 														"name": "__index",
 														"kind": 8192,
 														"kindString": "Index signature",
@@ -642,7 +319,7 @@
 														},
 														"parameters": [
 															{
-																"id": 55,
+																"id": 175,
 																"name": "argName",
 																"kind": 32768,
 																"flags": {},
@@ -682,29 +359,29 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								38
+								158
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								40,
-								41
+								160,
+								161
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								42,
-								50
+								162,
+								170
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/archive/src/index.ts",
+							"fileName": "core/src/templates/euphoria.ts",
 							"line": 47,
 							"character": 13
 						}
@@ -717,14 +394,14 @@
 					]
 				},
 				{
-					"id": 56,
+					"id": 176,
 					"name": "default",
 					"kind": 32,
 					"kindString": "Variable",
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "packages/archive/src/index.ts",
+							"fileName": "core/src/templates/euphoria.ts",
 							"line": 101,
 							"character": 6
 						}
@@ -738,31 +415,23 @@
 			],
 			"groups": [
 				{
-					"title": "References",
-					"kind": 16777216,
-					"children": [
-						220,
-						219
-					]
-				},
-				{
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						37
+						157
 					]
 				},
 				{
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						56
+						176
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "packages/archive/src/index.ts",
+					"fileName": "core/src/templates/euphoria.ts",
 					"line": 38,
 					"character": 0
 				}
@@ -770,12 +439,12 @@
 		},
 		{
 			"id": 1,
-			"name": "CLI",
+			"name": "Archive",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"comment": {
-				"shortText": "Iniquity CLI",
+				"shortText": "Iniquity Archive",
 				"tags": [
 					{
 						"tag": "summary",
@@ -791,11 +460,27 @@
 					}
 				]
 			},
-			"originalName": "app/src",
+			"originalName": "archive/src/commands/archive",
 			"children": [
 				{
+					"id": 178,
+					"name": "IQCoreAssetsOptions",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 28
+				},
+				{
+					"id": 177,
+					"name": "Textmode",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 23
+				},
+				{
 					"id": 2,
-					"name": "CLI",
+					"name": "Archive",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
@@ -822,14 +507,14 @@
 							"signatures": [
 								{
 									"id": 4,
-									"name": "new CLI",
+									"name": "new Archive",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
 										"id": 2,
-										"name": "CLI"
+										"name": "Archive"
 									}
 								}
 							]
@@ -844,7 +529,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/app/src/index.ts",
+									"fileName": "archive/src/commands/archive.ts",
 									"line": 48,
 									"character": 11
 								}
@@ -869,7 +554,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/app/src/index.ts",
+									"fileName": "archive/src/commands/archive.ts",
 									"line": 49,
 									"character": 11
 								}
@@ -894,7 +579,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/app/src/index.ts",
+									"fileName": "archive/src/commands/archive.ts",
 									"line": 51,
 									"character": 11
 								}
@@ -1045,7 +730,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/app/src/index.ts",
+									"fileName": "archive/src/commands/archive.ts",
 									"line": 67,
 									"character": 11
 								}
@@ -1145,7 +830,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "packages/app/src/index.ts",
+							"fileName": "archive/src/commands/archive.ts",
 							"line": 47,
 							"character": 13
 						}
@@ -1165,7 +850,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "packages/app/src/index.ts",
+							"fileName": "archive/src/commands/archive.ts",
 							"line": 101,
 							"character": 6
 						}
@@ -1178,6 +863,14 @@
 				}
 			],
 			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						178,
+						177
+					]
+				},
 				{
 					"title": "Classes",
 					"kind": 128,
@@ -1195,131 +888,190 @@
 			],
 			"sources": [
 				{
-					"fileName": "packages/app/src/index.ts",
+					"fileName": "archive/src/commands/archive.ts",
 					"line": 38,
 					"character": 0
 				}
 			]
 		},
 		{
-			"id": 57,
-			"name": "CLI",
+			"id": 22,
+			"name": "Archive",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"comment": {
-				"shortText": "Iniquity CLI",
+				"shortText": "Iniquity Archive",
 				"tags": [
 					{
 						"tag": "summary",
-						"text": "The super cool command line interface to Iniquity."
+						"text": "A growing collection of all things Iniquity. Past and present. For use in helping build your bbs."
 					},
 					{
 						"tag": "example",
-						"text": "Invoking via the shell\n```shell\niq cli -h\n```"
-					},
-					{
-						"tag": "example",
-						"text": "Invoking via yargs programatically\n```typescript\nimport CLI from \"@iniquitybbs/cli\"\nconst cli: yargs.CommandModule = new CLI()\n```\n"
+						"text": "\n```typescript\nimport { Iniquity } from \"@iniquitybbs/core\"\nimport { Assets } from \"@iniquitybbs/assets\"\n\nconst iq = new Iniquity()\n\nconst welcomeArt = iq.artwork({ basepath: \"./iniquity/bbs/assets\", filename: Assets.sm_iniq2 })\nwelcomeArt.render({ clearScreenBefore: true, speed: 100 })\n\niq.print(`Iniquity comes packed with easy to use assets like ${welcomeArt.filename}`).pause()\n\niq.hangup()\n```\n"
 					}
 				]
 			},
-			"originalName": "cli/src",
+			"originalName": "archive/src",
 			"children": [
 				{
-					"id": 58,
-					"name": "CLI",
+					"id": 23,
+					"name": "Textmode",
+					"kind": 8,
+					"kindString": "Enumeration",
+					"flags": {},
+					"comment": {
+						"shortText": "The definitive collection of iniquity ansi/asci/pescii text documents.\nCollected from various artpacks over the decades, and various incarnations of iniquity."
+					},
+					"children": [
+						{
+							"id": 26,
+							"name": "d_iniq1",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "archive/src/index.ts",
+									"line": 51,
+									"character": 4
+								}
+							],
+							"defaultValue": "\"4d-iniq1.ans\""
+						},
+						{
+							"id": 27,
+							"name": "newuser1",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "archive/src/index.ts",
+									"line": 52,
+									"character": 4
+								}
+							],
+							"defaultValue": "\"newuser.ans\""
+						},
+						{
+							"id": 24,
+							"name": "sm_iniq2",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"comment": {
+								"shortText": "This one."
+							},
+							"sources": [
+								{
+									"fileName": "archive/src/index.ts",
+									"line": 49,
+									"character": 4
+								}
+							],
+							"defaultValue": "\"sm!iniq2.ans\""
+						},
+						{
+							"id": 25,
+							"name": "we_iniq3",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "archive/src/index.ts",
+									"line": 50,
+									"character": 4
+								}
+							],
+							"defaultValue": "\"we-iniq3.ans\""
+						}
+					],
+					"groups": [
+						{
+							"title": "Enumeration members",
+							"kind": 16,
+							"children": [
+								26,
+								27,
+								24,
+								25
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "archive/src/index.ts",
+							"line": 45,
+							"character": 12
+						}
+					]
+				},
+				{
+					"id": 30,
+					"name": "Archive",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Iniquity CLI",
+						"shortText": "Iniquity Archives",
 						"tags": [
 							{
 								"tag": "summary",
-								"text": "The main entry into all iniquity cli commands that are available."
-							},
-							{
-								"tag": "implements",
-								"text": "{yargs.CommandModule}\n"
+								"text": "What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCII/GIF/JPEG whatever files.\n"
 							}
 						]
 					},
 					"children": [
 						{
-							"id": 59,
+							"id": 31,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
+							"sources": [
+								{
+									"fileName": "archive/src/index.ts",
+									"line": 67,
+									"character": 4
+								}
+							],
 							"signatures": [
 								{
-									"id": 60,
-									"name": "new CLI",
+									"id": 32,
+									"name": "new Archive",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
+									"parameters": [
+										{
+											"id": 33,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 28,
+												"name": "IQCoreAssetsOptions"
+											}
+										}
+									],
 									"type": {
 										"type": "reference",
-										"id": 58,
-										"name": "CLI"
+										"id": 30,
+										"name": "Archive"
 									}
 								}
 							]
 						},
 						{
-							"id": 61,
-							"name": "command",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/cli/src/index.ts",
-									"line": 48,
-									"character": 11
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							},
-							"defaultValue": "\"cli [options]\"",
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.command"
-							}
-						},
-						{
-							"id": 62,
-							"name": "describe",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/cli/src/index.ts",
-									"line": 49,
-									"character": 11
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							},
-							"defaultValue": "\"Invoke CLI commands.\"",
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.describe"
-							}
-						},
-						{
-							"id": 63,
-							"name": "builder",
+							"id": 34,
+							"name": "load",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
@@ -1327,228 +1079,24 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/cli/src/index.ts",
-									"line": 51,
+									"fileName": "archive/src/index.ts",
+									"line": 69,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 64,
-									"name": "builder",
+									"id": 35,
+									"name": "load",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
-									"parameters": [
-										{
-											"id": 65,
-											"name": "yargs",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "reference",
-												"typeArguments": [
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 66,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {}
-														}
-													}
-												],
-												"name": "Argv"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"typeArguments": [
-											{
-												"type": "intersection",
-												"types": [
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 67,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {},
-															"children": [
-																{
-																	"id": 68,
-																	"name": "init",
-																	"kind": 1024,
-																	"kindString": "Property",
-																	"flags": {},
-																	"type": {
-																		"type": "union",
-																		"types": [
-																			{
-																				"type": "intrinsic",
-																				"name": "undefined"
-																			},
-																			{
-																				"type": "intrinsic",
-																				"name": "string"
-																			}
-																		]
-																	}
-																}
-															],
-															"groups": [
-																{
-																	"title": "Properties",
-																	"kind": 1024,
-																	"children": [
-																		68
-																	]
-																}
-															]
-														}
-													},
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 69,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {},
-															"children": [
-																{
-																	"id": 70,
-																	"name": "packages",
-																	"kind": 1024,
-																	"kindString": "Property",
-																	"flags": {},
-																	"type": {
-																		"type": "union",
-																		"types": [
-																			{
-																				"type": "intrinsic",
-																				"name": "undefined"
-																			},
-																			{
-																				"type": "intrinsic",
-																				"name": "string"
-																			}
-																		]
-																	}
-																}
-															],
-															"groups": [
-																{
-																	"title": "Properties",
-																	"kind": 1024,
-																	"children": [
-																		70
-																	]
-																}
-															]
-														}
-													}
-												]
-											}
-										],
-										"name": "Argv"
-									},
-									"implementationOf": {
-										"type": "reference",
-										"name": "yargs.CommandModule.builder"
-									}
-								}
-							],
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.builder"
-							}
-						},
-						{
-							"id": 71,
-							"name": "handler",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/cli/src/index.ts",
-									"line": 67,
-									"character": 11
-								}
-							],
-							"signatures": [
-								{
-									"id": 72,
-									"name": "handler",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"parameters": [
-										{
-											"id": 73,
-											"name": "argv",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "reflection",
-												"declaration": {
-													"id": 74,
-													"name": "__type",
-													"kind": 65536,
-													"kindString": "Type literal",
-													"flags": {},
-													"indexSignature": {
-														"id": 75,
-														"name": "__index",
-														"kind": 8192,
-														"kindString": "Index signature",
-														"flags": {},
-														"comment": {
-															"shortText": "All remaining options"
-														},
-														"parameters": [
-															{
-																"id": 76,
-																"name": "argName",
-																"kind": 32768,
-																"flags": {},
-																"type": {
-																	"type": "intrinsic",
-																	"name": "string"
-																}
-															}
-														],
-														"type": {
-															"type": "intrinsic",
-															"name": "unknown"
-														}
-													}
-												}
-											}
-										}
-									],
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
-									},
-									"implementationOf": {
-										"type": "reference",
-										"name": "yargs.CommandModule.handler"
 									}
 								}
-							],
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.handler"
-							}
+							]
 						}
 					],
 					"groups": [
@@ -1556,86 +1104,105 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								59
-							]
-						},
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								61,
-								62
+								31
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								63,
-								71
+								34
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/cli/src/index.ts",
-							"line": 47,
+							"fileName": "archive/src/index.ts",
+							"line": 66,
 							"character": 13
-						}
-					],
-					"implementedTypes": [
-						{
-							"type": "reference",
-							"name": "CommandModule"
 						}
 					]
 				},
 				{
-					"id": 77,
-					"name": "default",
-					"kind": 32,
-					"kindString": "Variable",
+					"id": 28,
+					"name": "IQCoreAssetsOptions",
+					"kind": 256,
+					"kindString": "Interface",
 					"flags": {},
-					"sources": [
+					"comment": {
+						"shortText": "Assets constructor options"
+					},
+					"children": [
 						{
-							"fileName": "packages/cli/src/index.ts",
-							"line": 101,
-							"character": 6
+							"id": 29,
+							"name": "folder",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "archive/src/index.ts",
+									"line": 59,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
 						}
 					],
-					"type": {
-						"type": "reference",
-						"name": "yargs.CommandModule"
-					},
-					"defaultValue": "..."
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								29
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "archive/src/index.ts",
+							"line": 58,
+							"character": 17
+						}
+					]
 				}
 			],
 			"groups": [
 				{
-					"title": "Classes",
-					"kind": 128,
+					"title": "Enumerations",
+					"kind": 8,
 					"children": [
-						58
+						23
 					]
 				},
 				{
-					"title": "Variables",
-					"kind": 32,
+					"title": "Classes",
+					"kind": 128,
 					"children": [
-						77
+						30
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						28
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "packages/cli/src/index.ts",
-					"line": 38,
+					"fileName": "archive/src/index.ts",
+					"line": 45,
 					"character": 0
 				}
 			]
 		},
 		{
-			"id": 78,
+			"id": 36,
 			"name": "Core",
 			"kind": 2,
 			"kindString": "Module",
@@ -1653,10 +1220,10 @@
 					}
 				]
 			},
-			"originalName": "core/src/core",
+			"originalName": "core/src",
 			"children": [
 				{
-					"id": 188,
+					"id": 146,
 					"name": "Artwork",
 					"kind": 128,
 					"kindString": "Class",
@@ -1676,21 +1243,21 @@
 					},
 					"children": [
 						{
-							"id": 189,
+							"id": 147,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 379,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
-									"id": 190,
+									"id": 148,
 									"name": "new Artwork",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -1707,7 +1274,7 @@
 									},
 									"parameters": [
 										{
-											"id": 191,
+											"id": 149,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1717,21 +1284,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 101,
+												"id": 59,
 												"name": "IArtworkOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 188,
+										"id": 146,
 										"name": "Artwork"
 									}
 								}
 							]
 						},
 						{
-							"id": 192,
+							"id": 150,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1740,7 +1307,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 369,
 									"character": 11
 								}
@@ -1760,7 +1327,7 @@
 							}
 						},
 						{
-							"id": 193,
+							"id": 151,
 							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1769,7 +1336,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 370,
 									"character": 11
 								}
@@ -1789,21 +1356,21 @@
 							}
 						},
 						{
-							"id": 195,
+							"id": 153,
 							"name": "render",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 399,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
-									"id": 196,
+									"id": 154,
 									"name": "render",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1828,7 +1395,7 @@
 									},
 									"parameters": [
 										{
-											"id": 197,
+											"id": 155,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1840,14 +1407,14 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 79,
+												"id": 37,
 												"name": "IArtworkRenderOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 107,
+										"id": 65,
 										"name": "IArtworkRenderFunctions"
 									}
 								}
@@ -1859,35 +1426,35 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								189
+								147
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								192,
-								193
+								150,
+								151
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								195
+								153
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 368,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 134,
+					"id": 92,
 					"name": "BBS",
 					"kind": 128,
 					"kindString": "Class",
@@ -1907,21 +1474,21 @@
 					},
 					"children": [
 						{
-							"id": 135,
+							"id": 93,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 180,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
-									"id": 136,
+									"id": 94,
 									"name": "new BBS",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -1937,7 +1504,7 @@
 									},
 									"parameters": [
 										{
-											"id": 137,
+											"id": 95,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1949,21 +1516,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 132,
+												"id": 90,
 												"name": "IIniquityOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 134,
+										"id": 92,
 										"name": "BBS"
 									}
 								}
 							]
 						},
 						{
-							"id": 138,
+							"id": 96,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1972,7 +1539,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 167,
 									"character": 11
 								}
@@ -1983,7 +1550,7 @@
 							}
 						},
 						{
-							"id": 139,
+							"id": 97,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1992,7 +1559,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 168,
 									"character": 11
 								}
@@ -2003,7 +1570,7 @@
 							}
 						},
 						{
-							"id": 160,
+							"id": 118,
 							"name": "artwork",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2012,14 +1579,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 294,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 161,
+									"id": 119,
 									"name": "artwork",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2040,7 +1607,7 @@
 									},
 									"parameters": [
 										{
-											"id": 162,
+											"id": 120,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2050,21 +1617,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 101,
+												"id": 59,
 												"name": "IArtworkOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 188,
+										"id": 146,
 										"name": "Artwork"
 									}
 								}
 							]
 						},
 						{
-							"id": 152,
+							"id": 110,
 							"name": "ask",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2073,14 +1640,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 260,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 153,
+									"id": 111,
 									"name": "ask",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2091,7 +1658,7 @@
 									},
 									"parameters": [
 										{
-											"id": 154,
+											"id": 112,
 											"name": "question",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2111,7 +1678,7 @@
 							]
 						},
 						{
-							"id": 155,
+							"id": 113,
 							"name": "disconnect",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2120,14 +1687,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 268,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 156,
+									"id": 114,
 									"name": "disconnect",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2144,7 +1711,7 @@
 							]
 						},
 						{
-							"id": 163,
+							"id": 121,
 							"name": "menu",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2153,14 +1720,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 305,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 164,
+									"id": 122,
 									"name": "menu",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2171,7 +1738,7 @@
 									},
 									"parameters": [
 										{
-											"id": 165,
+											"id": 123,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2181,21 +1748,21 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 121,
+												"id": 79,
 												"name": "IMenuOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 166,
+										"id": 124,
 										"name": "Menu"
 									}
 								}
 							]
 						},
 						{
-							"id": 146,
+							"id": 104,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2204,14 +1771,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 239,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 147,
+									"id": 105,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2231,7 +1798,7 @@
 									},
 									"parameters": [
 										{
-											"id": 148,
+											"id": 106,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2240,7 +1807,7 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 90,
+												"id": 48,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -2253,7 +1820,7 @@
 							]
 						},
 						{
-							"id": 143,
+							"id": 101,
 							"name": "print",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2262,14 +1829,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 221,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 144,
+									"id": 102,
 									"name": "print",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2289,7 +1856,7 @@
 									},
 									"parameters": [
 										{
-											"id": 145,
+											"id": 103,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2306,7 +1873,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 94,
+														"id": 52,
 														"name": "IQPrintOptions"
 													}
 												]
@@ -2315,14 +1882,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 117,
+										"id": 75,
 										"name": "IBBSPrintFunctions"
 									}
 								}
 							]
 						},
 						{
-							"id": 140,
+							"id": 98,
 							"name": "say",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2331,14 +1898,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 198,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 141,
+									"id": 99,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2358,7 +1925,7 @@
 									},
 									"parameters": [
 										{
-											"id": 142,
+											"id": 100,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2375,7 +1942,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 99,
+														"id": 57,
 														"name": "IBBSSayOptions"
 													}
 												]
@@ -2384,14 +1951,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 113,
+										"id": 71,
 										"name": "IBBSSayFunctions"
 									}
 								}
 							]
 						},
 						{
-							"id": 149,
+							"id": 107,
 							"name": "sleep",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2400,14 +1967,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 251,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 150,
+									"id": 108,
 									"name": "sleep",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2418,7 +1985,7 @@
 									},
 									"parameters": [
 										{
-											"id": 151,
+											"id": 109,
 											"name": "speed",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2440,7 +2007,7 @@
 							]
 						},
 						{
-							"id": 157,
+							"id": 115,
 							"name": "user",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2449,14 +2016,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 279,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 158,
+									"id": 116,
 									"name": "user",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2477,7 +2044,7 @@
 									},
 									"parameters": [
 										{
-											"id": 159,
+											"id": 117,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2487,14 +2054,14 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 104,
+												"id": 62,
 												"name": "IUserOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 178,
+										"id": 136,
 										"name": "User"
 									}
 								}
@@ -2506,64 +2073,64 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								135
+								93
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								138,
-								139
+								96,
+								97
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								160,
-								152,
-								155,
-								163,
-								146,
-								143,
-								140,
-								149,
-								157
+								118,
+								110,
+								113,
+								121,
+								104,
+								101,
+								98,
+								107,
+								115
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 166,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 172,
+					"id": 130,
 					"name": "Group",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"children": [
 						{
-							"id": 173,
+							"id": 131,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 174,
+									"id": 132,
 									"name": "new Group",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 172,
+										"id": 130,
 										"name": "Group"
 									}
 								}
@@ -2575,69 +2142,69 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								173
+								131
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 319,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 166,
+					"id": 124,
 					"name": "Menu",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"children": [
 						{
-							"id": 167,
+							"id": 125,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 311,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
-									"id": 168,
+									"id": 126,
 									"name": "new Menu",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 169,
+											"id": 127,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 121,
+												"id": 79,
 												"name": "IMenuOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 166,
+										"id": 124,
 										"name": "Menu"
 									}
 								}
 							]
 						},
 						{
-							"id": 170,
+							"id": 128,
 							"name": "prompt",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2646,14 +2213,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 316,
 									"character": 11
 								}
 							],
 							"signatures": [
 								{
-									"id": 171,
+									"id": 129,
 									"name": "prompt",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2672,27 +2239,27 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								167
+								125
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								170
+								128
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 310,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 175,
+					"id": 133,
 					"name": "Network",
 					"kind": 128,
 					"kindString": "Class",
@@ -2708,21 +2275,21 @@
 					},
 					"children": [
 						{
-							"id": 176,
+							"id": 134,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 177,
+									"id": 135,
 									"name": "new Network",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 175,
+										"id": 133,
 										"name": "Network"
 									}
 								}
@@ -2734,20 +2301,20 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								176
+								134
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 325,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 185,
+					"id": 143,
 					"name": "Text",
 					"kind": 128,
 					"kindString": "Class",
@@ -2763,21 +2330,21 @@
 					},
 					"children": [
 						{
-							"id": 186,
+							"id": 144,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 187,
+									"id": 145,
 									"name": "new Text",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 185,
+										"id": 143,
 										"name": "Text"
 									}
 								}
@@ -2789,20 +2356,20 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								186
+								144
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 351,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 178,
+					"id": 136,
 					"name": "User",
 					"kind": 128,
 					"kindString": "Class",
@@ -2818,21 +2385,21 @@
 					},
 					"children": [
 						{
-							"id": 179,
+							"id": 137,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 341,
 									"character": 4
 								}
 							],
 							"signatures": [
 								{
-									"id": 180,
+									"id": 138,
 									"name": "new User",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -2842,28 +2409,28 @@
 									},
 									"parameters": [
 										{
-											"id": 181,
+											"id": 139,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 104,
+												"id": 62,
 												"name": "IUserOptions"
 											}
 										}
 									],
 									"type": {
 										"type": "reference",
-										"id": 178,
+										"id": 136,
 										"name": "User"
 									}
 								}
 							]
 						},
 						{
-							"id": 184,
+							"id": 142,
 							"name": "logins",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2872,7 +2439,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 334,
 									"character": 11
 								}
@@ -2884,7 +2451,7 @@
 							"defaultValue": "0"
 						},
 						{
-							"id": 182,
+							"id": 140,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2893,7 +2460,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 332,
 									"character": 11
 								}
@@ -2905,7 +2472,7 @@
 							"defaultValue": "\"\""
 						},
 						{
-							"id": 183,
+							"id": 141,
 							"name": "password",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2914,7 +2481,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 333,
 									"character": 11
 								}
@@ -2931,36 +2498,36 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								179
+								137
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								184,
-								182,
-								183
+								142,
+								140,
+								141
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 331,
 							"character": 13
 						}
 					]
 				},
 				{
-					"id": 101,
+					"id": 59,
 					"name": "IArtworkOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 102,
+							"id": 60,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2969,7 +2536,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 75,
 									"character": 4
 								}
@@ -2980,7 +2547,7 @@
 							}
 						},
 						{
-							"id": 103,
+							"id": 61,
 							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2989,7 +2556,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 76,
 									"character": 4
 								}
@@ -3005,21 +2572,21 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								102,
-								103
+								60,
+								61
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 74,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 107,
+					"id": 65,
 					"name": "IArtworkRenderFunctions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -3039,14 +2606,14 @@
 					},
 					"children": [
 						{
-							"id": 111,
+							"id": 69,
 							"name": "colorReset",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 112,
+									"id": 70,
 									"name": "colorReset",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3062,14 +2629,14 @@
 							]
 						},
 						{
-							"id": 108,
+							"id": 66,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 109,
+									"id": 67,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3084,7 +2651,7 @@
 									},
 									"parameters": [
 										{
-											"id": 110,
+											"id": 68,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3094,7 +2661,7 @@
 											"comment": {},
 											"type": {
 												"type": "reference",
-												"id": 90,
+												"id": 48,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -3112,21 +2679,21 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								111,
-								108
+								69,
+								66
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 93,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 79,
+					"id": 37,
 					"name": "IArtworkRenderOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -3136,7 +2703,7 @@
 					},
 					"children": [
 						{
-							"id": 80,
+							"id": 38,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3145,7 +2712,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 45,
 									"character": 4
 								}
@@ -3156,7 +2723,7 @@
 							}
 						},
 						{
-							"id": 85,
+							"id": 43,
 							"name": "clearScreenBefore",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3165,7 +2732,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 50,
 									"character": 4
 								}
@@ -3176,7 +2743,7 @@
 							}
 						},
 						{
-							"id": 83,
+							"id": 41,
 							"name": "encoding",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3185,7 +2752,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 48,
 									"character": 4
 								}
@@ -3205,7 +2772,7 @@
 							}
 						},
 						{
-							"id": 81,
+							"id": 39,
 							"name": "filename",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3214,7 +2781,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 46,
 									"character": 4
 								}
@@ -3225,7 +2792,7 @@
 							}
 						},
 						{
-							"id": 84,
+							"id": 42,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3234,7 +2801,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 49,
 									"character": 4
 								}
@@ -3254,7 +2821,7 @@
 							}
 						},
 						{
-							"id": 82,
+							"id": 40,
 							"name": "speed",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3263,7 +2830,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 47,
 									"character": 4
 								}
@@ -3279,25 +2846,25 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								80,
-								85,
-								83,
-								81,
-								84,
-								82
+								38,
+								43,
+								41,
+								39,
+								42,
+								40
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 44,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 129,
+					"id": 87,
 					"name": "IBBSConfigParams",
 					"kind": 256,
 					"kindString": "Interface",
@@ -3314,14 +2881,14 @@
 					},
 					"children": [
 						{
-							"id": 130,
+							"id": 88,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 143,
 									"character": 4
 								}
@@ -3332,14 +2899,14 @@
 							}
 						},
 						{
-							"id": 131,
+							"id": 89,
 							"name": "sysop",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 144,
 									"character": 4
 								}
@@ -3355,35 +2922,35 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								130,
-								131
+								88,
+								89
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 142,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 117,
+					"id": 75,
 					"name": "IBBSPrintFunctions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 118,
+							"id": 76,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 119,
+									"id": 77,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3398,7 +2965,7 @@
 									},
 									"parameters": [
 										{
-											"id": 120,
+											"id": 78,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3408,7 +2975,7 @@
 											"comment": {},
 											"type": {
 												"type": "reference",
-												"id": 90,
+												"id": 48,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -3426,34 +2993,34 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								118
+								76
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 112,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 113,
+					"id": 71,
 					"name": "IBBSSayFunctions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 114,
+							"id": 72,
 							"name": "pause",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 115,
+									"id": 73,
 									"name": "pause",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3461,7 +3028,7 @@
 									"comment": {},
 									"parameters": [
 										{
-											"id": 116,
+											"id": 74,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3473,7 +3040,7 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 90,
+												"id": 48,
 												"name": "IQPauseOptions"
 											}
 										}
@@ -3491,34 +3058,34 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								114
+								72
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 105,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 99,
+					"id": 57,
 					"name": "IBBSSayOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 100,
+							"id": 58,
 							"name": "text",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 72,
 									"character": 4
 								}
@@ -3534,27 +3101,27 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								100
+								58
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 71,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 132,
+					"id": 90,
 					"name": "IIniquityOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 133,
+							"id": 91,
 							"name": "basepath",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3563,7 +3130,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 148,
 									"character": 4
 								}
@@ -3579,34 +3146,34 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								133
+								91
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 147,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 126,
+					"id": 84,
 					"name": "IMenuCommand",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 127,
+							"id": 85,
 							"name": "key",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 135,
 									"character": 4
 								}
@@ -3617,14 +3184,14 @@
 							}
 						},
 						{
-							"id": 128,
+							"id": 86,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 136,
 									"character": 4
 								}
@@ -3640,42 +3207,42 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								127,
-								128
+								85,
+								86
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 134,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 124,
+					"id": 82,
 					"name": "IMenuCommands",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 125,
+							"id": 83,
 							"name": "command",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 131,
 									"character": 4
 								}
 							],
 							"type": {
 								"type": "reference",
-								"id": 126,
+								"id": 84,
 								"name": "IMenuCommand"
 							}
 						}
@@ -3685,20 +3252,20 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								125
+								83
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 130,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 121,
+					"id": 79,
 					"name": "IMenuOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -3720,14 +3287,14 @@
 					},
 					"children": [
 						{
-							"id": 122,
+							"id": 80,
 							"name": "key",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 126,
 									"character": 4
 								}
@@ -3738,14 +3305,14 @@
 							}
 						},
 						{
-							"id": 123,
+							"id": 81,
 							"name": "options",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 127,
 									"character": 4
 								}
@@ -3764,28 +3331,28 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								122,
-								123
+								80,
+								81
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 125,
 							"character": 17
 						}
 					]
 				},
 				{
-					"id": 90,
+					"id": 48,
 					"name": "IQPauseOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 93,
+							"id": 51,
 							"name": "center",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3794,7 +3361,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 65,
 									"character": 4
 								}
@@ -3805,12 +3372,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 89,
+								"id": 47,
 								"name": "IQStringUtils.center"
 							}
 						},
 						{
-							"id": 91,
+							"id": 49,
 							"name": "colorReset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3819,7 +3386,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 63,
 									"character": 4
 								}
@@ -3830,12 +3397,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 87,
+								"id": 45,
 								"name": "IQStringUtils.colorReset"
 							}
 						},
 						{
-							"id": 92,
+							"id": 50,
 							"name": "newlines",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3844,7 +3411,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 64,
 									"character": 4
 								}
@@ -3855,7 +3422,7 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 88,
+								"id": 46,
 								"name": "IQStringUtils.newlines"
 							}
 						}
@@ -3865,15 +3432,15 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								93,
-								91,
-								92
+								51,
+								49,
+								50
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 67,
 							"character": 17
 						}
@@ -3881,20 +3448,20 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"id": 86,
+							"id": 44,
 							"name": "IQStringUtils"
 						}
 					]
 				},
 				{
-					"id": 94,
+					"id": 52,
 					"name": "IQPrintOptions",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 98,
+							"id": 56,
 							"name": "center",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3903,7 +3470,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 65,
 									"character": 4
 								}
@@ -3914,12 +3481,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 89,
+								"id": 47,
 								"name": "IQStringUtils.center"
 							}
 						},
 						{
-							"id": 96,
+							"id": 54,
 							"name": "colorReset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3928,7 +3495,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 63,
 									"character": 4
 								}
@@ -3939,12 +3506,12 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 87,
+								"id": 45,
 								"name": "IQStringUtils.colorReset"
 							}
 						},
 						{
-							"id": 97,
+							"id": 55,
 							"name": "newlines",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3953,7 +3520,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 64,
 									"character": 4
 								}
@@ -3964,19 +3531,19 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"id": 88,
+								"id": 46,
 								"name": "IQStringUtils.newlines"
 							}
 						},
 						{
-							"id": 95,
+							"id": 53,
 							"name": "text",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 69,
 									"character": 4
 								}
@@ -3992,16 +3559,16 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								98,
-								96,
-								97,
-								95
+								56,
+								54,
+								55,
+								53
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 68,
 							"character": 17
 						}
@@ -4009,13 +3576,13 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"id": 86,
+							"id": 44,
 							"name": "IQStringUtils"
 						}
 					]
 				},
 				{
-					"id": 86,
+					"id": 44,
 					"name": "IQStringUtils",
 					"kind": 256,
 					"kindString": "Interface",
@@ -4050,7 +3617,7 @@
 					},
 					"children": [
 						{
-							"id": 89,
+							"id": 47,
 							"name": "center",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4059,7 +3626,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 65,
 									"character": 4
 								}
@@ -4070,7 +3637,7 @@
 							}
 						},
 						{
-							"id": 87,
+							"id": 45,
 							"name": "colorReset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4079,7 +3646,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 63,
 									"character": 4
 								}
@@ -4090,7 +3657,7 @@
 							}
 						},
 						{
-							"id": 88,
+							"id": 46,
 							"name": "newlines",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4099,7 +3666,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 64,
 									"character": 4
 								}
@@ -4115,15 +3682,15 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								89,
-								87,
-								88
+								47,
+								45,
+								46
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 62,
 							"character": 17
 						}
@@ -4131,18 +3698,18 @@
 					"extendedBy": [
 						{
 							"type": "reference",
-							"id": 90,
+							"id": 48,
 							"name": "IQPauseOptions"
 						},
 						{
 							"type": "reference",
-							"id": 94,
+							"id": 52,
 							"name": "IQPrintOptions"
 						}
 					]
 				},
 				{
-					"id": 104,
+					"id": 62,
 					"name": "IUserOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -4164,14 +3731,14 @@
 					},
 					"children": [
 						{
-							"id": 105,
+							"id": 63,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 85,
 									"character": 4
 								}
@@ -4182,14 +3749,14 @@
 							}
 						},
 						{
-							"id": 106,
+							"id": 64,
 							"name": "password",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/core.ts",
+									"fileName": "core/src/index.ts",
 									"line": 86,
 									"character": 4
 								}
@@ -4205,14 +3772,14 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								105,
-								106
+								63,
+								64
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/core.ts",
+							"fileName": "core/src/index.ts",
 							"line": 84,
 							"character": 17
 						}
@@ -4224,678 +3791,41 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						188,
-						134,
-						172,
-						166,
-						175,
-						185,
-						178
+						146,
+						92,
+						130,
+						124,
+						133,
+						143,
+						136
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						101,
-						107,
-						79,
-						129,
-						117,
-						113,
-						99,
-						132,
-						126,
-						124,
-						121,
+						59,
+						65,
+						37,
+						87,
+						75,
+						71,
+						57,
 						90,
-						94,
-						86,
-						104
+						84,
+						82,
+						79,
+						48,
+						52,
+						44,
+						62
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "packages/core/src/core.ts",
+					"fileName": "core/src/index.ts",
 					"line": 39,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 198,
-			"name": "Core",
-			"kind": 2,
-			"kindString": "Module",
-			"flags": {},
-			"comment": {
-				"shortText": "Iniquity Core",
-				"tags": [
-					{
-						"tag": "summary",
-						"text": "The super cool command line interface to Iniquity."
-					},
-					{
-						"tag": "example",
-						"text": "Invoking via the shell\n```shell\niq cli -h\n```"
-					},
-					{
-						"tag": "example",
-						"text": "Invoking via yargs programatically\n```typescript\nimport CLI from \"@iniquitybbs/cli\"\nconst cli: yargs.CommandModule = new CLI()\n```\n"
-					}
-				]
-			},
-			"originalName": "core/src",
-			"children": [
-				{
-					"id": 242,
-					"name": "Artwork",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 188
-				},
-				{
-					"id": 236,
-					"name": "BBS",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 134
-				},
-				{
-					"id": 238,
-					"name": "Group",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 172
-				},
-				{
-					"id": 226,
-					"name": "IArtworkOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 101
-				},
-				{
-					"id": 228,
-					"name": "IArtworkRenderFunctions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 107
-				},
-				{
-					"id": 221,
-					"name": "IArtworkRenderOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 79
-				},
-				{
-					"id": 234,
-					"name": "IBBSConfigParams",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 129
-				},
-				{
-					"id": 230,
-					"name": "IBBSPrintFunctions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 117
-				},
-				{
-					"id": 229,
-					"name": "IBBSSayFunctions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 113
-				},
-				{
-					"id": 225,
-					"name": "IBBSSayOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 99
-				},
-				{
-					"id": 235,
-					"name": "IIniquityOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 132
-				},
-				{
-					"id": 233,
-					"name": "IMenuCommand",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 126
-				},
-				{
-					"id": 232,
-					"name": "IMenuCommands",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 124
-				},
-				{
-					"id": 231,
-					"name": "IMenuOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 121
-				},
-				{
-					"id": 223,
-					"name": "IQPauseOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 90
-				},
-				{
-					"id": 224,
-					"name": "IQPrintOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 94
-				},
-				{
-					"id": 222,
-					"name": "IQStringUtils",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 86
-				},
-				{
-					"id": 227,
-					"name": "IUserOptions",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 104
-				},
-				{
-					"id": 237,
-					"name": "Menu",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 166
-				},
-				{
-					"id": 239,
-					"name": "Network",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 175
-				},
-				{
-					"id": 241,
-					"name": "Text",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 185
-				},
-				{
-					"id": 240,
-					"name": "User",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 178
-				},
-				{
-					"id": 199,
-					"name": "CLI",
-					"kind": 128,
-					"kindString": "Class",
-					"flags": {},
-					"comment": {
-						"shortText": "Iniquity CLI",
-						"tags": [
-							{
-								"tag": "summary",
-								"text": "The main entry into all iniquity cli commands that are available."
-							},
-							{
-								"tag": "implements",
-								"text": "{yargs.CommandModule}\n"
-							}
-						]
-					},
-					"children": [
-						{
-							"id": 200,
-							"name": "constructor",
-							"kind": 512,
-							"kindString": "Constructor",
-							"flags": {},
-							"signatures": [
-								{
-									"id": 201,
-									"name": "new CLI",
-									"kind": 16384,
-									"kindString": "Constructor signature",
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"id": 199,
-										"name": "CLI"
-									}
-								}
-							]
-						},
-						{
-							"id": 202,
-							"name": "command",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/core/src/index.ts",
-									"line": 48,
-									"character": 11
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							},
-							"defaultValue": "\"cli [options]\"",
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.command"
-							}
-						},
-						{
-							"id": 203,
-							"name": "describe",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/core/src/index.ts",
-									"line": 49,
-									"character": 11
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							},
-							"defaultValue": "\"Invoke CLI commands.\"",
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.describe"
-							}
-						},
-						{
-							"id": 204,
-							"name": "builder",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/core/src/index.ts",
-									"line": 51,
-									"character": 11
-								}
-							],
-							"signatures": [
-								{
-									"id": 205,
-									"name": "builder",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"parameters": [
-										{
-											"id": 206,
-											"name": "yargs",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "reference",
-												"typeArguments": [
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 207,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {}
-														}
-													}
-												],
-												"name": "Argv"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"typeArguments": [
-											{
-												"type": "intersection",
-												"types": [
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 208,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {},
-															"children": [
-																{
-																	"id": 209,
-																	"name": "init",
-																	"kind": 1024,
-																	"kindString": "Property",
-																	"flags": {},
-																	"type": {
-																		"type": "union",
-																		"types": [
-																			{
-																				"type": "intrinsic",
-																				"name": "undefined"
-																			},
-																			{
-																				"type": "intrinsic",
-																				"name": "string"
-																			}
-																		]
-																	}
-																}
-															],
-															"groups": [
-																{
-																	"title": "Properties",
-																	"kind": 1024,
-																	"children": [
-																		209
-																	]
-																}
-															]
-														}
-													},
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 210,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {},
-															"children": [
-																{
-																	"id": 211,
-																	"name": "packages",
-																	"kind": 1024,
-																	"kindString": "Property",
-																	"flags": {},
-																	"type": {
-																		"type": "union",
-																		"types": [
-																			{
-																				"type": "intrinsic",
-																				"name": "undefined"
-																			},
-																			{
-																				"type": "intrinsic",
-																				"name": "string"
-																			}
-																		]
-																	}
-																}
-															],
-															"groups": [
-																{
-																	"title": "Properties",
-																	"kind": 1024,
-																	"children": [
-																		211
-																	]
-																}
-															]
-														}
-													}
-												]
-											}
-										],
-										"name": "Argv"
-									},
-									"implementationOf": {
-										"type": "reference",
-										"name": "yargs.CommandModule.builder"
-									}
-								}
-							],
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.builder"
-							}
-						},
-						{
-							"id": 212,
-							"name": "handler",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {
-								"isPublic": true
-							},
-							"sources": [
-								{
-									"fileName": "packages/core/src/index.ts",
-									"line": 67,
-									"character": 11
-								}
-							],
-							"signatures": [
-								{
-									"id": 213,
-									"name": "handler",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"parameters": [
-										{
-											"id": 214,
-											"name": "argv",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "reflection",
-												"declaration": {
-													"id": 215,
-													"name": "__type",
-													"kind": 65536,
-													"kindString": "Type literal",
-													"flags": {},
-													"indexSignature": {
-														"id": 216,
-														"name": "__index",
-														"kind": 8192,
-														"kindString": "Index signature",
-														"flags": {},
-														"comment": {
-															"shortText": "All remaining options"
-														},
-														"parameters": [
-															{
-																"id": 217,
-																"name": "argName",
-																"kind": 32768,
-																"flags": {},
-																"type": {
-																	"type": "intrinsic",
-																	"name": "string"
-																}
-															}
-														],
-														"type": {
-															"type": "intrinsic",
-															"name": "unknown"
-														}
-													}
-												}
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									},
-									"implementationOf": {
-										"type": "reference",
-										"name": "yargs.CommandModule.handler"
-									}
-								}
-							],
-							"implementationOf": {
-								"type": "reference",
-								"name": "yargs.CommandModule.handler"
-							}
-						}
-					],
-					"groups": [
-						{
-							"title": "Constructors",
-							"kind": 512,
-							"children": [
-								200
-							]
-						},
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								202,
-								203
-							]
-						},
-						{
-							"title": "Methods",
-							"kind": 2048,
-							"children": [
-								204,
-								212
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "packages/core/src/index.ts",
-							"line": 47,
-							"character": 13
-						}
-					],
-					"implementedTypes": [
-						{
-							"type": "reference",
-							"name": "CommandModule"
-						}
-					]
-				},
-				{
-					"id": 218,
-					"name": "default",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "packages/core/src/index.ts",
-							"line": 101,
-							"character": 6
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "yargs.CommandModule"
-					},
-					"defaultValue": "..."
-				}
-			],
-			"groups": [
-				{
-					"title": "References",
-					"kind": 16777216,
-					"children": [
-						242,
-						236,
-						238,
-						226,
-						228,
-						221,
-						234,
-						230,
-						229,
-						225,
-						235,
-						233,
-						232,
-						231,
-						223,
-						224,
-						222,
-						227,
-						237,
-						239,
-						241,
-						240
-					]
-				},
-				{
-					"title": "Classes",
-					"kind": 128,
-					"children": [
-						199
-					]
-				},
-				{
-					"title": "Variables",
-					"kind": 32,
-					"children": [
-						218
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "packages/core/src/index.ts",
-					"line": 38,
 					"character": 0
 				}
 			]
@@ -4906,12 +3836,10 @@
 			"title": "Modules",
 			"kind": 2,
 			"children": [
-				22,
-				36,
+				156,
 				1,
-				57,
-				78,
-				198
+				22,
+				36
 			]
 		}
 	]

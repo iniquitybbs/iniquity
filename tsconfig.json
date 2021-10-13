@@ -18,11 +18,8 @@
         "module": "commonjs",
         "sourceMap": true,
         "allowJs": false,
-        "rootDir": "src",
-        "outDir": "dist",
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*"],
     "exclude": [".vscode", "dist", "node_modules"]
 }
