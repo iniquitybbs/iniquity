@@ -8,5 +8,5 @@ services:
         volumes:
             - ./dist:/iniquity
             - ./data:/sbbs/data
-        entrypoint: node /iniquity/core/dist/index.js
+        entrypoint: node /iniquity/core/dist/commands/iniquity.js
         command: "core --help"
