@@ -24,5 +24,6 @@
         "forceConsistentCasingInFileNames": true
     },
     "include": ["src/**/*.ts"],
-    "exclude": [".vscode", "dist", "node_modules"]
+    "exclude": [".vscode", "dist", "node_modules"],
+    "references": [{ "path": "../core" }]
 }

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  *
- * Iniquity Archive
- * @module Archive
+ * Iniquity App
+ * @module App
  * @summary The super cool command line interface to Iniquity.
  * @example Invoking via the shell
  * ```shell
@@ -40,20 +40,19 @@ import * as path from "path"
 import { exec } from "child_process"
 
 /**
- * Iniquity Archive
+ * Iniquity CLI
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class Archive implements yargs.CommandModule {
-    public command = "archive [options]"
-    public describe = "Invoke Archive commands."
+export class App implements yargs.CommandModule {
+    public command = "init [options]"
+    public describe = "Invoke CLI commands."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
-            .options("init", {
+            .options("name", {
                 type: "string",
-                choices: ["name"],
-                describe: "Eventually I will initialize a new Iniquity bbs.",
+                describe: "The name of your bbs.",
                 demandOption: false
             })
             .options("packages", {
@@ -98,8 +97,7 @@ export class Archive implements yargs.CommandModule {
     }
 }
 
-const archive: yargs.CommandModule = new Archive()
+const app: yargs.CommandModule = new App()
 
-if (process.argv.length > 2) yargs.command(archive).pkgConf("iniquity").help().argv
-export default archive
-export * from ".."
+if (process.argv.length > 2) yargs.command(app).pkgConf("iniquity").help().argv
+export default app
