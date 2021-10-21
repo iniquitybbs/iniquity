@@ -38,8 +38,8 @@
   "main": "dist/src/index",
   "types": "dist/src/index",
   "bin": {
-    "iniquity": "./dist/src/index.js",
-    "iq": "./dist/src/index.js"
+    "iniquity": "./dist/src/commands/cli.js",
+    "iq": "./dist/src/commands/cli.js"
   },
   "dependencies": {
     "docker-cli": "^0.0.2",
