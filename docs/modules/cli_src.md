@@ -14,4 +14,4 @@
 
 #### Defined in
 
-[cli/src/index.ts:33](https://github.com/iniquitybbs/iniquity/blob/98451f1/packages/cli/src/index.ts#L33)
+[cli/src/index.ts:18](https://github.com/iniquitybbs/iniquity/blob/b7eb303/packages/cli/src/index.ts#L18)

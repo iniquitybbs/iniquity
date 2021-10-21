@@ -55,7 +55,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ### Developing your own iniquity bbs
 
 ```bash
-npm install -g @iniquitybbs/core
+npm install -g @iniquitybbs/cli
 ```
 
 Then...

@@ -38,7 +38,7 @@ Iniquity CLI
 
 ### command
 
-• **command**: `string` = `"cli [options]"`
+• **command**: `string` = `"core [options]"`
 
 #### Implementation of
 
@@ -46,7 +46,7 @@ yargs.CommandModule.command
 
 #### Defined in
 
-[core/src/templates/euphoria.ts:48](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/templates/euphoria.ts#L48)
+[core/src/commands/core.ts:48](https://github.com/iniquitybbs/iniquity/blob/b7eb303/packages/core/src/commands/core.ts#L48)
 
 ___
 
@@ -60,13 +60,13 @@ yargs.CommandModule.describe
 
 #### Defined in
 
-[core/src/templates/euphoria.ts:49](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/templates/euphoria.ts#L49)
+[core/src/commands/core.ts:49](https://github.com/iniquitybbs/iniquity/blob/b7eb303/packages/core/src/commands/core.ts#L49)
 
 ## Methods
 
 ### builder
 
-▸ **builder**(`yargs`): `Argv`<{ `init`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
+▸ **builder**(`yargs`): `Argv`<{ `name`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
 
 #### Parameters
 
@@ -76,7 +76,7 @@ yargs.CommandModule.describe
 
 #### Returns
 
-`Argv`<{ `init`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
+`Argv`<{ `name`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
 
 #### Implementation of
 
@@ -84,7 +84,7 @@ yargs.CommandModule.builder
 
 #### Defined in
 
-[core/src/templates/euphoria.ts:51](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/templates/euphoria.ts#L51)
+[core/src/commands/core.ts:51](https://github.com/iniquitybbs/iniquity/blob/b7eb303/packages/core/src/commands/core.ts#L51)
 
 ___
 
@@ -108,4 +108,4 @@ yargs.CommandModule.handler
 
 #### Defined in
 
-[core/src/templates/euphoria.ts:67](https://github.com/iniquitybbs/iniquity/blob/ff00de6/packages/core/src/templates/euphoria.ts#L67)
+[core/src/commands/core.ts:66](https://github.com/iniquitybbs/iniquity/blob/b7eb303/packages/core/src/commands/core.ts#L66)
