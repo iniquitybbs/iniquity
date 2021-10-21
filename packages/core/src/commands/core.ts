@@ -45,7 +45,7 @@ import { exec } from "child_process"
  * @implements {yargs.CommandModule}
  */
 export class App implements yargs.CommandModule {
-    public command = "init [options]"
+    public command = "core [options]"
     public describe = "Invoke CLI commands."
 
     public builder = (yargs: yargs.Argv) => {
