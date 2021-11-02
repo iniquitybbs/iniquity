@@ -1,5 +1,5 @@
 import { BBS } from "../"
-import { Textmode } from "@iniquitybbs/archive"
+import { Textmode } from "../../../archive"
 
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%

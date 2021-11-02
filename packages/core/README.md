@@ -21,3 +21,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
    t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
 ==============================================================================
 ```
+
+## The idea
+
+Exposes an sbbs compatible interface, a cli interface, and some examples of how to do all that.

@@ -6,7 +6,7 @@
         "composite": true,
         "strictFunctionTypes": false,
         "allowSyntheticDefaultImports": true,
-        "target": "es2019",
+        "target": "es3",
         "moduleResolution": "node",
         "esModuleInterop": true,
         "resolveJsonModule": true,
