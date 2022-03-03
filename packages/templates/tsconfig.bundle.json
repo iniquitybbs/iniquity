@@ -1,0 +1,15 @@
+{
+    "extends": "../../tsconfig.bundle.json",
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "types": ["node"],
+        "skipLibCheck": true,
+        "resolveJsonModule": false,
+        "module": "es2015",
+        "target": "ES3",
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": ["src/examples/bbs.ts"],
+    "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
+}

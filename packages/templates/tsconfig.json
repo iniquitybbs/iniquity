@@ -1,0 +1,28 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "incremental": true,
+        "strict": true,
+        "composite": true,
+        "strictFunctionTypes": false,
+        "allowSyntheticDefaultImports": true,
+        "target": "es2015",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "types": ["node"],
+        "baseUrl": ".",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "module": "commonjs",
+        "sourceMap": true,
+        "allowJs": false,
+        "rootDir": "src",
+        "outDir": "dist",
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": [".vscode", "dist", "node_modules"]
+}
