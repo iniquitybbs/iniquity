@@ -32,7 +32,7 @@
     "lerna.json": true,
     "data": true,
     ".nvmrc": true
-},
+  },
   // Editor
   "editor.quickSuggestions": {
     "strings": true

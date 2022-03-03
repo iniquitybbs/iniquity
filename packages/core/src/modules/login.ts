@@ -1,16 +1,15 @@
 import { BBS } from "../index"
-import { Textmode } from "../../../archive"
 
 const bbs = new BBS()
 
 bbs.say("You've connected to a prototype of the new iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
 
-bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.d_iniq1 }).render({ speed: 100 })
+bbs.artwork({ basepath: "/iniquity/core/assets/", filename: "5m-hodl4a.ans" }).render({ speed: 100 })
 const login = bbs.ask("What is your login: ".newlines(1))
 switch (login) {
     case "new":
     case "signup":
-        bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.newuser1 }).render({ clearScreenBefore: true })
+        bbs.artwork({ basepath: "/iniquity/core/assets/", filename: "5m-ink2menu.ans" }).render({ clearScreenBefore: true })
 
         let newUser = bbs.user({
             name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
@@ -27,6 +26,6 @@ switch (login) {
 
         bbs.pause()
 
-        bbs.artwork({ basepath: "/iniquity/archive/src/textmode/", filename: Textmode.d_iniq1 }).render({ clearScreenBefore: true })
+        bbs.artwork({ basepath: "/iniquity/core/assets/", filename: "5m-matrix-1b2.ans" }).render({ clearScreenBefore: true })
         break
 }
