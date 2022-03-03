@@ -29,28 +29,36 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ## Introduction
 
+### In a recent chat with Jack Plash
+
+ispyhumanfly said to JP...
+
+```text
+Well, being honest, I have rather forward thinking ideas as well, however, for this to really stay "iniquity/bbs in general" we need someone who can help us there. I realize this in myself being honest. I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love, absolutely. Also, someone should be able to create an entirely new terminal style application with it. These are the three main things for me.
+```
+
 ### Some guidng thoughts surrounding the idea of a new Iniquity BBS
 
--   A BBS software framework that is geared towards developers and modders.
--   Make it easy for sysops to develop and deploy BBS applications.
--   Easily network files, messages and other forms of communication between other BBS applications.
--   What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
-    -   Though the ability to do interesting things specific to terminal/web should exist.
+- A BBS software framework that is geared towards developers and modders.
+- Make it easy for sysops to develop and deploy BBS applications.
+- Easily network files, messages and other forms of communication between other BBS applications.
+- What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
+  - Though the ability to do interesting things specific to terminal/web should exist.
 
 ## Getting started
 
 ### Your development environment should contain something like this, or similar
 
--   macOS / Windows / Linux _required_
-    -   These modern operating systems are currently supported.
--   Docker Desktop for macOS / Windows or Docker Machine _required_
-    -   The Iniquity BBS runtime is executed inside of a Docker container for portability.
--   Node.js & NPM _required_
-    -   The Node community tools are used for TypeScript transpiling and Iniquity package management.
--   Visual Studio Code _recommended_
-    -   This repository is specifically tuned to take full advantage of this IDE.
--   Moebius _recommended_
-    -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
+- macOS / Windows / Linux _required_
+  - These modern operating systems are currently supported.
+- Docker Desktop for macOS / Windows or Docker Machine _required_
+  - The Iniquity BBS runtime is executed inside of a Docker container for portability.
+- Node.js & NPM _required_
+  - The Node community tools are used for TypeScript transpiling and Iniquity package management.
+- Visual Studio Code _recommended_
+  - This repository is specifically tuned to take full advantage of this IDE.
+- Moebius _recommended_
+  - The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
 
 ### Developing your own iniquity bbs
 
@@ -61,7 +69,7 @@ npm install -g @iniquitybbs/cli
 Then...
 
 ```bash
-iniquity init --name MyBBS --template euphoria
+iniquity init --name MyBBS --template eternity --theme iq3
 ```
 
 Then start iniquity
