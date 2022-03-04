@@ -3,7 +3,7 @@
   "description": "A re-imagining of the iconic BBS software.",
   "private": true,
   "scripts": {
-    "postinstall": "npx lerna boostrap",
+    "postinstall": "npx lerna bootstrap",
     "build": "npx lerna run build && npx typedoc --theme default ./packages",
     "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n iniquity \"docker-compose up --build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/iniquitybbs/iniquity#readme",
   "dependencies": {
-    "@bbs/synchronet": "^0.2.0",
     "typescript": "4.2.4"
   },
   "devDependencies": {

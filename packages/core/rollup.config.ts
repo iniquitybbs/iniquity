@@ -3,14 +3,14 @@ import typescript from "@rollup/plugin-typescript"
 import multi from "@rollup/plugin-multi-entry"
 
 export default {
-    input: "src/examples/bbs.ts",
+    input: "src/*.ts",
     output: {
         file: "dist/bundle.js",
         format: "cjs",
         sourcemap: "inline"
     },
     watch: {
-        include: "src/examples/bbs.ts"
+        include: "src/*.ts"
     },
     plugins: [
         multi(),

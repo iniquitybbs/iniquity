@@ -10,6 +10,6 @@
         "rootDir": "src",
         "outDir": "dist"
     },
-    "include": ["src/examples/bbs.ts"],
+    "include": ["src/**/*.ts"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
 }
