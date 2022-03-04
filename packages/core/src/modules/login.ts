@@ -1,31 +1,43 @@
-import { BBS } from "../index"
+import iq, { IQModule, IQModuleTemplate, IQModuleScript, IQModuleACLS, IQCoreAssets, IQCoreModules } from "../index"
 
-const bbs = new BBS()
+/**
+ * Iniquity Login Module
+ * @description A simple login module.
+ * @module
+ */
+@IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
+export class Login extends IQModuleTemplate {
+    @IQModuleScript({ clearScreenBefore: true, debug: true })
+    _() {
+        const art = iq.artwork({ basepath: this.basepath })
 
-bbs.say("You've connected to a prototype of the new iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
+        art.render({ filename: IQCoreAssets._5m_hodl4a, speed: 100 }).pause()
 
-bbs.artwork({ basepath: "/iniquity/core/assets/", filename: "5m-hodl4a.ans" }).render({ speed: 100 })
-const login = bbs.ask("What is your login: ".newlines(1))
-switch (login) {
-    case "new":
-    case "signup":
-        bbs.artwork({ basepath: "/iniquity/core/assets/", filename: "5m-ink2menu.ans" }).render({ clearScreenBefore: true })
+        iq.say(this.access.toString())
 
-        let newUser = bbs.user({
-            name: bbs.ask("What would you like your handle to be?".newlines(2).color("white")),
-            password: bbs.ask("And your password?".newlines(2).color("white"))
-        })
+        iq.say("You've connected to a prototype of the new iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
 
-        bbs.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
-        bbs.disconnect()
-        break
-    default:
-        if (bbs.user({ name: login, password: bbs.ask("And your password?".newlines(2).color("white")) })) {
-            alert("somethingsync")
+        art.render({ filename: IQCoreAssets._5m_hodl4a, speed: 100 })
+
+        const login = iq.ask("What is your login: ".newlines(1))
+
+        switch (login) {
+            case "new":
+            case "signup":
+            case "apply":
+                IQCoreModules.apply()
+                iq.disconnect()
+                break
+            default:
+                if (iq.user({ name: login, password: iq.ask("And your password?".newlines(2).color("white")) })) {
+                    alert("somethingsync")
+                }
+
+                iq.pause()
+
+                art.render({ filename: IQCoreAssets._5m_matrix_1b2, clearScreenBefore: true })
+
+                break
         }
-
-        bbs.pause()
-
-        bbs.artwork({ basepath: "/iniquity/core/assets/", filename: "5m-matrix-1b2.ans" }).render({ clearScreenBefore: true })
-        break
+    }
 }

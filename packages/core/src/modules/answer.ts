@@ -1,13 +1,31 @@
-import { BBS } from "../index"
+import iq, { IQModule, IQModuleTemplate, IQModuleScript, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core/src/index"
 
-const bbs = new BBS()
+/**
+ * The Iniquity Answwer Module
+ * @description Does the most basic thing... answers the phone.
+ * @module
+ */
+@IQModule({
+    basepath: "/iniquity/core/src/assets/",
+    access: IQModuleACLS.low
+})
+export class Answer extends IQModuleTemplate {
+    @IQModuleScript({
+        clearScreenBefore: true,
+        debug: true
+    })
+    _() {
+        const art = iq.artwork({ basepath: this.basepath })
 
-const welcomeArt = bbs.artwork({ basepath: "/iniquity/archive/src/textmode" })
-welcomeArt.render({ filename: "sm_iniq2", clearScreenBefore: true, speed: 100 })
+        art.render({ filename: IQCoreAssets._5m_hodl4a, speed: 100 })
 
-bbs.print({
-    text: `You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
-        .newlines()
-        .color("background red")
-        .center()
-}).pause({ colorReset: true, newlines: 2, center: true })
+        iq.print({
+            text: `You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
+                .newlines()
+                .color("background red")
+                .center()
+        }).pause({ colorReset: true, newlines: 2, center: true })
+
+        IQCoreModules.login()
+    }
+}

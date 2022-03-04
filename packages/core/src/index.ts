@@ -8,11 +8,11 @@
  *
  * const mybbs = new BBS()
  *
- * mybbs.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
+ * myIniquity.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
  *
- * mybbs.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
+ * myIniquity.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
  *
- * mybbs.disconnect()
+ * myIniquity.disconnect()
  * ```
  */
 
@@ -157,15 +157,15 @@ export interface IIniquityOptions {
  *
  * const mybbs = new BBS()
  *
- * mybbs.say("Say hi!").pause()
+ * myIniquity.say("Say hi!").pause()
  *
- * mybbs.hangup()
+ * myIniquity.hangup()
  *
  * ```
  */
-export class BBS {
-    public basepath: string
-    public name: string
+export class Iniquity {
+    public basepath!: string
+    public name!: string
 
     /**
      * Iniquity BBS core class
@@ -199,8 +199,8 @@ export class BBS {
         typeof options === "string" ? console.print(options) : console.print(options.text)
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) BBS.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else BBS.prototype.say("".color("reset"))
+                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else Iniquity.prototype.say("".color("reset"))
                 console.pause()
             }
         }
@@ -223,8 +223,8 @@ export class BBS {
 
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) BBS.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else BBS.prototype.say("".color("reset"))
+                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else Iniquity.prototype.say("".color("reset"))
                 console.pause()
             }
         }
@@ -287,8 +287,10 @@ export class BBS {
      * @returns {Artwork} An instance of Artwork and its return functions.
      * @example
      * ```typescript
-     * iq.artwork({ filename: Assets.we_iniq3 })
-     * iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
+     * const artwork = iq.artwork({ basepath: "/iniquity/core/src/assets/" })
+     * artwork.render({ filename: Assets.we_iniq3 })
+     *
+     * iq.artwork({ basepath: "/iniquity/core/src/assets/", filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
      * ```
      */
     public artwork(options: IArtworkOptions): Artwork {
@@ -377,7 +379,7 @@ export class Artwork {
      * @returns {Artwork} An instance of Artwork
      */
     constructor(options: IArtworkOptions) {
-        this.basepath = options.basepath || BBS.prototype.basepath || undefined
+        this.basepath = options.basepath || Iniquity.prototype.basepath || undefined
         this.filename = options.filename || undefined
     }
 
@@ -397,7 +399,7 @@ export class Artwork {
      */
 
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
-        if (options?.clearScreenBefore === true) console.clear()
+        if (options?.clearScreenBefore === true) iq.print("@POFF@@CLS@@PON@".color("reset"))
 
         let basepath = options?.basepath || this.basepath || new Error("I need to know where the archives folder is located!")
         let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
@@ -417,14 +419,14 @@ export class Artwork {
                 case "character": {
                     text[i].split(" ").forEach((character: any) => {
                         console.putmsg(character)
-                        BBS.prototype.sleep(speed)
+                        Iniquity.prototype.sleep(speed)
                     })
                 }
 
                 // For line-at-a-time rendering...
                 case "line": {
                     console.putmsg(text[i])
-                    BBS.prototype.sleep(speed)
+                    Iniquity.prototype.sleep(speed)
                 }
             }
             if (i < text.length - 1) console.putmsg("\r\n")
@@ -436,11 +438,11 @@ export class Artwork {
         return {
             pause(options?: IQPauseOptions): void {
                 if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else BBS.prototype.say("".color("reset"))
+                else Iniquity.prototype.say("".color("reset"))
                 console.pause()
             },
             colorReset(): void {
-                BBS.prototype.say("".color("reset"))
+                Iniquity.prototype.say("".color("reset"))
             }
         }
     }
@@ -577,6 +579,7 @@ String.prototype.color = function (color: string): string {
             return "\u001b[47;1m" + this
 
         case "reset":
+        case "clear":
             return "\u001b[0m" + this
 
         default:
@@ -666,3 +669,63 @@ interface ISBBSBbs {
 // const cmds: yargs.CommandModule = new Core()
 
 // if (process.argv.length > 2) yargs.command(cmds).help().argv
+
+const iq = new Iniquity()
+export default iq
+
+/** Decorators  */
+
+/**
+ * An experimental Iniquity module decorator for bbs modules
+ * @author ispyhumanfly
+ * @param constructor
+ */
+
+export enum IQModuleACLS {
+    low = 1,
+    medium = 2,
+    high = 3,
+    superHigh = 4
+}
+interface IQModuleOptions {
+    basepath?: string
+    assets?: string
+    access?: IQModuleACLS
+}
+export function IQModule(options?: IQModuleOptions) {
+    return function (constructor: Function) {
+        constructor.prototype.basepath = options?.basepath
+        constructor.prototype.assets = options?.assets
+        constructor.prototype.access = options?.access
+
+        // if (options?.access === IQModuleACLS.low) {
+        //     iq.say("You do can't access this module.".color("red")).pause()
+        //     // iq.disconnect()
+        // }
+    }
+}
+
+export interface IQModuleScriptOptions {
+    debug?: boolean
+    clearScreenBefore?: boolean
+}
+
+/**
+ * The IQ script executed as part of a module.
+ * @param {IQModuleScriptOptions} options
+ * @returns
+ */
+export function IQModuleScript(options?: IQModuleScriptOptions) {
+    return function (target: any, propertyKey: string, descriptor?: PropertyDescriptor): any {
+        if (options?.clearScreenBefore === true) iq.print("@POFF@@CLS@@PON@".color("reset"))
+    }
+}
+
+export class IQModuleTemplate {
+    public basepath!: string
+    public assets!: string
+    public access!: IQModuleACLS
+}
+
+export { Assets as IQCoreAssets } from "./assets/index"
+export { IQCoreModules } from "./modules/index"
