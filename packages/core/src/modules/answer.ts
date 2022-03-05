@@ -1,31 +1,48 @@
-import iq, { IQModule, IQModuleTemplate, IQModuleScript, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core/src/index"
+import iq, { IQModule, IQModuleTemplate, IQModuleScript, IQModuleACLS, IQCoreAssets, IQCoreModules, Menu } from "@iniquitybbs/core"
 
-/**
- * The Iniquity Answwer Module
- * @description Does the most basic thing... answers the phone.
- * @module
- */
 @IQModule({
-    basepath: "/iniquity/core/src/assets/",
+    basepath: "/iniquity/core/src/assets",
     access: IQModuleACLS.low
 })
 export class Answer extends IQModuleTemplate {
     @IQModuleScript({
-        clearScreenBefore: true,
         debug: true
     })
     _() {
-        const art = iq.artwork({ basepath: this.basepath })
+        const menu = new Menu({
+            name: "Iniquity answer menu.",
+            description: "Really I just get to rattle off more non-sense."
+        })
+        menu.start(
+            (/** Display */) => {
+                const art = iq.artwork({ basepath: this.basepath })
 
-        art.render({ filename: IQCoreAssets._5m_hodl4a, speed: 100 })
-
-        iq.print({
-            text: `You just connected to an iniquity bbs. It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
-                .newlines()
-                .color("background red")
-                .center()
-        }).pause({ colorReset: true, newlines: 2, center: true })
-
-        IQCoreModules.login()
+                art.render({
+                    mode: "@-codes",
+                    clearScreenBefore: true,
+                    filename: IQCoreAssets.iq3_hello
+                }).prompt(33, 19, "[L] ogin? or [A] sk for help? Or [G] for goodbye?".color("blue"))
+            },
+            (/** Command Handler */) => {
+                switch (menu.keypressed("LAGB")) {
+                    case "L":
+                        iq.gotoxy(23, 63)
+                        IQCoreModules.login()
+                        break
+                    case "A":
+                        iq.gotoxy(23, 63)
+                        break
+                    case "G":
+                    case "H":
+                        IQCoreModules.hangup()
+                        break
+                    case "P":
+                        iq.print("Another wow.")
+                        break
+                    default:
+                        break
+                }
+            }
+        )
     }
 }

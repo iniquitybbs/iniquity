@@ -1,7 +1,4 @@
-import { Login } from "./login"
-import { Answer } from "./answer"
-import { Hangup } from "./hangup"
-import { Apply } from "./apply"
+import { Answer, Hangup, Login, Apply } from "."
 
 export const login = function () {
     new Login()._()

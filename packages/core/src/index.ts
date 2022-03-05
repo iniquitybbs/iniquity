@@ -46,7 +46,7 @@ export interface IArtworkRenderOptions {
     filename?: string | undefined
     speed?: number | undefined
     encoding?: "CP437" | "UTF8"
-    mode?: "line" | "character"
+    mode?: "line" | "character" | "@-codes"
     clearScreenBefore?: boolean
 }
 
@@ -100,6 +100,10 @@ export interface IArtworkRenderFunctions {
      * Resets the screen color
      */
     colorReset(): void
+
+    gotoxy(x: number, y: number): void
+    prompt(x: number, y: number, text?: string): void
+    cursor(x: number, y: number): void
 }
 
 export interface IBBSSayFunctions {
@@ -123,8 +127,10 @@ export interface IBBSPrintFunctions {
  * @param {object} object An object containing a bunch of stuff.
  */
 export interface IMenuOptions {
-    key: string
-    options: object[]
+    name?: string
+    description?: string
+    prompt?: IMenuPromptOptions
+    cmdkeys?: string
 }
 
 export interface IMenuCommands {
@@ -134,6 +140,12 @@ export interface IMenuCommands {
 export interface IMenuCommand {
     key: number
     name: string
+}
+
+export interface IMenuPromptOptions {
+    x: string
+    y: string
+    text?: string
 }
 /**
  * Ibbsconfig params
@@ -242,6 +254,10 @@ export class Iniquity {
         console.pause()
     }
 
+    public gotoxy(x: number, y: number): void {
+        console.gotoxy(x, y)
+    }
+
     /**
      * Halt the screen for a specified period of time.
      * @param speed In miliseconds
@@ -267,6 +283,11 @@ export class Iniquity {
      */
     public disconnect(): void {
         bbs.logout()
+    }
+
+    public terminfo(): IQTermInfoObject {
+        // @ts-ignore just ignore for now.
+        return { x: console.screen_columns, y: console.screen_rows }
     }
 
     /**
@@ -309,13 +330,33 @@ export class Iniquity {
     }
 }
 
+export interface IQTermInfoObject {
+    x: number
+    y: number
+}
 export class Menu {
-    constructor(options: IMenuOptions) {}
+    public cmdkeys!: string
+    // public keypressed!: string
 
-    /**
-     *
-     */
-    public prompt(): void {}
+    constructor(options?: IMenuOptions) {
+        if (options?.cmdkeys) this.cmdkeys = options.cmdkeys
+    }
+
+    public start(menu: Function, handler: Function): void {
+        do {
+            // @ts-ignore Need to declare some sbbs constants
+            // this.keypressed = console.getkeys(options.cmdkeys || this.cmdkeys, K_UPPER)
+
+            menu()
+            handler()
+            sleep(10)
+        } while (bbs.online)
+    }
+
+    public keypressed(cmdkeys: string): string {
+        // @ts-ignore good.
+        return console.getkeys(cmdkeys, K_UPPER)
+    }
 }
 
 export class Group {}
@@ -399,50 +440,57 @@ export class Artwork {
      */
 
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
-        if (options?.clearScreenBefore === true) iq.print("@POFF@@CLS@@PON@".color("reset"))
+        if (options?.clearScreenBefore === true) console.putmsg("@POFF@@CLS@@PON@".color("reset"))
 
         let basepath = options?.basepath || this.basepath || new Error("I need to know where the archives folder is located!")
         let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
         let mode = options?.mode || "line"
         let speed = options?.speed || 30
 
-        console.line_counter = 0
+        switch (mode) {
+            case "@-codes":
+                console.putmsg(`@TYPE:${this.basepath}/${filename}@`)
+                break
+            case "line":
+                console.line_counter = 0
+                // @ts-ignore Using Synchronet's JS File operations
+                this.fileHandle = new File(`${this.basepath}/${filename}`)
+                if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + `${this.basepath}/${filename}`)
+                let text = this.fileHandle.readAll()
 
-        // @ts-ignore Using Synchronet's JS File operations
-        this.fileHandle = new File(`${this.basepath}/${filename}`)
-        if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + `${this.basepath}/${filename}`)
-        let text = this.fileHandle.readAll()
-
-        for (let i = 0; i < text.length; i++) {
-            switch (mode) {
-                // For character-at-a-time rendering...
-                case "character": {
-                    text[i].split(" ").forEach((character: any) => {
-                        console.putmsg(character)
-                        Iniquity.prototype.sleep(speed)
-                    })
-                }
-
-                // For line-at-a-time rendering...
-                case "line": {
+                for (let i = 0; i < text.length; i++) {
                     console.putmsg(text[i])
                     Iniquity.prototype.sleep(speed)
+                    if (i < text.length - 1) console.putmsg("\r\n")
+                    console.line_counter = 0
                 }
-            }
-            if (i < text.length - 1) console.putmsg("\r\n")
-            console.line_counter = 0
-        }
+                this.fileHandle.close()
+                break
 
-        this.fileHandle.close()
+            case "character":
+                break
+            default:
+            // nothing...
+        }
 
         return {
             pause(options?: IQPauseOptions): void {
                 if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else Iniquity.prototype.say("".color("reset"))
+                else console.putmsg("".color("reset"))
                 console.pause()
             },
             colorReset(): void {
-                Iniquity.prototype.say("".color("reset"))
+                console.putmsg("".color("reset"))
+            },
+            cursor(x: number, y: number): void {
+                console.gotoxy(x, y)
+            },
+            gotoxy(x: number, y: number): void {
+                console.gotoxy(x, y)
+            },
+            prompt(x: number, y: number, text?: string): void {
+                console.gotoxy(x, y)
+                if (text) console.putmsg(text)
             }
         }
     }
@@ -634,6 +682,7 @@ declare interface ISSBSConsole {
     line_counter: number
     clear: any
     pause: any
+    getkeys(commands: string, constant?: String): void
 }
 /**
  * Isbbssystem
@@ -647,6 +696,7 @@ interface ISBBSBbs {
     logout: any
     logoff: any
     hangup: any
+    online: unknown
 }
 
 // import * as path from "path"
@@ -729,3 +779,10 @@ export class IQModuleTemplate {
 
 export { Assets as IQCoreAssets } from "./assets/index"
 export { IQCoreModules } from "./modules/index"
+function x(x: any, y: any) {
+    throw new Error("Function not implemented.")
+}
+
+function y(x: any, y: any) {
+    throw new Error("Function not implemented.")
+}
