@@ -1,3 +1,17 @@
+if (!Object.entries) {
+    Object.entries = function (obj: any) {
+        var ownProps = Object.keys(obj),
+            i = ownProps.length,
+            resArray = new Array(i)
+        while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]]
+
+        return resArray
+    }
+}
+
+// @ts-ignore
+js.do_callbacks = true
+
 /**
  * Iniquity Core
  * @module Core
@@ -37,17 +51,17 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 load("sbbsdefs.js")
+load("frame.js")
+load("funclib.js")
 
-/**
- * Iniquity artwork rendering options
- */
 export interface IArtworkRenderOptions {
     basepath?: string | undefined
     filename?: string | undefined
     speed?: number | undefined
     encoding?: "CP437" | "UTF8"
-    mode?: "line" | "character" | "@-codes"
+    mode?: "line" | "character" | "@-codes" | "reactive"
     clearScreenBefore?: boolean
+    data?: unknown
 }
 
 /**
@@ -68,7 +82,7 @@ export interface IQPauseOptions extends IQStringUtils {}
 export interface IQPrintOptions extends IQStringUtils {
     text: string
 }
-export interface IBBSSayOptions {
+interface IBBSSayOptions {
     text: string
 }
 export interface IArtworkOptions {
@@ -106,12 +120,28 @@ export interface IArtworkRenderFunctions {
     cursor(x: number, y: number): void
 }
 
+export interface IQMenuPromptFunctions {
+    /**
+     * Go to the specified coordinates on the terminal.
+     * @param x Width coordinates.
+     * @param y Height coordinates.
+     */
+    gotoxy(x: number, y: number): void | any
+    /**
+     * Await a response from the user.
+     * @param cmdkeys The list of acceptable keys to accept from the keyboard.
+     */
+    keypressed(cmdkeys: string): string
+    keypressed(cmdkeys?: string): string | void
+}
+
 export interface IBBSSayFunctions {
     /**
      * @param {IQPauseOptions} options
      * {@link IQPauseOptions}
      */
     pause(options?: IQPauseOptions): void
+    wait(miliseconds?: number): void
 }
 export interface IBBSPrintFunctions {
     /**
@@ -119,20 +149,39 @@ export interface IBBSPrintFunctions {
      * @see {@link IQPauseOptions}
      */
     pause(options?: IQPauseOptions): void
+    sleep(miliseconds: number): void
+    wait(miliseconds: number): void
 }
 
 /**
  * Menu options
- * @param {string} key The key for the thing.
- * @param {object} object An object containing a bunch of stuff.
+ * @param {IQMenuOptions} options Some options.
+ * @see {@link IQMenuOptions}
  */
-export interface IMenuOptions {
+export interface IQMenuOptions {
     name?: string
     description?: string
     prompt?: IMenuPromptOptions
     cmdkeys?: string
+    commands: {
+        [s: string]: (...args: any) => any
+    }
+
+    frame?: IQFrameOptions
+}
+export interface IQMenuLoopMessageResponse {
+    [x: string]: any
 }
 
+export interface IQFrameOptions {
+    x: number
+    y: number
+    width: number
+    height: number
+    color: IQFrameColorOptions
+    artwork?: string
+    parent?: any
+}
 export interface IMenuCommands {
     command: IMenuCommand
 }
@@ -207,13 +256,18 @@ export class Iniquity {
      * iq.say("This time say something but do some cool string manipulation.".newlines(2).color("bright red").center()).pause()
      * ```
      */
-    public say(options: IBBSSayOptions | string): IBBSSayFunctions {
+    public say(options: IBBSSayOptions | string | any): IBBSSayFunctions {
         typeof options === "string" ? console.print(options) : console.print(options.text)
+        typeof options === "object" ? console.print(JSON.stringify(options)) : console.print(options.text)
+
         return {
             pause(options?: IQPauseOptions): void {
                 if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else Iniquity.prototype.say("".color("reset"))
                 console.pause()
+            },
+            wait(miliseconds?: number): void {
+                iq.wait(miliseconds || 100)
             }
         }
     }
@@ -238,6 +292,12 @@ export class Iniquity {
                 if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else Iniquity.prototype.say("".color("reset"))
                 console.pause()
+            },
+            wait(miliseconds?: number | 5): void {
+                this.sleep(miliseconds!)
+            },
+            sleep(miliseconds?: number | 5): void {
+                this.sleep(miliseconds!)
             }
         }
     }
@@ -249,8 +309,8 @@ export class Iniquity {
      * @see {@link IQPauseOptions} to learn more about the available options.
      */
     public pause(options?: IQPauseOptions): void {
-        if (options?.colorReset) this.say("".color("reset"))
-        this.say("".newlines(options?.newlines || 0))
+        if (options?.colorReset) console.putmsg("".color("reset"))
+        console.putmsg("".newlines(options?.newlines || 0))
         console.pause()
     }
 
@@ -260,12 +320,15 @@ export class Iniquity {
 
     /**
      * Halt the screen for a specified period of time.
-     * @param speed In miliseconds
+     * @param seconds In miliseconds
      * @returns void
      */
 
-    public sleep(speed: number): void {
-        sleep(speed)
+    public sleep(miliseconds: number): void {
+        sleep(miliseconds)
+    }
+    public wait(miliseconds: number): void {
+        wait(miliseconds)
     }
 
     /**
@@ -282,12 +345,31 @@ export class Iniquity {
      * @returns void
      */
     public disconnect(): void {
+        bbs.hangup()
+    }
+
+    public logoff(): void {
+        bbs.logoff()
+    }
+
+    public logout(): void {
         bbs.logout()
     }
 
-    public terminfo(): IQTermInfoObject {
-        // @ts-ignore just ignore for now.
-        return { x: console.screen_columns, y: console.screen_rows }
+    public terminfo: IQTermInfoObject = {
+        // @ts-ignore asd
+        // @ts-ignore asd
+        x: console.screen_columns,
+        // @ts-ignore asd
+        y: console.screen_rows,
+        // @ts-ignore asd
+        terminal: console.terminal,
+        // @ts-ignore asd
+        type: console.type,
+        // @ts-ignore asd
+        charset: console.charset,
+        // @ts-ignore asd
+        getdimensions: console.getdimensions()
     }
 
     /**
@@ -302,7 +384,8 @@ export class Iniquity {
     }
 
     /**
-     * Will allow you to render artwork to the screen
+     * Will allow you to
+     * render artwork to the screen
      * @param {IArtworkOptions} options An object containing the various configuration properties.
      * @see {@link IArtworkOptions} to learn more about the available options.
      * @returns {Artwork} An instance of Artwork and its return functions.
@@ -320,13 +403,19 @@ export class Iniquity {
 
     /**
      * Menu instance
-     * @param {IMenuOptions} options An object containing the various configuration properties.
-     * @param {string} options.name The users name
-     * @param {string} options.password The users password
-     * @returns {Menu} An instance of Menu
+     * @param {IQMenuOptions} options An object containing the various configuration properties.
+     * @returns {IQMenu} An instance of Menu
      */
-    public menu(options: IMenuOptions): Menu {
-        return new Menu(options)
+    public menu(options?: IQMenuOptions): IQMenu {
+        return new IQMenu(options)
+    }
+    /**
+     * Frame instance
+     * @param {IQFrameOptions} options An object containing the various configuration properties.
+     * @returns {IQFrame} An instance of Menu
+     */
+    public frame(options: IQFrameOptions): IQFrame {
+        return new IQFrame(options)
     }
 }
 
@@ -334,31 +423,145 @@ export interface IQTermInfoObject {
     x: number
     y: number
 }
-export class Menu {
+
+export interface IQMenuLoopOptions {
+    wait?: number
+    maxInterval?: number
+}
+export class IQMenu {
     public cmdkeys!: string
-    // public keypressed!: string
+    public commands!: IQMenuOptions["commands"]
 
-    constructor(options?: IMenuOptions) {
+    constructor(options?: IQMenuOptions) {
         if (options?.cmdkeys) this.cmdkeys = options.cmdkeys
+        if (options?.commands) this.commands = options.commands
+
+        for (const [cmdkey, command] of Object.entries(this.commands)) if (cmdkey != undefined || "undefined") this.cmdkeys += cmdkey
     }
 
-    public start(menu: Function, handler: Function): void {
+    public render(runtime: Function, options?: IQMenuLoopOptions): void {
+        let count = 0
+
         do {
-            // @ts-ignore Need to declare some sbbs constants
-            // this.keypressed = console.getkeys(options.cmdkeys || this.cmdkeys, K_UPPER)
+            count++
+            bbs.nodesync()
 
-            menu()
-            handler()
-            sleep(10)
-        } while (bbs.online)
+            let message: IQMenuLoopMessageResponse = {
+                options: options,
+                interval: count,
+                system: system
+            }
+
+            runtime(message)
+
+            iq.wait(options?.wait || 100)
+            if (options?.maxInterval! >= count) continue
+            else break
+        } while (bbs.online && !js.terminated)
     }
 
-    public keypressed(cmdkeys: string): string {
-        // @ts-ignore good.
-        return console.getkeys(cmdkeys, K_UPPER)
+    public prompt(options: any): IQMenuPromptFunctions {
+        if (options.x && options.y) iq.gotoxy(options.x, options.y)
+        if (options.text !== undefined) iq.say(options.text)
+
+        console.putmsg(
+            Object.keys(this.commands)
+                .filter((cmdkey) => cmdkey != undefined || "undefined" || "default")
+                .join(",")
+        )
+
+        return {
+            gotoxy(x: number, y: number) {
+                console.gotoxy(x, y)
+                return {
+                    keypressed(cmdkeys?: string) {
+                        return this.keypressed(cmdkeys || this.cmdkeys)
+                    }
+                }
+            },
+            keypressed(cmdkeys: string) {
+                return this.keypressed(cmdkeys)
+            }
+        }
+    }
+
+    public keypressed(cmdkeys?: string): string {
+        // @ts-expect-error
+        return console.getkeys(cmdkeys || this.cmdkeys, K_UPPER)
     }
 }
 
+export class IQFrame {
+    private frame: any | null = null
+    public is_open!: boolean
+    public transparent!: boolean
+    public scrollbars!: boolean
+
+    /**
+     * toggle true/false to restrict/allow frame movement outside display
+     *
+     */
+    public checkbounds!: boolean
+
+    constructor(options: IQFrameOptions) {
+        // @ts-ignore
+        this.frame = new Frame(options.x, options.y, options.width, options.height, options.color, options.parent)
+        if (options.artwork) this.frame.load(options.artwork)
+    }
+    public open(): void {
+        this.frame!.open()
+    }
+    public draw(): void {
+        this.frame!.draw()
+    }
+    public delete(): void {
+        this.frame!.delete()
+    }
+    public cycle(): void {
+        this.frame!.cycle()
+    }
+    public refresh(): void {
+        this.frame!.refresh()
+    }
+    public close(): void {
+        this.frame!.close()
+    }
+    public print(message: string): void {
+        this.frame!.putmsg(message)
+    }
+    public say(message: string): void {
+        this.frame!.putmsg(message)
+    }
+    public gotoxy(x: number, y: number): void {
+        this.frame!.gotoxy(x, y)
+    }
+    public loop(runtime: Function, interval?: number): void {
+        // @ts-ignore
+        if (!this.is_open) this.open()
+        do {
+            runtime()
+            this.cycle()
+            sleep(interval || 100)
+        } while (bbs.online && !js.terminated)
+    }
+    public load(filename: any) {
+        this.frame.load(filename)
+    }
+}
+
+export enum IQFrameColorOptions {
+    // @ts-ignore
+    black = BG_BLACK,
+    // @ts-ignore
+    blue = BG_BLUE
+}
+
+export enum IQFrameColorOptions {
+    // @ts-ignore
+    black = BG_BLACK,
+    // @ts-ignore
+    blue = BG_BLUE
+}
 export class Group {}
 
 /**
@@ -446,10 +649,17 @@ export class Artwork {
         let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
         let mode = options?.mode || "line"
         let speed = options?.speed || 30
+        let data = options?.data || {}
 
         switch (mode) {
+            case "reactive":
+                // @ts-ignore asd
+                console.printfile(`${this.basepath}/${filename}`, P_WORDWRAP, 4, data)
+                break
+
             case "@-codes":
-                console.putmsg(`@TYPE:${this.basepath}/${filename}@`)
+                // @ts-ignore these damn constants.
+                console.putmsg(`@TYPE:${this.basepath}/${filename}@`, P_WORDWRAP, 4, data)
                 break
             case "line":
                 console.line_counter = 0
@@ -460,7 +670,7 @@ export class Artwork {
 
                 for (let i = 0; i < text.length; i++) {
                     console.putmsg(text[i])
-                    Iniquity.prototype.sleep(speed)
+                    sleep(speed)
                     if (i < text.length - 1) console.putmsg("\r\n")
                     console.line_counter = 0
                 }
@@ -654,19 +864,55 @@ String.prototype.newlines = function (count?: number | 0): string {
 }
 
 declare global {
-    /**
-     * Synchronet JS library loader
-     * @param library
-     */
     function load(library: string): void
     function alert(text: string): void
+    function prompt(text: string): string
+    function sleep(miliseconds: number): void
+    function wait(miliseconds: number): void
+    function async(): Promise<any>
+    function gotoxy(x: number, y: number): void
+
+    function print(options: IQPrintOptions): void
+    function say(options: IBBSSayOptions | string | any): IBBSSayFunctions
+
+    function pause(options?: IQPauseOptions): void
+
+    let client: ISBBSClient
+    let system: ISBBSSystem
+    let server: ISBBSServer
+
+    let user: ISBBSUser
+    let bbs: ISBBSBbs
+    function time(): number
 }
 
-declare function prompt(text: string): string
-declare function sleep(duration: number): void
+function gotoxy(x: number, y: number): void {
+    console.gotoxy(x, y)
+}
+function print(options: IQPrintOptions): void {
+    iq.print(options)
+}
+function say(options: IBBSSayOptions): void | IBBSSayFunctions {
+    return iq.say(options)
+}
+function pause(options?: IQPauseOptions): void {
+    iq.pause(options)
+}
+
 declare let console: ISSBSConsole
-declare let system: ISBBSSystem
-declare let bbs: ISBBSBbs
+
+interface ISBBSServer {
+    [x: string]: any
+}
+interface ISBBSUser {
+    [x: string]: any
+}
+interface ISBBSClient {
+    [x: string]: any
+}
+interface ISBBSGlobal {
+    [x: string]: any
+}
 
 /**
  * Issbsconsole
@@ -690,13 +936,12 @@ declare interface ISSBSConsole {
 interface ISBBSSystem {
     name: string
     operator: string
+    node_list: any
+    stats: any
 }
 
 interface ISBBSBbs {
-    logout: any
-    logoff: any
-    hangup: any
-    online: unknown
+    [x: string]: any
 }
 
 // import * as path from "path"
@@ -737,7 +982,7 @@ export enum IQModuleACLS {
     high = 3,
     superHigh = 4
 }
-interface IQModuleOptions {
+export interface IQModuleOptions {
     basepath?: string
     assets?: string
     access?: IQModuleACLS
@@ -755,23 +1000,22 @@ export function IQModule(options?: IQModuleOptions) {
     }
 }
 
-export interface IQModuleScriptOptions {
-    debug?: boolean
-    clearScreenBefore?: boolean
-}
-
 /**
  * The IQ script executed as part of a module.
- * @param {IQModuleScriptOptions} options
+ * @param {IQModuleRuntimeOptions} options
  * @returns
  */
-export function IQModuleScript(options?: IQModuleScriptOptions) {
+export function IQModuleRuntime(options?: IQModuleRuntimeOptions): any {
     return function (target: any, propertyKey: string, descriptor?: PropertyDescriptor): any {
         if (options?.clearScreenBefore === true) iq.print("@POFF@@CLS@@PON@".color("reset"))
     }
 }
+export interface IQModuleRuntimeOptions {
+    debug?: boolean
+    clearScreenBefore?: boolean
+}
 
-export class IQModuleTemplate {
+export class IQModuleContainer {
     public basepath!: string
     public assets!: string
     public access!: IQModuleACLS
@@ -779,10 +1023,15 @@ export class IQModuleTemplate {
 
 export { Assets as IQCoreAssets } from "./assets/index"
 export { IQCoreModules } from "./modules/index"
-function x(x: any, y: any) {
-    throw new Error("Function not implemented.")
-}
 
-function y(x: any, y: any) {
-    throw new Error("Function not implemented.")
+declare global {
+    export namespace js {
+        export function setImmediate(callback: (...args: any) => void, ...args: any): void
+        export function setTimeout(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number
+        export function setInterval(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): object
+        export function addEventListener(event: string, handler: Function): number
+        export function removeEventListener(): number
+        export function dispatchEvent(event: string, thisObj: object): void
+        export function terminated(): boolean
+    }
 }

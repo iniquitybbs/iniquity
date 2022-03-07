@@ -1,8 +1,8 @@
-import iq, { IQModule, IQModuleTemplate, IQModuleScript, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core"
+import iq, { IQModule, IQModuleContainer, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core"
 
 @IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
-export class Login extends IQModuleTemplate {
-    @IQModuleScript({ debug: true })
+export class Login extends IQModuleContainer {
+    @IQModuleRuntime({ debug: true })
     _() {
         const art = iq.artwork({ basepath: this.basepath })
 

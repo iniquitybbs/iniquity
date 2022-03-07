@@ -18,7 +18,7 @@
             "@iniquitybbs/*": ["./packages/*"],
             "@iniquitybbs": ["./packages"]
         },
-        "lib": ["es2020", "dom"],
+        "lib": ["es2020", "dom", "es2015.promise"],
         "skipLibCheck": true,
         "module": "esnext",
         "sourceMap": true,

@@ -26,13 +26,23 @@
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@types/async": "^3.2.12",
+    "@types/bluebird": "^3.5.36",
+    "@types/core-js": "^2.5.5",
+    "@types/jquery": "^3.5.14",
     "@types/node": "^16.10.3",
+    "@types/promise-polyfill": "^6.0.4",
+    "@types/setasap": "^2.0.0",
+    "@types/setimmediate": "^1.0.2",
     "@types/yargs": "^17.0.3",
     "rollup": "^2.58.0",
+    "rollup-plugin-external-globals": "^0.6.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
     "typescript": "^4.4.3"
   },
   "main": "src/index",
@@ -43,7 +53,16 @@
   },
   "dependencies": {
     "@abraham/reflection": "^0.9.1",
+    "async": "^3.2.3",
+    "async-es": "^3.2.3",
+    "bluebird": "^3.7.2",
+    "core-js": "^3.21.1",
+    "core-js-pure": "^3.21.1",
     "docker-cli": "^0.0.2",
+    "jquery": "^3.6.0",
+    "promise-polyfill": "^8.2.1",
+    "setasap": "^2.0.1",
+    "setimmediate": "^1.0.5",
     "yargs": "^17.2.1"
   }
 }

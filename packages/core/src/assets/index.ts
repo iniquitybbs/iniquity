@@ -52,13 +52,16 @@ export enum Assets {
     _5m_hodl4a = "5m-hodl4a.ans",
     _5m_matrix_1b2 = "5m-matrix-1b2.ans",
     _5m_ink2menu = "5m-ink2menu.ans",
+    _5m_iniquity3 = "5m-iniquity3.xb",
 
     iq3_logoff = "iq3-logoff.ans",
     iq3_hello = "iq3-hello.ans",
     iq3_welcome = "iq3-welcome.ans",
     iq3_welcome2 = "iq3-welcome2.ans",
     iq3_apply = "iq3-apply.ans",
-    iq3_login = "iq3-login.ans"
+    iq3_login = "iq3-login.ans",
+
+    sm_iniq2 = "sm!iniq2.ans"
 }
 
 /**
