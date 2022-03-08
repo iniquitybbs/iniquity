@@ -1,23 +1,15 @@
 import { Answer, Hangup, Login, Apply } from "."
 
-export const login = function () {
-    new Login()._()
-}
-export { Login } from "./login"
-
-export const answer = function () {
-    new Answer()._()
-}
+export const answer = () => new Answer()._()
 export { Answer } from "./answer"
 
-export const hangup = function () {
-    new Hangup()._()
-}
+export const login = () => new Login()._()
+export { Login } from "./login"
+
+export const hangup = () => new Hangup()._()
 export { Hangup } from "./hangup"
 
-export const apply = function () {
-    new Apply()._()
-}
+export const apply = () => new Apply()._()
 export { Apply } from "./apply"
 
 /**

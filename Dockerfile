@@ -8,7 +8,7 @@ ENV SBBSEXEC=/sbbs/exec
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install build-essential python ruby wget \
-    && apt-get -y install libncurses5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu libarchive-dev \
+    && apt-get -y install libncurses5-dev libncursesw5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu libarchive-dev \
     && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
     && apt-get -y install libmozjs-38-dev libmozjs-52-dev libcap2-dev libcap2-bin sudo lrzsz vim \ 
     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \

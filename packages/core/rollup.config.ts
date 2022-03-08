@@ -7,9 +7,9 @@ import commonjs from "@rollup/plugin-commonjs"
 import externalGlobals from "rollup-plugin-external-globals"
 
 export default {
-    input: "src/modules/iniquity.ts",
+    input: "src/iniquity.ts",
     output: {
-        name: "IQCore",
+        name: "iniquity",
         file: "dist/bundle.js",
         format: "iife",
         sourcemap: "inline",

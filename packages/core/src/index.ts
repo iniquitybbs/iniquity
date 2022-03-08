@@ -1,17 +1,3 @@
-if (!Object.entries) {
-    Object.entries = function (obj: any) {
-        var ownProps = Object.keys(obj),
-            i = ownProps.length,
-            resArray = new Array(i)
-        while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]]
-
-        return resArray
-    }
-}
-
-// @ts-ignore
-js.do_callbacks = true
-
 /**
  * Iniquity Core
  * @module Core
@@ -53,6 +39,19 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 load("sbbsdefs.js")
 load("frame.js")
 load("funclib.js")
+
+js.do_callbacks = true
+
+if (!Object.entries) {
+    Object.entries = function (obj: any) {
+        var ownProps = Object.keys(obj),
+            i = ownProps.length,
+            resArray = new Array(i)
+        while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]]
+
+        return resArray
+    }
+}
 
 export interface IArtworkRenderOptions {
     basepath?: string | undefined
@@ -141,7 +140,7 @@ export interface IBBSSayFunctions {
      * {@link IQPauseOptions}
      */
     pause(options?: IQPauseOptions): void
-    wait(miliseconds?: number): void
+    wait(options?: IQWaitOptions): void
 }
 export interface IBBSPrintFunctions {
     /**
@@ -149,8 +148,7 @@ export interface IBBSPrintFunctions {
      * @see {@link IQPauseOptions}
      */
     pause(options?: IQPauseOptions): void
-    sleep(miliseconds: number): void
-    wait(miliseconds: number): void
+    wait(options?: IQWaitOptions): void
 }
 
 /**
@@ -163,7 +161,7 @@ export interface IQMenuOptions {
     description?: string
     prompt?: IMenuPromptOptions
     cmdkeys?: string
-    commands: {
+    commands?: {
         [s: string]: (...args: any) => any
     }
 
@@ -256,18 +254,27 @@ export class Iniquity {
      * iq.say("This time say something but do some cool string manipulation.".newlines(2).color("bright red").center()).pause()
      * ```
      */
-    public say(options: IBBSSayOptions | string | any): IBBSSayFunctions {
-        typeof options === "string" ? console.print(options) : console.print(options.text)
-        typeof options === "object" ? console.print(JSON.stringify(options)) : console.print(options.text)
+    public say(options: IBBSSayOptions | string | object | any): IBBSSayFunctions {
+        switch (typeof options) {
+            case "string":
+                console.writeln(options)
+                break
+            case "object":
+                console.writeln(JSON.stringify(options))
+                break
+            default:
+                console.writeln(options)
+                break
+        }
+
+        let iq = this
 
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else Iniquity.prototype.say("".color("reset"))
-                console.pause()
+                iq.pause(options)
             },
-            wait(miliseconds?: number): void {
-                iq.wait(miliseconds || 100)
+            wait(options?: IQWaitOptions): void {
+                iq.wait(options?.milliseconds || 100)
             }
         }
     }
@@ -287,17 +294,16 @@ export class Iniquity {
     public print(options: IQPrintOptions | string): IBBSPrintFunctions {
         typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text || new Error("Sometthing is wrong with this string."))
 
+        let iq = this
+
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) Iniquity.prototype.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else Iniquity.prototype.say("".color("reset"))
-                console.pause()
+                if (options) iq.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                else iq.say("".color("reset"))
+                iq.pause()
             },
-            wait(miliseconds?: number | 5): void {
-                this.sleep(miliseconds!)
-            },
-            sleep(miliseconds?: number | 5): void {
-                this.sleep(miliseconds!)
+            wait(options?: IQWaitOptions): void {
+                iq.wait(options?.milliseconds || 100)
             }
         }
     }
@@ -320,15 +326,14 @@ export class Iniquity {
 
     /**
      * Halt the screen for a specified period of time.
-     * @param seconds In miliseconds
+     * @param {IQWaitOptions} options In miliseconds
      * @returns void
      */
 
-    public sleep(miliseconds: number): void {
-        sleep(miliseconds)
-    }
-    public wait(miliseconds: number): void {
-        wait(miliseconds)
+    public wait(options?: IQWaitOptions | number): void {
+        if (typeof options === "number") sleep(options)
+        else if (options?.milliseconds !== undefined) sleep(options.milliseconds)
+        else sleep(100)
     }
 
     /**
@@ -406,7 +411,7 @@ export class Iniquity {
      * @param {IQMenuOptions} options An object containing the various configuration properties.
      * @returns {IQMenu} An instance of Menu
      */
-    public menu(options?: IQMenuOptions): IQMenu {
+    public menu(options: IQMenuOptions): IQMenu {
         return new IQMenu(options)
     }
     /**
@@ -419,6 +424,10 @@ export class Iniquity {
     }
 }
 
+export interface IQWaitOptions {
+    milliseconds?: number
+}
+
 export interface IQTermInfoObject {
     x: number
     y: number
@@ -429,14 +438,13 @@ export interface IQMenuLoopOptions {
     maxInterval?: number
 }
 export class IQMenu {
-    public cmdkeys!: string
-    public commands!: IQMenuOptions["commands"]
+    private cmdkeys: string | null = null
+    public commands: IQMenuOptions["commands"]
 
-    constructor(options?: IQMenuOptions) {
-        if (options?.cmdkeys) this.cmdkeys = options.cmdkeys
-        if (options?.commands) this.commands = options.commands
+    constructor(options: IQMenuOptions) {
+        if (options.commands) this.commands = options.commands
 
-        for (const [cmdkey, command] of Object.entries(this.commands)) if (cmdkey != undefined || "undefined") this.cmdkeys += cmdkey
+        for (const [cmdkey, command] of Object.entries(this.commands!)) if (cmdkey != "default") this.cmdkeys += cmdkey
     }
 
     public render(runtime: Function, options?: IQMenuLoopOptions): void {
@@ -461,14 +469,15 @@ export class IQMenu {
     }
 
     public prompt(options: any): IQMenuPromptFunctions {
-        if (options.x && options.y) iq.gotoxy(options.x, options.y)
-        if (options.text !== undefined) iq.say(options.text)
+        if (!this.commands) throw new Error("No commands appear to be configured for this menu.")
 
-        console.putmsg(
-            Object.keys(this.commands)
-                .filter((cmdkey) => cmdkey != undefined || "undefined" || "default")
-                .join(",")
-        )
+        let commands = Object.keys(this.commands)
+            .filter((cmdkey) => cmdkey != "default")
+            .join(",")
+
+        if (options.x && options.y) iq.gotoxy(options.x, options.y)
+        if (options.text !== undefined) iq.say(commands + ":" + options.text)
+        if (typeof options === "string") iq.say(commands + ":" + options)
 
         return {
             gotoxy(x: number, y: number) {
@@ -485,9 +494,12 @@ export class IQMenu {
         }
     }
 
-    public keypressed(cmdkeys?: string): string {
+    public keypressed(cmdkeys: string | null = this.cmdkeys): string {
         // @ts-expect-error
-        return console.getkeys(cmdkeys || this.cmdkeys, K_UPPER)
+        // return console.getkeys(cmdkeys || this.cmdkeys, K_UPPER)
+        var char = console.inkey(K_UPPER)
+        // console.putmsg(char)
+        return char
     }
 }
 
@@ -847,12 +859,12 @@ String.prototype.color = function (color: string): string {
 
 String.prototype.gotoxy = function (x: number, y: number): string {
     console.gotoxy(x, y)
-    return ""
+    return this as string
 }
 
 String.prototype.center = function (): string {
     console.center(this as string)
-    return ""
+    return this as string
 }
 
 String.prototype.newlines = function (count?: number | 0): string {
@@ -863,40 +875,48 @@ String.prototype.newlines = function (count?: number | 0): string {
     return string + this
 }
 
-declare global {
-    function load(library: string): void
-    function alert(text: string): void
-    function prompt(text: string): string
-    function sleep(miliseconds: number): void
-    function wait(miliseconds: number): void
-    function async(): Promise<any>
-    function gotoxy(x: number, y: number): void
-
-    function print(options: IQPrintOptions): void
-    function say(options: IBBSSayOptions | string | any): IBBSSayFunctions
-
-    function pause(options?: IQPauseOptions): void
-
-    let client: ISBBSClient
-    let system: ISBBSSystem
-    let server: ISBBSServer
-
-    let user: ISBBSUser
-    let bbs: ISBBSBbs
-    function time(): number
+export function say(string: string): IBBSSayFunctions {
+    return {
+        pause(options?: IQPauseOptions): void {
+            iq.pause(options)
+        },
+        wait(options?: IQWaitOptions | number): void {
+            iq.wait(options || 100)
+        }
+    }
 }
 
-function gotoxy(x: number, y: number): void {
-    console.gotoxy(x, y)
+export function gotoxy(x: number, y: number): void {
+    iq.gotoxy(x, y)
 }
-function print(options: IQPrintOptions): void {
-    iq.print(options)
+
+export function pause(options?: IQPauseOptions): void {
+    iq.pause()
 }
-function say(options: IBBSSayOptions): void | IBBSSayFunctions {
-    return iq.say(options)
+export function wait(options?: IQWaitOptions): void {
+    iq.wait(options)
 }
-function pause(options?: IQPauseOptions): void {
-    iq.pause(options)
+
+export namespace IQ {
+    export function gotoxy(x: number, y: number): void {
+        iq.gotoxy(x, y)
+    }
+    export function say(options: IBBSSayOptions | string): void {
+        iq.say(options)
+    }
+    export function pause(options?: IQPauseOptions): void {
+        iq.pause(options)
+    }
+    export function wait(options?: IQWaitOptions): void {
+        iq.wait(options)
+    }
+
+    export namespace Core {
+        export class Iniquity {}
+        // export class Module imp IQModule {}
+        export class Menu extends IQMenu {}
+        export class Frame extends IQFrame {}
+    }
 }
 
 declare let console: ISSBSConsole
@@ -918,6 +938,7 @@ interface ISBBSGlobal {
  * Issbsconsole
  */
 declare interface ISSBSConsole {
+    writeln: any
     center(arg0: string): void
     gotoxy(x: number, y: number): void
     log: any
@@ -929,6 +950,7 @@ declare interface ISSBSConsole {
     clear: any
     pause: any
     getkeys(commands: string, constant?: String): void
+    inkey: any
 }
 /**
  * Isbbssystem
@@ -1032,6 +1054,23 @@ declare global {
         export function addEventListener(event: string, handler: Function): number
         export function removeEventListener(): number
         export function dispatchEvent(event: string, thisObj: object): void
-        export function terminated(): boolean
+        export let terminated: boolean
+        export let do_callbacks: boolean
     }
+
+    export function load(library: string): void
+    export function alert(text: string): void
+    export function prompt(text: string): string
+    export function sleep(miliseconds: number): void
+    export function yield(forced: boolean): number
+
+    export function random(max_number: number): number
+
+    export let client: ISBBSClient
+    export let system: ISBBSSystem
+    export let server: ISBBSServer
+
+    export let user: ISBBSUser
+    export let bbs: ISBBSBbs
+    export let time: number
 }
