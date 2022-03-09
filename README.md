@@ -27,17 +27,33 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
 
+```bash
+npm install -g @iniquitybbs/cli
+```
+
+Then...
+
+```bash
+iniquity init --name MyBBS --template eternity --theme iq3
+```
+
+Then start iniquity
+
+```bash
+iniquity start
+```
+
 ## Introduction
 
 ### Some guidng thoughts surrounding the idea of iniquity 3
 
-I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. -ispy
+I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
 
 - A BBS software framework that is geared towards developers and modders .
 - Make it easy for sysops to develop and deploy BBS applications.
 - Easily network files, messages and other forms of communication between other BBS applications.
-- What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
-  - Though the ability to do interesting things specific to terminal/web should exist.
+- What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
+  - Though the ability to do interesting things specific to web/terminal should exist.
 
 #### About iniquity's runtime
 

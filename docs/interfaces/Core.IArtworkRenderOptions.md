@@ -2,14 +2,13 @@
 
 [Core](../modules/Core.md).IArtworkRenderOptions
 
-Iniquity artwork rendering options
-
 ## Table of contents
 
 ### Properties
 
 - [basepath](Core.IArtworkRenderOptions.md#basepath)
 - [clearScreenBefore](Core.IArtworkRenderOptions.md#clearscreenbefore)
+- [data](Core.IArtworkRenderOptions.md#data)
 - [encoding](Core.IArtworkRenderOptions.md#encoding)
 - [filename](Core.IArtworkRenderOptions.md#filename)
 - [mode](Core.IArtworkRenderOptions.md#mode)
@@ -23,7 +22,7 @@ Iniquity artwork rendering options
 
 #### Defined in
 
-[core/src/index.ts:45](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L45)
+[packages/core/src/index.ts:57](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L57)
 
 ___
 
@@ -33,7 +32,17 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L50)
+[packages/core/src/index.ts:62](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L62)
+
+___
+
+### data
+
+• `Optional` **data**: `unknown`
+
+#### Defined in
+
+[packages/core/src/index.ts:63](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L63)
 
 ___
 
@@ -43,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L48)
+[packages/core/src/index.ts:60](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L60)
 
 ___
 
@@ -53,17 +62,17 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:46](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L46)
+[packages/core/src/index.ts:58](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L58)
 
 ___
 
 ### mode
 
-• `Optional` **mode**: ``"line"`` \| ``"character"``
+• `Optional` **mode**: ``"line"`` \| ``"character"`` \| ``"@-codes"`` \| ``"reactive"``
 
 #### Defined in
 
-[core/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L49)
+[packages/core/src/index.ts:61](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L61)
 
 ___
 
@@ -73,4 +82,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:47](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L47)
+[packages/core/src/index.ts:59](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L59)

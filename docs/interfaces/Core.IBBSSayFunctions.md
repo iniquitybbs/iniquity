@@ -7,6 +7,7 @@
 ### Methods
 
 - [pause](Core.IBBSSayFunctions.md#pause)
+- [wait](Core.IBBSSayFunctions.md#wait)
 
 ## Methods
 
@@ -26,4 +27,24 @@
 
 #### Defined in
 
-[core/src/index.ts:110](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L110)
+[packages/core/src/index.ts:147](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L147)
+
+___
+
+### wait
+
+▸ **wait**(`options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`IQWaitOptions`](Core.IQWaitOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[packages/core/src/index.ts:148](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L148)

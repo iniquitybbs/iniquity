@@ -1,4 +1,4 @@
-import { IQCoreModules } from "src/modules"
+import { IQCoreModules } from "@iniquitybbs/core/src/modules"
 
 do {
     IQCoreModules.answer()

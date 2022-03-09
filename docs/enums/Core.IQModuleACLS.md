@@ -1,0 +1,54 @@
+# Enumeration: IQModuleACLS
+
+[Core](../modules/Core.md).IQModuleACLS
+
+Decorators
+
+## Table of contents
+
+### Enumeration members
+
+- [high](Core.IQModuleACLS.md#high)
+- [low](Core.IQModuleACLS.md#low)
+- [medium](Core.IQModuleACLS.md#medium)
+- [superHigh](Core.IQModuleACLS.md#superhigh)
+
+## Enumeration members
+
+### high
+
+• **high** = `3`
+
+#### Defined in
+
+[packages/core/src/index.ts:1076](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1076)
+
+___
+
+### low
+
+• **low** = `1`
+
+#### Defined in
+
+[packages/core/src/index.ts:1074](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1074)
+
+___
+
+### medium
+
+• **medium** = `2`
+
+#### Defined in
+
+[packages/core/src/index.ts:1075](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1075)
+
+___
+
+### superHigh
+
+• **superHigh** = `4`
+
+#### Defined in
+
+[packages/core/src/index.ts:1077](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1077)

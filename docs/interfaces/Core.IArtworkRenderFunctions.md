@@ -13,7 +13,10 @@ Additional functions exported by render
 ### Methods
 
 - [colorReset](Core.IArtworkRenderFunctions.md#colorreset)
+- [cursor](Core.IArtworkRenderFunctions.md#cursor)
+- [gotoxy](Core.IArtworkRenderFunctions.md#gotoxy)
 - [pause](Core.IArtworkRenderFunctions.md#pause)
+- [prompt](Core.IArtworkRenderFunctions.md#prompt)
 
 ## Methods
 
@@ -29,7 +32,49 @@ Resets the screen color
 
 #### Defined in
 
-[core/src/index.ts:102](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L102)
+[packages/core/src/index.ts:115](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L115)
+
+___
+
+### cursor
+
+▸ **cursor**(`x`, `y`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `x` | `number` |
+| `y` | `number` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[packages/core/src/index.ts:119](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L119)
+
+___
+
+### gotoxy
+
+▸ **gotoxy**(`x`, `y`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `x` | `number` |
+| `y` | `number` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[packages/core/src/index.ts:117](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L117)
 
 ___
 
@@ -51,4 +96,26 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:98](https://github.com/iniquitybbs/iniquity/blob/a881ad9/packages/core/src/index.ts#L98)
+[packages/core/src/index.ts:111](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L111)
+
+___
+
+### prompt
+
+▸ **prompt**(`x`, `y`, `text?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `x` | `number` |
+| `y` | `number` |
+| `text?` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[packages/core/src/index.ts:118](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L118)
