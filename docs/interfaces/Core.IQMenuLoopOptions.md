@@ -19,7 +19,7 @@ The maximum number of the menu event loop that can run.
 
 #### Defined in
 
-[packages/core/src/index.ts:492](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L492)
+[packages/core/src/index.ts:492](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L492)
 
 ___
 
@@ -33,4 +33,4 @@ Basically halt everything for the specified period of milliseconds.
 
 #### Defined in
 
-[packages/core/src/index.ts:487](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L487)
+[packages/core/src/index.ts:487](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L487)

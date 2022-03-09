@@ -31,7 +31,7 @@ This function can also be chained with .gotoxy()
 
 #### Defined in
 
-[packages/core/src/index.ts:139](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L139)
+[packages/core/src/index.ts:139](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L139)
 
 ___
 
@@ -55,4 +55,4 @@ This function can also be chained with .command()
 
 #### Defined in
 
-[packages/core/src/index.ts:131](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L131)
+[packages/core/src/index.ts:131](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L131)

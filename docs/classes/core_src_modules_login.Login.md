@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:1122](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1122)
+[packages/core/src/index.ts:1122](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1122)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1121](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1121)
+[packages/core/src/index.ts:1121](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1121)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1120](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1120)
+[packages/core/src/index.ts:1120](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1120)
 
 ## Methods
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/login.ts:6](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/modules/login.ts#L6)
+[packages/core/src/modules/login.ts:6](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/modules/login.ts#L6)

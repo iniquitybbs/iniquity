@@ -27,6 +27,8 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
 
+To get started using iniquity...
+
 ```bash
 npm install -g @iniquitybbs/cli
 ```
@@ -53,7 +55,7 @@ I want this to be something a typical sysop can use, yes, I also want it to be s
 - Make it easy for sysops to develop and deploy BBS applications.
 - Easily network files, messages and other forms of communication between other BBS applications.
 - What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
-  - Though the ability to do interesting things specific to web/terminal/encoding/character set should exist.
+  - Though the ability to do interesting things specific to web/terminal should exist.
 
 #### About iniquity's runtime
 

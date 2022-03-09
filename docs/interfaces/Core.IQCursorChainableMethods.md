@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:467](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L467)
+[packages/core/src/index.ts:467](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L467)
 
 ## Methods
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:469](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L469)
+[packages/core/src/index.ts:469](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L469)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:470](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L470)
+[packages/core/src/index.ts:470](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L470)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:471](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L471)
+[packages/core/src/index.ts:471](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L471)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:468](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L468)
+[packages/core/src/index.ts:468](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L468)

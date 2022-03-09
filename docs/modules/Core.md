@@ -94,7 +94,7 @@ myIniquity.disconnect()
 
 #### Defined in
 
-[packages/core/src/index.ts:1125](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1125)
+[packages/core/src/index.ts:1125](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1125)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1126](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1126)
+[packages/core/src/index.ts:1126](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1126)
 
 ## Variables
 
@@ -116,7 +116,7 @@ The globally scoped intance of iniquity
 
 #### Defined in
 
-[packages/core/src/index.ts:1068](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1068)
+[packages/core/src/index.ts:1068](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1068)
 
 ## Functions
 
@@ -152,7 +152,7 @@ An experimental Iniquity module decorator for bbs modules
 
 #### Defined in
 
-[packages/core/src/index.ts:1091](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1091)
+[packages/core/src/index.ts:1091](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1091)
 
 ___
 
@@ -174,7 +174,7 @@ The IQ script executed as part of a module.
 
 #### Defined in
 
-[packages/core/src/index.ts:1109](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L1109)
+[packages/core/src/index.ts:1109](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1109)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:960](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L960)
+[packages/core/src/index.ts:960](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L960)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:964](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L964)
+[packages/core/src/index.ts:964](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L964)
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:948](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L948)
+[packages/core/src/index.ts:948](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L948)
 
 ___
 
@@ -255,4 +255,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:967](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L967)
+[packages/core/src/index.ts:967](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L967)

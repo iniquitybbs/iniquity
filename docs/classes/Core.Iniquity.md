@@ -69,7 +69,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[packages/core/src/index.ts:244](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L244)
+[packages/core/src/index.ts:244](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L244)
 
 ## Properties
 
@@ -79,7 +79,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Defined in
 
-[packages/core/src/index.ts:231](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L231)
+[packages/core/src/index.ts:231](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L231)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:232](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L232)
+[packages/core/src/index.ts:232](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L232)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:399](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L399)
+[packages/core/src/index.ts:399](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L399)
 
 ## Methods
 
@@ -134,7 +134,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[packages/core/src/index.ts:440](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L440)
+[packages/core/src/index.ts:440](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L440)
 
 ___
 
@@ -158,7 +158,7 @@ response
 
 #### Defined in
 
-[packages/core/src/index.ts:379](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L379)
+[packages/core/src/index.ts:379](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L379)
 
 ___
 
@@ -180,7 +180,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:341](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L341)
+[packages/core/src/index.ts:341](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L341)
 
 ___
 
@@ -198,7 +198,7 @@ void
 
 #### Defined in
 
-[packages/core/src/index.ts:387](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L387)
+[packages/core/src/index.ts:387](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L387)
 
 ___
 
@@ -222,7 +222,7 @@ An instance of Menu
 
 #### Defined in
 
-[packages/core/src/index.ts:457](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L457)
+[packages/core/src/index.ts:457](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L457)
 
 ___
 
@@ -245,7 +245,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:333](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L333)
+[packages/core/src/index.ts:333](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L333)
 
 ___
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:391](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L391)
+[packages/core/src/index.ts:391](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L391)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:395](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L395)
+[packages/core/src/index.ts:395](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L395)
 
 ___
 
@@ -297,7 +297,7 @@ An instance of Menu
 
 #### Defined in
 
-[packages/core/src/index.ts:449](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L449)
+[packages/core/src/index.ts:449](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L449)
 
 ___
 
@@ -323,7 +323,7 @@ Display a pause prompt on the screen.
 
 #### Defined in
 
-[packages/core/src/index.ts:322](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L322)
+[packages/core/src/index.ts:322](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L322)
 
 ___
 
@@ -354,7 +354,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-[packages/core/src/index.ts:299](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L299)
+[packages/core/src/index.ts:299](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L299)
 
 ___
 
@@ -384,7 +384,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-[packages/core/src/index.ts:262](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L262)
+[packages/core/src/index.ts:262](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L262)
 
 ___
 
@@ -412,7 +412,7 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[packages/core/src/index.ts:422](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L422)
+[packages/core/src/index.ts:422](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L422)
 
 ___
 
@@ -436,4 +436,4 @@ void
 
 #### Defined in
 
-[packages/core/src/index.ts:368](https://github.com/iniquitybbs/iniquity/blob/b8c4706/packages/core/src/index.ts#L368)
+[packages/core/src/index.ts:368](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L368)
