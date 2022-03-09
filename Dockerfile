@@ -32,7 +32,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
     && apt-get -y install libcap2-dev libcap2-bin sudo lrzsz vim \ 
     && wget https://gitlab.synchro.net/main/sbbs/-/raw/master/install/GNUmakefile \
-    && make install SYMLINK=1 NOCAP=1 TAG=sbbs319b \
+    && make install SYMLINK=1 NOCAP=1 USE_DOSEMU=1 TAG=sbbs319b \
     && apt-get -y autoremove
 
 FROM synchronet as iniquity

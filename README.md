@@ -29,21 +29,19 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 ## Introduction
 
-### In a recent chat with Jack Plash
+### Some guidng thoughts surrounding the idea of iniquity 3
 
-ispyhumanfly said to JP...
+I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. -ispy
 
-```text
-Well, being honest, I have rather forward thinking ideas as well, however, for this to really stay "iniquity/bbs in general" we need someone who can help us there. I realize this in myself being honest. I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love, absolutely. Also, someone should be able to create an entirely new terminal style application with it. These are the three main things for me.
-```
-
-### Some guidng thoughts surrounding the idea of a new Iniquity BBS
-
-- A BBS software framework that is geared towards developers and modders.
+- A BBS software framework that is geared towards developers and modders .
 - Make it easy for sysops to develop and deploy BBS applications.
 - Easily network files, messages and other forms of communication between other BBS applications.
 - What you see in xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
   - Though the ability to do interesting things specific to terminal/web should exist.
+
+#### About iniquity's runtime
+
+Many cross-platform applications today are executed on a runtime environment known as Node.js. Node.js makes it possible for these applications to be written in JavaScript. Well, iniquity aims also to be a cross-platform software, and is largely executing inside of a custom runtime environment that is a fusion of Node.js, Synchronet JavaScript and Ubuntu all wrapped into a Docker container.  Anytime you run iniquity on your computer or on some cloud computing environment somewhere, this containerized runtime is quietly running in the background, making iniquity’s magic possible.
 
 ## Getting started
 
@@ -126,7 +124,7 @@ switch (login) {
 }
 ```
 
-[Want to learn more? Read the docs!](https://iniquitybbs.org/modules/Core.html)
+[Want to learn more? Read the docs!](https://iniquitybbs.com/modules/Core.html)
 
 ### Development of this project
 
