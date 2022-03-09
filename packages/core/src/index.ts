@@ -119,19 +119,24 @@ export interface IArtworkRenderFunctions {
     cursor(x: number, y: number): void
 }
 
+export interface IQMenuPromptOptions {}
+
 export interface IQMenuPromptFunctions {
     /**
      * Go to the specified coordinates on the terminal.
+     * This function can also be chained with .command()
      * @param x Width coordinates.
      * @param y Height coordinates.
      */
     gotoxy(x: number, y: number): void | any
+
     /**
-     * Await a response from the user.
-     * @param cmdkeys The list of acceptable keys to accept from the keyboard.
+     * Execute a menu command, with optional callback for working with response data.
+     * This function can also be chained with .gotoxy()
+     * @param command
+     * @param callback
      */
-    keypressed(cmdkeys: string): string
-    keypressed(cmdkeys?: string): string | void
+    command(command: Function, callback?: Function): void
 }
 
 export interface IBBSSayFunctions {
@@ -159,9 +164,9 @@ export interface IBBSPrintFunctions {
 export interface IQMenuOptions {
     name?: string
     description?: string
-    prompt?: IMenuPromptOptions
+    prompt?: IQMenuPromptOptions
     cmdkeys?: string
-    commands?: {
+    commands: {
         [s: string]: (...args: any) => any
     }
 
@@ -189,9 +194,9 @@ export interface IMenuCommand {
     name: string
 }
 
-export interface IMenuPromptOptions {
-    x: string
-    y: string
+export interface IQMenuPromptOptions {
+    x: number
+    y: number
     text?: string
 }
 /**
@@ -320,8 +325,38 @@ export class Iniquity {
         console.pause()
     }
 
+    /**
+     * Sends the cursor to a particular coordinates on the screen
+     * @param x
+     * @param y
+     */
     public gotoxy(x: number, y: number): void {
         console.gotoxy(x, y)
+    }
+
+    /**
+     * Sends the cursor to a particular coordinates on the screen
+     * @param {IQCursorOptions} options
+     */
+    public cursor(options?: IQCursorOptions): IQCursorChainableMethods {
+        let actions: IQCursorChainableMethods
+
+        return {
+            errors: [],
+
+            up(rows = 1): void {
+                console.up(rows)
+            },
+            down(rows = 1): void {
+                console.down(rows)
+            },
+            left(cols = 1): void {
+                console.left(cols)
+            },
+            right(cols = 1): void {
+                console.right(cols)
+            }
+        }
     }
 
     /**
@@ -424,6 +459,17 @@ export class Iniquity {
     }
 }
 
+export interface IQCursorOptions {
+    [s: string]: any
+}
+
+export interface IQCursorChainableMethods {
+    errors: []
+    up: (rows?: number) => void
+    down: (rows?: number) => void
+    left: (cols?: number) => void
+    right: (cols?: number) => void
+}
 export interface IQWaitOptions {
     milliseconds?: number
 }
@@ -434,72 +480,95 @@ export interface IQTermInfoObject {
 }
 
 export interface IQMenuLoopOptions {
+    /**
+     * Basically halt everything for the specified period of milliseconds.
+     * @param milliseconds
+     */
     wait?: number
+
+    /**
+     * The maximum number of the menu event loop that can run.
+     */
     maxInterval?: number
 }
 export class IQMenu {
-    private cmdkeys: string | null = null
-    public commands: IQMenuOptions["commands"]
+    protected cmdkeys: string | null = null
+    public commands!: IQMenuOptions["commands"]
 
     constructor(options: IQMenuOptions) {
         if (options.commands) this.commands = options.commands
-
         for (const [cmdkey, command] of Object.entries(this.commands!)) if (cmdkey != "default") this.cmdkeys += cmdkey
     }
 
-    public render(runtime: Function, options?: IQMenuLoopOptions): void {
+    public render(module: Function, options?: IQMenuLoopOptions): void {
         let count = 0
+        let cache: IQMenuLoopMessageResponse = {}
 
         do {
             count++
             bbs.nodesync()
 
-            let message: IQMenuLoopMessageResponse = {
+            let data: IQMenuLoopMessageResponse = {
                 options: options,
                 interval: count,
-                system: system
+                system: system,
+                // @ts-expect-error
+                cmdkey: console.inkey(K_UPPER).toString() || null
             }
 
-            runtime(message)
+            if (data.cmdkey === cache.cmdkey) continue
+            else this.commands[data.cmdkey] ? module(data, this.commands[data.cmdkey]()) : module(data, null)
 
-            iq.wait(options?.wait || 100)
+            cache = data
+
+            iq.wait(options?.wait)
             if (options?.maxInterval! >= count) continue
             else break
         } while (bbs.online && !js.terminated)
     }
 
-    public prompt(options: any): IQMenuPromptFunctions {
+    /**
+     * Will render a prompt to the screen.
+     * @param {IQMenuPromptOptions} options
+     * @returns {IQMenuPromptFunctions} Some functions that can be chained to the prompt.
+     */
+    public prompt(options: IQMenuPromptOptions | string): IQMenuPromptFunctions {
         if (!this.commands) throw new Error("No commands appear to be configured for this menu.")
 
         let commands = Object.keys(this.commands)
             .filter((cmdkey) => cmdkey != "default")
             .join(",")
 
-        if (options.x && options.y) iq.gotoxy(options.x, options.y)
-        if (options.text !== undefined) iq.say(commands + ":" + options.text)
-        if (typeof options === "string") iq.say(commands + ":" + options)
+        if (typeof options === "string") console.putmsg(commands + ":" + options)
+        if (typeof options === "object") {
+            if (options.x && options.y) iq.gotoxy(options.x, options.y)
+            if (options.text !== undefined) console.putmsg(commands + ":" + options.text)
+        }
 
         return {
             gotoxy(x: number, y: number) {
-                console.gotoxy(x, y)
+                iq.gotoxy(x, y)
                 return {
-                    keypressed(cmdkeys?: string) {
-                        return this.keypressed(cmdkeys || this.cmdkeys)
+                    command(command: Function, callback?: Function) {
+                        this.command(command, callback)
                     }
                 }
             },
-            keypressed(cmdkeys: string) {
-                return this.keypressed(cmdkeys)
+            command(command: Function, callback?: Function) {
+                if (typeof command !== "function") return
+                if (typeof callback !== "function") return
+
+                if (callback) callback(command)
+                else command()
             }
         }
     }
 
     public keypressed(cmdkeys: string | null = this.cmdkeys): string {
         // @ts-expect-error
-        // return console.getkeys(cmdkeys || this.cmdkeys, K_UPPER)
-        var char = console.inkey(K_UPPER)
+        return console.getkeys(cmdkeys || this.cmdkeys, K_UPPER)
+        // var char = console.inkey(K_UPPER)
         // console.putmsg(char)
-        return char
     }
 }
 
@@ -661,7 +730,7 @@ export class Artwork {
         let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
         let mode = options?.mode || "line"
         let speed = options?.speed || 30
-        let data = options?.data || {}
+        let data = options?.data || { message: "test" }
 
         switch (mode) {
             case "reactive":
@@ -681,7 +750,8 @@ export class Artwork {
                 let text = this.fileHandle.readAll()
 
                 for (let i = 0; i < text.length; i++) {
-                    console.putmsg(text[i])
+                    // @ts-expect-error
+                    console.putmsg(text[i], P_NONE, null, data)
                     sleep(speed)
                     if (i < text.length - 1) console.putmsg("\r\n")
                     console.line_counter = 0
@@ -875,7 +945,8 @@ String.prototype.newlines = function (count?: number | 0): string {
     return string + this
 }
 
-export function say(string: string): IBBSSayFunctions {
+export function say(options?: IBBSSayOptions | string | object | any): IBBSSayFunctions {
+    iq.say(options)
     return {
         pause(options?: IQPauseOptions): void {
             iq.pause(options)
@@ -893,7 +964,7 @@ export function gotoxy(x: number, y: number): void {
 export function pause(options?: IQPauseOptions): void {
     iq.pause()
 }
-export function wait(options?: IQWaitOptions): void {
+export function wait(options?: IQWaitOptions | number): void {
     iq.wait(options)
 }
 
@@ -938,6 +1009,10 @@ interface ISBBSGlobal {
  * Issbsconsole
  */
 declare interface ISSBSConsole {
+    up(arg0: number): void
+    down(arg0: number): void
+    left(arg0: number): void
+    right(arg0: number): void
     writeln: any
     center(arg0: string): void
     gotoxy(x: number, y: number): void
@@ -987,16 +1062,13 @@ interface ISBBSBbs {
 
 // if (process.argv.length > 2) yargs.command(cmds).help().argv
 
+/**
+ * The globally scoped intance of iniquity
+ */
 const iq = new Iniquity()
 export default iq
 
 /** Decorators  */
-
-/**
- * An experimental Iniquity module decorator for bbs modules
- * @author ispyhumanfly
- * @param constructor
- */
 
 export enum IQModuleACLS {
     low = 1,
@@ -1009,6 +1081,13 @@ export interface IQModuleOptions {
     assets?: string
     access?: IQModuleACLS
 }
+
+/**
+ * An experimental Iniquity module decorator for bbs modules
+ * @author ispyhumanfly
+ * @param constructor
+ */
+
 export function IQModule(options?: IQModuleOptions) {
     return function (constructor: Function) {
         constructor.prototype.basepath = options?.basepath
@@ -1074,3 +1153,5 @@ declare global {
     export let bbs: ISBBSBbs
     export let time: number
 }
+
+// export let K_UPPER: any

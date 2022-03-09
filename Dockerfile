@@ -1,27 +1,38 @@
 FROM ubuntu:bionic as synchronet
 LABEL name="synchronet"
-LABEL version="3.17b"
 
 WORKDIR /sbbs
 ENV SBBSCTRL=/sbbs/ctrl
 ENV SBBSEXEC=/sbbs/exec
 
+# for sbbs 3.17b
+# LABEL version="3.17b"
+# RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+#     && apt-get -y install build-essential python ruby wget \
+#     && apt-get -y install libncurses5-dev libncursesw5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu libarchive-dev \
+#     && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
+#     && apt-get -y install libmozjs-38-dev libmozjs-52-dev libcap2-dev libcap2-bin sudo lrzsz vim \ 
+#     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \
+#     && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/termcap \
+#     && tic terminfo && cat termcap >> /etc/termcap \
+#     && wget ftp://vert.synchro.net/Synchronet/ssrc317b.tgz \
+#     && wget ftp://vert.synchro.net/Synchronet/srun317b.tgz \ 
+#     && tar -xzf ssrc317b.tgz && tar -xzf srun317b.tgz \
+#     && echo RELEASE=1 > src/build/localdefs.mk \
+#     && cd src/sbbs3 \
+#     && echo USE_DOSEMU=1 > localdefs.mk \
+#     && make symlinks \
+#     && /sbbs/exec/jsexec update.js \
+#     && apt-get -y autoremove
+
+LABEL version="3.19b"
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install build-essential python ruby wget \
-    && apt-get -y install libncurses5-dev libncursesw5-dev libc6-dev libc-dev g++ libnspr4-dev git cvs dosemu libarchive-dev \
+    && apt-get -y install libncurses5-dev libncursesw5-dev libc6-dev libc-dev g++ libnspr4-dev git dosemu libarchive-dev \
     && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
-    && apt-get -y install libmozjs-38-dev libmozjs-52-dev libcap2-dev libcap2-bin sudo lrzsz vim \ 
-    && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/terminfo \
-    && wget http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/termcap \
-    && tic terminfo && cat termcap >> /etc/termcap \
-    && wget ftp://vert.synchro.net/Synchronet/ssrc317b.tgz \
-    && wget ftp://vert.synchro.net/Synchronet/srun317b.tgz \ 
-    && tar -xzf ssrc317b.tgz && tar -xzf srun317b.tgz \
-    && echo RELEASE=1 > src/build/localdefs.mk \
-    && cd src/sbbs3 \
-    && echo USE_DOSEMU=1 > localdefs.mk \
-    && make symlinks \
-    && /sbbs/exec/jsexec update.js \
+    && apt-get -y install libcap2-dev libcap2-bin sudo lrzsz vim \ 
+    && wget https://gitlab.synchro.net/main/sbbs/-/raw/master/install/GNUmakefile \
+    && make install SYMLINK=1 NOCAP=1 TAG=sbbs319b \
     && apt-get -y autoremove
 
 FROM synchronet as iniquity

@@ -7,7 +7,8 @@ import iq, {
     IQModuleACLS,
     IQModuleContainer,
     IQModuleRuntime,
-    say
+    say,
+    wait
 } from "@iniquitybbs/core"
 
 @IQModule({
@@ -36,20 +37,26 @@ export class Answer extends IQModuleContainer {
                         if (iq.ask("Are you sure?")) iq.disconnect()
                     },
                     default: () => {
-                        iq.say("please try again.".gotoxy(1, 1))
+                        // iq.say("please try again.".gotoxy(1, 1))
                     }
                 }
             })
 
             menu.render(
-                (messages: IQMenuLoopMessageResponse) => {
-                    iq.print("The Unsupported menu... :/".newlines(1))
-                    iq.artwork({ basepath: "/iniquity/core/src/assets", filename: IQCoreAssets.sm_iniq2 }).render()
-
-                    menu.prompt({ text: "Enter your command: ".color("bright cyan"), x: 20, y: 20 })
-                    menu.keypressed()
+                (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
+                    iq.artwork({ basepath: "/iniquity/core/src/assets", filename: IQCoreAssets.sm_iniq2 }).render({
+                        clearScreenBefore: true,
+                        mode: "@-codes",
+                        data: {
+                            message: "Something I want said in here.",
+                            data: {
+                                message: "test"
+                            }
+                        }
+                    })
+                    menu.prompt({ text: "Enter your command: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)
                 },
-                { wait: 1000, maxInterval: 3000 }
+                { maxInterval: 3000 }
             )
 
             iq.wait(100)
@@ -87,7 +94,7 @@ export class Answer extends IQModuleContainer {
                     frame.close()
                 },
                 H: () => {
-                    if (iq.ask("Are you sure?")) iq.disconnect()
+                    iq.cursor().down()
                 },
                 default: () => {
                     iq.say("please try again.".gotoxy(1, 1))
@@ -96,7 +103,7 @@ export class Answer extends IQModuleContainer {
         })
 
         menu.render(
-            () => {
+            (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
                 const art = iq.artwork({ basepath: this.basepath })
 
                 art.render({
@@ -105,12 +112,9 @@ export class Answer extends IQModuleContainer {
                     filename: IQCoreAssets.iq3_hello
                 })
 
-                // @ts-expect-error
-                say(console.inkey(K_UPPER)).pause()
-
-                // if (cmdkey) menu.commands![cmdkey]()
+                menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
             },
-            { wait: 100, maxInterval: 1000000 }
+            { maxInterval: 1000000 }
         )
     }
 }
