@@ -53,6 +53,70 @@ if (!Object.entries) {
     }
 }
 
+export interface ReactiveDataFunctions {
+    data: any
+    observe: Function
+    notify: Function
+}
+
+/**
+ * Iniquity reactive data model
+ * @see https://www.monterail.com/blog/2016/how-to-build-a-reactive-engine-in-javascript-part-1-observable-objects
+ * @param dataObj
+ * @returns
+ */
+export function IQDataModel(dataObj: any): ReactiveDataFunctions {
+    let signals = {}
+
+    observeData(dataObj)
+
+    // Besides the reactive data object, we also want to return and thus expose the observe and notify functions.
+    return {
+        data: dataObj,
+        observe,
+        notify
+    }
+
+    function makeReactive(obj: any, key: any) {
+        let val = obj[key]
+
+        Object.defineProperty(obj, key, {
+            get() {
+                return val // Simply return the cached value
+            },
+            set(newVal) {
+                val = newVal // Save the newVal
+                notify(key) // Ignore for now
+            }
+        })
+    }
+
+    // Iterate through our object keys
+    function observeData(obj: any) {
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                makeReactive(obj, key)
+            }
+        }
+    }
+
+    function observe(property: any, signalHandler: any) {
+        alert(property)
+        // @ts-expect-error
+        if (!signals[property]) signals[property] = [] // If there is NO signal for the given property, we create it and set it to a new array to store the signalHandlers
+        // @ts-expect-error
+        signals[property].push(signalHandler) // We push the signalHandler into the signal array, which effectively gives us an array of callback functions
+    }
+
+    function notify(signal: any, newVal?: any) {
+        // @ts-expect-error
+        if (!signals[signal] || signals[signal].length < 1) return // Early return if there are no signal handlers
+
+        // @ts-expect-error
+        signals[signal].forEach((signalHandler) => signalHandler()) // We call each signalHandler that’s observing the given property
+    }
+}
+
 export interface IArtworkRenderOptions {
     basepath?: string | undefined
     filename?: string | undefined
@@ -145,7 +209,7 @@ export interface IBBSSayFunctions {
      * {@link IQPauseOptions}
      */
     pause(options?: IQPauseOptions): void
-    wait(options?: IQWaitOptions): void
+    wait(options?: IQWaitOptions | number): void
 }
 export interface IBBSPrintFunctions {
     /**
@@ -171,6 +235,7 @@ export interface IQMenuOptions {
     }
 
     frame?: IQFrameOptions
+    data?: any
 }
 export interface IQMenuLoopMessageResponse {
     [x: string]: any
@@ -339,30 +404,36 @@ export class Iniquity {
      * @param {IQCursorOptions} options
      */
     public cursor(options?: IQCursorOptions): IQCursorChainableMethods {
-        let actions: IQCursorChainableMethods
-
-        return {
+        let actions: IQCursorChainableMethods = {
             errors: [],
-
-            up(rows = 1): void {
+            up(rows = 1): IQCursorChainableMethods {
                 console.up(rows)
+                return this
             },
-            down(rows = 1): void {
+            down(rows = 1): IQCursorChainableMethods {
                 console.down(rows)
+                return this
             },
-            left(cols = 1): void {
+            left(cols = 1): IQCursorChainableMethods {
                 console.left(cols)
+                return this
             },
-            right(cols = 1): void {
+            right(cols = 1): IQCursorChainableMethods {
                 console.right(cols)
+                return this
             }
         }
+
+        return actions
     }
 
     /**
      * Halt the screen for a specified period of time.
      * @param {IQWaitOptions} options In miliseconds
      * @returns void
+     * @example
+     * iq.wait(100)
+     * wait(10)
      */
 
     public wait(options?: IQWaitOptions | number): void {
@@ -465,10 +536,10 @@ export interface IQCursorOptions {
 
 export interface IQCursorChainableMethods {
     errors: []
-    up: (rows?: number) => void
-    down: (rows?: number) => void
-    left: (cols?: number) => void
-    right: (cols?: number) => void
+    up: (rows?: number) => IQCursorChainableMethods
+    down: (rows?: number) => IQCursorChainableMethods
+    left: (cols?: number) => IQCursorChainableMethods
+    right: (cols?: number) => IQCursorChainableMethods
 }
 export interface IQWaitOptions {
     milliseconds?: number
@@ -490,6 +561,11 @@ export interface IQMenuLoopOptions {
      * The maximum number of the menu event loop that can run.
      */
     maxInterval?: number
+
+    /**
+     * Data you would like to be reactive in the menu
+     */
+    data?: any
 }
 export class IQMenu {
     protected cmdkeys: string | null = null
@@ -508,7 +584,7 @@ export class IQMenu {
             count++
             bbs.nodesync()
 
-            let data: IQMenuLoopMessageResponse = {
+            let res: IQMenuLoopMessageResponse = {
                 options: options,
                 interval: count,
                 system: system,
@@ -516,10 +592,10 @@ export class IQMenu {
                 cmdkey: console.inkey(K_UPPER).toString() || null
             }
 
-            if (data.cmdkey === cache.cmdkey) continue
-            else this.commands[data.cmdkey] ? module(data, this.commands[data.cmdkey]()) : module(data, null)
+            if (res.cmdkey === cache.cmdkey) continue
+            else this.commands[res.cmdkey] ? module(res, this.commands[res.cmdkey]()) : module(res, null)
 
-            cache = data
+            cache = res
 
             iq.wait(options?.wait)
             if (options?.maxInterval! >= count) continue
@@ -530,7 +606,15 @@ export class IQMenu {
     /**
      * Will render a prompt to the screen.
      * @param {IQMenuPromptOptions} options
-     * @returns {IQMenuPromptFunctions} Some functions that can be chained to the prompt.
+     * @returns {IQMenuPromptFunctions} Functions that can be chained to the prompt.
+     * @example
+     * menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
+     * menu.prompt({ text: "Enter your command: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)
+     * menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey, (response, error) => {
+     *      if (response.error) {
+     *          alert(errors)
+     *      }
+     *  })
      */
     public prompt(options: IQMenuPromptOptions | string): IQMenuPromptFunctions {
         if (!this.commands) throw new Error("No commands appear to be configured for this menu.")
@@ -750,8 +834,7 @@ export class Artwork {
                 let text = this.fileHandle.readAll()
 
                 for (let i = 0; i < text.length; i++) {
-                    // @ts-expect-error
-                    console.putmsg(text[i], P_NONE, null, data)
+                    console.putmsg(text[i], data)
                     sleep(speed)
                     if (i < text.length - 1) console.putmsg("\r\n")
                     console.line_counter = 0
@@ -945,6 +1028,13 @@ String.prototype.newlines = function (count?: number | 0): string {
     return string + this
 }
 
+/**
+ * Say whatever you want, but to the screen
+ * @param {IBBSSayOptions} options
+ * @returns {IBBSSayFunctions}
+ * @example
+ * say("are we making it here?").pause()
+ */
 export function say(options?: IBBSSayOptions | string | object | any): IBBSSayFunctions {
     iq.say(options)
     return {
@@ -955,6 +1045,17 @@ export function say(options?: IBBSSayOptions | string | object | any): IBBSSayFu
             iq.wait(options || 100)
         }
     }
+}
+
+/**
+ * A pretty cool method for working with cursor movement.
+ * @param {IQCursorOptions} options
+ * @returns {IQCursorChainableMethods}
+ * @example
+ * cursor().down(10).up(12).down().up().down().left(1).right(20).down(12).up(14)
+ */
+export function cursor(options?: IQCursorOptions): IQCursorChainableMethods {
+    return iq.cursor(options)
 }
 
 export function gotoxy(x: number, y: number): void {
@@ -1080,12 +1181,13 @@ export interface IQModuleOptions {
     basepath?: string
     assets?: string
     access?: IQModuleACLS
+    data?: ReactiveDataFunctions
 }
 
 /**
  * An experimental Iniquity module decorator for bbs modules
  * @author ispyhumanfly
- * @param constructor
+ * @param {IQModuleOptions} options
  */
 
 export function IQModule(options?: IQModuleOptions) {
@@ -1093,6 +1195,7 @@ export function IQModule(options?: IQModuleOptions) {
         constructor.prototype.basepath = options?.basepath
         constructor.prototype.assets = options?.assets
         constructor.prototype.access = options?.access
+        constructor.prototype.data = options?.data
 
         // if (options?.access === IQModuleACLS.low) {
         //     iq.say("You do can't access this module.".color("red")).pause()
@@ -1120,6 +1223,7 @@ export class IQModuleContainer {
     public basepath!: string
     public assets!: string
     public access!: IQModuleACLS
+    public data?: any
 }
 
 export { Assets as IQCoreAssets } from "./assets/index"
@@ -1142,8 +1246,8 @@ declare global {
     export function prompt(text: string): string
     export function sleep(miliseconds: number): void
     export function yield(forced: boolean): number
-
     export function random(max_number: number): number
+    export function time(): number
 
     export let client: ISBBSClient
     export let system: ISBBSSystem
@@ -1151,7 +1255,6 @@ declare global {
 
     export let user: ISBBSUser
     export let bbs: ISBBSBbs
-    export let time: number
 }
 
 // export let K_UPPER: any

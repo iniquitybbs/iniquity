@@ -8,9 +8,9 @@ __________   //_________\\        /________\    ______________     /_________\
          /______________________________________\  iniquity  /_________________
 
                   Screen columns: @COLS@
-                Screen rows: @ROWS@     @JS:property@
+                Screen rows: @ROWS@
                  Terminal type: @TERM@
-                                @JS:property.message@
+
                 @JS:message@
 
 

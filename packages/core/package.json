@@ -16,7 +16,8 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "npx tsc -p tsconfig.json && npx rollup -c",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "start": "npx tsc -p tsconfig.json && npx rollup --compact -w -c"
   },
   "repository": {
     "type": "git",

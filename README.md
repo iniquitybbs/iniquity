@@ -27,7 +27,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
 
-To get started using iniquity...
+To get started.
 
 ```bash
 npm install -g @iniquitybbs/cli
@@ -39,7 +39,7 @@ Then...
 iniquity init --name MyBBS --template eternity --theme iq3
 ```
 
-Then start iniquity
+...and finally.
 
 ```bash
 iniquity start
@@ -47,7 +47,7 @@ iniquity start
 
 ## Introduction
 
-### Some guidng thoughts surrounding the idea of iniquity 3
+### Some guiding thoughts surrounding the idea of iniquity 3
 
 I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
 
@@ -59,7 +59,18 @@ I want this to be something a typical sysop can use, yes, I also want it to be s
 
 #### About iniquity's runtime
 
+Alpha... — Today at 11:29 AM
+@ispyhumanfly curious about that last commit, "Now with Synchronet under the hood" 🙂
+
 Many cross-platform applications today are executed on a runtime environment known as Node.js. Node.js makes it possible for these applications to be written in JavaScript. Well, iniquity aims also to be a cross-platform software, and is largely executing inside of a custom runtime environment that is a fusion of Node.js, Synchronet JavaScript and Ubuntu all wrapped into a Docker container.  Anytime you run iniquity on your computer or on some cloud computing environment somewhere, this containerized runtime is quietly running in the background, making iniquity’s magic possible.
+
+Alpha... — Today at 12:28 PM
+so, that allows iniquity to leverage existing javascript-based modules, like parts of Synchronet, without having to re-invent the wheel?
+
+ispyhumanfly — Today at 1:39 PM
+
+That's basically the primary reason for using it. In addition to the wealth of command line utilities centered around the subject of bbs/ansi/terminal/etc made possible by the people behind Synchronet. Also, there are many utilities available within the Ubuntu ecosystem. DOSemu being one of them, which is integrated into this runtime container as well.
+Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
 
 ## Getting started
 
