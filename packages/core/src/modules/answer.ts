@@ -48,7 +48,7 @@ export class Answer extends IQ {
                         }
                     },
                     G: () => {
-                        this.data.model.number + 1
+                        this.data.model.number++
                     },
                     H: () => {
                         this.data.model.message = this.ask("What should I change the message to?")
