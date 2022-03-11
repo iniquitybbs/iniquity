@@ -4,4 +4,4 @@ do {
     IQCoreModules.answer()
     IQCoreModules.hangup()
     sleep(100)
-} while (bbs.online && bbs.nodesync() && !js.terminated)
+} while (bbs.online && bbs.nodesync() && bbs.user_sync() && !js.terminated)

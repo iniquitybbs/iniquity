@@ -1,4 +1,13 @@
-import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQDataModel, IQ } from "@iniquitybbs/core"
+import {
+    IQCoreAssets,
+    IQFrameColorOptions,
+    IQCoreModules,
+    IQMenuLoopMessageResponse,
+    IQModule,
+    IQModuleRuntime,
+    IQDataModel,
+    IQ
+} from "@iniquitybbs/core"
 
 @IQModule({
     basepath: "/iniquity/core/src/assets",
@@ -13,7 +22,7 @@ export class Answer extends IQ {
     @IQModuleRuntime({
         debug: true
     })
-    _() {
+    start() {
         this.data.observe("message", () => {
             this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ speed: 1, clearScreenBefore: true }).colorReset()
             this.say(this.data.model.message).wait(1000)
@@ -68,10 +77,6 @@ export class Answer extends IQ {
             this.wait(100)
         }
 
-        alert(this.data.model.message)
-
-        alert(this.basepath)
-
         this.data.model.message = this.ask("So what's the new message?")
 
         this.artwork({ filename: IQCoreAssets.iq3_welcome })
@@ -95,9 +100,11 @@ export class Answer extends IQ {
             description: "Really I just get to rattle off more non-sense.",
             commands: {
                 L: (help = "Sit cillum consequat qui quis dolore Lorem.") => {
-                    this.gotoxy(23, 63)
                     this.data.model.message = this.ask("Oh so you wanna change it?")
+
                     this.data.model.number++
+
+                    IQCoreModules.apply()
                 },
                 O: () => {
                     frame.open()
@@ -116,8 +123,14 @@ export class Answer extends IQ {
                     frame.close()
                 },
                 H: () => {
-                    this.cursor().down().left(22)
-                    this.data.model.number++
+                    system.node_list.forEach((node, index) => {
+                        this.data.model.message = JSON.stringify(system.get_node(index))
+                        if (system.put_node_message(index, "Wow, this is working?")) {
+                            this.say("Just sent a message to some guy on node " + index)
+                        }
+                    })
+
+                    IQCoreModules.login()
                 },
                 default: () => {
                     this.say("please try again.".gotoxy(1, 1))
@@ -127,7 +140,7 @@ export class Answer extends IQ {
         })
 
         menu.render(
-            (res: IQMenuLoopMessageResponse, cmdkey: Function, data?: any) => {
+            (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
                 this.artwork().render({
                     clearScreenBefore: true,
                     filename: IQCoreAssets.sm_iniq2,

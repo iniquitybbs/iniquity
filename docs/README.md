@@ -190,7 +190,7 @@ import iq, { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreMo
 @IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
 export class Login extends IQ {
     @IQModuleRuntime({ debug: true })
-    _() {
+    start() {
         const art = iq.artwork({ basepath: this.basepath })
 
         art.render({ filename: IQCoreAssets.iq3_login }).cursor(40, 25)
@@ -222,7 +222,7 @@ export class Answer extends IQ {
     @IQModuleRuntime({
         debug: true
     })
-    _() {
+    start() {
         this.data.observe("message", () => {
             this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ speed: 1, clearScreenBefore: true }).colorReset()
             this.say(this.data.model.message).wait(1000)

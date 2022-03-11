@@ -5,7 +5,7 @@ import iq, { IQModule, IQBaseConfig, IQModuleACLS, IQCoreAssets, IQModuleRuntime
 })
 export class Hangup extends IQBaseConfig {
     @IQModuleRuntime({ debug: true })
-    _() {
+    start() {
         iq.artwork({ basepath: "/iniquity/core/src/assets", filename: IQCoreAssets.iq3_logoff }).render({ speed: 10 }).pause({ newlines: 2 })
 
         iq.print("@POFF@ @CLS@ Nice knowing yuh! @PON@".color("background blue"))

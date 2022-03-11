@@ -6,14 +6,16 @@ import iniquity, { IQModule, IQBaseConfig, IQModuleRuntime, IQModuleACLS } from 
 })
 export class Apply extends IQBaseConfig {
     @IQModuleRuntime({ debug: true })
-    _() {
+    start() {
         iniquity.artwork({ basepath: "/iniquity/core/src/assets", filename: "5m-ink2menu.ans" }).render({ clearScreenBefore: true })
 
-        let newUser = iniquity.user({
-            name: iniquity.ask("What would you like your handle to be?".newlines(2).color("white")),
-            password: iniquity.ask("And your password?".newlines(2).color("white"))
-        })
+        let newUser = iniquity
+            .user({
+                name: iniquity.ask("What would you like your handle to be?".newlines(2).color("white")),
+                password: iniquity.ask("And your password?".newlines(2).color("white"))
+            })
+            .new()
 
-        iniquity.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
+        alert(JSON.stringify(newUser))
     }
 }

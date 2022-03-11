@@ -40,7 +40,16 @@ load("sbbsdefs.js")
 load("frame.js")
 load("funclib.js")
 
-js.do_callbacks = true
+// js.do_callbacks = false
+
+// alert(JSON.stringify(js))
+
+alert(js.do_callbacks)
+
+alert(js.terminated)
+
+console.inactivity_warning = 9999
+console.inactivity_hangup = 99999
 
 if (!Object.entries) {
     Object.entries = function (obj: any) {
@@ -305,24 +314,6 @@ export abstract class IQBaseConfig {
 
 export class Iniquity extends IQBaseConfig {
     /**
-     * Iniquity BBS core class
-     * @param {IQOptions} options An object containing the various configuration properties.
-     * @param {string} options.basepath The BBS project root.
-     * @example
-     * ```typescript
-     * const iq = new Iniquity()
-     * const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
-     * ```
-     */
-    constructor(options?: IQOptions) {
-        super()
-
-        console.inactivity_warning = 9999
-        console.inactivity_hangup = 99999
-        this.basepath = options?.basepath || this.basepath || "."
-    }
-
-    /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param {IBBSSayOptions | string} options What you would like to say on the screen.
      * @see {@link IQPrintOptions} to learn more about the available options.
@@ -346,14 +337,12 @@ export class Iniquity extends IQBaseConfig {
                 break
         }
 
-        let iq = this
-
         return {
             pause(options?: IQPauseOptions): void {
-                iq.pause(options)
+                pause(options)
             },
             wait(options?: IQWaitOptions): void {
-                iq.wait(options?.milliseconds || 100)
+                wait(options?.milliseconds || 100)
             }
         }
     }
@@ -375,12 +364,12 @@ export class Iniquity extends IQBaseConfig {
 
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                if (options) pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else iq.say("".color("reset"))
-                this.pause()
+                pause()
             },
             wait(options?: IQWaitOptions): void {
-                this.wait(options?.milliseconds || 100)
+                wait(options?.milliseconds || 100)
             }
         }
     }
@@ -538,7 +527,7 @@ export class Iniquity extends IQBaseConfig {
 }
 
 export abstract class IQ extends Iniquity {
-    public abstract _(): any
+    public abstract start(): any
 }
 
 export interface IQCursorOptions {
@@ -594,6 +583,7 @@ export class IQMenu {
         do {
             count++
             bbs.nodesync()
+            bbs.user_sync()
 
             let res: IQMenuLoopMessageResponse = {
                 options: options,
@@ -750,10 +740,9 @@ export class Network {}
  * User
  * @summary Some basic user utils. More to follow.
  */
-export class User {
+export class User extends Iniquity {
     public name: string = ""
     public password: string = ""
-    public logins: number = 0
 
     /**
      * Mechanisms for working with an individual iniquity user
@@ -761,8 +750,24 @@ export class User {
      * @param options.password
      */
     constructor(options: IUserOptions) {
+        super()
         this.name = options.name
         this.password = options.password
+    }
+
+    login() {
+        const user = bbs.login(this.name, null, this.password)
+        if (user) return user
+    }
+
+    new() {
+        const user = system.new_user(this.name)
+        if (user) {
+            say(JSON.stringify(user)).pause()
+            // @ts-expect-error
+            user.password = this.password
+        }
+        return user
     }
 }
 
@@ -1144,12 +1149,27 @@ declare interface ISSBSConsole {
  * Isbbssystem
  */
 interface ISBBSSystem {
+    new_user(name: string): object
+    newuser_password: string
+    put_node_message(index: number, arg1: string): boolean
+    nodes: number
+    get_node(node: number): ISBBSSystemNodeListProperties
     name: string
     operator: string
-    node_list: any
+    node_list: ISBBSSystemNodeListProperties[]
     stats: any
 }
-
+interface ISBBSSystemNodeListProperties {
+    status: number
+    errors: number
+    action: number
+    useron: number
+    connection: number
+    misc: number
+    aux: number
+    extaux: number
+    dir: string
+}
 interface ISBBSBbs {
     [x: string]: any
 }
@@ -1242,11 +1262,30 @@ declare global {
         export function setTimeout(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number
         export function setInterval(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): object
         export function addEventListener(event: string, handler: Function): number
-        export function removeEventListener(): number
-        export function dispatchEvent(event: string, thisObj: object): void
+        export function removeEventListener(id: number): number
+        export function dispatchEvent(event: string, thisObj?: object): void
         export let terminated: boolean
         export let do_callbacks: boolean
     }
+
+    /**
+     * add a line of text to the server and/or system log, values are typically string constants or variables, level is the debug level/priority (default: LOG_INFO)
+     * @param level
+     * @param value
+     */
+    export function log(level: any, value: string): string
+    /**
+     * stop script execution, optionally setting the global property exit_code to the specified numeric value
+     * @param exit_code
+     */
+    export function exit(exit_code: number): void
+
+    /**
+     * produce a tone on the local speaker at specified frequency for specified duration (in milliseconds)
+     * @param frequency
+     * @param duration
+     */
+    export function beep(frequency: number, duration: number): void
 
     export function load(library: string): void
     export function alert(text: string): void

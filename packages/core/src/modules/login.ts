@@ -3,20 +3,23 @@ import iq, { IQModule, IQBaseConfig, IQModuleRuntime, IQModuleACLS, IQCoreAssets
 @IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
 export class Login extends IQBaseConfig {
     @IQModuleRuntime({ debug: true })
-    _() {
+    start() {
         const art = iq.artwork({ basepath: this.basepath })
 
         art.render({ filename: IQCoreAssets.iq3_login }).cursor(40, 25)
 
         const login = iq.ask("Enter your handle, or type 'new' to apply".color("green"))
+        bbs.list_nodes()
 
         switch (login) {
             case "new":
                 IQCoreModules.apply()
                 break
             default:
-                if (iq.user({ name: login, password: iq.ask("And your password?".color("white")) })) {
+                if (iq.user({ name: login, password: iq.ask("And your password?".color("white")) }).login()) {
                     iq.say("Welcome back!").pause()
+                    bbs.list_nodes()
+                    bbs.logon()
                 } else {
                     iq.say("You do not appear to have an account, or your, password is wrong.")
                 }

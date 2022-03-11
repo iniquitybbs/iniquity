@@ -45,34 +45,7 @@ iniquity init --name MyBBS --template eternity --theme iq3
 iniquity start
 ```
 
-## Introduction
-
-### Some guiding thoughts surrounding the idea of iniquity 3
-
-I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
-
-- A BBS software framework that is geared towards developers and modders .
-- Make it easy for sysops to develop and deploy BBS applications.
-- Easily network files, messages and other forms of communication between other BBS applications.
-- What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
-  - Though the ability to do interesting things specific to web/terminal should exist.
-
-#### About iniquity's runtime
-
-Alpha... — Today at 11:29 AM
-@ispyhumanfly curious about that last commit, "Now with Synchronet under the hood" 🙂
-
-Many cross-platform applications today are executed on a runtime environment known as Node.js. Node.js makes it possible for these applications to be written in JavaScript. Well, iniquity aims also to be a cross-platform software, and is largely executing inside of a custom runtime environment that is a fusion of Node.js, Synchronet JavaScript and Ubuntu all wrapped into a Docker container.  Anytime you run iniquity on your computer or on some cloud computing environment somewhere, this containerized runtime is quietly running in the background, making iniquity’s magic possible.
-
-Alpha... — Today at 12:28 PM
-so, that allows iniquity to leverage existing javascript-based modules, like parts of Synchronet, without having to re-invent the wheel?
-
-ispyhumanfly — Today at 1:39 PM
-
-That's basically the primary reason for using it. In addition to the wealth of command line utilities centered around the subject of bbs/ansi/terminal/etc made possible by the people behind Synchronet. Also, there are many utilities available within the Ubuntu ecosystem. DOSemu being one of them, which is integrated into this runtime container as well.
-Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
-
-## Getting started
+## Getting started guide
 
 ### Your development environment should contain something like this, or similar
 
@@ -140,7 +113,7 @@ iq.say(
 
 ```
 
-So, let's make an actual menu..
+How about we make a menu that users could use to help them navigate around a bit.
 
 ```typescript
 
@@ -190,7 +163,7 @@ import iq, { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreMo
 @IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
 export class Login extends IQ {
     @IQModuleRuntime({ debug: true })
-    _() {
+    start() {
         const art = iq.artwork({ basepath: this.basepath })
 
         art.render({ filename: IQCoreAssets.iq3_login }).cursor(40, 25)
@@ -222,7 +195,7 @@ export class Answer extends IQ {
     @IQModuleRuntime({
         debug: true
     })
-    _() {
+    start() {
         this.data.observe("message", () => {
             this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ speed: 1, clearScreenBefore: true }).colorReset()
             this.say(this.data.model.message).wait(1000)
@@ -356,53 +329,34 @@ export class Answer extends IQ {
 
 ```
 
-### An example script representing a simple iniquity bbs
-
-```typescript
-const iq = new Iniquity({ basepath: "/iniquity/core/assets/" })
-
-const welcomeArt = iq.artwork({ filename: Assets.sm_iniq2 })
-welcomeArt.render({ clearScreenBefore: true, speed: 100 })
-
-iq.print({
-    text: `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
-        .newlines()
-        .color("background red")
-        .center()
-}).pause({ colorReset: true, newlines: 2, center: true })
-
-iq.artwork({ filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
-
-iq.say("You've connected to a prototype of the new Iniquity BBS Development Platform.".newlines(2).color("bright red").center()).pause()
-
-iq.artwork({ filename: Assets.d_iniq1 }).render({ speed: 100 })
-const login = iq.ask("What is your login: ".newlines(1))
-switch (login) {
-    case "new":
-    case "signup":
-        iq.artwork({ filename: Assets.newuser1 }).render({ clearScreenBefore: true })
-
-        let newUser = iq.user({
-            name: iq.ask("What would you like your handle to be?".newlines(2).color("white")),
-            password: iq.ask("And your password?".newlines(2).color("white"))
-        })
-
-        iq.say(`Welcome ${newUser.name}. And goodbye!`.newlines().center())
-        iq.disconnect()
-        break
-    default:
-        if (iq.user({ name: login, password: iq.ask("And your password?".newlines(2).color("white")) })) {
-            alert("somethingsync")
-        }
-
-        iq.pause()
-
-        iq.artwork({ filename: Assets.d_iniq1 }).render({ clearScreenBefore: true })
-        break
-}
-```
-
 [Want to learn more? Read the docs!](https://iniquitybbs.com/modules/Core.html)
+
+## More details about iniquity 3
+
+### Some guiding thoughts surrounding the idea of iniquity 3
+
+I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
+
+- A BBS software framework that is geared towards developers and modders .
+- Make it easy for sysops to develop and deploy BBS applications.
+- Easily network files, messages and other forms of communication between other BBS applications.
+- What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
+  - Though the ability to do interesting things specific to web/terminal should exist.
+
+#### About iniquity's runtime
+
+Alpha... — Today at 11:29 AM
+@ispyhumanfly curious about that last commit, "Now with Synchronet under the hood" 🙂
+
+Many cross-platform applications today are executed on a runtime environment known as Node.js. Node.js makes it possible for these applications to be written in JavaScript. Well, iniquity aims also to be a cross-platform software, and is largely executing inside of a custom runtime environment that is a fusion of Node.js, Synchronet JavaScript and Ubuntu all wrapped into a Docker container.  Anytime you run iniquity on your computer or on some cloud computing environment somewhere, this containerized runtime is quietly running in the background, making iniquity’s magic possible.
+
+Alpha... — Today at 12:28 PM
+so, that allows iniquity to leverage existing javascript-based modules, like parts of Synchronet, without having to re-invent the wheel?
+
+ispyhumanfly — Today at 1:39 PM
+
+That's basically the primary reason for using it. In addition to the wealth of command line utilities centered around the subject of bbs/ansi/terminal/etc made possible by the people behind Synchronet. Also, there are many utilities available within the Ubuntu ecosystem. DOSemu being one of them, which is integrated into this runtime container as well.
+Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
 
 ### Development of this project
 
