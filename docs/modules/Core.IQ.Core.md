@@ -7,5 +7,4 @@
 ### Classes
 
 - [Frame](../classes/Core.IQ.Core.Frame.md)
-- [Iniquity](../classes/Core.IQ.Core.Iniquity.md)
 - [Menu](../classes/Core.IQ.Core.Menu.md)

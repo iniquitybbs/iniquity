@@ -27,7 +27,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
 
-To get started using iniquity...
+To get started.
 
 ```bash
 npm install -g @iniquitybbs/cli
@@ -39,7 +39,7 @@ Then...
 iniquity init --name MyBBS --template eternity --theme iq3
 ```
 
-Then start iniquity
+...and finally.
 
 ```bash
 iniquity start
@@ -47,7 +47,7 @@ iniquity start
 
 ## Introduction
 
-### Some guidng thoughts surrounding the idea of iniquity 3
+### Some guiding thoughts surrounding the idea of iniquity 3
 
 I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
 
@@ -59,7 +59,18 @@ I want this to be something a typical sysop can use, yes, I also want it to be s
 
 #### About iniquity's runtime
 
+Alpha... — Today at 11:29 AM
+@ispyhumanfly curious about that last commit, "Now with Synchronet under the hood" 🙂
+
 Many cross-platform applications today are executed on a runtime environment known as Node.js. Node.js makes it possible for these applications to be written in JavaScript. Well, iniquity aims also to be a cross-platform software, and is largely executing inside of a custom runtime environment that is a fusion of Node.js, Synchronet JavaScript and Ubuntu all wrapped into a Docker container.  Anytime you run iniquity on your computer or on some cloud computing environment somewhere, this containerized runtime is quietly running in the background, making iniquity’s magic possible.
+
+Alpha... — Today at 12:28 PM
+so, that allows iniquity to leverage existing javascript-based modules, like parts of Synchronet, without having to re-invent the wheel?
+
+ispyhumanfly — Today at 1:39 PM
+
+That's basically the primary reason for using it. In addition to the wealth of command line utilities centered around the subject of bbs/ansi/terminal/etc made possible by the people behind Synchronet. Also, there are many utilities available within the Ubuntu ecosystem. DOSemu being one of them, which is integrated into this runtime container as well.
+Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
 
 ## Getting started
 
@@ -95,6 +106,255 @@ iniquity start
 ```
 
 For further development and customization of your iniquity bbs, it's recommended that you use VS Code. Open up your bbs directory in VSC to take advantage of the development tooling made available by this project.
+
+### Getting started guide
+
+In its most simple form, Iniquity can provide you with some shortcuts to working with a terminal...
+
+```typescript
+
+import { say, pause, wait, ask } from "@iniquitybbs/core"
+
+say("Hey there visitor?".color("blue")).pause()
+
+ask("Hey can I know your name", (name) => {
+    say(`Hey ${name}, nice to meet you!`)
+})
+
+```
+
+Alright, that's kinda neat, but now let's make it a bit more useful, because Iniquity can handle some more common use cases.
+
+```typescript
+
+import iq from "@iniquitybbs/core"
+
+iq.artwork({ filename: Assets.sm_iniq2 }).render({ clearScreenBefore: true, speed: 100 })
+
+iq.say(
+    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
+        .newlines(2)
+        .color("background red")
+        .center())
+        .pause({ colorReset: true, newlines: 2, center: true })
+
+```
+
+So, let's make an actual menu..
+
+```typescript
+
+const menu = iq.menu({
+    name: "Iniquity answer menu.",
+    description: "Really I just get to rattle off more non-sense.",
+    commands: {
+        L: (description = "Sit cillum consequat qui quis dolore Lorem.") => {
+            iq.say("Hey, don't touch that!")
+        },
+        O: () => {
+            iq.say("Nothing to see here, move along...")
+        },
+        H: () => {
+            if (ask("Are you sure you want to hangup?")) {
+                iq.disconnect()
+            }
+        },
+        default: () => {
+            iq.say("That command key doesn't do anything, try again.".gotoxy(1, 1))
+        }
+    }
+})
+
+menu.render(
+    (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
+        iq.artwork().render({
+            clearScreenBefore: true,
+            filename: IQCoreAssets.sm_iniq2,
+        })
+
+        menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
+    },
+    {
+        maxInterval: 1000000
+    }
+)
+
+```
+
+Thinking you need something a bit more advanced? Try the class based approach.
+
+```typescript
+
+import iq, { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core"
+
+@IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
+export class Login extends IQ {
+    @IQModuleRuntime({ debug: true })
+    _() {
+        const art = iq.artwork({ basepath: this.basepath })
+
+        art.render({ filename: IQCoreAssets.iq3_login }).cursor(40, 25)
+
+        const login = iq.ask("Enter your handle, or type 'new' to apply".color("green"))
+
+        /** More login logic to come **/
+
+    }
+}
+
+```
+
+Do you have experience making even driven applications on the web? Like with Vue or React? You can build fully reactive applications with Iniquity also...
+
+```typescript
+import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQDataModel, IQ } from "@iniquitybbs/core"
+
+@IQModule({
+    basepath: "/iniquity/core/src/assets",
+    data: IQDataModel({
+        message: "Umm, yeah this needs to change",
+        number: 1,
+        time: time(),
+        system: system.stats
+    })
+})
+export class Answer extends IQ {
+    @IQModuleRuntime({
+        debug: true
+    })
+    _() {
+        this.data.observe("message", () => {
+            this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ speed: 1, clearScreenBefore: true }).colorReset()
+            this.say(this.data.model.message).wait(1000)
+            this.pause()
+        })
+        this.data.observe("number", () => {
+            this.say(this.data.model.number).wait(1000)
+        })
+
+        while (this.terminfo.x < 132 || this.terminfo.y < 37) {
+            const menu = this.menu({
+                name: "Unsupported",
+                description: "A simple menu for letting the user know their terminal settings are not supported.",
+                commands: {
+                    /**
+                     * Unsupported.R
+                     * @param description
+                     * @returns
+                     */
+                    R: (description = "Sit cillum consequat qui quis dolore Lorem.") => {
+                        return {
+                            description
+                        }
+                    },
+                    G: () => {
+                        this.data.model.number + 1
+                    },
+                    H: () => {
+                        this.data.model.message = this.ask("What should I change the message to?")
+                    },
+                    default: () => {
+                        // this.say("please try again.".gotoxy(1, 1))
+                    }
+                }
+            })
+
+            menu.render(
+                (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
+                    this.artwork({ filename: IQCoreAssets.sm_iniq2 }).render({
+                        clearScreenBefore: true,
+                        speed: 1,
+                        data: this.data.model
+                    })
+                    menu.prompt({ text: "Enter your command: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)
+                },
+                {
+                    maxInterval: 3000,
+                    data: this.data.model
+                }
+            )
+
+            this.wait(100)
+        }
+
+        alert(this.data.model.message)
+
+        alert(this.basepath)
+
+        this.data.model.message = this.ask("So what's the new message?")
+
+        this.artwork({ filename: IQCoreAssets.iq3_welcome })
+            .render({
+                speed: 100,
+                data: this.data,
+                mode: "@-codes"
+            })
+            .pause()
+
+        const frame = this.frame({
+            x: 10,
+            y: 10,
+            width: 30,
+            height: 15,
+            color: IQFrameColorOptions.blue
+        })
+
+        const menu = this.menu({
+            name: "Iniquity answer menu.",
+            description: "Really I just get to rattle off more non-sense.",
+            commands: {
+                L: (help = "Sit cillum consequat qui quis dolore Lorem.") => {
+                    this.gotoxy(23, 63)
+                    this.data.model.message = this.ask("Oh so you wanna change it?")
+                    this.data.model.number++
+                },
+                O: () => {
+                    frame.open()
+
+                    while (true) {
+                        frame.say(JSON.stringify(this.data.model))
+                        frame.cycle()
+
+                        this.data.model.number++
+
+                        if (this.data.model.number > 20) break
+
+                        this.wait(10)
+                    }
+
+                    frame.close()
+                },
+                H: () => {
+                    this.cursor().down().left(22)
+                    this.data.model.number++
+                },
+                default: () => {
+                    this.say("please try again.".gotoxy(1, 1))
+                }
+            },
+            data: this.data.model
+        })
+
+        menu.render(
+            (res: IQMenuLoopMessageResponse, cmdkey: Function, data?: any) => {
+                this.artwork().render({
+                    clearScreenBefore: true,
+                    filename: IQCoreAssets.sm_iniq2,
+                    data: this.data.model
+                })
+
+                this.data.model.number++
+
+                menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
+            },
+            {
+                maxInterval: 1000000
+            }
+        )
+    }
+}
+
+```
 
 ### An example script representing a simple iniquity bbs
 

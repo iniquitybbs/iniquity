@@ -8,6 +8,10 @@
 
 - [Core](Core.IQ.Core.md)
 
+### Classes
+
+- [Core](../classes/Core.IQ.Core-1.md)
+
 ### Functions
 
 - [gotoxy](Core.IQ.md#gotoxy)
@@ -34,7 +38,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:972](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L972)
+[packages/core/src/index.ts:1084](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1084)
 
 ___
 
@@ -54,7 +58,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:978](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L978)
+[packages/core/src/index.ts:1090](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1090)
 
 ___
 
@@ -74,7 +78,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:975](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L975)
+[packages/core/src/index.ts:1087](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1087)
 
 ___
 
@@ -94,4 +98,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:981](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L981)
+[packages/core/src/index.ts:1093](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1093)

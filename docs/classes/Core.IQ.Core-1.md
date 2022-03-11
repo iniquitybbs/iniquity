@@ -1,54 +1,50 @@
-# Class: Iniquity
+# Class: Core
 
-[Core](../modules/Core.md).Iniquity
+[Core](../modules/Core.md).[IQ](../modules/Core.IQ.md).Core
 
 ## Hierarchy
 
-- [`IQBaseConfig`](Core.IQBaseConfig.md)
+- [`Iniquity`](Core.Iniquity.md)
 
-  ↳ **`Iniquity`**
-
-  ↳↳ [`IQ`](Core.IQ-1.md)
-
-  ↳↳ [`Core`](Core.IQ.Core-1.md)
+  ↳ **`Core`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Core.Iniquity.md#constructor)
+- [constructor](Core.IQ.Core-1.md#constructor)
 
 ### Properties
 
-- [access](Core.Iniquity.md#access)
-- [assets](Core.Iniquity.md#assets)
-- [basepath](Core.Iniquity.md#basepath)
-- [computed](Core.Iniquity.md#computed)
-- [data](Core.Iniquity.md#data)
-- [terminfo](Core.Iniquity.md#terminfo)
+- [access](Core.IQ.Core-1.md#access)
+- [assets](Core.IQ.Core-1.md#assets)
+- [basepath](Core.IQ.Core-1.md#basepath)
+- [computed](Core.IQ.Core-1.md#computed)
+- [data](Core.IQ.Core-1.md#data)
+- [terminfo](Core.IQ.Core-1.md#terminfo)
 
 ### Methods
 
-- [artwork](Core.Iniquity.md#artwork)
-- [ask](Core.Iniquity.md#ask)
-- [cursor](Core.Iniquity.md#cursor)
-- [disconnect](Core.Iniquity.md#disconnect)
-- [frame](Core.Iniquity.md#frame)
-- [gotoxy](Core.Iniquity.md#gotoxy)
-- [logoff](Core.Iniquity.md#logoff)
-- [logout](Core.Iniquity.md#logout)
-- [menu](Core.Iniquity.md#menu)
-- [pause](Core.Iniquity.md#pause)
-- [print](Core.Iniquity.md#print)
-- [say](Core.Iniquity.md#say)
-- [user](Core.Iniquity.md#user)
-- [wait](Core.Iniquity.md#wait)
+- [artwork](Core.IQ.Core-1.md#artwork)
+- [ask](Core.IQ.Core-1.md#ask)
+- [cursor](Core.IQ.Core-1.md#cursor)
+- [disconnect](Core.IQ.Core-1.md#disconnect)
+- [frame](Core.IQ.Core-1.md#frame)
+- [gotoxy](Core.IQ.Core-1.md#gotoxy)
+- [logoff](Core.IQ.Core-1.md#logoff)
+- [logout](Core.IQ.Core-1.md#logout)
+- [menu](Core.IQ.Core-1.md#menu)
+- [pause](Core.IQ.Core-1.md#pause)
+- [print](Core.IQ.Core-1.md#print)
+- [say](Core.IQ.Core-1.md#say)
+- [user](Core.IQ.Core-1.md#user)
+- [wait](Core.IQ.Core-1.md#wait)
 
 ## Constructors
 
 ### constructor
 
-• **new Iniquity**(`options?`)
+• **new Core**(`options?`)
 
 Iniquity BBS core class
 
@@ -64,9 +60,9 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 | :------ | :------ | :------ |
 | `options?` | [`IQOptions`](../interfaces/Core.IQOptions.md) | An object containing the various configuration properties. |
 
-#### Overrides
+#### Inherited from
 
-[IQBaseConfig](Core.IQBaseConfig.md).[constructor](Core.IQBaseConfig.md#constructor)
+[Iniquity](Core.Iniquity.md).[constructor](Core.Iniquity.md#constructor)
 
 #### Defined in
 
@@ -80,7 +76,7 @@ const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
 
 #### Inherited from
 
-[IQBaseConfig](Core.IQBaseConfig.md).[access](Core.IQBaseConfig.md#access)
+[Iniquity](Core.Iniquity.md).[access](Core.Iniquity.md#access)
 
 #### Defined in
 
@@ -94,7 +90,7 @@ ___
 
 #### Inherited from
 
-[IQBaseConfig](Core.IQBaseConfig.md).[assets](Core.IQBaseConfig.md#assets)
+[Iniquity](Core.Iniquity.md).[assets](Core.Iniquity.md#assets)
 
 #### Defined in
 
@@ -108,7 +104,7 @@ ___
 
 #### Inherited from
 
-[IQBaseConfig](Core.IQBaseConfig.md).[basepath](Core.IQBaseConfig.md#basepath)
+[Iniquity](Core.Iniquity.md).[basepath](Core.Iniquity.md#basepath)
 
 #### Defined in
 
@@ -122,7 +118,7 @@ ___
 
 #### Inherited from
 
-[IQBaseConfig](Core.IQBaseConfig.md).[computed](Core.IQBaseConfig.md#computed)
+[Iniquity](Core.Iniquity.md).[computed](Core.Iniquity.md#computed)
 
 #### Defined in
 
@@ -136,7 +132,7 @@ ___
 
 #### Inherited from
 
-[IQBaseConfig](Core.IQBaseConfig.md).[data](Core.IQBaseConfig.md#data)
+[Iniquity](Core.Iniquity.md).[data](Core.Iniquity.md#data)
 
 #### Defined in
 
@@ -147,6 +143,10 @@ ___
 ### terminfo
 
 • **terminfo**: [`IQTermInfoObject`](../interfaces/Core.IQTermInfoObject.md)
+
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[terminfo](Core.Iniquity.md#terminfo)
 
 #### Defined in
 
@@ -183,6 +183,10 @@ iq.artwork({ basepath: "/iniquity/core/src/assets/", filename: Assets.we_iniq3 }
 
 An instance of Artwork and its return functions.
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[artwork](Core.Iniquity.md#artwork)
+
 #### Defined in
 
 [packages/core/src/index.ts:518](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L518)
@@ -207,6 +211,10 @@ Displays a prompt (value) and returns a string of user input (ala clent-side JS)
 
 response
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[ask](Core.Iniquity.md#ask)
+
 #### Defined in
 
 [packages/core/src/index.ts:457](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L457)
@@ -229,6 +237,10 @@ Sends the cursor to a particular coordinates on the screen
 
 [`IQCursorChainableMethods`](../interfaces/Core.IQCursorChainableMethods.md)
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[cursor](Core.Iniquity.md#cursor)
+
 #### Defined in
 
 [packages/core/src/index.ts:413](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L413)
@@ -246,6 +258,10 @@ Will disconnect the user immediately.
 `void`
 
 void
+
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[disconnect](Core.Iniquity.md#disconnect)
 
 #### Defined in
 
@@ -271,6 +287,10 @@ Frame instance
 
 An instance of Menu
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[frame](Core.Iniquity.md#frame)
+
 #### Defined in
 
 [packages/core/src/index.ts:535](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L535)
@@ -294,6 +314,10 @@ Sends the cursor to a particular coordinates on the screen
 
 `void`
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[gotoxy](Core.Iniquity.md#gotoxy)
+
 #### Defined in
 
 [packages/core/src/index.ts:405](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L405)
@@ -308,6 +332,10 @@ ___
 
 `void`
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[logoff](Core.Iniquity.md#logoff)
+
 #### Defined in
 
 [packages/core/src/index.ts:469](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L469)
@@ -321,6 +349,10 @@ ___
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[logout](Core.Iniquity.md#logout)
 
 #### Defined in
 
@@ -345,6 +377,10 @@ Menu instance
 [`IQMenu`](Core.IQMenu.md)
 
 An instance of Menu
+
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[menu](Core.Iniquity.md#menu)
 
 #### Defined in
 
@@ -371,6 +407,10 @@ Display a pause prompt on the screen.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[pause](Core.Iniquity.md#pause)
 
 #### Defined in
 
@@ -403,6 +443,10 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 [`IBBSPrintFunctions`](../interfaces/Core.IBBSPrintFunctions.md)
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[print](Core.Iniquity.md#print)
+
 #### Defined in
 
 [packages/core/src/index.ts:373](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L373)
@@ -433,6 +477,10 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 [`IBBSSayFunctions`](../interfaces/Core.IBBSSayFunctions.md)
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[say](Core.Iniquity.md#say)
+
 #### Defined in
 
 [packages/core/src/index.ts:336](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L336)
@@ -461,6 +509,10 @@ User stuff
 
 An instance of User and its return functions.
 
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[user](Core.Iniquity.md#user)
+
 #### Defined in
 
 [packages/core/src/index.ts:500](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L500)
@@ -488,6 +540,10 @@ wait(10)
 `void`
 
 void
+
+#### Inherited from
+
+[Iniquity](Core.Iniquity.md).[wait](Core.Iniquity.md#wait)
 
 #### Defined in
 

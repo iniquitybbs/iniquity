@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:498](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L498)
+[packages/core/src/index.ts:585](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L585)
 
 ## Properties
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:496](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L496)
+[packages/core/src/index.ts:583](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L583)
 
 ## Methods
 
@@ -84,7 +84,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:567](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L567)
+[packages/core/src/index.ts:662](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L662)
 
 ___
 
@@ -93,6 +93,15 @@ ___
 ▸ **prompt**(`options`): [`IQMenuPromptFunctions`](../interfaces/Core.IQMenuPromptFunctions.md)
 
 Will render a prompt to the screen.
+
+**`example`**
+menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
+menu.prompt({ text: "Enter your command: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)
+menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey, (response, error) => {
+     if (response.error) {
+         alert(errors)
+     }
+ })
 
 #### Parameters
 
@@ -104,7 +113,7 @@ Will render a prompt to the screen.
 
 [`IQMenuPromptFunctions`](../interfaces/Core.IQMenuPromptFunctions.md)
 
-Some functions that can be chained to the prompt.
+Functions that can be chained to the prompt.
 
 #### Inherited from
 
@@ -112,7 +121,7 @@ Some functions that can be chained to the prompt.
 
 #### Defined in
 
-[packages/core/src/index.ts:535](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L535)
+[packages/core/src/index.ts:630](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L630)
 
 ___
 
@@ -137,4 +146,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:503](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L503)
+[packages/core/src/index.ts:590](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L590)

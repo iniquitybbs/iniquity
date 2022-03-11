@@ -38,7 +38,7 @@ Iniquity bbs string operations
 
 #### Defined in
 
-[packages/core/src/index.ts:78](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L78)
+[packages/core/src/index.ts:142](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L142)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:76](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L76)
+[packages/core/src/index.ts:140](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L140)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:77](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L77)
+[packages/core/src/index.ts:141](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L141)

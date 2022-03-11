@@ -9,6 +9,8 @@
 - [access](Core.IQModuleOptions.md#access)
 - [assets](Core.IQModuleOptions.md#assets)
 - [basepath](Core.IQModuleOptions.md#basepath)
+- [computed](Core.IQModuleOptions.md#computed)
+- [data](Core.IQModuleOptions.md#data)
 
 ## Properties
 
@@ -18,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:1082](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1082)
+[packages/core/src/index.ts:1195](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1195)
 
 ___
 
@@ -28,7 +30,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1081](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1081)
+[packages/core/src/index.ts:1194](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1194)
 
 ___
 
@@ -38,4 +40,24 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1080](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1080)
+[packages/core/src/index.ts:1193](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1193)
+
+___
+
+### computed
+
+• `Optional` **computed**: `any`
+
+#### Defined in
+
+[packages/core/src/index.ts:1197](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1197)
+
+___
+
+### data
+
+• `Optional` **data**: [`IQDataModelOptions`](Core.IQDataModelOptions.md)
+
+#### Defined in
+
+[packages/core/src/index.ts:1196](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1196)

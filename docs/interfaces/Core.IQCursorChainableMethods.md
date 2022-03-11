@@ -23,13 +23,13 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:467](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L467)
+[packages/core/src/index.ts:549](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L549)
 
 ## Methods
 
 ### down
 
-▸ **down**(`rows?`): `void`
+▸ **down**(`rows?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Parameters
 
@@ -39,17 +39,17 @@
 
 #### Returns
 
-`void`
+[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[packages/core/src/index.ts:469](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L469)
+[packages/core/src/index.ts:551](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L551)
 
 ___
 
 ### left
 
-▸ **left**(`cols?`): `void`
+▸ **left**(`cols?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Parameters
 
@@ -59,17 +59,17 @@ ___
 
 #### Returns
 
-`void`
+[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[packages/core/src/index.ts:470](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L470)
+[packages/core/src/index.ts:552](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L552)
 
 ___
 
 ### right
 
-▸ **right**(`cols?`): `void`
+▸ **right**(`cols?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Parameters
 
@@ -79,17 +79,17 @@ ___
 
 #### Returns
 
-`void`
+[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[packages/core/src/index.ts:471](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L471)
+[packages/core/src/index.ts:553](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L553)
 
 ___
 
 ### up
 
-▸ **up**(`rows?`): `void`
+▸ **up**(`rows?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Parameters
 
@@ -99,8 +99,8 @@ ___
 
 #### Returns
 
-`void`
+[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[packages/core/src/index.ts:468](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L468)
+[packages/core/src/index.ts:550](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L550)

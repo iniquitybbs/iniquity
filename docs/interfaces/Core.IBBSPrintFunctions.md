@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:155](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L155)
+[packages/core/src/index.ts:219](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L219)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`IQWaitOptions`](Core.IQWaitOptions.md) |
+| `options?` | `number` \| [`IQWaitOptions`](Core.IQWaitOptions.md) |
 
 #### Returns
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:156](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L156)
+[packages/core/src/index.ts:220](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L220)

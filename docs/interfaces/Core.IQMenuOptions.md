@@ -14,6 +14,7 @@ Menu options
 
 - [cmdkeys](Core.IQMenuOptions.md#cmdkeys)
 - [commands](Core.IQMenuOptions.md#commands)
+- [data](Core.IQMenuOptions.md#data)
 - [description](Core.IQMenuOptions.md#description)
 - [frame](Core.IQMenuOptions.md#frame)
 - [name](Core.IQMenuOptions.md#name)
@@ -27,7 +28,7 @@ Menu options
 
 #### Defined in
 
-[packages/core/src/index.ts:168](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L168)
+[packages/core/src/index.ts:232](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L232)
 
 ___
 
@@ -41,7 +42,17 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:169](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L169)
+[packages/core/src/index.ts:233](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L233)
+
+___
+
+### data
+
+• `Optional` **data**: `any`
+
+#### Defined in
+
+[packages/core/src/index.ts:238](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L238)
 
 ___
 
@@ -51,7 +62,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:166](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L166)
+[packages/core/src/index.ts:230](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L230)
 
 ___
 
@@ -61,7 +72,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:173](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L173)
+[packages/core/src/index.ts:237](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L237)
 
 ___
 
@@ -71,7 +82,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:165](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L165)
+[packages/core/src/index.ts:229](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L229)
 
 ___
 
@@ -81,4 +92,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:167](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L167)
+[packages/core/src/index.ts:231](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L231)

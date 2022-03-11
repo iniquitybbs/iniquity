@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:189](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L189)
+[packages/core/src/index.ts:254](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L254)

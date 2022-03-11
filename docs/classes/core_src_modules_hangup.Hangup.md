@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`IQModuleContainer`](Core.IQModuleContainer.md)
+- [`IQBaseConfig`](Core.IQBaseConfig.md)
 
   ↳ **`Hangup`**
 
@@ -19,6 +19,8 @@
 - [access](core_src_modules_hangup.Hangup.md#access)
 - [assets](core_src_modules_hangup.Hangup.md#assets)
 - [basepath](core_src_modules_hangup.Hangup.md#basepath)
+- [computed](core_src_modules_hangup.Hangup.md#computed)
+- [data](core_src_modules_hangup.Hangup.md#data)
 
 ### Methods
 
@@ -32,7 +34,7 @@
 
 #### Inherited from
 
-[IQModuleContainer](Core.IQModuleContainer.md).[constructor](Core.IQModuleContainer.md#constructor)
+[IQBaseConfig](Core.IQBaseConfig.md).[constructor](Core.IQBaseConfig.md#constructor)
 
 ## Properties
 
@@ -42,11 +44,11 @@
 
 #### Inherited from
 
-[IQModuleContainer](Core.IQModuleContainer.md).[access](Core.IQModuleContainer.md#access)
+[IQBaseConfig](Core.IQBaseConfig.md).[access](Core.IQBaseConfig.md#access)
 
 #### Defined in
 
-[packages/core/src/index.ts:1122](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1122)
+[packages/core/src/index.ts:301](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L301)
 
 ___
 
@@ -56,11 +58,11 @@ ___
 
 #### Inherited from
 
-[IQModuleContainer](Core.IQModuleContainer.md).[assets](Core.IQModuleContainer.md#assets)
+[IQBaseConfig](Core.IQBaseConfig.md).[assets](Core.IQBaseConfig.md#assets)
 
 #### Defined in
 
-[packages/core/src/index.ts:1121](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1121)
+[packages/core/src/index.ts:300](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L300)
 
 ___
 
@@ -70,11 +72,39 @@ ___
 
 #### Inherited from
 
-[IQModuleContainer](Core.IQModuleContainer.md).[basepath](Core.IQModuleContainer.md#basepath)
+[IQBaseConfig](Core.IQBaseConfig.md).[basepath](Core.IQBaseConfig.md#basepath)
 
 #### Defined in
 
-[packages/core/src/index.ts:1120](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/index.ts#L1120)
+[packages/core/src/index.ts:299](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L299)
+
+___
+
+### computed
+
+• **computed**: `any`
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[computed](Core.IQBaseConfig.md#computed)
+
+#### Defined in
+
+[packages/core/src/index.ts:303](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L303)
+
+___
+
+### data
+
+• **data**: [`IQDataModelOptions`](../interfaces/Core.IQDataModelOptions.md)
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[data](Core.IQBaseConfig.md#data)
+
+#### Defined in
+
+[packages/core/src/index.ts:302](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L302)
 
 ## Methods
 
@@ -88,4 +118,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/hangup.ts:8](https://github.com/iniquitybbs/iniquity/blob/ab60d91/packages/core/src/modules/hangup.ts#L8)
+[packages/core/src/modules/hangup.ts:8](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/hangup.ts#L8)
