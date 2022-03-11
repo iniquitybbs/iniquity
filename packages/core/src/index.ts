@@ -53,8 +53,8 @@ if (!Object.entries) {
     }
 }
 
-export interface ReactiveDataFunctions {
-    data: any
+export interface IQDataModelOptions {
+    model: any
     observe: Function
     notify: Function
 }
@@ -65,14 +65,14 @@ export interface ReactiveDataFunctions {
  * @param dataObj
  * @returns
  */
-export function IQDataModel(dataObj: any): ReactiveDataFunctions {
+export function IQDataModel(dataObj: any): IQDataModelOptions {
     let signals = {}
 
     observeData(dataObj)
 
     // Besides the reactive data object, we also want to return and thus expose the observe and notify functions.
     return {
-        data: dataObj,
+        model: dataObj,
         observe,
         notify
     }
@@ -273,8 +273,10 @@ export interface IBBSConfigParams {
     sysop: string
 }
 
-export interface IIniquityOptions {
+export interface IQOptions {
     basepath?: string
+    data?: IQDataModelOptions
+    computed?: any
 }
 
 /**
@@ -292,13 +294,19 @@ export interface IIniquityOptions {
  *
  * ```
  */
-export class Iniquity {
-    public basepath!: string
-    public name!: string
 
+export abstract class IQBaseConfig {
+    public basepath!: string
+    public assets!: string
+    public access!: IQModuleACLS
+    public data!: IQDataModelOptions
+    public computed!: any
+}
+
+export class Iniquity extends IQBaseConfig {
     /**
      * Iniquity BBS core class
-     * @param {IIniquityOptions} options An object containing the various configuration properties.
+     * @param {IQOptions} options An object containing the various configuration properties.
      * @param {string} options.basepath The BBS project root.
      * @example
      * ```typescript
@@ -306,11 +314,12 @@ export class Iniquity {
      * const iq = new Iniquity({ basepath: "/iniquity/bbs/path" })
      * ```
      */
-    constructor(options?: IIniquityOptions) {
+    constructor(options?: IQOptions) {
+        super()
+
         console.inactivity_warning = 9999
         console.inactivity_hangup = 99999
-        this.name = system.name // NOTE should consider this being set at the constructor level (and how to tell SBBS about it)
-        this.basepath = options?.basepath || "/"
+        this.basepath = options?.basepath || this.basepath || "."
     }
 
     /**
@@ -508,8 +517,8 @@ export class Iniquity {
      * iq.artwork({ basepath: "/iniquity/core/src/assets/", filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
      * ```
      */
-    public artwork(options: IArtworkOptions): Artwork {
-        return new Artwork({ basepath: options.basepath || this.basepath || undefined, filename: options.filename || undefined })
+    public artwork(options?: IArtworkOptions): Artwork {
+        return new Artwork({ basepath: options?.basepath || this.basepath || undefined, filename: options?.filename || undefined })
     }
 
     /**
@@ -528,6 +537,10 @@ export class Iniquity {
     public frame(options: IQFrameOptions): IQFrame {
         return new IQFrame(options)
     }
+}
+
+export abstract class IQ extends Iniquity {
+    public abstract _(): any
 }
 
 export interface IQCursorOptions {
@@ -1181,7 +1194,8 @@ export interface IQModuleOptions {
     basepath?: string
     assets?: string
     access?: IQModuleACLS
-    data?: ReactiveDataFunctions
+    data?: IQDataModelOptions
+    computed?: any
 }
 
 /**
@@ -1190,12 +1204,13 @@ export interface IQModuleOptions {
  * @param {IQModuleOptions} options
  */
 
-export function IQModule(options?: IQModuleOptions) {
+export function IQModule(options: IQModuleOptions) {
     return function (constructor: Function) {
         constructor.prototype.basepath = options?.basepath
         constructor.prototype.assets = options?.assets
         constructor.prototype.access = options?.access
         constructor.prototype.data = options?.data
+        constructor.prototype.computed = options?.computed
 
         // if (options?.access === IQModuleACLS.low) {
         //     iq.say("You do can't access this module.".color("red")).pause()
@@ -1217,13 +1232,6 @@ export function IQModuleRuntime(options?: IQModuleRuntimeOptions): any {
 export interface IQModuleRuntimeOptions {
     debug?: boolean
     clearScreenBefore?: boolean
-}
-
-export class IQModuleContainer {
-    public basepath!: string
-    public assets!: string
-    public access!: IQModuleACLS
-    public data?: any
 }
 
 export { Assets as IQCoreAssets } from "./assets/index"

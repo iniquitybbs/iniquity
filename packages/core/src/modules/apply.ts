@@ -1,10 +1,10 @@
-import iniquity, { IQModule, IQModuleContainer, IQModuleRuntime, IQModuleACLS } from "@iniquitybbs/core"
+import iniquity, { IQModule, IQBaseConfig, IQModuleRuntime, IQModuleACLS } from "@iniquitybbs/core"
 
 @IQModule({
     assets: "/iniquity/core/src/assets/",
     access: IQModuleACLS.medium
 })
-export class Apply extends IQModuleContainer {
+export class Apply extends IQBaseConfig {
     @IQModuleRuntime({ debug: true })
     _() {
         iniquity.artwork({ basepath: "/iniquity/core/src/assets", filename: "5m-ink2menu.ans" }).render({ clearScreenBefore: true })
