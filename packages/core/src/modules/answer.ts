@@ -1,14 +1,4 @@
-import {
-    IQCoreAssets,
-    IQFrameColorOptions,
-    IQMenuLoopMessageResponse,
-    IQModule,
-    IQModuleRuntime,
-    IQDataModel,
-    say,
-    pause,
-    IQ
-} from "@iniquitybbs/core"
+import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQDataModel, IQ } from "@iniquitybbs/core"
 
 @IQModule({
     basepath: "/iniquity/core/src/assets",
@@ -17,10 +7,7 @@ import {
         number: 1,
         time: time(),
         system: system.stats
-    }),
-    computed: {
-        property() {}
-    }
+    })
 })
 export class Answer extends IQ {
     @IQModuleRuntime({
@@ -29,11 +16,11 @@ export class Answer extends IQ {
     _() {
         this.data.observe("message", () => {
             this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ speed: 1, clearScreenBefore: true }).colorReset()
-            say(this.data.model.message).wait(1000)
-            pause()
+            this.say(this.data.model.message).wait(1000)
+            this.pause()
         })
         this.data.observe("number", () => {
-            say(this.data.model.number).wait(1000)
+            this.say(this.data.model.number).wait(1000)
         })
 
         while (this.terminfo.x < 132 || this.terminfo.y < 37) {

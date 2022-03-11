@@ -217,7 +217,7 @@ export interface IBBSPrintFunctions {
      * @see {@link IQPauseOptions}
      */
     pause(options?: IQPauseOptions): void
-    wait(options?: IQWaitOptions): void
+    wait(options?: IQWaitOptions | number): void
 }
 
 /**
@@ -373,16 +373,14 @@ export class Iniquity extends IQBaseConfig {
     public print(options: IQPrintOptions | string): IBBSPrintFunctions {
         typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text || new Error("Sometthing is wrong with this string."))
 
-        let iq = this
-
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) iq.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
                 else iq.say("".color("reset"))
-                iq.pause()
+                this.pause()
             },
             wait(options?: IQWaitOptions): void {
-                iq.wait(options?.milliseconds || 100)
+                this.wait(options?.milliseconds || 100)
             }
         }
     }
@@ -1096,8 +1094,9 @@ export namespace IQ {
         iq.wait(options)
     }
 
+    export class Core extends Iniquity {}
+
     export namespace Core {
-        export class Iniquity {}
         // export class Module imp IQModule {}
         export class Menu extends IQMenu {}
         export class Frame extends IQFrame {}
