@@ -10,7 +10,6 @@ export * from "./apply"
 export * from "./logon"
 export * from "./messages"
 
-export {}
 /**
  * A simple wrapper around the core iniquity modules.
  *

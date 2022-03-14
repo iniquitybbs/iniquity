@@ -1,5 +1,3 @@
-// load("makeguest.js")
-
 import {
     IQCoreAssets,
     IQModuleACLS,
