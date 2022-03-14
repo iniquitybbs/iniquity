@@ -34,7 +34,7 @@ ___
 
 ### data
 
-• `Optional` **data**: [`IQDataModelOptions`](Core.IQDataModelOptions.md)
+• `Optional` **data**: [`IQReactorOptions`](Core.IQReactorOptions.md)
 
 #### Defined in
 

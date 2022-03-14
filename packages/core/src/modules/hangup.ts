@@ -1,9 +1,19 @@
-import iq, { IQModule, IQBaseConfig, IQModuleACLS, IQCoreAssets, IQModuleRuntime } from "@iniquitybbs/core"
+import iq, { IQ, IQModule, IQBaseConfig, IQModuleACLS, IQCoreAssets, IQModuleRuntime, IQReactor } from "@iniquitybbs/core"
 
 @IQModule({
-    access: IQModuleACLS.low
+    basepath: "/iniquity/core/src/assets",
+    access: IQModuleACLS.low,
+    assets: "",
+    encoding: "CP437",
+    data: IQReactor({
+        message: "Umm, yeah this needs to change",
+        number: 1,
+        time: time(),
+        system: system.stats
+    }),
+    computed: {}
 })
-export class Hangup extends IQBaseConfig {
+class Hangup extends IQ {
     @IQModuleRuntime({ debug: true })
     start() {
         iq.artwork({ basepath: "/iniquity/core/src/assets", filename: IQCoreAssets.iq3_logoff }).render({ speed: 10 }).pause({ newlines: 2 })
@@ -12,3 +22,6 @@ export class Hangup extends IQBaseConfig {
         iq.disconnect()
     }
 }
+
+export { Hangup }
+export default new Hangup()

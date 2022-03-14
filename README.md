@@ -180,11 +180,11 @@ export class Login extends IQ {
 Do you have experience making even driven applications on the web? Like with Vue or React? You can build fully reactive applications with Iniquity also...
 
 ```typescript
-import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQDataModel, IQ } from "@iniquitybbs/core"
+import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQReactor, IQ } from "@iniquitybbs/core"
 
 @IQModule({
     basepath: "/iniquity/core/src/assets",
-    data: IQDataModel({
+    data: IQReactor({
         message: "Umm, yeah this needs to change",
         number: 1,
         time: time(),
@@ -382,6 +382,21 @@ Inside of VS Code, fire up the development server.
 
 ```bash
 npm start
+```
+
+### Docker
+
+You could just pull the latest version of the runtime directly from docker.
+
+```bash
+docker pull iniquitybbs/iniquity
+```
+
+Or even just run it directly
+
+```bash
+docker run -d -P --name iniquity -it iniquitybbs/iniquity 
+
 ```
 
 ## Discord

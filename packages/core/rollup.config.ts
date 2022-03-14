@@ -3,7 +3,7 @@ import typescript from "@rollup/plugin-typescript"
 import multi from "@rollup/plugin-multi-entry"
 import polyfills from "rollup-plugin-node-polyfills"
 import commonjs from "@rollup/plugin-commonjs"
-// @ts-expect-error
+// @ts-ignore
 import externalGlobals from "rollup-plugin-external-globals"
 
 export default {
@@ -13,6 +13,7 @@ export default {
         file: "dist/bundle.js",
         format: "iife",
         sourcemap: "inline",
+        strict: false,
         globals: {
             "@iniquitybbs/core/src/library": "lib"
         }

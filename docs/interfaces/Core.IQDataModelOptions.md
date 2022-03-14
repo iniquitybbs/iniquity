@@ -1,14 +1,14 @@
-# Interface: IQDataModelOptions
+# Interface: IQReactorOptions
 
-[Core](../modules/Core.md).IQDataModelOptions
+[Core](../modules/Core.md).IQReactorOptions
 
 ## Table of contents
 
 ### Properties
 
-- [model](Core.IQDataModelOptions.md#model)
-- [notify](Core.IQDataModelOptions.md#notify)
-- [observe](Core.IQDataModelOptions.md#observe)
+- [model](Core.IQReactorOptions.md#model)
+- [notify](Core.IQReactorOptions.md#notify)
+- [observe](Core.IQReactorOptions.md#observe)
 
 ## Properties
 

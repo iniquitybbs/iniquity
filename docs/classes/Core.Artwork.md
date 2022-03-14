@@ -18,6 +18,12 @@ art.render({ mode: "line", clearScreenBefore: true }).colorReset().pause()
 
 ```
 
+## Hierarchy
+
+- [`IQBaseConfig`](Core.IQBaseConfig.md)
+
+  ↳ **`Artwork`**
+
 ## Table of contents
 
 ### Constructors
@@ -26,7 +32,12 @@ art.render({ mode: "line", clearScreenBefore: true }).colorReset().pause()
 
 ### Properties
 
+- [access](Core.Artwork.md#access)
+- [assets](Core.Artwork.md#assets)
 - [basepath](Core.Artwork.md#basepath)
+- [computed](Core.Artwork.md#computed)
+- [data](Core.Artwork.md#data)
+- [encoding](Core.Artwork.md#encoding)
 - [filename](Core.Artwork.md#filename)
 
 ### Methods
@@ -49,19 +60,97 @@ The Iniquity Artwork rendering class
 | :------ | :------ | :------ |
 | `options` | [`IArtworkOptions`](../interfaces/Core.IArtworkOptions.md) | An object containing the various configuration properties. |
 
+#### Overrides
+
+[IQBaseConfig](Core.IQBaseConfig.md).[constructor](Core.IQBaseConfig.md#constructor)
+
 #### Defined in
 
-[packages/core/src/index.ts:801](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L801)
+[packages/core/src/index.ts:820](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L820)
 
 ## Properties
 
-### basepath
+### access
 
-• **basepath**: `undefined` \| `string`
+• **access**: [`IQModuleACLS`](../enums/Core.IQModuleACLS.md)
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[access](Core.IQBaseConfig.md#access)
 
 #### Defined in
 
-[packages/core/src/index.ts:791](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L791)
+[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L309)
+
+___
+
+### assets
+
+• **assets**: `string`
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[assets](Core.IQBaseConfig.md#assets)
+
+#### Defined in
+
+[packages/core/src/index.ts:308](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L308)
+
+___
+
+### basepath
+
+• **basepath**: `string`
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[basepath](Core.IQBaseConfig.md#basepath)
+
+#### Defined in
+
+[packages/core/src/index.ts:307](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L307)
+
+___
+
+### computed
+
+• **computed**: `any`
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[computed](Core.IQBaseConfig.md#computed)
+
+#### Defined in
+
+[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L312)
+
+___
+
+### data
+
+• **data**: [`IQReactorOptions`](../interfaces/Core.IQReactorOptions.md)
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[data](Core.IQBaseConfig.md#data)
+
+#### Defined in
+
+[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L311)
+
+___
+
+### encoding
+
+• **encoding**: ``"CP437"`` \| ``"UTF8"``
+
+#### Inherited from
+
+[IQBaseConfig](Core.IQBaseConfig.md).[encoding](Core.IQBaseConfig.md#encoding)
+
+#### Defined in
+
+[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L310)
 
 ___
 
@@ -71,7 +160,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:792](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L792)
+[packages/core/src/index.ts:811](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L811)
 
 ## Methods
 
@@ -107,4 +196,4 @@ Will render the artwork on the screen as well as provide various render function
 
 #### Defined in
 
-[packages/core/src/index.ts:821](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L821)
+[packages/core/src/index.ts:841](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L841)

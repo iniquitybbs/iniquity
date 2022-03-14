@@ -22,7 +22,6 @@ myIniquity.disconnect()
 ### References
 
 - [IQCoreAssets](Core.md#iqcoreassets)
-- [IQCoreModules](Core.md#iqcoremodules)
 
 ### Namespaces
 
@@ -51,14 +50,12 @@ myIniquity.disconnect()
 - [IArtworkOptions](../interfaces/Core.IArtworkOptions.md)
 - [IArtworkRenderFunctions](../interfaces/Core.IArtworkRenderFunctions.md)
 - [IArtworkRenderOptions](../interfaces/Core.IArtworkRenderOptions.md)
-- [IBBSConfigParams](../interfaces/Core.IBBSConfigParams.md)
 - [IBBSPrintFunctions](../interfaces/Core.IBBSPrintFunctions.md)
 - [IBBSSayFunctions](../interfaces/Core.IBBSSayFunctions.md)
 - [IMenuCommand](../interfaces/Core.IMenuCommand.md)
 - [IMenuCommands](../interfaces/Core.IMenuCommands.md)
 - [IQCursorChainableMethods](../interfaces/Core.IQCursorChainableMethods.md)
 - [IQCursorOptions](../interfaces/Core.IQCursorOptions.md)
-- [IQDataModelOptions](../interfaces/Core.IQDataModelOptions.md)
 - [IQFrameOptions](../interfaces/Core.IQFrameOptions.md)
 - [IQMenuLoopMessageResponse](../interfaces/Core.IQMenuLoopMessageResponse.md)
 - [IQMenuLoopOptions](../interfaces/Core.IQMenuLoopOptions.md)
@@ -67,9 +64,9 @@ myIniquity.disconnect()
 - [IQMenuPromptOptions](../interfaces/Core.IQMenuPromptOptions.md)
 - [IQModuleOptions](../interfaces/Core.IQModuleOptions.md)
 - [IQModuleRuntimeOptions](../interfaces/Core.IQModuleRuntimeOptions.md)
-- [IQOptions](../interfaces/Core.IQOptions.md)
 - [IQPauseOptions](../interfaces/Core.IQPauseOptions.md)
 - [IQPrintOptions](../interfaces/Core.IQPrintOptions.md)
+- [IQReactorOptions](../interfaces/Core.IQReactorOptions.md)
 - [IQStringUtils](../interfaces/Core.IQStringUtils.md)
 - [IQTermInfoObject](../interfaces/Core.IQTermInfoObject.md)
 - [IQWaitOptions](../interfaces/Core.IQWaitOptions.md)
@@ -81,9 +78,9 @@ myIniquity.disconnect()
 
 ### Functions
 
-- [IQDataModel](Core.md#iqdatamodel)
 - [IQModule](Core.md#iqmodule)
 - [IQModuleRuntime](Core.md#iqmoduleruntime)
+- [IQReactor](Core.md#iqreactor)
 - [cursor](Core.md#cursor)
 - [gotoxy](Core.md#gotoxy)
 - [pause](Core.md#pause)
@@ -98,17 +95,7 @@ myIniquity.disconnect()
 
 #### Defined in
 
-[packages/core/src/index.ts:1236](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1236)
-
-___
-
-### IQCoreModules
-
-• **IQCoreModules**: `Object`
-
-#### Defined in
-
-[packages/core/src/index.ts:1237](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1237)
+[packages/core/src/index.ts:1283](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1283)
 
 ## Variables
 
@@ -120,33 +107,9 @@ The globally scoped intance of iniquity
 
 #### Defined in
 
-[packages/core/src/index.ts:1181](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1181)
+[packages/core/src/index.ts:1234](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1234)
 
 ## Functions
-
-### IQDataModel
-
-▸ **IQDataModel**(`dataObj`): [`IQDataModelOptions`](../interfaces/Core.IQDataModelOptions.md)
-
-Iniquity reactive data model
-
-**`see`** https://www.monterail.com/blog/2016/how-to-build-a-reactive-engine-in-javascript-part-1-observable-objects
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `dataObj` | `any` |
-
-#### Returns
-
-[`IQDataModelOptions`](../interfaces/Core.IQDataModelOptions.md)
-
-#### Defined in
-
-[packages/core/src/index.ts:68](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L68)
-
-___
 
 ### IQModule
 
@@ -180,7 +143,7 @@ An experimental Iniquity module decorator for bbs modules
 
 #### Defined in
 
-[packages/core/src/index.ts:1206](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1206)
+[packages/core/src/index.ts:1253](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1253)
 
 ___
 
@@ -202,7 +165,31 @@ The IQ script executed as part of a module.
 
 #### Defined in
 
-[packages/core/src/index.ts:1226](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1226)
+[packages/core/src/index.ts:1273](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1273)
+
+___
+
+### IQReactor
+
+▸ **IQReactor**(`dataObj`): [`IQReactorOptions`](../interfaces/Core.IQReactorOptions.md)
+
+Iniquity reactive data model
+
+**`see`** https://www.monterail.com/blog/2016/how-to-build-a-reactive-engine-in-javascript-part-1-observable-objects
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dataObj` | `any` |
+
+#### Returns
+
+[`IQReactorOptions`](../interfaces/Core.IQReactorOptions.md)
+
+#### Defined in
+
+[packages/core/src/index.ts:86](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L86)
 
 ___
 
@@ -227,7 +214,7 @@ cursor().down(10).up(12).down().up().down().left(1).right(20).down(12).up(14)
 
 #### Defined in
 
-[packages/core/src/index.ts:1068](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1068)
+[packages/core/src/index.ts:1106](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1106)
 
 ___
 
@@ -248,7 +235,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1072](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1072)
+[packages/core/src/index.ts:1110](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1110)
 
 ___
 
@@ -268,7 +255,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1076](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1076)
+[packages/core/src/index.ts:1114](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1114)
 
 ___
 
@@ -293,7 +280,7 @@ say("are we making it here?").pause()
 
 #### Defined in
 
-[packages/core/src/index.ts:1049](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1049)
+[packages/core/src/index.ts:1084](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1084)
 
 ___
 
@@ -313,4 +300,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1079](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1079)
+[packages/core/src/index.ts:1117](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1117)

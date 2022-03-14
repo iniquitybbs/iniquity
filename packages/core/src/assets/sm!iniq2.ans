@@ -6,15 +6,15 @@ _\        /    _/     //      //          /            /       /_______\    /__
  /_______/_____\       \_______\___       \___________/__________\_____     \sm
 __________   //_________\\        /________\    ______________     /_________\
          /______________________________________\  iniquity  /_________________
-
-                  Screen columns: @COLS@
-                Screen rows: @ROWS@
-                 Terminal type: @TERM@
-
-                @JS:message@
+                                 @JS:message@
+        Screen columns: @COLS@
+      Screen rows: @ROWS@
+       Terminal type: @TERM@
 
 
 
+
+             @JS:name@
 
 
 

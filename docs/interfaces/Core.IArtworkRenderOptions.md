@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:121](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L121)
+[packages/core/src/index.ts:139](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L139)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:126](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L126)
+[packages/core/src/index.ts:144](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L144)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:127](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L127)
+[packages/core/src/index.ts:145](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L145)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:124](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L124)
+[packages/core/src/index.ts:142](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L142)
 
 ___
 
@@ -62,17 +62,17 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:122](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L122)
+[packages/core/src/index.ts:140](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L140)
 
 ___
 
 ### mode
 
-• `Optional` **mode**: ``"line"`` \| ``"character"`` \| ``"@-codes"`` \| ``"reactive"``
+• `Optional` **mode**: ``"line"`` \| ``"character"`` \| ``"@-codes"`` \| ``"reactive"`` \| ``"graphic"``
 
 #### Defined in
 
-[packages/core/src/index.ts:125](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L125)
+[packages/core/src/index.ts:143](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L143)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:123](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L123)
+[packages/core/src/index.ts:141](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L141)

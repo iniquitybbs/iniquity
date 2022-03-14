@@ -4,33 +4,18 @@
 
 ### References
 
-- [Answer](core_src_modules.md#answer)
 - [Apply](core_src_modules.md#apply)
-- [Hangup](core_src_modules.md#hangup)
+- [Connections](core_src_modules.md#connections)
+- [Files](core_src_modules.md#files)
 - [Login](core_src_modules.md#login)
+- [Logon](core_src_modules.md#logon)
+- [Messages](core_src_modules.md#messages)
 
 ### Variables
 
 - [IQCoreModules](core_src_modules.md#iqcoremodules)
 
-### Functions
-
-- [answer](core_src_modules.md#answer)
-- [apply](core_src_modules.md#apply)
-- [hangup](core_src_modules.md#hangup)
-- [login](core_src_modules.md#login)
-
 ## References
-
-### Answer
-
-• **Answer**: `Object`
-
-#### Defined in
-
-[packages/core/src/modules/index.ts:4](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L4)
-
-___
 
 ### Apply
 
@@ -38,17 +23,27 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:13](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L13)
+[packages/core/src/modules/apply.ts:30](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/modules/apply.ts#L30)
 
 ___
 
-### Hangup
+### Connections
 
-• **Hangup**: `Object`
+• **Connections**: `Object`
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:10](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L10)
+packages/core/src/modules/connections.ts:7
+
+___
+
+### Files
+
+• **Files**: `Object`
+
+#### Defined in
+
+packages/core/src/modules/files.ts:7
 
 ___
 
@@ -58,7 +53,27 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:7](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L7)
+[packages/core/src/modules/login.ts:73](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/modules/login.ts#L73)
+
+___
+
+### Logon
+
+• **Logon**: `Object`
+
+#### Defined in
+
+packages/core/src/modules/logon.ts:7
+
+___
+
+### Messages
+
+• **Messages**: `Object`
+
+#### Defined in
+
+packages/core/src/modules/messages.ts:7
 
 ## Variables
 
@@ -79,60 +94,4 @@ A simple wrapper around the core iniquity modules.
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:19](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L19)
-
-## Functions
-
-### answer
-
-▸ `Const` **answer**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/core/src/modules/index.ts:3](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L3)
-
-___
-
-### apply
-
-▸ `Const` **apply**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/core/src/modules/index.ts:12](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L12)
-
-___
-
-### hangup
-
-▸ `Const` **hangup**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/core/src/modules/index.ts:9](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L9)
-
-___
-
-### login
-
-▸ `Const` **login**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/core/src/modules/index.ts:6](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/modules/index.ts#L6)
+[packages/core/src/modules/index.ts:18](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/modules/index.ts#L18)

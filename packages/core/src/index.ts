@@ -38,15 +38,24 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 load("sbbsdefs.js")
 load("frame.js")
+load("layout.js")
+load("lightbar.js")
+load("progress-bar.js")
+load("scrollbar.js")
+load("tree.js")
 load("funclib.js")
-
-// js.do_callbacks = false
-
-// alert(JSON.stringify(js))
-
-alert(js.do_callbacks)
-
-alert(js.terminated)
+load("event-timer.js")
+load("event-emitter.js")
+load("termsetup.js")
+load("cterm_lib.js")
+load("qengine.js")
+load("utf8_cp437.js")
+load("utf8_ascii.js")
+load("utf8_utf16.js")
+load("ansiterm_lib.js")
+load("ansiedit.js")
+load("loadfonts.js")
+load("graphic.js")
 
 console.inactivity_warning = 9999
 console.inactivity_hangup = 99999
@@ -62,7 +71,7 @@ if (!Object.entries) {
     }
 }
 
-export interface IQDataModelOptions {
+export interface IQReactorOptions {
     model: any
     observe: Function
     notify: Function
@@ -74,7 +83,7 @@ export interface IQDataModelOptions {
  * @param dataObj
  * @returns
  */
-export function IQDataModel(dataObj: any): IQDataModelOptions {
+export function IQReactor(dataObj: any): IQReactorOptions {
     let signals = {}
 
     observeData(dataObj)
@@ -131,7 +140,7 @@ export interface IArtworkRenderOptions {
     filename?: string | undefined
     speed?: number | undefined
     encoding?: "CP437" | "UTF8"
-    mode?: "line" | "character" | "@-codes" | "reactive"
+    mode?: "line" | "character" | "@-codes" | "reactive" | "graphic"
     clearScreenBefore?: boolean
     data?: unknown
 }
@@ -219,6 +228,7 @@ export interface IBBSSayFunctions {
      */
     pause(options?: IQPauseOptions): void
     wait(options?: IQWaitOptions | number): void
+    gotoxy(x: number, y: number): void
 }
 export interface IBBSPrintFunctions {
     /**
@@ -227,6 +237,7 @@ export interface IBBSPrintFunctions {
      */
     pause(options?: IQPauseOptions): void
     wait(options?: IQWaitOptions | number): void
+    gotoxy(x: number, y: number): void
 }
 
 /**
@@ -258,6 +269,8 @@ export interface IQFrameOptions {
     color: IQFrameColorOptions
     artwork?: string
     parent?: any
+    transparent?: boolean
+    scrollbars?: boolean
 }
 export interface IMenuCommands {
     command: IMenuCommand
@@ -272,20 +285,6 @@ export interface IQMenuPromptOptions {
     x: number
     y: number
     text?: string
-}
-/**
- * Ibbsconfig params
- * @param name Means this
- */
-export interface IBBSConfigParams {
-    name: string
-    sysop: string
-}
-
-export interface IQOptions {
-    basepath?: string
-    data?: IQDataModelOptions
-    computed?: any
 }
 
 /**
@@ -308,7 +307,8 @@ export abstract class IQBaseConfig {
     public basepath!: string
     public assets!: string
     public access!: IQModuleACLS
-    public data!: IQDataModelOptions
+    public encoding!: "CP437" | "UTF8"
+    public data!: IQReactorOptions
     public computed!: any
 }
 
@@ -342,7 +342,10 @@ export class Iniquity extends IQBaseConfig {
                 pause(options)
             },
             wait(options?: IQWaitOptions): void {
-                wait(options?.milliseconds || 100)
+                wait(options)
+            },
+            gotoxy(x: number, y: number): void {
+                gotoxy(x, y)
             }
         }
     }
@@ -364,12 +367,13 @@ export class Iniquity extends IQBaseConfig {
 
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) pause({ colorReset: options?.colorReset || false, center: options?.center || false })
-                else iq.say("".color("reset"))
-                pause()
+                pause(options)
             },
             wait(options?: IQWaitOptions): void {
-                wait(options?.milliseconds || 100)
+                wait(options)
+            },
+            gotoxy(x: number, y: number): void {
+                gotoxy(x, y)
             }
         }
     }
@@ -430,6 +434,7 @@ export class Iniquity extends IQBaseConfig {
      * @example
      * iq.wait(100)
      * wait(10)
+     * this.wait(1000)
      */
 
     public wait(options?: IQWaitOptions | number): void {
@@ -568,10 +573,14 @@ export interface IQMenuLoopOptions {
     data?: any
 }
 export class IQMenu {
+    public name?: string
+    public description?: string
     protected cmdkeys: string | null = null
     public commands!: IQMenuOptions["commands"]
 
     constructor(options: IQMenuOptions) {
+        if (options.name) this.name = options.name
+        if (options.description) this.description = options.name
         if (options.commands) this.commands = options.commands
         for (const [cmdkey, command] of Object.entries(this.commands!)) if (cmdkey != "default") this.cmdkeys += cmdkey
     }
@@ -623,11 +632,12 @@ export class IQMenu {
         let commands = Object.keys(this.commands)
             .filter((cmdkey) => cmdkey != "default")
             .join(",")
-
-        if (typeof options === "string") console.putmsg(commands + ":" + options)
+        // @ts-expect-error
+        if (typeof options === "string") console.putmsg(commands + ":" + options, P_WORDWRAP, 4, this.description)
         if (typeof options === "object") {
             if (options.x && options.y) iq.gotoxy(options.x, options.y)
-            if (options.text !== undefined) console.putmsg(commands + ":" + options.text)
+            // @ts-expect-error
+            if (options.text !== undefined) console.putmsg(commands + ":" + options.text, P_WORDWRAP, 4, this.description)
         }
 
         return {
@@ -657,11 +667,16 @@ export class IQMenu {
     }
 }
 
-export class IQFrame {
+export class IQFrame implements IQFrameOptions {
     private frame: any | null = null
     public is_open!: boolean
     public transparent!: boolean
     public scrollbars!: boolean
+    public x!: number
+    public y!: number
+    public width!: number
+    public height!: number
+    public color!: IQFrameColorOptions
 
     /**
      * toggle true/false to restrict/allow frame movement outside display
@@ -792,8 +807,7 @@ export class Text {}
  *
  * ```
  */
-export class Artwork {
-    public basepath: string | undefined
+export class Artwork extends IQBaseConfig {
     public filename: string | undefined
     private fileHandle: any
 
@@ -804,7 +818,8 @@ export class Artwork {
      * @returns {Artwork} An instance of Artwork
      */
     constructor(options: IArtworkOptions) {
-        this.basepath = options.basepath || Iniquity.prototype.basepath || undefined
+        super()
+        this.basepath = options?.basepath || this.basepath
         this.filename = options.filename || undefined
     }
 
@@ -826,9 +841,10 @@ export class Artwork {
     render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
         if (options?.clearScreenBefore === true) console.putmsg("@POFF@@CLS@@PON@".color("reset"))
 
-        let basepath = options?.basepath || this.basepath || new Error("I need to know where the archives folder is located!")
+        let basepath = options?.basepath || this.basepath
         let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
-        let mode = options?.mode || "line"
+        let encoding = options?.encoding || this.encoding
+        let mode = options?.mode || "@-codes"
         let speed = options?.speed || 30
         let data = options?.data || { message: "test" }
 
@@ -850,7 +866,12 @@ export class Artwork {
                 let text = this.fileHandle.readAll()
 
                 for (let i = 0; i < text.length; i++) {
-                    console.putmsg(text[i], data)
+                    // // @ts-ignore these damn constants.
+                    // if (encoding === "CP437") console.putmsg(text[i], null, null, data)
+                    // // @ts-ignore these damn constants.
+                    // if (encoding === "UTF8") console.putmsg(utf8_cp437(text[i]), null, null, data)
+                    console.putmsg(text[i], null, null, data)
+
                     sleep(speed)
                     if (i < text.length - 1) console.putmsg("\r\n")
                     console.line_counter = 0
@@ -859,6 +880,15 @@ export class Artwork {
                 break
 
             case "character":
+            case "graphic":
+                // @ts-expect-error
+                const graphic = new Graphic(iq.terminfo.x, iq.terminfo.y)
+                graphic.cpm_eof = false
+                if (!graphic.load(`${this.basepath}/${filename}`)) alert("Load failure")
+                else {
+                    let normalized = graphic.normalize()
+                    normalized.draw(undefined, undefined, undefined, undefined, undefined, undefined, options?.speed || undefined)
+                }
                 break
             default:
             // nothing...
@@ -1055,10 +1085,13 @@ export function say(options?: IBBSSayOptions | string | object | any): IBBSSayFu
     iq.say(options)
     return {
         pause(options?: IQPauseOptions): void {
-            iq.pause(options)
+            pause(options)
         },
-        wait(options?: IQWaitOptions | number): void {
-            iq.wait(options || 100)
+        wait(options?: IQWaitOptions): void {
+            wait(options)
+        },
+        gotoxy(x: number, y: number): void {
+            gotoxy(x, y)
         }
     }
 }
@@ -1209,13 +1242,7 @@ export enum IQModuleACLS {
     high = 3,
     superHigh = 4
 }
-export interface IQModuleOptions {
-    basepath?: string
-    assets?: string
-    access?: IQModuleACLS
-    data?: IQDataModelOptions
-    computed?: any
-}
+export interface IQModuleOptions extends IQBaseConfig {}
 
 /**
  * An experimental Iniquity module decorator for bbs modules
@@ -1254,7 +1281,6 @@ export interface IQModuleRuntimeOptions {
 }
 
 export { Assets as IQCoreAssets } from "./assets/index"
-export { IQCoreModules } from "./modules/index"
 
 declare global {
     export namespace js {
@@ -1266,6 +1292,9 @@ declare global {
         export function dispatchEvent(event: string, thisObj?: object): void
         export let terminated: boolean
         export let do_callbacks: boolean
+        export let scope: object
+        export let global: object
+        export let version: string
     }
 
     /**
@@ -1302,5 +1331,25 @@ declare global {
     export let user: ISBBSUser
     export let bbs: ISBBSBbs
 }
+
+/**
+ * Utf8s cp437
+ * @param arg0
+ * @returns cp437
+ */
+
+declare function utf8_cp437(string: any): string
+/**
+ * Utf8s ascii
+ * @param string
+ * @returns ascii
+ */
+declare function utf8_ascii(string: any): string
+/**
+ * Utf8s utf16
+ * @param string
+ * @returns utf16
+ */
+declare function utf8_utf16(string: any): string
 
 // export let K_UPPER: any

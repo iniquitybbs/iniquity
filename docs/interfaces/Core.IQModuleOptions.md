@@ -2,6 +2,12 @@
 
 [Core](../modules/Core.md).IQModuleOptions
 
+## Hierarchy
+
+- [`IQBaseConfig`](../classes/Core.IQBaseConfig.md)
+
+  ↳ **`IQModuleOptions`**
+
 ## Table of contents
 
 ### Properties
@@ -11,53 +17,88 @@
 - [basepath](Core.IQModuleOptions.md#basepath)
 - [computed](Core.IQModuleOptions.md#computed)
 - [data](Core.IQModuleOptions.md#data)
+- [encoding](Core.IQModuleOptions.md#encoding)
 
 ## Properties
 
 ### access
 
-• `Optional` **access**: [`IQModuleACLS`](../enums/Core.IQModuleACLS.md)
+• **access**: [`IQModuleACLS`](../enums/Core.IQModuleACLS.md)
+
+#### Inherited from
+
+[IQBaseConfig](../classes/Core.IQBaseConfig.md).[access](../classes/Core.IQBaseConfig.md#access)
 
 #### Defined in
 
-[packages/core/src/index.ts:1195](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1195)
+[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L309)
 
 ___
 
 ### assets
 
-• `Optional` **assets**: `string`
+• **assets**: `string`
+
+#### Inherited from
+
+[IQBaseConfig](../classes/Core.IQBaseConfig.md).[assets](../classes/Core.IQBaseConfig.md#assets)
 
 #### Defined in
 
-[packages/core/src/index.ts:1194](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1194)
+[packages/core/src/index.ts:308](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L308)
 
 ___
 
 ### basepath
 
-• `Optional` **basepath**: `string`
+• **basepath**: `string`
+
+#### Inherited from
+
+[IQBaseConfig](../classes/Core.IQBaseConfig.md).[basepath](../classes/Core.IQBaseConfig.md#basepath)
 
 #### Defined in
 
-[packages/core/src/index.ts:1193](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1193)
+[packages/core/src/index.ts:307](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L307)
 
 ___
 
 ### computed
 
-• `Optional` **computed**: `any`
+• **computed**: `any`
+
+#### Inherited from
+
+[IQBaseConfig](../classes/Core.IQBaseConfig.md).[computed](../classes/Core.IQBaseConfig.md#computed)
 
 #### Defined in
 
-[packages/core/src/index.ts:1197](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1197)
+[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L312)
 
 ___
 
 ### data
 
-• `Optional` **data**: [`IQDataModelOptions`](Core.IQDataModelOptions.md)
+• **data**: [`IQReactorOptions`](Core.IQReactorOptions.md)
+
+#### Inherited from
+
+[IQBaseConfig](../classes/Core.IQBaseConfig.md).[data](../classes/Core.IQBaseConfig.md#data)
 
 #### Defined in
 
-[packages/core/src/index.ts:1196](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L1196)
+[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L311)
+
+___
+
+### encoding
+
+• **encoding**: ``"CP437"`` \| ``"UTF8"``
+
+#### Inherited from
+
+[IQBaseConfig](../classes/Core.IQBaseConfig.md).[encoding](../classes/Core.IQBaseConfig.md#encoding)
+
+#### Defined in
+
+[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L310)

@@ -1,21 +1,31 @@
-import iniquity, { IQModule, IQBaseConfig, IQModuleRuntime, IQModuleACLS } from "@iniquitybbs/core"
+import { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQReactor, IQCoreAssets } from "@iniquitybbs/core"
 
 @IQModule({
-    assets: "/iniquity/core/src/assets/",
-    access: IQModuleACLS.medium
+    basepath: "/iniquity/core/src/assets",
+    access: IQModuleACLS.low,
+    assets: "",
+    encoding: "CP437",
+    data: IQReactor({
+        message: "Umm, yeah this needs to change",
+        number: 1,
+        time: time(),
+        system: system.stats
+    }),
+    computed: {}
 })
-export class Apply extends IQBaseConfig {
+class Apply extends IQ {
     @IQModuleRuntime({ debug: true })
     start() {
-        iniquity.artwork({ basepath: "/iniquity/core/src/assets", filename: "5m-ink2menu.ans" }).render({ clearScreenBefore: true })
+        this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ clearScreenBefore: true }).cursor(40, 10)
 
-        let newUser = iniquity
-            .user({
-                name: iniquity.ask("What would you like your handle to be?".newlines(2).color("white")),
-                password: iniquity.ask("And your password?".newlines(2).color("white"))
-            })
-            .new()
+        let newUser = this.user({
+            name: this.ask("What would you like your handle to be?".center().newlines(0).color("white")),
+            password: this.ask("And your password?".newlines(2).color("white"))
+        }).new()
 
         alert(JSON.stringify(newUser))
     }
 }
+
+export { Apply }
+export default new Apply()

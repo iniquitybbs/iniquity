@@ -33,7 +33,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install libcap2-dev libcap2-bin sudo lrzsz vim \ 
     && wget https://gitlab.synchro.net/main/sbbs/-/raw/master/install/GNUmakefile \
     && make install SYMLINK=1 NOCAP=1 USE_DOSEMU=1 TAG=sbbs319b \
-    && apt-get -y autoremove
+    && /sbbs/exec/jsexec update.js \
+    && /sbbs/exec/jsexec makeuser.js iniquity -P aslk102*rmA0wq -S 99 -H iq -C "The iniquity super user" \
+    ; /sbbs/exec/jsexec makeguest.js \
+    ; apt-get -y autoremove
 
 FROM synchronet as iniquity
 LABEL name="iniquity"
@@ -43,13 +46,12 @@ LABEL version="latest"
 WORKDIR /iniquity
 COPY . .
 
-# Eventually there will be a bundle step for iniquity apps being ran on the cloud. For now, local only.
-# RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash \
-#     && . $HOME/.nvm/nvm.sh || true \
-#     && nvm install 16 \
-#     && nvm install-latest-npm \
-#     && npm version \
-#     && nvm use
+RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash \
+    && . $HOME/.nvm/nvm.sh || true \
+    && nvm install 16 \
+    && nvm install-latest-npm \
+    && npm version \
+    && nvm use
 
 RUN cd /sbbs/exec/ \
     && mv login.js login.js-original \
@@ -62,6 +64,6 @@ VOLUME /sbbs
 VOLUME /iniquity
 
 # Start Iniquity
-EXPOSE 22-24
+EXPOSE 22 23 80 443 1123 11235
 
 CMD ["/sbbs/exec/sbbs"]

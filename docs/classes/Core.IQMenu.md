@@ -17,6 +17,8 @@
 ### Properties
 
 - [commands](Core.IQMenu.md#commands)
+- [description](Core.IQMenu.md#description)
+- [name](Core.IQMenu.md#name)
 
 ### Methods
 
@@ -38,7 +40,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:585](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L585)
+[packages/core/src/index.ts:581](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L581)
 
 ## Properties
 
@@ -52,7 +54,27 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:583](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L583)
+[packages/core/src/index.ts:579](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L579)
+
+___
+
+### description
+
+• `Optional` **description**: `string`
+
+#### Defined in
+
+[packages/core/src/index.ts:577](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L577)
+
+___
+
+### name
+
+• `Optional` **name**: `string`
+
+#### Defined in
+
+[packages/core/src/index.ts:576](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L576)
 
 ## Methods
 
@@ -72,7 +94,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:662](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L662)
+[packages/core/src/index.ts:662](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L662)
 
 ___
 
@@ -105,7 +127,7 @@ Functions that can be chained to the prompt.
 
 #### Defined in
 
-[packages/core/src/index.ts:630](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L630)
+[packages/core/src/index.ts:629](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L629)
 
 ___
 
@@ -126,4 +148,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:590](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L590)
+[packages/core/src/index.ts:588](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L588)

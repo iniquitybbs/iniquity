@@ -24,11 +24,9 @@ myIniquity.hangup()
 
   ↳ [`Iniquity`](Core.Iniquity.md)
 
-  ↳ [`Apply`](core_src_modules_apply.Apply.md)
+  ↳ [`Artwork`](Core.Artwork.md)
 
-  ↳ [`Hangup`](core_src_modules_hangup.Hangup.md)
-
-  ↳ [`Login`](core_src_modules_login.Login.md)
+  ↳ [`IQModuleOptions`](../interfaces/Core.IQModuleOptions.md)
 
 ## Table of contents
 
@@ -43,6 +41,7 @@ myIniquity.hangup()
 - [basepath](Core.IQBaseConfig.md#basepath)
 - [computed](Core.IQBaseConfig.md#computed)
 - [data](Core.IQBaseConfig.md#data)
+- [encoding](Core.IQBaseConfig.md#encoding)
 
 ## Constructors
 
@@ -58,7 +57,7 @@ myIniquity.hangup()
 
 #### Defined in
 
-[packages/core/src/index.ts:301](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L301)
+[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L309)
 
 ___
 
@@ -68,7 +67,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:300](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L300)
+[packages/core/src/index.ts:308](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L308)
 
 ___
 
@@ -78,7 +77,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:299](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L299)
+[packages/core/src/index.ts:307](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L307)
 
 ___
 
@@ -88,14 +87,24 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:303](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L303)
+[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L312)
 
 ___
 
 ### data
 
-• **data**: [`IQDataModelOptions`](../interfaces/Core.IQDataModelOptions.md)
+• **data**: [`IQReactorOptions`](../interfaces/Core.IQReactorOptions.md)
 
 #### Defined in
 
-[packages/core/src/index.ts:302](https://github.com/iniquitybbs/iniquity/blob/976716f/packages/core/src/index.ts#L302)
+[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L311)
+
+___
+
+### encoding
+
+• **encoding**: ``"CP437"`` \| ``"UTF8"``
+
+#### Defined in
+
+[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L310)

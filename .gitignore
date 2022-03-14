@@ -9,3 +9,4 @@ lerna-debug.log
 .rollup.cache
 .env
 data
+.sbbs

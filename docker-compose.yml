@@ -6,7 +6,10 @@ services:
         ports:
             - "22:22"
             - "23:23"
-            - "24:24"
+            - "80:80"
+            - "443:443"
+            - "1123:1123"
+            - "11235:11235"
         volumes:
             - ./packages:/iniquity
             - ./data:/sbbs/data
