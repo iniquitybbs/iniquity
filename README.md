@@ -2,25 +2,7 @@
 
 This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
-```text
--$a. ------------------ .a$ ---------------------------- %$!, ----------------%
- `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
--.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
-;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
-:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
-.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
- `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
-%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$//$%$
-dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
-%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
-   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
-.      .  '$a,          .        a` .   'a          .   .             s` .  . .
-      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
-   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%//$
-==============================================================================
-   t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
-==============================================================================
-```
+![Alt text](packages/core/src/assets/5m-iniquity3a.png?raw=true "Iniquity 3")
 
 [![Release](https://github.com/iniquitybbs/iniquity/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/iniquitybbs/iniquity/actions/workflows/release.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=alert_status)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
@@ -127,17 +109,17 @@ Thinking you need something a bit more advanced? Try the class based approach.
 
 ```typescript
 
-import iq, { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core"
+import { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core"
 
 @IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
 export class Login extends IQ {
     @IQModuleRuntime({ debug: true })
     start() {
-        const art = iq.artwork({ basepath: this.basepath })
+        const art = this.artwork({ basepath: this.basepath })
 
         art.render({ filename: IQCoreAssets.iq3_login }).cursor(40, 25)
 
-        const login = iq.ask("Enter your handle, or type 'new' to apply".color("green"))
+        const login = this.ask("Enter your handle, or type 'new' to apply".color("green"))
 
         /** More login logic to come **/
 
@@ -146,7 +128,7 @@ export class Login extends IQ {
 
 ```
 
-Do you have experience making even driven applications on the web? Like with Vue or React? You can build fully reactive applications with Iniquity also...
+Familiar with making event-driven, single page applications, Like with Vue. React or Angular? You can build fully reactive applications with iniquity 3 also...
 
 ```typescript
 
@@ -340,6 +322,14 @@ ispyhumanfly — Today at 1:39 PM
 
 That's basically the primary reason for using it. In addition to the wealth of command line utilities centered around the subject of bbs/ansi/terminal/etc made possible by the people behind Synchronet. Also, there are many utilities available within the Ubuntu ecosystem. DOSemu being one of them, which is integrated into this runtime container as well.
 Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
+
+Alpha... — 03/16/2022
+The more I read about IQ3, the more I dig that this isn't just a BBS platform, it's a tool that can be used to create/script just about any kind of terminal application... Seems to share that piece of DNA with x84, yeah? 
+
+//rubs hands in maniacal anticipation//
+
+ispyhumanfly — 03/17/2022
+Yup, that's basically it @Alpha... . When in a more finished state, the @iniquitybbs/templates package is going to have a few different kinds of examples, and BBS setups for people to get started with. But they exist as examples. Iniquity 3 itself is an SDK and platform for creating terminal applications that can be accessed from terminal/web/maybe mobile. Absolutely x84 is the genesis of the idea here. I liked what those guys had done, but, wanted to hopefully be able to take it a bit further. So with that in mind, I originally started this project as a ruby project, and started working on the CLI portion... after sometime decided to switch to the TypeScript/JS version that exists now, with the runtime as I've explained previously.
 
 ### Development of this project
 
