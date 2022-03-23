@@ -31,11 +31,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get -y install libncurses5-dev libncursesw5-dev libc6-dev libc-dev g++ libnspr4-dev git dosemu libarchive-dev \
     && apt-get -y install pkg-config libzip-dev libsdl-kitchensink-dev zip unzip apt-utils \
     && apt-get -y install libcap2-dev libcap2-bin sudo lrzsz vim \ 
-    && wget https://gitlab.synchro.net/main/sbbs/-/raw/master/install/GNUmakefile \
-    && make install SYMLINK=1 NOCAP=1 USE_DOSEMU=1 TAG=sbbs319b \
-    && /sbbs/exec/jsexec update.js \
-    && /sbbs/exec/jsexec makeuser.js iniquity -P aslk102*rmA0wq -S 99 -H iq -C "The iniquity super user" \
-    ; /sbbs/exec/jsexec makeguest.js \
+    && cd ~/ \
+    && git clone https://github.com/iniquitybbs/sbbs.git \
+    # && wget https://gitlab.synchro.net/main/sbbs/-/raw/master/install/GNUmakefile \
+    && cd ~/sbbs/install \
+    && make install SYMLINK=1 NOCAP=1 USE_DOSEMU=1 OS=iq3os SBBSDIR=/sbbs REPODIR=/root/sbbs \
+    # && /sbbs/exec/jsexec update.js \
+    # && /sbbs/exec/jsexec makeuser.js iniquity -P aslk102*rmA0wq -S 99 -H iq -C "The iniquity super user" \
+    # ; /sbbs/exec/jsexec makeguest.js \
     ; apt-get -y autoremove
 
 FROM synchronet as iniquity

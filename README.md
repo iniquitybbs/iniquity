@@ -45,42 +45,9 @@ iniquity init --name MyBBS --template eternity --theme iq3
 iniquity start
 ```
 
+After that, you can connect to your locally running iniquity instance using a telnet client or web browser.
+
 ## Getting started guide
-
-### Your development environment should contain something like this, or similar
-
-- macOS / Windows / Linux _required_
-  - These modern operating systems are currently supported.
-- Docker Desktop for macOS / Windows or Docker Machine _required_
-  - The Iniquity BBS runtime is executed inside of a Docker container for portability.
-- Node.js & NPM _required_
-  - The Node community tools are used for TypeScript transpiling and Iniquity package management.
-- Visual Studio Code _recommended_
-  - This repository is specifically tuned to take full advantage of this IDE.
-- Moebius _recommended_
-  - The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
-
-### Developing your own iniquity bbs
-
-```bash
-npm install -g @iniquitybbs/cli
-```
-
-Then...
-
-```bash
-iniquity init --name MyBBS --template eternity --theme iq3
-```
-
-Then start iniquity
-
-```bash
-iniquity start
-```
-
-For further development and customization of your iniquity bbs, it's recommended that you use VS Code. Open up your bbs directory in VSC to take advantage of the development tooling made available by this project.
-
-### Getting started guide
 
 In its most simple form, Iniquity can provide you with some shortcuts to working with a terminal...
 
@@ -116,6 +83,8 @@ iq.say(
 How about we make a menu that users could use to help them navigate around a bit.
 
 ```typescript
+
+import iq from "@iniquitybbs/core"
 
 const menu = iq.menu({
     name: "Iniquity answer menu.",
@@ -180,6 +149,7 @@ export class Login extends IQ {
 Do you have experience making even driven applications on the web? Like with Vue or React? You can build fully reactive applications with Iniquity also...
 
 ```typescript
+
 import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQReactor, IQ } from "@iniquitybbs/core"
 
 @IQModule({
@@ -333,6 +303,19 @@ export class Answer extends IQ {
 
 ## More details about iniquity 3
 
+### Your development environment should contain something like this, or similar
+
+- macOS / Windows / Linux _required_
+  - These modern operating systems are currently supported.
+- Docker Desktop for macOS / Windows or Docker Machine _required_
+  - The Iniquity BBS runtime is executed inside of a Docker container for portability.
+- Node.js & NPM _required_
+  - The Node community tools are used for TypeScript transpiling and Iniquity package management.
+- Visual Studio Code _recommended_
+  - This repository is specifically tuned to take full advantage of this IDE.
+- Moebius _recommended_
+  - The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
+  
 ### Some guiding thoughts surrounding the idea of iniquity 3
 
 I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
@@ -378,7 +361,7 @@ npm install
 
 #### Start iniquity
 
-Inside of VS Code, fire up the development server.
+Inside of the VS Code Integrated Terminal, fire up the development server.
 
 ```bash
 npm start

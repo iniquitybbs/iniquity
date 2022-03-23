@@ -16,6 +16,8 @@
  * ```
  */
 
+import { IQCoreAssets } from "./assets/index"
+
 /*
 -$a. ------------------ .a$ ---------------------------- %$!, ----------------%
  `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
@@ -1353,3 +1355,12 @@ declare function utf8_ascii(string: any): string
 declare function utf8_utf16(string: any): string
 
 // export let K_UPPER: any
+
+/**
+ * Return a single asset random selected from an array of IQCoreAssets
+ * @param {IQCoreAssets[]} assets An array of IQCoreAssets to choose from
+ * @returns {IQCoreAssets} The randomly selected asset
+ */
+export function randomAsset(assets: string[]): string {
+    return assets[Math.floor(Math.random() * assets.length)]
+}

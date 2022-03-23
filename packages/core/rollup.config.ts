@@ -30,13 +30,13 @@ export default {
             dedupe: ["@iniquitybbs/archive", "@iniquitybbs/cli", "@iniquitybbs/template", "@iniquitybbs/core", "@iniquitybbs/core/library"]
         }),
         externalGlobals({
-            jquery: "$"
+            jquery: "$",
+            lodash: "_"
         }),
         commonjs(),
         typescript({
             outputToFilesystem: true,
             tsconfig: "tsconfig.bundle.json"
         })
-    ],
-    external: ["lodash"]
+    ]
 }

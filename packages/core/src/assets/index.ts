@@ -60,8 +60,10 @@ export enum Assets {
     iq3_welcome2 = "iq3-welcome2.ans",
     iq3_apply = "iq3-apply.ans",
     iq3_login = "iq3-login.ans",
+    iq3_uswfc = "us-wfc.ans",
 
-    sm_iniq2 = "sm!iniq2.ans"
+    sm_iniq2 = "sm!iniq2.ans",
+    us_wfc = "us-wfc.ans"
 }
 
 /**

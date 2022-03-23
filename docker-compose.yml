@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-    app:
+    iniquity:
         build: .
         image: iniquitybbs/iniquity:latest
         ports:

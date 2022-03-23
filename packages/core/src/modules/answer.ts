@@ -6,6 +6,7 @@ import {
     IQModule,
     IQModuleRuntime,
     IQReactor,
+    randomAsset,
     IQ
 } from "@iniquitybbs/core"
 
@@ -116,12 +117,6 @@ class Answer extends IQ {
             this.wait(100)
         }
 
-        this.artwork({ filename: IQCoreAssets.iq3_welcome }).render({
-            speed: 100,
-            data: this.data,
-            mode: "graphic"
-        })
-
         const frame = this.frame({
             x: 10,
             y: 10,
@@ -165,13 +160,13 @@ class Answer extends IQ {
         menu.render(
             (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
                 this.artwork().render({
-                    filename: IQCoreAssets.iq3_welcome,
+                    filename: randomAsset([IQCoreAssets.iq3_welcome, IQCoreAssets.iq3_welcome2, IQCoreAssets.us_wfc]),
                     data: this.data.model,
                     encoding: "CP437",
                     mode: "graphic"
                 })
 
-                menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
+                menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey)
             },
             {
                 maxInterval: 1000000
