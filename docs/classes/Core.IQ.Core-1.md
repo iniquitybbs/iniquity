@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L309)
+[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L311)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:308](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L308)
+[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L310)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:307](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L307)
+[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L309)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L312)
+[packages/core/src/index.ts:314](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L314)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L311)
+[packages/core/src/index.ts:313](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L313)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L310)
+[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L312)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:471](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L471)
+[packages/core/src/index.ts:473](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L473)
 
 ## Methods
 
@@ -186,7 +186,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[packages/core/src/index.ts:512](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L512)
+[packages/core/src/index.ts:514](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L514)
 
 ___
 
@@ -214,7 +214,7 @@ response
 
 #### Defined in
 
-[packages/core/src/index.ts:451](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L451)
+[packages/core/src/index.ts:453](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L453)
 
 ___
 
@@ -240,7 +240,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:406](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L406)
+[packages/core/src/index.ts:408](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L408)
 
 ___
 
@@ -262,7 +262,7 @@ void
 
 #### Defined in
 
-[packages/core/src/index.ts:459](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L459)
+[packages/core/src/index.ts:461](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L461)
 
 ___
 
@@ -290,7 +290,7 @@ An instance of Menu
 
 #### Defined in
 
-[packages/core/src/index.ts:529](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L529)
+[packages/core/src/index.ts:531](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L531)
 
 ___
 
@@ -317,7 +317,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:398](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L398)
+[packages/core/src/index.ts:400](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L400)
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:463](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L463)
+[packages/core/src/index.ts:465](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L465)
 
 ___
 
@@ -353,7 +353,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:467](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L467)
+[packages/core/src/index.ts:469](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L469)
 
 ___
 
@@ -381,7 +381,7 @@ An instance of Menu
 
 #### Defined in
 
-[packages/core/src/index.ts:521](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L521)
+[packages/core/src/index.ts:523](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L523)
 
 ___
 
@@ -411,7 +411,7 @@ Display a pause prompt on the screen.
 
 #### Defined in
 
-[packages/core/src/index.ts:387](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L387)
+[packages/core/src/index.ts:389](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L389)
 
 ___
 
@@ -446,7 +446,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-[packages/core/src/index.ts:365](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L365)
+[packages/core/src/index.ts:367](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L367)
 
 ___
 
@@ -480,7 +480,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-[packages/core/src/index.ts:327](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L327)
+[packages/core/src/index.ts:329](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L329)
 
 ___
 
@@ -512,7 +512,7 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[packages/core/src/index.ts:494](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L494)
+[packages/core/src/index.ts:496](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L496)
 
 ___
 
@@ -545,4 +545,4 @@ void
 
 #### Defined in
 
-[packages/core/src/index.ts:440](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L440)
+[packages/core/src/index.ts:442](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L442)

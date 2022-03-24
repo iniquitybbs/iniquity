@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[packages/core/src/modules/apply.ts:30](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/modules/apply.ts#L30)
+[packages/core/src/modules/apply.ts:30](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/apply.ts#L30)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-packages/core/src/modules/connections.ts:7
+[packages/core/src/modules/connections.ts:7](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/connections.ts#L7)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-packages/core/src/modules/files.ts:7
+[packages/core/src/modules/files.ts:7](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/files.ts#L7)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/login.ts:73](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/modules/login.ts#L73)
+[packages/core/src/modules/login.ts:73](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/login.ts#L73)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-packages/core/src/modules/logon.ts:7
+[packages/core/src/modules/logon.ts:7](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/logon.ts#L7)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-packages/core/src/modules/messages.ts:7
+[packages/core/src/modules/messages.ts:7](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/messages.ts#L7)
 
 ## Variables
 
@@ -94,4 +94,4 @@ A simple wrapper around the core iniquity modules.
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:18](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/modules/index.ts#L18)
+[packages/core/src/modules/index.ts:17](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/modules/index.ts#L17)

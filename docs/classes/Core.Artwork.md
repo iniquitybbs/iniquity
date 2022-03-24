@@ -66,7 +66,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[packages/core/src/index.ts:820](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L820)
+[packages/core/src/index.ts:822](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L822)
 
 ## Properties
 
@@ -80,7 +80,7 @@ The Iniquity Artwork rendering class
 
 #### Defined in
 
-[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L309)
+[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L311)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:308](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L308)
+[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L310)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:307](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L307)
+[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L309)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L312)
+[packages/core/src/index.ts:314](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L314)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L311)
+[packages/core/src/index.ts:313](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L313)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L310)
+[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L312)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:811](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L811)
+[packages/core/src/index.ts:813](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L813)
 
 ## Methods
 
@@ -196,4 +196,4 @@ Will render the artwork on the screen as well as provide various render function
 
 #### Defined in
 
-[packages/core/src/index.ts:841](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L841)
+[packages/core/src/index.ts:843](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L843)

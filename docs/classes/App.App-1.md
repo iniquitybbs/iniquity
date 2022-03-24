@@ -38,7 +38,7 @@ Iniquity CLI
 
 ### command
 
-• **command**: `string` = `"core [options]"`
+• **command**: `string` = `"cli [options]"`
 
 #### Implementation of
 
@@ -46,7 +46,7 @@ yargs.CommandModule.command
 
 #### Defined in
 
-[packages/core/src/commands/core.ts:48](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/commands/core.ts#L48)
+[packages/cli/src/commands/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/cli/src/commands/index.ts#L48)
 
 ___
 
@@ -60,13 +60,13 @@ yargs.CommandModule.describe
 
 #### Defined in
 
-[packages/core/src/commands/core.ts:49](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/commands/core.ts#L49)
+[packages/cli/src/commands/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/cli/src/commands/index.ts#L49)
 
 ## Methods
 
 ### builder
 
-▸ **builder**(`yargs`): `Argv`<{ `name`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
+▸ **builder**(`yargs`): `Argv`<{ `init`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
 
 #### Parameters
 
@@ -76,7 +76,7 @@ yargs.CommandModule.describe
 
 #### Returns
 
-`Argv`<{ `name`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
+`Argv`<{ `init`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
 
 #### Implementation of
 
@@ -84,7 +84,7 @@ yargs.CommandModule.builder
 
 #### Defined in
 
-[packages/core/src/commands/core.ts:51](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/commands/core.ts#L51)
+[packages/cli/src/commands/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/cli/src/commands/index.ts#L51)
 
 ___
 
@@ -108,4 +108,4 @@ yargs.CommandModule.handler
 
 #### Defined in
 
-[packages/core/src/commands/core.ts:66](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/commands/core.ts#L66)
+[packages/cli/src/commands/index.ts:67](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/cli/src/commands/index.ts#L67)

@@ -84,6 +84,7 @@ myIniquity.disconnect()
 - [cursor](Core.md#cursor)
 - [gotoxy](Core.md#gotoxy)
 - [pause](Core.md#pause)
+- [randomAsset](Core.md#randomasset)
 - [say](Core.md#say)
 - [wait](Core.md#wait)
 
@@ -95,7 +96,7 @@ myIniquity.disconnect()
 
 #### Defined in
 
-[packages/core/src/index.ts:1283](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1283)
+[packages/core/src/index.ts:1285](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1285)
 
 ## Variables
 
@@ -107,7 +108,7 @@ The globally scoped intance of iniquity
 
 #### Defined in
 
-[packages/core/src/index.ts:1234](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1234)
+[packages/core/src/index.ts:1236](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1236)
 
 ## Functions
 
@@ -143,7 +144,7 @@ An experimental Iniquity module decorator for bbs modules
 
 #### Defined in
 
-[packages/core/src/index.ts:1253](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1253)
+[packages/core/src/index.ts:1255](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1255)
 
 ___
 
@@ -165,7 +166,7 @@ The IQ script executed as part of a module.
 
 #### Defined in
 
-[packages/core/src/index.ts:1273](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1273)
+[packages/core/src/index.ts:1275](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1275)
 
 ___
 
@@ -189,7 +190,7 @@ Iniquity reactive data model
 
 #### Defined in
 
-[packages/core/src/index.ts:86](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L86)
+[packages/core/src/index.ts:88](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L88)
 
 ___
 
@@ -214,7 +215,7 @@ cursor().down(10).up(12).down().up().down().left(1).right(20).down(12).up(14)
 
 #### Defined in
 
-[packages/core/src/index.ts:1106](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1106)
+[packages/core/src/index.ts:1108](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1108)
 
 ___
 
@@ -235,7 +236,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1110](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1110)
+[packages/core/src/index.ts:1112](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1112)
 
 ___
 
@@ -255,7 +256,31 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1114](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1114)
+[packages/core/src/index.ts:1116](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1116)
+
+___
+
+### randomAsset
+
+▸ **randomAsset**(`assets`): `string`
+
+Return a single asset random selected from an array of IQCoreAssets
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `assets` | `string`[] | An array of IQCoreAssets to choose from |
+
+#### Returns
+
+`string`
+
+The randomly selected asset
+
+#### Defined in
+
+[packages/core/src/index.ts:1364](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1364)
 
 ___
 
@@ -280,7 +305,7 @@ say("are we making it here?").pause()
 
 #### Defined in
 
-[packages/core/src/index.ts:1084](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1084)
+[packages/core/src/index.ts:1086](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1086)
 
 ___
 
@@ -300,4 +325,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1117](https://github.com/iniquitybbs/iniquity/blob/55edf2a/packages/core/src/index.ts#L1117)
+[packages/core/src/index.ts:1119](https://github.com/iniquitybbs/iniquity/blob/5dc4891/packages/core/src/index.ts#L1119)
