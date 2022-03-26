@@ -50,7 +50,7 @@ class Login extends IQ {
 
         const art = this.artwork({ basepath: this.basepath })
 
-        art.render({ filename: IQCoreAssets.iq3_login, clearScreenBefore: true, mode: "graphic" })
+        art.render({ filename: IQCoreAssets.iq3_login, clearScreenBefore: true, mode: "character" })
 
         const login = this.ask("Enter your handle, or type 'new' to apply".color("green").color("reset").gotoxy(15, 23))
 

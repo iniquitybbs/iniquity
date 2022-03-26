@@ -142,7 +142,7 @@ export interface IArtworkRenderOptions {
     filename?: string | undefined
     speed?: number | undefined
     encoding?: "CP437" | "UTF8"
-    mode?: "line" | "character" | "@-codes" | "reactive" | "graphic"
+    mode?: "line" | "character" | "@-codes" | "reactive" | "character"
     clearScreenBefore?: boolean
     data?: unknown
 }
@@ -883,7 +883,6 @@ export class Artwork extends IQBaseConfig {
                 break
 
             case "character":
-            case "graphic":
                 // @ts-expect-error
                 const graphic = new Graphic(iq.terminfo.x, iq.terminfo.y)
                 graphic.cpm_eof = false

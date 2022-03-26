@@ -90,7 +90,7 @@ class Answer extends IQ {
             menu.render(
                 (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
                     this.artwork({ filename: IQCoreAssets.sm_iniq2 })
-                        .render({ mode: "graphic", data: { ...this.data.model, ...menu } })
+                        .render({ mode: "character", data: { ...this.data.model, ...menu } })
                         .cursor(10, 22)
 
                     let frame = this.frame({

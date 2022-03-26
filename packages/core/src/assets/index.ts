@@ -59,7 +59,7 @@ export enum Assets {
     iq3_uswfc = "us-wfc.ans",
     iq3_avewfc = "iq3-ave-wfc.ans",
     iq3_cxwfc = "iq3-cxwfc.ans",
-
+    drm_inq1_wfc = "drm-inq1.ans",
 
     sm_iniq2 = "sm!iniq2.ans",
     us_wfc = "us-wfc.ans"

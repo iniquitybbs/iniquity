@@ -68,7 +68,7 @@ ___
 
 ### mode
 
-• `Optional` **mode**: ``"line"`` \| ``"character"`` \| ``"@-codes"`` \| ``"reactive"`` \| ``"graphic"``
+• `Optional` **mode**: ``"line"`` \| ``"character"`` \| ``"@-codes"`` \| ``"reactive"`` \| ``"character"``
 
 #### Defined in
 
