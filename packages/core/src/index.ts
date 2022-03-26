@@ -873,9 +873,10 @@ export class Artwork extends IQBaseConfig {
                     // if (encoding === "CP437") console.putmsg(text[i], null, null, data)
                     // // @ts-ignore these damn constants.
                     // if (encoding === "UTF8") console.putmsg(utf8_cp437(text[i]), null, null, data)
-                    console.putmsg(text[i], null, null, data)
+                    // @ts-ignore
+                    console.putmsg(text[i], P_NONE, 4, data)
 
-                    sleep(speed)
+                    wait(speed)
                     if (i < text.length - 1) console.putmsg("\r\n")
                     console.line_counter = 0
                 }

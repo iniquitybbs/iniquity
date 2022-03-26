@@ -57,16 +57,23 @@ export class WFC extends IQ {
             name: "Iniquity waiting for caller screen",
             description: "Really I just get to rattle off more non-sense.",
             commands: {
-                A: () => {
+                A: (metadata = { description: "About this." }) => {
                     this.data.model.message = "Preparing to apply to this bbs."
-                    IQCoreModules.apply()
+                    return {
+                        metadata
+                    }
                 },
-                O: () => {
+                O: (metadata = { description: "About this." }) => {
                     this.data.model.message = "You pressed O. Oh how cool."
+                    return {
+                        metadata
+                    }
                 },
-                L: () => {
+                L: (metadata = { description: "About this." }) => {
                     this.data.model.message = "Preparing to login..."
-                    IQCoreModules.login()
+                    return {
+                        metadata
+                    }
                 },
                 default: () => {
                     this.data.model.message = "There is no command for that."
@@ -76,13 +83,15 @@ export class WFC extends IQ {
 
         menu.render((res: IQMenuLoopMessageResponse, cmdkey: Function) => {
             this.artwork().render({
-                filename: randomAsset([IQCoreAssets.iq3_avewfc, IQCoreAssets.iq3_cxwfc, IQCoreAssets.drm_inq1_wfc]),
+                filename: randomAsset([IQCoreAssets.iq3_avewfc, IQCoreAssets.drm_inq1_wfc, IQCoreAssets.us_wfc]),
                 data: this.data.model,
                 encoding: "CP437",
-                mode: "character"
+                mode: "line"
             })
 
-            menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey)
+            menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey, () => {
+                this.data.model.message = "fpp"
+            })
         })
     }
 }

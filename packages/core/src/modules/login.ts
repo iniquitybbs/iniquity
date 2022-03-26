@@ -29,30 +29,19 @@ class Login extends IQ {
                 height: box.height,
                 color: IQFrameColorOptions.blue
             })
-            // let scrollbar = new ScrollBar(frame, { autohide: true })
 
             frame.open()
-
-            let counter = 0
-
-            while (counter < 100) {
-                counter++
-                frame.say(this.data.model.message)
-
-                frame.cycle()
-                // scrollbar.cycle()
-
-                this.wait(10)
-            }
-
+            frame.say(this.data.model.message)
+            frame.draw()
+            this.wait(3000)
             frame.close()
         })
 
         const art = this.artwork({ basepath: this.basepath })
 
-        art.render({ filename: IQCoreAssets.iq3_login, clearScreenBefore: true, mode: "character" })
+        art.render({ filename: IQCoreAssets.iq3_login, clearScreenBefore: true, mode: "character" }).gotoxy(20, 20)
 
-        const login = this.ask("Enter your handle, or type 'new' to apply".color("green").color("reset").gotoxy(15, 23))
+        const login = this.ask("Enter your handle, or type 'new' to apply".color("green"))
 
         switch (login) {
             case "new":
