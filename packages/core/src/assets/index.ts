@@ -40,10 +40,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 ==============================================================================
 */
 
-/**
- * The definitive collection of iniquity ansi/asci/pescii text documents.
- * Collected from various artpacks over the decades, and various incarnations of iniquity.
- */
 export enum Assets {
     /**
      * The hoodie artwork
@@ -61,6 +57,9 @@ export enum Assets {
     iq3_apply = "iq3-apply.ans",
     iq3_login = "iq3-login.ans",
     iq3_uswfc = "us-wfc.ans",
+    iq3_avewfc = "iq3-ave-wfc.ans",
+    iq3_cxwfc = "iq3-cxwfc.ans",
+
 
     sm_iniq2 = "sm!iniq2.ans",
     us_wfc = "us-wfc.ans"

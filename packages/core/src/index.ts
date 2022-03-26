@@ -590,6 +590,7 @@ export class IQMenu {
     public render(module: Function, options?: IQMenuLoopOptions): void {
         let count = 0
         let cache: IQMenuLoopMessageResponse = {}
+        const maxInterval = options?.maxInterval || 10000000
 
         do {
             count++
@@ -610,7 +611,7 @@ export class IQMenu {
             cache = res
 
             iq.wait(options?.wait)
-            if (options?.maxInterval! >= count) continue
+            if (maxInterval! >= count) continue
             else break
         } while (bbs.online && !js.terminated)
     }

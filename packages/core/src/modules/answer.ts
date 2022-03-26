@@ -117,61 +117,7 @@ class Answer extends IQ {
             this.wait(100)
         }
 
-        const frame = this.frame({
-            x: 10,
-            y: 10,
-            width: 30,
-            height: 15,
-            color: IQFrameColorOptions.blue
-        })
-
-        const menu = this.menu({
-            name: "Iniquity answer menu.",
-            description: "Really I just get to rattle off more non-sense.",
-            commands: {
-                A: (help = "Sit cillum consequat qui quis dolore Lorem.") => {
-                    this.data.model.message = this.ask("Oh so you wanna change it?")
-                },
-                O: () => {
-                    frame.open()
-
-                    while (true) {
-                        frame.say(JSON.stringify(this.data.model))
-                        frame.cycle()
-
-                        this.data.model.number++
-
-                        if (this.data.model.number > 20) break
-
-                        this.wait(10)
-                    }
-
-                    frame.close()
-                },
-                L: () => {
-                    IQCoreModules.login()
-                },
-                default: () => {
-                    this.data.model.message = "There is no command for that."
-                }
-            }
-        })
-
-        menu.render(
-            (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
-                this.artwork().render({
-                    filename: randomAsset([IQCoreAssets.iq3_welcome, IQCoreAssets.iq3_welcome2, IQCoreAssets.us_wfc]),
-                    data: this.data.model,
-                    encoding: "CP437",
-                    mode: "graphic"
-                })
-
-                menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey)
-            },
-            {
-                maxInterval: 1000000
-            }
-        )
+        IQCoreModules.wfc()
     }
 }
 
