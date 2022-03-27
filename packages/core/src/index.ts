@@ -137,12 +137,33 @@ export function IQReactor(dataObj: any): IQReactorOptions {
     }
 }
 
+/**
+ * Artwork render options
+ */
 export interface IArtworkRenderOptions {
+    /**
+     * The full path to your art folder
+     */
     basepath?: string | undefined
+    /**
+     * The file name of the artwork you would like to render to the screen
+     */
     filename?: string | undefined
+    /**
+     * How fast you would like the artwork rendered to the screen.
+     */
     speed?: number | undefined
+    /**
+     * Supported character encodings are CP437 and UTF8.
+     */
     encoding?: "CP437" | "UTF8"
-    mode?: "line" | "character" | "@-codes" | "reactive" | "character"
+    /**
+     * The rendering mode to use. e.g. Line at a time, character at a time, etc.
+     */
+    mode?: "line" | "character" | "@-codes" | "reactive"
+    /**
+     * A boolean representing if you want the screen cleared before.
+     */
     clearScreenBefore?: boolean
     data?: unknown
 }
@@ -1141,7 +1162,25 @@ export namespace IQ {
         // export class Module imp IQModule {}
         export class Menu extends IQMenu {}
         export class Frame extends IQFrame {}
+        // export function Module(options: IQModuleOptions): (constructor: Function) => void {
+        //     return IQModule(options)
+        // }
+
+        export function Reactor(options: IQReactorOptions): any {
+            return IQReactor(options)
+        }
     }
+
+    export namespace Decorators {
+        export function Module(options: IQModuleOptions): (constructor: Function) => void {
+            return IQModule(options)
+        }
+        export function ModuleRuntime(options: IQModuleRuntimeOptions): any {
+            return IQModuleRuntime(options)
+        }
+    }
+
+    export enum IQFrameColorOptions {}
 }
 
 declare let console: ISSBSConsole

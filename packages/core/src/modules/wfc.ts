@@ -1,20 +1,9 @@
-import {
-    IQ,
-    IQCoreAssets,
-    IQFrameColorOptions,
-    IQMenuLoopMessageResponse,
-    IQModule,
-    IQModuleACLS,
-    IQModuleRuntime,
-    IQReactor,
-    randomAsset
-} from "@iniquitybbs/core"
-import { IQCoreModules } from "."
+import { IQ, IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModuleACLS, IQReactor, randomAsset } from "@iniquitybbs/core"
 
 /**
  * The iniquity waiting for caller module
  */
-@IQModule({
+@IQ.Decorators.Module({
     basepath: "/iniquity/core/src/assets",
     data: IQReactor({
         message: "foo"
@@ -25,7 +14,7 @@ import { IQCoreModules } from "."
     computed: undefined
 })
 export class WFC extends IQ {
-    @IQModuleRuntime()
+    @IQ.Decorators.ModuleRuntime({ debug: true })
     start() {
         this.data.observe("message", () => {
             const box = { width: 40, height: 5 }
@@ -86,11 +75,12 @@ export class WFC extends IQ {
                 filename: randomAsset([IQCoreAssets.iq3_avewfc, IQCoreAssets.drm_inq1_wfc, IQCoreAssets.us_wfc]),
                 data: this.data.model,
                 encoding: "CP437",
-                mode: "line"
+                mode: "line",
+                clearScreenBefore: true
             })
 
-            menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey, () => {
-                this.data.model.message = "fpp"
+            menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey, (response: any, error: any) => {
+                if (response) this.data.model.message = "fpp"
             })
         })
     }

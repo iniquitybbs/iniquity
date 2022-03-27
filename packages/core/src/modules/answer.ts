@@ -6,7 +6,6 @@ import {
     IQModule,
     IQModuleRuntime,
     IQReactor,
-    randomAsset,
     IQ
 } from "@iniquitybbs/core"
 
