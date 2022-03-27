@@ -73,6 +73,20 @@ if (!Object.entries) {
     }
 }
 
+// TODO get core.js in here and use all those pollifills instead of making my own.
+if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+        // @ts-expect-error
+        if (search instanceof RegExp) {
+            throw TypeError("first argument must not be a RegExp")
+        }
+        if (start === undefined) {
+            start = 0
+        }
+        return this.indexOf(search, start) !== -1
+    }
+}
+
 export interface IQReactorOptions {
     model: any
     observe: Function
@@ -140,7 +154,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
 /**
  * Artwork render options
  */
-export interface IArtworkRenderOptions {
+export interface IQArtworkRenderOptions {
     /**
      * The full path to your art folder
      */
@@ -189,7 +203,7 @@ export interface IQPrintOptions extends IQStringUtils {
 interface IBBSSayOptions {
     text: string
 }
-export interface IArtworkOptions {
+export interface IQArtworkOptions {
     basepath?: string
     filename?: string
 }
@@ -208,7 +222,7 @@ export interface IUserOptions {
  * @function pause What pause does.
  * @function colorReset Resets the current lines screen color back to normal.
  */
-export interface IArtworkRenderFunctions {
+export interface IQArtworkRenderFunctions {
     /**
      * @param {IQPauseOptions} options
      * @see {@link IQPauseOptions}
@@ -521,8 +535,8 @@ export class Iniquity extends IQBaseConfig {
     /**
      * Will allow you to
      * render artwork to the screen
-     * @param {IArtworkOptions} options An object containing the various configuration properties.
-     * @see {@link IArtworkOptions} to learn more about the available options.
+     * @param {IQArtworkOptions} options An object containing the various configuration properties.
+     * @see {@link IQArtworkOptions} to learn more about the available options.
      * @returns {Artwork} An instance of Artwork and its return functions.
      * @example
      * ```typescript
@@ -532,7 +546,7 @@ export class Iniquity extends IQBaseConfig {
      * iq.artwork({ basepath: "/iniquity/core/src/assets/", filename: Assets.we_iniq3 }).render({ clearScreenBefore: false })
      * ```
      */
-    public artwork(options?: IArtworkOptions): Artwork {
+    public artwork(options?: IQArtworkOptions): Artwork {
         return new Artwork({ basepath: options?.basepath || this.basepath || undefined, filename: options?.filename || undefined })
     }
 
@@ -831,17 +845,17 @@ export class Text {}
  *
  * ```
  */
-export class Artwork extends IQBaseConfig {
+export class Artwork extends Iniquity {
     public filename: string | undefined
     private fileHandle: any
 
     /**
      * The Iniquity Artwork rendering class
-     * @param {IArtworkOptions} options An object containing the various configuration properties.
-     * @see {@link IArtworkOptions}
+     * @param {IQArtworkOptions} options An object containing the various configuration properties.
+     * @see {@link IQArtworkOptions}
      * @returns {Artwork} An instance of Artwork
      */
-    constructor(options: IArtworkOptions) {
+    constructor(options: IQArtworkOptions) {
         super()
         this.basepath = options?.basepath || this.basepath
         this.filename = options.filename || undefined
@@ -850,9 +864,9 @@ export class Artwork extends IQBaseConfig {
     /**
      * Render
      * @summary Display ANSI/ASCII/PETSCII text files onto the screen
-     * @param {IArtworkRenderOptions} options An object containing the various configuration parameters.
-     * @see {@link IArtworkRenderOptions}
-     * @returns {IArtworkRenderFunctions} Will render the artwork on the screen as well as provide various render functions.
+     * @param {IQArtworkRenderOptions} options An object containing the various configuration parameters.
+     * @see {@link IQArtworkRenderOptions}
+     * @returns {IQArtworkRenderFunctions} Will render the artwork on the screen as well as provide various render functions.
      * @example
      * ```typescript
      * import { Artwork } from "@iniquitybbs/core"
@@ -862,7 +876,7 @@ export class Artwork extends IQBaseConfig {
      * ```
      */
 
-    render(options?: IArtworkRenderOptions): IArtworkRenderFunctions {
+    render(options?: IQArtworkRenderOptions): IQArtworkRenderFunctions {
         if (options?.clearScreenBefore === true) console.putmsg("@POFF@@CLS@@PON@".color("reset"))
 
         let basepath = options?.basepath || this.basepath
@@ -894,8 +908,10 @@ export class Artwork extends IQBaseConfig {
                     // if (encoding === "CP437") console.putmsg(text[i], null, null, data)
                     // // @ts-ignore these damn constants.
                     // if (encoding === "UTF8") console.putmsg(utf8_cp437(text[i]), null, null, data)
+
+                    if (text[i].includes("SAUCE")) continue
                     // @ts-ignore
-                    console.putmsg(text[i], P_NONE, 4, data)
+                    else console.putmsg(text[i], P_NONE, 4, data)
 
                     wait(speed)
                     if (i < text.length - 1) console.putmsg("\r\n")
@@ -1171,6 +1187,7 @@ export namespace IQ {
         }
     }
 
+    // NOTE this all sucks, need to find a better home for this.
     export namespace Decorators {
         export function Module(options: IQModuleOptions): (constructor: Function) => void {
             return IQModule(options)
