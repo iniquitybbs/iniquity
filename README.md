@@ -8,6 +8,9 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=alert_status)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
+[![GitHub license](https://img.shields.io/github/license/iniquitybbs/iniquity)](https://github.com/iniquitybbs/iniquity/blob/master/LICENSE.md)
+![Docker Pulls](https://img.shields.io/docker/pulls/iniquitybbs/iniquity)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/iniquitybbs/iniquity)
 
 ## Synopsis
 
@@ -324,7 +327,7 @@ That's basically the primary reason for using it. In addition to the wealth of c
 Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
 
 Alpha... — 03/16/2022
-The more I read about IQ3, the more I dig that this isn't just a BBS platform, it's a tool that can be used to create/script just about any kind of terminal application... Seems to share that piece of DNA with x84, yeah? 
+The more I read about IQ3, the more I dig that this isn't just a BBS platform, it's a tool that can be used to create/script just about any kind of terminal application... Seems to share that piece of DNA with x84, yeah?
 
 //rubs hands in maniacal anticipation//
 

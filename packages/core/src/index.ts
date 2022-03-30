@@ -319,8 +319,8 @@ export interface IMenuCommand {
 }
 
 export interface IQMenuPromptOptions {
-    x: number
-    y: number
+    x?: number
+    y?: number
     text?: string
 }
 
@@ -664,18 +664,18 @@ export class IQMenu {
      *      }
      *  })
      */
-    public prompt(options: IQMenuPromptOptions | string): IQMenuPromptFunctions {
+    public prompt(options?: IQMenuPromptOptions | string): IQMenuPromptFunctions {
         if (!this.commands) throw new Error("No commands appear to be configured for this menu.")
 
         let commands = Object.keys(this.commands)
             .filter((cmdkey) => cmdkey != "default")
             .join(",")
         // @ts-expect-error
-        if (typeof options === "string") console.putmsg(commands + ":" + options, P_WORDWRAP, 4, this.description)
+        if (typeof options === "string") console.putmsg(commands + ":" + options, P_NONE, 4)
         if (typeof options === "object") {
-            if (options.x && options.y) iq.gotoxy(options.x, options.y)
+            if (options.x && options.y) console.gotoxy(options.x, options.y)
             // @ts-expect-error
-            if (options.text !== undefined) console.putmsg(commands + ":" + options.text, P_WORDWRAP, 4, this.description)
+            if (options.text !== undefined) console.putmsg(commands + ":" + options.text, P_NONE, 4)
         }
 
         return {

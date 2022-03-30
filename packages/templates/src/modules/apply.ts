@@ -13,7 +13,7 @@ import { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQReactor, IQCoreAssets } 
     }),
     computed: {}
 })
-class Apply extends IQ {
+export class Apply extends IQ {
     @IQModuleRuntime({ debug: true })
     start() {
         this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ clearScreenBefore: true }).cursor(40, 10)
@@ -27,5 +27,4 @@ class Apply extends IQ {
     }
 }
 
-export { Apply }
 export default new Apply()

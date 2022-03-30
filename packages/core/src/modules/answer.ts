@@ -38,24 +38,13 @@ class Answer extends IQ {
                 y: (this.terminfo.y - box.height) / 2,
                 width: box.width,
                 height: box.height,
-                color: IQFrameColorOptions.blue
+                color: IQFrameColorOptions.black
             })
-            // let scrollbar = new ScrollBar(frame, { autohide: true })
 
             frame.open()
-
-            let counter = 0
-
-            while (counter < 100) {
-                counter++
-                frame.say(this.data.model.message)
-
-                frame.cycle()
-                // scrollbar.cycle()
-
-                this.wait(10)
-            }
-
+            frame.say(this.data.model.message)
+            frame.draw()
+            this.wait(3000)
             frame.close()
         })
 
@@ -88,9 +77,11 @@ class Answer extends IQ {
 
             menu.render(
                 (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
-                    this.artwork({ filename: IQCoreAssets.sm_iniq2 })
-                        .render({ mode: "character", data: { ...this.data.model, ...menu } })
-                        .cursor(10, 22)
+                    this.artwork({ filename: IQCoreAssets.sm_iniq2 }).render({
+                        clearScreenBefore: true,
+                        mode: "line",
+                        data: { ...this.data.model, ...menu }
+                    })
 
                     let frame = this.frame({
                         x: 32,
@@ -105,7 +96,7 @@ class Answer extends IQ {
                     }
                     frame.draw()
 
-                    menu.prompt({ text: "commands: ".color("bright cyan"), x: 24, y: 15 }).command(cmdkey)
+                    menu.prompt({ text: "commands: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)
                 },
                 {
                     maxInterval: 3000,

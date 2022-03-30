@@ -73,15 +73,11 @@ export class WFC extends IQ {
         menu.render((res: IQMenuLoopMessageResponse, cmdkey: Function) => {
             this.artwork().render({
                 filename: randomAsset([IQCoreAssets.iq3_avewfc, IQCoreAssets.drm_inq1_wfc, IQCoreAssets.us_wfc]),
-                data: this.data.model,
-                encoding: "CP437",
                 mode: "line",
                 clearScreenBefore: true
             })
 
-            menu.prompt({ x: 20, y: 30, text: "Foo me: " }).command(cmdkey, (response: any, error: any) => {
-                if (response) this.data.model.message = "fpp"
-            })
+            menu.prompt({ text: "Foo me: ".color("bright green") }).command(cmdkey)
         })
     }
 }
