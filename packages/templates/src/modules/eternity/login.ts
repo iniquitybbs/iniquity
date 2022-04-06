@@ -1,5 +1,5 @@
 import { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQReactor, IQFrameColorOptions } from "@iniquitybbs/core"
-import { IQCoreModules } from "@iniquitybbs/core/src/modules"
+import { IQTemplatesModules } from "@iniquitybbs/templates/src/modules"
 
 @IQModule({
     basepath: "/iniquity/core/src/assets",
@@ -45,7 +45,7 @@ class Login extends IQ {
 
         switch (login) {
             case "new":
-                IQCoreModules.apply()
+                IQTemplatesModules.apply()
                 break
             default:
                 if (this.user({ name: login, password: this.ask("And your password?".color("white")) }).login()) {

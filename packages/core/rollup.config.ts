@@ -27,7 +27,7 @@ export default {
         resolve({
             preferBuiltins: false,
             moduleDirectories: ["src/library"],
-            dedupe: ["@iniquitybbs/archive", "@iniquitybbs/cli", "@iniquitybbs/template", "@iniquitybbs/core", "@iniquitybbs/core/library"]
+            dedupe: ["@iniquitybbs/archive", "@iniquitybbs/cli", "@iniquitybbs/templates", "@iniquitybbs/core", "@iniquitybbs/core/library"]
         }),
         externalGlobals({
             jquery: "$",

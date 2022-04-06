@@ -3,10 +3,13 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "types": ["node"],
+        "checkJs": false,
+        "allowJs": true,
         "skipLibCheck": true,
-        "resolveJsonModule": false,
-        "module": "es2015",
-        "target": "ES3",
+        "resolveJsonModule": true,
+        "module": "esnext",
+        "target": "es3",
+        "baseUrl": ".",
         "rootDir": "src",
         "outDir": "dist"
     },

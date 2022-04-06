@@ -26,6 +26,7 @@
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.3",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
@@ -33,6 +34,7 @@
     "@types/node": "^16.10.3",
     "@types/yargs": "^17.0.3",
     "rollup": "^2.58.0",
+    "rollup-pluginutils": "^2.8.2",
     "typescript": "^4.4.3"
   },
   "main": "dist/index",

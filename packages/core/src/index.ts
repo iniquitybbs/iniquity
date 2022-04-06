@@ -505,20 +505,15 @@ export class Iniquity extends IQBaseConfig {
         bbs.logout()
     }
 
+    /**
+     * Terminal information available to iniquity
+     */
     public terminfo: IQTermInfoObject = {
-        // @ts-ignore asd
-        // @ts-ignore asd
         x: console.screen_columns,
-        // @ts-ignore asd
         y: console.screen_rows,
-        // @ts-ignore asd
         terminal: console.terminal,
-        // @ts-ignore asd
         type: console.type,
-        // @ts-ignore asd
-        charset: console.charset,
-        // @ts-ignore asd
-        getdimensions: console.getdimensions()
+        charset: console.charset
     }
 
     /**
@@ -590,6 +585,9 @@ export interface IQWaitOptions {
 export interface IQTermInfoObject {
     x: number
     y: number
+    terminal: any
+    type: any
+    charset: any
 }
 
 export interface IQMenuLoopOptions {
@@ -1219,6 +1217,11 @@ interface ISBBSGlobal {
  * Issbsconsole
  */
 declare interface ISSBSConsole {
+    screen_rows: number
+    type: any
+    terminal: any
+    charset: any
+    screen_columns: number
     up(arg0: number): void
     down(arg0: number): void
     left(arg0: number): void
