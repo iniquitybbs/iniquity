@@ -131,7 +131,7 @@ export class Login extends IQ {
 
 ```
 
-Familiar with making event-driven, single page applications, Like with Vue. React or Angular? You can build fully reactive applications with iniquity 3 also...
+Familiar with making event-driven, single page applications like with Vue, React or Angular? You can build fully reactive applications with iniquity 3 also.
 
 ```typescript
 
@@ -333,6 +333,17 @@ The more I read about IQ3, the more I dig that this isn't just a BBS platform, i
 
 ispyhumanfly — 03/17/2022
 Yup, that's basically it @Alpha... . When in a more finished state, the @iniquitybbs/templates package is going to have a few different kinds of examples, and BBS setups for people to get started with. But they exist as examples. Iniquity 3 itself is an SDK and platform for creating terminal applications that can be accessed from terminal/web/maybe mobile. Absolutely x84 is the genesis of the idea here. I liked what those guys had done, but, wanted to hopefully be able to take it a bit further. So with that in mind, I originally started this project as a ruby project, and started working on the CLI portion... after sometime decided to switch to the TypeScript/JS version that exists now, with the runtime as I've explained previously.
+
+grymmjack — 04/08/2022
+wow
+@ispyhumanfly iq is node?
+
+ispyhumanfly — 04/11/2022
+Hey @grymmjack , I’d say it like this… Iniquity 3 itself is written in TypeScript. And, for anyone wanting to develop an iniquity bbs or application or whatever, you would also be writing this in TypeScript. Iniquity has a few elements to its runtime; NodeJS, SynchronetJS, Browser JS and Ubuntu Linux with all the system tools a sysop may need. All of this is contained within the “Iniquity Runtime”, which is basically everything I just mentioned wrapped tightly in a Docker container.
+As someone wanting to use Iniquity it’s as simple as installing it from NPM, making sure Docker is running, and the rest is handled in the background for you.
+
+grymmjack — 04/12/2022
+that is rad @ispyhumanfly
 
 ### Development of this project
 

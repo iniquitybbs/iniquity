@@ -7,8 +7,8 @@ import yargs from "yargs"
  * @implements yargs.CommandModule
  */
 class Cli implements yargs.CommandModule {
-    public command = "cli [command]"
-    public describe = "make a get HTTP request"
+    public command = "command [options]"
+    public describe = "Execute one of the many iniquity commands installed."
     public builder = (yargs: yargs.Argv) => {
         return yargs.commandDir(path.join(__dirname), { recurse: true, exclude: RegExp("/*.spec.*/") }).pkgConf("iniquity")
     }
