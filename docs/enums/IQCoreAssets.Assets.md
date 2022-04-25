@@ -2,9 +2,6 @@
 
 [IQCoreAssets](../modules/IQCoreAssets.md).Assets
 
-The definitive collection of iniquity ansi/asci/pescii text documents.
-Collected from various artpacks over the decades, and various incarnations of iniquity.
-
 ## Table of contents
 
 ### Enumeration members
@@ -13,7 +10,10 @@ Collected from various artpacks over the decades, and various incarnations of in
 - [\_5m\_iniquity3](IQCoreAssets.Assets.md#_5m_iniquity3)
 - [\_5m\_ink2menu](IQCoreAssets.Assets.md#_5m_ink2menu)
 - [\_5m\_matrix\_1b2](IQCoreAssets.Assets.md#_5m_matrix_1b2)
+- [drm\_inq1\_wfc](IQCoreAssets.Assets.md#drm_inq1_wfc)
 - [iq3\_apply](IQCoreAssets.Assets.md#iq3_apply)
+- [iq3\_avewfc](IQCoreAssets.Assets.md#iq3_avewfc)
+- [iq3\_cxwfc](IQCoreAssets.Assets.md#iq3_cxwfc)
 - [iq3\_hello](IQCoreAssets.Assets.md#iq3_hello)
 - [iq3\_login](IQCoreAssets.Assets.md#iq3_login)
 - [iq3\_logoff](IQCoreAssets.Assets.md#iq3_logoff)
@@ -35,7 +35,7 @@ The hoodie artwork
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:52](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L52)
+[packages/core/src/assets/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L48)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:55](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L55)
+[packages/core/src/assets/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L51)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:54](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L54)
+[packages/core/src/assets/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L50)
 
 ___
 
@@ -65,7 +65,17 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:53](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L53)
+[packages/core/src/assets/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L49)
+
+___
+
+### drm\_inq1\_wfc
+
+• **drm\_inq1\_wfc** = `"drm-inq1.ans"`
+
+#### Defined in
+
+[packages/core/src/assets/index.ts:62](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L62)
 
 ___
 
@@ -75,7 +85,27 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:61](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L61)
+[packages/core/src/assets/index.ts:57](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L57)
+
+___
+
+### iq3\_avewfc
+
+• **iq3\_avewfc** = `"iq3-ave-wfc.ans"`
+
+#### Defined in
+
+[packages/core/src/assets/index.ts:60](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L60)
+
+___
+
+### iq3\_cxwfc
+
+• **iq3\_cxwfc** = `"iq3-cxwfc.ans"`
+
+#### Defined in
+
+[packages/core/src/assets/index.ts:61](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L61)
 
 ___
 
@@ -85,7 +115,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:58](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L58)
+[packages/core/src/assets/index.ts:54](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L54)
 
 ___
 
@@ -95,7 +125,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:62](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L62)
+[packages/core/src/assets/index.ts:58](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L58)
 
 ___
 
@@ -105,7 +135,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:57](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L57)
+[packages/core/src/assets/index.ts:53](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L53)
 
 ___
 
@@ -115,7 +145,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:63](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L63)
+[packages/core/src/assets/index.ts:59](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L59)
 
 ___
 
@@ -125,7 +155,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:59](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L59)
+[packages/core/src/assets/index.ts:55](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L55)
 
 ___
 
@@ -135,7 +165,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:60](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L60)
+[packages/core/src/assets/index.ts:56](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L56)
 
 ___
 
@@ -145,7 +175,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:65](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L65)
+[packages/core/src/assets/index.ts:64](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L64)
 
 ___
 
@@ -155,4 +185,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:66](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L66)
+[packages/core/src/assets/index.ts:65](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L65)

@@ -18,24 +18,24 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:289](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L289)
+[packages/core/src/index.ts:324](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L324)
 
 ___
 
 ### x
 
-• **x**: `number`
+• `Optional` **x**: `number`
 
 #### Defined in
 
-[packages/core/src/index.ts:287](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L287)
+[packages/core/src/index.ts:322](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L322)
 
 ___
 
 ### y
 
-• **y**: `number`
+• `Optional` **y**: `number`
 
 #### Defined in
 
-[packages/core/src/index.ts:288](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L288)
+[packages/core/src/index.ts:323](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L323)

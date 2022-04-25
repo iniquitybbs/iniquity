@@ -4,12 +4,9 @@
 
 ### References
 
-- [Apply](core_src_modules.md#apply)
-- [Connections](core_src_modules.md#connections)
-- [Files](core_src_modules.md#files)
-- [Login](core_src_modules.md#login)
-- [Logon](core_src_modules.md#logon)
-- [Messages](core_src_modules.md#messages)
+- [Answer](core_src_modules.md#answer)
+- [Hangup](core_src_modules.md#hangup)
+- [WFC](core_src_modules.md#wfc)
 
 ### Variables
 
@@ -17,63 +14,25 @@
 
 ## References
 
-### Apply
+### Answer
 
-• **Apply**: `Object`
+• **Answer**: `Object`
 
 #### Defined in
 
-[packages/core/src/modules/apply.ts:30](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/apply.ts#L30)
+[packages/core/src/modules/answer.ts:114](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/modules/answer.ts#L114)
 
 ___
 
-### Connections
+### Hangup
 
-• **Connections**: `Object`
-
-#### Defined in
-
-[packages/core/src/modules/connections.ts:7](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/connections.ts#L7)
+• **Hangup**: `Object`
 
 ___
 
-### Files
+### WFC
 
-• **Files**: `Object`
-
-#### Defined in
-
-[packages/core/src/modules/files.ts:7](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/files.ts#L7)
-
-___
-
-### Login
-
-• **Login**: `Object`
-
-#### Defined in
-
-[packages/core/src/modules/login.ts:73](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/login.ts#L73)
-
-___
-
-### Logon
-
-• **Logon**: `Object`
-
-#### Defined in
-
-[packages/core/src/modules/logon.ts:7](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/logon.ts#L7)
-
-___
-
-### Messages
-
-• **Messages**: `Object`
-
-#### Defined in
-
-[packages/core/src/modules/messages.ts:7](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/messages.ts#L7)
+• **WFC**: `Object`
 
 ## Variables
 
@@ -81,17 +40,14 @@ ___
 
 • **IQCoreModules**: `Object`
 
-A simple wrapper around the core iniquity modules.
-
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
 | `answer` | () => `void` |
-| `apply` | () => `void` |
 | `hangup` | () => `void` |
-| `login` | () => `void` |
+| `wfc` | () => `void` |
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:17](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/modules/index.ts#L17)
+[packages/core/src/modules/index.ts:9](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/modules/index.ts#L9)

@@ -28,7 +28,7 @@ Menu options
 
 #### Defined in
 
-[packages/core/src/index.ts:254](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L254)
+[packages/core/src/index.ts:289](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L289)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:255](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L255)
+[packages/core/src/index.ts:290](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L290)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:260](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L260)
+[packages/core/src/index.ts:295](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L295)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:252](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L252)
+[packages/core/src/index.ts:287](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L287)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:259](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L259)
+[packages/core/src/index.ts:294](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L294)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:251](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L251)
+[packages/core/src/index.ts:286](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L286)
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:253](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L253)
+[packages/core/src/index.ts:288](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L288)

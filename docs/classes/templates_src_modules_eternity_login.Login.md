@@ -1,55 +1,56 @@
-# Class: Core
+# Class: Login
 
-[Core](../modules/Core.md).[IQ](../modules/Core.IQ.md).Core
+[templates/src/modules/eternity/login](../modules/templates_src_modules_eternity_login.md).Login
 
 ## Hierarchy
 
-- [`Iniquity`](Core.Iniquity.md)
+- [`IQ`](Core.IQ-1.md)
 
-  ↳ **`Core`**
+  ↳ **`Login`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Core.IQ.Core-1.md#constructor)
+- [constructor](templates_src_modules_eternity_login.Login.md#constructor)
 
 ### Properties
 
-- [access](Core.IQ.Core-1.md#access)
-- [assets](Core.IQ.Core-1.md#assets)
-- [basepath](Core.IQ.Core-1.md#basepath)
-- [computed](Core.IQ.Core-1.md#computed)
-- [data](Core.IQ.Core-1.md#data)
-- [encoding](Core.IQ.Core-1.md#encoding)
-- [terminfo](Core.IQ.Core-1.md#terminfo)
+- [access](templates_src_modules_eternity_login.Login.md#access)
+- [assets](templates_src_modules_eternity_login.Login.md#assets)
+- [basepath](templates_src_modules_eternity_login.Login.md#basepath)
+- [computed](templates_src_modules_eternity_login.Login.md#computed)
+- [data](templates_src_modules_eternity_login.Login.md#data)
+- [encoding](templates_src_modules_eternity_login.Login.md#encoding)
+- [terminfo](templates_src_modules_eternity_login.Login.md#terminfo)
 
 ### Methods
 
-- [artwork](Core.IQ.Core-1.md#artwork)
-- [ask](Core.IQ.Core-1.md#ask)
-- [cursor](Core.IQ.Core-1.md#cursor)
-- [disconnect](Core.IQ.Core-1.md#disconnect)
-- [frame](Core.IQ.Core-1.md#frame)
-- [gotoxy](Core.IQ.Core-1.md#gotoxy)
-- [logoff](Core.IQ.Core-1.md#logoff)
-- [logout](Core.IQ.Core-1.md#logout)
-- [menu](Core.IQ.Core-1.md#menu)
-- [pause](Core.IQ.Core-1.md#pause)
-- [print](Core.IQ.Core-1.md#print)
-- [say](Core.IQ.Core-1.md#say)
-- [user](Core.IQ.Core-1.md#user)
-- [wait](Core.IQ.Core-1.md#wait)
+- [artwork](templates_src_modules_eternity_login.Login.md#artwork)
+- [ask](templates_src_modules_eternity_login.Login.md#ask)
+- [cursor](templates_src_modules_eternity_login.Login.md#cursor)
+- [disconnect](templates_src_modules_eternity_login.Login.md#disconnect)
+- [frame](templates_src_modules_eternity_login.Login.md#frame)
+- [gotoxy](templates_src_modules_eternity_login.Login.md#gotoxy)
+- [logoff](templates_src_modules_eternity_login.Login.md#logoff)
+- [logout](templates_src_modules_eternity_login.Login.md#logout)
+- [menu](templates_src_modules_eternity_login.Login.md#menu)
+- [pause](templates_src_modules_eternity_login.Login.md#pause)
+- [print](templates_src_modules_eternity_login.Login.md#print)
+- [say](templates_src_modules_eternity_login.Login.md#say)
+- [start](templates_src_modules_eternity_login.Login.md#start)
+- [user](templates_src_modules_eternity_login.Login.md#user)
+- [wait](templates_src_modules_eternity_login.Login.md#wait)
 
 ## Constructors
 
 ### constructor
 
-• **new Core**()
+• **new Login**()
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[constructor](Core.Iniquity.md#constructor)
+[IQ](Core.IQ-1.md).[constructor](Core.IQ-1.md#constructor)
 
 ## Properties
 
@@ -59,7 +60,7 @@
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[access](Core.Iniquity.md#access)
+[IQ](Core.IQ-1.md).[access](Core.IQ-1.md#access)
 
 #### Defined in
 
@@ -73,7 +74,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[assets](Core.Iniquity.md#assets)
+[IQ](Core.IQ-1.md).[assets](Core.IQ-1.md#assets)
 
 #### Defined in
 
@@ -87,7 +88,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[basepath](Core.Iniquity.md#basepath)
+[IQ](Core.IQ-1.md).[basepath](Core.IQ-1.md#basepath)
 
 #### Defined in
 
@@ -101,7 +102,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[computed](Core.Iniquity.md#computed)
+[IQ](Core.IQ-1.md).[computed](Core.IQ-1.md#computed)
 
 #### Defined in
 
@@ -115,7 +116,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[data](Core.Iniquity.md#data)
+[IQ](Core.IQ-1.md).[data](Core.IQ-1.md#data)
 
 #### Defined in
 
@@ -129,7 +130,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[encoding](Core.Iniquity.md#encoding)
+[IQ](Core.IQ-1.md).[encoding](Core.IQ-1.md#encoding)
 
 #### Defined in
 
@@ -145,7 +146,7 @@ Terminal information available to iniquity
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[terminfo](Core.Iniquity.md#terminfo)
+[IQ](Core.IQ-1.md).[terminfo](Core.IQ-1.md#terminfo)
 
 #### Defined in
 
@@ -184,7 +185,7 @@ An instance of Artwork and its return functions.
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[artwork](Core.Iniquity.md#artwork)
+[IQ](Core.IQ-1.md).[artwork](Core.IQ-1.md#artwork)
 
 #### Defined in
 
@@ -212,7 +213,7 @@ response
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[ask](Core.Iniquity.md#ask)
+[IQ](Core.IQ-1.md).[ask](Core.IQ-1.md#ask)
 
 #### Defined in
 
@@ -238,7 +239,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[cursor](Core.Iniquity.md#cursor)
+[IQ](Core.IQ-1.md).[cursor](Core.IQ-1.md#cursor)
 
 #### Defined in
 
@@ -260,7 +261,7 @@ void
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[disconnect](Core.Iniquity.md#disconnect)
+[IQ](Core.IQ-1.md).[disconnect](Core.IQ-1.md#disconnect)
 
 #### Defined in
 
@@ -288,7 +289,7 @@ An instance of Menu
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[frame](Core.Iniquity.md#frame)
+[IQ](Core.IQ-1.md).[frame](Core.IQ-1.md#frame)
 
 #### Defined in
 
@@ -315,7 +316,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[gotoxy](Core.Iniquity.md#gotoxy)
+[IQ](Core.IQ-1.md).[gotoxy](Core.IQ-1.md#gotoxy)
 
 #### Defined in
 
@@ -333,7 +334,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[logoff](Core.Iniquity.md#logoff)
+[IQ](Core.IQ-1.md).[logoff](Core.IQ-1.md#logoff)
 
 #### Defined in
 
@@ -351,7 +352,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[logout](Core.Iniquity.md#logout)
+[IQ](Core.IQ-1.md).[logout](Core.IQ-1.md#logout)
 
 #### Defined in
 
@@ -379,7 +380,7 @@ An instance of Menu
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[menu](Core.Iniquity.md#menu)
+[IQ](Core.IQ-1.md).[menu](Core.IQ-1.md#menu)
 
 #### Defined in
 
@@ -409,7 +410,7 @@ Display a pause prompt on the screen.
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[pause](Core.Iniquity.md#pause)
+[IQ](Core.IQ-1.md).[pause](Core.IQ-1.md#pause)
 
 #### Defined in
 
@@ -444,7 +445,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[print](Core.Iniquity.md#print)
+[IQ](Core.IQ-1.md).[print](Core.IQ-1.md#print)
 
 #### Defined in
 
@@ -478,11 +479,29 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[say](Core.Iniquity.md#say)
+[IQ](Core.IQ-1.md).[say](Core.IQ-1.md#say)
 
 #### Defined in
 
 [packages/core/src/index.ts:364](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L364)
+
+___
+
+### start
+
+▸ **start**(): `void`
+
+#### Returns
+
+`void`
+
+#### Overrides
+
+[IQ](Core.IQ-1.md).[start](Core.IQ-1.md#start)
+
+#### Defined in
+
+[packages/templates/src/modules/eternity/login.ts:20](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/templates/src/modules/eternity/login.ts#L20)
 
 ___
 
@@ -510,7 +529,7 @@ An instance of User and its return functions.
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[user](Core.Iniquity.md#user)
+[IQ](Core.IQ-1.md).[user](Core.IQ-1.md#user)
 
 #### Defined in
 
@@ -543,7 +562,7 @@ void
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[wait](Core.Iniquity.md#wait)
+[IQ](Core.IQ-1.md).[wait](Core.IQ-1.md#wait)
 
 #### Defined in
 

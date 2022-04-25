@@ -30,7 +30,7 @@ Iniquity Archives
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:83](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L83)
+[packages/core/src/assets/index.ts:82](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L82)
 
 ## Methods
 
@@ -50,4 +50,4 @@ Iniquity Archives
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:87](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/assets/index.ts#L87)
+[packages/core/src/assets/index.ts:86](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L86)

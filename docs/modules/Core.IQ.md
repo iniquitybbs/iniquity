@@ -7,6 +7,11 @@
 ### Namespaces
 
 - [Core](Core.IQ.Core.md)
+- [Decorators](Core.IQ.Decorators.md)
+
+### Enumerations
+
+- [IQFrameColorOptions](../enums/Core.IQ.IQFrameColorOptions.md)
 
 ### Classes
 
@@ -38,7 +43,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:1124](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1124)
+[packages/core/src/index.ts:1160](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1160)
 
 ___
 
@@ -58,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1130](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1130)
+[packages/core/src/index.ts:1166](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1166)
 
 ___
 
@@ -78,7 +83,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1127](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1127)
+[packages/core/src/index.ts:1163](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1163)
 
 ___
 
@@ -98,4 +103,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1133](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1133)
+[packages/core/src/index.ts:1169](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1169)

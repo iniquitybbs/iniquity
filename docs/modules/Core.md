@@ -47,13 +47,13 @@ myIniquity.disconnect()
 
 ### Interfaces
 
-- [IArtworkOptions](../interfaces/Core.IArtworkOptions.md)
-- [IArtworkRenderFunctions](../interfaces/Core.IArtworkRenderFunctions.md)
-- [IArtworkRenderOptions](../interfaces/Core.IArtworkRenderOptions.md)
 - [IBBSPrintFunctions](../interfaces/Core.IBBSPrintFunctions.md)
 - [IBBSSayFunctions](../interfaces/Core.IBBSSayFunctions.md)
 - [IMenuCommand](../interfaces/Core.IMenuCommand.md)
 - [IMenuCommands](../interfaces/Core.IMenuCommands.md)
+- [IQArtworkOptions](../interfaces/Core.IQArtworkOptions.md)
+- [IQArtworkRenderFunctions](../interfaces/Core.IQArtworkRenderFunctions.md)
+- [IQArtworkRenderOptions](../interfaces/Core.IQArtworkRenderOptions.md)
 - [IQCursorChainableMethods](../interfaces/Core.IQCursorChainableMethods.md)
 - [IQCursorOptions](../interfaces/Core.IQCursorOptions.md)
 - [IQFrameOptions](../interfaces/Core.IQFrameOptions.md)
@@ -96,7 +96,7 @@ myIniquity.disconnect()
 
 #### Defined in
 
-[packages/core/src/index.ts:1285](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1285)
+[packages/core/src/index.ts:1345](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1345)
 
 ## Variables
 
@@ -108,7 +108,7 @@ The globally scoped intance of iniquity
 
 #### Defined in
 
-[packages/core/src/index.ts:1236](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1236)
+[packages/core/src/index.ts:1296](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1296)
 
 ## Functions
 
@@ -144,7 +144,7 @@ An experimental Iniquity module decorator for bbs modules
 
 #### Defined in
 
-[packages/core/src/index.ts:1255](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1255)
+[packages/core/src/index.ts:1315](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1315)
 
 ___
 
@@ -166,7 +166,7 @@ The IQ script executed as part of a module.
 
 #### Defined in
 
-[packages/core/src/index.ts:1275](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1275)
+[packages/core/src/index.ts:1335](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1335)
 
 ___
 
@@ -190,7 +190,7 @@ Iniquity reactive data model
 
 #### Defined in
 
-[packages/core/src/index.ts:88](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L88)
+[packages/core/src/index.ts:102](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L102)
 
 ___
 
@@ -215,7 +215,7 @@ cursor().down(10).up(12).down().up().down().left(1).right(20).down(12).up(14)
 
 #### Defined in
 
-[packages/core/src/index.ts:1108](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1108)
+[packages/core/src/index.ts:1144](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1144)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1112](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1112)
+[packages/core/src/index.ts:1148](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1148)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1116](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1116)
+[packages/core/src/index.ts:1152](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1152)
 
 ___
 
@@ -280,7 +280,7 @@ The randomly selected asset
 
 #### Defined in
 
-[packages/core/src/index.ts:1364](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1364)
+[packages/core/src/index.ts:1424](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1424)
 
 ___
 
@@ -305,7 +305,7 @@ say("are we making it here?").pause()
 
 #### Defined in
 
-[packages/core/src/index.ts:1086](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1086)
+[packages/core/src/index.ts:1122](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1122)
 
 ___
 
@@ -325,4 +325,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1119](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1119)
+[packages/core/src/index.ts:1155](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1155)

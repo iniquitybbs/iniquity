@@ -1,55 +1,58 @@
-# Class: Core
+# Class: WFC
 
-[Core](../modules/Core.md).[IQ](../modules/Core.IQ.md).Core
+[core/src/modules/wfc](../modules/core_src_modules_wfc.md).WFC
+
+The iniquity waiting for caller module
 
 ## Hierarchy
 
-- [`Iniquity`](Core.Iniquity.md)
+- [`IQ`](Core.IQ-1.md)
 
-  ↳ **`Core`**
+  ↳ **`WFC`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Core.IQ.Core-1.md#constructor)
+- [constructor](core_src_modules_wfc.WFC.md#constructor)
 
 ### Properties
 
-- [access](Core.IQ.Core-1.md#access)
-- [assets](Core.IQ.Core-1.md#assets)
-- [basepath](Core.IQ.Core-1.md#basepath)
-- [computed](Core.IQ.Core-1.md#computed)
-- [data](Core.IQ.Core-1.md#data)
-- [encoding](Core.IQ.Core-1.md#encoding)
-- [terminfo](Core.IQ.Core-1.md#terminfo)
+- [access](core_src_modules_wfc.WFC.md#access)
+- [assets](core_src_modules_wfc.WFC.md#assets)
+- [basepath](core_src_modules_wfc.WFC.md#basepath)
+- [computed](core_src_modules_wfc.WFC.md#computed)
+- [data](core_src_modules_wfc.WFC.md#data)
+- [encoding](core_src_modules_wfc.WFC.md#encoding)
+- [terminfo](core_src_modules_wfc.WFC.md#terminfo)
 
 ### Methods
 
-- [artwork](Core.IQ.Core-1.md#artwork)
-- [ask](Core.IQ.Core-1.md#ask)
-- [cursor](Core.IQ.Core-1.md#cursor)
-- [disconnect](Core.IQ.Core-1.md#disconnect)
-- [frame](Core.IQ.Core-1.md#frame)
-- [gotoxy](Core.IQ.Core-1.md#gotoxy)
-- [logoff](Core.IQ.Core-1.md#logoff)
-- [logout](Core.IQ.Core-1.md#logout)
-- [menu](Core.IQ.Core-1.md#menu)
-- [pause](Core.IQ.Core-1.md#pause)
-- [print](Core.IQ.Core-1.md#print)
-- [say](Core.IQ.Core-1.md#say)
-- [user](Core.IQ.Core-1.md#user)
-- [wait](Core.IQ.Core-1.md#wait)
+- [artwork](core_src_modules_wfc.WFC.md#artwork)
+- [ask](core_src_modules_wfc.WFC.md#ask)
+- [cursor](core_src_modules_wfc.WFC.md#cursor)
+- [disconnect](core_src_modules_wfc.WFC.md#disconnect)
+- [frame](core_src_modules_wfc.WFC.md#frame)
+- [gotoxy](core_src_modules_wfc.WFC.md#gotoxy)
+- [logoff](core_src_modules_wfc.WFC.md#logoff)
+- [logout](core_src_modules_wfc.WFC.md#logout)
+- [menu](core_src_modules_wfc.WFC.md#menu)
+- [pause](core_src_modules_wfc.WFC.md#pause)
+- [print](core_src_modules_wfc.WFC.md#print)
+- [say](core_src_modules_wfc.WFC.md#say)
+- [start](core_src_modules_wfc.WFC.md#start)
+- [user](core_src_modules_wfc.WFC.md#user)
+- [wait](core_src_modules_wfc.WFC.md#wait)
 
 ## Constructors
 
 ### constructor
 
-• **new Core**()
+• **new WFC**()
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[constructor](Core.Iniquity.md#constructor)
+[IQ](Core.IQ-1.md).[constructor](Core.IQ-1.md#constructor)
 
 ## Properties
 
@@ -59,7 +62,7 @@
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[access](Core.Iniquity.md#access)
+[IQ](Core.IQ-1.md).[access](Core.IQ-1.md#access)
 
 #### Defined in
 
@@ -73,7 +76,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[assets](Core.Iniquity.md#assets)
+[IQ](Core.IQ-1.md).[assets](Core.IQ-1.md#assets)
 
 #### Defined in
 
@@ -87,7 +90,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[basepath](Core.Iniquity.md#basepath)
+[IQ](Core.IQ-1.md).[basepath](Core.IQ-1.md#basepath)
 
 #### Defined in
 
@@ -101,7 +104,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[computed](Core.Iniquity.md#computed)
+[IQ](Core.IQ-1.md).[computed](Core.IQ-1.md#computed)
 
 #### Defined in
 
@@ -115,7 +118,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[data](Core.Iniquity.md#data)
+[IQ](Core.IQ-1.md).[data](Core.IQ-1.md#data)
 
 #### Defined in
 
@@ -129,7 +132,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[encoding](Core.Iniquity.md#encoding)
+[IQ](Core.IQ-1.md).[encoding](Core.IQ-1.md#encoding)
 
 #### Defined in
 
@@ -145,7 +148,7 @@ Terminal information available to iniquity
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[terminfo](Core.Iniquity.md#terminfo)
+[IQ](Core.IQ-1.md).[terminfo](Core.IQ-1.md#terminfo)
 
 #### Defined in
 
@@ -184,7 +187,7 @@ An instance of Artwork and its return functions.
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[artwork](Core.Iniquity.md#artwork)
+[IQ](Core.IQ-1.md).[artwork](Core.IQ-1.md#artwork)
 
 #### Defined in
 
@@ -212,7 +215,7 @@ response
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[ask](Core.Iniquity.md#ask)
+[IQ](Core.IQ-1.md).[ask](Core.IQ-1.md#ask)
 
 #### Defined in
 
@@ -238,7 +241,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[cursor](Core.Iniquity.md#cursor)
+[IQ](Core.IQ-1.md).[cursor](Core.IQ-1.md#cursor)
 
 #### Defined in
 
@@ -260,7 +263,7 @@ void
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[disconnect](Core.Iniquity.md#disconnect)
+[IQ](Core.IQ-1.md).[disconnect](Core.IQ-1.md#disconnect)
 
 #### Defined in
 
@@ -288,7 +291,7 @@ An instance of Menu
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[frame](Core.Iniquity.md#frame)
+[IQ](Core.IQ-1.md).[frame](Core.IQ-1.md#frame)
 
 #### Defined in
 
@@ -315,7 +318,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[gotoxy](Core.Iniquity.md#gotoxy)
+[IQ](Core.IQ-1.md).[gotoxy](Core.IQ-1.md#gotoxy)
 
 #### Defined in
 
@@ -333,7 +336,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[logoff](Core.Iniquity.md#logoff)
+[IQ](Core.IQ-1.md).[logoff](Core.IQ-1.md#logoff)
 
 #### Defined in
 
@@ -351,7 +354,7 @@ ___
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[logout](Core.Iniquity.md#logout)
+[IQ](Core.IQ-1.md).[logout](Core.IQ-1.md#logout)
 
 #### Defined in
 
@@ -379,7 +382,7 @@ An instance of Menu
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[menu](Core.Iniquity.md#menu)
+[IQ](Core.IQ-1.md).[menu](Core.IQ-1.md#menu)
 
 #### Defined in
 
@@ -409,7 +412,7 @@ Display a pause prompt on the screen.
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[pause](Core.Iniquity.md#pause)
+[IQ](Core.IQ-1.md).[pause](Core.IQ-1.md#pause)
 
 #### Defined in
 
@@ -444,7 +447,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[print](Core.Iniquity.md#print)
+[IQ](Core.IQ-1.md).[print](Core.IQ-1.md#print)
 
 #### Defined in
 
@@ -478,11 +481,29 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[say](Core.Iniquity.md#say)
+[IQ](Core.IQ-1.md).[say](Core.IQ-1.md#say)
 
 #### Defined in
 
 [packages/core/src/index.ts:364](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L364)
+
+___
+
+### start
+
+▸ **start**(): `void`
+
+#### Returns
+
+`void`
+
+#### Overrides
+
+[IQ](Core.IQ-1.md).[start](Core.IQ-1.md#start)
+
+#### Defined in
+
+[packages/core/src/modules/wfc.ts:18](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/modules/wfc.ts#L18)
 
 ___
 
@@ -510,7 +531,7 @@ An instance of User and its return functions.
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[user](Core.Iniquity.md#user)
+[IQ](Core.IQ-1.md).[user](Core.IQ-1.md#user)
 
 #### Defined in
 
@@ -543,7 +564,7 @@ void
 
 #### Inherited from
 
-[Iniquity](Core.Iniquity.md).[wait](Core.Iniquity.md#wait)
+[IQ](Core.IQ-1.md).[wait](Core.IQ-1.md#wait)
 
 #### Defined in
 

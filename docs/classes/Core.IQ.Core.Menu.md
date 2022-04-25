@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:583](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L583)
+[packages/core/src/index.ts:616](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L616)
 
 ## Properties
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:581](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L581)
+[packages/core/src/index.ts:614](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L614)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:579](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L579)
+[packages/core/src/index.ts:612](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L612)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:578](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L578)
+[packages/core/src/index.ts:611](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L611)
 
 ## Methods
 
@@ -114,13 +114,13 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:664](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L664)
+[packages/core/src/index.ts:698](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L698)
 
 ___
 
 ### prompt
 
-▸ **prompt**(`options`): [`IQMenuPromptFunctions`](../interfaces/Core.IQMenuPromptFunctions.md)
+▸ **prompt**(`options?`): [`IQMenuPromptFunctions`](../interfaces/Core.IQMenuPromptFunctions.md)
 
 Will render a prompt to the screen.
 
@@ -137,7 +137,7 @@ menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey, (response, erro
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `string` \| [`IQMenuPromptOptions`](../interfaces/Core.IQMenuPromptOptions.md) |
+| `options?` | `string` \| [`IQMenuPromptOptions`](../interfaces/Core.IQMenuPromptOptions.md) |
 
 #### Returns
 
@@ -151,7 +151,7 @@ Functions that can be chained to the prompt.
 
 #### Defined in
 
-[packages/core/src/index.ts:631](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L631)
+[packages/core/src/index.ts:665](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L665)
 
 ___
 
@@ -176,4 +176,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:590](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L590)
+[packages/core/src/index.ts:623](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L623)

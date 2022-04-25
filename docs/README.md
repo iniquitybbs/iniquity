@@ -8,6 +8,9 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iniquitybbs_iniquity&metric=alert_status)](https://sonarcloud.io/dashboard?id=iniquitybbs_iniquity)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
+[![GitHub license](https://img.shields.io/github/license/iniquitybbs/iniquity)](https://github.com/iniquitybbs/iniquity/blob/master/LICENSE.md)
+![Docker Pulls](https://img.shields.io/docker/pulls/iniquitybbs/iniquity)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/iniquitybbs/iniquity)
 
 ## Synopsis
 
@@ -128,7 +131,7 @@ export class Login extends IQ {
 
 ```
 
-Familiar with making event-driven, single page applications, Like with Vue. React or Angular? You can build fully reactive applications with iniquity 3 also...
+Familiar with making event-driven, single page applications like with Vue, React or Angular? You can build fully reactive applications with iniquity 3 also.
 
 ```typescript
 
@@ -324,12 +327,23 @@ That's basically the primary reason for using it. In addition to the wealth of c
 Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
 
 Alpha... — 03/16/2022
-The more I read about IQ3, the more I dig that this isn't just a BBS platform, it's a tool that can be used to create/script just about any kind of terminal application... Seems to share that piece of DNA with x84, yeah? 
+The more I read about IQ3, the more I dig that this isn't just a BBS platform, it's a tool that can be used to create/script just about any kind of terminal application... Seems to share that piece of DNA with x84, yeah?
 
 //rubs hands in maniacal anticipation//
 
 ispyhumanfly — 03/17/2022
 Yup, that's basically it @Alpha... . When in a more finished state, the @iniquitybbs/templates package is going to have a few different kinds of examples, and BBS setups for people to get started with. But they exist as examples. Iniquity 3 itself is an SDK and platform for creating terminal applications that can be accessed from terminal/web/maybe mobile. Absolutely x84 is the genesis of the idea here. I liked what those guys had done, but, wanted to hopefully be able to take it a bit further. So with that in mind, I originally started this project as a ruby project, and started working on the CLI portion... after sometime decided to switch to the TypeScript/JS version that exists now, with the runtime as I've explained previously.
+
+grymmjack — 04/08/2022
+wow
+@ispyhumanfly iq is node?
+
+ispyhumanfly — 04/11/2022
+Hey @grymmjack , I’d say it like this… Iniquity 3 itself is written in TypeScript. And, for anyone wanting to develop an iniquity bbs or application or whatever, you would also be writing this in TypeScript. Iniquity has a few elements to its runtime; NodeJS, SynchronetJS, Browser JS and Ubuntu Linux with all the system tools a sysop may need. All of this is contained within the “Iniquity Runtime”, which is basically everything I just mentioned wrapped tightly in a Docker container.
+As someone wanting to use Iniquity it’s as simple as installing it from NPM, making sure Docker is running, and the rest is handled in the background for you.
+
+grymmjack — 04/12/2022
+that is rad @ispyhumanfly
 
 ### Development of this project
 

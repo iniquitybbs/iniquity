@@ -24,8 +24,6 @@ myIniquity.hangup()
 
   ↳ [`Iniquity`](Core.Iniquity.md)
 
-  ↳ [`Artwork`](Core.Artwork.md)
-
   ↳ [`IQModuleOptions`](../interfaces/Core.IQModuleOptions.md)
 
 ## Table of contents
@@ -57,7 +55,7 @@ myIniquity.hangup()
 
 #### Defined in
 
-[packages/core/src/index.ts:311](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L311)
+[packages/core/src/index.ts:346](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L346)
 
 ___
 
@@ -67,7 +65,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:310](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L310)
+[packages/core/src/index.ts:345](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L345)
 
 ___
 
@@ -77,7 +75,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:309](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L309)
+[packages/core/src/index.ts:344](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L344)
 
 ___
 
@@ -87,7 +85,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:314](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L314)
+[packages/core/src/index.ts:349](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L349)
 
 ___
 
@@ -97,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:313](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L313)
+[packages/core/src/index.ts:348](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L348)
 
 ___
 
@@ -107,4 +105,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:312](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L312)
+[packages/core/src/index.ts:347](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L347)

@@ -21,7 +21,7 @@ Decorators
 
 #### Defined in
 
-[packages/core/src/index.ts:1244](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1244)
+[packages/core/src/index.ts:1304](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1304)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1242](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1242)
+[packages/core/src/index.ts:1302](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1302)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1243](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1243)
+[packages/core/src/index.ts:1303](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1303)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1245](https://github.com/iniquitybbs/iniquity/blob/29195b9/packages/core/src/index.ts#L1245)
+[packages/core/src/index.ts:1305](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L1305)
