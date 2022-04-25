@@ -23,7 +23,7 @@
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "src/commands/init.js", "src/commands/cli.js"],
     "exclude": [".vscode", "dist", "node_modules"],
     "references": [{ "path": "../core" }]
 }

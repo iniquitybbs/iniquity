@@ -1,7 +1,7 @@
 {
-  "name": "@iniquitybbs/examples",
+  "name": "@iniquitybbs/templates",
   "version": "3.0.22",
-  "description": "Various examples showing how a sysop can create a bbs with iniquity.",
+  "description": "Various templates showing how a sysop can create a bbs with iniquity.",
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.com",
   "license": "MIT",

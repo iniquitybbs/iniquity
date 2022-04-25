@@ -1,3 +1,0 @@
-# Iniquity Templates
-
-asdasd

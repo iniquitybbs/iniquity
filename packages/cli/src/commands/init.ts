@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  *
  * Iniquity App
@@ -45,15 +44,15 @@ import { exec } from "child_process"
  * @implements {yargs.CommandModule}
  */
 export class App implements yargs.CommandModule {
-    public command = "cli [options]"
-    public describe = "Invoke CLI commands."
+    public command = "init [options]"
+    public describe = "Initialize a new iniquity bbs."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
             .options("init", {
                 type: "string",
                 choices: ["name"],
-                describe: "Eventually I will initialize a new Iniquity bbs.",
+                describe: "Eventually I will initialize a new iniquity bbs.",
                 demandOption: false
             })
             .options("packages", {
