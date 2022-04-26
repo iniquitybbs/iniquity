@@ -38,7 +38,8 @@
     "iq": "./dist/src/index.js"
   },
   "dependencies": {
-    "docker-cli": "0.0.2",
+    "docker-cli-js": "^2.9.0",
+    "docker-compose": "^0.23.17",
     "yargs": "17.4.1"
   }
 }

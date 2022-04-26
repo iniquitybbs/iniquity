@@ -75,35 +75,12 @@ export class App implements yargs.CommandModule {
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
+        if (!argv.help) console.log("Iniquity system initialized.")
+
         if (argv.init === "food") {
             console.log("yay")
             console.log("yay")
             console.log("yay")
-        }
-        if (argv.packages) {
-            switch (argv.packages) {
-                case "available":
-                    exec("npm search @iniquitybbs", (error, stdout, stderr) => {
-                        if (error) {
-                            console.error(`exec error: ${error}`)
-                            return
-                        }
-                        console.info(stdout)
-                        console.error(stderr)
-                    })
-                    break
-                case "installed": {
-                    exec("npm list --depth 0", (error, stdout, stderr) => {
-                        if (error) {
-                            console.error(`exec error: ${error}`)
-                            return
-                        }
-                        console.info(stdout)
-                        console.error(stderr)
-                    })
-                    break
-                }
-            }
         }
 
         if (argv.install) {
