@@ -49,16 +49,26 @@ export class App implements yargs.CommandModule {
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
-            .options("init", {
+            .options("name", {
                 type: "string",
-                choices: ["name"],
-                describe: "Eventually I will initialize a new iniquity bbs.",
+                describe: "Provide a name for your iniquity system.",
+                demandOption: false
+            })
+            .options("template", {
+                type: "string",
+                choices: ["eternity", "euphoria"],
+                describe: "Specify a template to use when constructing your new iniquity bbs.",
+                demandOption: false
+            })
+            .options("install", {
+                type: "string",
+                describe: "Install iniquity and npm packages.",
                 demandOption: false
             })
             .options("packages", {
                 type: "string",
                 choices: ["available", "installed"],
-                describe: "Displays a list of all packages available for use with Iniquity.",
+                describe: "Displays a list of all packages available for use with iniquity.",
                 demandOption: false
             })
             .pkgConf("iniquity", path.join(__dirname))
@@ -93,6 +103,17 @@ export class App implements yargs.CommandModule {
                     break
                 }
             }
+        }
+
+        if (argv.install) {
+            exec(`npm install @iniquitybbs/${argv.install}`, (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`exec error: ${error}`)
+                    return
+                }
+                console.info(stdout)
+                console.error(stderr)
+            })
         }
     }
 }
