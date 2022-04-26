@@ -35,7 +35,7 @@ The hoodie artwork
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L48)
+[packages/core/src/assets/index.ts:48](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L48)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L51)
+[packages/core/src/assets/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L51)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L50)
+[packages/core/src/assets/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L50)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L49)
+[packages/core/src/assets/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L49)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:62](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L62)
+[packages/core/src/assets/index.ts:62](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L62)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:57](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L57)
+[packages/core/src/assets/index.ts:57](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L57)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:60](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L60)
+[packages/core/src/assets/index.ts:60](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L60)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:61](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L61)
+[packages/core/src/assets/index.ts:61](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L61)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:54](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L54)
+[packages/core/src/assets/index.ts:54](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L54)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:58](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L58)
+[packages/core/src/assets/index.ts:58](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L58)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:53](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L53)
+[packages/core/src/assets/index.ts:53](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L53)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:59](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L59)
+[packages/core/src/assets/index.ts:59](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L59)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:55](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L55)
+[packages/core/src/assets/index.ts:55](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L55)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:56](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L56)
+[packages/core/src/assets/index.ts:56](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L56)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:64](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L64)
+[packages/core/src/assets/index.ts:64](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L64)
 
 ___
 
@@ -185,4 +185,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/assets/index.ts:65](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/assets/index.ts#L65)
+[packages/core/src/assets/index.ts:65](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/assets/index.ts#L65)

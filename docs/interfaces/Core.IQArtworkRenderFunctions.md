@@ -32,7 +32,7 @@ Resets the screen color
 
 #### Defined in
 
-[packages/core/src/index.ts:234](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L234)
+[packages/core/src/index.ts:234](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L234)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:238](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L238)
+[packages/core/src/index.ts:238](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L238)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:236](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L236)
+[packages/core/src/index.ts:236](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L236)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:230](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L230)
+[packages/core/src/index.ts:230](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L230)
 
 ___
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:237](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/core/src/index.ts#L237)
+[packages/core/src/index.ts:237](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L237)

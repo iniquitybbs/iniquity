@@ -22,7 +22,7 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 #### Defined in
 
-[packages/archive/src/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/archive/src/index.ts#L51)
+[packages/archive/src/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/archive/src/index.ts#L51)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/archive/src/index.ts:52](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/archive/src/index.ts#L52)
+[packages/archive/src/index.ts:52](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/archive/src/index.ts#L52)
 
 ___
 
@@ -44,7 +44,7 @@ This one.
 
 #### Defined in
 
-[packages/archive/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/archive/src/index.ts#L49)
+[packages/archive/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/archive/src/index.ts#L49)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[packages/archive/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/archive/src/index.ts#L50)
+[packages/archive/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/archive/src/index.ts#L50)

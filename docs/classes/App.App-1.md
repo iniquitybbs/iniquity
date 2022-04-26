@@ -46,7 +46,7 @@ yargs.CommandModule.command
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:47](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/cli/src/commands/init.ts#L47)
+[packages/cli/src/commands/init.ts:48](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L48)
 
 ___
 
@@ -60,13 +60,13 @@ yargs.CommandModule.describe
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:48](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/cli/src/commands/init.ts#L48)
+[packages/cli/src/commands/init.ts:49](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L49)
 
 ## Methods
 
 ### builder
 
-▸ **builder**(`yargs`): `Argv`<{ `init`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
+▸ **builder**(`yargs`): `Argv`<{ `name`: `undefined` \| `string`  } & { `template`: `undefined` \| `string`  } & { `install`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
 
 #### Parameters
 
@@ -76,7 +76,7 @@ yargs.CommandModule.describe
 
 #### Returns
 
-`Argv`<{ `init`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
+`Argv`<{ `name`: `undefined` \| `string`  } & { `template`: `undefined` \| `string`  } & { `install`: `undefined` \| `string`  } & { `packages`: `undefined` \| `string`  }\>
 
 #### Implementation of
 
@@ -84,7 +84,7 @@ yargs.CommandModule.builder
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:50](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/cli/src/commands/init.ts#L50)
+[packages/cli/src/commands/init.ts:51](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L51)
 
 ___
 
@@ -108,4 +108,4 @@ yargs.CommandModule.handler
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:66](https://github.com/iniquitybbs/iniquity/blob/2e1686f/packages/cli/src/commands/init.ts#L66)
+[packages/cli/src/commands/init.ts:77](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L77)
