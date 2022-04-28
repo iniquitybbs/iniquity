@@ -31,4 +31,4 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:1183](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L1183)
+[packages/core/src/index.ts:1183](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L1183)

@@ -20,7 +20,7 @@ Data you would like to be reactive in the menu
 
 #### Defined in
 
-[packages/core/src/index.ts:608](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L608)
+[packages/core/src/index.ts:608](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L608)
 
 ___
 
@@ -32,7 +32,7 @@ The maximum number of the menu event loop that can run.
 
 #### Defined in
 
-[packages/core/src/index.ts:603](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L603)
+[packages/core/src/index.ts:603](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L603)
 
 ___
 
@@ -46,4 +46,4 @@ Basically halt everything for the specified period of milliseconds.
 
 #### Defined in
 
-[packages/core/src/index.ts:598](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L598)
+[packages/core/src/index.ts:598](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L598)

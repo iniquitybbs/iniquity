@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:616](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L616)
+[packages/core/src/index.ts:616](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L616)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:614](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L614)
+[packages/core/src/index.ts:614](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L614)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:612](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L612)
+[packages/core/src/index.ts:612](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L612)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:611](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L611)
+[packages/core/src/index.ts:611](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L611)
 
 ## Methods
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:698](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L698)
+[packages/core/src/index.ts:698](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L698)
 
 ___
 
@@ -127,7 +127,7 @@ Functions that can be chained to the prompt.
 
 #### Defined in
 
-[packages/core/src/index.ts:665](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L665)
+[packages/core/src/index.ts:665](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L665)
 
 ___
 
@@ -148,4 +148,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:623](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/core/src/index.ts#L623)
+[packages/core/src/index.ts:623](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L623)

@@ -38,7 +38,7 @@ Iniquity CLI
 
 ### command
 
-• **command**: `string` = `"init [options]"`
+• **command**: `string` = `"start [options]"`
 
 #### Implementation of
 
@@ -46,13 +46,13 @@ yargs.CommandModule.command
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:48](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L48)
+[packages/cli/src/commands/start.ts:48](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/cli/src/commands/start.ts#L48)
 
 ___
 
 ### describe
 
-• **describe**: `string` = `"Initialize a new iniquity bbs."`
+• **describe**: `string` = `"Start your iniquity instance."`
 
 #### Implementation of
 
@@ -60,7 +60,7 @@ yargs.CommandModule.describe
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:49](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L49)
+[packages/cli/src/commands/start.ts:49](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/cli/src/commands/start.ts#L49)
 
 ## Methods
 
@@ -84,7 +84,7 @@ yargs.CommandModule.builder
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:51](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L51)
+[packages/cli/src/commands/start.ts:51](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/cli/src/commands/start.ts#L51)
 
 ___
 
@@ -108,4 +108,4 @@ yargs.CommandModule.handler
 
 #### Defined in
 
-[packages/cli/src/commands/init.ts:77](https://github.com/iniquitybbs/iniquity/blob/a82cddc/packages/cli/src/commands/init.ts#L77)
+[packages/cli/src/commands/start.ts:77](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/cli/src/commands/start.ts#L77)
