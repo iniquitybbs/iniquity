@@ -5,4 +5,4 @@ import yargs from "yargs"
 import init from "./commands/init"
 import start from "./commands/start"
 
-yargs.command(init).command(start).help().argv
+yargs.command(init).command(start).demandCommand().help().argv

@@ -46,7 +46,7 @@ import { exec } from "child_process"
  */
 export class App implements yargs.CommandModule {
     public command = "start [options]"
-    public describe = "Initialize a new iniquity bbs."
+    public describe = "Start your iniquity instance."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
