@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  *
- * Iniquity Archive
- * @module Archive
+ * Iniquity App
+ * @module App
  * @summary The super cool command line interface to Iniquity.
  * @example Invoking via the shell
  * ```shell
@@ -40,66 +40,63 @@ import * as path from "path"
 import { exec } from "child_process"
 
 /**
- * Iniquity Archive
+ * Iniquity CLI
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class Archive implements yargs.CommandModule {
-    public command = "archive [options]"
-    public describe = "Invoke Archive commands."
+export class App implements yargs.CommandModule {
+    public command = "status [options]"
+    public describe = "Start your iniquity instance."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
-            .options("init", {
+            .options("name", {
                 type: "string",
-                choices: ["name"],
-                describe: "Eventually I will initialize a new Iniquity bbs.",
+                describe: "Provide a name for your iniquity system.",
+                demandOption: false
+            })
+            .options("template", {
+                type: "string",
+                choices: ["eternity", "euphoria"],
+                describe: "Specify a template to use when constructing your new iniquity bbs.",
+                demandOption: false
+            })
+            .options("install", {
+                type: "string",
+                describe: "Install iniquity and npm packages.",
                 demandOption: false
             })
             .options("packages", {
                 type: "string",
                 choices: ["available", "installed"],
-                describe: "Displays a list of all packages available for use with Iniquity.",
+                describe: "Displays a list of all packages available for use with iniquity.",
                 demandOption: false
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
+        if (!argv.help) console.log("Iniquity system initialized.")
+
         if (argv.init === "food") {
             console.log("yay")
             console.log("yay")
             console.log("yay")
         }
-        if (argv.packages) {
-            switch (argv.packages) {
-                case "available":
-                    exec("npm search @iniquitybbs", (error, stdout, stderr) => {
-                        if (error) {
-                            console.error(`exec error: ${error}`)
-                            return
-                        }
-                        console.info(stdout)
-                        console.error(stderr)
-                    })
-                    break
-                case "installed": {
-                    exec("npm list --depth 0", (error, stdout, stderr) => {
-                        if (error) {
-                            console.error(`exec error: ${error}`)
-                            return
-                        }
-                        console.info(stdout)
-                        console.error(stderr)
-                    })
-                    break
+
+        if (argv.install) {
+            exec(`npm install @iniquitybbs/${argv.install}`, (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`exec error: ${error}`)
+                    return
                 }
-            }
+                console.info(stdout)
+                console.error(stderr)
+            })
         }
     }
 }
 
-const archive: yargs.CommandModule = new Archive()
+const app: yargs.CommandModule = new App()
 
-if (process.argv.length > 2) yargs.command(archive).pkgConf("iniquity").help().argv
-export default archive
-export * from ".."
+// if (process.argv.length > 2) yargs.command(app).pkgConf("iniquity").help().argv
+export default app
