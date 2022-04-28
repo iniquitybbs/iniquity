@@ -45,7 +45,7 @@ import { exec } from "child_process"
  * @implements {yargs.CommandModule}
  */
 export class App implements yargs.CommandModule {
-    public command = "init [options]"
+    public command = "start [options]"
     public describe = "Initialize a new iniquity bbs."
 
     public builder = (yargs: yargs.Argv) => {
@@ -73,10 +73,6 @@ export class App implements yargs.CommandModule {
                 demandOption: false
             })
             .pkgConf("iniquity", path.join(__dirname))
-            .example([
-                ['$0 --config "~/config.json"', "Use custom config"],
-                ["$0 --safe", "Start in safe mode"]
-            ])
     }
     public handler(argv: yargs.Arguments) {
         if (!argv.help) console.log("Iniquity system initialized.")

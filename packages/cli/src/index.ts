@@ -2,5 +2,7 @@
 
 import * as path from "path"
 import yargs from "yargs"
+import init from "./commands/init"
+import start from "./commands/start"
 
-yargs.commandDir(path.join(__dirname), { recurse: true, exclude: RegExp("/*.spec.*/") }).pkgConf("iniquity")
+yargs.command(init).command(start).help().argv
