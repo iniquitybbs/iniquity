@@ -36,7 +36,8 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 import yargs from "yargs"
-import * as path from "path"
+import path from "path"
+import fs from "fs"
 import { exec } from "child_process"
 
 /**
@@ -75,12 +76,30 @@ export class App implements yargs.CommandModule {
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
-        if (!argv.help) console.log("Iniquity system initialized.")
+        if (!argv.help) {
+            console.log("Iniquity system initialized.")
+            if (!fs.existsSync(".iniquity")) {
+                fs.mkdirSync(".iniquity")
+                fs.createWriteStream(".iniquity/docker-compose.yml")
+                fs.createWriteStream(".iniquity/Dockerfile")
+                fs.createWriteStream(".iniquity/package.json")
+            }
 
-        if (argv.init === "food") {
-            console.log("yay")
-            console.log("yay")
-            console.log("yay")
+            if (!fs.existsSync(`iniquity.ts`)) {
+                fs.createWriteStream(`iniquity.ts`)
+            }
+            if (!fs.existsSync(`iniquity.hjson`)) {
+                fs.writeFileSync(
+                    `iniquity.hjson`,
+                    JSON.stringify(
+                        {
+                            name: argv.name === undefined ? "iniquity" : argv.name
+                        },
+                        null,
+                        4
+                    )
+                )
+            }
         }
 
         if (argv.install) {
