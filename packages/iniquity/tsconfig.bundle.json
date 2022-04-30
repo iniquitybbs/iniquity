@@ -1,0 +1,15 @@
+{
+    "extends": "../../tsconfig.bundle.json",
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "target": "es5",
+        "types": ["node"],
+        "lib": ["es2020"],
+        "skipLibCheck": true,
+        "resolveJsonModule": false,
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": ["src/index.ts"],
+    "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
+}

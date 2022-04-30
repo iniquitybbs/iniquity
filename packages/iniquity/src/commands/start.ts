@@ -45,8 +45,8 @@ import { exec } from "child_process"
  * @implements {yargs.CommandModule}
  */
 export class App implements yargs.CommandModule {
-    public command = "init [options]"
-    public describe = "Use iniquity's built in terminal client."
+    public command = "start [options]"
+    public describe = "Start your iniquity instance."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
