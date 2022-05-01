@@ -14,23 +14,27 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 
 ## Synopsis
 
-```bash
-npm install -g @iniquitybbs/cli
+```shell
+npm install -g @iniquitybbs/iniquity
 ```
 
 Then...
 
-```bash
-iniquity init --name MyBBS --template eternity --theme iq3
+```shell
+iniquity init --name MyBBS
 ```
 
 ...and finally.
 
-```bash
+```shell
 iniquity start
 ```
 
 After that, you can connect to your locally running iniquity instance using a telnet client or web browser.
+
+```shell
+iniquity client --terminal --host localhost
+```
 
 ## Getting started guide
 
@@ -351,7 +355,7 @@ This is a monorepo project. It uses lerna for management of its packages.
 
 #### First, clone this repository somewhere on your system
 
-```bash
+```shell
 git clone https://github.com/iniquitybbs/iniquity.git
 ```
 
@@ -359,7 +363,7 @@ git clone https://github.com/iniquitybbs/iniquity.git
 
 Will install all dependencies and bootstrap and build all packages.
 
-```bash
+```shell
 npm install
 ```
 
@@ -367,7 +371,7 @@ npm install
 
 Inside of the VS Code Integrated Terminal, fire up the development server.
 
-```bash
+```shell
 npm start
 ```
 
@@ -375,13 +379,13 @@ npm start
 
 You could just pull the latest version of the runtime directly from docker.
 
-```bash
+```shell
 docker pull iniquitybbs/iniquity
 ```
 
 Or even just run it directly
 
-```bash
+```shell
 docker run -d -P --name iniquity -it iniquitybbs/iniquity 
 
 ```

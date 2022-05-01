@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 /**
  *
- * Iniquity App
- * @module App
+ * Iniquity Init
+ * @module Init
  * @summary The super cool command line interface to Iniquity.
  * @example Invoking via the shell
  * ```shell
- * iq cli -h
+ * iq init --help
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
- * import CLI from "@iniquitybbs/cli"
- * const cli: yargs.CommandModule = new CLI()
+ * import Init from "@iniquitybbs/iniquity/dist/src/commands/init"
+ * const init: yargs.CommandModule = new Init()
  * ```
  */
 
@@ -45,9 +45,9 @@ import { exec } from "child_process"
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class App implements yargs.CommandModule {
+export class Init implements yargs.CommandModule {
     public command = "init [options]"
-    public describe = "Use iniquity's built in terminal client."
+    public describe = "Initialize the current directory as an iniquity 3 application."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
@@ -89,33 +89,11 @@ export class App implements yargs.CommandModule {
                 fs.createWriteStream(`iniquity.ts`)
             }
             if (!fs.existsSync(`iniquity.hjson`)) {
-                fs.writeFileSync(
-                    `iniquity.hjson`,
-                    JSON.stringify(
-                        {
-                            name: argv.name === undefined ? "iniquity" : argv.name
-                        },
-                        null,
-                        4
-                    )
-                )
+                fs.writeFileSync(`iniquity.hjson`, JSON.stringify(argv, null, 4))
             }
-        }
-
-        if (argv.install) {
-            exec(`npm install @iniquitybbs/${argv.install}`, (error, stdout, stderr) => {
-                if (error) {
-                    console.error(`exec error: ${error}`)
-                    return
-                }
-                console.info(stdout)
-                console.error(stderr)
-            })
         }
     }
 }
 
-const app: yargs.CommandModule = new App()
-
-// if (process.argv.length > 2) yargs.command(app).pkgConf("iniquity").help().argv
-export default app
+const init: yargs.CommandModule = new Init()
+export default init
