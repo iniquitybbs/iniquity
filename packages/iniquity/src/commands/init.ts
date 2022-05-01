@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  *
  * Iniquity Init
@@ -38,7 +37,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 import yargs from "yargs"
 import path from "path"
 import fs from "fs"
-import { exec } from "child_process"
 
 /**
  * Iniquity CLI
@@ -53,44 +51,48 @@ export class Init implements yargs.CommandModule {
         return yargs
             .options("name", {
                 type: "string",
+                default: "iniquity",
                 describe: "Provide a name for your iniquity system.",
                 demandOption: false
             })
             .options("template", {
                 type: "string",
+                default: "eternity",
                 choices: ["eternity", "euphoria"],
                 describe: "Specify a template to use when constructing your new iniquity bbs.",
                 demandOption: false
             })
-            .options("install", {
+            .options("theme", {
                 type: "string",
-                describe: "Install iniquity and npm packages.",
-                demandOption: false
-            })
-            .options("packages", {
-                type: "string",
-                choices: ["available", "installed"],
-                describe: "Displays a list of all packages available for use with iniquity.",
+                default: "iq3theme",
+                choices: ["iq3theme", "bookauh"],
+                describe: "Specify a theme to use when constructing your new iniquity bbs.",
                 demandOption: false
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
-        if (!argv.help) {
-            console.log("Iniquity system initialized.")
+        if (!argv.help || !argv.version) {
             if (!fs.existsSync(".iniquity")) {
                 fs.mkdirSync(".iniquity")
-                fs.createWriteStream(".iniquity/docker-compose.yml")
+                fs.copyFileSync(path.join(__dirname, "../docker/docker-compose.yml"), ".iniquity/docker-compose.yml")
                 fs.createWriteStream(".iniquity/Dockerfile")
                 fs.createWriteStream(".iniquity/package.json")
             }
 
             if (!fs.existsSync(`iniquity.ts`)) {
-                fs.createWriteStream(`iniquity.ts`)
+                fs.writeFile(`iniquity.ts`, `import iq from "@iniquitybbs/core"\n\niq.say("Welcome to ${argv.name}").pause()\n\n`, (err) => {
+                    if (err) return console.error(err)
+                })
             }
             if (!fs.existsSync(`iniquity.hjson`)) {
                 fs.writeFileSync(`iniquity.hjson`, JSON.stringify(argv, null, 4))
             }
+            if (!fs.existsSync(`.env`)) {
+                fs.writeFileSync(`.env`, "INIQUITY_RUNTIME_PATH=.iniquity/\n\n")
+            }
+
+            console.log("Iniquity system initialized.")
         }
     }
 }

@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[packages/core/src/index.ts:1190](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L1190)
+[core/src/index.ts:1190](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L1190)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:1193](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L1193)
+[core/src/index.ts:1193](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L1193)

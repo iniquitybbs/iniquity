@@ -66,7 +66,7 @@ The iniquity waiting for caller module
 
 #### Defined in
 
-[packages/core/src/index.ts:346](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L346)
+[core/src/index.ts:346](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L346)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:345](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L345)
+[core/src/index.ts:345](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L345)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:344](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L344)
+[core/src/index.ts:344](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L344)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:349](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L349)
+[core/src/index.ts:349](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L349)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:348](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L348)
+[core/src/index.ts:348](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L348)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:347](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L347)
+[core/src/index.ts:347](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L347)
 
 ___
 
@@ -152,7 +152,7 @@ Terminal information available to iniquity
 
 #### Defined in
 
-[packages/core/src/index.ts:511](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L511)
+[core/src/index.ts:511](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L511)
 
 ## Methods
 
@@ -191,7 +191,7 @@ An instance of Artwork and its return functions.
 
 #### Defined in
 
-[packages/core/src/index.ts:544](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L544)
+[core/src/index.ts:544](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L544)
 
 ___
 
@@ -219,7 +219,7 @@ response
 
 #### Defined in
 
-[packages/core/src/index.ts:488](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L488)
+[core/src/index.ts:488](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L488)
 
 ___
 
@@ -245,7 +245,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:443](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L443)
+[core/src/index.ts:443](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L443)
 
 ___
 
@@ -267,7 +267,7 @@ void
 
 #### Defined in
 
-[packages/core/src/index.ts:496](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L496)
+[core/src/index.ts:496](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L496)
 
 ___
 
@@ -295,7 +295,7 @@ An instance of Menu
 
 #### Defined in
 
-[packages/core/src/index.ts:561](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L561)
+[core/src/index.ts:561](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L561)
 
 ___
 
@@ -322,7 +322,7 @@ Sends the cursor to a particular coordinates on the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:435](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L435)
+[core/src/index.ts:435](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L435)
 
 ___
 
@@ -340,7 +340,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:500](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L500)
+[core/src/index.ts:500](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L500)
 
 ___
 
@@ -358,7 +358,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:504](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L504)
+[core/src/index.ts:504](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L504)
 
 ___
 
@@ -386,7 +386,7 @@ An instance of Menu
 
 #### Defined in
 
-[packages/core/src/index.ts:553](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L553)
+[core/src/index.ts:553](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L553)
 
 ___
 
@@ -416,7 +416,7 @@ Display a pause prompt on the screen.
 
 #### Defined in
 
-[packages/core/src/index.ts:424](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L424)
+[core/src/index.ts:424](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L424)
 
 ___
 
@@ -451,7 +451,7 @@ iq.print("Display some text on the screen that can parse @ codes.".color("cyan")
 
 #### Defined in
 
-[packages/core/src/index.ts:402](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L402)
+[core/src/index.ts:402](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L402)
 
 ___
 
@@ -485,7 +485,7 @@ iq.say("This time say something but do some cool string manipulation.".newlines(
 
 #### Defined in
 
-[packages/core/src/index.ts:364](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L364)
+[core/src/index.ts:364](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L364)
 
 ___
 
@@ -503,7 +503,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/wfc.ts:18](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/modules/wfc.ts#L18)
+[core/src/modules/wfc.ts:18](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/modules/wfc.ts#L18)
 
 ___
 
@@ -535,7 +535,7 @@ An instance of User and its return functions.
 
 #### Defined in
 
-[packages/core/src/index.ts:526](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L526)
+[core/src/index.ts:526](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L526)
 
 ___
 
@@ -568,4 +568,4 @@ void
 
 #### Defined in
 
-[packages/core/src/index.ts:477](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L477)
+[core/src/index.ts:477](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L477)

@@ -26,7 +26,7 @@ The full path to your art folder
 
 #### Defined in
 
-[packages/core/src/index.ts:161](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L161)
+[core/src/index.ts:161](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L161)
 
 ___
 
@@ -38,7 +38,7 @@ A boolean representing if you want the screen cleared before.
 
 #### Defined in
 
-[packages/core/src/index.ts:181](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L181)
+[core/src/index.ts:181](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L181)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/index.ts:182](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L182)
+[core/src/index.ts:182](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L182)
 
 ___
 
@@ -60,7 +60,7 @@ Supported character encodings are CP437 and UTF8.
 
 #### Defined in
 
-[packages/core/src/index.ts:173](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L173)
+[core/src/index.ts:173](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L173)
 
 ___
 
@@ -72,7 +72,7 @@ The file name of the artwork you would like to render to the screen
 
 #### Defined in
 
-[packages/core/src/index.ts:165](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L165)
+[core/src/index.ts:165](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L165)
 
 ___
 
@@ -84,7 +84,7 @@ The rendering mode to use. e.g. Line at a time, character at a time, etc.
 
 #### Defined in
 
-[packages/core/src/index.ts:177](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L177)
+[core/src/index.ts:177](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L177)
 
 ___
 
@@ -96,4 +96,4 @@ How fast you would like the artwork rendered to the screen.
 
 #### Defined in
 
-[packages/core/src/index.ts:169](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/index.ts#L169)
+[core/src/index.ts:169](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L169)

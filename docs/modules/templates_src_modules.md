@@ -25,7 +25,7 @@ ___
 
 #### Defined in
 
-[packages/templates/src/modules/eternity/login.ts:62](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/templates/src/modules/eternity/login.ts#L62)
+[templates/src/modules/eternity/login.ts:62](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/templates/src/modules/eternity/login.ts#L62)
 
 ## Variables
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[packages/templates/src/modules/index.ts:7](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/templates/src/modules/index.ts#L7)
+[templates/src/modules/index.ts:7](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/templates/src/modules/index.ts#L7)

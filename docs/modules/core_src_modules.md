@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/modules/answer.ts:114](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/modules/answer.ts#L114)
+[core/src/modules/answer.ts:114](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/modules/answer.ts#L114)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/modules/index.ts:9](https://github.com/iniquitybbs/iniquity/blob/ec15de2/packages/core/src/modules/index.ts#L9)
+[core/src/modules/index.ts:9](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/modules/index.ts#L9)
