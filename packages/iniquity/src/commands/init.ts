@@ -37,6 +37,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 import yargs from "yargs"
 import path from "path"
 import fs from "fs"
+import { exec } from "child_process"
 
 /**
  * Iniquity CLI
@@ -75,7 +76,28 @@ export class Init implements yargs.CommandModule {
         if (!argv.help || !argv.version) {
             if (!fs.existsSync(".iniquity")) {
                 fs.mkdirSync(".iniquity")
-                fs.copyFileSync(path.join(__dirname, "../docker/docker-compose.yml"), ".iniquity/docker-compose.yml")
+
+                fs.writeFile(
+                    ".iniquity/docker-compose.yml",
+                    `
+                        version: "3.9"
+                        services:
+                            runtime:
+                                image: iniquitybbs/iniquity:latest
+                                ports:
+                                    - "22:22"
+                                    - "23:23"
+                                    - "80:80"
+                                    - "443:443"
+                                    - "1123:1123"
+                                    - "11235:11235"
+                                volumes:
+                                    - ./iniquity:/iniquity
+                                    - ./data:/sbbs/data
+                `,
+                    (err) => {}
+                )
+
                 fs.createWriteStream(".iniquity/Dockerfile")
                 fs.createWriteStream(".iniquity/package.json")
             }
