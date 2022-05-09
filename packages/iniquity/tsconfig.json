@@ -6,7 +6,7 @@
         "composite": true,
         "strictFunctionTypes": false,
         "allowSyntheticDefaultImports": true,
-        "target": "es2015",
+        "target": "esnext",
         "moduleResolution": "node",
         "esModuleInterop": true,
         "resolveJsonModule": true,
@@ -23,7 +23,7 @@
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*.ts"],
-    "exclude": [".vscode", "dist", "node_modules", "examples"],
+    "include": ["src/**/*.ts", "scripts/build.ts"],
+    "exclude": [".vscode", "dist", "node_modules", "src/example"],
     "references": [{ "path": "../core" }]
 }

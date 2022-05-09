@@ -38,6 +38,7 @@ import yargs from "yargs"
 import path from "path"
 import fs from "fs"
 import { exec } from "child_process"
+import copyfiles from "copyfiles"
 
 /**
  * Iniquity CLI
@@ -74,45 +75,8 @@ export class Init implements yargs.CommandModule {
     }
     public handler(argv: yargs.Arguments) {
         if (!argv.help || !argv.version) {
-            if (!fs.existsSync(".iniquity")) {
-                fs.mkdirSync(".iniquity")
-
-                fs.writeFile(
-                    ".iniquity/docker-compose.yml",
-                    `
-                        version: "3.9"
-                        services:
-                            runtime:
-                                image: iniquitybbs/iniquity:latest
-                                ports:
-                                    - "22:22"
-                                    - "23:23"
-                                    - "80:80"
-                                    - "443:443"
-                                    - "1123:1123"
-                                    - "11235:11235"
-                                volumes:
-                                    - ./iniquity:/iniquity
-                                    - ./data:/sbbs/data
-                `,
-                    (err) => {}
-                )
-
-                fs.createWriteStream(".iniquity/Dockerfile")
-                fs.createWriteStream(".iniquity/package.json")
-            }
-
-            if (!fs.existsSync(`iniquity.ts`)) {
-                fs.writeFile(`iniquity.ts`, `import iq from "@iniquitybbs/core"\n\niq.say("Welcome to ${argv.name}").pause()\n\n`, (err) => {
-                    if (err) return console.error(err)
-                })
-            }
-            if (!fs.existsSync(`iniquity.hjson`)) {
-                fs.writeFileSync(`iniquity.hjson`, JSON.stringify(argv, null, 4))
-            }
-            if (!fs.existsSync(`.env`)) {
-                fs.writeFileSync(`.env`, "INIQUITY_RUNTIME_PATH=.iniquity/\n\n")
-            }
+            copyfiles([path.join(__dirname, "../example/*"), "."], { up: true, all: true }, (err) => {})
+            copyfiles([path.join(__dirname, "../example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
 
             console.log("Iniquity system initialized.")
         }
