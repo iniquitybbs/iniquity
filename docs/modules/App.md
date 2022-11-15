@@ -33,4 +33,4 @@ const cli: yargs.CommandModule = new CLI()
 
 #### Defined in
 
-[iniquity/src/commands/term.ts:99](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/iniquity/src/commands/term.ts#L99)
+[iniquity/src/commands/term.ts:99](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/iniquity/src/commands/term.ts#L99)

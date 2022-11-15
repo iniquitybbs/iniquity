@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[core/src/index.ts:575](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L575)
+[core/src/index.ts:575](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L575)
 
 ## Methods
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[core/src/index.ts:577](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L577)
+[core/src/index.ts:577](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L577)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:578](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L578)
+[core/src/index.ts:578](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L578)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:579](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L579)
+[core/src/index.ts:579](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L579)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:576](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L576)
+[core/src/index.ts:576](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L576)

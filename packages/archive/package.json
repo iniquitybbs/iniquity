@@ -40,5 +40,6 @@
   "dependencies": {
     "docker-cli": "^0.0.2",
     "yargs": "^17.2.1"
-  }
+  },
+  "gitHead": "d1c5f72ee1b88ac92a6795c991057f7db9e6c367"
 }

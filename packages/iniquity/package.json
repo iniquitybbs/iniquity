@@ -5,7 +5,6 @@
   "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
   "homepage": "http://iniquitybbs.com",
   "license": "MIT",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },
@@ -49,5 +48,6 @@
     "dotenv": "^16.0.0",
     "hjson": "^3.2.2",
     "yargs": "17.4.1"
-  }
+  },
+  "gitHead": "d1c5f72ee1b88ac92a6795c991057f7db9e6c367"
 }

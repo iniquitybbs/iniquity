@@ -55,7 +55,7 @@ myIniquity.hangup()
 
 #### Defined in
 
-[core/src/index.ts:346](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L346)
+[core/src/index.ts:346](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L346)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:345](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L345)
+[core/src/index.ts:345](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L345)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:344](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L344)
+[core/src/index.ts:344](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L344)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:349](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L349)
+[core/src/index.ts:349](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L349)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:348](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L348)
+[core/src/index.ts:348](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L348)
 
 ___
 
@@ -105,4 +105,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:347](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L347)
+[core/src/index.ts:347](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L347)
