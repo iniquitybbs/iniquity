@@ -33,4 +33,4 @@ const init: yargs.CommandModule = new Init()
 
 #### Defined in
 
-[iniquity/src/commands/init.ts:100](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/iniquity/src/commands/init.ts#L100)
+[iniquity/src/commands/init.ts:86](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/iniquity/src/commands/init.ts#L86)

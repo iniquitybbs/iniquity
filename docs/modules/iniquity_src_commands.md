@@ -16,7 +16,7 @@
 
 #### Defined in
 
-iniquity/src/commands/index.ts:5
+[iniquity/src/commands/index.ts:5](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/iniquity/src/commands/index.ts#L5)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-iniquity/src/commands/index.ts:5
+[iniquity/src/commands/index.ts:5](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/iniquity/src/commands/index.ts#L5)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-iniquity/src/commands/index.ts:5
+[iniquity/src/commands/index.ts:5](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/iniquity/src/commands/index.ts#L5)

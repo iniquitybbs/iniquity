@@ -14544,7 +14544,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity/src/commands/init.ts",
-									"line": 47,
+									"line": 49,
 									"character": 11
 								}
 							],
@@ -14569,7 +14569,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity/src/commands/init.ts",
-									"line": 48,
+									"line": 50,
 									"character": 11
 								}
 							],
@@ -14594,7 +14594,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity/src/commands/init.ts",
-									"line": 50,
+									"line": 52,
 									"character": 11
 								}
 							],
@@ -14759,7 +14759,7 @@
 							"sources": [
 								{
 									"fileName": "iniquity/src/commands/init.ts",
-									"line": 74,
+									"line": 76,
 									"character": 11
 								}
 							],
@@ -14859,7 +14859,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity/src/commands/init.ts",
-							"line": 46,
+							"line": 48,
 							"character": 13
 						}
 					],
@@ -14879,7 +14879,7 @@
 					"sources": [
 						{
 							"fileName": "iniquity/src/commands/init.ts",
-							"line": 100,
+							"line": 86,
 							"character": 6
 						}
 					],

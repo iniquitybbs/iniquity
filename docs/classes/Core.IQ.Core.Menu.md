@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[core/src/index.ts:616](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L616)
+[core/src/index.ts:616](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L616)
 
 ## Properties
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[core/src/index.ts:614](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L614)
+[core/src/index.ts:614](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L614)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:612](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L612)
+[core/src/index.ts:612](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L612)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:611](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L611)
+[core/src/index.ts:611](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L611)
 
 ## Methods
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:698](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L698)
+[core/src/index.ts:698](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L698)
 
 ___
 
@@ -151,7 +151,7 @@ Functions that can be chained to the prompt.
 
 #### Defined in
 
-[core/src/index.ts:665](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L665)
+[core/src/index.ts:665](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L665)
 
 ___
 
@@ -176,4 +176,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:623](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/core/src/index.ts#L623)
+[core/src/index.ts:623](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/core/src/index.ts#L623)

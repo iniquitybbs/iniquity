@@ -28,4 +28,4 @@ ___
 
 #### Defined in
 
-[templates/src/modules/eternity/login.ts:62](https://github.com/iniquitybbs/iniquity/blob/722e6ba/packages/templates/src/modules/eternity/login.ts#L62)
+[templates/src/modules/eternity/login.ts:62](https://github.com/iniquitybbs/iniquity/blob/d7c93a1/packages/templates/src/modules/eternity/login.ts#L62)
