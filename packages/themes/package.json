@@ -1,6 +1,6 @@
 {
   "name": "@iniquitybbs/themes",
-  "version": "3.0.30",
+  "version": "3.0.31",
   "description": "Themes for iniquity 3",
   "main": "index.js",
   "publishConfig": {
