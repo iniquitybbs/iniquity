@@ -3,10 +3,13 @@
   "version": "3.0.30",
   "description": "Themes for iniquity 3",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "d1c5f72ee1b88ac92a6795c991057f7db9e6c367"
+  "gitHead": "83d991ec72ffd73805b7a7f6fd9b86630deb5dda"
 }
