@@ -27,18 +27,18 @@
     "url": "https://github.com/iniquitybbs/iniquity/issues"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.2",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-multi-entry": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.5",
-    "@rollup/plugin-typescript": "^8.2.5",
-    "@types/lodash": "^4.14.180",
-    "@types/node": "^16.10.3",
-    "@types/yargs": "^17.0.3",
-    "rollup": "^2.58.0",
-    "rollup-plugin-external-globals": "^0.6.1",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-multi-entry": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^9.0.2",
+    "@types/lodash": "^4.14.190",
+    "@types/node": "^18.11.9",
+    "@types/yargs": "^17.0.14",
+    "rollup": "^3.4.0",
+    "rollup-plugin-external-globals": "^0.7.1",
     "rollup-plugin-node-polyfills": "^0.2.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.9.3"
   },
   "main": "src/index",
   "types": "src/index",
@@ -47,7 +47,7 @@
     "@iniquitybbs/fTelnet": "github:iniquitybbs/fTelnet",
     "docker-cli": "^0.0.2",
     "lodash": "^4.17.21",
-    "yargs": "^17.2.1"
+    "yargs": "^17.6.2"
   },
   "gitHead": "83d991ec72ffd73805b7a7f6fd9b86630deb5dda"
 }
