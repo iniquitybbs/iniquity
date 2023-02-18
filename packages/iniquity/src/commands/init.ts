@@ -39,6 +39,7 @@ import path from "path"
 import fs from "fs"
 import { exec } from "child_process"
 import copyfiles from "copyfiles"
+import { cwd } from "process"
 
 /**
  * Iniquity CLI
@@ -75,8 +76,12 @@ export class Init implements yargs.CommandModule {
     }
     public handler(argv: yargs.Arguments) {
         if (!argv.help || !argv.version) {
-            copyfiles([path.join(__dirname, "../example/*"), "."], { up: true, all: true }, (err) => {})
-            copyfiles([path.join(__dirname, "../example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
+            // console.log(cwd())
+
+            // console.log(path.join(__dirname, "../../../src/example/*"))
+
+            copyfiles([path.join(__dirname, "../../../src/example/*"), "."], { up: true, all: true }, (err) => {})
+            copyfiles([path.join(__dirname, "../../../src/example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
 
             console.log("Iniquity system initialized.")
         }

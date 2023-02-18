@@ -3,8 +3,8 @@ services:
     app:
         extends:
             file: ../../docker-compose.yml
-            service: app
-        image: iniquitybbs/core:latest
+            service: iniquity
+        image: iniquitybbs/iniquity:latest
         volumes:
             - ./dist:/iniquity
             - ./data:/sbbs/data
