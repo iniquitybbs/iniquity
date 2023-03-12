@@ -27,13 +27,13 @@ iniquity init --name MyBBS
 ...and finally.
 
 ```shell
-iniquity start
+iniquity runtime start
 ```
 
 After that, you can connect to your locally running iniquity instance using a telnet client or web browser.
 
 ```shell
-iniquity client --terminal --host localhost
+iniquity term --host localhost
 ```
 
 ## Getting started guide
@@ -283,26 +283,26 @@ export class Answer extends IQ {
 
 ### Your development environment should contain something like this, or similar
 
--   macOS / Windows / Linux _required_
-    -   These modern operating systems are currently supported.
--   Docker Desktop for macOS / Windows or Docker Machine _required_
-    -   The Iniquity BBS runtime is executed inside of a Docker container for portability.
--   Node.js & NPM _required_
-    -   The Node community tools are used for TypeScript transpiling and Iniquity package management.
--   Visual Studio Code _recommended_
-    -   This repository is specifically tuned to take full advantage of this IDE.
--   Moebius _recommended_
-    -   The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
+- macOS / Windows / Linux _required_
+  - These modern operating systems are currently supported.
+- Docker Desktop for macOS / Windows or Docker Machine _required_
+  - The Iniquity BBS runtime is executed inside of a Docker container for portability.
+- Node.js & NPM _required_
+  - The Node community tools are used for TypeScript transpiling and Iniquity package management.
+- Visual Studio Code _recommended_
+  - This repository is specifically tuned to take full advantage of this IDE.
+- Moebius _recommended_
+  - The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
 
 ### Some guiding thoughts surrounding the idea of iniquity 3
 
 I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
 
--   A BBS software framework that is geared towards developers and modders .
--   Make it easy for sysops to develop and deploy BBS applications.
--   Easily network files, messages and other forms of communication between other BBS applications.
--   What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
-    -   Though the ability to do interesting things specific to web/terminal should exist.
+- A BBS software framework that is geared towards developers and modders .
+- Make it easy for sysops to develop and deploy BBS applications.
+- Easily network files, messages and other forms of communication between other BBS applications.
+- What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
+  - Though the ability to do interesting things specific to web/terminal should exist.
 
 #### About iniquity's runtime
 

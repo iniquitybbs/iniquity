@@ -56,29 +56,29 @@ const composeOptions: compose.IDockerComposeOptions = {
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class Runtime implements yargs.CommandModule {
-    public command = "runtime [action]"
-    public describe = "Control your iniquity environment."
+export class App implements yargs.CommandModule {
+    public command = "app [action]"
+    public describe = "Control your iniquity bbs runtime."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
-            .positional("up", {
+            .positional("start", {
                 type: "string",
-                description: "Starts the iniquity runtime environment on this machine."
+                description: "Starts the iniquity bbs app on this machine."
             })
-            .positional("down", {
+            .positional("stop", {
                 type: "string",
-                description: "Brings the iniquity runtime environment down."
+                description: "Brings the iniquity bbs environment down."
             })
             .positional("restart", {
                 type: "string",
-                description: "Restart your iniquity runtime environment."
+                description: "Restart your iniquity bbs environment."
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
         switch (argv.action) {
-            case "up":
+            case "start":
                 compose.upAll(composeOptions).then(
                     (response: compose.IDockerComposeResult) => {
                         if (response.out) console.log(response.out)
@@ -89,7 +89,7 @@ export class Runtime implements yargs.CommandModule {
                 )
 
                 break
-            case "down":
+            case "stop":
                 compose.down(composeOptions).then(
                     (response: compose.IDockerComposeResult) => {
                         if (response.out) console.log(response.out)
@@ -115,4 +115,4 @@ export class Runtime implements yargs.CommandModule {
     }
 }
 
-export default new Runtime()
+export default new App()
