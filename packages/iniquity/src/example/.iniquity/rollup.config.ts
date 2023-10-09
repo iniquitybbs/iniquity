@@ -9,7 +9,7 @@ export default {
     input: "../iniquity.ts",
     output: {
         name: "iniquity",
-        file: "dist/bundle.js",
+        file: "iniquity/bundle.js",
         format: "iife",
         sourcemap: "inline",
         strict: false,
@@ -18,7 +18,7 @@ export default {
         }
     },
     watch: {
-        include: "src/**/*.ts"
+        include: "../**/*.ts"
     },
     plugins: [
         multi(),
