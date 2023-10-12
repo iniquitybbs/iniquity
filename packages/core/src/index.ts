@@ -582,6 +582,10 @@ export interface IQWaitOptions {
     milliseconds?: number
 }
 
+export interface IQAskOptions {
+    text?: string
+}
+
 export interface IQTermInfoObject {
     x: number
     y: number
@@ -1155,6 +1159,9 @@ export function pause(options?: IQPauseOptions): void {
 export function wait(options?: IQWaitOptions | number): void {
     iq.wait(options)
 }
+export function ask(question: string): void {
+    iq.ask(question)
+}
 
 export namespace IQ {
     export function gotoxy(x: number, y: number): void {
@@ -1168,6 +1175,9 @@ export namespace IQ {
     }
     export function wait(options?: IQWaitOptions): void {
         iq.wait(options)
+    }
+    export function ask(question: string): void {
+        iq.ask(question)
     }
 
     export class Core extends Iniquity {}
