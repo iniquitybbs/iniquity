@@ -63,6 +63,16 @@ export class App implements yargs.CommandModule {
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
+            .options("install_deps", {
+                type: "boolean",
+                default: false,
+                describe: "Install dependencies for the iniquity bbs app."
+            })
+            .options("watch", {
+                type: "boolean",
+                default: false,
+                describe: "Watch for changes in the iniquity bbs app."
+            })
             .positional("start", {
                 type: "string",
                 description: "Starts the iniquity bbs app on this machine."
@@ -78,18 +88,12 @@ export class App implements yargs.CommandModule {
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
-        switch (argv.action) {
-            case "start":
-                if (fs.existsSync(".iniquity")) {
-                    process.chdir(".iniquity")
+        if (argv.install_deps || argv.watch) {
+            if (fs.existsSync(".iniquity")) {
+                process.chdir(".iniquity")
+
+                if (argv.install_deps) {
                     exec("npm install", (err, stdout, stderr) => {
-                        if (err) {
-                            console.error(err)
-                            return
-                        }
-                        console.log(stdout)
-                    })
-                    exec("npx rollup -c", (err, stdout, stderr) => {
                         if (err) {
                             console.error(err)
                             return
@@ -98,6 +102,20 @@ export class App implements yargs.CommandModule {
                     })
                 }
 
+                if (argv.watch) {
+                    exec("npx rollup -c", (err, stdout, stderr) => {
+                        if (err) {
+                            console.error(err)
+                            return
+                        }
+                        console.log(stdout)
+                    })
+                }
+            }
+        }
+
+        switch (argv.action) {
+            case "start":
                 compose.upAll(composeOptions).then(
                     (response: compose.IDockerComposeResult) => {
                         if (response.out) console.log(response.out)
