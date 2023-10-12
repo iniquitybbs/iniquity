@@ -15,7 +15,7 @@ export default {
         sourcemap: "inline",
         strict: false,
         globals: {
-            "@iniquitybbs/core/src/library": "lib"
+            "@iniquitybbs/core/src": "core"
         }
     },
     watch: {

@@ -6,8 +6,7 @@
         "types": ["node"],
         "lib": ["es2020"],
         "skipLibCheck": true,
-        "resolveJsonModule": false,
-        "outDir": "iniquity"
+        "resolveJsonModule": false
     },
     "include": ["../*.ts"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]
