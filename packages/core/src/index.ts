@@ -1159,8 +1159,8 @@ export function pause(options?: IQPauseOptions): void {
 export function wait(options?: IQWaitOptions | number): void {
     iq.wait(options)
 }
-export function ask(question: string): void {
-    iq.ask(question)
+export function ask(question: string): string {
+    return iq.ask(question)
 }
 
 export namespace IQ {
@@ -1176,8 +1176,8 @@ export namespace IQ {
     export function wait(options?: IQWaitOptions): void {
         iq.wait(options)
     }
-    export function ask(question: string): void {
-        iq.ask(question)
+    export function ask(question: string): string {
+        return iq.ask(question)
     }
 
     export class Core extends Iniquity {}
