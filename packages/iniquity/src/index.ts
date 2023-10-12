@@ -2,6 +2,6 @@
 
 import yargs from "yargs"
 
-import { init, runtime, term, app } from "./commands"
+import { init, term, app } from "./commands"
 
-yargs.command(init).command(runtime).command(term).command(app).demandCommand().help().argv
+yargs.command(init).command(term).command(app).demandCommand().help().argv

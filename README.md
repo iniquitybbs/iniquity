@@ -27,7 +27,7 @@ iniquity init --name MyBBS
 ...and finally.
 
 ```shell
-iniquity runtime start
+iniquity app start
 ```
 
 After that, you can connect to your locally running iniquity instance using a telnet client or web browser.

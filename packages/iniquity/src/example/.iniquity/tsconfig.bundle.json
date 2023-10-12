@@ -1,4 +1,5 @@
 {
+    "extends": "./tsconfig.json",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "target": "es5",
@@ -6,8 +7,7 @@
         "lib": ["es2020"],
         "skipLibCheck": true,
         "resolveJsonModule": false,
-        "rootDir": "src",
-        "outDir": "dist"
+        "outDir": "iniquity"
     },
     "include": ["../*.ts"],
     "exclude": [".vscode", "node_modules", "dist", "**/*.spec.ts"]

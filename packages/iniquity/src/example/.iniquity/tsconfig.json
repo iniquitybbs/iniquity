@@ -12,16 +12,16 @@
         "experimentalDecorators": true,
         "types": ["node"],
         "baseUrl": ".",
+        "rootDir": "../",
         "lib": ["es2020", "dom"],
         "skipLibCheck": true,
         "module": "commonjs",
         "sourceMap": true,
         "allowJs": false,
-        "rootDirs": ["src", "src/commands", "src/templates", "src/assets"],
-        "outDir": "dist/",
+        "outDir": "iniquity/",
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["**/*.ts"],
-    "exclude": [".vscode", "dist", "node_modules", "src/example"]
+    "include": ["../*.ts"],
+    "exclude": [".vscode", "iniquity", "node_modules", "src/example"]
 }
