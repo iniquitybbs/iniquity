@@ -63,7 +63,7 @@ export class App implements yargs.CommandModule {
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
-            .options("install_deps", {
+            .options("install", {
                 type: "boolean",
                 default: false,
                 describe: "Install dependencies for the iniquity bbs app."
@@ -88,11 +88,11 @@ export class App implements yargs.CommandModule {
             .pkgConf("iniquity", path.join(__dirname))
     }
     public handler(argv: yargs.Arguments) {
-        if (argv.install_deps || argv.watch) {
+        if (argv.install || argv.watch) {
             if (fs.existsSync(".iniquity")) {
                 process.chdir(".iniquity")
 
-                if (argv.install_deps) {
+                if (argv.install) {
                     exec("npm install", (err, stdout, stderr) => {
                         if (err) {
                             console.error(err)

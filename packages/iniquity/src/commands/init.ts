@@ -60,8 +60,8 @@ export class Init implements yargs.CommandModule {
             })
             .options("template", {
                 type: "string",
-                default: "eternity",
-                choices: ["eternity", "euphoria"],
+                default: "default",
+                choices: ["default", "eternity", "euphoria"],
                 describe: "Specify a template to use when constructing your new iniquity bbs.",
                 demandOption: false
             })
@@ -76,12 +76,10 @@ export class Init implements yargs.CommandModule {
     }
     public handler(argv: yargs.Arguments) {
         if (!argv.help || !argv.version) {
-            // console.log(cwd())
-
-            // console.log(path.join(__dirname, "../../../src/example/*"))
-
-            copyfiles([path.join(__dirname, "../../../src/example/*"), "."], { up: true, all: true }, (err) => {})
-            copyfiles([path.join(__dirname, "../../../src/example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
+            if (argv.template === "default") {
+                copyfiles([path.join(__dirname, "../../../src/example/*"), "."], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../src/example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
+            }
 
             console.log("Iniquity system initialized.")
         }
