@@ -3,3 +3,4 @@ data
 .rollup.cache
 iniquity
 dist
+!rollup.config.js

@@ -40,7 +40,7 @@
     "types": "src/index",
     "dependencies": {
         "@abraham/reflection": "^0.12.0",
-        "@iniquitybbs/core": "^3.0.31",
+        "@iniquitybbs/core": "^3.0.39",
         "docker-cli": "^0.0.2",
         "lodash": "^4.17.21",
         "tslib": "^2.6.2",
