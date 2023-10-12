@@ -35,6 +35,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 import yargs from "yargs"
 import * as path from "path"
+import fs from "fs"
 import { exec } from "child_process"
 
 import * as compose from "docker-compose"
@@ -79,6 +80,24 @@ export class App implements yargs.CommandModule {
     public handler(argv: yargs.Arguments) {
         switch (argv.action) {
             case "start":
+                if (fs.existsSync(".iniquity")) {
+                    process.chdir(".iniquity")
+                    exec("npm install", (err, stdout, stderr) => {
+                        if (err) {
+                            console.error(err)
+                            return
+                        }
+                        console.log(stdout)
+                    })
+                    exec("npx rollup -c", (err, stdout, stderr) => {
+                        if (err) {
+                            console.error(err)
+                            return
+                        }
+                        console.log(stdout)
+                    })
+                }
+
                 compose.upAll(composeOptions).then(
                     (response: compose.IDockerComposeResult) => {
                         if (response.out) console.log(response.out)

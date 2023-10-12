@@ -83,24 +83,6 @@ export class Init implements yargs.CommandModule {
             copyfiles([path.join(__dirname, "../../../src/example/*"), "."], { up: true, all: true }, (err) => {})
             copyfiles([path.join(__dirname, "../../../src/example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
 
-            if (fs.existsSync(".iniquity")) {
-                process.chdir(".iniquity")
-                exec("npm install", (err, stdout, stderr) => {
-                    if (err) {
-                        console.error(err)
-                        return
-                    }
-                    console.log(stdout)
-                })
-                exec("npx rollup -c", (err, stdout, stderr) => {
-                    if (err) {
-                        console.error(err)
-                        return
-                    }
-                    console.log(stdout)
-                })
-            }
-
             console.log("Iniquity system initialized.")
         }
     }
