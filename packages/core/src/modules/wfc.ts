@@ -1,4 +1,4 @@
-import { IQ, IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModuleACLS, IQReactor, randomAsset } from "@iniquitybbs/core"
+import { IQ, IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModuleACLS, IQReactor, randomAsset } from "../index"
 
 /**
  * The iniquity waiting for caller module

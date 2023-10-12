@@ -1,4 +1,4 @@
-import iq, { IQ, IQModule, IQModuleACLS, IQCoreAssets, IQModuleRuntime, IQReactor } from "@iniquitybbs/core"
+import iq, { IQ, IQModule, IQModuleACLS, IQCoreAssets, IQModuleRuntime, IQReactor } from "../index"
 
 @IQModule({
     basepath: "/iniquity/core/src/assets",

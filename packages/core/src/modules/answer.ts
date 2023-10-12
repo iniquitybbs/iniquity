@@ -1,15 +1,6 @@
-import {
-    IQCoreAssets,
-    IQModuleACLS,
-    IQFrameColorOptions,
-    IQMenuLoopMessageResponse,
-    IQModule,
-    IQModuleRuntime,
-    IQReactor,
-    IQ
-} from "@iniquitybbs/core"
+import { IQCoreAssets, IQModuleACLS, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQReactor, IQ } from "../index"
 
-import { IQCoreModules } from "@iniquitybbs/core/src/modules"
+import { IQCoreModules } from "./index"
 
 @IQModule({
     basepath: "/iniquity/core/src/assets",
