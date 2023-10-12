@@ -22,6 +22,6 @@
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["../*.ts"],
+    "include": ["../*.ts", "../*.json"],
     "exclude": [".vscode", "iniquity", "node_modules", "src/example"]
 }
