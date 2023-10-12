@@ -103,7 +103,7 @@ export class App implements yargs.CommandModule {
                 }
 
                 if (argv.watch) {
-                    exec("npx rollup -c", (err, stdout, stderr) => {
+                    exec("npx rollup -cw", (err, stdout, stderr) => {
                         if (err) {
                             console.error(err)
                             return
