@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "incremental": true,
+        "strict": true,
+        "composite": true,
+        "strictFunctionTypes": false,
+        "allowSyntheticDefaultImports": true,
+        "target": "esnext",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "types": ["node"],
+        "baseUrl": ".",
+        "rootDir": "../",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "module": "commonjs",
+        "sourceMap": true,
+        "allowJs": false,
+        "outDir": "dist",
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["../*.ts", "../*.json"],
+    "exclude": [".vscode", "dist", "node_modules", "src/example"]
+}
