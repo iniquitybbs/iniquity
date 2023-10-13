@@ -1,15 +1,15 @@
 /**
  *
- * Iniquity Runtime
+ * Iniquity Server
  * @summary The super cool command line interface to Iniquity.
  * @example Invoking via the shell
  * ```shell
- * iq runtime --help
+ * iq server --help
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
- * import Runtime from "@iniquitybbs/iniquity/src/commands/runtime"
- * const runtime: yargs.CommandModule = new Runtime()
+ * import Server from "@iniquitybbs/iniquity/src/commands/server"
+ * const server: yargs.CommandModule = new Server()
  * ```
  */
 
@@ -53,7 +53,7 @@ const composeOptions: compose.IDockerComposeOptions = {
 }
 
 /**
- * Iniquity Runtime
+ * Iniquity Server
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
