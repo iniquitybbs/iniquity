@@ -1,6 +1,0 @@
-node_modules
-data
-.rollup.cache
-iniquity
-dist
-!rollup.config.js

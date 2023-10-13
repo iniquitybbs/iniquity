@@ -10,5 +10,5 @@ services:
             - "1123:1123"
             - "11235:11235"
         volumes:
-            - ./iniquity:/iniquity
+            - ./dist:/dist
             - ./data:/sbbs/data

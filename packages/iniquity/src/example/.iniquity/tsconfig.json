@@ -18,10 +18,10 @@
         "module": "commonjs",
         "sourceMap": true,
         "allowJs": false,
-        "outDir": "iniquity/",
+        "outDir": "dist",
         "declaration": true,
         "forceConsistentCasingInFileNames": true
     },
     "include": ["../*.ts", "../*.json"],
-    "exclude": [".vscode", "iniquity", "node_modules", "src/example"]
+    "exclude": [".vscode", "dist", "node_modules", "src/example"]
 }
