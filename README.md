@@ -18,23 +18,31 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 npm install -g @iniquitybbs/iniquity
 ```
 
-Then...
+You will find a `iniquity` and `iq` command in your path. Both commands do the same thing. Use whichever you prefer.
 
 ```shell
-iniquity init --name MyBBS
+iq --version
 ```
 
-...and finally.
+Initialize the current directory as an Iniquity BBS.
 
 ```shell
-iniquity app start
+iq init
 ```
 
-After that, you can connect to your locally running iniquity instance using a telnet client or web browser.
+Once the current directory has been initialized you quickly start the BBS with the `start` command.
 
 ```shell
-iniquity term --host localhost
+iq server start
 ```
+
+While you are developing, you can use the `--watch` flag to automatically restart the server when you make changes.
+
+```shell
+iq server --watch
+```
+
+Using SyncTerm, you can connect to your BBS at `localhost`. Or web browsers can connect to `http://localhost`.
 
 ## Getting started guide
 
