@@ -57,9 +57,9 @@ const composeOptions: compose.IDockerComposeOptions = {
  * @summary The main entry into all iniquity cli commands that are available.
  * @implements {yargs.CommandModule}
  */
-export class App implements yargs.CommandModule {
-    public command = "app [action]"
-    public describe = "Control your iniquity bbs runtime."
+export class Server implements yargs.CommandModule {
+    public command = "server [action]"
+    public describe = "Control your iniquity bbs server."
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
@@ -152,4 +152,4 @@ export class App implements yargs.CommandModule {
     }
 }
 
-export default new App()
+export default new Server()

@@ -22,22 +22,16 @@ Initialize the current directory as an Iniquity BBS.
 iq init
 ```
 
-Now that you have your iniquity bbs initialized, you can install its dependencies.
+Once the current directory has been initialized you quickly start the BBS with the `start` command.
 
 ```shell
-iq app --install
-```
-
-Once the dependencies are installed, you can start the BBS.
-
-```shell
-iq app start
+iq server start
 ```
 
 While you are developing, you can use the `--watch` flag to automatically restart the server when you make changes.
 
 ```shell
-iq app --watch
+iq server --watch
 ```
 
 Using SyncTerm, you can connect to your BBS at `localhost`. Or web browsers can connect to `http://localhost`.

@@ -1,5 +1,5 @@
 import init from "./init"
 import term from "./term"
-import app from "./app"
+import server from "./server"
 
-export { init, term, app }
+export { init, term, server }
