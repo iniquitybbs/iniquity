@@ -1180,6 +1180,10 @@ export namespace IQ {
         return iq.ask(question)
     }
 
+    export function artwork(options: IQArtworkOptions): Artwork {
+        return iq.artwork(options)
+    }
+
     export class Core extends Iniquity {}
 
     export namespace Core {
