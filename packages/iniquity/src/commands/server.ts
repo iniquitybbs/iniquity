@@ -40,6 +40,7 @@ import { exec } from "child_process"
 
 import * as compose from "docker-compose"
 import * as dotenv from "dotenv"
+import copyfiles from "copyfiles"
 dotenv.config()
 
 process.env["COMPOSE_PROJECT_NAME"] = "iniquity"
@@ -103,6 +104,8 @@ export class Server implements yargs.CommandModule {
                 }
 
                 if (argv.watch) {
+                    copyfiles(["./assets", ".iniquity/dist/assets"], { up: true, all: true }, (err) => {})
+
                     exec("npx rollup -cw", (err, stdout, stderr) => {
                         if (err) {
                             console.error(err)
