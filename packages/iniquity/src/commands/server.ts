@@ -104,7 +104,7 @@ export class Server implements yargs.CommandModule {
                 }
 
                 if (argv.watch) {
-                    copyfiles(["./assets", ".iniquity/dist/assets"], { up: true, all: true }, (err) => {
+                    copyfiles(["assets/", ".iniquity/dist/assets"], { up: true, all: true }, (err) => {
                         console.error(err)
                     })
 
