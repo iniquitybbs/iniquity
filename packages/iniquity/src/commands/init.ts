@@ -94,6 +94,8 @@ export class Init implements yargs.CommandModule {
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
             }
 
+            console.log(`Iniquity template ${argv.template} installed.`)
+
             setTimeout(() => {
                 if (fs.existsSync(".iniquity")) {
                     process.chdir(".iniquity")
@@ -103,12 +105,10 @@ export class Init implements yargs.CommandModule {
                             console.error(err)
                             return
                         }
-                        console.log(stdout)
+                        console.log(`Template ${argv.template} npm dependencies installed.`)
                     })
                 }
             }, 3000)
-
-            console.log("Iniquity system initialized.")
         }
     }
 }
