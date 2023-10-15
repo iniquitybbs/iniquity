@@ -82,9 +82,9 @@ export class Init implements yargs.CommandModule {
             }
 
             if (argv.template === "mybbs") {
-                copyfiles([path.join(__dirname, "../../../../core/src/mybbs/*"), "."], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../core/src/mybbs/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../core/src/mybbs/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/mybbs/*"), "."], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/mybbs/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/mybbs/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
             }
 
             setTimeout(() => {
