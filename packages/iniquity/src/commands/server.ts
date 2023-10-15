@@ -111,6 +111,8 @@ export class Server implements yargs.CommandModule {
                         console.log(stdout)
                     })
                 }
+
+                process.chdir("../")
             }
         }
 
