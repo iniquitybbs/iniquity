@@ -1166,6 +1166,9 @@ export function ask(question: string): string {
 export function artwork(options: IQArtworkOptions): Artwork {
     return iq.artwork(options)
 }
+export function menu(options: IQMenuOptions): IQMenu {
+    return iq.menu(options)
+}
 
 export namespace IQ {
     export function gotoxy(x: number, y: number): void {
@@ -1186,6 +1189,10 @@ export namespace IQ {
 
     export function artwork(options: IQArtworkOptions): Artwork {
         return iq.artwork(options)
+    }
+
+    export function menu(options: IQMenuOptions): IQMenu {
+        return iq.menu(options)
     }
 
     export class Core extends Iniquity {}
