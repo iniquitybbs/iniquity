@@ -1163,6 +1163,10 @@ export function ask(question: string): string {
     return iq.ask(question)
 }
 
+export function artwork(options: IQArtworkOptions): Artwork {
+    return iq.artwork(options)
+}
+
 export namespace IQ {
     export function gotoxy(x: number, y: number): void {
         iq.gotoxy(x, y)
