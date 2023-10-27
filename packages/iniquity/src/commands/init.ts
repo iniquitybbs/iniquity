@@ -61,7 +61,7 @@ export class Init implements yargs.CommandModule {
             .options("template", {
                 type: "string",
                 default: "default",
-                choices: ["default", "eternity", "mybbs"],
+                choices: ["default", "eternity", "mybbs", "euphoria"],
                 describe: "Specify a template to use when constructing your new iniquity bbs.",
                 demandOption: false
             })
@@ -92,6 +92,13 @@ export class Init implements yargs.CommandModule {
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/*"), "."], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
+            }
+
+            if (argv.template === "euphoria") {
+                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/*"), "."], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/assets/*"), "assets"], { up: true, all: true }, (err) => {})
             }
 
             console.log(`Iniquity template ${argv.template} installed.`)
