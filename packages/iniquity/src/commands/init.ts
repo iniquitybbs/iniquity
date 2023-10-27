@@ -60,7 +60,7 @@ export class Init implements yargs.CommandModule {
             })
             .options("template", {
                 type: "string",
-                default: "default",
+                default: "euphoria",
                 choices: ["default", "eternity", "mybbs", "euphoria"],
                 describe: "Specify a template to use when constructing your new iniquity bbs.",
                 demandOption: false
