@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+
+        "paths": { 
+            "@iniquitybbs/iniquity": ["./.iniquity/node_modules/@iniquitybbs/core/src"] 
+        }
+    }
+}
