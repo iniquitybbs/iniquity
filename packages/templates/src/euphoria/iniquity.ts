@@ -3,7 +3,7 @@
  * @author ispyhumanfly
  * @license MIT
  */
-import { artwork, say, wait } from "@iniquitybbs/core"
+import { artwork, say, wait } from "./.iniquity/node_modules/@iniquitybbs/core/src"
 
 say("A 132x37 terminal resolution is required to view this BBS.")
 
