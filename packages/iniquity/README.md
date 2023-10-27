@@ -6,7 +6,7 @@ The iniquity bbs command line interface.
 
 ## Synopsis
 
-"Iniquity 3 is more than just a BBS platform. Designed for both traditional sysops and innovative developers, it offers a consistent experience across Terminal.app, xterm, NetRunner, and more, mirroring precisely what's seen in a web browser. Beyond standard BBS functionalities, it's a toolkit for new terminal-style creations, ensuring seamless communication between BBS applications. It's a playground for modders and a testament to pushing BBS boundaries." - @ispyhumanfly
+Iniquity 3 is more than just a BBS platform. Designed for both traditional sysops and innovative developers, it offers a consistent experience across Terminal.app, xterm, NetRunner, and more, mirroring precisely what's seen in a web browser. Beyond standard BBS functionalities, it's a toolkit for new terminal-style creations, ensuring seamless communication between BBS applications. It's a playground for modders and a testament to pushing BBS boundaries.
 
 ```shell
 npm install -g @iniquitybbs/iniquity
