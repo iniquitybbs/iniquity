@@ -105,7 +105,7 @@ export class Server implements yargs.CommandModule {
 
                 if (argv.watch) {
                     copyfiles([path.join(".", "./assets/*"), ".iniquity/dist/assets"], { up: true, all: true }, (err) => {
-                        console.error(err)
+                        // console.error(err)
                     })
 
                     exec("npx rollup -cw", (err, stdout, stderr) => {
