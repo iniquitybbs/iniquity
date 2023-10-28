@@ -12,3 +12,6 @@ iq.basepath = "/dist/assets"
 iq.say(`Welcome to ${config.name}.`).pause()
 
 iq.artwork().render({ filename: "4d-iniq1.ans" }).pause()
+
+iq.artwork().render({ filename: "newuser.ans", mode: "character", speed: 400 }).pause()
+
