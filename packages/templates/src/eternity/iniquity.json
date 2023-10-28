@@ -1,4 +1,6 @@
 {
     "name": "eternity",
-    "theme": "iq3"
+    "template": "eternity",
+    "theme": "iq3",
+    "assets": "./assets"
 }

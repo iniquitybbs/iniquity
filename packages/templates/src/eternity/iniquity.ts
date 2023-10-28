@@ -1,10 +1,14 @@
-import { say, ask } from "./.iniquity/node_modules/@iniquitybbs/core/src"
+/** eternity bbs
+ * @file iniquity.ts
+ */
+
+import { IQ } from "./.iniquity/node_modules/@iniquitybbs/core/src"
 import config from "./iniquity.json"
 
-say(`Welcome to ${config.name}.`).pause()
-say(`${config.name} is the best board ever made.`).pause()
+const iq = new IQ.Core()
 
-say("Hey there visitor.".color("red")).pause()
+iq.basepath = "/dist/assets"
 
-const name = ask("Hey can I know your name?")
-say(`Hello ${name}! Welcome to ${config.name}.`).pause()
+iq.say(`Welcome to ${config.name}.`).pause()
+
+iq.artwork().render({ filename: "4d-iniq1.ans" }).pause()
