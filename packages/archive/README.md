@@ -1,6 +1,6 @@
 # Iniquity Archive
 
-This is where we can put all the old Iniquity stuff. Do some cool stuff with it. Make it accessible to iniquity bbs developers.
+This is where we can put all the old Iniquity stuff. Literally anything we can find about older versions of Iniquity, or even other BBS software.
 
 ![Alt text](https://github.com/iniquitybbs/iniquity/raw/master/packages/core/src/assets/5m-iniquity3a.png?raw=true "Iniquity 3")
 

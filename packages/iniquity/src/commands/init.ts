@@ -60,8 +60,8 @@ export class Init implements yargs.CommandModule {
             })
             .options("template", {
                 type: "string",
-                default: "euphoria",
-                choices: ["default", "eternity", "mybbs", "euphoria"],
+                default: "eternity",
+                choices: ["eternity", "euphoria"],
                 describe: "Specify a template to use when constructing your new iniquity bbs.",
                 demandOption: false
             })
@@ -76,22 +76,11 @@ export class Init implements yargs.CommandModule {
     }
     public handler(argv: yargs.Arguments) {
         if (!argv.help || !argv.version) {
-            if (argv.template === "default") {
-                copyfiles([path.join(__dirname, "../../../src/example/*"), "."], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../src/example/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../src/example/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
-            }
-
-            if (argv.template === "mybbs") {
-                copyfiles([path.join(__dirname, "../../../../templates/src/mybbs/*"), "."], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../templates/src/mybbs/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../templates/src/mybbs/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
-            }
-
             if (argv.template === "eternity") {
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/*"), "."], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/assets/*"), "assets"], { up: true, all: true }, (err) => {})
             }
 
             if (argv.template === "euphoria") {
