@@ -27,7 +27,7 @@ export class Eternity extends IQ {
         this.gotoxy(1,1)
         this.wait(2000)
 
-        Promise.all([this.welcome(), this.newuser()])
+        this.welcome()
 
     }
 
@@ -37,8 +37,21 @@ export class Eternity extends IQ {
     public welcome() {
             
         this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
-        this.gotoxy(1,1)
-        this.wait(2000)
+
+        "welcome to eternity bbs ... ".color("background blue").center()
+
+        this.ask("Are you a new users? (y/n)".color("reset"), (answer: string) => {
+
+            if (answer == "y") {
+
+                this.newuser()
+
+            } else {
+
+               "asdasd".color("background bright red").center()
+
+            }
+        })
     }
 
     /** New user screen
@@ -50,7 +63,8 @@ export class Eternity extends IQ {
             const message = this.data.model.message as string
             this.artwork().render({ filename: "newuser.cp437.ans", mode: "@-codes", clearScreenBefore: true })
 
-            message.center()
+            message.color("background bright green").center()
+
             this.gotoxy(1,1)
         })
 
