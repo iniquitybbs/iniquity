@@ -484,8 +484,9 @@ export class Iniquity extends IQBaseConfig {
      * @param question
      * @returns response
      */
-    public ask(question: string): string {
-        return prompt(question)
+    public ask(question: string, callback?: any): string | undefined {
+        if (!callback) return prompt(question)
+        callback(prompt(question))
     }
 
     /**
@@ -1158,8 +1159,9 @@ export function pause(options?: IQPauseOptions): void {
 export function wait(options?: IQWaitOptions | number): void {
     iq.wait(options)
 }
-export function ask(question: string): string {
-    return iq.ask(question)
+export function ask(question: string, callback?: any): string | undefined {
+    if (!callback) return iq.ask(question)
+    else callback(iq.ask(question))
 }
 
 export function artwork(options: IQArtworkOptions): Artwork {
