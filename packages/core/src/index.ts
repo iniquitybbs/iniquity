@@ -135,7 +135,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
     }
 
     function observe(property: any, signalHandler: any) {
-        alert(property)
+        //alert(property)
         // @ts-expect-error
         if (!signals[property]) signals[property] = [] // If there is NO signal for the given property, we create it and set it to a new array to store the signalHandlers
         // @ts-expect-error

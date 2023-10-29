@@ -2,23 +2,41 @@
  * @file iniquity.ts
  */
 
-import { IQ } from "./.iniquity/node_modules/@iniquitybbs/core/src"
+import { IQ, IQModule, IQReactor, IQModuleACLS, IQModuleRuntime, IQFrameColorOptions } from "./.iniquity/node_modules/@iniquitybbs/core/src"
 import config from "./iniquity.json"
 
-const iq = new IQ.Core()
+export class Eternity extends IQ {
 
-iq.basepath = "/dist/assets"
+    basepath = "/dist/assets"
+    access = IQModuleACLS.low
+    assets = ""
+    data =  IQReactor({
+        message: "",
+        number: 1,
+        time: time(),
+        system: system.stats
+    })
 
-iq.artwork().render({ filename: "as-ini.cp437.ans", mode: "@-codes", clearScreenBefore: false })
-iq.wait(2000)
+    @IQModuleRuntime({
+        debug: true
+    })
+    public start() {
 
-iq.say(`Welcome to ${config.name}.`).pause()
+        this.artwork().render({ filename: "as-ini.cp437.ans", mode: "@-codes", clearScreenBefore: false })
+        this.wait(2000)
 
-iq.artwork().render({ filename: "newuser.cp437.ans", mode: "character", speed: 40 }).pause()
+        this.data.observe("message", () => {
 
-iq.wait(3000)
+            const message = this.data.model.message as string
 
-iq.say("Ok, logging off. Thanks for visiting!")
-iq.artwork().render({ filename: "4d-iniq1.ans", clearScreenBefore: false })
-iq.pause()
+            this.say(message.color("background black").color("bright white").color("cyan"))
+        })
 
+        this.data.model.message = "Hello World!"
+        this.data.model.message = "Hello World! 2"
+        this.data.model.message = "Hello World! And around and around we go!"
+
+    }   
+}
+
+new Eternity().start()
