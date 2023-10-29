@@ -145,7 +145,6 @@ export function IQReactor(dataObj: any): IQReactorOptions {
     function notify(signal: any, newVal?: any) {
         // @ts-expect-error
         if (!signals[signal] || signals[signal].length < 1) return // Early return if there are no signal handlers
-
         // @ts-expect-error
         signals[signal].forEach((signalHandler) => signalHandler()) // We call each signalHandler that’s observing the given property
     }
