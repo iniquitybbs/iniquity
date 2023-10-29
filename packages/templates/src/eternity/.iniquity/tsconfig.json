@@ -5,7 +5,7 @@
         "composite": true,
         "strictFunctionTypes": false,
         "allowSyntheticDefaultImports": true,
-        "target": "esnext",
+        "target": "ES5",
         "moduleResolution": "node",
         "esModuleInterop": true,
         "resolveJsonModule": true,

@@ -40,9 +40,13 @@
     "types": "src/index",
     "dependencies": {
         "@abraham/reflection": "^0.12.0",
-        "@iniquitybbs/core": "*",
+        "@iniquitybbs/core": "^3.0.66",
+        "core-js": "^3.33.1",
+        "core-js-bundle": "^3.33.1",
+        "corejs": "^1.0.0",
         "docker-cli": "^0.0.2",
         "lodash": "^4.17.21",
+        "promise-polyfill": "^8.3.0",
         "tslib": "^2.6.2",
         "yargs": "^17.7.1"
     }

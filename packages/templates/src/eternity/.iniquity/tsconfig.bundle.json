@@ -2,9 +2,9 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "target": "es5",
+        "target": "ES5",
         "types": ["node"],
-        "lib": ["es2020"],
+        "lib": ["ES5"],
         "skipLibCheck": true,
         "resolveJsonModule": false
     },

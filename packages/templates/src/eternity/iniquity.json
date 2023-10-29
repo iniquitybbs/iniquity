@@ -1,5 +1,6 @@
 {
     "name": "eternity",
+    "sysop": "ispyhumanfly",
     "template": "eternity",
     "theme": "iq3",
     "assets": "./assets"

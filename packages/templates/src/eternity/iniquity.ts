@@ -2,41 +2,72 @@
  * @file iniquity.ts
  */
 
-import { IQ, IQModule, IQReactor, IQModuleACLS, IQModuleRuntime, IQFrameColorOptions } from "./.iniquity/node_modules/@iniquitybbs/core/src"
+import iq, { IQ, IQReactor, IQModuleACLS } from "./.iniquity/node_modules/@iniquitybbs/core/src"
 import config from "./iniquity.json"
+import { setInterval, Promise } from "./pollyfills"
 
 export class Eternity extends IQ {
 
     basepath = "/dist/assets"
     access = IQModuleACLS.low
-    assets = ""
     data =  IQReactor({
+        config: config,
         message: "",
         number: 1,
-        time: time(),
         system: system.stats
     })
 
-    @IQModuleRuntime({
-        debug: true
-    })
     public start() {
 
-        this.artwork().render({ filename: "as-ini.cp437.ans", mode: "@-codes", clearScreenBefore: false })
+        this.artwork().render({ filename: "as-ini.cp437.ans", clearScreenBefore: false })
+        this.gotoxy(1,1)
         this.wait(2000)
+
+        Promise.all([this.welcome(), this.newuser()])
+
+    }
+
+    public welcome() {
+            
+        this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
+        this.gotoxy(1,1)
+        this.wait(2000)
+    
+    }
+
+    public newuser() {
 
         this.data.observe("message", () => {
 
             const message = this.data.model.message as string
+            this.artwork().render({ filename: "newuser.cp437.ans", mode: "@-codes", clearScreenBefore: true })
 
-            this.say(message.color("background black").color("bright white").color("cyan"))
+            message.center()
+            this.gotoxy(1,1)
         })
 
-        this.data.model.message = "Hello World!"
-        this.data.model.message = "Hello World! 2"
-        this.data.model.message = "Hello World! And around and around we go!"
+        this.data.model.message = "welcome to eternity bbs ... "
+        this.wait(2000)
+        this.data.model.message = "please read the following if you are calling long distance you will be automatically validated now otherwise..."
+        this.wait(3000) 
+        this.data.model.message = "you must wait to be manually validated by the sysop."  
+        this.wait(2000)
+        this.data.model.message = "this process can take anywhere from 12 to 48 hours."
+        this.wait(2000)
+        this.data.model.message = "there are currently no upload/download or post/call ratios active on."
+        this.wait(2000)
+        this.data.model.message = "however, there is a limit of files/kb that you may in one day. (max 10 files, 1.6 meg for normal access users)."
+        this.wait(2000)
+        this.data.model.message = `feel free to mail the sysop/iniq author, ${this.data.model.config.sysop} with any comments you may have.`
 
-    }   
+        setInterval(() => {
+
+            this.data.model.message = new Date().toISOString()
+
+        }, 1000)
+
+
+    }
 }
 
 new Eternity().start()
