@@ -3,8 +3,8 @@
  */
 
 import iq, { IQ, IQReactor, IQModuleACLS } from "./.iniquity/node_modules/@iniquitybbs/core/src"
+import { setInterval, Promise } from "./.iniquity/node_modules/@iniquitybbs/core/src/pollyfills"
 import config from "./iniquity.json"
-import { setInterval, Promise } from "./pollyfills"
 
 export class Eternity extends IQ {
 
@@ -17,6 +17,10 @@ export class Eternity extends IQ {
         system: system.stats
     })
 
+    /** 
+     * Start the bbs
+     * 
+     */
     public start() {
 
         this.artwork().render({ filename: "as-ini.cp437.ans", clearScreenBefore: false })
@@ -27,14 +31,18 @@ export class Eternity extends IQ {
 
     }
 
+    /** 
+     * Welcome screen
+     */
     public welcome() {
             
         this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
         this.gotoxy(1,1)
         this.wait(2000)
-    
     }
 
+    /** New user screen
+     */
     public newuser() {
 
         this.data.observe("message", () => {
@@ -65,8 +73,6 @@ export class Eternity extends IQ {
             this.data.model.message = new Date().toISOString()
 
         }, 1000)
-
-
     }
 }
 
