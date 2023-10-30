@@ -10,7 +10,5 @@
     "singleQuote": false,
     "arrowParens": "always",
     "endOfLine": "lf",
-    "htmlWhitespaceSensitivity": "css",
-    "attributeSeparator": "as-needed",
-    "commentPreserveSpaces": "keep-all"
+    "htmlWhitespaceSensitivity": "css"
 }

@@ -6,7 +6,8 @@
     "postinstall": "npx lerna bootstrap",
     "build": "npx lerna run build && npx typedoc --theme default ./packages",
     "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n iniquity \"docker-compose up --build\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx prettier --write \"packages/**/*.{ts,tsx}\" && npx eslint \"packages/**/*.{ts,tsx}\" --fix"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "concurrently": "^7.6.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-prettier": "^4.2.1",
     "lerna": "^6.0.3",
     "prettier": "2.8.0",
