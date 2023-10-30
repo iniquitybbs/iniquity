@@ -8,8 +8,8 @@ This is where we can put all the old Iniquity stuff. Literally anything we can f
 
 I'm thinking this is like, Iniquity's built in backpack.
 
-- Filled with all kinds of random ansi, ascii, whatever _textmode_ files.
-- Maybe eventually it could also do some processing on these files by way of some of Synchronet's lower level text file utils. Hmm...
+-   Filled with all kinds of random ansi, ascii, whatever _textmode_ files.
+-   Maybe eventually it could also do some processing on these files by way of some of Synchronet's lower level text file utils. Hmm...
 
 ## Install
 
