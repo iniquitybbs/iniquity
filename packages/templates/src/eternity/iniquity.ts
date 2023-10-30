@@ -2,7 +2,7 @@
  * @file iniquity.ts
  */
 
-import iq, { IQ, IQReactor, IQModuleACLS } from "./.iniquity/node_modules/@iniquitybbs/core/src"
+import { IQ, IQReactor, IQModuleACLS } from "./.iniquity/node_modules/@iniquitybbs/core/src"
 import { setInterval, Promise } from "./.iniquity/node_modules/@iniquitybbs/core/src/pollyfills"
 import config from "./iniquity.json"
 
@@ -12,6 +12,7 @@ export class Eternity extends IQ {
     access = IQModuleACLS.low
     data =  IQReactor({
         config: config,
+        user: { handle: "", password: "", access: IQModuleACLS.low},
         message: "",
         number: 1,
         system: system.stats
@@ -40,23 +41,16 @@ export class Eternity extends IQ {
 
         "welcome to eternity bbs ... ".color("background blue").center()
 
-        this.ask("Are you a new users? (y/n)".color("reset"), (answer: string) => {
+        this.ask("Welcome to eternity bbs. Would you like to come inside? (y/n)".gotoxy(22,22).color("reset"), (answer: string) => {
 
-            if (answer == "y") {
-
-                this.newuser()
-
-            } else {
-
-               "asdasd".color("background bright red").center()
-
-            }
+            if (answer == "y") this.login()
+            else this.logoff()            
         })
     }
 
-    /** New user screen
+    /** Login user screen
      */
-    public newuser() {
+    public login() {
 
         this.data.observe("message", () => {
 
@@ -82,11 +76,42 @@ export class Eternity extends IQ {
         this.wait(2000)
         this.data.model.message = `feel free to mail the sysop/iniq author, ${this.data.model.config.sysop} with any comments you may have.`
 
-        setInterval(() => {
+        this.ask("What's your handle: ".gotoxy(20,20).color("reset"), (handle: string) => {
 
-            this.data.model.message = new Date().toISOString()
+            if (handle !== "") {
 
-        }, 1000)
+                this.data.model.user = { handle: handle, password: "", access: IQModuleACLS.low }
+
+                this.data.model.message = `welcome ${handle}!`
+                this.wait(2000)
+                this.data.model.message = "you are now validated and ready to go!"
+                this.wait(2000)
+                this.data.model.message = "loading main menu..."
+                this.wait(2000)
+
+                this.main()
+            }
+            
+        })
+    }
+
+    public main() {
+            
+            this.artwork().render({ filename: "us-wfc.ans", clearScreenBefore: true })
+    
+            ":_".color("background bright green").center()
+
+            this.wait(10000)
+
+            this.logoff()
+    }
+
+    public logoff() {
+                
+        this.artwork().render({ filename: "4d-iniq1.ans", clearScreenBefore: true })
+
+        this.say(`Goodbye ${this.data.model.user.handle}, and thanks for calling!`.gotoxy(20,20).color("reset"))
+        this.gotoxy(1,1)
     }
 }
 
