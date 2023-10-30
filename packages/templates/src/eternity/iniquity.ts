@@ -1,4 +1,5 @@
-/** eternity bbs
+/**
+ * eternity bbs
  * @file iniquity.ts
  */
 
@@ -68,16 +69,18 @@ export class Eternity extends IQ {
         this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
 
         this.ask("Would you like to come inside? (y/n)".gotoxy(40, 18).color("reset"), (answer: string) => {
-            if (answer == "y") this.login()
+            if (answer === "y") this.login()
             else this.logoff()
         })
     }
 
-    /** Login user screen
+    /**
+      Login user screen
      */
     public login() {
         this.data.model.message =
             "welcome to eternity bbs ... please read the following if you are calling long distance you will be automatically validated now otherwise..."
+
         this.wait(2000)
         this.data.model.message = "please read the following if you are calling long distance you will be automatically validated now otherwise..."
         this.wait(3000)

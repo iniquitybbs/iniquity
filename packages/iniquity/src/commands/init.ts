@@ -101,6 +101,7 @@ export class Init implements yargs.CommandModule {
                             console.error(err)
                             return
                         }
+
                         console.log(`Template ${argv.template} npm dependencies installed.`)
                     })
                 }

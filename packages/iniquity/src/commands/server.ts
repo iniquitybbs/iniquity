@@ -99,6 +99,7 @@ export class Server implements yargs.CommandModule {
                             console.error(err)
                             return
                         }
+
                         console.log(stdout)
                     })
                 }
@@ -113,6 +114,7 @@ export class Server implements yargs.CommandModule {
                             console.error(err)
                             return
                         }
+
                         console.log(stdout)
                     })
                 }

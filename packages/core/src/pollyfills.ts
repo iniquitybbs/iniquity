@@ -10,10 +10,14 @@ export const setTimeout = function (fn: { (): void; (): void; (): void }, delay:
 }
 
 export const setInterval = function (callback: () => void, delay: any) {
+    /**
+     *
+     */
     function loop() {
         callback()
         setTimeout(loop, delay)
     }
+
     setTimeout(loop, delay)
     // In this polyfill, we're not returning an identifier for the interval.
     // So there's no way to clear this interval once it's set.
@@ -28,44 +32,56 @@ export const Promise = function (
         (arg0: (value: any) => void, arg1: (reason: any) => void): void
     }
 ) {
-    var _this = this
+    const _this = this
 
     this.callbacks = []
     this.state = "pending" // 'pending', 'resolved', 'rejected'
     this.value = null
 
+    /**
+     *
+     * @param value
+     */
     function resolve(value: any) {
         if (_this.state !== "pending") return
 
         _this.state = "resolved"
         _this.value = value
 
-        for (var i = 0; i < _this.callbacks.length; i++) {
-            _this.callbacks[i].resolved(value)
-        }
+        for (let i = 0; i < _this.callbacks.length; i++) _this.callbacks[i].resolved(value)
     }
 
+    /**
+     *
+     * @param reason
+     */
     function reject(reason: any) {
         if (_this.state !== "pending") return
 
         _this.state = "rejected"
         _this.value = reason
 
-        for (var i = 0; i < _this.callbacks.length; i++) {
-            _this.callbacks[i].rejected(reason)
-        }
+        for (let i = 0; i < _this.callbacks.length; i++) _this.callbacks[i].rejected(reason)
     }
 
     this.then = function (onFulfilled: (arg0: any) => any, onRejected: (arg0: any) => any) {
         // @ts-expect-error
         return new Promise(function (resolve: (arg0: any) => void, reject: (arg0: any) => void) {
+            /**
+             *
+             * @param value
+             */
             function handleValue(value: any) {
-                var ret = onFulfilled ? onFulfilled(value) : value
+                const ret = onFulfilled ? onFulfilled(value) : value
                 resolve(ret)
             }
 
+            /**
+             *
+             * @param reason
+             */
             function handleReason(reason: any) {
-                var ret = onRejected ? onRejected(reason) : reason
+                const ret = onRejected ? onRejected(reason) : reason
                 reject(ret)
             }
 
@@ -105,19 +121,22 @@ export const Promise = function (
 Promise.all = function (promises: any[]) {
     // @ts-expect-error
     return new Promise(function (resolve: (arg0: any[]) => void, reject: any) {
-        var results: never[] = []
-        var remaining = promises.length
+        const results: never[] = []
+        let remaining = promises.length
 
+        /**
+         *
+         * @param index
+         * @param value
+         */
         function processResult(index: number, value: any) {
             // @ts-expect-error
             results[index] = value
             remaining--
-            if (remaining === 0) {
-                resolve(results)
-            }
+            if (remaining === 0) resolve(results)
         }
 
-        for (var i = 0; i < promises.length; i++) {
+        for (let i = 0; i < promises.length; i++) {
             ;(function (i) {
                 if (promises[i] !== undefined) {
                     promises[i].then(function (value: any) {
@@ -132,10 +151,6 @@ Promise.all = function (promises: any[]) {
 Promise.race = function (promises: string | any[]) {
     // @ts-expect-error
     return new Promise(function (resolve: any, reject: any) {
-        for (var i = 0; i < promises.length; i++) {
-            if (promises[i] !== undefined) {
-                promises[i].then(resolve, reject)
-            }
-        }
+        for (let i = 0; i < promises.length; i++) if (promises[i] !== undefined) promises[i].then(resolve, reject)
     })
 }

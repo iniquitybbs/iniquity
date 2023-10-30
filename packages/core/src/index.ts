@@ -64,9 +64,10 @@ console.inactivity_hangup = 99999
 
 if (!Object.entries) {
     Object.entries = function (obj: any) {
-        var ownProps = Object.keys(obj),
+        let ownProps = Object.keys(obj),
             i = ownProps.length,
             resArray = new Array(i)
+
         while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]]
 
         return resArray
@@ -77,12 +78,10 @@ if (!Object.entries) {
 if (!String.prototype.includes) {
     String.prototype.includes = function (search, start) {
         // @ts-expect-error
-        if (search instanceof RegExp) {
-            throw TypeError("first argument must not be a RegExp")
-        }
-        if (start === undefined) {
-            start = 0
-        }
+        if (search instanceof RegExp) throw TypeError("first argument must not be a RegExp")
+
+        if (start === undefined) start = 0
+
         return this.indexOf(search, start) !== -1
     }
 }
@@ -100,7 +99,7 @@ export interface IQReactorOptions {
  * @returns
  */
 export function IQReactor(dataObj: any): IQReactorOptions {
-    let signals = {}
+    const signals = {}
 
     observeData(dataObj)
 
@@ -111,6 +110,11 @@ export function IQReactor(dataObj: any): IQReactorOptions {
         notify
     }
 
+    /**
+     *
+     * @param obj
+     * @param key
+     */
     function makeReactive(obj: any, key: any) {
         let val = obj[key]
 
@@ -126,22 +130,32 @@ export function IQReactor(dataObj: any): IQReactorOptions {
     }
 
     // Iterate through our object keys
+    /**
+     *
+     * @param obj
+     */
     function observeData(obj: any) {
-        for (let key in obj) {
-            if (obj.hasOwnProperty(key)) {
-                makeReactive(obj, key)
-            }
-        }
+        for (const key in obj) if (obj.hasOwnProperty(key)) makeReactive(obj, key)
     }
 
+    /**
+     *
+     * @param property
+     * @param signalHandler
+     */
     function observe(property: any, signalHandler: any) {
-        //alert(property)
+        // alert(property)
         // @ts-expect-error
         if (!signals[property]) signals[property] = [] // If there is NO signal for the given property, we create it and set it to a new array to store the signalHandlers
         // @ts-expect-error
         signals[property].push(signalHandler) // We push the signalHandler into the signal array, which effectively gives us an array of callback functions
     }
 
+    /**
+     *
+     * @param signal
+     * @param newVal
+     */
     function notify(signal: any, newVal?: any) {
         // @ts-expect-error
         if (!signals[signal] || signals[signal].length < 1) return // Early return if there are no signal handlers
@@ -195,7 +209,7 @@ export interface IQStringUtils {
     newlines?: number | 0
     center?: boolean | false
 }
-export interface IQPauseOptions extends IQStringUtils {}
+export type IQPauseOptions = IQStringUtils
 export interface IQPrintOptions extends IQStringUtils {
     text: string
 }
@@ -350,6 +364,16 @@ export abstract class IQBaseConfig {
 
 export class Iniquity extends IQBaseConfig {
     /**
+     * Terminal information available to iniquity
+     */
+    public terminfo: IQTermInfoObject = {
+        x: console.screen_columns,
+        y: console.screen_rows,
+        terminal: console.terminal,
+        type: console.type,
+        charset: console.charset
+    }
+    /**
      * Says something to the user. Does not parse MCI/@- codes.
      * @param {IBBSSayOptions | string} options What you would like to say on the screen.
      * @see {@link IQPrintOptions} to learn more about the available options.
@@ -417,6 +441,7 @@ export class Iniquity extends IQBaseConfig {
     /**
      * Display a pause prompt on the screen.
      * @summary This pause prompt does the usual stuff. It also provides a few helpers via its return functions.
+     * @param options
      * @param {IQPauseOptions}
      * @see {@link IQPauseOptions} to learn more about the available options.
      */
@@ -440,7 +465,7 @@ export class Iniquity extends IQBaseConfig {
      * @param {IQCursorOptions} options
      */
     public cursor(options?: IQCursorOptions): IQCursorChainableMethods {
-        let actions: IQCursorChainableMethods = {
+        const actions: IQCursorChainableMethods = {
             errors: [],
             up(rows = 1): IQCursorChainableMethods {
                 console.up(rows)
@@ -482,6 +507,7 @@ export class Iniquity extends IQBaseConfig {
     /**
      * Displays a prompt (value) and returns a string of user input (ala clent-side JS)
      * @param question
+     * @param callback
      * @returns response
      */
     public ask(question: string, callback?: any): string | undefined {
@@ -503,17 +529,6 @@ export class Iniquity extends IQBaseConfig {
 
     public logout(): void {
         bbs.logout()
-    }
-
-    /**
-     * Terminal information available to iniquity
-     */
-    public terminfo: IQTermInfoObject = {
-        x: console.screen_columns,
-        y: console.screen_rows,
-        terminal: console.terminal,
-        type: console.type,
-        charset: console.charset
     }
 
     /**
@@ -634,7 +649,7 @@ export class IQMenu {
             bbs.nodesync()
             bbs.user_sync()
 
-            let res: IQMenuLoopMessageResponse = {
+            const res: IQMenuLoopMessageResponse = {
                 options: options,
                 interval: count,
                 system: system,
@@ -669,9 +684,10 @@ export class IQMenu {
     public prompt(options?: IQMenuPromptOptions | string): IQMenuPromptFunctions {
         if (!this.commands) throw new Error("No commands appear to be configured for this menu.")
 
-        let commands = Object.keys(this.commands)
+        const commands = Object.keys(this.commands)
             .filter((cmdkey) => cmdkey != "default")
             .join(",")
+
         // @ts-expect-error
         if (typeof options === "string") console.putmsg(commands + ":" + options, P_NONE, 4)
         if (typeof options === "object") {
@@ -796,13 +812,14 @@ export class Network {}
  * @summary Some basic user utils. More to follow.
  */
 export class User extends Iniquity {
-    public name: string = ""
-    public password: string = ""
+    public name = ""
+    public password = ""
 
     /**
      * Mechanisms for working with an individual iniquity user
      * @param options.name
      * @param options.password
+     * @param options
      */
     constructor(options: IUserOptions) {
         super()
@@ -822,6 +839,7 @@ export class User extends Iniquity {
             // @ts-expect-error
             user.password = this.password
         }
+
         return user
     }
 }
@@ -859,7 +877,7 @@ export class Artwork extends Iniquity {
      */
     constructor(options: IQArtworkOptions) {
         super()
-        this.basepath = options?.basepath || this.basepath
+        this.basepath = options.basepath || this.basepath
         this.filename = options.filename || undefined
     }
 
@@ -881,12 +899,12 @@ export class Artwork extends Iniquity {
     render(options?: IQArtworkRenderOptions): IQArtworkRenderFunctions {
         if (options?.clearScreenBefore === true) console.putmsg("@POFF@@CLS@@PON@".color("reset"))
 
-        let basepath = options?.basepath || this.basepath
-        let filename = options?.filename || this.filename || new Error("I need to know what file to display!")
-        let encoding = options?.encoding || this.encoding
-        let mode = options?.mode || "@-codes"
-        let speed = options?.speed || 30
-        let data = options?.data || { message: "test" }
+        const basepath = options?.basepath || this.basepath
+        const filename = options?.filename || this.filename || new Error("I need to know what file to display!")
+        const encoding = options?.encoding || this.encoding
+        const mode = options?.mode || "@-codes"
+        const speed = options?.speed || 30
+        const data = options?.data || { message: "test" }
 
         switch (mode) {
             case "reactive":
@@ -903,7 +921,7 @@ export class Artwork extends Iniquity {
                 // @ts-ignore Using Synchronet's JS File operations
                 this.fileHandle = new File(`${this.basepath}/${filename}`)
                 if (!this.fileHandle.open("r")) alert("Iniquity: Error opening file: " + `${this.basepath}/${filename}`)
-                let text = this.fileHandle.readAll()
+                const text = this.fileHandle.readAll()
 
                 for (let i = 0; i < text.length; i++) {
                     // // @ts-ignore these damn constants.
@@ -919,6 +937,7 @@ export class Artwork extends Iniquity {
                     if (i < text.length - 1) console.putmsg("\r\n")
                     console.line_counter = 0
                 }
+
                 this.fileHandle.close()
                 break
 
@@ -926,11 +945,13 @@ export class Artwork extends Iniquity {
                 // @ts-expect-error
                 const graphic = new Graphic(iq.terminfo.x, iq.terminfo.y)
                 graphic.cpm_eof = false
-                if (!graphic.load(`${this.basepath}/${filename}`)) alert("Load failure")
-                else {
-                    let normalized = graphic.normalize()
+                if (!graphic.load(`${this.basepath}/${filename}`)) {
+                    alert("Load failure")
+                } else {
+                    const normalized = graphic.normalize()
                     normalized.draw(undefined, undefined, undefined, undefined, undefined, undefined, options?.speed || undefined)
                 }
+
                 break
             default:
             // nothing...
@@ -938,7 +959,7 @@ export class Artwork extends Iniquity {
 
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) this.pause({ colorReset: options?.colorReset || false, center: options?.center || false })
+                if (options) this.pause({ colorReset: options.colorReset || false, center: options.center || false })
                 else console.putmsg("".color("reset"))
                 console.pause()
             },
@@ -1110,9 +1131,8 @@ String.prototype.center = function (): string {
 
 String.prototype.newlines = function (count?: number | 0): string {
     let string = ""
-    for (let i = 0; i <= count!; i++) {
-        string += "\r\n"
-    }
+    for (let i = 0; i <= count!; i++) string += "\r\n"
+
     return string + this
 }
 
@@ -1149,50 +1169,109 @@ export function cursor(options?: IQCursorOptions): IQCursorChainableMethods {
     return iq.cursor(options)
 }
 
+/**
+ *
+ * @param x
+ * @param y
+ */
 export function gotoxy(x: number, y: number): void {
     iq.gotoxy(x, y)
 }
 
+/**
+ *
+ * @param options
+ */
 export function pause(options?: IQPauseOptions): void {
     iq.pause()
 }
+
+/**
+ *
+ * @param options
+ */
 export function wait(options?: IQWaitOptions | number): void {
     iq.wait(options)
 }
+
+/**
+ *
+ * @param question
+ * @param callback
+ */
 export function ask(question: string, callback?: any): string | undefined {
     if (!callback) return iq.ask(question)
     else callback(iq.ask(question))
 }
 
+/**
+ *
+ * @param options
+ */
 export function artwork(options: IQArtworkOptions): Artwork {
     return iq.artwork(options)
 }
+
+/**
+ *
+ * @param options
+ */
 export function menu(options: IQMenuOptions): IQMenu {
     return iq.menu(options)
 }
 
 export namespace IQ {
+    /**
+     *
+     * @param x
+     * @param y
+     */
     export function gotoxy(x: number, y: number): void {
         iq.gotoxy(x, y)
     }
+    /**
+     *
+     * @param options
+     */
     export function say(options: IBBSSayOptions | string): void {
         iq.say(options)
     }
+    /**
+     *
+     * @param options
+     */
     export function pause(options?: IQPauseOptions): void {
         iq.pause(options)
     }
+    /**
+     *
+     * @param options
+     */
     export function wait(options?: IQWaitOptions): void {
         iq.wait(options)
     }
+    /**
+     *
+     * @param question
+     * @param callback
+     */
     export function ask(question: string, callback?: any): string | undefined {
         if (!callback) return iq.ask(question)
         else callback(iq.ask(question))
     }
 
+    /**
+     *
+     * @param options
+     */
     export function artwork(options: IQArtworkOptions): Artwork {
         return iq.artwork(options)
     }
 
+    /**
+     *
+     * @param options
+     */
     export function menu(options: IQMenuOptions): IQMenu {
         return iq.menu(options)
     }
@@ -1207,6 +1286,10 @@ export namespace IQ {
         //     return IQModule(options)
         // }
 
+        /**
+         *
+         * @param options
+         */
         export function Reactor(options: IQReactorOptions): any {
             return IQReactor(options)
         }
@@ -1214,9 +1297,17 @@ export namespace IQ {
 
     // NOTE this all sucks, need to find a better home for this.
     export namespace Decorators {
+        /**
+         *
+         * @param options
+         */
         export function Module(options: IQModuleOptions): (constructor: Function) => void {
             return IQModule(options)
         }
+        /**
+         *
+         * @param options
+         */
         export function ModuleRuntime(options: IQModuleRuntimeOptions): any {
             return IQModuleRuntime(options)
         }
@@ -1264,7 +1355,7 @@ declare interface ISSBSConsole {
     line_counter: number
     clear: any
     pause: any
-    getkeys(commands: string, constant?: String): void
+    getkeys(commands: string, constant?: string): void
     inkey: any
 }
 /**
@@ -1331,7 +1422,7 @@ export enum IQModuleACLS {
     high = 3,
     superHigh = 4
 }
-export interface IQModuleOptions extends IQBaseConfig {}
+export type IQModuleOptions = IQBaseConfig
 
 /**
  * An experimental Iniquity module decorator for bbs modules
@@ -1339,13 +1430,17 @@ export interface IQModuleOptions extends IQBaseConfig {}
  * @param {IQModuleOptions} options
  */
 
+/**
+ *
+ * @param options
+ */
 export function IQModule(options: IQModuleOptions) {
     return function (constructor: Function) {
-        constructor.prototype.basepath = options?.basepath
-        constructor.prototype.assets = options?.assets
-        constructor.prototype.access = options?.access
-        constructor.prototype.data = options?.data
-        constructor.prototype.computed = options?.computed
+        constructor.prototype.basepath = options.basepath
+        constructor.prototype.assets = options.assets
+        constructor.prototype.access = options.access
+        constructor.prototype.data = options.data
+        constructor.prototype.computed = options.computed
 
         // if (options?.access === IQModuleACLS.low) {
         //     iq.say("You do can't access this module.".color("red")).pause()
@@ -1364,6 +1459,7 @@ export function IQModuleRuntime(options?: IQModuleRuntimeOptions): any {
         if (options?.clearScreenBefore === true) iq.print("@POFF@@CLS@@PON@".color("reset"))
     }
 }
+
 export interface IQModuleRuntimeOptions {
     debug?: boolean
     clearScreenBefore?: boolean

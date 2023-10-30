@@ -74,7 +74,7 @@ class Answer extends IQ {
                         data: { ...this.data.model, ...menu }
                     })
 
-                    let frame = this.frame({
+                    const frame = this.frame({
                         x: 32,
                         y: 10,
                         width: 40,
@@ -82,9 +82,9 @@ class Answer extends IQ {
                         color: IQFrameColorOptions.black
                     })
 
-                    for (const [cmdkey, command] of Object.entries(menu.commands)) {
+                    for (const [cmdkey, command] of Object.entries(menu.commands))
                         frame.say(`${cmdkey} : ${command().options.description}\r\n`.color("white"))
-                    }
+
                     frame.draw()
 
                     menu.prompt({ text: "commands: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)

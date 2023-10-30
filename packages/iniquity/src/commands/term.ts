@@ -89,6 +89,7 @@ export class App implements yargs.CommandModule {
                     console.error(`exec error: ${error}`)
                     return
                 }
+
                 console.info(stdout)
                 console.error(stderr)
             })
