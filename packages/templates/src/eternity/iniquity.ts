@@ -12,6 +12,7 @@ export class Eternity extends IQ {
     access = IQModuleACLS.low
     data =  IQReactor({
         config: config,
+        alert: "",
         user: { handle: "", password: "", access: IQModuleACLS.low},
         message: "",
         number: 1,
@@ -24,33 +25,15 @@ export class Eternity extends IQ {
      */
     public start() {
 
-        this.artwork().render({ filename: "as-ini.cp437.ans", clearScreenBefore: false })
-        this.gotoxy(1,1)
-        this.wait(2000)
+        this.data.observe("alert", () => {
 
-        this.welcome()
+            const alert = this.data.model.alert as string
+            this.artwork().render({ filename: "as-ini.cp437.ans", clearScreenBefore: true })
 
-    }
+            alert.color("white").center()
 
-    /** 
-     * Welcome screen
-     */
-    public welcome() {
-            
-        this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
-
-        "welcome to eternity bbs ... ".color("background blue").center()
-
-        this.ask("Welcome to eternity bbs. Would you like to come inside? (y/n)".gotoxy(22,22).color("reset"), (answer: string) => {
-
-            if (answer == "y") this.login()
-            else this.logoff()            
+            this.gotoxy(1,1)
         })
-    }
-
-    /** Login user screen
-     */
-    public login() {
 
         this.data.observe("message", () => {
 
@@ -62,21 +45,51 @@ export class Eternity extends IQ {
             this.gotoxy(1,1)
         })
 
-        this.data.model.message = "welcome to eternity bbs ... "
+        this.artwork().render({ filename: "iqascii.ans", clearScreenBefore: false }).colorReset()
+        this.wait(2000)
+
+        this.data.model.alert = "Loading iniquity..."
+
+        this.wait(2000)
+
+        "".color("reset")
+
+        this.artwork().render({ filename: "cx-iqwfc.ans", mode: "character", speed: 40, clearScreenBefore: false }).colorReset()
+
+        this.wait(4000)
+
+        this.welcome()
+
+    }
+
+    /** 
+     * Welcome screen
+     */
+    public welcome() {
+
+        this.data.model.alert = "Welcome to eternity bbs ... "
+
+        this.wait(2000)
+            
+        this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
+
+        this.ask("Would you like to come inside? (y/n)".gotoxy(40,18).color("reset"), (answer: string) => {
+
+            if (answer == "y") this.login()
+            else this.logoff()            
+        })
+    }
+
+    /** Login user screen
+     */
+    public login() {
+
+        this.data.model.message = "welcome to eternity bbs ... please read the following if you are calling long distance you will be automatically validated now otherwise..."
         this.wait(2000)
         this.data.model.message = "please read the following if you are calling long distance you will be automatically validated now otherwise..."
         this.wait(3000) 
-        this.data.model.message = "you must wait to be manually validated by the sysop."  
-        this.wait(2000)
-        this.data.model.message = "this process can take anywhere from 12 to 48 hours."
-        this.wait(2000)
-        this.data.model.message = "there are currently no upload/download or post/call ratios active on."
-        this.wait(2000)
-        this.data.model.message = "however, there is a limit of files/kb that you may in one day. (max 10 files, 1.6 meg for normal access users)."
-        this.wait(2000)
-        this.data.model.message = `feel free to mail the sysop/iniq author, ${this.data.model.config.sysop} with any comments you may have.`
-
-        this.ask("What's your handle: ".gotoxy(20,20).color("reset"), (handle: string) => {
+       
+        this.ask("Enter your handle".gotoxy(30,15).color("reset"), (handle: string) => {
 
             if (handle !== "") {
 
@@ -96,14 +109,14 @@ export class Eternity extends IQ {
     }
 
     public main() {
+
+        this.data.model.message = "Loading main menu..."
             
-            this.artwork().render({ filename: "us-wfc.ans", clearScreenBefore: true })
-    
-            ":_".color("background bright green").center()
+        this.artwork().render({ filename: "us-wfc.ans", clearScreenBefore: true })
 
-            this.wait(10000)
+        this.wait(10000)
 
-            this.logoff()
+        this.logoff()
     }
 
     public logoff() {
