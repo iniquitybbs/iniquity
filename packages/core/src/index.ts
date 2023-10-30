@@ -1184,8 +1184,9 @@ export namespace IQ {
     export function wait(options?: IQWaitOptions): void {
         iq.wait(options)
     }
-    export function ask(question: string): string {
-        return iq.ask(question)
+    export function ask(question: string, callback?: any): string | undefined {
+        if (!callback) return iq.ask(question)
+        else callback(iq.ask(question))
     }
 
     export function artwork(options: IQArtworkOptions): Artwork {
