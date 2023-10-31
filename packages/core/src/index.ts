@@ -158,7 +158,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
      */
     function notify(signal: any, newVal?: any) {
         // @ts-expect-error
-        if (!signals[signal] || signals[signal].length < 1) return // Early return if there are no signal handlers
+        if (!signals[signal] ?? signals[signal].length < 1) return // Early return if there are no signal handlers
         // @ts-expect-error
         signals[signal].forEach((signalHandler) => signalHandler()) // We call each signalHandler that’s observing the given property
     }
@@ -423,7 +423,7 @@ export class Iniquity extends IQBaseConfig {
      * ```
      */
     public print(options: IQPrintOptions | string): IBBSPrintFunctions {
-        typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text || new Error("Sometthing is wrong with this string."))
+        typeof options === "string" ? console.putmsg(options) : console.putmsg(options.text ?? new Error("Sometthing is wrong with this string."))
 
         return {
             pause(options?: IQPauseOptions): void {
@@ -447,7 +447,7 @@ export class Iniquity extends IQBaseConfig {
      */
     public pause(options?: IQPauseOptions): void {
         if (options?.colorReset) console.putmsg("".color("reset"))
-        console.putmsg("".newlines(options?.newlines || 0))
+        console.putmsg("".newlines(options?.newlines ?? 0))
         console.pause()
     }
 
@@ -557,7 +557,7 @@ export class Iniquity extends IQBaseConfig {
      * ```
      */
     public artwork(options?: IQArtworkOptions): Artwork {
-        return new Artwork({ basepath: options?.basepath || this.basepath || undefined, filename: options?.filename || undefined })
+        return new Artwork({ basepath: options?.basepath ?? this.basepath ?? undefined, filename: options?.filename ?? undefined })
     }
 
     /**
@@ -642,7 +642,7 @@ export class IQMenu {
     public render(module: Function, options?: IQMenuLoopOptions): void {
         let count = 0
         let cache: IQMenuLoopMessageResponse = {}
-        const maxInterval = options?.maxInterval || 10000000
+        const maxInterval = options?.maxInterval ?? 10000000
 
         do {
             count++
@@ -654,7 +654,7 @@ export class IQMenu {
                 interval: count,
                 system: system,
                 // @ts-expect-error
-                cmdkey: console.inkey(K_UPPER).toString() || null
+                cmdkey: console.inkey(K_UPPER).toString() ?? null
             }
 
             if (res.cmdkey === cache.cmdkey) continue
@@ -717,7 +717,7 @@ export class IQMenu {
 
     public keypressed(cmdkeys: string | null = this.cmdkeys): string {
         // @ts-expect-error
-        return console.getkeys(cmdkeys || this.cmdkeys, K_UPPER)
+        return console.getkeys(cmdkeys ?? this.cmdkeys, K_UPPER)
         // var char = console.inkey(K_UPPER)
         // console.putmsg(char)
     }
@@ -778,7 +778,7 @@ export class IQFrame implements IQFrameOptions {
         do {
             runtime()
             this.cycle()
-            sleep(interval || 100)
+            sleep(interval ?? 100)
         } while (bbs.online && !js.terminated)
     }
     public load(filename: any) {
@@ -877,8 +877,8 @@ export class Artwork extends Iniquity {
      */
     constructor(options: IQArtworkOptions) {
         super()
-        this.basepath = options.basepath || this.basepath
-        this.filename = options.filename || undefined
+        this.basepath = options.basepath ?? this.basepath
+        this.filename = options.filename ?? undefined
     }
 
     /**
@@ -899,12 +899,12 @@ export class Artwork extends Iniquity {
     render(options?: IQArtworkRenderOptions): IQArtworkRenderFunctions {
         if (options?.clearScreenBefore === true) console.putmsg("@POFF@@CLS@@PON@".color("reset"))
 
-        const basepath = options?.basepath || this.basepath
-        const filename = options?.filename || this.filename || new Error("I need to know what file to display!")
-        const encoding = options?.encoding || this.encoding
-        const mode = options?.mode || "@-codes"
-        const speed = options?.speed || 30
-        const data = options?.data || { message: "test" }
+        const basepath = options?.basepath ?? this.basepath
+        const filename = options?.filename ?? this.filename ?? new Error("I need to know what file to display!")
+        const encoding = options?.encoding ?? this.encoding
+        const mode = options?.mode ?? "@-codes"
+        const speed = options?.speed ?? 30
+        const data = options?.data ?? { message: "test" }
 
         switch (mode) {
             case "reactive":
@@ -949,7 +949,7 @@ export class Artwork extends Iniquity {
                     alert("Load failure")
                 } else {
                     const normalized = graphic.normalize()
-                    normalized.draw(undefined, undefined, undefined, undefined, undefined, undefined, options?.speed || undefined)
+                    normalized.draw(undefined, undefined, undefined, undefined, undefined, undefined, options?.speed ?? undefined)
                 }
 
                 break
@@ -959,7 +959,7 @@ export class Artwork extends Iniquity {
 
         return {
             pause(options?: IQPauseOptions): void {
-                if (options) this.pause({ colorReset: options.colorReset || false, center: options.center || false })
+                if (options) this.pause({ colorReset: options.colorReset ?? false, center: options.center ?? false })
                 else console.putmsg("".color("reset"))
                 console.pause()
             },
