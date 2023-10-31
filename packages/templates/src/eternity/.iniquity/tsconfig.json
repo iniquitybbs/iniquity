@@ -4,6 +4,7 @@
         "strict": true,
         "composite": true,
         "strictFunctionTypes": false,
+        "strictNullChecks": true,
         "allowSyntheticDefaultImports": true,
         "target": "ES5",
         "moduleResolution": "node",
