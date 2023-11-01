@@ -4,15 +4,15 @@
  * @summary This is the Iniquity core bbs library. It's the foundation of any Iniquity application.
  * @example
  * ```typescript
- * import BBS from "@iniquitybbs/core"
+ * import { IQ } from "@iniquitybbs/core"
  *
- * const mybbs = new BBS()
+ * const iq = new IQ()
  *
- * myIniquity.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
+ * iq.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
  *
- * myIniquity.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
+ * iq.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
  *
- * myIniquity.disconnect()
+ * iq.disconnect()
  * ```
  */
 
@@ -1369,7 +1369,15 @@ interface ISBBSSystem {
     get_node(node: number): ISBBSSystemNodeListProperties
     name: string
     operator: string
+
+    /**
+     * The node list.
+     */
     node_list: ISBBSSystemNodeListProperties[]
+
+    /**
+     * The bbs stats
+     */
     stats: any
 }
 interface ISBBSSystemNodeListProperties {

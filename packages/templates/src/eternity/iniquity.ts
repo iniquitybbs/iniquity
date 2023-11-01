@@ -26,28 +26,28 @@ export class Eternity extends IQ {
     public start() {
         this.data.observe("alert", () => {
             const alert = this.data.model.alert as string
-            this.artwork().render({ filename: "as-ini.cp437.ans", clearScreenBefore: true })
+            this.artwork().render({ filename: "as-ini.cp437.ans", mode: "reactive", clearScreenBefore: true })
 
             alert.color("white").center()
 
             this.gotoxy(1, 1)
+            this.wait(2000)
         })
 
         this.data.observe("message", () => {
             const message = this.data.model.message as string
-            this.artwork().render({ filename: "newuser.cp437.ans", mode: "@-codes", clearScreenBefore: true })
+            this.artwork().render({ filename: "newuser.cp437.ans", mode: "reactive", clearScreenBefore: true })
 
             message.color("background bright green").center()
 
             this.gotoxy(1, 1)
+            this.wait(2000)
         })
 
         this.artwork().render({ filename: "iqascii.ans", clearScreenBefore: false }).colorReset()
         this.wait(2000)
 
         this.data.model.alert = "Loading iniquity..."
-
-        this.wait(2000)
 
         "".color("reset")
 
@@ -64,8 +64,6 @@ export class Eternity extends IQ {
     public welcome() {
         this.data.model.alert = "Welcome to eternity bbs ... "
 
-        this.wait(2000)
-
         this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
 
         this.ask("Would you like to come inside? (y/n)".gotoxy(40, 18).color("reset"), (answer: string) => {
@@ -81,9 +79,7 @@ export class Eternity extends IQ {
         this.data.model.message =
             "welcome to eternity bbs ... please read the following if you are calling long distance you will be automatically validated now otherwise..."
 
-        this.wait(2000)
         this.data.model.message = "please read the following if you are calling long distance you will be automatically validated now otherwise..."
-        this.wait(3000)
 
         this.ask("Enter your handle".gotoxy(30, 15).color("reset"), (handle: string) => {
             if (handle !== "") {
