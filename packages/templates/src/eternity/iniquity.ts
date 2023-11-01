@@ -25,10 +25,9 @@ export class Eternity extends IQ {
      */
     public start() {
         this.data.observe("alert", () => {
-            const alert = this.data.model.alert as string
             this.artwork().render({ filename: "as-ini.cp437.ans", mode: "reactive", clearScreenBefore: true })
 
-            alert.color("white").center()
+            this.data.model.alert()
 
             this.gotoxy(1, 1)
             this.wait(2000)
@@ -47,7 +46,9 @@ export class Eternity extends IQ {
         this.artwork().render({ filename: "iqascii.ans", clearScreenBefore: false }).colorReset()
         this.wait(2000)
 
-        this.data.model.alert = "Loading iniquity..."
+        this.data.model.alert = () => {
+            "Loading iniquity...".center()
+        }
 
         "".color("reset")
 
@@ -62,7 +63,9 @@ export class Eternity extends IQ {
      * Welcome screen
      */
     public welcome() {
-        this.data.model.alert = "Welcome to eternity bbs ... "
+        this.data.model.alert = () => {
+            "Sometasdasdasda".color("background bright green").center()
+        }
 
         this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
 
