@@ -811,7 +811,7 @@ export class Network {}
  * User
  * @summary Some basic user utils. More to follow.
  */
-export class User extends Iniquity {
+export class User {
     public name = ""
     public password = ""
 
@@ -822,7 +822,6 @@ export class User extends Iniquity {
      * @param options
      */
     constructor(options: IUserOptions) {
-        super()
         this.name = options.name
         this.password = options.password
     }
@@ -830,13 +829,21 @@ export class User extends Iniquity {
     login() {
         const user = bbs.login(this.name, null, this.password)
         if (user) return user
+        else return undefined
+    }
+
+    exists(): boolean {
+
+        const user = bbs.login(this.name)
+        if (user) return true
+        else return false
     }
 
     new() {
-        const user = system.new_user(this.name)
+        // TODO check for all return properties of this sbbs system.new_user
+        const user = system.new_user(this.name) as { password: string }
         if (user) {
             say(JSON.stringify(user)).pause()
-            // @ts-expect-error
             user.password = this.password
         }
 

@@ -3,7 +3,7 @@
  * @file iniquity.ts
  */
 
-import { IQ, IQReactor, IQModuleACLS } from "./.iniquity/node_modules/@iniquitybbs/core/src"
+import { IQ, IQReactor, IQModuleACLS, IQMenuLoopMessageResponse } from "./.iniquity/node_modules/@iniquitybbs/core/src"
 // import { setInterval, Promise } from "./.iniquity/node_modules/@iniquitybbs/core/src/pollyfills"
 import config from "./iniquity.json"
 
@@ -24,6 +24,11 @@ export class Eternity extends IQ {
      *
      */
     public start() {
+        if (this.terminfo.x < 132 || this.terminfo.y < 37) {
+            this.say("Your terminal is too small to call this bbs. Please set your terminal scale to 132x37. It's way cooler.").wait(3000)
+            this.disconnect()
+        }
+
         this.data.observe("alert", () => {
             this.artwork().render({ filename: "as-ini.cp437.ans", mode: "reactive", clearScreenBefore: true })
 
@@ -63,9 +68,50 @@ export class Eternity extends IQ {
      * Welcome screen
      */
     public welcome() {
-        this.data.model.alert = () => {
-            "Sometasdasdasda".color("background bright green").center()
-        }
+        "You just connected to an iniquity bbs. The artwork you are seeing above is called. It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool."
+            .newlines(2)
+            .color("background red")
+
+        const menu = this.menu({
+            name: "Iniquity answer menu.",
+            description: "Really I just get to rattle off more non-sense.",
+            commands: {
+                L: (description = "Sit cillum consequat qui quis dolore Lorem.") => {
+                    this.say("Hey, don't touch that!").wait(3000)
+                },
+                O: () => {
+                    this.say("Nothing to see here, move along...").wait(3000)
+                },
+                H: () => {
+                    if (this.ask("Are you sure you want to hangup?")) this.disconnect()
+                },
+                default: () => {
+                    this.say("That command key doesn't do anything, try again.".gotoxy(1, 1)).wait(3000)
+                }
+            }
+        })
+
+        menu.render(
+            // eslint-disable-next-line @typescript-eslint/ban-types
+            (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
+                this.artwork().render({
+                    clearScreenBefore: true,
+                        filename: "we-iniq3.ans"
+                    })
+                
+                "Random optoin name 1".center()
+                "Random option asda as da sda ".center()
+                "asdasdasdasds 3".center()
+                "ggggwfwefwefwef  wf wfewef wef wefw 1".center()
+                "Option 1".center()
+                    
+                menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey, () => {
+                    this.say("You just pressed: " + JSON.stringify(res)).wait(3000)
+                })
+            }
+        )
+
+        this.artwork().render({ filename: "zv_iniq-132.ans", clearScreenBefore: true, mode: "line", speed: 50 }).pause({ newlines: 2 })
 
         this.artwork().render({ filename: "we-iniq3.ans", clearScreenBefore: true })
 
@@ -79,25 +125,21 @@ export class Eternity extends IQ {
       Login user screen
      */
     public login() {
-        this.data.model.message =
-            "welcome to eternity bbs ... please read the following if you are calling long distance you will be automatically validated now otherwise..."
+        const handle = this.ask("Enter your handle".gotoxy(20, 18).color("reset")) || ""
+        const password = this.ask("Enter your password".gotoxy(20, 18).color("reset")) || ""
 
-        this.data.model.message = "please read the following if you are calling long distance you will be automatically validated now otherwise..."
+        if (!this.user({ name: handle, password: password }).login()) {
+            this.data.model.message = "invalid login"
+            this.data.model.message = "logging off..."
 
-        this.ask("Enter your handle".gotoxy(30, 15).color("reset"), (handle: string) => {
-            if (handle !== "") {
-                this.data.model.user = { handle: handle, password: "", access: IQModuleACLS.low }
+            // TODO add new user registration
+            this.disconnect()
+        }
 
-                this.data.model.message = `welcome ${handle}!`
-                this.wait(2000)
-                this.data.model.message = "you are now validated and ready to go!"
-                this.wait(2000)
-                this.data.model.message = "loading main menu..."
-                this.wait(2000)
+        this.data.model.message = "you are now validated and ready to go!"
+        this.data.model.message = "loading main menu..."
 
-                this.main()
-            }
-        })
+        this.main()
     }
 
     public main() {
@@ -113,8 +155,7 @@ export class Eternity extends IQ {
     public logoff() {
         this.artwork().render({ filename: "4d-iniq1.ans", clearScreenBefore: true })
 
-        this.say(`Goodbye ${this.data.model.user.handle}, and thanks for calling!`.gotoxy(20, 20).color("reset"))
-        this.gotoxy(1, 1)
+        this.say(`Goodbye, ${this.data.model.user.handle}, and thanks for calling!`.gotoxy(20, 20).color("reset")).gotoxy(1, 1)
     }
 }
 
