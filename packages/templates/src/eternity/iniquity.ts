@@ -1,3 +1,6 @@
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /**
  * eternity bbs
  * @file iniquity.ts
@@ -96,15 +99,15 @@ export class Eternity extends IQ {
             (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
                 this.artwork().render({
                     clearScreenBefore: true,
-                        filename: "we-iniq3.ans"
-                    })
-                
+                    filename: "we-iniq3.ans"
+                })
+
                 "Random optoin name 1".center()
                 "Random option asda as da sda ".center()
                 "asdasdasdasds 3".center()
                 "ggggwfwefwefwef  wf wfewef wef wefw 1".center()
                 "Option 1".center()
-                    
+
                 menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey, () => {
                     this.say("You just pressed: " + JSON.stringify(res)).wait(3000)
                 })
