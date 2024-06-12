@@ -39,8 +39,8 @@
   },
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "eslint.format.enable": true
+    "source.fixAll": "explicit",
+    "eslint.format.enable": "explicit"
   },
   "files.associations": {
     "*.ts": "typescript",

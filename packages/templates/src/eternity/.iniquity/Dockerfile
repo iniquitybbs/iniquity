@@ -5,11 +5,11 @@ LABEL version="latest"
 WORKDIR /dist
 COPY ../ .
 
-RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash \
+RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash \
     && . $HOME/.nvm/nvm.sh || true \
-    && nvm install 16 \
+    && nvm install 18 \
     && nvm install-latest-npm \
-    && npm version \
+    # && npm version \
     && nvm use
 
 RUN cd /sbbs/exec/ \
