@@ -287,68 +287,68 @@ export class Answer extends IQ {
 
 [Want to learn more? Read the docs!](https://iniquitybbs.com/modules/Core.html)
 
-## More details about iniquity 3
+# Iniquity 3
 
-### Your development environment should contain something like this, or similar
+Iniquity 3 is a modern BBS (Bulletin Board System) framework designed for sysops, modders, and developers. While it provides all the tools necessary to run a legacy-style BBS, it also allows the creation of entirely new terminal-style applications, bridging the gap between the classic and the contemporary.
 
-- macOS / Windows / Linux _required_
-  - These modern operating systems are currently supported.
-- Docker Desktop for macOS / Windows or Docker Machine _required_
-  - The Iniquity BBS runtime is executed inside of a Docker container for portability.
-- Node.js & NPM _required_
-  - The Node community tools are used for TypeScript transpiling and Iniquity package management.
-- Visual Studio Code _recommended_
-  - This repository is specifically tuned to take full advantage of this IDE.
-- Moebius _recommended_
-  - The ideal choice for working with ANSI/ASCII/PETSCII/AMIGA artwork.
+## Development Environment Requirements
 
-### Some guiding thoughts surrounding the idea of iniquity 3
+To get started with Iniquity 3, ensure your development environment includes the following:
 
-I want this to be something a typical sysop can use, yes, I also want it to be something a modder/programmer will love. But also, someone should be able to create an entirely new terminal style application with it if they wanted. To only use iniquity 3 for the development of a legacy style bbs would be a real waste of its potential. @ispyhumanfly
+### Operating Systems
+- **macOS / Windows / Linux** (required): Modern operating systems are supported.
 
-- A BBS software framework that is geared towards developers and modders .
-- Make it easy for sysops to develop and deploy BBS applications.
-- Easily network files, messages and other forms of communication between other BBS applications.
-- What you see in Terminal.app, xterm, NetRunner, SyncTerm, EtherTerm or qodem is what you see in a web browser.
-  - Though the ability to do interesting things specific to web/terminal should exist.
+### Software Requirements
+- **Docker Desktop** (for macOS/Windows) or **Docker Machine** (required): The Iniquity BBS runtime operates inside a Docker container for portability.
+- **Node.js** & **NPM** (required): Node.js powers TypeScript transpiling and package management for Iniquity.
+- **Visual Studio Code** (recommended): This repository is tuned to maximize the capabilities of VS Code.
+- **Moebius** (recommended): Ideal for working with ANSI/ASCII/PETSCII/AMIGA artwork.
 
-#### About iniquity's runtime
+## Guiding Principles
 
-Alpha... — Today at 11:29 AM
-@ispyhumanfly curious about that last commit, "Now with Synchronet under the hood" 🙂
+Iniquity 3 is built with the following objectives in mind:
 
-Many cross-platform applications today are executed on a runtime environment known as Node.js. Node.js makes it possible for these applications to be written in JavaScript. Well, iniquity aims also to be a cross-platform software, and is largely executing inside of a custom runtime environment that is a fusion of Node.js, Synchronet JavaScript and Ubuntu all wrapped into a Docker container. Anytime you run iniquity on your computer or on some cloud computing environment somewhere, this containerized runtime is quietly running in the background, making iniquity’s magic possible.
+1. **Flexibility for Sysops**: Make it easy to develop and deploy BBS applications.
+2. **Empowerment for Developers and Modders**: Provide a robust framework for creating custom terminal applications, not just legacy BBS setups.
+3. **Interoperability**: Facilitate networking files, messages, and other forms of communication between different BBS applications.
+4. **Unified Experience**: Ensure consistent behavior between terminal and web environments (e.g., Terminal.app, xterm, SyncTerm, EtherTerm).
 
-Alpha... — Today at 12:28 PM
-so, that allows iniquity to leverage existing javascript-based modules, like parts of Synchronet, without having to re-invent the wheel?
+## About the Iniquity Runtime
 
-ispyhumanfly — Today at 1:39 PM
+Iniquity 3 operates inside a custom runtime environment that combines:
+- **Node.js**: Leverages JavaScript-based modules.
+- **Synchronet JavaScript**: Incorporates tools from Synchronet’s ecosystem, streamlining BBS-related functionalities.
+- **Ubuntu Linux**: Provides access to system tools like DOSemu and other utilities.
 
-That's basically the primary reason for using it. In addition to the wealth of command line utilities centered around the subject of bbs/ansi/terminal/etc made possible by the people behind Synchronet. Also, there are many utilities available within the Ubuntu ecosystem. DOSemu being one of them, which is integrated into this runtime container as well.
-Iniquity itself is written in TypeScript and requires Node.js and Docker on your computer to make this all work.
+All of these components are packaged into a Docker container for seamless cross-platform compatibility. This setup allows Iniquity to:
+- Use existing JavaScript-based modules, including those from Synchronet.
+- Integrate with utilities like DOSemu for legacy support.
+- Provide a rich development and runtime environment, requiring only Docker and Node.js on your system.
 
-Alpha... — 03/16/2022
-The more I read about IQ3, the more I dig that this isn't just a BBS platform, it's a tool that can be used to create/script just about any kind of terminal application... Seems to share that piece of DNA with x84, yeah?
+## Developer Focus
 
-//rubs hands in maniacal anticipation//
+Iniquity 3 is more than a BBS platform; it’s a powerful SDK and runtime for creating terminal-based applications that can be accessed from:
+- Terminal environments (e.g., xterm, SyncTerm, qodem).
+- Web browsers.
+- (Potentially) mobile devices.
 
-ispyhumanfly — 03/17/2022
-Yup, that's basically it @Alpha... . When in a more finished state, the @iniquitybbs/templates package is going to have a few different kinds of examples, and BBS setups for people to get started with. But they exist as examples. Iniquity 3 itself is an SDK and platform for creating terminal applications that can be accessed from terminal/web/maybe mobile. Absolutely x84 is the genesis of the idea here. I liked what those guys had done, but, wanted to hopefully be able to take it a bit further. So with that in mind, I originally started this project as a ruby project, and started working on the CLI portion... after sometime decided to switch to the TypeScript/JS version that exists now, with the runtime as I've explained previously.
+### Example Templates
+The upcoming `@iniquitybbs/templates` package will include example setups to help users get started quickly. These templates showcase both traditional BBS setups and innovative terminal applications.
 
-grymmjack — 04/08/2022
-wow
-@ispyhumanfly iq is node?
+## Why TypeScript?
+Iniquity 3 is written in TypeScript, providing:
+- A robust development experience with static typing.
+- Seamless integration with modern JavaScript tooling.
+- Compatibility with the Node.js ecosystem.
 
-ispyhumanfly — 04/11/2022
-Hey @grymmjack , I’d say it like this… Iniquity 3 itself is written in TypeScript. And, for anyone wanting to develop an iniquity bbs or application or whatever, you would also be writing this in TypeScript. Iniquity has a few elements to its runtime; NodeJS, SynchronetJS, Browser JS and Ubuntu Linux with all the system tools a sysop may need. All of this is contained within the “Iniquity Runtime”, which is basically everything I just mentioned wrapped tightly in a Docker container.
-As someone wanting to use Iniquity it’s as simple as installing it from NPM, making sure Docker is running, and the rest is handled in the background for you.
+As a user, you’ll write TypeScript to build your BBS or terminal application. Installation is straightforward:
+1. Install Iniquity from NPM.
+2. Ensure Docker is running.
+3. Let the runtime handle the rest!
 
-grymmjack — 04/12/2022
-that is rad @ispyhumanfly
+---
 
-### Development of this project
-
-This is a monorepo project. It uses lerna for management of its packages.
+Whether you’re a sysop looking to modernize your BBS or a developer seeking to create a cutting-edge terminal application, Iniquity 3 has the tools and flexibility to bring your ideas to life. Join the community and start building today!
 
 #### First, clone this repository somewhere on your system
 
