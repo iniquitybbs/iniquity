@@ -30,6 +30,10 @@ export interface IQMenuOptions {
     art?: IQMenuArtOptions
     basepath?: string
     prompt?: string
+    promptX?: number
+    promptY?: number
+    itemsX?: number
+    itemsY?: number
     autoRenderItems?: boolean
     itemFormat?: string
 }
@@ -60,6 +64,8 @@ export interface IQMenuPromptFunctions {
 export interface IQMenuItem {
     key: string
     label: string
+    x?: number
+    y?: number
     action?: () => any | Promise<any>
     submenu?: IQMenu
 }
@@ -75,6 +81,10 @@ export class IQMenu {
     public art?: IQMenuArtOptions
     public basepath?: string
     public promptText: string
+    public promptX?: number
+    public promptY?: number
+    public itemsX?: number
+    public itemsY?: number
     public autoRenderItems: boolean
     public itemFormat: string
     public items: IQMenuItem[] = []
@@ -92,6 +102,10 @@ export class IQMenu {
         this.art = options.art
         this.basepath = options.basepath
         this.promptText = options.prompt || `${options.name} » `
+        this.promptX = options.promptX
+        this.promptY = options.promptY
+        this.itemsX = options.itemsX
+        this.itemsY = options.itemsY
         this.autoRenderItems = options.autoRenderItems ?? true
         this.itemFormat = options.itemFormat || '|11[|15{key}|11] |07{label}'
         this.output = output
@@ -221,6 +235,11 @@ export class IQMenu {
                 this.displayItems()
             }
             
+            // Position cursor for prompt if specified
+            if (this.promptX !== undefined && this.promptY !== undefined) {
+                this.output.write(ANSI.gotoxy(this.promptX, this.promptY))
+            }
+            
             // Show prompt and get input (uses writeMCI for pipe code support)
             this.output.writeMCI(this.promptText)
             const key = await this.waitForKey()
@@ -246,16 +265,37 @@ export class IQMenu {
     
     /**
      * Display menu items in a formatted list (uses writeMCI for pipe code support)
+     * Items can have individual x,y positions, or use itemsX/itemsY as starting point
      */
     private displayItems(): void {
-        this.output.writeMCI('\r\n')
+        // If no global positioning and no per-item positioning, add a newline
+        if (this.itemsX === undefined && this.itemsY === undefined && !this.items.some(i => i.x !== undefined)) {
+            this.output.writeMCI('\r\n')
+        }
+        
+        let currentY = this.itemsY || 0
         for (const item of this.items) {
             const line = this.itemFormat
                 .replace('{key}', item.key)
                 .replace('{label}', item.label)
+            
+            // Per-item positioning takes priority
+            if (item.x !== undefined && item.y !== undefined) {
+                this.output.write(ANSI.gotoxy(item.x, item.y))
+            }
+            // Otherwise use global itemsX/itemsY with auto-incrementing Y
+            else if (this.itemsX !== undefined && this.itemsY !== undefined) {
+                this.output.write(ANSI.gotoxy(this.itemsX, currentY))
+                currentY++
+            }
+            
             this.output.writeMCI(line + '\r\n')
         }
-        this.output.writeMCI('\r\n')
+        
+        // Only add trailing newline if not using positioning
+        if (this.itemsX === undefined && this.itemsY === undefined && !this.items.some(i => i.x !== undefined)) {
+            this.output.writeMCI('\r\n')
+        }
     }
     
     /**

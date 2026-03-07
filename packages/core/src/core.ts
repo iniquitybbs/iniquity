@@ -207,6 +207,7 @@ export interface IQPauseOptions {
     removePause?: boolean
     abortKeys?: string[]
     continueKey?: string
+    mci?: boolean | 'pipe' | 'at-codes' | 'all'
 }
 
 /**
@@ -849,9 +850,15 @@ export class IQ {
         }
         
         const prompt = options?.prompt ?? 'Press any key to continue...'
-        const promptLength = prompt.replace(/\x1b\[[0-9;]*m/g, '').length
+        const promptLength = prompt.replace(/\x1b\[[0-9;]*m/g, '').replace(/\|[0-9]{2}/g, '').length
         
-        this.output.write(prompt)
+        // MCI processing enabled by default (like say)
+        const mciEnabled = options?.mci !== false
+        if (mciEnabled) {
+            this.output.writeMCI(prompt)
+        } else {
+            this.output.write(prompt)
+        }
         
         const key = await this.output.waitKey()
         const upperKey = key.toUpperCase()

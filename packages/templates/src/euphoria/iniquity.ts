@@ -4,27 +4,19 @@
  * @author ispyhumanfly
  * @license MIT
  */
-import { 
-    artwork, 
-    say, 
-    pause, 
-    hangup, 
-    menu,
-    IQMenu
-} from "@iniquitybbs/core"
+import { artwork, say, pause, hangup, menu, IQMenu } from "@iniquitybbs/core"
 
 // ============================================================================
 // Helper Functions
 // ============================================================================
 
 async function comingSoon(): Promise<void> {
-    say("\r\n|07This feature is coming soon! Press any key...")
-    await pause()
+    await pause("\r\n|07This feature is coming soon! Press any key...")
 }
 
 async function displayBulletin(num: string): Promise<void> {
     say("|09╔══════════════════════════════════════════════════════════════════════════════╗\r\n")
-    
+
     switch (num) {
         case "1":
             say("|09║|15                        SYSTEM NEWS & ANNOUNCEMENTS                         |09║\r\n")
@@ -67,7 +59,7 @@ async function displayBulletin(num: string): Promise<void> {
             say("|09║                                                                              ║\r\n")
             say("|09║  |07This bulletin is under construction.                                     |09║\r\n")
     }
-    
+
     say("|09║                                                                              ║\r\n")
     say("|09╚══════════════════════════════════════════════════════════════════════════════╝\r\n")
     say("\r\n")
@@ -75,176 +67,249 @@ async function displayBulletin(num: string): Promise<void> {
 }
 
 // ============================================================================
-// Menu Definitions using IQMenu with artwork and auto-rendered items
+// Menu Definitions using IQMenu with x,y positioned items
 // ============================================================================
 
-// Messages Menu
+// Messages Menu - two column layout
 const messagesMenu: IQMenu = menu({
     name: "Messages",
     basepath: "assets",
     prompt: "|14Messages |07» |15",
+    promptX: 3,
+    promptY: 20,
     autoRenderItems: true,
-    itemFormat: "|09║  |11[|15{key}|11] |07{label}|09\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
-        "1": comingSoon, "2": comingSoon, "3": comingSoon,
-        "4": comingSoon, "5": comingSoon, "6": comingSoon,
-        R: comingSoon, P: comingSoon, S: comingSoon,
+        "1": comingSoon,
+        "2": comingSoon,
+        "3": comingSoon,
+        "4": comingSoon,
+        "5": comingSoon,
+        "6": comingSoon,
+        R: comingSoon,
+        P: comingSoon,
+        S: comingSoon,
         Q: () => "back"
     }
 })
-.addItem({ key: "1", label: "General Discussion" })
-.addItem({ key: "2", label: "BBS Discussion" })
-.addItem({ key: "3", label: "Retro Computing" })
-.addItem({ key: "4", label: "Programming & Coding" })
-.addItem({ key: "5", label: "Art & ANSI Scene" })
-.addItem({ key: "6", label: "Off-Topic / Random" })
-.addItem({ key: "R", label: "Read Messages" })
-.addItem({ key: "P", label: "Post New Message" })
-.addItem({ key: "S", label: "Scan for New" })
-.addItem({ key: "Q", label: "Return to Main Menu" })
+    .addItem({ key: "1", label: "General Discussion", x: 3, y: 5 })
+    .addItem({ key: "2", label: "BBS Discussion", x: 3, y: 6 })
+    .addItem({ key: "3", label: "Retro Computing", x: 3, y: 7 })
+    .addItem({ key: "4", label: "Programming & Coding", x: 40, y: 5 })
+    .addItem({ key: "5", label: "Art & ANSI Scene", x: 40, y: 6 })
+    .addItem({ key: "6", label: "Off-Topic / Random", x: 40, y: 7 })
+    .addItem({ key: "R", label: "Read Messages", x: 3, y: 10 })
+    .addItem({ key: "P", label: "Post New Message", x: 3, y: 11 })
+    .addItem({ key: "S", label: "Scan for New", x: 40, y: 10 })
+    .addItem({ key: "Q", label: "Return to Main Menu", x: 40, y: 11 })
 
-// Files Menu
+// Files Menu - two column layout
 const filesMenu: IQMenu = menu({
     name: "Files",
     basepath: "assets",
     prompt: "|14Files |07» |15",
+    promptX: 3,
+    promptY: 22,
     autoRenderItems: true,
-    itemFormat: "|09║  |11[|15{key}|11] |07{label}|09\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
-        "1": comingSoon, "2": comingSoon, "3": comingSoon,
-        "4": comingSoon, "5": comingSoon, "6": comingSoon,
-        L: comingSoon, D: comingSoon, U: comingSoon, S: comingSoon, N: comingSoon,
+        "1": comingSoon,
+        "2": comingSoon,
+        "3": comingSoon,
+        "4": comingSoon,
+        "5": comingSoon,
+        "6": comingSoon,
+        L: comingSoon,
+        D: comingSoon,
+        U: comingSoon,
+        S: comingSoon,
+        N: comingSoon,
         Q: () => "back"
     }
 })
-.addItem({ key: "1", label: "BBS Software & Utilities" })
-.addItem({ key: "2", label: "DOS Games & Apps" })
-.addItem({ key: "3", label: "Programming Tools" })
-.addItem({ key: "4", label: "Graphics & ANSI Art" })
-.addItem({ key: "5", label: "Music & MOD Files" })
-.addItem({ key: "6", label: "Text Files & E-Zines" })
-.addItem({ key: "L", label: "List Files" })
-.addItem({ key: "D", label: "Download File" })
-.addItem({ key: "U", label: "Upload File" })
-.addItem({ key: "S", label: "Search Files" })
-.addItem({ key: "N", label: "New Files Since Last Call" })
-.addItem({ key: "Q", label: "Return to Main Menu" })
+    .addItem({ key: "1", label: "BBS Software & Utilities", x: 3, y: 5 })
+    .addItem({ key: "2", label: "DOS Games & Apps", x: 3, y: 6 })
+    .addItem({ key: "3", label: "Programming Tools", x: 3, y: 7 })
+    .addItem({ key: "4", label: "Graphics & ANSI Art", x: 40, y: 5 })
+    .addItem({ key: "5", label: "Music & MOD Files", x: 40, y: 6 })
+    .addItem({ key: "6", label: "Text Files & E-Zines", x: 40, y: 7 })
+    .addItem({ key: "L", label: "List Files", x: 3, y: 10 })
+    .addItem({ key: "D", label: "Download File", x: 3, y: 11 })
+    .addItem({ key: "U", label: "Upload File", x: 40, y: 10 })
+    .addItem({ key: "S", label: "Search Files", x: 40, y: 11 })
+    .addItem({ key: "N", label: "New Files Since Last", x: 3, y: 13 })
+    .addItem({ key: "Q", label: "Return to Main Menu", x: 40, y: 13 })
 
-// Bulletins Menu
+// Bulletins Menu - two column layout
 const bulletinsMenu: IQMenu = menu({
     name: "Bulletins",
     basepath: "assets",
     prompt: "|14Bulletins |07» |15",
+    promptX: 3,
+    promptY: 16,
     autoRenderItems: true,
-    itemFormat: "|09║  |11[|15{key}|11] |07{label}|09\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
-        "1": async () => { await displayBulletin("1") },
-        "2": async () => { await displayBulletin("2") },
-        "3": async () => { await displayBulletin("3") },
-        "4": async () => { await displayBulletin("4") },
-        "5": async () => { await displayBulletin("5") },
-        "6": async () => { await displayBulletin("6") },
+        "1": async () => {
+            await displayBulletin("1")
+        },
+        "2": async () => {
+            await displayBulletin("2")
+        },
+        "3": async () => {
+            await displayBulletin("3")
+        },
+        "4": async () => {
+            await displayBulletin("4")
+        },
+        "5": async () => {
+            await displayBulletin("5")
+        },
+        "6": async () => {
+            await displayBulletin("6")
+        },
         Q: () => "back"
     }
 })
-.addItem({ key: "1", label: "System News & Announcements" })
-.addItem({ key: "2", label: "BBS Rules & Guidelines" })
-.addItem({ key: "3", label: "About Euphoria BBS" })
-.addItem({ key: "4", label: "SysOp Information" })
-.addItem({ key: "5", label: "Network Information" })
-.addItem({ key: "6", label: "Credits & Thanks" })
-.addItem({ key: "Q", label: "Return to Main Menu" })
+    .addItem({ key: "1", label: "System News & Announcements", x: 3, y: 5 })
+    .addItem({ key: "2", label: "BBS Rules & Guidelines", x: 3, y: 6 })
+    .addItem({ key: "3", label: "About Euphoria BBS", x: 3, y: 7 })
+    .addItem({ key: "4", label: "SysOp Information", x: 40, y: 5 })
+    .addItem({ key: "5", label: "Network Information", x: 40, y: 6 })
+    .addItem({ key: "6", label: "Credits & Thanks", x: 40, y: 7 })
+    .addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 10 })
 
 // Users Menu
 const usersMenu: IQMenu = menu({
     name: "Users",
     basepath: "assets",
     prompt: "|14Users |07» |15",
+    promptX: 3,
+    promptY: 10,
     autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
         Q: () => "back"
     }
-})
-.addItem({ key: "Q", label: "Return to Main Menu" })
+}).addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 5 })
 
-// Chat Menu
+// Chat Menu - two column layout
 const chatMenu: IQMenu = menu({
     name: "Chat",
     basepath: "assets",
     prompt: "|14Chat |07» |15",
+    promptX: 3,
+    promptY: 14,
     autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
         "1": async () => {
             say("\r\n|14Paging SysOp...\r\n")
             say("|07The SysOp is not available at this time.\r\n")
             await pause()
         },
-        "2": comingSoon, 
-        "3": comingSoon, 
+        "2": comingSoon,
+        "3": comingSoon,
         "4": comingSoon,
         Q: () => "back"
     }
 })
-.addItem({ key: "1", label: "Page the SysOp" })
-.addItem({ key: "2", label: "Multi-Node Chat" })
-.addItem({ key: "3", label: "Private Message" })
-.addItem({ key: "4", label: "Chat Rooms" })
-.addItem({ key: "Q", label: "Return to Main Menu" })
+    .addItem({ key: "1", label: "Page the SysOp", x: 3, y: 5 })
+    .addItem({ key: "2", label: "Multi-Node Chat", x: 3, y: 6 })
+    .addItem({ key: "3", label: "Private Message", x: 40, y: 5 })
+    .addItem({ key: "4", label: "Chat Rooms", x: 40, y: 6 })
+    .addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 9 })
 
-// Settings Menu
+// Settings Menu - two column layout
 const settingsMenu: IQMenu = menu({
     name: "Settings",
     basepath: "assets",
     prompt: "|14Settings |07» |15",
+    promptX: 3,
+    promptY: 14,
     autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
-        "1": comingSoon, "2": comingSoon, "3": comingSoon,
-        "4": comingSoon, "5": comingSoon,
+        "1": comingSoon,
+        "2": comingSoon,
+        "3": comingSoon,
+        "4": comingSoon,
+        "5": comingSoon,
         Q: () => "back"
     }
 })
-.addItem({ key: "1", label: "Change Password" })
-.addItem({ key: "2", label: "Edit User Profile" })
-.addItem({ key: "3", label: "Terminal Settings" })
-.addItem({ key: "4", label: "Message Preferences" })
-.addItem({ key: "5", label: "File Transfer Protocol" })
-.addItem({ key: "Q", label: "Return to Main Menu" })
+    .addItem({ key: "1", label: "Change Password", x: 3, y: 5 })
+    .addItem({ key: "2", label: "Edit User Profile", x: 3, y: 6 })
+    .addItem({ key: "3", label: "Terminal Settings", x: 3, y: 7 })
+    .addItem({ key: "4", label: "Message Preferences", x: 40, y: 5 })
+    .addItem({ key: "5", label: "File Transfer Protocol", x: 40, y: 6 })
+    .addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 10 })
 
 // Info Menu
 const infoMenu: IQMenu = menu({
     name: "System Info",
     basepath: "assets",
     prompt: "|14Info |07» |15",
+    promptX: 3,
+    promptY: 10,
     autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}\r\n",
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
         Q: () => "back"
     }
-})
-.addItem({ key: "Q", label: "Return to Main Menu" })
+}).addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 5 })
 
-// Main Menu - uses ANSI art, so we disable auto-render items
+// Main Menu - uses ANSI art with two-column positioned menu items
 const mainMenu: IQMenu = menu({
     name: "Main",
     basepath: "assets",
     art: { filename: "ep_main_menu.ans", mode: "line", speed: 100 },
-    prompt: "\r\n|14Main Menu |07» |15",
-    autoRenderItems: false,
+    prompt: "|14Main Menu |07» |15",
+    promptX: 3,
+    promptY: 23,
+    autoRenderItems: true,
+    itemFormat: "|11[|15{key}|11] |07{label}",
     commands: {
-        M: async () => { await messagesMenu.show(); return "continue" },
-        F: async () => { await filesMenu.show(); return "continue" },
-        B: async () => { await bulletinsMenu.show(); return "continue" },
-        U: async () => { await usersMenu.show(); return "continue" },
-        C: async () => { await chatMenu.show(); return "continue" },
-        S: async () => { await settingsMenu.show(); return "continue" },
-        I: async () => { await infoMenu.show(); return "continue" },
+        M: async () => {
+            await messagesMenu.show()
+            return "continue"
+        },
+        F: async () => {
+            await filesMenu.show()
+            return "continue"
+        },
+        B: async () => {
+            await bulletinsMenu.show()
+            return "continue"
+        },
+        U: async () => {
+            await usersMenu.show()
+            return "continue"
+        },
+        C: async () => {
+            await chatMenu.show()
+            return "continue"
+        },
+        S: async () => {
+            await settingsMenu.show()
+            return "continue"
+        },
+        I: async () => {
+            await infoMenu.show()
+            return "continue"
+        },
         G: () => "quit",
         Q: () => "quit"
     }
 })
+    .addItem({ key: "M", label: "Message Bases", x: 3, y: 18 })
+    .addItem({ key: "F", label: "File Areas", x: 3, y: 19 })
+    .addItem({ key: "B", label: "Bulletins", x: 3, y: 20 })
+    .addItem({ key: "U", label: "User List", x: 3, y: 21 })
+    .addItem({ key: "C", label: "Chat", x: 40, y: 18 })
+    .addItem({ key: "S", label: "Settings", x: 40, y: 19 })
+    .addItem({ key: "I", label: "System Info", x: 40, y: 20 })
+    .addItem({ key: "G", label: "Goodbye", x: 40, y: 21 })
 
 // ============================================================================
 // Main Entry Point
@@ -254,27 +319,27 @@ async function main() {
     // Welcome sequence
     say("A 132x37 terminal resolution is recommended for the best experience.")
     await pause("Welcome to Euphoria BBS! Press any key to continue...")
-    
-    await artwork({ basepath: "assets" }).render({ 
-        filename: "ep_welcome.ans", 
-        clearScreenBefore: true, 
-        mode: "line", 
-        speed: 50 
+
+    await artwork({ basepath: "assets" }).render({
+        filename: "ep_welcome.ans",
+        clearScreenBefore: true,
+        mode: "line",
+        speed: 50
     })
     await pause()
-    
+
     // Main menu loop - now handled entirely by IQMenu.show()
     await mainMenu.show()
-    
+
     // Goodbye
-    await artwork({ basepath: "assets" }).render({ 
-        filename: "ep_logoff.ans", 
-        clearScreenBefore: true, 
-        mode: "line", 
-        speed: 50 
+    await artwork({ basepath: "assets" }).render({
+        filename: "ep_logoff.ans",
+        clearScreenBefore: true,
+        mode: "line",
+        speed: 50
     })
     await pause("\r\n|07Thanks for visiting Euphoria BBS! Press any key to disconnect...")
-    
+
     hangup()
 }
 
