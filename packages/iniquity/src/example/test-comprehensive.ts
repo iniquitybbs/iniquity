@@ -1,43 +1,36 @@
 /**
  * Comprehensive Runtime Test
- * Tests all major features of the Iniquity runtime
+ * Tests all major features of the Iniquity runtime using BBS API
  */
 
-import { IQ, IQModule, IQModuleRuntime, IQReactor, IQModuleACLS, IQFrameColorOptions } from "../runtime/core"
+import { bbs, screen } from "@iniquitybbs/core"
 
-@IQModule({
-    basepath: "/dist/assets",
-    access: IQModuleACLS.low,
-    data: IQReactor({
-        counter: 0,
-        message: "Hello from IQReactor!",
-        timestamp: new Date().toISOString()
-    })
+// Set terminal resolution
+screen.setResolution(80, 25)
+
+bbs.start(async () => {
+    // Test 1: Basic output
+    bbs.say("╔══════════════════════════════════════════════════════════╗")
+    bbs.say("║  INIQUITY RUNTIME TEST SUITE                          ║")
+    bbs.say("╚══════════════════════════════════════════════════════════╝")
+    bbs.say("")
+    
+    // Test 2: Terminal info
+    bbs.say(`Terminal Size: ${screen.width}x${screen.height}`)
+    await bbs.wait(1000)
+    
+    // Test 3: User input
+    bbs.say("Testing user input...")
+    const name = await bbs.ask("|14What is your name? |15")
+    bbs.say(`|07Hello, |11${name}|07!`)
+    await bbs.wait(1000)
+    
+    // Test 4: Popup
+    await bbs.popup("Test Complete", "All runtime tests passed!", { type: "success" })
+    
+    bbs.say("|07Test suite completed.")
+    await bbs.pause()
 })
-class TestBBS extends IQ {
-    @IQModuleRuntime({ debug: true })
-    async start() {
-        // Test 1: Basic output
-        this.say("╔══════════════════════════════════════════════════════════╗".color("bright cyan"))
-        this.say("║  INIQUITY RUNTIME TEST SUITE                          ║".color("bright cyan"))
-        this.say("╚══════════════════════════════════════════════════════════╝".color("bright cyan"))
-        this.say("")
-        
-        // Test 2: Terminal info
-        this.say(`Terminal Size: ${this.terminfo.x}x${this.terminfo.y}`.color("yellow"))
-        await this.wait(1000)
-        
-        // Test 3: String extensions
-        this.say("Testing string extensions:".color("bright white"))
-        this.say("  - Colors".color("red"))
-        this.say("  - Newlines".newlines(1).color("green"))
-        await this.wait(1000)
-        
-        // Test 4: Cursor control
-        this.say("Testing cursor control...".color("bright white"))
-        this.cursor().down(2).right(10)
-        this.say("→ Moved cursor".color("magenta"))
-        this.cursor().up(1)
         await this.wait(1000)
         
         // Test 5: Frame system

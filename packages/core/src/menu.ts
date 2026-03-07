@@ -6,6 +6,8 @@
 
 import { IQOutput } from './output'
 import { ANSI } from './ansi'
+import { events } from './events'
+import { Measure } from './decorators-runtime'
 
 export interface IMenuCommand {
     (): any | Promise<any>
@@ -20,6 +22,19 @@ export interface IQMenuArtOptions {
     mode?: 'line' | 'character' | '@-codes' | 'mci'
     speed?: number
     clearScreenBefore?: boolean
+    /**
+     * Centering mode for artwork positioning based on screen resolution.
+     * - 'auto': Center if artwork is smaller than screen (default)
+     * - 'horizontal': Center horizontally only
+     * - 'vertical': Center vertically only
+     * - 'both': Always center both axes
+     * - 'none': No centering, render at 1,1 (legacy behavior)
+     */
+    center?: 'auto' | 'horizontal' | 'vertical' | 'both' | 'none'
+    /** Explicit X position (1-indexed). Overrides centering. */
+    x?: number
+    /** Explicit Y position (1-indexed). Overrides centering. */
+    y?: number
 }
 
 export interface IQMenuOptions {
@@ -167,10 +182,37 @@ export class IQMenu {
     
     /**
      * Wait for user command input and return the key
+     * Uses non-blocking input with event processing loop
      */
     async waitForKey(): Promise<string> {
-        const input = await this.output.readKey()
-        return input.toUpperCase()
+        // First check if there's already input available (non-blocking)
+        const immediateInput = this.output.readKeyNonBlocking()
+        if (immediateInput) {
+            return immediateInput.toUpperCase()
+        }
+
+        // Poll for input while processing events
+        while (true) {
+            // Process any pending events from the event bus
+            await events.processQueue()
+
+            // Check for input (non-blocking)
+            const input = this.output.readKeyNonBlocking()
+            if (input) {
+                return input.toUpperCase()
+            }
+
+            // Check if we have input available
+            if (this.output.hasInput()) {
+                const key = this.output.readKeyNonBlocking()
+                if (key) {
+                    return key.toUpperCase()
+                }
+            }
+
+            // Yield to event loop with a short delay
+            await new Promise(resolve => setTimeout(resolve, 10))
+        }
     }
     
     /**
@@ -197,6 +239,7 @@ export class IQMenu {
     /**
      * Execute a command by key
      */
+    @Measure()
     async executeCommand(key: string): Promise<any> {
         const upperKey = key.toUpperCase()
         
@@ -212,8 +255,21 @@ export class IQMenu {
     /**
      * Display the menu and wait for input
      */
+    @Measure()
     async show(): Promise<string> {
         this.running = true
+        
+        // Clear any pending input from previous operations (login, etc.)
+        // This prevents leftover keystrokes from triggering menu actions
+        while (this.output.hasInput()) {
+            this.output.readKeyNonBlocking()
+        }
+        // Small delay to allow any in-flight data to arrive
+        await new Promise(resolve => setTimeout(resolve, 50))
+        // Clear again after delay
+        while (this.output.hasInput()) {
+            this.output.readKeyNonBlocking()
+        }
         
         while (this.running) {
             // Clear screen
@@ -226,7 +282,10 @@ export class IQMenu {
                     filename: this.art.filename,
                     mode: this.art.mode || 'line',
                     speed: this.art.speed || 30,
-                    clearScreenBefore: this.art.clearScreenBefore
+                    clearScreenBefore: this.art.clearScreenBefore,
+                    center: this.art.center,
+                    x: this.art.x,
+                    y: this.art.y
                 })
             }
             

@@ -38,6 +38,17 @@ export interface IQOutput {
     readKey(): Promise<string>
     readLine(): Promise<string>
     
+    /**
+     * Non-blocking key read - returns immediately
+     * @returns The key pressed, or null if no input available
+     */
+    readKeyNonBlocking(): string | null
+    
+    /**
+     * Check if input is available without blocking
+     */
+    hasInput(): boolean
+    
     // MCI processing
     getMCIProcessor(): MCIProcessor
     processMCI(text: string): string

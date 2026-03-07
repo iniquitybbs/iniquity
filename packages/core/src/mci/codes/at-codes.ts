@@ -313,10 +313,23 @@ export class AtCodeProcessor {
     getValue(code: string, context: MCIContext, params?: string): string | undefined {
         const handler = this.getHandler(code)
         if (handler) {
-            return handler(context, params)
+            const result = handler(context, params)
+            // If handler returns a value, use it
+            if (result !== undefined && result !== null && result !== '') {
+                return result
+            }
+            // Otherwise fall through to check custom codes
         }
-        if (context.custom && code in context.custom) {
-            return String(context.custom[code])
+        // Check custom codes (case-insensitive lookup)
+        if (context.custom) {
+            const upperCode = code.toUpperCase()
+            if (upperCode in context.custom) {
+                return String(context.custom[upperCode])
+            }
+            // Also check original case for backwards compatibility
+            if (code in context.custom) {
+                return String(context.custom[code])
+            }
         }
         return undefined
     }

@@ -4,7 +4,7 @@
  * @summary Main processor that orchestrates all MCI code processing
  */
 
-import { MCIContext, MCIContextProvider, DefaultMCIContextProvider, createDefaultMCIContext } from './context'
+import { MCIContext, MCIContextProvider, DefaultMCIContextProvider, createDefaultMCIContext, UserContext, SystemContext, BBSContext, TerminalContext } from './context'
 import { AtCodeProcessor } from './codes/at-codes'
 import { PipeCodeProcessor } from './codes/pipe-codes'
 import { ControlCodeProcessor, ControlCodeAction } from './codes/ctrl-codes'
@@ -228,27 +228,27 @@ export class MCIProcessor {
         return this.contextProvider.getContext()
     }
 
-    setUser(user: Partial<MCIContext['user']>): void {
+    setUser(user: Partial<UserContext>): void {
         if (user) {
-            this.contextProvider.setUser(user as any)
+            this.contextProvider.setUser(user)
         }
     }
 
-    setSystem(system: Partial<MCIContext['system']>): void {
+    setSystem(system: Partial<SystemContext>): void {
         if (system) {
-            this.contextProvider.setSystem(system as any)
+            this.contextProvider.setSystem(system)
         }
     }
 
-    setBBS(bbs: Partial<MCIContext['bbs']>): void {
+    setBBS(bbs: Partial<BBSContext>): void {
         if (bbs) {
-            this.contextProvider.setBBS(bbs as any)
+            this.contextProvider.setBBS(bbs)
         }
     }
 
-    setTerminal(terminal: Partial<MCIContext['terminal']>): void {
+    setTerminal(terminal: Partial<TerminalContext>): void {
         if (terminal) {
-            this.contextProvider.setTerminal(terminal as any)
+            this.contextProvider.setTerminal(terminal)
             if (terminal.height) {
                 this.controlCodeProcessor.setPageLength(terminal.height - 1)
             }

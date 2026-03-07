@@ -1,63 +1,42 @@
 /**
  * MCI System Demo
- * @module runtime/mci/demo
- * @summary Demonstrates the comprehensive MCI code system
- * 
- * This example shows how to use the MCI system that combines features from:
- * - Synchronet BBS (@-codes with format modifiers)
- * - Original Iniquity (position markers, pipe codes)
- * - ENiGMA½ (text styles)
- * - Oblivion/2 (pipe color codes)
+ * @module mci/demo
+ * @summary Demonstrates the comprehensive MCI code system using BBS API
  */
 
-import { IQ, IQModule, IQModuleRuntime } from '../core'
+import { bbs, screen } from "@iniquitybbs/core"
 
-@IQModule({
-    basepath: '/dist/assets',
-    data: {
-        bbsName: 'Iniquity BBS',
-        version: '3.0.0'
-    }
+screen.setResolution(80, 25)
+
+bbs.start(async () => {
+    // Demo 1: Basic MCI codes
+    bbs.say('\n|11=== MCI Code System Demo ===|07\n')
+    
+    bbs.say('|09Welcome to Iniquity BBS!')
+    bbs.say('|03MCI codes allow dynamic content in artwork and text.')
+    bbs.say('|03Example: @USER@, @DATE@, @TIME@, etc.')
+
+    await bbs.pause()
+
+    // Demo 2: Artwork with MCI data
+    bbs.say('\n|11=== Artwork with MCI Data ===|07\n')
+    
+    await bbs.art("test.ans", {
+        display: "instant",
+        data: {
+            BBSNAME: "Iniquity BBS",
+            VERSION: "3.0.0",
+            CALLS: 1337
+        }
+    })
+
+    await bbs.pause()
+
+    // Demo 3: Popups
+    await bbs.popup("MCI Demo", "MCI system demonstration complete!", { type: "success" })
+    
+    bbs.say("|07Demo completed.")
 })
-export class MCIDemo extends IQ {
-
-    @IQModuleRuntime({ debug: true })
-    async start() {
-        // Set up MCI context with user and BBS info
-        this.setMCIContext({
-            user: {
-                id: 1,
-                alias: 'SysOp',
-                realName: 'System Operator',
-                securityLevel: 99,
-                totalCalls: 1337,
-                timeLeft: 60,
-                uploadFiles: 42,
-                downloadFiles: 100,
-                ipAddress: '127.0.0.1'
-            },
-            bbs: {
-                name: 'Iniquity BBS',
-                sysopName: 'The SysOp',
-                location: 'Cyberspace',
-                version: '3.0.0'
-            }
-        })
-
-        // Demo 1: Basic @-codes
-        this.say('\n|11=== MCI Code System Demo ===|07\n')
-        
-        this.sayMCI('|09Welcome, |15@UN@|09!')
-        this.sayMCI('|03You are connected to |11@BBS@|03')
-        this.sayMCI('|03Your security level: |14@SEC@|03')
-        this.sayMCI('|03Total calls: |14@CALLS@|03')
-        this.sayMCI('|03Time remaining: |14@TIMELEFT@|03 minutes')
-
-        await this.pause()
-
-        // Demo 2: Format modifiers (Synchronet-style)
-        this.say('\n|11=== Format Modifiers ===|07\n')
-        
         this.sayMCI('|03Left-justified (20):  |15[@UN|L20@]|03')
         this.sayMCI('|03Right-justified (20): |15[@UN|R20@]|03')
         this.sayMCI('|03Centered (20):        |15[@UN|C20@]|03')

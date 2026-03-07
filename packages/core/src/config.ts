@@ -6,6 +6,7 @@
 
 import * as fs from 'fs'
 import * as path from 'path'
+import { Transaction, Cached, Validate, Measure } from './decorators-runtime'
 
 /**
  * Server configuration
@@ -195,7 +196,7 @@ export class IQConfig {
     }
 
     /**
-     * Deep merge objects
+     * Deep merge objects with proper typing
      */
     private deepMerge<T extends object>(target: T, source: Partial<T>): T {
         const result = { ...target }
@@ -203,12 +204,12 @@ export class IQConfig {
         for (const key in source) {
             if (source.hasOwnProperty(key)) {
                 const sourceValue = source[key]
-                const targetValue = (target as any)[key]
+                const targetValue = target[key]
                 
                 if (sourceValue && typeof sourceValue === 'object' && !Array.isArray(sourceValue)) {
-                    (result as any)[key] = this.deepMerge(targetValue || {}, sourceValue)
+                    result[key] = this.deepMerge(targetValue || ({} as any), sourceValue as any) as T[Extract<keyof T, string>]
                 } else if (sourceValue !== undefined) {
-                    (result as any)[key] = sourceValue
+                    result[key] = sourceValue as T[Extract<keyof T, string>]
                 }
             }
         }
@@ -219,6 +220,8 @@ export class IQConfig {
     /**
      * Load configuration from file
      */
+    @Transaction()
+    @Measure()
     load(): boolean {
         try {
             if (fs.existsSync(this.configPath)) {
@@ -237,6 +240,8 @@ export class IQConfig {
     /**
      * Save configuration to file
      */
+    @Transaction()
+    @Measure()
     save(): boolean {
         try {
             const dir = path.dirname(this.configPath)
@@ -261,6 +266,7 @@ export class IQConfig {
     /**
      * Get full configuration
      */
+    @Cached({ ttl: 5000 })
     getAll(): IBBSConfig {
         return this.deepClone(this.config)
     }
@@ -431,7 +437,7 @@ export class IQConfig {
      */
     resetSection(section: keyof IBBSConfig): void {
         if (section in DEFAULT_CONFIG) {
-            (this.config as any)[section] = this.deepClone((DEFAULT_CONFIG as any)[section])
+            this.config[section] = this.deepClone(DEFAULT_CONFIG[section]) as any
         }
     }
 

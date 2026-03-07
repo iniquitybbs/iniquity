@@ -3,57 +3,62 @@
  * @summary Core BBS runtime library for building bulletin board systems
  * 
  * This package provides the foundational classes and utilities for building
- * BBS applications, including:
- * - IQ base class for BBS modules
- * - Artwork rendering with SAUCE metadata support
- * - Menu and Frame systems
- * - Reactive data with IQReactor and computed properties
- * - MCI code processing (Synchronet, ENiGMA, pipe codes)
- * - ANSI escape sequence utilities
- * - Module decorators
- * - User management and authentication
- * - Group and permission system
- * - Network connectivity (FidoNet, inter-BBS)
- * - Text manipulation utilities
- * - Configuration management
+ * BBS applications with a clean, declarative API.
  */
 
-// Core classes and functions
+// ============================================================================
+// BBS API - Primary Interface for Building BBS Applications
+// ============================================================================
+
+/**
+ * BBS singleton object - the main interface for building BBS applications
+ * Provides declarative menu registration, artwork rendering, user management,
+ * event bus, and more.
+ * 
+ * @example
+ * ```typescript
+ * import { bbs, screen } from "@iniquitybbs/core"
+ * 
+ * screen.setResolution(132, 37)
+ * bbs.menu("main", { ... })
+ * bbs.start(async () => {
+ *     await bbs.showMenu("main")
+ * })
+ * ```
+ */
+export { 
+    bbs, 
+    BBSType, 
+    BBSMenuItem, 
+    BBSMenuOptions, 
+    BBSPopupOptions, 
+    BBSArtOptions, 
+    BBSChoiceOption, 
+    BBSBulletinOptions, 
+    SessionInfo, 
+    ServerInfo 
+} from './bbs'
+
+/**
+ * Screen utilities for terminal dimensions and centering
+ */
+export { screen, Screen, TERM_WIDTH, TERM_HEIGHT } from './screen'
+
+/**
+ * Screen buffer management for popup overlays (advanced use)
+ */
+export { screenBuffer, ScreenBuffer } from './screen-buffer'
+
+// ============================================================================
+// Runtime Layer - Advanced/Internal Components
+// ============================================================================
+
+/**
+ * Core runtime class
+ */
 export {
     // Classes
-    IQ,
     Runtime,
-    Artwork,
-    
-    // Standalone functions
-    say,
-    sayRaw,
-    ask,
-    getKey,
-    pause,
-    wait,
-    print,
-    printMCI,
-    gotoxy,
-    cls,
-    disconnect,
-    hangup,
-    cursor,
-    menu,
-    frame,
-    artwork,
-    user,
-    users,
-    group,
-    groups,
-    network,
-    text,
-    config,
-    alert,
-    
-    // Runtime management
-    setGlobalRuntime,
-    getGlobalRuntime,
     
     // Types
     IQTermInfoObject,
@@ -62,19 +67,56 @@ export {
     IQPauseOptions,
     IQSayOptions,
     IQWaitOptions,
+    IQCursorOptions,
+    IQCursorChainableMethods,
+    IAlertOptions,
+    
+    // Runtime management
+    setGlobalRuntime,
+    getGlobalRuntime
+} from './core'
+
+/**
+ * ANSI artwork rendering with SAUCE metadata support
+ */
+export {
+    Artwork,
     IQArtworkOptions,
     IQArtworkRenderOptions,
     IQArtworkRenderFunctions,
-    IQCursorOptions,
-    IQCursorChainableMethods,
-    SAUCEInfo,
-    IAlertOptions
-} from './core'
+    SAUCEInfo
+} from './artwork'
 
-// Output interface
-export { IQOutput, ControlCodeAction } from './output'
+/**
+ * String utility functions (opt-in, no global pollution)
+ */
+export {
+    colorText,
+    centerText,
+    leftAlign,
+    rightAlign,
+    stripAnsi,
+    visibleLength,
+    truncateText,
+    padText,
+    addNewlines,
+    gotoxyText,
+    upperText,
+    lowerText,
+    titleText,
+    repeatText
+} from './string-utils'
 
-// Menu system
+// ============================================================================
+// Components - Menus, Frames, Reactive Data
+// ============================================================================
+
+/**
+ * Menu system
+ */
+/**
+ * Menu system
+ */
 export {
     IQMenu,
     IQMenuOptions,
@@ -88,35 +130,32 @@ export {
     IMenuCommands
 } from './menu'
 
-// Frame system
+/**
+ * Frame system (windowed UI elements)
+ */
 export {
     IQFrame,
     IQFrameOptions,
-    IQFrameColorOptions
+    IQFrameColorOptions,
+    IQFrameBorderStyle
 } from './frame'
 
-// Reactive data
+/**
+ * Reactive data (observable data models)
+ */
 export {
     IQReactor,
     IQReactorOptions,
     IQComputedProperty
 } from './reactor'
 
-// Decorators
-export {
-    IQModule,
-    IQModuleRuntime,
-    IQModuleACLS,
-    IQModuleOptions,
-    IQModuleRuntimeOptions,
-    getModuleMetadata,
-    getRuntimeMetadata
-} from './decorators'
+// ============================================================================
+// Data Management - Users, Groups, Configuration
+// ============================================================================
 
-// ANSI utilities
-export { ANSI } from './ansi'
-
-// User system
+/**
+ * User system
+ */
 export {
     IQUser,
     IUserOptions,
@@ -127,10 +166,13 @@ export {
     IUserDatabase,
     JSONUserDatabase,
     setUserDatabase,
-    getUserDatabase
+    getUserDatabase,
+    initUserDatabase
 } from './user'
 
-// Group system
+/**
+ * Group system
+ */
 export {
     IQGroup,
     IGroupOptions,
@@ -141,10 +183,13 @@ export {
     JSONGroupDatabase,
     setGroupDatabase,
     getGroupDatabase,
+    initGroupDatabase,
     DEFAULT_PERMISSIONS
 } from './group'
 
-// Network system
+/**
+ * Network system (FidoNet, inter-BBS)
+ */
 export {
     IQNetwork,
     INetworkNode,
@@ -155,7 +200,9 @@ export {
     setNetwork
 } from './network'
 
-// Text utilities
+/**
+ * Text utilities
+ */
 export {
     IQText,
     ITextWrapOptions,
@@ -163,7 +210,9 @@ export {
     TextAlignment
 } from './text'
 
-// Configuration
+/**
+ * Configuration management
+ */
 export {
     IQConfig,
     IBBSConfig,
@@ -179,7 +228,91 @@ export {
     loadConfig
 } from './config'
 
-// MCI system - specific exports to avoid conflicts
+// ============================================================================
+// Graphics & Rendering
+// ============================================================================
+
+/**
+ * ANSI utilities and color constants
+ */
+export { ANSI, CGA } from './ansi'
+
+/**
+ * Graphic system (in-memory ANSI buffer)
+ */
+export {
+    Graphic,
+    GraphicCell,
+    GraphicOptions,
+    CGA as CGAColors,
+    makeAttr,
+    getForeground,
+    getBackground,
+    hasBlink
+} from './graphic'
+
+/**
+ * Avatar system (user avatars)
+ */
+export {
+    Avatar,
+    AvatarData,
+    AvatarDefs
+} from './avatar'
+
+/**
+ * CTerm utilities (terminal detection)
+ */
+export {
+    CTerm,
+    CTermVersions,
+    CTermDeviceAttributes,
+    CTermCapabilities,
+    CTermFontState,
+    CTermFontDimensions,
+    CTermGraphicsDimensions
+} from './cterm'
+
+/**
+ * Sixel graphics support
+ */
+export {
+    Sixel,
+    SixelOptions,
+    SixelColor,
+    SixelImageInfo
+} from './sixel'
+
+/**
+ * XBin image format support
+ */
+export {
+    XBin,
+    XBinFlags,
+    XBinHeader,
+    XBinPalette,
+    XBinImage,
+    XBIN_ID,
+    XBIN_ID_LENGTH
+} from './xbin'
+
+// ============================================================================
+// I/O & Session Management
+// ============================================================================
+
+/**
+ * Output interface abstraction
+ */
+export { IQOutput, ControlCodeAction } from './output'
+
+// ============================================================================
+// MCI Subsystem - Dynamic Content Processing
+// ============================================================================
+
+/**
+ * MCI (Message Command Interpreter) code processing
+ * Supports pipe codes (|XX), @-codes (@USER@), control codes (|CS), etc.
+ */
 export {
     MCIProcessor,
     MCIContext,
@@ -254,8 +387,8 @@ export {
     toFullWidth,
     toHalfWidth,
     truncate,
-    stripAnsi,
-    visibleLength,
+    stripAnsi as mciStripAnsi,
+    visibleLength as mciVisibleLength,
     padToVisibleWidth,
     TextStyleName,
     TextStyleFunction,
@@ -279,3 +412,52 @@ export {
     listTextStyles,
     isValidTextStyle
 } from './mci'
+
+// ============================================================================
+// Event System - Global Publish/Subscribe
+// ============================================================================
+
+/**
+ * Event bus for inter-module communication
+ */
+export {
+    events,
+    IQEventBus,
+    IQEvent,
+    IQEventHandler,
+    IQEventOptions
+} from './events'
+
+// ============================================================================
+// Decorators - Class-based Module Development (Internal Use)
+// ============================================================================
+
+/**
+ * Module decorators (used internally for organizing runtime code)
+ */
+export {
+    IQModule,
+    IQModuleRuntime,
+    IQModuleACLS,
+    IQModuleOptions,
+    IQModuleRuntimeOptions,
+    getModuleMetadata,
+    getRuntimeMetadata
+} from './decorators'
+
+/**
+ * Runtime utility decorators
+ */
+export {
+    Cached,
+    Measure,
+    Validate,
+    Lifecycle,
+    Transaction,
+    Synchronized,
+    Retry,
+    Timeout,
+    Debounce,
+    Throttle
+} from './decorators-runtime'
+

@@ -4,7 +4,91 @@
  * @summary Utilities for generating ANSI escape sequences for terminal control
  */
 
+/**
+ * CGA Color attribute constants for cell-based graphics
+ */
+export const CGA = {
+    BLACK: 0,
+    BLUE: 1,
+    GREEN: 2,
+    CYAN: 3,
+    RED: 4,
+    MAGENTA: 5,
+    BROWN: 6,
+    LIGHTGRAY: 7,
+    DARKGRAY: 8,
+    LIGHTBLUE: 9,
+    LIGHTGREEN: 10,
+    LIGHTCYAN: 11,
+    LIGHTRED: 12,
+    LIGHTMAGENTA: 13,
+    YELLOW: 14,
+    WHITE: 15,
+    
+    HIGH: 0x08,
+    BLINK: 0x80,
+    
+    BG_BLACK: 0x00,
+    BG_BLUE: 0x10,
+    BG_GREEN: 0x20,
+    BG_CYAN: 0x30,
+    BG_RED: 0x40,
+    BG_MAGENTA: 0x50,
+    BG_BROWN: 0x60,
+    BG_LIGHTGRAY: 0x70
+} as const
+
 export class ANSI {
+    /**
+     * CGA attribute constants (re-exported for convenience)
+     */
+    static readonly CGA = CGA
+
+    /**
+     * Create a CGA attribute from foreground, background, and flags
+     */
+    static attr(fg: number, bg: number = 0, blink: boolean = false, high: boolean = false): number {
+        let attr = (fg & 0x07) | ((bg & 0x07) << 4)
+        if (high || fg >= 8) attr |= CGA.HIGH
+        if (blink) attr |= CGA.BLINK
+        return attr
+    }
+
+    /**
+     * Convert CGA attribute to ANSI escape sequence
+     */
+    static attrToAnsi(attr: number): string {
+        const fg = attr & 0x0f
+        const bg = (attr >> 4) & 0x07
+        const blink = (attr & CGA.BLINK) !== 0
+        
+        const fgMap: { [key: number]: number } = {
+            0: 30, 1: 34, 2: 32, 3: 36, 4: 31, 5: 35, 6: 33, 7: 37,
+            8: 90, 9: 94, 10: 92, 11: 96, 12: 91, 13: 95, 14: 93, 15: 97
+        }
+        
+        const bgMap: { [key: number]: number } = {
+            0: 40, 1: 44, 2: 42, 3: 46, 4: 41, 5: 45, 6: 43, 7: 47
+        }
+        
+        const codes: number[] = [0]
+        
+        if (fg >= 8) {
+            codes.push(1)
+            codes.push(fgMap[fg - 8] ?? 37)
+        } else {
+            codes.push(fgMap[fg] ?? 37)
+        }
+        
+        codes.push(bgMap[bg] ?? 40)
+        
+        if (blink) {
+            codes.push(5)
+        }
+        
+        return `\x1b[${codes.join(';')}m`
+    }
+
     /**
      * Clear the entire screen and move cursor to home position
      */
@@ -80,12 +164,12 @@ export class ANSI {
         if (lowerName.startsWith('background ')) {
             const colorName = lowerName.replace('background ', '').replace(' ', '')
             const camelCase = colorName.replace(/bright(\w)/, (_, c) => 'bright' + c.toUpperCase())
-            return (ANSI.bgColors as any)[camelCase] || ANSI.reset()
+            return (ANSI.bgColors as Record<string, string>)[camelCase] || ANSI.reset()
         }
         
         // Handle foreground colors
         const camelCase = lowerName.replace(/bright\s+(\w)/, (_, c) => 'bright' + c.toUpperCase())
-        return (ANSI.colors as any)[camelCase] || ANSI.reset()
+        return (ANSI.colors as Record<string, string>)[camelCase] || ANSI.reset()
     }
 
     /**

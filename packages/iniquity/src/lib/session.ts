@@ -44,6 +44,13 @@ export class Session implements IQOutput {
     private lineCount: number = 0
     private pauseEnabled: boolean = true
     private pauseAborted: boolean = false
+    private pendingInputQueue: string[] = []  // Queue for non-blocking reads
+    
+    /** Node number assigned by the server */
+    public nodeNumber: number = 0
+    
+    /** Connection timestamp */
+    public connectedAt: Date = new Date()
     
     public info: SessionInfo = {
         terminalType: 'ansi-bbs',
@@ -139,6 +146,9 @@ export class Session implements IQOutput {
                         this.write(char)
                     }
                 }
+            } else {
+                // No callback waiting - queue for non-blocking reads
+                this.pendingInputQueue.push(char)
             }
             
             i++
@@ -391,6 +401,31 @@ export class Session implements IQOutput {
      */
     supportsFonts(): boolean {
         return this.info.client.supportsFonts
+    }
+
+    /**
+     * Non-blocking key read - returns immediately
+     * @returns The key pressed, or null if no input available
+     */
+    readKeyNonBlocking(): string | null {
+        if (this.pendingInputQueue.length > 0) {
+            return this.pendingInputQueue.shift()!
+        }
+        return null
+    }
+
+    /**
+     * Check if input is available without blocking
+     */
+    hasInput(): boolean {
+        return this.pendingInputQueue.length > 0
+    }
+
+    /**
+     * Clear the pending input queue
+     */
+    clearInputQueue(): void {
+        this.pendingInputQueue = []
     }
 
     /**

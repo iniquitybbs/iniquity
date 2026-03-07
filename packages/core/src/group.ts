@@ -7,11 +7,13 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { UserAccessLevel } from './user'
+import { Transaction, Validate, Measure } from './decorators-runtime'
 
 /**
  * Group permissions
  */
 export interface IGroupPermissions {
+    [key: string]: boolean | number | Record<string, boolean>
     canPost: boolean
     canUpload: boolean
     canDownload: boolean
@@ -353,6 +355,15 @@ export function getGroupDatabase(): IGroupDatabase {
 }
 
 /**
+ * Initialize the group database with a BBS-specific data path
+ * @param bbsPath - The root directory of the BBS (where iniquity.ts lives)
+ */
+export function initGroupDatabase(bbsPath: string): void {
+    const dataPath = path.join(bbsPath, 'data', 'groups')
+    globalGroupDatabase = new JSONGroupDatabase(dataPath)
+}
+
+/**
  * Group class for managing user groups
  */
 export class IQGroup {
@@ -430,25 +441,27 @@ export class IQGroup {
     /**
      * Add member to group
      */
+    @Transaction()
     addMember(handle: string): boolean {
         if (!this.data) return false
         if (this.data.members.includes(handle.toLowerCase())) return false
-        
+
         this.data.members.push(handle.toLowerCase())
-        return this.db.save(this.data)
+        return true
     }
 
     /**
      * Remove member from group
      */
+    @Transaction()
     removeMember(handle: string): boolean {
         if (!this.data) return false
-        
+
         const index = this.data.members.indexOf(handle.toLowerCase())
         if (index === -1) return false
-        
+
         this.data.members.splice(index, 1)
-        return this.db.save(this.data)
+        return true
     }
 
     /**
@@ -477,21 +490,23 @@ export class IQGroup {
     /**
      * Set permission
      */
+    @Transaction()
     setPermission(permission: keyof IGroupPermissions, value: boolean | number): boolean {
         if (!this.data || !this.data.permissions) return false
-        ;(this.data.permissions as any)[permission] = value
-        return this.db.save(this.data)
+        this.data.permissions[permission] = value
+        return true
     }
 
     /**
      * Update group data
      */
+    @Transaction()
     update(updates: Partial<IGroupData>): boolean {
         if (!this.data) return false
-        
+
         const { id, name, ...safeUpdates } = updates
         Object.assign(this.data, safeUpdates)
-        return this.db.save(this.data)
+        return true
     }
 
     /**

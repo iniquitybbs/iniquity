@@ -1,347 +1,425 @@
 /**
  * Euphoria BBS Template
- * Using IQMenu system for navigation
+ * Using the simplified bbs/screen API with Event Bus
  * @author ispyhumanfly
  * @license MIT
  */
-import { artwork, say, pause, hangup, menu, IQMenu } from "@iniquitybbs/core"
+import { bbs, screen, UserAccessLevel } from "@iniquitybbs/core"
+
+// Set terminal resolution (132x37 is the Iniquity standard)
+screen.setResolution(132, 37)
+
+// ============================================================================
+// Event Bus Setup - Global event handlers that work across all menus
+// ============================================================================
+
+// Track session start time for idle detection
+let lastActivityTime = Date.now()
+let idleWarningShown = false
+
+// Listen for all menu navigation events
+bbs.on("menu:enter", (event) => {
+    lastActivityTime = Date.now()
+    idleWarningShown = false
+    console.log(`[Event] User entered menu: ${event.data?.menu}`)
+})
+
+// Listen for any key press to reset idle timer
+bbs.on("input:key", () => {
+    lastActivityTime = Date.now()
+    idleWarningShown = false
+})
+
+// System announcement handler - shows popup regardless of current menu
+bbs.on("system:announce", async (event) => {
+    await bbs.popup("System Announcement", event.data?.message || "No message")
+})
+
+// Inter-node message handler - simulates receiving messages from other users
+bbs.on("node:message", async (event) => {
+    const from = event.data?.from || "Unknown"
+    const message = event.data?.message || ""
+    await bbs.popup(`Message from ${from}`, message)
+})
+
+// Idle timeout warning handler
+bbs.on("session:idle", async (event) => {
+    if (!idleWarningShown) {
+        idleWarningShown = true
+        await bbs.popup("Idle Warning", `You've been idle for ${event.data?.minutes} minutes.\nPress any key to stay connected.`)
+    }
+})
+
+// Wildcard handler for debugging/logging (catches all events)
+bbs.on(
+    "*",
+    (event) => {
+        if (event.type.startsWith("debug:")) {
+            console.log(`[Debug Event] ${event.type}:`, event.data)
+        }
+    },
+    { priority: -100 }
+) // Low priority so it runs after other handlers
+
+// Listen for other users connecting/disconnecting
+bbs.on("server:connect", (event) => {
+    console.log(`[Server] Node ${event.data?.node} connected (${event.data?.totalConnections} online)`)
+})
+
+bbs.on("server:disconnect", (event) => {
+    console.log(`[Server] Node ${event.data?.node} disconnected (${event.data?.totalConnections} online)`)
+})
 
 // ============================================================================
 // Helper Functions
 // ============================================================================
 
-async function comingSoon(): Promise<void> {
-    await pause("\r\n|07This feature is coming soon! Press any key...")
+// One-line popup helper using bbs.popup()
+const comingSoon = () => bbs.popup("Coming Soon", "This feature is coming soon!")
+
+// Simulate receiving a system announcement (for demo purposes)
+const simulateAnnouncement = () => {
+    bbs.emit(
+        "system:announce",
+        {
+            message: "Welcome to Euphoria BBS!\nNew files have been uploaded today."
+        },
+        "system"
+    )
 }
 
-async function displayBulletin(num: string): Promise<void> {
-    say("|09╔══════════════════════════════════════════════════════════════════════════════╗\r\n")
+// Simulate receiving a message from another node
+const simulateNodeMessage = () => {
+    bbs.emit(
+        "node:message",
+        {
+            from: "Node 2 - SysOp",
+            message: "Hey! Thanks for calling in today!"
+        },
+        "node:2"
+    )
+}
 
-    switch (num) {
-        case "1":
-            say("|09║|15                        SYSTEM NEWS & ANNOUNCEMENTS                         |09║\r\n")
-            say("|09╠══════════════════════════════════════════════════════════════════════════════╣\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |07Welcome to Euphoria BBS!                                                  |09║\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |07This BBS is powered by Iniquity 3, a modern TypeScript-based BBS         |09║\r\n")
-            say("|09║  |07platform that brings the classic BBS experience to the modern era.       |09║\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |11Latest Updates:                                                           |09║\r\n")
-            say("|09║  |07• New IQMenu system implemented                                          |09║\r\n")
-            say("|09║  |07• ANSI art rendering improved                                            |09║\r\n")
-            say("|09║  |07• MCI code support enhanced                                              |09║\r\n")
-            break
-        case "2":
-            say("|09║|15                           BBS RULES & GUIDELINES                            |09║\r\n")
-            say("|09╠══════════════════════════════════════════════════════════════════════════════╣\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |071. Be respectful to all users                                             |09║\r\n")
-            say("|09║  |072. No illegal content or activities                                      |09║\r\n")
-            say("|09║  |073. Keep discussions civil and on-topic                                   |09║\r\n")
-            say("|09║  |074. No spamming or flooding                                               |09║\r\n")
-            say("|09║  |075. Respect the SysOp's decisions                                         |09║\r\n")
-            say("|09║  |076. Have fun and enjoy the retro experience!                              |09║\r\n")
-            break
-        case "3":
-            say("|09║|15                            ABOUT EUPHORIA BBS                               |09║\r\n")
-            say("|09╠══════════════════════════════════════════════════════════════════════════════╣\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |07Euphoria BBS is a demonstration template for the Iniquity 3 BBS          |09║\r\n")
-            say("|09║  |07software platform.                                                       |09║\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |07Iniquity 3 is written in TypeScript and provides a modern                |09║\r\n")
-            say("|09║  |07development experience while maintaining the classic BBS feel.           |09║\r\n")
-            break
-        default:
-            say("|09║|15                               BULLETIN #" + num + "                                  |09║\r\n")
-            say("|09╠══════════════════════════════════════════════════════════════════════════════╣\r\n")
-            say("|09║                                                                              ║\r\n")
-            say("|09║  |07This bulletin is under construction.                                     |09║\r\n")
+// Format time helper for data display
+const formatTime = (date: Date): string => {
+    const now = Date.now()
+    const seconds = Math.floor((now - date.getTime()) / 1000)
+    if (seconds < 60) return `${seconds}s`
+    const minutes = Math.floor(seconds / 60)
+    if (minutes < 60) return `${minutes}m`
+    const hours = Math.floor(minutes / 60)
+    return `${hours}h ${minutes % 60}m`
+}
+
+// Show who's online - using bbs.dataPopup() for cleaner code
+const showWhosOnline = async () => {
+    await bbs.dataPopup(
+        "Who's Online",
+        bbs.getOnlineUsers(),
+        (user) => {
+            const username = user.username || "|08(not logged in)|07"
+            const time = formatTime(user.connectedAt)
+            const terminal = user.terminalType || "unknown"
+            return `|11Node ${user.node}|07: ${username}\n  |08Terminal: |07${terminal}\n  |08Connected: |07${time}`
+        },
+        { width: 50, emptyMessage: "No users currently online.\n(This shouldn't happen!)" }
+    )
+}
+
+// Show list of all registered users - using bbs.dataPopup()
+const showUserList = async () => {
+    const userList = bbs.users()
+    const allUsers = userList.all().slice(0, 10) // Show up to 10 users
+
+    await bbs.dataPopup(
+        "User List",
+        allUsers,
+        (userData) => {
+            const accessName = UserAccessLevel[userData.access] || "unknown"
+            const lastLogin = userData.lastLogin ? new Date(userData.lastLogin).toLocaleDateString() : "never"
+            return `|11${userData.handle}|07\n  |08Access: |07${accessName} |08| Calls: |07${userData.totalCalls} |08| Last: |07${lastLogin}`
+        },
+        { width: 55, emptyMessage: "No registered users yet.\nBe the first to register!" }
+    )
+}
+
+// User login flow - now uses popup form
+const doLogin = async (): Promise<boolean> => {
+    const user = await bbs.loginForm()
+    return user !== null
+}
+
+// User registration flow - now uses popup form
+const doRegister = async (): Promise<boolean> => {
+    const user = await bbs.registerForm()
+    return user !== null
+}
+
+// Show current user profile
+const showMyProfile = async () => {
+    const user = bbs.getCurrentUser()
+    if (!user) {
+        await bbs.popup("Profile", "You are not logged in.")
+        return
     }
 
-    say("|09║                                                                              ║\r\n")
-    say("|09╚══════════════════════════════════════════════════════════════════════════════╝\r\n")
-    say("\r\n")
-    await pause("|07Press any key to return...")
+    const data = user.getRawData()
+    if (!data) {
+        await bbs.popup("Profile", "Unable to load profile data.")
+        return
+    }
+
+    const accessName = UserAccessLevel[data.access] || "unknown"
+
+    let message = `|11${data.handle}|07\n`
+    message += `|08${"─".repeat(40)}|07\n\n`
+    message += `|08Real Name:  |07${data.realName || "(not set)"}\n`
+    message += `|08Location:   |07${data.location || "(not set)"}\n`
+    message += `|08Email:      |07${data.email || "(not set)"}\n`
+    message += `|08Access:     |07${accessName}\n\n`
+    message += `|08${"─".repeat(40)}|07\n`
+    message += `|14Statistics|07\n\n`
+    message += `|08Total Calls:    |15${data.totalCalls}|07\n`
+    message += `|08Total Posts:    |15${data.totalPosts}|07\n`
+    message += `|08Time Online:    |15${Math.floor(data.timeOnline / 60)} minutes|07\n`
+    message += `|08Member Since:   |15${new Date(data.createdAt).toLocaleDateString()}|07\n`
+
+    await bbs.popup("My Profile", message, { width: 50 })
+}
+
+// Show user status screen - demonstrates data-driven artwork rendering using bbs.art()
+const showStatus = async () => {
+    const user = bbs.getCurrentUser()
+    const userData = user?.getRawData()
+    const onlineUsers = bbs.getOnlineUsers()
+
+    // Prepare data for the status artwork
+    // These will be available as @KEY@ MCI codes in the ANSI file
+    const statusData = {
+        USER: userData?.handle || "Guest",
+        REALNAME: userData?.realName || "(not set)",
+        LOCATION: userData?.location || "(not set)",
+        ACCESS: userData ? UserAccessLevel[userData.access] : "Guest",
+        CALLS: userData?.totalCalls || 0,
+        TIMEONLINE: userData ? Math.floor(userData.timeOnline / 60) : 0,
+        ONLINE: onlineUsers.length,
+        DATE: new Date().toLocaleDateString(),
+        TIME: new Date().toLocaleTimeString(),
+        BBSNAME: "Euphoria BBS"
+    }
+
+    // Render the status artwork with live data using bbs.art()
+    await bbs.art("ep_status.ans", {
+        clearScreen: true,
+        display: "instant",
+        data: statusData,
+        center: "none",  // Artwork has built-in positioning
+        pauseAfter: true
+    })
 }
 
 // ============================================================================
-// Menu Definitions using IQMenu with x,y positioned items
+// Menu Definitions using declarative bbs.menu() API
 // ============================================================================
 
-// Messages Menu - two column layout
-const messagesMenu: IQMenu = menu({
-    name: "Messages",
-    basepath: "assets",
+// Messages Menu
+bbs.menu("messages", {
     prompt: "|14Messages |07» |15",
-    promptX: 3,
-    promptY: 20,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        "1": comingSoon,
-        "2": comingSoon,
-        "3": comingSoon,
-        "4": comingSoon,
-        "5": comingSoon,
-        "6": comingSoon,
-        R: comingSoon,
-        P: comingSoon,
-        S: comingSoon,
-        Q: () => "back"
-    }
+    layout: "two-column",
+    items: [
+        { key: "1", label: "General Discussion", action: comingSoon },
+        { key: "2", label: "BBS Discussion", action: comingSoon },
+        { key: "3", label: "Retro Computing", action: comingSoon },
+        { key: "4", label: "Programming & Coding", action: comingSoon },
+        { key: "5", label: "Art & ANSI Scene", action: comingSoon },
+        { key: "6", label: "Off-Topic / Random", action: comingSoon },
+        { key: "R", label: "Read Messages", action: comingSoon },
+        { key: "P", label: "Post New Message", action: comingSoon },
+        { key: "S", label: "Scan for New", action: comingSoon },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
 })
-    .addItem({ key: "1", label: "General Discussion", x: 3, y: 5 })
-    .addItem({ key: "2", label: "BBS Discussion", x: 3, y: 6 })
-    .addItem({ key: "3", label: "Retro Computing", x: 3, y: 7 })
-    .addItem({ key: "4", label: "Programming & Coding", x: 40, y: 5 })
-    .addItem({ key: "5", label: "Art & ANSI Scene", x: 40, y: 6 })
-    .addItem({ key: "6", label: "Off-Topic / Random", x: 40, y: 7 })
-    .addItem({ key: "R", label: "Read Messages", x: 3, y: 10 })
-    .addItem({ key: "P", label: "Post New Message", x: 3, y: 11 })
-    .addItem({ key: "S", label: "Scan for New", x: 40, y: 10 })
-    .addItem({ key: "Q", label: "Return to Main Menu", x: 40, y: 11 })
 
-// Files Menu - two column layout
-const filesMenu: IQMenu = menu({
-    name: "Files",
-    basepath: "assets",
+// Files Menu
+bbs.menu("files", {
     prompt: "|14Files |07» |15",
-    promptX: 3,
-    promptY: 22,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        "1": comingSoon,
-        "2": comingSoon,
-        "3": comingSoon,
-        "4": comingSoon,
-        "5": comingSoon,
-        "6": comingSoon,
-        L: comingSoon,
-        D: comingSoon,
-        U: comingSoon,
-        S: comingSoon,
-        N: comingSoon,
-        Q: () => "back"
-    }
+    layout: "two-column",
+    items: [
+        { key: "1", label: "BBS Software & Utilities", action: comingSoon },
+        { key: "2", label: "DOS Games & Apps", action: comingSoon },
+        { key: "3", label: "Programming Tools", action: comingSoon },
+        { key: "4", label: "Graphics & ANSI Art", action: comingSoon },
+        { key: "5", label: "Music & MOD Files", action: comingSoon },
+        { key: "6", label: "Text Files & E-Zines", action: comingSoon },
+        { key: "L", label: "List Files", action: comingSoon },
+        { key: "D", label: "Download File", action: comingSoon },
+        { key: "U", label: "Upload File", action: comingSoon },
+        { key: "S", label: "Search Files", action: comingSoon },
+        { key: "N", label: "New Files Since Last", action: comingSoon },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
 })
-    .addItem({ key: "1", label: "BBS Software & Utilities", x: 3, y: 5 })
-    .addItem({ key: "2", label: "DOS Games & Apps", x: 3, y: 6 })
-    .addItem({ key: "3", label: "Programming Tools", x: 3, y: 7 })
-    .addItem({ key: "4", label: "Graphics & ANSI Art", x: 40, y: 5 })
-    .addItem({ key: "5", label: "Music & MOD Files", x: 40, y: 6 })
-    .addItem({ key: "6", label: "Text Files & E-Zines", x: 40, y: 7 })
-    .addItem({ key: "L", label: "List Files", x: 3, y: 10 })
-    .addItem({ key: "D", label: "Download File", x: 3, y: 11 })
-    .addItem({ key: "U", label: "Upload File", x: 40, y: 10 })
-    .addItem({ key: "S", label: "Search Files", x: 40, y: 11 })
-    .addItem({ key: "N", label: "New Files Since Last", x: 3, y: 13 })
-    .addItem({ key: "Q", label: "Return to Main Menu", x: 40, y: 13 })
 
-// Bulletins Menu - two column layout
-const bulletinsMenu: IQMenu = menu({
-    name: "Bulletins",
-    basepath: "assets",
+// Bulletins Menu
+bbs.menu("bulletins", {
     prompt: "|14Bulletins |07» |15",
-    promptX: 3,
-    promptY: 16,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        "1": async () => {
-            await displayBulletin("1")
-        },
-        "2": async () => {
-            await displayBulletin("2")
-        },
-        "3": async () => {
-            await displayBulletin("3")
-        },
-        "4": async () => {
-            await displayBulletin("4")
-        },
-        "5": async () => {
-            await displayBulletin("5")
-        },
-        "6": async () => {
-            await displayBulletin("6")
-        },
-        Q: () => "back"
-    }
+    layout: "two-column",
+    items: [
+        { key: "1", label: "System News & Announcements", action: comingSoon },
+        { key: "2", label: "BBS Rules & Guidelines", action: comingSoon },
+        { key: "3", label: "About Euphoria BBS", action: comingSoon },
+        { key: "4", label: "SysOp Information", action: comingSoon },
+        { key: "5", label: "Network Information", action: comingSoon },
+        { key: "6", label: "Credits & Thanks", action: comingSoon },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
 })
-    .addItem({ key: "1", label: "System News & Announcements", x: 3, y: 5 })
-    .addItem({ key: "2", label: "BBS Rules & Guidelines", x: 3, y: 6 })
-    .addItem({ key: "3", label: "About Euphoria BBS", x: 3, y: 7 })
-    .addItem({ key: "4", label: "SysOp Information", x: 40, y: 5 })
-    .addItem({ key: "5", label: "Network Information", x: 40, y: 6 })
-    .addItem({ key: "6", label: "Credits & Thanks", x: 40, y: 7 })
-    .addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 10 })
 
 // Users Menu
-const usersMenu: IQMenu = menu({
-    name: "Users",
-    basepath: "assets",
+bbs.menu("users", {
     prompt: "|14Users |07» |15",
-    promptX: 3,
-    promptY: 10,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        Q: () => "back"
-    }
-}).addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 5 })
+    layout: "single",
+    items: [
+        { key: "L", label: "List All Users", action: showUserList },
+        { key: "W", label: "Who's Online", action: showWhosOnline },
+        { key: "P", label: "My Profile", action: showMyProfile },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
+})
 
-// Chat Menu - two column layout
-const chatMenu: IQMenu = menu({
-    name: "Chat",
-    basepath: "assets",
+// Chat Menu - with event-driven features
+bbs.menu("chat", {
     prompt: "|14Chat |07» |15",
-    promptX: 3,
-    promptY: 14,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        "1": async () => {
-            say("\r\n|14Paging SysOp...\r\n")
-            say("|07The SysOp is not available at this time.\r\n")
-            await pause()
-        },
-        "2": comingSoon,
-        "3": comingSoon,
-        "4": comingSoon,
-        Q: () => "back"
-    }
+    layout: "two-column",
+    items: [
+        { key: "1", label: "Page the SysOp", action: comingSoon },
+        { key: "2", label: "Multi-Node Chat", action: comingSoon },
+        { key: "3", label: "Private Message", action: comingSoon },
+        { key: "4", label: "Chat Rooms", action: comingSoon },
+        { key: "T", label: "Test: Receive Message", action: simulateNodeMessage },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
 })
-    .addItem({ key: "1", label: "Page the SysOp", x: 3, y: 5 })
-    .addItem({ key: "2", label: "Multi-Node Chat", x: 3, y: 6 })
-    .addItem({ key: "3", label: "Private Message", x: 40, y: 5 })
-    .addItem({ key: "4", label: "Chat Rooms", x: 40, y: 6 })
-    .addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 9 })
 
-// Settings Menu - two column layout
-const settingsMenu: IQMenu = menu({
-    name: "Settings",
-    basepath: "assets",
+// Settings Menu
+bbs.menu("settings", {
     prompt: "|14Settings |07» |15",
-    promptX: 3,
-    promptY: 14,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        "1": comingSoon,
-        "2": comingSoon,
-        "3": comingSoon,
-        "4": comingSoon,
-        "5": comingSoon,
-        Q: () => "back"
-    }
+    layout: "two-column",
+    items: [
+        { key: "1", label: "Change Password", action: comingSoon },
+        { key: "2", label: "Edit User Profile", action: comingSoon },
+        { key: "3", label: "Terminal Settings", action: comingSoon },
+        { key: "4", label: "Message Preferences", action: comingSoon },
+        { key: "5", label: "File Transfer Protocol", action: comingSoon },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
 })
-    .addItem({ key: "1", label: "Change Password", x: 3, y: 5 })
-    .addItem({ key: "2", label: "Edit User Profile", x: 3, y: 6 })
-    .addItem({ key: "3", label: "Terminal Settings", x: 3, y: 7 })
-    .addItem({ key: "4", label: "Message Preferences", x: 40, y: 5 })
-    .addItem({ key: "5", label: "File Transfer Protocol", x: 40, y: 6 })
-    .addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 10 })
 
-// Info Menu
-const infoMenu: IQMenu = menu({
-    name: "System Info",
-    basepath: "assets",
+// Info Menu - with event demos and data-driven artwork
+bbs.menu("info", {
     prompt: "|14Info |07» |15",
-    promptX: 3,
-    promptY: 10,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        Q: () => "back"
-    }
-}).addItem({ key: "Q", label: "Return to Main Menu", x: 3, y: 5 })
-
-// Main Menu - uses ANSI art with two-column positioned menu items
-const mainMenu: IQMenu = menu({
-    name: "Main",
-    basepath: "assets",
-    art: { filename: "ep_main_menu.ans", mode: "line", speed: 100 },
-    prompt: "|14Main Menu |07» |15",
-    promptX: 3,
-    promptY: 23,
-    autoRenderItems: true,
-    itemFormat: "|11[|15{key}|11] |07{label}",
-    commands: {
-        M: async () => {
-            await messagesMenu.show()
-            return "continue"
-        },
-        F: async () => {
-            await filesMenu.show()
-            return "continue"
-        },
-        B: async () => {
-            await bulletinsMenu.show()
-            return "continue"
-        },
-        U: async () => {
-            await usersMenu.show()
-            return "continue"
-        },
-        C: async () => {
-            await chatMenu.show()
-            return "continue"
-        },
-        S: async () => {
-            await settingsMenu.show()
-            return "continue"
-        },
-        I: async () => {
-            await infoMenu.show()
-            return "continue"
-        },
-        G: () => "quit",
-        Q: () => "quit"
-    }
+    layout: "single",
+    items: [
+        { key: "S", label: "User Status (Data Demo)", action: showStatus },
+        { key: "V", label: "Version & Features", action: comingSoon },
+        { key: "A", label: "Test: System Announcement", action: simulateAnnouncement },
+        { key: "Q", label: "Return to Main Menu", action: "back" }
+    ]
 })
-    .addItem({ key: "M", label: "Message Bases", x: 3, y: 18 })
-    .addItem({ key: "F", label: "File Areas", x: 3, y: 19 })
-    .addItem({ key: "B", label: "Bulletins", x: 3, y: 20 })
-    .addItem({ key: "U", label: "User List", x: 3, y: 21 })
-    .addItem({ key: "C", label: "Chat", x: 40, y: 18 })
-    .addItem({ key: "S", label: "Settings", x: 40, y: 19 })
-    .addItem({ key: "I", label: "System Info", x: 40, y: 20 })
-    .addItem({ key: "G", label: "Goodbye", x: 40, y: 21 })
+
+// Main Menu - with ANSI art (artwork has built-in positioning via leading spaces)
+// Column positions are set to flank the artwork: left column at X=30, right column at X=90
+bbs.menu("main", {
+    art: "ep_main_menu.ans",
+    artCenter: "none",  // Artwork has built-in positioning, don't add extra centering
+    prompt: "|14Main Menu |07» |15",
+    promptY: 27,
+    layout: "two-column",
+    col1X: 30,   // Left column X position (flanking left side of artwork)
+    col1Y: 10,   // Starting Y position for left column
+    col2X: 90,   // Right column X position (flanking right side of artwork)
+    col2Y: 10,   // Starting Y position for right column
+    items: [
+        { key: "M", label: "Message Bases", goto: "messages" },
+        { key: "F", label: "File Areas", goto: "files" },
+        { key: "B", label: "Bulletins", goto: "bulletins" },
+        { key: "U", label: "User List", goto: "users" },
+        { key: "C", label: "Chat", goto: "chat" },
+        { key: "S", label: "Settings", goto: "settings" },
+        { key: "I", label: "System Info", goto: "info" },
+        { key: "G", label: "Goodbye", action: "quit" }
+    ]
+})
 
 // ============================================================================
-// Main Entry Point
+// Entry Point - using bbs.start() with event lifecycle
 // ============================================================================
 
-async function main() {
-    // Welcome sequence
-    say("A 132x37 terminal resolution is recommended for the best experience.")
-    await pause("Welcome to Euphoria BBS! Press any key to continue...")
+bbs.start(async () => {
+    // Emit session start event
+    bbs.emit("session:start", { timestamp: Date.now() }, "system")
 
-    await artwork({ basepath: "assets" }).render({
-        filename: "ep_welcome.ans",
-        clearScreenBefore: true,
-        mode: "line",
-        speed: 50
+    // Display welcome artwork using bbs.art()
+    await bbs.art("ep_welcome.ans", {
+        clearScreen: true,
+        display: "line",
+        speed: 50,
+        center: "none"  // Artwork has built-in positioning
     })
-    await pause()
 
-    // Main menu loop - now handled entirely by IQMenu.show()
-    await mainMenu.show()
+    // Emit welcome complete event
+    bbs.emit("session:welcome", { completed: true }, "system")
 
-    // Goodbye
-    await artwork({ basepath: "assets" }).render({
-        filename: "ep_logoff.ans",
-        clearScreenBefore: true,
-        mode: "line",
-        speed: 50
-    })
-    await pause("\r\n|07Thanks for visiting Euphoria BBS! Press any key to disconnect...")
+    // Login/Register loop using bbs.choice() for cleaner code
+    let loggedIn = false
+    let quit = false
 
-    hangup()
-}
+    while (!loggedIn && !quit) {
+        // Use bbs.choice() for the login menu - much cleaner than manual frame building
+        const choice = await bbs.choice("Welcome to Euphoria BBS", [
+            { key: "L", label: "Login to your account" },
+            { key: "N", label: "New User Registration" },
+            { key: "G", label: "Continue as Guest" },
+            { key: "Q", label: "Quit / Disconnect" }
+        ])
 
-export { main }
-main()
+        switch (choice) {
+            case "L":
+                loggedIn = await doLogin()
+                break
+            case "N":
+                loggedIn = await doRegister()
+                break
+            case "G":
+                await bbs.popup("Guest Access", "Welcome, Guest!\n\nYou have limited access as a guest.\nRegister for full access to all features.", {
+                    type: "info"
+                })
+                loggedIn = true
+                break
+            case "Q":
+                quit = true
+                break
+        }
+    }
+
+    if (quit) {
+        await bbs.goodbye("ep_logoff.ans")
+        return
+    }
+
+    // Show main menu (handles all navigation automatically)
+    // The menu event loop will process any queued events between key presses
+    await bbs.showMenu("main")
+
+    // Logout current user if logged in
+    const currentUser = bbs.getCurrentUser()
+    if (currentUser) {
+        currentUser.logout()
+    }
+
+    // Emit session end event
+    bbs.emit("session:end", { timestamp: Date.now() }, "system")
+
+    // Display goodbye artwork
+    await bbs.goodbye("ep_logoff.ans")
+})

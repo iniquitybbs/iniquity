@@ -4,7 +4,7 @@
  * @summary Execute BBS programs written in TypeScript
  */
 
-import { Runtime, setGlobalRuntime, IQ, IQReactor, getModuleMetadata, IQModuleOptions } from '@iniquitybbs/core'
+import { Runtime, setGlobalRuntime, getModuleMetadata, initUserDatabase, initGroupDatabase } from '@iniquitybbs/core'
 import { Session } from './session'
 import * as fs from 'fs'
 import * as path from 'path'
@@ -18,6 +18,10 @@ export async function executeProgram(programPath: string, runtime: Runtime, sess
 
     const programDir = path.dirname(path.resolve(programPath))
     runtime.setProgramDirectory(programDir)
+
+    // Initialize user and group databases with BBS-local paths
+    initUserDatabase(programDir)
+    initGroupDatabase(programDir)
 
     if (!fs.existsSync(programPath)) {
         throw new Error(`Program not found: ${programPath}`)
@@ -41,13 +45,14 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
     try {
         let code = fs.readFileSync(filePath, 'utf-8')
         
-        const hasClassDeclaration = /class\s+\w+\s+extends\s+IQ/.test(code)
         const hasDecorator = /@IQModule/.test(code)
         const hasTypeAnnotations = /:\s*(string|number|boolean|Promise|void|any)\b/.test(code)
-        const hasAsyncFunction = /async\s+function\s+\w+/.test(code)
+        const hasAsyncFunction = /async\s+(function\s+\w+|\([^)]*\)\s*=>|\w+\s*=>)/.test(code)
+        const hasImports = /^import\s+.*from\s+['"]@iniquitybbs\/core['"]/m.test(code)
+        const usesBbsApi = /\bbbs\.(menu|start|popup|welcome|goodbye)\s*\(/.test(code)
         
-        // Use tsx for any TypeScript that has type annotations or complex syntax
-        if (hasClassDeclaration || hasDecorator || hasTypeAnnotations || hasAsyncFunction) {
+        // Use tsx for any TypeScript that has imports, type annotations, or complex syntax
+        if (hasDecorator || hasTypeAnnotations || hasAsyncFunction || hasImports || usesBbsApi) {
             await executeWithTsx(filePath, runtime, session)
         } else {
             await executeSimpleScript(code, runtime, session)
@@ -71,41 +76,21 @@ async function executeWithTsx(filePath: string, runtime: Runtime, session: Sessi
     // Clear require cache to ensure fresh load
     delete require.cache[absolutePath]
     
+    // Import bbs to check for registered start callback
+    const { bbs } = await import('@iniquitybbs/core')
+    
     // Now we can require the TypeScript file directly
     const module = require(absolutePath)
     
-    // Check for IQ class exports first
-    for (const exportName in module) {
-        const exported = module[exportName]
-        
-        if (typeof exported === 'function' && exported.prototype instanceof IQ) {
-            const instance = new exported(session)
-            
-            instance.setProgramDirectory(runtime.getProgramDirectory())
-            
-            const metadata = getModuleMetadata(exported)
-            if (metadata) {
-                if (metadata.basepath) {
-                    instance.basepath = metadata.basepath
-                }
-                if (metadata.data) {
-                    instance.data = metadata.data
-                }
-            }
-            
-            const runtimeMethod = (exported as any)._runtimeMethod || 'start'
-            
-            if (typeof instance[runtimeMethod] === 'function') {
-                await instance[runtimeMethod]()
-            } else {
-                console.warn(`Runtime method '${runtimeMethod}' not found on ${exportName}`)
-            }
-            
-            return
-        }
+    // Check if bbs.start() was called (primary API pattern)
+    if (bbs.hasStartCallback()) {
+        await bbs.executeStart()
+        // Disconnect after the BBS program completes
+        runtime.disconnect()
+        return
     }
     
-    // If no IQ class, check for default export or main function
+    // If no bbs.start(), check for default export or main function
     if (module.default) {
         if (typeof module.default === 'function') {
             await module.default(runtime)
@@ -133,40 +118,16 @@ async function executeSimpleScript(code: string, runtime: Runtime, session: Sess
     
     const fn = new AsyncFunction(
         'runtime',
-        'say',
-        'ask', 
-        'pause',
-        'wait',
-        'print',
-        'printMCI',
-        'gotoxy',
-        'disconnect',
-        'hangup',
-        'artwork',
-        'menu',
-        'frame',
-        'cursor',
-        'IQReactor',
+        'bbs',
+        'screen',
         'session',
         code
     )
     
     await fn(
         runtime,
-        coreModule.say,
-        coreModule.ask,
-        coreModule.pause,
-        coreModule.wait,
-        coreModule.print,
-        coreModule.printMCI,
-        coreModule.gotoxy,
-        coreModule.disconnect,
-        coreModule.hangup,
-        coreModule.artwork,
-        coreModule.menu,
-        coreModule.frame,
-        coreModule.cursor,
-        coreModule.IQReactor,
+        coreModule.bbs,
+        coreModule.screen,
         session
     )
 }
@@ -198,22 +159,14 @@ export async function executeCode(code: string, runtime: Runtime): Promise<void>
     
     const fn = new AsyncFunction(
         'runtime',
-        'say',
-        'ask',
-        'pause',
-        'wait',
-        'gotoxy',
-        'disconnect',
+        'bbs',
+        'screen',
         code
     )
     
     await fn(
         runtime,
-        coreModule.say,
-        coreModule.ask,
-        coreModule.pause,
-        coreModule.wait,
-        coreModule.gotoxy,
-        coreModule.disconnect
+        coreModule.bbs,
+        coreModule.screen
     )
 }

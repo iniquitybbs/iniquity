@@ -32,6 +32,17 @@ const moduleMetadata = new WeakMap<Function, IQModuleOptions>()
 const runtimeMetadata = new WeakMap<Function, IQModuleRuntimeOptions>()
 
 /**
+ * Module prototype interface for type-safe decorator assignments
+ */
+interface IQModulePrototype {
+    basepath?: string
+    data?: IQReactorOptions
+    access?: number
+    encoding?: string
+    computed?: any
+}
+
+/**
  * @IQModule decorator
  * Marks a class as an Iniquity module and stores configuration
  */
@@ -40,27 +51,29 @@ export function IQModule(options: IQModuleOptions) {
         // Store metadata on the constructor
         moduleMetadata.set(constructor, options)
         
+        const proto = constructor.prototype as IQModulePrototype
+        
         // If data is provided, attach it to the prototype
         if (options.data) {
-            (constructor.prototype as any).data = options.data
+            proto.data = options.data
         }
         
         // If basepath is provided, attach it to the prototype
         if (options.basepath) {
-            (constructor.prototype as any).basepath = options.basepath
+            proto.basepath = options.basepath
         }
         
         // Store other options
         if (options.access !== undefined) {
-            (constructor.prototype as any).access = options.access
+            proto.access = options.access
         }
         
         if (options.encoding) {
-            (constructor.prototype as any).encoding = options.encoding
+            proto.encoding = options.encoding
         }
         
         if (options.computed) {
-            (constructor.prototype as any).computed = options.computed
+            proto.computed = options.computed
         }
     }
 }

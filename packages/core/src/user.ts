@@ -7,6 +7,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as crypto from 'crypto'
+import { Transaction, Validate, Measure } from './decorators-runtime'
 
 /**
  * User access levels
@@ -259,6 +260,15 @@ export function getUserDatabase(): IUserDatabase {
 }
 
 /**
+ * Initialize the user database with a BBS-specific data path
+ * @param bbsPath - The root directory of the BBS (where iniquity.ts lives)
+ */
+export function initUserDatabase(bbsPath: string): void {
+    const dataPath = path.join(bbsPath, 'data', 'users')
+    globalUserDatabase = new JSONUserDatabase(dataPath)
+}
+
+/**
  * User class for managing individual users
  */
 export class IQUser {
@@ -303,10 +313,10 @@ export class IQUser {
     /**
      * Set user access level
      */
+    @Transaction()
     set access(level: UserAccessLevel) {
         if (this.data) {
             this.data.access = level
-            this.save()
         }
     }
 

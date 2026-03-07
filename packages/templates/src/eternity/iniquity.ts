@@ -6,28 +6,14 @@
  * @file iniquity.ts
  */
 
-import { IQ, IQReactor, IQModuleACLS, IQMenuLoopMessageResponse } from "./.iniquity/node_modules/@iniquitybbs/core/src"
-// import { setInterval, Promise } from "./.iniquity/node_modules/@iniquitybbs/core/src/pollyfills"
+import { bbs, screen } from "@iniquitybbs/core"
 import config from "./iniquity.json"
 
-export class Eternity extends IQ {
-    basepath = "/dist/assets"
-    access = IQModuleACLS.low
-    data = IQReactor({
-        config: config,
-        alert: "",
-        user: { handle: "", password: "", access: IQModuleACLS.low },
-        message: "",
-        number: 1,
-        system: system.stats
-    })
+// Set terminal resolution
+screen.setResolution(132, 37)
 
-    /**
-     * Start the bbs
-     *
-     */
-    public start() {
-        if (this.terminfo.x < 132 || this.terminfo.y < 37) {
+bbs.start(async () => {
+    if (screen.width < 132 || screen.height < 37) {
             this.say("Your terminal is too small to call this bbs. Please set your terminal scale to 132x37. It's way cooler.").wait(3000)
             this.disconnect()
         }
