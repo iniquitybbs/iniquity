@@ -56,16 +56,18 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
 }
 
 /**
- * Execute a class-based module
+ * Execute a class-based module using tsx for on-the-fly TypeScript execution
  */
 async function executeClassModule(filePath: string, runtime: Runtime, session: Session): Promise<void> {
-    const modulePath = filePath.replace(/\.ts$/, '.js')
+    const absolutePath = path.resolve(filePath)
     
-    if (!fs.existsSync(modulePath)) {
-        throw new Error(`Compiled module not found: ${modulePath}. Please run 'npx tsc' first.`)
-    }
+    // Use tsx to load TypeScript files directly
+    // tsx registers itself as a loader for .ts files
+    const tsxPath = require.resolve('tsx/cjs')
+    require(tsxPath)
     
-    const module = await import(pathToFileURL(modulePath).href)
+    // Now we can require the TypeScript file directly
+    const module = require(absolutePath)
     
     for (const exportName in module) {
         const exported = module[exportName]

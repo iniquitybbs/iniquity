@@ -232,7 +232,7 @@ export interface IQArtworkRenderOptions {
     pageLength?: number
 }
 
-export interface IQArtworkRenderFunctions {
+export interface IQArtworkRenderFunctions extends Promise<void> {
     pause(): Promise<string>
     gotoxy(x: number, y: number): void
     colorReset(): void
@@ -364,18 +364,23 @@ export class Artwork {
         }
 
         const self = this
-        return {
-            pause: async () => {
-                await renderPromise
-                return await getGlobalRuntime().pause()
-            },
-            gotoxy: (x: number, y: number) => {
-                self.output.write(ANSI.gotoxy(x, y))
-            },
-            colorReset: () => {
-                self.output.write(ANSI.reset())
-            }
+        
+        // Create a thenable object that is both a Promise and has chainable methods
+        const result = renderPromise.then(() => {}) as IQArtworkRenderFunctions
+        
+        // Add chainable methods
+        result.pause = async () => {
+            await renderPromise
+            return await getGlobalRuntime().pause()
         }
+        result.gotoxy = (x: number, y: number) => {
+            self.output.write(ANSI.gotoxy(x, y))
+        }
+        result.colorReset = () => {
+            self.output.write(ANSI.reset())
+        }
+        
+        return result
     }
 
     private interpolateData(content: string, data: any): string {
