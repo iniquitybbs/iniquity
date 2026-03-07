@@ -13,22 +13,24 @@ screen.setResolution(132, 37)
 // Event Bus Setup - Global event handlers that work across all menus
 // ============================================================================
 
-// Track session start time for idle detection
-let lastActivityTime = Date.now()
-let idleWarningShown = false
+// Idle detection state
+const idleState = {
+    lastActivity: Date.now(),
+    warningShown: false,
+    reset() {
+        this.lastActivity = Date.now()
+        this.warningShown = false
+    }
+}
 
 // Listen for all menu navigation events
 bbs.on("menu:enter", (event) => {
-    lastActivityTime = Date.now()
-    idleWarningShown = false
+    idleState.reset()
     console.log(`[Event] User entered menu: ${event.data?.menu}`)
 })
 
 // Listen for any key press to reset idle timer
-bbs.on("input:key", () => {
-    lastActivityTime = Date.now()
-    idleWarningShown = false
-})
+bbs.on("input:key", () => idleState.reset())
 
 // System announcement handler - shows popup regardless of current menu
 bbs.on("system:announce", async (event) => {
@@ -37,15 +39,13 @@ bbs.on("system:announce", async (event) => {
 
 // Inter-node message handler - simulates receiving messages from other users
 bbs.on("node:message", async (event) => {
-    const from = event.data?.from || "Unknown"
-    const message = event.data?.message || ""
-    await bbs.popup(`Message from ${from}`, message)
+    await bbs.popup(`Message from ${event.data?.from || "Unknown"}`, event.data?.message || "")
 })
 
 // Idle timeout warning handler
 bbs.on("session:idle", async (event) => {
-    if (!idleWarningShown) {
-        idleWarningShown = true
+    if (!idleState.warningShown) {
+        idleState.warningShown = true
         await bbs.popup("Idle Warning", `You've been idle for ${event.data?.minutes} minutes.\nPress any key to stay connected.`)
     }
 })
@@ -143,18 +143,6 @@ const showUserList = async () => {
     )
 }
 
-// User login flow - now uses popup form
-const doLogin = async (): Promise<boolean> => {
-    const user = await bbs.loginForm()
-    return user !== null
-}
-
-// User registration flow - now uses popup form
-const doRegister = async (): Promise<boolean> => {
-    const user = await bbs.registerForm()
-    return user !== null
-}
-
 // Show current user profile
 const showMyProfile = async () => {
     const user = bbs.getCurrentUser()
@@ -170,19 +158,21 @@ const showMyProfile = async () => {
     }
 
     const accessName = UserAccessLevel[data.access] || "unknown"
+    const message = `|11${data.handle}|07
+|08${"─".repeat(40)}|07
 
-    let message = `|11${data.handle}|07\n`
-    message += `|08${"─".repeat(40)}|07\n\n`
-    message += `|08Real Name:  |07${data.realName || "(not set)"}\n`
-    message += `|08Location:   |07${data.location || "(not set)"}\n`
-    message += `|08Email:      |07${data.email || "(not set)"}\n`
-    message += `|08Access:     |07${accessName}\n\n`
-    message += `|08${"─".repeat(40)}|07\n`
-    message += `|14Statistics|07\n\n`
-    message += `|08Total Calls:    |15${data.totalCalls}|07\n`
-    message += `|08Total Posts:    |15${data.totalPosts}|07\n`
-    message += `|08Time Online:    |15${Math.floor(data.timeOnline / 60)} minutes|07\n`
-    message += `|08Member Since:   |15${new Date(data.createdAt).toLocaleDateString()}|07\n`
+|08Real Name:  |07${data.realName || "(not set)"}
+|08Location:   |07${data.location || "(not set)"}
+|08Email:      |07${data.email || "(not set)"}
+|08Access:     |07${accessName}
+
+|08${"─".repeat(40)}|07
+|14Statistics|07
+
+|08Total Calls:    |15${data.totalCalls}|07
+|08Total Posts:    |15${data.totalPosts}|07
+|08Time Online:    |15${Math.floor(data.timeOnline / 60)} minutes|07
+|08Member Since:   |15${new Date(data.createdAt).toLocaleDateString()}|07`
 
     await bbs.popup("My Profile", message, { width: 50 })
 }
@@ -385,10 +375,10 @@ bbs.start(async () => {
 
         switch (choice) {
             case "L":
-                loggedIn = await doLogin()
+                loggedIn = (await bbs.loginForm()) !== null
                 break
             case "N":
-                loggedIn = await doRegister()
+                loggedIn = (await bbs.registerForm()) !== null
                 break
             case "G":
                 await bbs.popup("Guest Access", "Welcome, Guest!\n\nYou have limited access as a guest.\nRegister for full access to all features.", {
