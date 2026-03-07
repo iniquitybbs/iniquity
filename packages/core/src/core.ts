@@ -209,6 +209,15 @@ export interface IQPauseOptions {
     continueKey?: string
 }
 
+/**
+ * Options for say() function
+ */
+export interface IQSayOptions {
+    mci?: boolean | 'pipe' | 'at-codes' | 'all'
+    newline?: boolean
+    center?: boolean
+}
+
 export interface IQWaitOptions {
     ms?: number
 }
@@ -724,33 +733,48 @@ export class IQ {
 
     /**
      * Display text to the user
+     * By default, processes MCI/pipe codes (|XX format)
+     * @param text - Text to display
+     * @param options - Optional settings: mci (true by default), newline, center
      */
-    say(text: string | any): IBBSSayFunctions {
+    say(text: string | any, options?: IQSayOptions): IBBSSayFunctions {
         const output = typeof text === 'string' ? text : JSON.stringify(text)
+        const opts = { mci: true, newline: true, center: false, ...options }
+        
+        let finalText = output
+        
+        // Add newline if requested (default true)
+        if (opts.newline) {
+            finalText = output + '\r\n'
+        }
+        
+        // Process MCI codes if enabled (default true)
+        if (opts.mci) {
+            this.output.writeMCI(finalText)
+        } else {
+            this.output.write(finalText)
+        }
         
         const lines = output.split('\n')
-        const centeredLines = lines.map(line => {
-            const stripped = line.replace(/\x1b\[[0-9;]*m/g, '')
-            if (stripped.length > 0 && stripped.length < this.output.getWidth()) {
-                const padding = Math.floor((this.output.getWidth() - stripped.length) / 2)
-                return ' '.repeat(padding) + line
-            }
-            return line
-        })
-        
-        this.output.write(centeredLines.join('\n') + '\r\n')
         this.output.incrementLineCount(lines.length)
 
         return this.createChainableFunctions()
     }
 
     /**
-     * Display text with MCI processing
+     * Display raw text without MCI processing
+     * @param text - Text to display
+     */
+    sayRaw(text: string | any): IBBSSayFunctions {
+        return this.say(text, { mci: false })
+    }
+
+    /**
+     * Display text with MCI processing (alias for say() which does MCI by default)
+     * @deprecated Use say() instead - MCI processing is now the default
      */
     async sayMCI(text: string): Promise<IBBSSayFunctions> {
-        this.output.writeMCI(text + '\r\n')
-        await this.processPendingActions()
-        return this.createChainableFunctions()
+        return this.say(text, { mci: true })
     }
 
     /**
@@ -878,7 +902,7 @@ export class IQ {
      * Create a menu
      */
     menu(options: IQMenuOptions): IQMenu {
-        return new IQMenu(options, this.output)
+        return new IQMenu(options, this.output, (opts) => this.artwork(opts))
     }
 
     /**
@@ -1117,12 +1141,20 @@ export function getGlobalRuntime(): Runtime {
 /**
  * Standalone functions that use global runtime
  */
-export function say(text: string | any): IBBSSayFunctions {
-    return getGlobalRuntime().say(text)
+export function say(text: string | any, options?: IQSayOptions): IBBSSayFunctions {
+    return getGlobalRuntime().say(text, options)
+}
+
+export function sayRaw(text: string | any): IBBSSayFunctions {
+    return getGlobalRuntime().sayRaw(text)
 }
 
 export async function ask(question: string): Promise<string> {
     return await getGlobalRuntime().ask(question)
+}
+
+export async function getKey(): Promise<string> {
+    return await getGlobalRuntime().getOutput().readKey()
 }
 
 export async function pause(optionsOrPrompt?: IQPauseOptions | string): Promise<string> {
@@ -1143,6 +1175,10 @@ export async function printMCI(text: string, pageLength?: number): Promise<IBBSP
 
 export function gotoxy(x: number, y: number): void {
     getGlobalRuntime().gotoxy(x, y)
+}
+
+export function cls(): void {
+    getGlobalRuntime().getOutput().write(ANSI.clearScreen())
 }
 
 export function disconnect(): void {

@@ -27,12 +27,15 @@ export {
     
     // Standalone functions
     say,
+    sayRaw,
     ask,
+    getKey,
     pause,
     wait,
     print,
     printMCI,
     gotoxy,
+    cls,
     disconnect,
     hangup,
     cursor,
@@ -57,6 +60,7 @@ export {
     IBBSSayFunctions,
     IBBSPrintFunctions,
     IQPauseOptions,
+    IQSayOptions,
     IQWaitOptions,
     IQArtworkOptions,
     IQArtworkRenderOptions,
@@ -74,10 +78,12 @@ export { IQOutput, ControlCodeAction } from './output'
 export {
     IQMenu,
     IQMenuOptions,
+    IQMenuArtOptions,
     IQMenuLoopOptions,
     IQMenuLoopMessageResponse,
     IQMenuPromptOptions,
     IQMenuPromptFunctions,
+    IQMenuItem,
     IMenuCommand,
     IMenuCommands
 } from './menu'

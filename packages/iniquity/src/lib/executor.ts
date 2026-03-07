@@ -43,9 +43,12 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
         
         const hasClassDeclaration = /class\s+\w+\s+extends\s+IQ/.test(code)
         const hasDecorator = /@IQModule/.test(code)
+        const hasTypeAnnotations = /:\s*(string|number|boolean|Promise|void|any)\b/.test(code)
+        const hasAsyncFunction = /async\s+function\s+\w+/.test(code)
         
-        if (hasClassDeclaration || hasDecorator) {
-            await executeClassModule(filePath, runtime, session)
+        // Use tsx for any TypeScript that has type annotations or complex syntax
+        if (hasClassDeclaration || hasDecorator || hasTypeAnnotations || hasAsyncFunction) {
+            await executeWithTsx(filePath, runtime, session)
         } else {
             await executeSimpleScript(code, runtime, session)
         }
@@ -56,19 +59,22 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
 }
 
 /**
- * Execute a class-based module using tsx for on-the-fly TypeScript execution
+ * Execute TypeScript file using tsx for on-the-fly compilation
  */
-async function executeClassModule(filePath: string, runtime: Runtime, session: Session): Promise<void> {
+async function executeWithTsx(filePath: string, runtime: Runtime, session: Session): Promise<void> {
     const absolutePath = path.resolve(filePath)
     
     // Use tsx to load TypeScript files directly
-    // tsx registers itself as a loader for .ts files
     const tsxPath = require.resolve('tsx/cjs')
     require(tsxPath)
+    
+    // Clear require cache to ensure fresh load
+    delete require.cache[absolutePath]
     
     // Now we can require the TypeScript file directly
     const module = require(absolutePath)
     
+    // Check for IQ class exports first
     for (const exportName in module) {
         const exported = module[exportName]
         
@@ -99,12 +105,16 @@ async function executeClassModule(filePath: string, runtime: Runtime, session: S
         }
     }
     
+    // If no IQ class, check for default export or main function
     if (module.default) {
         if (typeof module.default === 'function') {
             await module.default(runtime)
         } else if (typeof module.default.start === 'function') {
             await module.default.start()
         }
+    } else if (typeof module.main === 'function') {
+        // Support for main() function pattern
+        await module.main()
     }
 }
 
