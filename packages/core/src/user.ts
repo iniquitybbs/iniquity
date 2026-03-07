@@ -4,10 +4,10 @@
  * @summary User management, authentication, and data persistence
  */
 
-import * as fs from 'fs'
-import * as path from 'path'
-import * as crypto from 'crypto'
-import { Transaction, Validate, Measure } from './decorators-runtime'
+import * as fs from "fs"
+import * as path from "path"
+import * as crypto from "crypto"
+import { Transaction, Validate, Measure } from "./decorators-runtime"
 
 /**
  * User access levels
@@ -109,7 +109,7 @@ export class JSONUserDatabase implements IUserDatabase {
     private users: Map<string, IUserData> = new Map()
     private nextId: number = 1
 
-    constructor(dataPath: string = './data/users') {
+    constructor(dataPath: string = "./data/users") {
         this.dataPath = dataPath
         this.ensureDataDir()
         this.loadAllUsers()
@@ -122,7 +122,7 @@ export class JSONUserDatabase implements IUserDatabase {
     }
 
     private getUserFilePath(handle: string): string {
-        const safeHandle = handle.toLowerCase().replace(/[^a-z0-9]/g, '_')
+        const safeHandle = handle.toLowerCase().replace(/[^a-z0-9]/g, "_")
         return path.join(this.dataPath, `${safeHandle}.json`)
     }
 
@@ -130,9 +130,9 @@ export class JSONUserDatabase implements IUserDatabase {
         try {
             const files = fs.readdirSync(this.dataPath)
             for (const file of files) {
-                if (file.endsWith('.json')) {
+                if (file.endsWith(".json")) {
                     const filePath = path.join(this.dataPath, file)
-                    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+                    const data = JSON.parse(fs.readFileSync(filePath, "utf-8"))
                     this.users.set(data.handle.toLowerCase(), data)
                     if (data.id >= this.nextId) {
                         this.nextId = data.id + 1
@@ -155,7 +155,7 @@ export class JSONUserDatabase implements IUserDatabase {
             this.users.set(user.handle.toLowerCase(), user)
             return true
         } catch (err) {
-            console.error('Failed to save user:', err)
+            console.error("Failed to save user:", err)
             return false
         }
     }
@@ -167,10 +167,10 @@ export class JSONUserDatabase implements IUserDatabase {
         const user: IUserData = {
             id: this.getNextId(),
             handle: userData.handle,
-            passwordHash: userData.passwordHash || '',
-            email: userData.email || '',
-            realName: userData.realName || '',
-            location: userData.location || '',
+            passwordHash: userData.passwordHash || "",
+            email: userData.email || "",
+            realName: userData.realName || "",
+            location: userData.location || "",
             access: userData.access ?? UserAccessLevel.normal,
             createdAt: new Date().toISOString(),
             lastLogin: new Date().toISOString(),
@@ -182,21 +182,21 @@ export class JSONUserDatabase implements IUserDatabase {
             downloadBytes: 0,
             timeOnline: 0,
             flags: 0,
-            note: '',
-            signature: '',
-            protocol: 'zmodem',
-            editor: 'internal',
-            menuSet: 'default',
+            note: "",
+            signature: "",
+            protocol: "zmodem",
+            editor: "internal",
+            menuSet: "default",
             screenWidth: 80,
             screenHeight: 24,
-            birthDate: '',
-            gender: '',
-            phone: '',
-            address: '',
-            city: '',
-            state: '',
-            zipCode: '',
-            country: '',
+            birthDate: "",
+            gender: "",
+            phone: "",
+            address: "",
+            city: "",
+            state: "",
+            zipCode: "",
+            country: "",
             custom: {}
         }
 
@@ -264,7 +264,7 @@ export function getUserDatabase(): IUserDatabase {
  * @param bbsPath - The root directory of the BBS (where iniquity.ts lives)
  */
 export function initUserDatabase(bbsPath: string): void {
-    const dataPath = path.join(bbsPath, 'data', 'users')
+    const dataPath = path.join(bbsPath, "data", "users")
     globalUserDatabase = new JSONUserDatabase(dataPath)
 }
 
@@ -281,7 +281,7 @@ export class IQUser {
     constructor(options: IUserOptions) {
         this.options = options
         this.db = getUserDatabase()
-        
+
         // Try to load existing user
         const handle = options.handle || options.name
         if (handle) {
@@ -293,7 +293,7 @@ export class IQUser {
      * Get user handle
      */
     get handle(): string {
-        return this.data?.handle || this.options.handle || this.options.name || ''
+        return this.data?.handle || this.options.handle || this.options.name || ""
     }
 
     /**
@@ -324,21 +324,21 @@ export class IQUser {
      * Get user email
      */
     get email(): string {
-        return this.data?.email || this.options.email || ''
+        return this.data?.email || this.options.email || ""
     }
 
     /**
      * Get user real name
      */
     get realName(): string {
-        return this.data?.realName || this.options.realName || ''
+        return this.data?.realName || this.options.realName || ""
     }
 
     /**
      * Get user location
      */
     get location(): string {
-        return this.data?.location || this.options.location || ''
+        return this.data?.location || this.options.location || ""
     }
 
     /**
@@ -353,7 +353,7 @@ export class IQUser {
             uploadBytes: this.data?.uploadBytes || 0,
             downloadBytes: this.data?.downloadBytes || 0,
             timeOnline: this.data?.timeOnline || 0,
-            lastLogin: this.data?.lastLogin || ''
+            lastLogin: this.data?.lastLogin || ""
         }
     }
 
@@ -375,7 +375,7 @@ export class IQUser {
      * Hash a password
      */
     private hashPassword(password: string): string {
-        return crypto.createHash('sha256').update(password).digest('hex')
+        return crypto.createHash("sha256").update(password).digest("hex")
     }
 
     /**
@@ -391,7 +391,7 @@ export class IQUser {
      */
     login(password?: string): boolean {
         const pwd = password || this.options.password
-        
+
         if (!this.data) {
             return false
         }
@@ -406,7 +406,7 @@ export class IQUser {
 
         this.isLoggedIn = true
         this.loginTime = new Date()
-        
+
         // Update login stats
         this.data.lastLogin = new Date().toISOString()
         this.data.totalCalls++
@@ -446,9 +446,9 @@ export class IQUser {
         const userData: Partial<IUserData> = {
             handle: handle,
             passwordHash: this.hashPassword(pwd),
-            email: this.options.email || '',
-            realName: this.options.realName || '',
-            location: this.options.location || '',
+            email: this.options.email || "",
+            realName: this.options.realName || "",
+            location: this.options.location || "",
             access: this.options.access ?? UserAccessLevel.normal
         }
 
@@ -548,10 +548,10 @@ export class IQUser {
      */
     update(updates: Partial<IUserData>): boolean {
         if (!this.data) return false
-        
+
         // Don't allow updating certain fields directly
         const { id, handle, passwordHash, ...safeUpdates } = updates
-        
+
         Object.assign(this.data, safeUpdates)
         return this.save()
     }
@@ -562,7 +562,7 @@ export class IQUser {
     changePassword(oldPassword: string, newPassword: string): boolean {
         if (!this.data) return false
         if (!this.verifyPassword(oldPassword)) return false
-        
+
         this.data.passwordHash = this.hashPassword(newPassword)
         return this.save()
     }
@@ -626,14 +626,15 @@ export class IQUserList {
      * Get users by access level
      */
     byAccessLevel(level: UserAccessLevel): IUserData[] {
-        return this.db.list().filter(u => u.access === level)
+        return this.db.list().filter((u) => u.access === level)
     }
 
     /**
      * Get top users by calls
      */
     topByCalls(limit: number = 10): IUserData[] {
-        return this.db.list()
+        return this.db
+            .list()
             .sort((a, b) => b.totalCalls - a.totalCalls)
             .slice(0, limit)
     }
@@ -642,7 +643,8 @@ export class IQUserList {
      * Get top users by posts
      */
     topByPosts(limit: number = 10): IUserData[] {
-        return this.db.list()
+        return this.db
+            .list()
             .sort((a, b) => b.totalPosts - a.totalPosts)
             .slice(0, limit)
     }
@@ -651,7 +653,8 @@ export class IQUserList {
      * Get recently active users
      */
     recentlyActive(limit: number = 10): IUserData[] {
-        return this.db.list()
+        return this.db
+            .list()
             .sort((a, b) => new Date(b.lastLogin).getTime() - new Date(a.lastLogin).getTime())
             .slice(0, limit)
     }
@@ -660,7 +663,8 @@ export class IQUserList {
      * Get new users
      */
     newest(limit: number = 10): IUserData[] {
-        return this.db.list()
+        return this.db
+            .list()
             .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
             .slice(0, limit)
     }

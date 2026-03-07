@@ -4,35 +4,44 @@
  * @summary ENiGMA-inspired text transformations (l33t, title, upper, etc.)
  */
 
-export type TextStyleName = 
-    | 'normal'
-    | 'upper'
-    | 'lower'
-    | 'title'
-    | 'firstLower'
-    | 'smallVowels'
-    | 'bigVowels'
-    | 'smallI'
-    | 'mixed'
-    | 'l33t'
-    | 'reverse'
-    | 'alternating'
-    | 'wave'
+export type TextStyleName =
+    | "normal"
+    | "upper"
+    | "lower"
+    | "title"
+    | "firstLower"
+    | "smallVowels"
+    | "bigVowels"
+    | "smallI"
+    | "mixed"
+    | "l33t"
+    | "reverse"
+    | "alternating"
+    | "wave"
 
 export type TextStyleFunction = (text: string) => string
 
-const VOWELS = 'aeiouAEIOU'
+const VOWELS = "aeiouAEIOU"
 
 const L33T_MAP: Record<string, string> = {
-    'a': '4', 'A': '4',
-    'e': '3', 'E': '3',
-    'i': '1', 'I': '1',
-    'o': '0', 'O': '0',
-    's': '5', 'S': '5',
-    't': '7', 'T': '7',
-    'b': '8', 'B': '8',
-    'g': '9', 'G': '9',
-    'l': '1', 'L': '1'
+    a: "4",
+    A: "4",
+    e: "3",
+    E: "3",
+    i: "1",
+    I: "1",
+    o: "0",
+    O: "0",
+    s: "5",
+    S: "5",
+    t: "7",
+    T: "7",
+    b: "8",
+    B: "8",
+    g: "9",
+    G: "9",
+    l: "1",
+    L: "1"
 }
 
 export function styleNormal(text: string): string {
@@ -60,7 +69,7 @@ export function styleFirstLower(text: string): string {
 }
 
 export function styleSmallVowels(text: string): string {
-    let result = ''
+    let result = ""
     for (const char of text) {
         if (VOWELS.includes(char)) {
             result += char.toLowerCase()
@@ -72,7 +81,7 @@ export function styleSmallVowels(text: string): string {
 }
 
 export function styleBigVowels(text: string): string {
-    let result = ''
+    let result = ""
     for (const char of text) {
         if (VOWELS.includes(char)) {
             result += char.toUpperCase()
@@ -84,10 +93,10 @@ export function styleBigVowels(text: string): string {
 }
 
 export function styleSmallI(text: string): string {
-    let result = ''
+    let result = ""
     for (const char of text) {
-        if (char === 'i' || char === 'I') {
-            result += 'i'
+        if (char === "i" || char === "I") {
+            result += "i"
         } else {
             result += char.toUpperCase()
         }
@@ -96,7 +105,7 @@ export function styleSmallI(text: string): string {
 }
 
 export function styleMixed(text: string): string {
-    let result = ''
+    let result = ""
     for (const char of text) {
         if (/[a-zA-Z]/.test(char)) {
             result += Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()
@@ -108,7 +117,7 @@ export function styleMixed(text: string): string {
 }
 
 export function styleL33t(text: string): string {
-    let result = ''
+    let result = ""
     for (const char of text) {
         result += L33T_MAP[char] || char.toLowerCase()
     }
@@ -116,11 +125,11 @@ export function styleL33t(text: string): string {
 }
 
 export function styleReverse(text: string): string {
-    return text.split('').reverse().join('')
+    return text.split("").reverse().join("")
 }
 
 export function styleAlternating(text: string): string {
-    let result = ''
+    let result = ""
     let upper = true
     for (const char of text) {
         if (/[a-zA-Z]/.test(char)) {
@@ -134,7 +143,7 @@ export function styleAlternating(text: string): string {
 }
 
 export function styleWave(text: string): string {
-    let result = ''
+    let result = ""
     let letterIndex = 0
     for (const char of text) {
         if (/[a-zA-Z]/.test(char)) {
@@ -165,37 +174,37 @@ export const TEXT_STYLES: Record<TextStyleName, TextStyleFunction> = {
 }
 
 const STYLE_ALIASES: Record<string, TextStyleName> = {
-    'toUpperCase': 'upper',
-    'styleUpper': 'upper',
-    'UPPER': 'upper',
-    'toLowerCase': 'lower',
-    'styleLower': 'lower',
-    'LOWER': 'lower',
-    'styleTitle': 'title',
-    'TITLE': 'title',
-    'titleCase': 'title',
-    'styleFirstLower': 'firstLower',
-    'FIRSTLOWER': 'firstLower',
-    'styleSmallVowels': 'smallVowels',
-    'SMALLVOWELS': 'smallVowels',
-    'styleBigVowels': 'bigVowels',
-    'BIGVOWELS': 'bigVowels',
-    'styleSmallI': 'smallI',
-    'SMALLI': 'smallI',
-    'styleMixed': 'mixed',
-    'MIXED': 'mixed',
-    'random': 'mixed',
-    'styleL33t': 'l33t',
-    'L33T': 'l33t',
-    'leet': 'l33t',
-    'LEET': 'l33t',
-    'styleReverse': 'reverse',
-    'REVERSE': 'reverse',
-    'backwards': 'reverse',
-    'styleAlternating': 'alternating',
-    'ALTERNATING': 'alternating',
-    'styleWave': 'wave',
-    'WAVE': 'wave'
+    toUpperCase: "upper",
+    styleUpper: "upper",
+    UPPER: "upper",
+    toLowerCase: "lower",
+    styleLower: "lower",
+    LOWER: "lower",
+    styleTitle: "title",
+    TITLE: "title",
+    titleCase: "title",
+    styleFirstLower: "firstLower",
+    FIRSTLOWER: "firstLower",
+    styleSmallVowels: "smallVowels",
+    SMALLVOWELS: "smallVowels",
+    styleBigVowels: "bigVowels",
+    BIGVOWELS: "bigVowels",
+    styleSmallI: "smallI",
+    SMALLI: "smallI",
+    styleMixed: "mixed",
+    MIXED: "mixed",
+    random: "mixed",
+    styleL33t: "l33t",
+    L33T: "l33t",
+    leet: "l33t",
+    LEET: "l33t",
+    styleReverse: "reverse",
+    REVERSE: "reverse",
+    backwards: "reverse",
+    styleAlternating: "alternating",
+    ALTERNATING: "alternating",
+    styleWave: "wave",
+    WAVE: "wave"
 }
 
 export function getTextStyle(name: string): TextStyleFunction | undefined {

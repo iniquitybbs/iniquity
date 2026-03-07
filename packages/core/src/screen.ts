@@ -4,7 +4,7 @@
  * @summary Terminal dimensions and centering utilities
  */
 
-import { screenBuffer, setScreenDimensions, ScreenBuffer } from './screen-buffer'
+import { screenBuffer, setScreenDimensions, ScreenBuffer } from "./screen-buffer"
 
 /**
  * Default Iniquity terminal dimensions

@@ -2,19 +2,19 @@
  * Simplified BBS API
  * @module core/bbs
  * @summary High-level declarative API for building BBS applications
- * 
+ *
  * This module provides a simplified, declarative API that wraps the existing
  * core functionality, enabling cleaner and more expressive BBS development.
  */
 
-import { getGlobalRuntime, Runtime, Artwork } from './core'
-import { IQMenu, IQMenuOptions, IMenuCommands } from './menu'
-import { IQFrame } from './frame'
-import { screen } from './screen'
-import { ANSI } from './ansi'
-import { events, IQEventHandler, IQEventOptions } from './events'
-import { IQUser, IQUserList, IUserOptions, UserAccessLevel } from './user'
-import { IQGroup, IQGroupList, IGroupOptions } from './group'
+import { getGlobalRuntime, Runtime, Artwork } from "./core"
+import { IQMenu, IQMenuOptions, IMenuCommands } from "./menu"
+import { IQFrame } from "./frame"
+import { screen } from "./screen"
+import { ANSI } from "./ansi"
+import { events, IQEventHandler, IQEventOptions } from "./events"
+import { IQUser, IQUserList, IUserOptions, UserAccessLevel } from "./user"
+import { IQGroup, IQGroupList, IGroupOptions } from "./group"
 
 /**
  * Menu item definition for declarative menus
@@ -25,7 +25,7 @@ export interface BBSMenuItem {
     /** Display label */
     label: string
     /** Action to perform: "back", "quit", or a function */
-    action?: 'back' | 'quit' | (() => any | Promise<any>)
+    action?: "back" | "quit" | (() => any | Promise<any>)
     /** Name of another menu to navigate to */
     goto?: string
     /** Explicit X position for this item (bypasses layout system) */
@@ -48,7 +48,7 @@ export interface BBSMenuOptions {
      * - 'both': Always center both axes
      * - 'none': No centering, render at 1,1 (legacy behavior)
      */
-    artCenter?: 'auto' | 'horizontal' | 'vertical' | 'both' | 'none'
+    artCenter?: "auto" | "horizontal" | "vertical" | "both" | "none"
     /** Explicit X position for artwork (1-indexed). Overrides centering. */
     artX?: number
     /** Explicit Y position for artwork (1-indexed). Overrides centering. */
@@ -60,16 +60,16 @@ export interface BBSMenuOptions {
     /** Y position for prompt (if not specified, uses layout default) */
     promptY?: number
     /** Layout mode for auto-positioning */
-    layout?: 'single' | 'two-column'
+    layout?: "single" | "two-column"
     /** Base path for artwork files */
     basepath?: string
     /** Format string for menu items (e.g., "|11[|15{key}|11] |07{label}") */
     itemFormat?: string
     /** Menu items */
     items: BBSMenuItem[]
-    
+
     // Column positioning options for flexible layout control
-    
+
     /** Column 1 (left) X position for two-column layout */
     col1X?: number
     /** Column 1 (left) starting Y position */
@@ -89,7 +89,7 @@ export interface BBSMenuOptions {
  */
 export interface BBSPopupOptions {
     /** Type affects color scheme */
-    type?: 'info' | 'warning' | 'error' | 'success'
+    type?: "info" | "warning" | "error" | "success"
     /** Width of the popup */
     width?: number
     /** Message to show when data is empty (for dataPopup) */
@@ -103,13 +103,13 @@ export interface BBSArtOptions {
     /** Clear screen before rendering */
     clearScreen?: boolean
     /** Display mode: 'line' (line-by-line), 'character' (char-by-char), 'instant' (all at once) */
-    display?: 'line' | 'character' | 'instant'
+    display?: "line" | "character" | "instant"
     /** Speed in milliseconds (for line/character modes) */
     speed?: number
     /** Data for MCI code interpolation (accessible as @KEY@ in artwork) */
     data?: Record<string, any>
     /** Centering mode for artwork positioning */
-    center?: 'auto' | 'horizontal' | 'vertical' | 'both' | 'none'
+    center?: "auto" | "horizontal" | "vertical" | "both" | "none"
     /** Explicit X position (1-indexed) */
     x?: number
     /** Explicit Y position (1-indexed) */
@@ -154,10 +154,10 @@ interface MenuDefinition {
  * Color schemes for popup types
  */
 const POPUP_COLORS: Record<string, { border: string; title: string }> = {
-    info: { border: 'cyan', title: 'bright white' },
-    warning: { border: 'yellow', title: 'bright yellow' },
-    error: { border: 'bright red', title: 'bright white' },
-    success: { border: 'green', title: 'bright white' }
+    info: { border: "cyan", title: "bright white" },
+    warning: { border: "yellow", title: "bright yellow" },
+    error: { border: "bright red", title: "bright white" },
+    success: { border: "green", title: "bright white" }
 }
 
 /**
@@ -166,16 +166,16 @@ const POPUP_COLORS: Record<string, { border: string; title: string }> = {
  * @param layout - Layout type ('single' or 'two-column')
  * @returns Layout configuration with calculated positions
  */
-function getLayoutConfig(layout: 'single' | 'two-column') {
+function getLayoutConfig(layout: "single" | "two-column") {
     const w = screen.width
     const h = screen.height
 
-    if (layout === 'two-column') {
+    if (layout === "two-column") {
         return {
-            col1X: Math.floor(w * 0.22),      // ~22% from left
-            col2X: Math.floor(w * 0.57),      // ~57% from left
-            startY: Math.floor(h * 0.32),     // ~32% from top
-            promptY: Math.floor(h * 0.81)     // ~81% from top
+            col1X: Math.floor(w * 0.22), // ~22% from left
+            col2X: Math.floor(w * 0.57), // ~57% from left
+            startY: Math.floor(h * 0.32), // ~32% from top
+            promptY: Math.floor(h * 0.81) // ~81% from top
         }
     }
     return {
@@ -191,7 +191,7 @@ function getLayoutConfig(layout: 'single' | 'two-column') {
 class BBS {
     private menuRegistry: Map<string, MenuDefinition> = new Map()
     private startCallback: (() => Promise<void>) | null = null
-    private basepath: string = 'assets'
+    private basepath: string = "assets"
 
     /**
      * Register a declarative menu definition
@@ -217,7 +217,7 @@ class BBS {
         const { options } = definition
 
         // Calculate positions based on layout using dynamic screen-responsive values
-        const layout = options.layout || 'single'
+        const layout = options.layout || "single"
         const layoutConfig = getLayoutConfig(layout)
 
         // Build IQMenu options
@@ -228,7 +228,7 @@ class BBS {
             promptX: options.promptX ?? screen.centerX(20),
             promptY: options.promptY ?? layoutConfig.promptY,
             autoRenderItems: true,
-            itemFormat: options.itemFormat || '|11[|15{key}|11] |07{label}',
+            itemFormat: options.itemFormat || "|11[|15{key}|11] |07{label}",
             commands: this.buildCommands(options.items)
         }
 
@@ -236,7 +236,7 @@ class BBS {
         if (options.art) {
             menuOptions.art = {
                 filename: options.art,
-                mode: 'line',
+                mode: "line",
                 speed: 30,
                 center: options.artCenter,
                 x: options.artX,
@@ -268,20 +268,20 @@ class BBS {
                 const targetMenu = item.goto
                 commands[key] = async () => {
                     await this.showMenu(targetMenu)
-                    return 'continue'
+                    return "continue"
                 }
-            } else if (item.action === 'back') {
-                commands[key] = () => 'back'
-            } else if (item.action === 'quit') {
-                commands[key] = () => 'quit'
-            } else if (typeof item.action === 'function') {
+            } else if (item.action === "back") {
+                commands[key] = () => "back"
+            } else if (item.action === "quit") {
+                commands[key] = () => "quit"
+            } else if (typeof item.action === "function") {
                 commands[key] = item.action
             }
         }
 
         // Always add Q as quit/back if not defined
-        if (!commands['Q']) {
-            commands['Q'] = () => 'back'
+        if (!commands["Q"]) {
+            commands["Q"] = () => "back"
         }
 
         return commands
@@ -290,11 +290,11 @@ class BBS {
     /**
      * Add items to menu with auto-calculated positions
      */
-    private addItemsWithLayout(menu: IQMenu, items: BBSMenuItem[], layout: 'single' | 'two-column', options: BBSMenuOptions): void {
+    private addItemsWithLayout(menu: IQMenu, items: BBSMenuItem[], layout: "single" | "two-column", options: BBSMenuOptions): void {
         // Get dynamic layout configuration based on current screen dimensions
         const layoutConfig = getLayoutConfig(layout)
-        
-        if (layout === 'two-column') {
+
+        if (layout === "two-column") {
             // Use custom column positions if provided, otherwise use dynamic defaults
             const twoColConfig = layoutConfig as { col1X: number; col2X: number; startY: number; promptY: number }
             const col1X = options.col1X ?? twoColConfig.col1X
@@ -377,12 +377,12 @@ class BBS {
      */
     async popup(title: string, message: string, options?: BBSPopupOptions): Promise<string> {
         const runtime = getGlobalRuntime()
-        const type = options?.type || 'info'
+        const type = options?.type || "info"
         const width = options?.width || 50
         const colors = POPUP_COLORS[type] || POPUP_COLORS.info
 
         // Calculate height based on message lines
-        const lines = message.split('\n')
+        const lines = message.split("\n")
         const height = Math.max(7, lines.length + 5)
 
         const popup = runtime.frame({
@@ -391,7 +391,7 @@ class BBS {
             width: width,
             height: height,
             color: colors.border,
-            border: 'double',
+            border: "double",
             title: title,
             titleColor: colors.title,
             shadow: true
@@ -402,7 +402,7 @@ class BBS {
             popup.center(`|15${line}`)
         }
         popup.blank()
-        popup.center('|08Press any key to continue...')
+        popup.center("|08Press any key to continue...")
 
         return await popup.popup()
     }
@@ -418,7 +418,7 @@ class BBS {
         await art.render({
             filename: artFile,
             clearScreenBefore: true,
-            mode: 'line',
+            mode: "line",
             speed: 50
         })
 
@@ -436,11 +436,11 @@ class BBS {
         await art.render({
             filename: artFile,
             clearScreenBefore: true,
-            mode: 'line',
+            mode: "line",
             speed: 50
         })
 
-        await runtime.pause('|07Thanks for visiting! Press any key to disconnect...')
+        await runtime.pause("|07Thanks for visiting! Press any key to disconnect...")
     }
 
     /**
@@ -475,7 +475,7 @@ class BBS {
             try {
                 await this.startCallback()
             } catch (error) {
-                console.error('BBS start callback error:', error)
+                console.error("BBS start callback error:", error)
                 throw error
             }
         }
@@ -642,7 +642,7 @@ class BBS {
      * @returns IQUser instance
      */
     user(handleOrOptions: string | IUserOptions): IQUser {
-        if (typeof handleOrOptions === 'string') {
+        if (typeof handleOrOptions === "string") {
             return new IQUser({ handle: handleOrOptions })
         }
         return new IQUser(handleOrOptions)
@@ -662,7 +662,7 @@ class BBS {
      * @returns IQGroup instance
      */
     group(nameOrOptions: string | IGroupOptions): IQGroup {
-        if (typeof nameOrOptions === 'string') {
+        if (typeof nameOrOptions === "string") {
             return new IQGroup(nameOrOptions)
         }
         return new IQGroup(nameOrOptions)
@@ -712,51 +712,57 @@ class BBS {
         const runtime = getGlobalRuntime()
         const width = 50
         const height = 10
-        
+
         const form = runtime.frame({
             x: screen.centerX(width),
             y: screen.centerY(height),
             width: width,
             height: height,
-            color: 'cyan',
-            border: 'double',
-            title: 'Login',
-            titleColor: 'bright white',
+            color: "cyan",
+            border: "double",
+            title: "Login",
+            titleColor: "bright white",
             shadow: true
         })
-        
+
         form.open()
         form.blank()
-        form.center('|15Enter your credentials|07')
+        form.center("|15Enter your credentials|07")
         form.blank()
-        
-        const handle = await form.input('|14Handle: |15')
+
+        const handle = await form.input("|14Handle: |15")
         if (!handle) {
             form.close()
             return null
         }
-        
-        const password = await form.inputPassword('|14Password: |15')
+
+        const password = await form.inputPassword("|14Password: |15")
         if (!password) {
             form.close()
             return null
         }
-        
+
         form.close()
-        
+
         // Attempt login
         const user = this.user(handle.trim())
         if (!user.exists()) {
-            await this.popup('Login Failed', `User "${handle}" not found.\nTry registering as a new user.`, { type: 'error' })
+            await this.popup("Login Failed", `User "${handle}" not found.\nTry registering as a new user.`, { type: "error" })
             return null
         }
-        
+
         if (user.login(password)) {
             this.setCurrentUser(user)
-            await this.popup('Welcome Back!', `|11${user.handle}|07\n\nTotal calls: |15${user.stats.totalCalls}|07\nLast login: |15${user.stats.lastLogin ? new Date(user.stats.lastLogin).toLocaleString() : 'First time!'}|07`, { type: 'success' })
+            await this.popup(
+                "Welcome Back!",
+                `|11${user.handle}|07\n\nTotal calls: |15${user.stats.totalCalls}|07\nLast login: |15${
+                    user.stats.lastLogin ? new Date(user.stats.lastLogin).toLocaleString() : "First time!"
+                }|07`,
+                { type: "success" }
+            )
             return user
         } else {
-            await this.popup('Login Failed', 'Invalid password.\nPlease try again.', { type: 'error' })
+            await this.popup("Login Failed", "Invalid password.\nPlease try again.", { type: "error" })
             return null
         }
     }
@@ -769,79 +775,79 @@ class BBS {
         const runtime = getGlobalRuntime()
         const width = 55
         const height = 16
-        
+
         const form = runtime.frame({
             x: screen.centerX(width),
             y: screen.centerY(height),
             width: width,
             height: height,
-            color: 'green',
-            border: 'double',
-            title: 'New User Registration',
-            titleColor: 'bright white',
+            color: "green",
+            border: "double",
+            title: "New User Registration",
+            titleColor: "bright white",
             shadow: true
         })
-        
+
         form.open()
         form.blank()
-        form.center('|15Create your account|07')
+        form.center("|15Create your account|07")
         form.blank()
-        
-        const handle = await form.input('|14Handle: |15')
-        if (!handle || handle.trim() === '') {
+
+        const handle = await form.input("|14Handle: |15")
+        if (!handle || handle.trim() === "") {
             form.close()
-            await this.popup('Registration', 'No handle entered.', { type: 'warning' })
+            await this.popup("Registration", "No handle entered.", { type: "warning" })
             return null
         }
-        
+
         // Check if handle exists
         const existingUser = this.user(handle.trim())
         if (existingUser.exists()) {
             form.close()
-            await this.popup('Registration Failed', `The handle "${handle}" is already taken.\nPlease choose a different one.`, { type: 'error' })
+            await this.popup("Registration Failed", `The handle "${handle}" is already taken.\nPlease choose a different one.`, { type: "error" })
             return null
         }
-        
-        const password = await form.inputPassword('|14Password: |15')
+
+        const password = await form.inputPassword("|14Password: |15")
         if (!password || password.length < 4) {
             form.close()
-            await this.popup('Registration Failed', 'Password must be at least 4 characters.', { type: 'error' })
+            await this.popup("Registration Failed", "Password must be at least 4 characters.", { type: "error" })
             return null
         }
-        
-        const confirmPassword = await form.inputPassword('|14Confirm: |15')
+
+        const confirmPassword = await form.inputPassword("|14Confirm: |15")
         if (password !== confirmPassword) {
             form.close()
-            await this.popup('Registration Failed', 'Passwords do not match.', { type: 'error' })
+            await this.popup("Registration Failed", "Passwords do not match.", { type: "error" })
             return null
         }
-        
+
         form.blank()
-        form.say('|08Optional information:|07')
-        
-        const realName = await form.input('|14Real Name: |07')
-        const location = await form.input('|14Location: |07')
-        const email = await form.input('|14Email: |07')
-        
+        form.say("|08Optional information:|07")
+
+        const realName = await form.input("|14Real Name: |07")
+        const location = await form.input("|14Location: |07")
+        const email = await form.input("|14Email: |07")
+
         form.close()
-        
+
         // Create the user
         const newUser = this.user({
             handle: handle.trim(),
             password: password,
-            realName: realName || '',
-            location: location || '',
-            email: email || '',
+            realName: realName || "",
+            location: location || "",
+            email: email || "",
             access: UserAccessLevel.normal
         })
-        
+
         if (newUser.register(password)) {
             newUser.login(password)
             this.setCurrentUser(newUser)
-            await this.popup('Welcome!', `Account created successfully!\n\nWelcome to the BBS, |11${newUser.handle}|07!`, { type: 'success' })
+            await this.popup("Welcome!", `Account created successfully!\n\nWelcome to the BBS, |11${newUser.handle}|07!`, { type: "success" })
             return newUser
         } else {
-            await this.popup('Registration Failed', 'An error occurred creating your account.\nPlease try again.', { type: 'error' })
+            await this.popup("Registration Failed", "An error occurred creating your account.\nPlease try again.", { type: "error" })
             return null
         }
     }
@@ -856,16 +862,16 @@ class BBS {
         const runtime = getGlobalRuntime()
         const width = options?.width || 50
         const height = options?.height || 12
-        
+
         return runtime.frame({
             x: screen.centerX(width),
             y: screen.centerY(height),
             width: width,
             height: height,
-            color: options?.color || 'cyan',
-            border: 'double',
+            color: options?.color || "cyan",
+            border: "double",
             title: title,
-            titleColor: 'bright white',
+            titleColor: "bright white",
             shadow: true
         })
     }
@@ -887,16 +893,16 @@ class BBS {
         await art.render({
             filename: filename,
             clearScreenBefore: options?.clearScreen ?? false,
-            display: options?.display ?? 'line',
+            display: options?.display ?? "line",
             speed: options?.speed ?? 30,
             data: options?.data,
-            center: options?.center ?? 'auto',
+            center: options?.center ?? "auto",
             x: options?.x,
             y: options?.y
         })
 
         if (options?.pauseAfter) {
-            if (typeof options.pauseAfter === 'string') {
+            if (typeof options.pauseAfter === "string") {
                 await runtime.pause(options.pauseAfter)
             } else {
                 await runtime.pause({ removePause: true })
@@ -918,9 +924,9 @@ class BBS {
     async choice(title: string, choices: BBSChoiceOption[], options?: { width?: number; color?: string }): Promise<string> {
         const runtime = getGlobalRuntime()
         const width = options?.width || 45
-        
+
         // Calculate height based on choices (each choice is 1-2 lines)
-        const hasDescriptions = choices.some(c => c.description)
+        const hasDescriptions = choices.some((c) => c.description)
         const linesPerChoice = hasDescriptions ? 2 : 1
         const height = Math.max(8, choices.length * linesPerChoice + 7)
 
@@ -929,16 +935,16 @@ class BBS {
             y: screen.centerY(height),
             width: width,
             height: height,
-            color: options?.color || 'cyan',
-            border: 'double',
+            color: options?.color || "cyan",
+            border: "double",
             title: title,
-            titleColor: 'bright white',
+            titleColor: "bright white",
             shadow: true
         })
 
         frame.open()
         frame.blank()
-        frame.center('|15Please select an option:|07')
+        frame.center("|15Please select an option:|07")
         frame.blank()
 
         // Display choices
@@ -950,13 +956,13 @@ class BBS {
         }
 
         frame.blank()
-        frame.separator('\xC4', 'bright black')
+        frame.separator("\xC4", "bright black")
         frame.blank()
 
-        const input = await frame.input('|14Your choice: |15', 1)
+        const input = await frame.input("|14Your choice: |15", 1)
         frame.close()
 
-        return (input || '').toUpperCase()
+        return (input || "").toUpperCase()
     }
 
     // =========================================================================
@@ -970,14 +976,9 @@ class BBS {
      * @param formatter - Function to format each item into a display string
      * @param options - Popup options including emptyMessage
      */
-    async dataPopup<T>(
-        title: string, 
-        items: T[], 
-        formatter: (item: T, index: number) => string, 
-        options?: BBSPopupOptions
-    ): Promise<void> {
+    async dataPopup<T>(title: string, items: T[], formatter: (item: T, index: number) => string, options?: BBSPopupOptions): Promise<void> {
         const width = options?.width || 50
-        const emptyMessage = options?.emptyMessage || 'No data available.'
+        const emptyMessage = options?.emptyMessage || "No data available."
 
         if (!items || items.length === 0) {
             await this.popup(title, emptyMessage, options)
@@ -988,12 +989,12 @@ class BBS {
         const formattedLines: string[] = []
         for (let i = 0; i < items.length; i++) {
             const formatted = formatter(items[i], i)
-            formattedLines.push(...formatted.split('\n'))
+            formattedLines.push(...formatted.split("\n"))
         }
 
         // Build the message with header
-        const header = `|15${items.length} item${items.length !== 1 ? 's' : ''}|07\n|08${'─'.repeat(width - 6)}|07\n`
-        const message = header + '\n' + formattedLines.join('\n')
+        const header = `|15${items.length} item${items.length !== 1 ? "s" : ""}|07\n|08${"─".repeat(width - 6)}|07\n`
+        const message = header + "\n" + formattedLines.join("\n")
 
         await this.popup(title, message, options)
     }
@@ -1017,7 +1018,7 @@ class BBS {
 
         await art.render({
             filename: filename,
-            display: 'instant',
+            display: "instant",
             pageLength: options?.pageLength,
             autoPause: options?.pageLength !== undefined
         })

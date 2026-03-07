@@ -4,18 +4,18 @@
  * @summary Screen and flow control codes (|CS, |PA, |DE, etc.)
  */
 
-const ESC = '\x1b'
+const ESC = "\x1b"
 
-export type ControlCodeAction = 
-    | { type: 'ansi'; sequence: string }
-    | { type: 'pause' }
-    | { type: 'pause_message'; message?: string }
-    | { type: 'delay'; ms: number }
-    | { type: 'pause_off' }
-    | { type: 'pause_on' }
-    | { type: 'pause_reset' }
-    | { type: 'abort' }
-    | { type: 'noop' }
+export type ControlCodeAction =
+    | { type: "ansi"; sequence: string }
+    | { type: "pause" }
+    | { type: "pause_message"; message?: string }
+    | { type: "delay"; ms: number }
+    | { type: "pause_off" }
+    | { type: "pause_on" }
+    | { type: "pause_reset" }
+    | { type: "abort" }
+    | { type: "noop" }
 
 export interface ControlCodeDefinition {
     code: string
@@ -25,58 +25,32 @@ export interface ControlCodeDefinition {
 }
 
 export const controlCodes: ControlCodeDefinition[] = [
-    { code: 'CS', aliases: ['CLS', 'L'], description: 'Clear screen',
-      action: { type: 'ansi', sequence: `${ESC}[2J${ESC}[H` } },
-    { code: 'CL', aliases: ['CLRLINE'], description: 'Clear line',
-      action: { type: 'ansi', sequence: `\r${ESC}[K` } },
-    { code: 'CE', aliases: ['CLR2EOL', 'CLREOL'], description: 'Clear to end of line',
-      action: { type: 'ansi', sequence: `${ESC}[K` } },
-    { code: 'CJ', aliases: ['CLR2EOS', 'CLREOS'], description: 'Clear to end of screen',
-      action: { type: 'ansi', sequence: `${ESC}[J` } },
-    { code: 'CR', description: 'Carriage return',
-      action: { type: 'ansi', sequence: '\r' } },
-    { code: 'NL', aliases: ['CRLF'], description: 'New line',
-      action: { type: 'ansi', sequence: '\r\n' } },
-    { code: 'LF', description: 'Line feed',
-      action: { type: 'ansi', sequence: '\n' } },
-    { code: 'HM', aliases: ['HOME'], description: 'Home cursor',
-      action: { type: 'ansi', sequence: `${ESC}[H` } },
-    { code: 'PA', aliases: ['PAUSE', 'MORE', 'P'], description: 'Pause (press any key)',
-      action: { type: 'pause' } },
-    { code: 'PW', description: 'Pause with message',
-      action: { type: 'pause_message' } },
-    { code: 'PK', aliases: ['GETKEY', 'CONTINUE'], description: 'Wait for key',
-      action: { type: 'pause' } },
-    { code: 'DE', description: 'Short delay (500ms)',
-      action: { type: 'delay', ms: 500 } },
-    { code: 'DM', description: 'Medium delay (1000ms)',
-      action: { type: 'delay', ms: 1000 } },
-    { code: 'DL', description: 'Long delay (2000ms)',
-      action: { type: 'delay', ms: 2000 } },
-    { code: 'PO', aliases: ['POFF', 'NOPAUSE'], description: 'Pause off',
-      action: { type: 'pause_off' } },
-    { code: 'PN', aliases: ['PON', 'AUTOMORE'], description: 'Pause on',
-      action: { type: 'pause_on' } },
-    { code: 'RP', aliases: ['RESETPAUSE'], description: 'Reset pause counter',
-      action: { type: 'pause_reset' } },
-    { code: 'RS', aliases: ['RESET', 'N'], description: 'Reset attributes',
-      action: { type: 'ansi', sequence: `${ESC}[0m` } },
-    { code: 'BL', aliases: ['BEEP', 'BELL'], description: 'Terminal beep',
-      action: { type: 'ansi', sequence: '\x07' } },
-    { code: 'BS', aliases: ['BCKSPC'], description: 'Backspace',
-      action: { type: 'ansi', sequence: '\x08' } },
-    { code: 'TB', aliases: ['TAB'], description: 'Tab',
-      action: { type: 'ansi', sequence: '\t' } },
-    { code: 'AB', aliases: ['ABORT', 'EOF', 'Z'], description: 'Abort/end of file',
-      action: { type: 'abort' } },
-    { code: 'SV', aliases: ['PUSHXY'], description: 'Save cursor position',
-      action: { type: 'ansi', sequence: `${ESC}[s` } },
-    { code: 'RT', aliases: ['POPXY'], description: 'Restore cursor position',
-      action: { type: 'ansi', sequence: `${ESC}[u` } },
-    { code: 'HC', aliases: ['HIDECURSOR'], description: 'Hide cursor',
-      action: { type: 'ansi', sequence: `${ESC}[?25l` } },
-    { code: 'SC', aliases: ['SHOWCURSOR'], description: 'Show cursor',
-      action: { type: 'ansi', sequence: `${ESC}[?25h` } }
+    { code: "CS", aliases: ["CLS", "L"], description: "Clear screen", action: { type: "ansi", sequence: `${ESC}[2J${ESC}[H` } },
+    { code: "CL", aliases: ["CLRLINE"], description: "Clear line", action: { type: "ansi", sequence: `\r${ESC}[K` } },
+    { code: "CE", aliases: ["CLR2EOL", "CLREOL"], description: "Clear to end of line", action: { type: "ansi", sequence: `${ESC}[K` } },
+    { code: "CJ", aliases: ["CLR2EOS", "CLREOS"], description: "Clear to end of screen", action: { type: "ansi", sequence: `${ESC}[J` } },
+    { code: "CR", description: "Carriage return", action: { type: "ansi", sequence: "\r" } },
+    { code: "NL", aliases: ["CRLF"], description: "New line", action: { type: "ansi", sequence: "\r\n" } },
+    { code: "LF", description: "Line feed", action: { type: "ansi", sequence: "\n" } },
+    { code: "HM", aliases: ["HOME"], description: "Home cursor", action: { type: "ansi", sequence: `${ESC}[H` } },
+    { code: "PA", aliases: ["PAUSE", "MORE", "P"], description: "Pause (press any key)", action: { type: "pause" } },
+    { code: "PW", description: "Pause with message", action: { type: "pause_message" } },
+    { code: "PK", aliases: ["GETKEY", "CONTINUE"], description: "Wait for key", action: { type: "pause" } },
+    { code: "DE", description: "Short delay (500ms)", action: { type: "delay", ms: 500 } },
+    { code: "DM", description: "Medium delay (1000ms)", action: { type: "delay", ms: 1000 } },
+    { code: "DL", description: "Long delay (2000ms)", action: { type: "delay", ms: 2000 } },
+    { code: "PO", aliases: ["POFF", "NOPAUSE"], description: "Pause off", action: { type: "pause_off" } },
+    { code: "PN", aliases: ["PON", "AUTOMORE"], description: "Pause on", action: { type: "pause_on" } },
+    { code: "RP", aliases: ["RESETPAUSE"], description: "Reset pause counter", action: { type: "pause_reset" } },
+    { code: "RS", aliases: ["RESET", "N"], description: "Reset attributes", action: { type: "ansi", sequence: `${ESC}[0m` } },
+    { code: "BL", aliases: ["BEEP", "BELL"], description: "Terminal beep", action: { type: "ansi", sequence: "\x07" } },
+    { code: "BS", aliases: ["BCKSPC"], description: "Backspace", action: { type: "ansi", sequence: "\x08" } },
+    { code: "TB", aliases: ["TAB"], description: "Tab", action: { type: "ansi", sequence: "\t" } },
+    { code: "AB", aliases: ["ABORT", "EOF", "Z"], description: "Abort/end of file", action: { type: "abort" } },
+    { code: "SV", aliases: ["PUSHXY"], description: "Save cursor position", action: { type: "ansi", sequence: `${ESC}[s` } },
+    { code: "RT", aliases: ["POPXY"], description: "Restore cursor position", action: { type: "ansi", sequence: `${ESC}[u` } },
+    { code: "HC", aliases: ["HIDECURSOR"], description: "Hide cursor", action: { type: "ansi", sequence: `${ESC}[?25l` } },
+    { code: "SC", aliases: ["SHOWCURSOR"], description: "Show cursor", action: { type: "ansi", sequence: `${ESC}[?25h` } }
 ]
 
 export class ControlCodeProcessor {
@@ -110,15 +84,15 @@ export class ControlCodeProcessor {
         if (!action) return null
 
         switch (action.type) {
-            case 'pause_off':
+            case "pause_off":
                 this.pauseEnabled = false
-                return { type: 'noop' }
-            case 'pause_on':
+                return { type: "noop" }
+            case "pause_on":
                 this.pauseEnabled = true
-                return { type: 'noop' }
-            case 'pause_reset':
+                return { type: "noop" }
+            case "pause_reset":
                 this.lineCount = 0
-                return { type: 'noop' }
+                return { type: "noop" }
             default:
                 return action
         }
@@ -129,32 +103,32 @@ export class ControlCodeProcessor {
         const num = parseInt(param, 10)
 
         switch (upperCode) {
-            case 'UP':
-                return { type: 'ansi', sequence: `${ESC}[${num || 1}A` }
-            case 'DOWN':
-            case 'DN':
-                return { type: 'ansi', sequence: `${ESC}[${num || 1}B` }
-            case 'RIGHT':
-            case 'FW':
-                return { type: 'ansi', sequence: `${ESC}[${num || 1}C` }
-            case 'LEFT':
-            case 'BK':
-                return { type: 'ansi', sequence: `${ESC}[${num || 1}D` }
-            case 'POS':
-            case 'COL':
-                return { type: 'ansi', sequence: `${ESC}[${num || 1}G` }
-            case 'ROW':
-                return { type: 'ansi', sequence: `${ESC}[${num || 1}d` }
-            case 'DELAY':
-            case 'WAIT':
-                return { type: 'delay', ms: (num || 1) * 100 }
+            case "UP":
+                return { type: "ansi", sequence: `${ESC}[${num || 1}A` }
+            case "DOWN":
+            case "DN":
+                return { type: "ansi", sequence: `${ESC}[${num || 1}B` }
+            case "RIGHT":
+            case "FW":
+                return { type: "ansi", sequence: `${ESC}[${num || 1}C` }
+            case "LEFT":
+            case "BK":
+                return { type: "ansi", sequence: `${ESC}[${num || 1}D` }
+            case "POS":
+            case "COL":
+                return { type: "ansi", sequence: `${ESC}[${num || 1}G` }
+            case "ROW":
+                return { type: "ansi", sequence: `${ESC}[${num || 1}d` }
+            case "DELAY":
+            case "WAIT":
+                return { type: "delay", ms: (num || 1) * 100 }
             default:
                 return null
         }
     }
 
     processGotoxy(x: number, y: number): ControlCodeAction {
-        return { type: 'ansi', sequence: `${ESC}[${y};${x}H` }
+        return { type: "ansi", sequence: `${ESC}[${y};${x}H` }
     }
 
     isPauseEnabled(): boolean {

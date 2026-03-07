@@ -2,7 +2,7 @@
  * Avatar System - Small User Graphics
  * @module core/avatar
  * @summary 10x6 cell user avatars with validation and identicon generation
- * 
+ *
  * Inspired by Synchronet's avatar_lib.js, this provides:
  * - Fixed size: 10 columns x 6 rows (120 bytes)
  * - Store as base64-encoded BIN data
@@ -11,9 +11,9 @@
  * - Auto-generate identicons for users without avatars
  */
 
-import { IQOutput } from './output'
-import { ANSI, CGA } from './ansi'
-import { Graphic, GraphicOptions } from './graphic'
+import { IQOutput } from "./output"
+import { ANSI, CGA } from "./ansi"
+import { Graphic, GraphicOptions } from "./graphic"
 
 /**
  * Avatar dimension constants
@@ -21,14 +21,14 @@ import { Graphic, GraphicOptions } from './graphic'
 export const AvatarDefs = {
     width: 10,
     height: 6,
-    size: 120  // 10 * 6 * 2 bytes (char + attr per cell)
+    size: 120 // 10 * 6 * 2 bytes (char + attr per cell)
 } as const
 
 /**
  * Avatar data structure
  */
 export interface AvatarData {
-    data: string  // base64-encoded BIN
+    data: string // base64-encoded BIN
     disabled?: boolean
     created?: Date
     updated?: Date
@@ -38,15 +38,15 @@ export interface AvatarData {
  * Characters that are invalid in avatars
  */
 const INVALID_CHARS = [
-    0x00,  // NUL
-    0x07,  // BEL
-    0x08,  // BS
-    0x09,  // TAB
-    0x0a,  // LF
-    0x0c,  // FF
-    0x0d,  // CR
-    0x1b,  // ESC
-    0xff   // Telnet IAC
+    0x00, // NUL
+    0x07, // BEL
+    0x08, // BS
+    0x09, // TAB
+    0x0a, // LF
+    0x0c, // FF
+    0x0d, // CR
+    0x1b, // ESC
+    0xff // Telnet IAC
 ]
 
 /**
@@ -88,16 +88,9 @@ export class Avatar {
     /**
      * Draw avatar at absolute screen position using Graphic.draw()
      */
-    static draw(
-        output: IQOutput,
-        data: string,
-        x: number,
-        y: number,
-        right: boolean = false,
-        top: boolean = false
-    ): boolean {
+    static draw(output: IQOutput, data: string, x: number, y: number, right: boolean = false, top: boolean = false): boolean {
         try {
-            const buffer = Buffer.from(data, 'base64')
+            const buffer = Buffer.from(data, "base64")
             if (!this.isValid(buffer)) {
                 return false
             }
@@ -135,7 +128,7 @@ export class Avatar {
      */
     static show(output: IQOutput, data: string): boolean {
         try {
-            const buffer = Buffer.from(data, 'base64')
+            const buffer = Buffer.from(data, "base64")
             if (!this.isValid(buffer)) {
                 return false
             }
@@ -180,7 +173,7 @@ export class Avatar {
             }
         }
 
-        return avatarGraphic.BIN.toString('base64')
+        return avatarGraphic.BIN.toString("base64")
     }
 
     /**
@@ -196,16 +189,16 @@ export class Avatar {
         // Simple hash function
         let hash = 0
         for (let i = 0; i < seed.length; i++) {
-            hash = ((hash << 5) - hash) + seed.charCodeAt(i)
+            hash = (hash << 5) - hash + seed.charCodeAt(i)
             hash = hash & hash
         }
 
         // Use hash to determine colors
-        const fgColor = Math.abs(hash % 15) + 1  // 1-15 (avoid black)
-        const bgColor = Math.abs((hash >> 4) % 8)  // 0-7
+        const fgColor = Math.abs(hash % 15) + 1 // 1-15 (avoid black)
+        const bgColor = Math.abs((hash >> 4) % 8) // 0-7
 
         // Block characters for pattern
-        const blocks = [' ', '▀', '▄', '█', '▌', '▐', '░', '▒', '▓']
+        const blocks = [" ", "▀", "▄", "█", "▌", "▐", "░", "▒", "▓"]
 
         // Generate symmetric pattern
         const halfWidth = Math.floor(AvatarDefs.width / 2)
@@ -215,9 +208,9 @@ export class Avatar {
                 // Use different bits of hash for each cell
                 const cellHash = Math.abs(hash + (y * halfWidth + x) * 31)
                 const blockIndex = cellHash % blocks.length
-                const useBlock = (cellHash >> 8) % 3 !== 0  // 2/3 chance of block
+                const useBlock = (cellHash >> 8) % 3 !== 0 // 2/3 chance of block
 
-                const ch = useBlock ? blocks[blockIndex] : ' '
+                const ch = useBlock ? blocks[blockIndex] : " "
                 const attr = (fgColor & 0x0f) | ((bgColor & 0x07) << 4)
 
                 // Set left side
@@ -228,7 +221,7 @@ export class Avatar {
             }
         }
 
-        return graphic.BIN.toString('base64')
+        return graphic.BIN.toString("base64")
     }
 
     /**
@@ -250,7 +243,7 @@ export class Avatar {
                 return null
             }
 
-            return bin.toString('base64')
+            return bin.toString("base64")
         } catch {
             return null
         }
@@ -272,13 +265,7 @@ export class Avatar {
      * Check if avatar data is enabled and valid
      */
     static isEnabled(avatar: AvatarData | null | undefined): boolean {
-        return !!(
-            avatar &&
-            typeof avatar === 'object' &&
-            typeof avatar.data === 'string' &&
-            avatar.data.length > 0 &&
-            !avatar.disabled
-        )
+        return !!(avatar && typeof avatar === "object" && typeof avatar.data === "string" && avatar.data.length > 0 && !avatar.disabled)
     }
 
     /**
@@ -289,29 +276,25 @@ export class Avatar {
             width: AvatarDefs.width,
             height: AvatarDefs.height,
             attr: (fgColor & 0x0f) | ((bgColor & 0x07) << 4),
-            ch: ' '
+            ch: " "
         })
 
-        return graphic.BIN.toString('base64')
+        return graphic.BIN.toString("base64")
     }
 
     /**
      * Create avatar from text (simple text rendering)
      */
-    static fromText(
-        text: string,
-        fgColor: number = CGA.WHITE,
-        bgColor: number = CGA.BLUE
-    ): string {
+    static fromText(text: string, fgColor: number = CGA.WHITE, bgColor: number = CGA.BLUE): string {
         const graphic = new Graphic({
             width: AvatarDefs.width,
             height: AvatarDefs.height,
             attr: (fgColor & 0x0f) | ((bgColor & 0x07) << 4),
-            ch: ' '
+            ch: " "
         })
 
         // Center the text
-        const lines = text.split('\n').slice(0, AvatarDefs.height)
+        const lines = text.split("\n").slice(0, AvatarDefs.height)
         const startY = Math.floor((AvatarDefs.height - lines.length) / 2)
 
         for (let i = 0; i < lines.length; i++) {
@@ -319,15 +302,10 @@ export class Avatar {
             const startX = Math.floor((AvatarDefs.width - line.length) / 2)
 
             for (let j = 0; j < line.length; j++) {
-                graphic.setData(
-                    startX + j,
-                    startY + i,
-                    line[j],
-                    (fgColor & 0x0f) | ((bgColor & 0x07) << 4)
-                )
+                graphic.setData(startX + j, startY + i, line[j], (fgColor & 0x0f) | ((bgColor & 0x07) << 4))
             }
         }
 
-        return graphic.BIN.toString('base64')
+        return graphic.BIN.toString("base64")
     }
 }

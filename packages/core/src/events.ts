@@ -2,12 +2,12 @@
  * IQEventBus - Global Event System
  * @module core/events
  * @summary Publish/subscribe event bus for BBS-wide event handling
- * 
+ *
  * This module provides a global event bus that allows events to be published
  * and processed regardless of which menu a user is currently viewing.
  */
 
-import { Synchronized, Measure } from './decorators-runtime'
+import { Synchronized, Measure } from "./decorators-runtime"
 
 /**
  * Event interface for the event bus
@@ -49,7 +49,7 @@ interface HandlerEntry {
 
 /**
  * IQEventBus - Global event bus for BBS applications
- * 
+ *
  * Provides a publish/subscribe pattern for decoupled event handling.
  * Events can be emitted from anywhere and handlers will be called
  * regardless of the current menu or screen state.
@@ -73,10 +73,10 @@ export class IQEventBus {
             priority: options?.priority ?? 0
         }
 
-        if (event === '*') {
+        if (event === "*") {
             this.wildcardHandlers.push(entry)
             this.wildcardHandlers.sort((a, b) => b.priority - a.priority)
-            return () => this.off('*', handler)
+            return () => this.off("*", handler)
         }
 
         if (!this.handlers.has(event)) {
@@ -106,9 +106,9 @@ export class IQEventBus {
      * @param handler - Specific handler to remove (if omitted, removes all handlers for event)
      */
     off(event: string, handler?: IQEventHandler): void {
-        if (event === '*') {
+        if (event === "*") {
             if (handler) {
-                this.wildcardHandlers = this.wildcardHandlers.filter(e => e.handler !== handler)
+                this.wildcardHandlers = this.wildcardHandlers.filter((e) => e.handler !== handler)
             } else {
                 this.wildcardHandlers = []
             }
@@ -119,7 +119,7 @@ export class IQEventBus {
 
         if (handler) {
             const handlers = this.handlers.get(event)!
-            const filtered = handlers.filter(e => e.handler !== handler)
+            const filtered = handlers.filter((e) => e.handler !== handler)
             if (filtered.length === 0) {
                 this.handlers.delete(event)
             } else {
@@ -235,7 +235,7 @@ export class IQEventBus {
             try {
                 await entry.handler(event)
                 if (entry.once) {
-                    handlersToRemove.push({ event: '*', handler: entry.handler })
+                    handlersToRemove.push({ event: "*", handler: entry.handler })
                 }
             } catch (err) {
                 console.error(`Error in wildcard event handler:`, err)

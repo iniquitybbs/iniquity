@@ -2,12 +2,12 @@
  * Sixel Graphics Support
  * @module core/sixel
  * @summary Display sixel graphics in compatible terminals
- * 
+ *
  * Inspired by Synchronet's showsixel.js, this provides:
  * - Detect Sixel support via CTerm version check
  * - Display pre-rendered Sixel files
  * - Basic sixel sequence generation
- * 
+ *
  * Sixel is a bitmap graphics format for terminals, supported by:
  * - SyncTERM (CTerm 1.189+)
  * - xterm (with sixel support compiled in)
@@ -16,10 +16,10 @@
  * - foot
  */
 
-import * as fs from 'fs'
-import { IQOutput } from './output'
-import { ANSI } from './ansi'
-import { CTerm, CTermVersions } from './cterm'
+import * as fs from "fs"
+import { IQOutput } from "./output"
+import { ANSI } from "./ansi"
+import { CTerm, CTermVersions } from "./cterm"
 
 /**
  * Sixel display options
@@ -62,9 +62,9 @@ export class Sixel {
     /**
      * Sixel escape sequence markers
      */
-    static readonly DCS = '\x1bP'  // Device Control String
-    static readonly ST = '\x1b\\'  // String Terminator
-    static readonly SIXEL_START = '\x1bPq'  // Start sixel data
+    static readonly DCS = "\x1bP" // Device Control String
+    static readonly ST = "\x1b\\" // String Terminator
+    static readonly SIXEL_START = "\x1bPq" // Start sixel data
 
     /**
      * Check if Sixel is supported based on CTerm version
@@ -94,7 +94,7 @@ export class Sixel {
 
             // Write sixel data
             // Sixel files typically contain the full DCS...ST sequence
-            output.write(data.toString('binary'))
+            output.write(data.toString("binary"))
 
             return true
         } catch {
@@ -111,7 +111,7 @@ export class Sixel {
                 output.write(ANSI.gotoxy(x, y))
             }
 
-            output.write(data.toString('binary'))
+            output.write(data.toString("binary"))
             return true
         } catch {
             return false
@@ -126,25 +126,25 @@ export class Sixel {
      */
     static header(aspectRatio: number = 0, bgSelect: number = 0, horizontalGrid?: number): string {
         let seq = this.DCS
-        
+
         if (aspectRatio > 0) {
             seq += aspectRatio.toString()
         }
-        
-        seq += ';'
-        
+
+        seq += ";"
+
         if (bgSelect > 0) {
             seq += bgSelect.toString()
         }
-        
-        seq += ';'
-        
+
+        seq += ";"
+
         if (horizontalGrid !== undefined) {
             seq += horizontalGrid.toString()
         }
-        
-        seq += 'q'
-        
+
+        seq += "q"
+
         return seq
     }
 
@@ -177,14 +177,14 @@ export class Sixel {
      * Generate carriage return (move to start of next sixel row)
      */
     static carriageReturn(): string {
-        return '$'
+        return "$"
     }
 
     /**
      * Generate line feed (move down one sixel row)
      */
     static lineFeed(): string {
-        return '-'
+        return "-"
     }
 
     /**
@@ -213,8 +213,8 @@ export class Sixel {
      * Returns basic info about the sixel image
      */
     static parseInfo(data: Buffer | string): SixelImageInfo | null {
-        const str = typeof data === 'string' ? data : data.toString('binary')
-        
+        const str = typeof data === "string" ? data : data.toString("binary")
+
         // Look for raster attributes "width;height
         const rasterMatch = str.match(/"(\d+);(\d+)/)
         if (rasterMatch) {
@@ -233,23 +233,23 @@ export class Sixel {
 
         for (let i = 0; i < str.length; i++) {
             const ch = str[i]
-            
-            if (ch === '#') {
+
+            if (ch === "#") {
                 // Color definition or selection
                 colors++
-            } else if (ch === '$') {
+            } else if (ch === "$") {
                 // Carriage return
                 if (currentWidth > width) width = currentWidth
                 currentWidth = 0
-            } else if (ch === '-') {
+            } else if (ch === "-") {
                 // Line feed
                 height += 6
                 if (currentWidth > width) width = currentWidth
                 currentWidth = 0
-            } else if (ch >= '?' && ch <= '~') {
+            } else if (ch >= "?" && ch <= "~") {
                 // Sixel data
                 currentWidth++
-            } else if (ch === '!') {
+            } else if (ch === "!") {
                 // Repeat
                 const repeatMatch = str.slice(i).match(/^!(\d+)/)
                 if (repeatMatch) {
@@ -270,10 +270,10 @@ export class Sixel {
      * Check if data appears to be sixel format
      */
     static isSixelData(data: Buffer | string): boolean {
-        const str = typeof data === 'string' ? data : data.toString('binary')
-        
+        const str = typeof data === "string" ? data : data.toString("binary")
+
         // Check for DCS q sequence
-        return str.includes('\x1bPq') || str.includes('\x1bP0;0;0q') || str.includes('\x1bP;')
+        return str.includes("\x1bPq") || str.includes("\x1bP0;0;0q") || str.includes("\x1bP;")
     }
 
     /**
@@ -281,7 +281,7 @@ export class Sixel {
      */
     static stripSixel(data: string): string {
         // Remove everything between DCS and ST
-        return data.replace(/\x1bP[^\\]*\x1b\\/g, '')
+        return data.replace(/\x1bP[^\\]*\x1b\\/g, "")
     }
 
     /**
@@ -290,40 +290,40 @@ export class Sixel {
      */
     static generateTestPattern(width: number = 60, height: number = 36): string {
         let sixel = this.header(0, 0)
-        
+
         // Define some colors
-        sixel += this.colorDefinition(0, 100, 0, 0)    // Red
-        sixel += this.colorDefinition(1, 0, 100, 0)    // Green
-        sixel += this.colorDefinition(2, 0, 0, 100)    // Blue
-        sixel += this.colorDefinition(3, 100, 100, 0)  // Yellow
-        sixel += this.colorDefinition(4, 100, 0, 100)  // Magenta
-        sixel += this.colorDefinition(5, 0, 100, 100)  // Cyan
-        
+        sixel += this.colorDefinition(0, 100, 0, 0) // Red
+        sixel += this.colorDefinition(1, 0, 100, 0) // Green
+        sixel += this.colorDefinition(2, 0, 0, 100) // Blue
+        sixel += this.colorDefinition(3, 100, 100, 0) // Yellow
+        sixel += this.colorDefinition(4, 100, 0, 100) // Magenta
+        sixel += this.colorDefinition(5, 0, 100, 100) // Cyan
+
         const rows = Math.ceil(height / 6)
-        
+
         for (let row = 0; row < rows; row++) {
             for (let color = 0; color < 6; color++) {
                 sixel += this.colorSelect(color)
-                
+
                 const segmentWidth = Math.floor(width / 6)
                 const startX = color * segmentWidth
-                
+
                 // Draw segment for this color
                 if (startX > 0) {
                     sixel += this.encodeRepeat(startX, 0)
                 }
                 sixel += this.encodeRepeat(segmentWidth, 0x3f)
-                
+
                 sixel += this.carriageReturn()
             }
-            
+
             if (row < rows - 1) {
                 sixel += this.lineFeed()
             }
         }
-        
+
         sixel += this.terminator()
-        
+
         return sixel
     }
 }

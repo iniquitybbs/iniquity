@@ -4,13 +4,22 @@
  * @summary Main processor that orchestrates all MCI code processing
  */
 
-import { MCIContext, MCIContextProvider, DefaultMCIContextProvider, createDefaultMCIContext, UserContext, SystemContext, BBSContext, TerminalContext } from './context'
-import { AtCodeProcessor } from './codes/at-codes'
-import { PipeCodeProcessor } from './codes/pipe-codes'
-import { ControlCodeProcessor, ControlCodeAction } from './codes/ctrl-codes'
-import { PositionMarkerProcessor, PositionMarker } from './codes/position'
-import { parseFormatModifier, applyFormat, FormatOptions } from './formatters'
-import { TextStyleProcessor, applyTextStyle } from './text-styles'
+import {
+    MCIContext,
+    MCIContextProvider,
+    DefaultMCIContextProvider,
+    createDefaultMCIContext,
+    UserContext,
+    SystemContext,
+    BBSContext,
+    TerminalContext
+} from "./context"
+import { AtCodeProcessor } from "./codes/at-codes"
+import { PipeCodeProcessor } from "./codes/pipe-codes"
+import { ControlCodeProcessor, ControlCodeAction } from "./codes/ctrl-codes"
+import { PositionMarkerProcessor, PositionMarker } from "./codes/position"
+import { parseFormatModifier, applyFormat, FormatOptions } from "./formatters"
+import { TextStyleProcessor, applyTextStyle } from "./text-styles"
 
 export interface MCIProcessorOptions {
     context?: Partial<MCIContext>
@@ -30,7 +39,7 @@ export interface MCIProcessResult {
 }
 
 export interface PendingAction {
-    type: 'pause' | 'delay' | 'abort'
+    type: "pause" | "delay" | "abort"
     ms?: number
     message?: string
 }
@@ -125,22 +134,22 @@ export class MCIProcessor {
             const parsed = parseFormatModifier(codeWithModifier)
             const code = parsed.code
 
-            if (code === 'CLS') {
-                actions.push({ type: 'ansi', sequence: '\x1b[2J\x1b[H' })
-                return ''
+            if (code === "CLS") {
+                actions.push({ type: "ansi", sequence: "\x1b[2J\x1b[H" })
+                return ""
             }
-            if (code === 'PAUSE' || code === 'MORE') {
-                actions.push({ type: 'pause' })
-                return ''
+            if (code === "PAUSE" || code === "MORE") {
+                actions.push({ type: "pause" })
+                return ""
             }
-            if (code === 'BEEP' || code === 'BELL') {
-                return '\x07'
+            if (code === "BEEP" || code === "BELL") {
+                return "\x07"
             }
-            if (code === 'CRLF') {
-                return '\r\n'
+            if (code === "CRLF") {
+                return "\r\n"
             }
-            if (code === 'HOME') {
-                return '\x1b[H'
+            if (code === "HOME") {
+                return "\x1b[H"
             }
 
             const gotoxyMatch = code.match(/^GOTOXY:(\d+),(\d+)$/i)
@@ -154,15 +163,15 @@ export class MCIProcessor {
             if (cursorMatch) {
                 const dir = cursorMatch[1].toUpperCase()
                 const n = parseInt(cursorMatch[2], 10)
-                const dirMap: Record<string, string> = { UP: 'A', DOWN: 'B', RIGHT: 'C', LEFT: 'D' }
+                const dirMap: Record<string, string> = { UP: "A", DOWN: "B", RIGHT: "C", LEFT: "D" }
                 return `\x1b[${n}${dirMap[dir]}`
             }
 
             const delayMatch = code.match(/^DELAY:(\d+)$/i)
             if (delayMatch) {
                 const tenths = parseInt(delayMatch[1], 10)
-                actions.push({ type: 'delay', ms: tenths * 100 })
-                return ''
+                actions.push({ type: "delay", ms: tenths * 100 })
+                return ""
             }
 
             let value = this.atCodeProcessor.getValue(code, context, parsed.param)
@@ -198,20 +207,20 @@ export class MCIProcessor {
             count++
 
             switch (action.type) {
-                case 'ansi':
+                case "ansi":
                     return action.sequence
-                case 'pause':
-                case 'pause_message':
+                case "pause":
+                case "pause_message":
                     actions.push(action)
-                    return ''
-                case 'delay':
+                    return ""
+                case "delay":
                     actions.push(action)
-                    return ''
-                case 'abort':
+                    return ""
+                case "abort":
                     actions.push(action)
-                    return ''
-                case 'noop':
-                    return ''
+                    return ""
+                case "noop":
+                    return ""
                 default:
                     return match
             }

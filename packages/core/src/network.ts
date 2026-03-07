@@ -4,9 +4,9 @@
  * @summary Network connectivity, FidoNet, and inter-BBS communication
  */
 
-import * as net from 'net'
-import * as http from 'http'
-import * as https from 'https'
+import * as net from "net"
+import * as http from "http"
+import * as https from "https"
 
 /**
  * Network node information
@@ -16,13 +16,13 @@ export interface INetworkNode {
     name: string
     address: string
     port: number
-    protocol: 'telnet' | 'ssh' | 'http' | 'https' | 'fido'
+    protocol: "telnet" | "ssh" | "http" | "https" | "fido"
     zone?: number
     net?: number
     node?: number
     point?: number
     lastSeen?: string
-    status: 'online' | 'offline' | 'unknown'
+    status: "online" | "offline" | "unknown"
 }
 
 /**
@@ -90,7 +90,7 @@ export class IQNetwork {
     static parseFidoAddress(address: string): IFidoAddress | null {
         const match = address.match(/^(\d+):(\d+)\/(\d+)(?:\.(\d+))?$/)
         if (!match) return null
-        
+
         return {
             zone: parseInt(match[1], 10),
             net: parseInt(match[2], 10),
@@ -137,24 +137,24 @@ export class IQNetwork {
     async ping(host: string, port: number, timeout: number = 5000): Promise<boolean> {
         return new Promise((resolve) => {
             const socket = new net.Socket()
-            
+
             socket.setTimeout(timeout)
-            
-            socket.on('connect', () => {
+
+            socket.on("connect", () => {
                 socket.destroy()
                 resolve(true)
             })
-            
-            socket.on('timeout', () => {
+
+            socket.on("timeout", () => {
                 socket.destroy()
                 resolve(false)
             })
-            
-            socket.on('error', () => {
+
+            socket.on("error", () => {
                 socket.destroy()
                 resolve(false)
             })
-            
+
             socket.connect(port, host)
         })
     }
@@ -167,9 +167,9 @@ export class IQNetwork {
         if (!node) return false
 
         const isOnline = await this.ping(node.address, node.port)
-        node.status = isOnline ? 'online' : 'offline'
+        node.status = isOnline ? "online" : "offline"
         node.lastSeen = isOnline ? new Date().toISOString() : node.lastSeen
-        
+
         return isOnline
     }
 
@@ -178,42 +178,45 @@ export class IQNetwork {
      */
     async updateAllNodeStatuses(): Promise<Map<string, boolean>> {
         const results = new Map<string, boolean>()
-        
+
         for (const [id, node] of this.nodes) {
             const status = await this.updateNodeStatus(id)
             results.set(id, status)
         }
-        
+
         return results
     }
 
     /**
      * Make HTTP/HTTPS request
      */
-    async httpRequest(url: string, options?: {
-        method?: string
-        headers?: Record<string, string>
-        body?: string
-        timeout?: number
-    }): Promise<{ status: number; headers: Record<string, string>; body: string }> {
+    async httpRequest(
+        url: string,
+        options?: {
+            method?: string
+            headers?: Record<string, string>
+            body?: string
+            timeout?: number
+        }
+    ): Promise<{ status: number; headers: Record<string, string>; body: string }> {
         return new Promise((resolve, reject) => {
             const parsedUrl = new URL(url)
-            const isHttps = parsedUrl.protocol === 'https:'
+            const isHttps = parsedUrl.protocol === "https:"
             const lib = isHttps ? https : http
 
             const reqOptions = {
                 hostname: parsedUrl.hostname,
                 port: parsedUrl.port || (isHttps ? 443 : 80),
                 path: parsedUrl.pathname + parsedUrl.search,
-                method: options?.method || 'GET',
+                method: options?.method || "GET",
                 headers: options?.headers || {},
                 timeout: options?.timeout || 30000
             }
 
             const req = lib.request(reqOptions, (res) => {
-                let body = ''
-                res.on('data', (chunk) => body += chunk)
-                res.on('end', () => {
+                let body = ""
+                res.on("data", (chunk) => (body += chunk))
+                res.on("end", () => {
                     resolve({
                         status: res.statusCode || 0,
                         headers: res.headers as Record<string, string>,
@@ -222,10 +225,10 @@ export class IQNetwork {
                 })
             })
 
-            req.on('error', reject)
-            req.on('timeout', () => {
+            req.on("error", reject)
+            req.on("timeout", () => {
                 req.destroy()
-                reject(new Error('Request timeout'))
+                reject(new Error("Request timeout"))
             })
 
             if (options?.body) {
@@ -246,10 +249,10 @@ export class IQNetwork {
     /**
      * Simple POST request
      */
-    async post(url: string, body: string, contentType: string = 'application/json'): Promise<string> {
+    async post(url: string, body: string, contentType: string = "application/json"): Promise<string> {
         const response = await this.httpRequest(url, {
-            method: 'POST',
-            headers: { 'Content-Type': contentType },
+            method: "POST",
+            headers: { "Content-Type": contentType },
             body
         })
         return response.body
@@ -265,16 +268,16 @@ export class IQNetwork {
 
             socket.setTimeout(timeout)
 
-            socket.on('connect', () => {
+            socket.on("connect", () => {
                 resolve(socket)
             })
 
-            socket.on('timeout', () => {
+            socket.on("timeout", () => {
                 socket.destroy()
-                reject(new Error('Connection timeout'))
+                reject(new Error("Connection timeout"))
             })
 
-            socket.on('error', (err) => {
+            socket.on("error", (err) => {
                 socket.destroy()
                 reject(err)
             })
@@ -287,14 +290,14 @@ export class IQNetwork {
      * Get online nodes
      */
     getOnlineNodes(): INetworkNode[] {
-        return this.listNodes().filter(n => n.status === 'online')
+        return this.listNodes().filter((n) => n.status === "online")
     }
 
     /**
      * Get offline nodes
      */
     getOfflineNodes(): INetworkNode[] {
-        return this.listNodes().filter(n => n.status === 'offline')
+        return this.listNodes().filter((n) => n.status === "offline")
     }
 }
 

@@ -4,14 +4,14 @@
  * @summary Opt-in string manipulation utilities (no global pollution)
  */
 
-import { ANSI } from './ansi'
+import { ANSI } from "./ansi"
 
 /**
  * Add ANSI color to text
  * @param text - Text to colorize
  * @param color - Color name (e.g., 'cyan', 'bright red')
  * @returns Colorized text with ANSI codes
- * 
+ *
  * @example
  * ```typescript
  * import { colorText } from '@iniquitybbs/core/utils'
@@ -27,7 +27,7 @@ export function colorText(text: string, color: string): string {
  * @param text - Text to center
  * @param width - Target width (defaults to 80)
  * @returns Centered text with padding
- * 
+ *
  * @example
  * ```typescript
  * import { centerText } from '@iniquitybbs/core/utils'
@@ -37,9 +37,9 @@ export function colorText(text: string, color: string): string {
 export function centerText(text: string, width: number = 80): string {
     const visible = stripAnsi(text)
     if (visible.length >= width) return text
-    
+
     const padding = Math.floor((width - visible.length) / 2)
-    return ' '.repeat(padding) + text
+    return " ".repeat(padding) + text
 }
 
 /**
@@ -51,8 +51,8 @@ export function centerText(text: string, width: number = 80): string {
 export function leftAlign(text: string, width: number = 80): string {
     const visible = stripAnsi(text)
     if (visible.length >= width) return text
-    
-    return text + ' '.repeat(width - visible.length)
+
+    return text + " ".repeat(width - visible.length)
 }
 
 /**
@@ -64,8 +64,8 @@ export function leftAlign(text: string, width: number = 80): string {
 export function rightAlign(text: string, width: number = 80): string {
     const visible = stripAnsi(text)
     if (visible.length >= width) return text
-    
-    return ' '.repeat(width - visible.length) + text
+
+    return " ".repeat(width - visible.length) + text
 }
 
 /**
@@ -75,9 +75,9 @@ export function rightAlign(text: string, width: number = 80): string {
  * @returns Text with newlines prepended
  */
 export function addNewlines(text: string, count: number = 1): string {
-    let result = ''
+    let result = ""
     for (let i = 0; i < count; i++) {
-        result += '\r\n'
+        result += "\r\n"
     }
     return result + text
 }
@@ -86,7 +86,7 @@ export function addNewlines(text: string, count: number = 1): string {
  * Strip ANSI escape codes from text
  * @param text - Text containing ANSI codes
  * @returns Text with ANSI codes removed
- * 
+ *
  * @example
  * ```typescript
  * import { stripAnsi } from '@iniquitybbs/core/utils'
@@ -94,14 +94,14 @@ export function addNewlines(text: string, count: number = 1): string {
  * ```
  */
 export function stripAnsi(text: string): string {
-    return text.replace(/\x1b\[[0-9;]*m/g, '')
+    return text.replace(/\x1b\[[0-9;]*m/g, "")
 }
 
 /**
  * Get visible length of text (excluding ANSI codes)
  * @param text - Text to measure
  * @returns Visible character count
- * 
+ *
  * @example
  * ```typescript
  * import { visibleLength } from '@iniquitybbs/core/utils'
@@ -119,10 +119,10 @@ export function visibleLength(text: string): number {
  * @param suffix - Suffix to add if truncated (defaults to '...')
  * @returns Truncated text
  */
-export function truncateText(text: string, maxLength: number, suffix: string = '...'): string {
+export function truncateText(text: string, maxLength: number, suffix: string = "..."): string {
     const visible = stripAnsi(text)
     if (visible.length <= maxLength) return text
-    
+
     return visible.substring(0, maxLength - suffix.length) + suffix
 }
 
@@ -133,27 +133,22 @@ export function truncateText(text: string, maxLength: number, suffix: string = '
  * @param char - Character to use for padding (defaults to space)
  * @param side - Side to pad ('left', 'right', or 'both')
  * @returns Padded text
- * 
+ *
  * @example
  * ```typescript
  * import { padText } from '@iniquitybbs/core/utils'
  * const padded = padText("Hello", 10, ' ', 'right')  // "Hello     "
  * ```
  */
-export function padText(
-    text: string, 
-    length: number, 
-    char: string = ' ', 
-    side: 'left' | 'right' | 'both' = 'right'
-): string {
+export function padText(text: string, length: number, char: string = " ", side: "left" | "right" | "both" = "right"): string {
     const visible = stripAnsi(text)
     if (visible.length >= length) return text
-    
+
     const padding = length - visible.length
-    
-    if (side === 'left') {
+
+    if (side === "left") {
         return char.repeat(padding) + text
-    } else if (side === 'right') {
+    } else if (side === "right") {
         return text + char.repeat(padding)
     } else {
         const leftPad = Math.floor(padding / 2)
@@ -197,7 +192,7 @@ export function lowerText(text: string): string {
  * @returns Title-cased text
  */
 export function titleText(text: string): string {
-    return text.replace(/\b\w/g, c => c.toUpperCase())
+    return text.replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
 /**

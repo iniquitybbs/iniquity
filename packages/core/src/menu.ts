@@ -4,10 +4,10 @@
  * @summary Interactive command-driven menu system for BBS applications
  */
 
-import { IQOutput } from './output'
-import { ANSI } from './ansi'
-import { events } from './events'
-import { Measure } from './decorators-runtime'
+import { IQOutput } from "./output"
+import { ANSI } from "./ansi"
+import { events } from "./events"
+import { Measure } from "./decorators-runtime"
 
 export interface IMenuCommand {
     (): any | Promise<any>
@@ -19,7 +19,7 @@ export interface IMenuCommands {
 
 export interface IQMenuArtOptions {
     filename: string
-    mode?: 'line' | 'character' | '@-codes' | 'mci'
+    mode?: "line" | "character" | "@-codes" | "mci"
     speed?: number
     clearScreenBefore?: boolean
     /**
@@ -30,7 +30,7 @@ export interface IQMenuArtOptions {
      * - 'both': Always center both axes
      * - 'none': No centering, render at 1,1 (legacy behavior)
      */
-    center?: 'auto' | 'horizontal' | 'vertical' | 'both' | 'none'
+    center?: "auto" | "horizontal" | "vertical" | "both" | "none"
     /** Explicit X position (1-indexed). Overrides centering. */
     x?: number
     /** Explicit Y position (1-indexed). Overrides centering. */
@@ -108,10 +108,10 @@ export class IQMenu {
     private parent: IQMenu | null = null
     private running: boolean = true
     private artworkFn?: (options?: { basepath?: string }) => { render: (opts: any) => Promise<any> }
-    
+
     constructor(options: IQMenuOptions, output: IQOutput, artworkFn?: (options?: { basepath?: string }) => { render: (opts: any) => Promise<any> }) {
         this.name = options.name
-        this.description = options.description || ''
+        this.description = options.description || ""
         this.commands = options.commands || {}
         this.data = options.data || {}
         this.art = options.art
@@ -122,11 +122,11 @@ export class IQMenu {
         this.itemsX = options.itemsX
         this.itemsY = options.itemsY
         this.autoRenderItems = options.autoRenderItems ?? true
-        this.itemFormat = options.itemFormat || '|11[|15{key}|11] |07{label}'
+        this.itemFormat = options.itemFormat || "|11[|15{key}|11] |07{label}"
         this.output = output
         this.artworkFn = artworkFn
     }
-    
+
     /**
      * Add a menu item
      */
@@ -143,15 +143,15 @@ export class IQMenu {
         }
         return this
     }
-    
+
     /**
      * Add multiple menu items
      */
     addItems(items: IQMenuItem[]): IQMenu {
-        items.forEach(item => this.addItem(item))
+        items.forEach((item) => this.addItem(item))
         return this
     }
-    
+
     /**
      * Set parent menu (for back navigation)
      */
@@ -159,27 +159,27 @@ export class IQMenu {
         this.parent = parent
         return this
     }
-    
+
     /**
      * Get parent menu
      */
     getParent(): IQMenu | null {
         return this.parent
     }
-    
+
     /**
      * Set up a prompt for user input
      */
     prompt(options: IQMenuPromptOptions): IQMenuPromptFunctions {
         this.promptOptions = options
-        
+
         return {
             command: (cmdkey: Function) => {
                 this.waitForCommand(cmdkey)
             }
         }
     }
-    
+
     /**
      * Wait for user command input and return the key
      * Uses non-blocking input with event processing loop
@@ -211,76 +211,76 @@ export class IQMenu {
             }
 
             // Yield to event loop with a short delay
-            await new Promise(resolve => setTimeout(resolve, 10))
+            await new Promise((resolve) => setTimeout(resolve, 10))
         }
     }
-    
+
     /**
      * Wait for user command input
      */
     private async waitForCommand(cmdkey: Function): Promise<void> {
         if (!this.promptOptions) {
-            throw new Error('Prompt options not set. Call prompt() first.')
+            throw new Error("Prompt options not set. Call prompt() first.")
         }
-        
+
         if (this.promptOptions.x && this.promptOptions.y) {
             this.output.write(ANSI.gotoxy(this.promptOptions.x, this.promptOptions.y))
         }
         if (this.promptOptions.text) {
             this.output.writeMCI(this.promptOptions.text)
         }
-        
+
         const input = await this.output.readKey()
         const command = input.toUpperCase()
-        
+
         cmdkey(command)
     }
-    
+
     /**
      * Execute a command by key
      */
     @Measure()
     async executeCommand(key: string): Promise<any> {
         const upperKey = key.toUpperCase()
-        
+
         if (this.commands[upperKey]) {
             return await this.commands[upperKey]()
         } else if (this.commands.default) {
             return await this.commands.default()
         }
-        
+
         return null
     }
-    
+
     /**
      * Display the menu and wait for input
      */
     @Measure()
     async show(): Promise<string> {
         this.running = true
-        
+
         // Clear any pending input from previous operations (login, etc.)
         // This prevents leftover keystrokes from triggering menu actions
         while (this.output.hasInput()) {
             this.output.readKeyNonBlocking()
         }
         // Small delay to allow any in-flight data to arrive
-        await new Promise(resolve => setTimeout(resolve, 50))
+        await new Promise((resolve) => setTimeout(resolve, 50))
         // Clear again after delay
         while (this.output.hasInput()) {
             this.output.readKeyNonBlocking()
         }
-        
+
         while (this.running) {
             // Clear screen
             this.output.write(ANSI.clearScreen())
-            
+
             // Display artwork if specified
             if (this.art && this.artworkFn) {
                 const artInstance = this.artworkFn({ basepath: this.basepath })
                 await artInstance.render({
                     filename: this.art.filename,
-                    mode: this.art.mode || 'line',
+                    mode: this.art.mode || "line",
                     speed: this.art.speed || 30,
                     clearScreenBefore: this.art.clearScreenBefore,
                     center: this.art.center,
@@ -288,56 +288,54 @@ export class IQMenu {
                     y: this.art.y
                 })
             }
-            
+
             // Display menu items if any
             if (this.items.length > 0 && this.autoRenderItems) {
                 this.displayItems()
             }
-            
+
             // Position cursor for prompt if specified
             if (this.promptX !== undefined && this.promptY !== undefined) {
                 this.output.write(ANSI.gotoxy(this.promptX, this.promptY))
             }
-            
+
             // Show prompt and get input (uses writeMCI for pipe code support)
             this.output.writeMCI(this.promptText)
             const key = await this.waitForKey()
-            
+
             // Handle quit/back
-            if (key === 'Q') {
+            if (key === "Q") {
                 this.running = false
-                return 'Q'
+                return "Q"
             }
-            
+
             // Execute command
             const result = await this.executeCommand(key)
-            
+
             // If command returns 'back' or 'quit', handle navigation
-            if (result === 'back' || result === 'quit') {
+            if (result === "back" || result === "quit") {
                 this.running = false
                 return result
             }
         }
-        
-        return 'quit'
+
+        return "quit"
     }
-    
+
     /**
      * Display menu items in a formatted list (uses writeMCI for pipe code support)
      * Items can have individual x,y positions, or use itemsX/itemsY as starting point
      */
     private displayItems(): void {
         // If no global positioning and no per-item positioning, add a newline
-        if (this.itemsX === undefined && this.itemsY === undefined && !this.items.some(i => i.x !== undefined)) {
-            this.output.writeMCI('\r\n')
+        if (this.itemsX === undefined && this.itemsY === undefined && !this.items.some((i) => i.x !== undefined)) {
+            this.output.writeMCI("\r\n")
         }
-        
+
         let currentY = this.itemsY || 0
         for (const item of this.items) {
-            const line = this.itemFormat
-                .replace('{key}', item.key)
-                .replace('{label}', item.label)
-            
+            const line = this.itemFormat.replace("{key}", item.key).replace("{label}", item.label)
+
             // Per-item positioning takes priority
             if (item.x !== undefined && item.y !== undefined) {
                 this.output.write(ANSI.gotoxy(item.x, item.y))
@@ -347,67 +345,64 @@ export class IQMenu {
                 this.output.write(ANSI.gotoxy(this.itemsX, currentY))
                 currentY++
             }
-            
-            this.output.writeMCI(line + '\r\n')
+
+            this.output.writeMCI(line + "\r\n")
         }
-        
+
         // Only add trailing newline if not using positioning
-        if (this.itemsX === undefined && this.itemsY === undefined && !this.items.some(i => i.x !== undefined)) {
-            this.output.writeMCI('\r\n')
+        if (this.itemsX === undefined && this.itemsY === undefined && !this.items.some((i) => i.x !== undefined)) {
+            this.output.writeMCI("\r\n")
         }
     }
-    
+
     /**
      * Stop the menu loop
      */
     stop(): void {
         this.running = false
     }
-    
+
     /**
      * Go back to parent menu
      */
     back(): string {
         this.running = false
-        return 'back'
+        return "back"
     }
-    
+
     /**
      * Render the menu with a loop (legacy API)
      */
-    async render(
-        callback: (res: IQMenuLoopMessageResponse, cmdkey: Function, data?: any) => void,
-        options?: IQMenuLoopOptions
-    ): Promise<void> {
+    async render(callback: (res: IQMenuLoopMessageResponse, cmdkey: Function, data?: any) => void, options?: IQMenuLoopOptions): Promise<void> {
         const maxInterval = options?.maxInterval || Infinity
         const startTime = Date.now()
-        
+
         this.running = true
-        
+
         const cmdkey = async (key: string) => {
             const result = await this.executeCommand(key)
-            
-            if (key === 'Q' || key === 'H') {
+
+            if (key === "Q" || key === "H") {
                 this.running = false
             }
-            
+
             return result
         }
-        
+
         const response: IQMenuLoopMessageResponse = {
             data: options?.data || this.data
         }
-        
+
         while (this.running) {
             if (Date.now() - startTime > maxInterval) {
                 break
             }
-            
+
             try {
                 callback(response, cmdkey, options?.data || this.data)
-                await new Promise(resolve => setTimeout(resolve, 100))
+                await new Promise((resolve) => setTimeout(resolve, 100))
             } catch (err) {
-                console.error('Menu render error:', err)
+                console.error("Menu render error:", err)
                 break
             }
         }

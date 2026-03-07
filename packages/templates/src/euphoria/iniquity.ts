@@ -203,7 +203,7 @@ const showStatus = async () => {
         clearScreen: true,
         display: "instant",
         data: statusData,
-        center: "none",  // Artwork has built-in positioning
+        center: "none", // Artwork has built-in positioning
         pauseAfter: true
     })
 }
@@ -321,14 +321,14 @@ bbs.menu("info", {
 // Column positions are set to flank the artwork: left column at X=30, right column at X=90
 bbs.menu("main", {
     art: "ep_main_menu.ans",
-    artCenter: "none",  // Artwork has built-in positioning, don't add extra centering
+    artCenter: "none", // Artwork has built-in positioning, don't add extra centering
     prompt: "|14Main Menu |07» |15",
     promptY: 27,
     layout: "two-column",
-    col1X: 30,   // Left column X position (flanking left side of artwork)
-    col1Y: 10,   // Starting Y position for left column
-    col2X: 90,   // Right column X position (flanking right side of artwork)
-    col2Y: 10,   // Starting Y position for right column
+    col1X: 30, // Left column X position (flanking left side of artwork)
+    col1Y: 10, // Starting Y position for left column
+    col2X: 90, // Right column X position (flanking right side of artwork)
+    col2Y: 10, // Starting Y position for right column
     items: [
         { key: "M", label: "Message Bases", goto: "messages" },
         { key: "F", label: "File Areas", goto: "files" },
@@ -354,7 +354,7 @@ bbs.start(async () => {
         clearScreen: true,
         display: "line",
         speed: 50,
-        center: "none"  // Artwork has built-in positioning
+        center: "none" // Artwork has built-in positioning
     })
 
     // Emit welcome complete event

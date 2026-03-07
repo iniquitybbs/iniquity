@@ -89,7 +89,7 @@ export class Server implements yargs.CommandModule {
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
-    
+
     public async handler(argv: yargs.Arguments) {
         if (argv.install || argv.watch) {
             if (fs.existsSync(".iniquity")) {
@@ -127,9 +127,9 @@ export class Server implements yargs.CommandModule {
 
         switch (argv.action) {
             case "start":
-                const port = argv.port as number || 23
-                const programPath = argv.program as string || "./iniquity.ts"
-                
+                const port = (argv.port as number) || 23
+                const programPath = (argv.program as string) || "./iniquity.ts"
+
                 // Find the actual program path
                 let resolvedPath = programPath
                 if (!path.isAbsolute(programPath)) {
@@ -154,37 +154,37 @@ export class Server implements yargs.CommandModule {
 
                 try {
                     await this.telnetServer.start()
-                    
+
                     // Keep process alive
-                    process.on('SIGINT', async () => {
-                        console.log('\nShutting down...')
+                    process.on("SIGINT", async () => {
+                        console.log("\nShutting down...")
                         if (this.telnetServer) {
                             await this.telnetServer.stop()
                         }
                         process.exit(0)
                     })
                 } catch (err) {
-                    console.error('Failed to start server:', err)
+                    console.error("Failed to start server:", err)
                     process.exit(1)
                 }
 
                 break
-                
+
             case "stop":
                 if (this.telnetServer) {
                     await this.telnetServer.stop()
                     this.telnetServer = null
                 } else {
-                    console.log('Server is not running')
+                    console.log("Server is not running")
                 }
                 break
-                
+
             case "restart":
                 if (this.telnetServer) {
                     await this.telnetServer.stop()
                     await this.telnetServer.start()
                 } else {
-                    console.log('Server is not running')
+                    console.log("Server is not running")
                 }
                 break
         }

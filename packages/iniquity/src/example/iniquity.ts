@@ -1,10 +1,10 @@
 import { say, ask, pause } from "../runtime/core"
 
 // Async wrapper to use await
-(async () => {
+;(async () => {
     say(`Welcome to Iniquity BBS!`)
     await pause()
-    
+
     say("MyBBS is the best board ever made.")
     await pause()
 
@@ -15,4 +15,3 @@ import { say, ask, pause } from "../runtime/core"
     say(`Hello ${name}!`)
     await pause()
 })()
-

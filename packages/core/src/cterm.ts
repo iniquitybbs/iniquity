@@ -2,14 +2,14 @@
  * CTerm Utilities - Terminal Capability Detection
  * @module core/cterm
  * @summary CTerm/SyncTERM feature detection and terminal queries
- * 
+ *
  * Inspired by Synchronet's cterm_lib.js, this provides:
  * - Query terminal capabilities
  * - Detect CTerm version
  * - Check for specific feature support (fonts, sixel, palette)
  */
 
-import { IQOutput } from './output'
+import { IQOutput } from "./output"
 
 /**
  * CTerm version constants for feature support
@@ -31,14 +31,14 @@ export const CTermVersions = {
  * CTerm device attribute flags
  */
 export const CTermDeviceAttributes = {
-    VALID: '0',
-    LOADABLE_FONTS: '1',
-    BRIGHT_BACKGROUND: '2',
-    PALETTE_SETTABLE: '3',
-    PIXELOPS_SUPPORTED: '4',
-    FONT_SELECTABLE: '5',
-    EXTENDED_PALETTE: '6',
-    MOUSE_AVAILABLE: '7'
+    VALID: "0",
+    LOADABLE_FONTS: "1",
+    BRIGHT_BACKGROUND: "2",
+    PALETTE_SETTABLE: "3",
+    PIXELOPS_SUPPORTED: "4",
+    FONT_SELECTABLE: "5",
+    EXTENDED_PALETTE: "6",
+    MOUSE_AVAILABLE: "7"
 } as const
 
 /**
@@ -148,7 +148,7 @@ export class CTerm {
      * Response format: ESC[=67;84;101;114;109;MAJOR;MINOR;ATTRIBUTESc
      */
     static queryDeviceAttributesSequence(): string {
-        return '\x1b[c'
+        return "\x1b[c"
     }
 
     /**
@@ -156,7 +156,7 @@ export class CTerm {
      * Response format: ESC[=1;FIRST;RESULT;STYLE0;STYLE1;STYLE2;STYLE3n
      */
     static queryFontStateSequence(): string {
-        return '\x1b[=1n'
+        return "\x1b[=1n"
     }
 
     /**
@@ -164,7 +164,7 @@ export class CTerm {
      * Response format: ESC[=2;MODE1;MODE2;...n
      */
     static queryModesSequence(): string {
-        return '\x1b[=2n'
+        return "\x1b[=2n"
     }
 
     /**
@@ -172,7 +172,7 @@ export class CTerm {
      * Response format: ESC[=3;HEIGHT;WIDTHn
      */
     static queryFontDimensionsSequence(): string {
-        return '\x1b[=3n'
+        return "\x1b[=3n"
     }
 
     /**
@@ -180,7 +180,7 @@ export class CTerm {
      * Response format: ESC[?2;0;WIDTH;HEIGHTS
      */
     static queryGraphicsDimensionsSequence(): string {
-        return '\x1b[?2;1S'
+        return "\x1b[?2;1S"
     }
 
     /**
@@ -209,12 +209,7 @@ export class CTerm {
             return {
                 firstSlot: parseInt(match[1], 10),
                 result: parseInt(match[2], 10),
-                styles: [
-                    parseInt(match[3], 10),
-                    parseInt(match[4], 10),
-                    parseInt(match[5], 10),
-                    parseInt(match[6], 10)
-                ]
+                styles: [parseInt(match[3], 10), parseInt(match[4], 10), parseInt(match[5], 10), parseInt(match[6], 10)]
             }
         }
         return null
@@ -255,12 +250,12 @@ export class CTerm {
      */
     static parseModesResponse(response: string): string[] {
         // Response: ESC[=2;MODE1;MODE2;...n or ESC[=2n (no modes)
-        if (response === '\x1b[=2n') {
+        if (response === "\x1b[=2n") {
             return []
         }
         const match = response.match(/\x1b\[=2;(.+)n/)
         if (match) {
-            return match[1].split(';')
+            return match[1].split(";")
         }
         return []
     }
@@ -272,7 +267,7 @@ export class CTerm {
      */
     static loadFontSequence(slot: number, fontData: string): string {
         if (slot < this.FONT_SLOT_FIRST || slot > this.FONT_SLOT_LAST) {
-            return ''
+            return ""
         }
         return `\x1b[=${slot};1;0;${fontData} D`
     }
@@ -284,7 +279,7 @@ export class CTerm {
      */
     static selectFontSequence(style: number, slot: number): string {
         if (style < 0 || style > 3) {
-            return ''
+            return ""
         }
         return `\x1b[${style};${slot} D`
     }
@@ -297,42 +292,42 @@ export class CTerm {
      * @param b Blue component (0-255)
      */
     static setPaletteColorSequence(index: number, r: number, g: number, b: number): string {
-        return `\x1b]4;${index};rgb:${r.toString(16).padStart(2, '0')}/${g.toString(16).padStart(2, '0')}/${b.toString(16).padStart(2, '0')}\x1b\\`
+        return `\x1b]4;${index};rgb:${r.toString(16).padStart(2, "0")}/${g.toString(16).padStart(2, "0")}/${b.toString(16).padStart(2, "0")}\x1b\\`
     }
 
     /**
      * Generate sequence to reset palette to defaults
      */
     static resetPaletteSequence(): string {
-        return '\x1b[=0;0;0 D'
+        return "\x1b[=0;0;0 D"
     }
 
     /**
      * Generate sequence to enable/disable mouse tracking
      */
     static mouseTrackingSequence(enable: boolean): string {
-        return enable ? '\x1b[?1000h' : '\x1b[?1000l'
+        return enable ? "\x1b[?1000h" : "\x1b[?1000l"
     }
 
     /**
      * Generate sequence to enable/disable mouse button events
      */
     static mouseButtonEventsSequence(enable: boolean): string {
-        return enable ? '\x1b[?1002h' : '\x1b[?1002l'
+        return enable ? "\x1b[?1002h" : "\x1b[?1002l"
     }
 
     /**
      * Generate sequence to enable/disable mouse motion events
      */
     static mouseMotionEventsSequence(enable: boolean): string {
-        return enable ? '\x1b[?1003h' : '\x1b[?1003l'
+        return enable ? "\x1b[?1003h" : "\x1b[?1003l"
     }
 
     /**
      * Generate sequence to enable/disable SGR mouse mode
      */
     static mouseSgrModeSequence(enable: boolean): string {
-        return enable ? '\x1b[?1006h' : '\x1b[?1006l'
+        return enable ? "\x1b[?1006h" : "\x1b[?1006l"
     }
 
     /**
@@ -366,7 +361,7 @@ export class CTerm {
      * Parse version from string (e.g., "1.189")
      */
     static parseVersionString(versionStr: string): number {
-        const parts = versionStr.split('.')
+        const parts = versionStr.split(".")
         if (parts.length >= 2) {
             const major = parseInt(parts[0], 10) || 0
             const minor = parseInt(parts[1], 10) || 0

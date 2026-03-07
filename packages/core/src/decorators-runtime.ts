@@ -12,23 +12,23 @@ export function Cached(options?: { ttl?: number; keyGenerator?: (args: any[]) =>
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const cache = new Map<string, { value: any; timestamp: number }>()
         const original = descriptor.value
-        
+
         descriptor.value = function (...args: any[]) {
             const key = options?.keyGenerator ? options.keyGenerator(args) : JSON.stringify(args)
             const cached = cache.get(key)
-            
+
             if (cached) {
-                if (!options?.ttl || (Date.now() - cached.timestamp) < options.ttl) {
+                if (!options?.ttl || Date.now() - cached.timestamp < options.ttl) {
                     return cached.value
                 }
                 cache.delete(key)
             }
-            
+
             const result = original.apply(this, args)
             cache.set(key, { value: result, timestamp: Date.now() })
             return result
         }
-        
+
         return descriptor
     }
 }
@@ -40,11 +40,11 @@ export function Cached(options?: { ttl?: number; keyGenerator?: (args: any[]) =>
 export function Measure(label?: string) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const original = descriptor.value
-        
+
         descriptor.value = async function (...args: any[]) {
             const methodLabel = label || `${target.constructor.name}.${propertyKey}`
             const start = performance.now()
-            
+
             try {
                 const result = await original.apply(this, args)
                 const duration = performance.now() - start
@@ -56,7 +56,7 @@ export function Measure(label?: string) {
                 throw err
             }
         }
-        
+
         return descriptor
     }
 }
@@ -68,16 +68,16 @@ export function Measure(label?: string) {
 export function Validate(validator: (args: any[]) => boolean | string) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const original = descriptor.value
-        
+
         descriptor.value = function (...args: any[]) {
             const result = validator(args)
             if (result !== true) {
-                const errorMsg = typeof result === 'string' ? result : 'Validation failed'
+                const errorMsg = typeof result === "string" ? result : "Validation failed"
                 throw new Error(`${target.constructor.name}.${propertyKey}: ${errorMsg}`)
             }
             return original.apply(this, args)
         }
-        
+
         return descriptor
     }
 }
@@ -90,27 +90,27 @@ export function Validate(validator: (args: any[]) => boolean | string) {
 export function Lifecycle(openMethod: string, closeMethod: string) {
     return function (constructor: Function) {
         const proto = constructor.prototype
-        const stateKey = Symbol('lifecycleState')
-        
+        const stateKey = Symbol("lifecycleState")
+
         const originalOpen = proto[openMethod]
         const originalClose = proto[closeMethod]
-        
+
         if (originalOpen) {
             proto[openMethod] = function (...args: any[]) {
                 if ((this as any)[stateKey]) {
                     throw new Error(`${constructor.name} is already open`)
                 }
-                (this as any)[stateKey] = true
+                ;(this as any)[stateKey] = true
                 return originalOpen.apply(this, args)
             }
         }
-        
+
         if (originalClose) {
             proto[closeMethod] = function (...args: any[]) {
                 if (!(this as any)[stateKey]) {
                     throw new Error(`${constructor.name} is not open`)
                 }
-                (this as any)[stateKey] = false
+                ;(this as any)[stateKey] = false
                 return originalClose.apply(this, args)
             }
         }
@@ -123,7 +123,7 @@ export function Lifecycle(openMethod: string, closeMethod: string) {
 export function Transaction() {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const original = descriptor.value
-        
+
         descriptor.value = async function (...args: any[]) {
             try {
                 const result = await original.apply(this, args)
@@ -133,7 +133,7 @@ export function Transaction() {
                 throw err
             }
         }
-        
+
         return descriptor
     }
 }
@@ -146,42 +146,40 @@ export function Synchronized() {
         const queueKey = Symbol(`${propertyKey}_queue`)
         const runningKey = Symbol(`${propertyKey}_running`)
         const original = descriptor.value
-        
+
         descriptor.value = async function (...args: any[]) {
             if (!(this as any)[queueKey]) {
-                (this as any)[queueKey] = []
+                ;(this as any)[queueKey] = []
             }
             if ((this as any)[runningKey] === undefined) {
-                (this as any)[runningKey] = false
+                ;(this as any)[runningKey] = false
             }
-            
+
             const queue = (this as any)[queueKey]
-            
+
             if ((this as any)[runningKey]) {
                 return new Promise((resolve, reject) => {
                     queue.push({ args, resolve, reject })
                 })
             }
-            
-            (this as any)[runningKey] = true
-            
+
+            ;(this as any)[runningKey] = true
+
             try {
                 const result = await original.apply(this, args)
                 return result
             } finally {
-                (this as any)[runningKey] = false
-                
+                ;(this as any)[runningKey] = false
+
                 if (queue.length > 0) {
                     const next = queue.shift()
                     if (next) {
-                        descriptor.value.apply(this, next.args)
-                            .then(next.resolve)
-                            .catch(next.reject)
+                        descriptor.value.apply(this, next.args).then(next.resolve).catch(next.reject)
                     }
                 }
             }
         }
-        
+
         return descriptor
     }
 }
@@ -195,10 +193,10 @@ export function Retry(options: { maxAttempts?: number; delay?: number } = {}) {
         const maxAttempts = options.maxAttempts || 3
         const delay = options.delay || 1000
         const original = descriptor.value
-        
+
         descriptor.value = async function (...args: any[]) {
             let lastError: any
-            
+
             for (let attempt = 1; attempt <= maxAttempts; attempt++) {
                 try {
                     return await original.apply(this, args)
@@ -206,14 +204,14 @@ export function Retry(options: { maxAttempts?: number; delay?: number } = {}) {
                     lastError = err
                     if (attempt < maxAttempts) {
                         console.log(`[Retry] ${target.constructor.name}.${propertyKey} attempt ${attempt} failed, retrying...`)
-                        await new Promise(resolve => setTimeout(resolve, delay))
+                        await new Promise((resolve) => setTimeout(resolve, delay))
                     }
                 }
             }
-            
+
             throw lastError
         }
-        
+
         return descriptor
     }
 }
@@ -225,16 +223,14 @@ export function Retry(options: { maxAttempts?: number; delay?: number } = {}) {
 export function Timeout(ms: number) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const original = descriptor.value
-        
+
         descriptor.value = async function (...args: any[]) {
             return Promise.race([
                 original.apply(this, args),
-                new Promise((_, reject) => 
-                    setTimeout(() => reject(new Error(`Timeout: ${target.constructor.name}.${propertyKey}`)), ms)
-                )
+                new Promise((_, reject) => setTimeout(() => reject(new Error(`Timeout: ${target.constructor.name}.${propertyKey}`)), ms))
             ])
         }
-        
+
         return descriptor
     }
 }
@@ -247,17 +243,17 @@ export function Debounce(ms: number) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const timerKey = Symbol(`${propertyKey}_timer`)
         const original = descriptor.value
-        
+
         descriptor.value = function (...args: any[]) {
             clearTimeout((this as any)[timerKey])
-            
+
             return new Promise((resolve) => {
-                (this as any)[timerKey] = setTimeout(() => {
+                ;(this as any)[timerKey] = setTimeout(() => {
                     resolve(original.apply(this, args))
                 }, ms)
             })
         }
-        
+
         return descriptor
     }
 }
@@ -270,19 +266,19 @@ export function Throttle(ms: number) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const lastCallKey = Symbol(`${propertyKey}_lastCall`)
         const original = descriptor.value
-        
+
         descriptor.value = function (...args: any[]) {
             const now = Date.now()
             const lastCall = (this as any)[lastCallKey] || 0
-            
+
             if (now - lastCall < ms) {
                 return
             }
-            
-            (this as any)[lastCallKey] = now
+
+            ;(this as any)[lastCallKey] = now
             return original.apply(this, args)
         }
-        
+
         return descriptor
     }
 }

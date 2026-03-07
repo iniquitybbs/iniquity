@@ -2,28 +2,28 @@
  * XBin Image Format Support
  * @module core/xbin
  * @summary Read and display XBin image format files
- * 
+ *
  * Inspired by Synchronet's xbin_lib.js and xbimage_lib.js, this provides:
  * - Read XBin files (custom font + character data)
  * - Parse XBin header (width, height, font data, flags)
  * - Display XBin images (requires font loading)
- * 
+ *
  * XBin is an extended BIN format that can include:
  * - Custom palettes
  * - Custom fonts
  * - Compressed data
  */
 
-import * as fs from 'fs'
-import { IQOutput } from './output'
-import { ANSI, CGA } from './ansi'
-import { Graphic } from './graphic'
-import { CTerm } from './cterm'
+import * as fs from "fs"
+import { IQOutput } from "./output"
+import { ANSI, CGA } from "./ansi"
+import { Graphic } from "./graphic"
+import { CTerm } from "./cterm"
 
 /**
  * XBin file signature
  */
-export const XBIN_ID = 'XBIN\x1a'
+export const XBIN_ID = "XBIN\x1a"
 export const XBIN_ID_LENGTH = 5
 
 /**
@@ -35,7 +35,7 @@ export const XBinFlags = {
     COMPRESS: 0x04,
     NONBLINK: 0x08,
     FONT_512: 0x10,
-    
+
     // Font slot flags (for multi-font XBin images)
     FONT_NORMAL: 0x02,
     FONT_HIGH: 0x04,
@@ -117,7 +117,7 @@ export class XBin {
         }
 
         // Check signature
-        const signature = buffer.toString('ascii', 0, 5)
+        const signature = buffer.toString("ascii", 0, 5)
         if (signature !== XBIN_ID) {
             return null
         }
@@ -281,13 +281,7 @@ export class XBin {
     /**
      * Display an XBin image
      */
-    static display(
-        output: IQOutput,
-        image: XBinImage,
-        x: number = 1,
-        y: number = 1,
-        loadFonts: boolean = true
-    ): boolean {
+    static display(output: IQOutput, image: XBinImage, x: number = 1, y: number = 1, loadFonts: boolean = true): boolean {
         if (!image.graphic) {
             return false
         }
@@ -309,7 +303,7 @@ export class XBin {
             const fontSlot = CTerm.FONT_SLOT_FIRST
 
             for (let i = 0; i < image.fonts.length; i++) {
-                const fontData = image.fonts[i].toString('base64')
+                const fontData = image.fonts[i].toString("base64")
                 output.write(CTerm.loadFontSequence(fontSlot + i, fontData))
             }
 
@@ -338,10 +332,10 @@ export class XBin {
     static isXBin(filename: string): boolean {
         try {
             const buffer = Buffer.alloc(5)
-            const fd = fs.openSync(filename, 'r')
+            const fd = fs.openSync(filename, "r")
             fs.readSync(fd, buffer, 0, 5, 0)
             fs.closeSync(fd)
-            return buffer.toString('ascii') === XBIN_ID
+            return buffer.toString("ascii") === XBIN_ID
         } catch {
             return false
         }
@@ -352,7 +346,7 @@ export class XBin {
      */
     static isXBinData(data: Buffer): boolean {
         if (data.length < 5) return false
-        return data.toString('ascii', 0, 5) === XBIN_ID
+        return data.toString("ascii", 0, 5) === XBIN_ID
     }
 
     /**
@@ -361,11 +355,11 @@ export class XBin {
     static getInfo(filename: string): XBinHeader | null {
         try {
             const buffer = Buffer.alloc(11)
-            const fd = fs.openSync(filename, 'r')
+            const fd = fs.openSync(filename, "r")
             fs.readSync(fd, buffer, 0, 11, 0)
             fs.closeSync(fd)
 
-            if (buffer.toString('ascii', 0, 5) !== XBIN_ID) {
+            if (buffer.toString("ascii", 0, 5) !== XBIN_ID) {
                 return null
             }
 
@@ -390,12 +384,7 @@ export class XBin {
     /**
      * Create an XBin file from a Graphic
      */
-    static create(
-        graphic: Graphic,
-        charHeight: number = 16,
-        palette?: XBinPalette,
-        fonts?: Buffer[]
-    ): Buffer {
+    static create(graphic: Graphic, charHeight: number = 16, palette?: XBinPalette, fonts?: Buffer[]): Buffer {
         const width = graphic.width
         const height = graphic.height
 
@@ -410,20 +399,20 @@ export class XBin {
         }
 
         // Calculate total size
-        let size = 11  // Header
-        if (palette) size += 48  // Palette
+        let size = 11 // Header
+        if (palette) size += 48 // Palette
         if (fonts) {
             for (const font of fonts) {
                 size += font.length
             }
         }
-        size += width * height * 2  // Character data
+        size += width * height * 2 // Character data
 
         const buffer = Buffer.alloc(size)
         let offset = 0
 
         // Write header
-        buffer.write(XBIN_ID, 0, 'ascii')
+        buffer.write(XBIN_ID, 0, "ascii")
         offset = 5
         buffer.writeUInt16LE(width, offset)
         offset += 2
@@ -455,7 +444,7 @@ export class XBin {
         for (let y = 0; y < height; y++) {
             for (let x = 0; x < width; x++) {
                 const cell = graphic.getData(x, y)
-                buffer.writeUInt8((cell.ch ?? ' ').charCodeAt(0), offset++)
+                buffer.writeUInt8((cell.ch ?? " ").charCodeAt(0), offset++)
                 buffer.writeUInt8(cell.attr ?? CGA.LIGHTGRAY, offset++)
             }
         }
@@ -471,6 +460,6 @@ export class XBin {
         output.write(CTerm.resetPaletteSequence())
 
         // Reset to default font
-        output.write(ANSI.setSyncTermFont('cp437', 0))
+        output.write(ANSI.setSyncTermFont("cp437", 0))
     }
 }

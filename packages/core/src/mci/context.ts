@@ -2,9 +2,9 @@
  * MCI Context System
  * @module runtime/mci/context
  * @summary Context interfaces and providers for MCI code processing
- * 
+ *
  * Provides context data for @-code expansion including user, system, BBS,
- * terminal, message, and file contexts. Compatible with Synchronet, 
+ * terminal, message, and file contexts. Compatible with Synchronet,
  * original Iniquity, and ENiGMA BBS systems.
  */
 
@@ -25,7 +25,7 @@ export interface UserContext {
     age?: number
     birthDate?: Date
     gender?: string
-    
+
     // Statistics
     totalCalls: number
     callsToday?: number
@@ -35,7 +35,7 @@ export interface UserContext {
     timeLeft?: number
     timeUsed?: number
     timeBanked?: number
-    
+
     // File transfer stats
     uploadBytes?: number
     downloadBytes?: number
@@ -43,7 +43,7 @@ export interface UserContext {
     downloadFiles?: number
     uploadKB?: number
     downloadKB?: number
-    
+
     // Message stats
     postsTotal?: number
     postsToday?: number
@@ -51,19 +51,19 @@ export interface UserContext {
     feedbackSent?: number
     mailWaiting?: number
     mailUnread?: number
-    
+
     // Connection info
     ipAddress?: string
     hostname?: string
     protocol?: string
-    
+
     // Preferences
     terminalType?: string
     terminalWidth?: number
     terminalHeight?: number
     editor?: string
     fileProtocol?: string
-    
+
     // Flags and settings
     expert?: boolean
     hotkeys?: boolean
@@ -84,13 +84,13 @@ export interface SystemContext {
     timezone?: string
     uptime?: number
     uptimeStart?: Date
-    
+
     // Platform info
     platform?: string
     osVersion?: string
     architecture?: string
     nodeVersion?: string
-    
+
     // Statistics
     totalCalls?: number
     callsToday?: number
@@ -100,7 +100,7 @@ export interface SystemContext {
     postsToday?: number
     totalFiles?: number
     totalFileBytes?: number
-    
+
     // Last caller info
     lastCaller?: string
     lastCallTime?: Date
@@ -119,7 +119,7 @@ export interface BBSContext {
     location?: string
     phone?: string
     website?: string
-    
+
     // Network addresses
     telnetAddress?: string
     sshAddress?: string
@@ -127,7 +127,7 @@ export interface BBSContext {
     webAddress?: string
     fidoAddress?: string
     qwkId?: string
-    
+
     // Version info
     version?: string
     fullVersion?: string
@@ -142,7 +142,7 @@ export interface TerminalContext {
     type: string
     width: number
     height: number
-    
+
     // Capabilities
     ansi: boolean
     color: boolean
@@ -151,13 +151,13 @@ export interface TerminalContext {
     petscii: boolean
     rip: boolean
     avatar: boolean
-    
+
     // Emulation settings
     bps?: number
     cps?: number
     iceColors?: boolean
     mouse?: boolean
-    
+
     // Font info
     fontName?: string
     fontSize?: number
@@ -174,12 +174,12 @@ export interface MessageContext {
     areaNumber?: number
     groupName?: string
     groupNumber?: number
-    
+
     // Message info
     messageNumber?: number
     totalMessages?: number
     newMessages?: number
-    
+
     // Current message details
     from?: string
     fromFirst?: string
@@ -189,7 +189,7 @@ export interface MessageContext {
     date?: Date
     replyId?: string
     threadId?: string
-    
+
     // Message stats
     upvotes?: number
     downvotes?: number
@@ -207,7 +207,7 @@ export interface FileContext {
     areaNumber?: number
     libraryName?: string
     libraryNumber?: number
-    
+
     // File info
     fileName?: string
     fileSize?: number
@@ -218,7 +218,7 @@ export interface FileContext {
     fileUploader?: string
     fileDownloads?: number
     fileCost?: number
-    
+
     // Area stats
     totalFiles?: number
     totalBytes?: number
@@ -257,7 +257,7 @@ export interface MCIContext {
 export function createDefaultUserContext(): UserContext {
     return {
         id: 0,
-        alias: 'Guest',
+        alias: "Guest",
         securityLevel: 0,
         totalCalls: 0
     }
@@ -281,8 +281,8 @@ export function createDefaultSystemContext(): SystemContext {
  */
 export function createDefaultBBSContext(): BBSContext {
     return {
-        name: 'Iniquity BBS',
-        version: '3.0.0'
+        name: "Iniquity BBS",
+        version: "3.0.0"
     }
 }
 
@@ -291,7 +291,7 @@ export function createDefaultBBSContext(): BBSContext {
  */
 export function createDefaultTerminalContext(): TerminalContext {
     return {
-        type: 'ANSI',
+        type: "ANSI",
         width: 80,
         height: 24,
         ansi: true,

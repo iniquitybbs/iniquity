@@ -4,7 +4,7 @@
  * @summary Synchronet-style format modifiers (L/R/C/Z/W/T/U)
  */
 
-export type FormatModifier = 'L' | 'R' | 'C' | 'Z' | 'W' | 'T' | 'U' | '>'
+export type FormatModifier = "L" | "R" | "C" | "Z" | "W" | "T" | "U" | ">"
 
 export interface FormatOptions {
     modifier?: FormatModifier
@@ -52,30 +52,30 @@ export function parseFormatModifier(codeWithModifier: string): ParsedFormat {
 export function applyFormat(value: string, options: FormatOptions): string {
     let result = value
 
-    if (options.modifier === 'U') {
+    if (options.modifier === "U") {
         result = result.toUpperCase()
     }
 
-    if (options.modifier === 'T') {
+    if (options.modifier === "T") {
         result = addThousandsSeparator(result)
     }
 
-    if (options.modifier === 'W') {
+    if (options.modifier === "W") {
         result = toFullWidth(result)
     }
 
     if (options.width && options.width > 0) {
         switch (options.modifier) {
-            case 'L':
+            case "L":
                 result = leftJustify(result, options.width)
                 break
-            case 'R':
+            case "R":
                 result = rightJustify(result, options.width)
                 break
-            case 'C':
+            case "C":
                 result = center(result, options.width)
                 break
-            case 'Z':
+            case "Z":
                 result = zeroPad(result, options.width)
                 break
             default:
@@ -92,14 +92,14 @@ export function leftJustify(text: string, width: number): string {
     if (text.length >= width) {
         return text.substring(0, width)
     }
-    return text + ' '.repeat(width - text.length)
+    return text + " ".repeat(width - text.length)
 }
 
 export function rightJustify(text: string, width: number): string {
     if (text.length >= width) {
         return text.substring(0, width)
     }
-    return ' '.repeat(width - text.length) + text
+    return " ".repeat(width - text.length) + text
 }
 
 export function center(text: string, width: number): string {
@@ -109,63 +109,131 @@ export function center(text: string, width: number): string {
     const totalPadding = width - text.length
     const leftPadding = Math.floor(totalPadding / 2)
     const rightPadding = totalPadding - leftPadding
-    return ' '.repeat(leftPadding) + text + ' '.repeat(rightPadding)
+    return " ".repeat(leftPadding) + text + " ".repeat(rightPadding)
 }
 
 export function zeroPad(text: string, width: number): string {
-    const numericPart = text.replace(/[^0-9.-]/g, '')
-    const isNegative = numericPart.startsWith('-')
+    const numericPart = text.replace(/[^0-9.-]/g, "")
+    const isNegative = numericPart.startsWith("-")
     const absValue = isNegative ? numericPart.substring(1) : numericPart
 
     if (absValue.length >= width) {
-        return (isNegative ? '-' : '') + absValue.substring(0, width)
+        return (isNegative ? "-" : "") + absValue.substring(0, width)
     }
 
-    const padded = '0'.repeat(width - absValue.length) + absValue
-    return isNegative ? '-' + padded : padded
+    const padded = "0".repeat(width - absValue.length) + absValue
+    return isNegative ? "-" + padded : padded
 }
 
-export function addThousandsSeparator(text: string, separator: string = ','): string {
+export function addThousandsSeparator(text: string, separator: string = ","): string {
     const num = parseFloat(text)
     if (isNaN(num)) return text
 
-    const parts = num.toString().split('.')
+    const parts = num.toString().split(".")
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, separator)
-    return parts.join('.')
+    return parts.join(".")
 }
 
 const FULLWIDTH_MAP: Record<string, string> = {
-    ' ': '\u3000',
-    '!': '\uFF01', '"': '\uFF02', '#': '\uFF03', '$': '\uFF04',
-    '%': '\uFF05', '&': '\uFF06', "'": '\uFF07', '(': '\uFF08',
-    ')': '\uFF09', '*': '\uFF0A', '+': '\uFF0B', ',': '\uFF0C',
-    '-': '\uFF0D', '.': '\uFF0E', '/': '\uFF0F',
-    '0': '\uFF10', '1': '\uFF11', '2': '\uFF12', '3': '\uFF13',
-    '4': '\uFF14', '5': '\uFF15', '6': '\uFF16', '7': '\uFF17',
-    '8': '\uFF18', '9': '\uFF19',
-    ':': '\uFF1A', ';': '\uFF1B', '<': '\uFF1C', '=': '\uFF1D',
-    '>': '\uFF1E', '?': '\uFF1F', '@': '\uFF20',
-    'A': '\uFF21', 'B': '\uFF22', 'C': '\uFF23', 'D': '\uFF24',
-    'E': '\uFF25', 'F': '\uFF26', 'G': '\uFF27', 'H': '\uFF28',
-    'I': '\uFF29', 'J': '\uFF2A', 'K': '\uFF2B', 'L': '\uFF2C',
-    'M': '\uFF2D', 'N': '\uFF2E', 'O': '\uFF2F', 'P': '\uFF30',
-    'Q': '\uFF31', 'R': '\uFF32', 'S': '\uFF33', 'T': '\uFF34',
-    'U': '\uFF35', 'V': '\uFF36', 'W': '\uFF37', 'X': '\uFF38',
-    'Y': '\uFF39', 'Z': '\uFF3A',
-    '[': '\uFF3B', '\\': '\uFF3C', ']': '\uFF3D', '^': '\uFF3E',
-    '_': '\uFF3F', '`': '\uFF40',
-    'a': '\uFF41', 'b': '\uFF42', 'c': '\uFF43', 'd': '\uFF44',
-    'e': '\uFF45', 'f': '\uFF46', 'g': '\uFF47', 'h': '\uFF48',
-    'i': '\uFF49', 'j': '\uFF4A', 'k': '\uFF4B', 'l': '\uFF4C',
-    'm': '\uFF4D', 'n': '\uFF4E', 'o': '\uFF4F', 'p': '\uFF50',
-    'q': '\uFF51', 'r': '\uFF52', 's': '\uFF53', 't': '\uFF54',
-    'u': '\uFF55', 'v': '\uFF56', 'w': '\uFF57', 'x': '\uFF58',
-    'y': '\uFF59', 'z': '\uFF5A',
-    '{': '\uFF5B', '|': '\uFF5C', '}': '\uFF5D', '~': '\uFF5E'
+    " ": "\u3000",
+    "!": "\uFF01",
+    '"': "\uFF02",
+    "#": "\uFF03",
+    $: "\uFF04",
+    "%": "\uFF05",
+    "&": "\uFF06",
+    "'": "\uFF07",
+    "(": "\uFF08",
+    ")": "\uFF09",
+    "*": "\uFF0A",
+    "+": "\uFF0B",
+    ",": "\uFF0C",
+    "-": "\uFF0D",
+    ".": "\uFF0E",
+    "/": "\uFF0F",
+    "0": "\uFF10",
+    "1": "\uFF11",
+    "2": "\uFF12",
+    "3": "\uFF13",
+    "4": "\uFF14",
+    "5": "\uFF15",
+    "6": "\uFF16",
+    "7": "\uFF17",
+    "8": "\uFF18",
+    "9": "\uFF19",
+    ":": "\uFF1A",
+    ";": "\uFF1B",
+    "<": "\uFF1C",
+    "=": "\uFF1D",
+    ">": "\uFF1E",
+    "?": "\uFF1F",
+    "@": "\uFF20",
+    A: "\uFF21",
+    B: "\uFF22",
+    C: "\uFF23",
+    D: "\uFF24",
+    E: "\uFF25",
+    F: "\uFF26",
+    G: "\uFF27",
+    H: "\uFF28",
+    I: "\uFF29",
+    J: "\uFF2A",
+    K: "\uFF2B",
+    L: "\uFF2C",
+    M: "\uFF2D",
+    N: "\uFF2E",
+    O: "\uFF2F",
+    P: "\uFF30",
+    Q: "\uFF31",
+    R: "\uFF32",
+    S: "\uFF33",
+    T: "\uFF34",
+    U: "\uFF35",
+    V: "\uFF36",
+    W: "\uFF37",
+    X: "\uFF38",
+    Y: "\uFF39",
+    Z: "\uFF3A",
+    "[": "\uFF3B",
+    "\\": "\uFF3C",
+    "]": "\uFF3D",
+    "^": "\uFF3E",
+    _: "\uFF3F",
+    "`": "\uFF40",
+    a: "\uFF41",
+    b: "\uFF42",
+    c: "\uFF43",
+    d: "\uFF44",
+    e: "\uFF45",
+    f: "\uFF46",
+    g: "\uFF47",
+    h: "\uFF48",
+    i: "\uFF49",
+    j: "\uFF4A",
+    k: "\uFF4B",
+    l: "\uFF4C",
+    m: "\uFF4D",
+    n: "\uFF4E",
+    o: "\uFF4F",
+    p: "\uFF50",
+    q: "\uFF51",
+    r: "\uFF52",
+    s: "\uFF53",
+    t: "\uFF54",
+    u: "\uFF55",
+    v: "\uFF56",
+    w: "\uFF57",
+    x: "\uFF58",
+    y: "\uFF59",
+    z: "\uFF5A",
+    "{": "\uFF5B",
+    "|": "\uFF5C",
+    "}": "\uFF5D",
+    "~": "\uFF5E"
 }
 
 export function toFullWidth(text: string): string {
-    let result = ''
+    let result = ""
     for (const char of text) {
         result += FULLWIDTH_MAP[char] || char
     }
@@ -178,40 +246,40 @@ export function toHalfWidth(text: string): string {
         reverseMap[full] = half
     }
 
-    let result = ''
+    let result = ""
     for (const char of text) {
         result += reverseMap[char] || char
     }
     return result
 }
 
-export function truncate(text: string, maxLength: number, ellipsis: string = '...'): string {
+export function truncate(text: string, maxLength: number, ellipsis: string = "..."): string {
     if (text.length <= maxLength) return text
     if (maxLength <= ellipsis.length) return text.substring(0, maxLength)
     return text.substring(0, maxLength - ellipsis.length) + ellipsis
 }
 
 export function stripAnsi(text: string): string {
-    return text.replace(/\x1b\[[0-9;]*[a-zA-Z]/g, '')
+    return text.replace(/\x1b\[[0-9;]*[a-zA-Z]/g, "")
 }
 
 export function visibleLength(text: string): number {
     return stripAnsi(text).length
 }
 
-export function padToVisibleWidth(text: string, width: number, align: 'left' | 'right' | 'center' = 'left'): string {
+export function padToVisibleWidth(text: string, width: number, align: "left" | "right" | "center" = "left"): string {
     const visible = visibleLength(text)
     if (visible >= width) return text
 
     const padding = width - visible
     switch (align) {
-        case 'right':
-            return ' '.repeat(padding) + text
-        case 'center':
+        case "right":
+            return " ".repeat(padding) + text
+        case "center":
             const left = Math.floor(padding / 2)
             const right = padding - left
-            return ' '.repeat(left) + text + ' '.repeat(right)
+            return " ".repeat(left) + text + " ".repeat(right)
         default:
-            return text + ' '.repeat(padding)
+            return text + " ".repeat(padding)
     }
 }

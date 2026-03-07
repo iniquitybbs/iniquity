@@ -37,16 +37,7 @@ bbs.start(async () => {
     
     bbs.say("|07Demo completed.")
 })
-        this.sayMCI('|03Left-justified (20):  |15[@UN|L20@]|03')
-        this.sayMCI('|03Right-justified (20): |15[@UN|R20@]|03')
-        this.sayMCI('|03Centered (20):        |15[@UN|C20@]|03')
-        this.sayMCI('|03Zero-padded (5):      |15[@SEC|Z5@]|03')
 
-        await this.pause()
-
-        // Demo 3: Pipe color codes
-        this.say('\n|11=== Pipe Color Codes ===|07\n')
-        
         this.sayMCI('|00Black |01Blue |02Green |03Cyan')
         this.sayMCI('|04Red |05Magenta |06Brown |07Gray')
         this.sayMCI('|08DkGray |09LtBlue |10LtGreen |11LtCyan')

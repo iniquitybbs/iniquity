@@ -1,7 +1,7 @@
 /**
  * @iniquitybbs/core
  * @summary Core BBS runtime library for building bulletin board systems
- * 
+ *
  * This package provides the foundational classes and utilities for building
  * BBS applications with a clean, declarative API.
  */
@@ -14,11 +14,11 @@
  * BBS singleton object - the main interface for building BBS applications
  * Provides declarative menu registration, artwork rendering, user management,
  * event bus, and more.
- * 
+ *
  * @example
  * ```typescript
  * import { bbs, screen } from "@iniquitybbs/core"
- * 
+ *
  * screen.setResolution(132, 37)
  * bbs.menu("main", { ... })
  * bbs.start(async () => {
@@ -26,28 +26,28 @@
  * })
  * ```
  */
-export { 
-    bbs, 
-    BBSType, 
-    BBSMenuItem, 
-    BBSMenuOptions, 
-    BBSPopupOptions, 
-    BBSArtOptions, 
-    BBSChoiceOption, 
-    BBSBulletinOptions, 
-    SessionInfo, 
-    ServerInfo 
-} from './bbs'
+export {
+    bbs,
+    BBSType,
+    BBSMenuItem,
+    BBSMenuOptions,
+    BBSPopupOptions,
+    BBSArtOptions,
+    BBSChoiceOption,
+    BBSBulletinOptions,
+    SessionInfo,
+    ServerInfo
+} from "./bbs"
 
 /**
  * Screen utilities for terminal dimensions and centering
  */
-export { screen, Screen, TERM_WIDTH, TERM_HEIGHT } from './screen'
+export { screen, Screen, TERM_WIDTH, TERM_HEIGHT } from "./screen"
 
 /**
  * Screen buffer management for popup overlays (advanced use)
  */
-export { screenBuffer, ScreenBuffer } from './screen-buffer'
+export { screenBuffer, ScreenBuffer } from "./screen-buffer"
 
 // ============================================================================
 // Runtime Layer - Advanced/Internal Components
@@ -59,7 +59,7 @@ export { screenBuffer, ScreenBuffer } from './screen-buffer'
 export {
     // Classes
     Runtime,
-    
+
     // Types
     IQTermInfoObject,
     IBBSSayFunctions,
@@ -70,22 +70,16 @@ export {
     IQCursorOptions,
     IQCursorChainableMethods,
     IAlertOptions,
-    
+
     // Runtime management
     setGlobalRuntime,
     getGlobalRuntime
-} from './core'
+} from "./core"
 
 /**
  * ANSI artwork rendering with SAUCE metadata support
  */
-export {
-    Artwork,
-    IQArtworkOptions,
-    IQArtworkRenderOptions,
-    IQArtworkRenderFunctions,
-    SAUCEInfo
-} from './artwork'
+export { Artwork, IQArtworkOptions, IQArtworkRenderOptions, IQArtworkRenderFunctions, SAUCEInfo } from "./artwork"
 
 /**
  * String utility functions (opt-in, no global pollution)
@@ -105,7 +99,7 @@ export {
     lowerText,
     titleText,
     repeatText
-} from './string-utils'
+} from "./string-utils"
 
 // ============================================================================
 // Components - Menus, Frames, Reactive Data
@@ -128,26 +122,17 @@ export {
     IQMenuItem,
     IMenuCommand,
     IMenuCommands
-} from './menu'
+} from "./menu"
 
 /**
  * Frame system (windowed UI elements)
  */
-export {
-    IQFrame,
-    IQFrameOptions,
-    IQFrameColorOptions,
-    IQFrameBorderStyle
-} from './frame'
+export { IQFrame, IQFrameOptions, IQFrameColorOptions, IQFrameBorderStyle } from "./frame"
 
 /**
  * Reactive data (observable data models)
  */
-export {
-    IQReactor,
-    IQReactorOptions,
-    IQComputedProperty
-} from './reactor'
+export { IQReactor, IQReactorOptions, IQComputedProperty } from "./reactor"
 
 // ============================================================================
 // Data Management - Users, Groups, Configuration
@@ -168,7 +153,7 @@ export {
     setUserDatabase,
     getUserDatabase,
     initUserDatabase
-} from './user'
+} from "./user"
 
 /**
  * Group system
@@ -185,30 +170,17 @@ export {
     getGroupDatabase,
     initGroupDatabase,
     DEFAULT_PERMISSIONS
-} from './group'
+} from "./group"
 
 /**
  * Network system (FidoNet, inter-BBS)
  */
-export {
-    IQNetwork,
-    INetworkNode,
-    IFidoAddress,
-    INetworkMessage,
-    INetworkConnectionOptions,
-    getNetwork,
-    setNetwork
-} from './network'
+export { IQNetwork, INetworkNode, IFidoAddress, INetworkMessage, INetworkConnectionOptions, getNetwork, setNetwork } from "./network"
 
 /**
  * Text utilities
  */
-export {
-    IQText,
-    ITextWrapOptions,
-    ITextBoxOptions,
-    TextAlignment
-} from './text'
+export { IQText, ITextWrapOptions, ITextBoxOptions, TextAlignment } from "./text"
 
 /**
  * Configuration management
@@ -226,7 +198,7 @@ export {
     getConfig,
     setConfig,
     loadConfig
-} from './config'
+} from "./config"
 
 // ============================================================================
 // Graphics & Rendering
@@ -235,66 +207,32 @@ export {
 /**
  * ANSI utilities and color constants
  */
-export { ANSI, CGA } from './ansi'
+export { ANSI, CGA } from "./ansi"
 
 /**
  * Graphic system (in-memory ANSI buffer)
  */
-export {
-    Graphic,
-    GraphicCell,
-    GraphicOptions,
-    CGA as CGAColors,
-    makeAttr,
-    getForeground,
-    getBackground,
-    hasBlink
-} from './graphic'
+export { Graphic, GraphicCell, GraphicOptions, CGA as CGAColors, makeAttr, getForeground, getBackground, hasBlink } from "./graphic"
 
 /**
  * Avatar system (user avatars)
  */
-export {
-    Avatar,
-    AvatarData,
-    AvatarDefs
-} from './avatar'
+export { Avatar, AvatarData, AvatarDefs } from "./avatar"
 
 /**
  * CTerm utilities (terminal detection)
  */
-export {
-    CTerm,
-    CTermVersions,
-    CTermDeviceAttributes,
-    CTermCapabilities,
-    CTermFontState,
-    CTermFontDimensions,
-    CTermGraphicsDimensions
-} from './cterm'
+export { CTerm, CTermVersions, CTermDeviceAttributes, CTermCapabilities, CTermFontState, CTermFontDimensions, CTermGraphicsDimensions } from "./cterm"
 
 /**
  * Sixel graphics support
  */
-export {
-    Sixel,
-    SixelOptions,
-    SixelColor,
-    SixelImageInfo
-} from './sixel'
+export { Sixel, SixelOptions, SixelColor, SixelImageInfo } from "./sixel"
 
 /**
  * XBin image format support
  */
-export {
-    XBin,
-    XBinFlags,
-    XBinHeader,
-    XBinPalette,
-    XBinImage,
-    XBIN_ID,
-    XBIN_ID_LENGTH
-} from './xbin'
+export { XBin, XBinFlags, XBinHeader, XBinPalette, XBinImage, XBIN_ID, XBIN_ID_LENGTH } from "./xbin"
 
 // ============================================================================
 // I/O & Session Management
@@ -303,7 +241,7 @@ export {
 /**
  * Output interface abstraction
  */
-export { IQOutput, ControlCodeAction } from './output'
+export { IQOutput, ControlCodeAction } from "./output"
 
 // ============================================================================
 // MCI Subsystem - Dynamic Content Processing
@@ -411,7 +349,7 @@ export {
     applyTextStyle,
     listTextStyles,
     isValidTextStyle
-} from './mci'
+} from "./mci"
 
 // ============================================================================
 // Event System - Global Publish/Subscribe
@@ -420,13 +358,7 @@ export {
 /**
  * Event bus for inter-module communication
  */
-export {
-    events,
-    IQEventBus,
-    IQEvent,
-    IQEventHandler,
-    IQEventOptions
-} from './events'
+export { events, IQEventBus, IQEvent, IQEventHandler, IQEventOptions } from "./events"
 
 // ============================================================================
 // Decorators - Class-based Module Development (Internal Use)
@@ -435,29 +367,9 @@ export {
 /**
  * Module decorators (used internally for organizing runtime code)
  */
-export {
-    IQModule,
-    IQModuleRuntime,
-    IQModuleACLS,
-    IQModuleOptions,
-    IQModuleRuntimeOptions,
-    getModuleMetadata,
-    getRuntimeMetadata
-} from './decorators'
+export { IQModule, IQModuleRuntime, IQModuleACLS, IQModuleOptions, IQModuleRuntimeOptions, getModuleMetadata, getRuntimeMetadata } from "./decorators"
 
 /**
  * Runtime utility decorators
  */
-export {
-    Cached,
-    Measure,
-    Validate,
-    Lifecycle,
-    Transaction,
-    Synchronized,
-    Retry,
-    Timeout,
-    Debounce,
-    Throttle
-} from './decorators-runtime'
-
+export { Cached, Measure, Validate, Lifecycle, Transaction, Synchronized, Retry, Timeout, Debounce, Throttle } from "./decorators-runtime"

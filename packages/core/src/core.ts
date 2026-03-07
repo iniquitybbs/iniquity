@@ -4,31 +4,31 @@
  * @summary IQ base class and Runtime for BBS applications
  */
 
-import { IQOutput } from './output'
-import { ANSI } from './ansi'
-import { IQMenu, IQMenuOptions } from './menu'
-import { IQFrame, IQFrameOptions } from './frame'
-import { IQReactor, IQReactorOptions } from './reactor'
-import { IQUser, IUserOptions } from './user'
-import { IQUserList } from './user'
-import { IQGroup, IGroupOptions } from './group'
-import { IQGroupList } from './group'
-import { IQNetwork } from './network'
-import { IQText } from './text'
-import { IQConfig, getConfig } from './config'
-import { Artwork, IQArtworkOptions } from './artwork'
-import { MCIProcessor, MCIContext } from './mci'
+import { IQOutput } from "./output"
+import { ANSI } from "./ansi"
+import { IQMenu, IQMenuOptions } from "./menu"
+import { IQFrame, IQFrameOptions } from "./frame"
+import { IQReactor, IQReactorOptions } from "./reactor"
+import { IQUser, IUserOptions } from "./user"
+import { IQUserList } from "./user"
+import { IQGroup, IGroupOptions } from "./group"
+import { IQGroupList } from "./group"
+import { IQNetwork } from "./network"
+import { IQText } from "./text"
+import { IQConfig, getConfig } from "./config"
+import { Artwork, IQArtworkOptions } from "./artwork"
+import { MCIProcessor, MCIContext } from "./mci"
 /**
  * Alert options
  */
 export interface IAlertOptions {
     title?: string
-    type?: 'info' | 'warning' | 'error' | 'success'
+    type?: "info" | "warning" | "error" | "success"
     timeout?: number
     x?: number
     y?: number
     width?: number
-    border?: 'single' | 'double' | 'ascii' | 'none'
+    border?: "single" | "double" | "ascii" | "none"
 }
 
 /**
@@ -61,14 +61,14 @@ export interface IQPauseOptions {
     removePause?: boolean
     abortKeys?: string[]
     continueKey?: string
-    mci?: boolean | 'pipe' | 'at-codes' | 'all'
+    mci?: boolean | "pipe" | "at-codes" | "all"
 }
 
 /**
  * Options for say() function
  */
 export interface IQSayOptions {
-    mci?: boolean | 'pipe' | 'at-codes' | 'all'
+    mci?: boolean | "pipe" | "at-codes" | "all"
     newline?: boolean
     center?: boolean
 }
@@ -143,8 +143,8 @@ class CursorControl implements IQCursorChainableMethods {
  */
 export class Runtime {
     protected output: IQOutput
-    protected basepath: string = ''
-    protected programDirectory: string = ''
+    protected basepath: string = ""
+    protected programDirectory: string = ""
     public data: IQReactorOptions = IQReactor({})
 
     constructor(output: IQOutput) {
@@ -208,38 +208,38 @@ export class Runtime {
      */
     async processPendingActions(): Promise<boolean> {
         const actions = this.output.getPendingActions()
-        
+
         for (const action of actions) {
             switch (action.type) {
-                case 'ansi':
+                case "ansi":
                     this.output.write(action.sequence)
                     break
-                case 'pause':
-                case 'pause_message':
+                case "pause":
+                case "pause_message":
                     await this.pause()
                     if (this.output.isPauseAborted()) {
                         return false
                     }
                     break
-                case 'delay':
+                case "delay":
                     await this.wait(action.ms)
                     break
-                case 'abort':
+                case "abort":
                     return false
-                case 'pause_off':
+                case "pause_off":
                     this.output.setPauseEnabled(false)
                     break
-                case 'pause_on':
+                case "pause_on":
                     this.output.setPauseEnabled(true)
                     break
-                case 'pause_reset':
+                case "pause_reset":
                     this.output.resetLineCount()
                     break
-                case 'noop':
+                case "noop":
                     break
             }
         }
-        
+
         return true
     }
 
@@ -247,22 +247,22 @@ export class Runtime {
      * Display text to the user
      */
     say(text: string | any, options?: IQSayOptions): IBBSSayFunctions {
-        const output = typeof text === 'string' ? text : JSON.stringify(text)
+        const output = typeof text === "string" ? text : JSON.stringify(text)
         const opts = { mci: true, newline: true, center: false, ...options }
-        
+
         let finalText = output
-        
+
         if (opts.newline) {
-            finalText = output + '\r\n'
+            finalText = output + "\r\n"
         }
-        
+
         if (opts.mci) {
             this.output.writeMCI(finalText)
         } else {
             this.output.write(finalText)
         }
-        
-        const lines = output.split('\n')
+
+        const lines = output.split("\n")
         this.output.incrementLineCount(lines.length)
 
         return this.createChainableFunctions()
@@ -279,23 +279,23 @@ export class Runtime {
      * Print text with automatic pause at page length
      */
     async print(text: string | any, pageLength?: number): Promise<IBBSPrintFunctions> {
-        const outputText = typeof text === 'string' ? text : JSON.stringify(text)
-        const lines = outputText.split('\n')
-        const effectivePageLength = pageLength ?? (this.output.getHeight() - 1)
-        
+        const outputText = typeof text === "string" ? text : JSON.stringify(text)
+        const lines = outputText.split("\n")
+        const effectivePageLength = pageLength ?? this.output.getHeight() - 1
+
         for (const line of lines) {
             if (this.output.getLineCount() >= effectivePageLength) {
                 await this.pause()
-                
+
                 if (this.output.isPauseAborted()) {
                     break
                 }
             }
-            
-            this.output.write(line + '\r\n')
+
+            this.output.write(line + "\r\n")
             this.output.incrementLineCount(1)
         }
-        
+
         return {
             pause: async (optionsOrPrompt?: IQPauseOptions | string) => {
                 return await this.pause(optionsOrPrompt)
@@ -318,7 +318,7 @@ export class Runtime {
      * Ask the user a question and return their input
      */
     async ask(question: string): Promise<string> {
-        this.output.writeMCI(question + ' ')
+        this.output.writeMCI(question + " ")
         return await this.output.readLine()
     }
 
@@ -327,14 +327,14 @@ export class Runtime {
      */
     async pause(optionsOrPrompt?: IQPauseOptions | string): Promise<string> {
         let options: IQPauseOptions | undefined
-        if (typeof optionsOrPrompt === 'string') {
+        if (typeof optionsOrPrompt === "string") {
             options = { prompt: optionsOrPrompt }
         } else {
             options = optionsOrPrompt
         }
 
         if (!this.output.isPauseEnabled()) {
-            return ''
+            return ""
         }
 
         if (options?.colorReset) {
@@ -342,41 +342,41 @@ export class Runtime {
         }
         if (options?.newlines) {
             for (let i = 0; i < options.newlines; i++) {
-                this.output.write('\r\n')
+                this.output.write("\r\n")
             }
         }
-        
-        const prompt = options?.prompt ?? 'Press any key to continue...'
-        const promptLength = prompt.replace(/\x1b\[[0-9;]*m/g, '').replace(/\|[0-9]{2}/g, '').length
-        
+
+        const prompt = options?.prompt ?? "Press any key to continue..."
+        const promptLength = prompt.replace(/\x1b\[[0-9;]*m/g, "").replace(/\|[0-9]{2}/g, "").length
+
         const mciEnabled = options?.mci !== false
         if (mciEnabled) {
             this.output.writeMCI(prompt)
         } else {
             this.output.write(prompt)
         }
-        
+
         const key = await this.output.waitKey()
         const upperKey = key.toUpperCase()
-        
-        const abortKeys = options?.abortKeys ?? ['Q', 'S', 'N', '\x1b']
+
+        const abortKeys = options?.abortKeys ?? ["Q", "S", "N", "\x1b"]
         if (abortKeys.includes(upperKey) || abortKeys.includes(key)) {
             this.output.setPauseAborted(true)
         }
-        
-        const continueKey = options?.continueKey ?? 'C'
+
+        const continueKey = options?.continueKey ?? "C"
         if (upperKey === continueKey) {
             this.output.setPauseEnabled(false)
         }
-        
+
         if (options?.removePause) {
-            this.output.write('\r' + ' '.repeat(promptLength) + '\r')
+            this.output.write("\r" + " ".repeat(promptLength) + "\r")
         } else {
-            this.output.write('\r\n')
+            this.output.write("\r\n")
         }
-        
+
         this.output.resetLineCount()
-        
+
         return key
     }
 
@@ -384,7 +384,7 @@ export class Runtime {
      * Wait for specified milliseconds
      */
     async wait(ms: number = 100): Promise<void> {
-        return new Promise(resolve => setTimeout(resolve, ms))
+        return new Promise((resolve) => setTimeout(resolve, ms))
     }
 
     /**
@@ -419,7 +419,7 @@ export class Runtime {
      * Create artwork instance
      */
     artwork(options?: IQArtworkOptions): Artwork {
-        const basepath = options?.basepath || this.basepath || '/dist/assets'
+        const basepath = options?.basepath || this.basepath || "/dist/assets"
         return new Artwork(basepath, this.output, this.programDirectory)
     }
 
@@ -468,7 +468,7 @@ export class Runtime {
     /**
      * Create text manipulation instance
      */
-    text(content: string = ''): IQText {
+    text(content: string = ""): IQText {
         return new IQText(content, this.output.getWidth())
     }
 
@@ -483,21 +483,13 @@ export class Runtime {
      * Display an alert box
      */
     async alert(message: string, options?: IAlertOptions): Promise<void> {
-        const {
-            title,
-            type = 'info',
-            timeout,
-            x,
-            y,
-            width = 40,
-            border = 'double'
-        } = options || {}
+        const { title, type = "info", timeout, x, y, width = 40, border = "double" } = options || {}
 
         const colors: Record<string, { border: string; text: string }> = {
-            info: { border: 'cyan', text: 'white' },
-            warning: { border: 'yellow', text: 'bright yellow' },
-            error: { border: 'red', text: 'bright red' },
-            success: { border: 'green', text: 'bright green' }
+            info: { border: "cyan", text: "white" },
+            warning: { border: "yellow", text: "bright yellow" },
+            error: { border: "red", text: "bright red" },
+            success: { border: "green", text: "bright green" }
         }
         const color = colors[type] || colors.info
 
@@ -508,7 +500,7 @@ export class Runtime {
             border,
             borderColor: color.border,
             title: title || type.charAt(0).toUpperCase() + type.slice(1),
-            titleAlign: 'center'
+            titleAlign: "center"
         })
 
         const posX = x ?? Math.floor((this.output.getWidth() - width) / 2)
@@ -516,8 +508,8 @@ export class Runtime {
 
         this.output.write(ANSI.cursor.save())
         this.output.write(ANSI.gotoxy(posX, posY))
-        
-        const lines = text.toString().split('\r\n')
+
+        const lines = text.toString().split("\r\n")
         for (let i = 0; i < lines.length; i++) {
             this.output.write(ANSI.gotoxy(posX, posY + i))
             this.output.write(lines[i])
@@ -603,11 +595,10 @@ export function setGlobalRuntime(runtime: Runtime) {
 
 export function getGlobalRuntime(): Runtime {
     if (!globalRuntime) {
-        throw new Error('Runtime not initialized')
+        throw new Error("Runtime not initialized")
     }
     return globalRuntime
 }
 
 // Re-export Artwork for convenience
-export { Artwork } from './artwork'
-
+export { Artwork } from "./artwork"

@@ -37,7 +37,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
     const computedDirty: { [key: string]: boolean } = {}
     let batchMode = false
     let pendingNotifications: Set<string> = new Set()
-    
+
     /**
      * Internal: Notify all observers for a specific key
      */
@@ -46,9 +46,9 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             pendingNotifications.add(key)
             return
         }
-        
+
         if (observers[key]) {
-            observers[key].forEach(callback => {
+            observers[key].forEach((callback) => {
                 try {
                     callback(model[key])
                 } catch (err) {
@@ -56,7 +56,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
                 }
             })
         }
-        
+
         // Invalidate computed properties that depend on this key
         for (const computedKey in computedProperties) {
             const computed = computedProperties[computedKey]
@@ -64,7 +64,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
                 computedDirty[computedKey] = true
                 // Also notify observers of the computed property
                 if (observers[computedKey]) {
-                    observers[computedKey].forEach(callback => {
+                    observers[computedKey].forEach((callback) => {
                         try {
                             callback(model[computedKey])
                         } catch (err) {
@@ -75,7 +75,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             }
         }
     }
-    
+
     /**
      * Get computed property value (with caching)
      */
@@ -86,49 +86,49 @@ export function IQReactor(dataObj: any): IQReactorOptions {
         }
         return computedCache[key]
     }
-    
+
     // Create the reactive model using Proxy
     const model = new Proxy(dataObj, {
         set(target, property, value) {
             const key = property as string
-            
+
             // Don't allow setting computed properties directly
             if (key in computedProperties) {
                 console.warn(`Cannot set computed property "${key}" directly`)
                 return false
             }
-            
+
             const oldValue = target[key]
             target[key] = value
-            
+
             // Notify observers if value changed
             if (oldValue !== value) {
                 notifyObservers(key)
             }
-            
+
             return true
         },
-        
+
         get(target, property) {
             const key = property as string
-            
+
             // Check if it's a computed property
             if (key in computedProperties) {
                 return getComputedValue(key)
             }
-            
+
             return target[key]
         },
-        
+
         has(target, property) {
             const key = property as string
             return key in target || key in computedProperties
         },
-        
+
         ownKeys(target) {
             return [...Object.keys(target), ...Object.keys(computedProperties)]
         },
-        
+
         getOwnPropertyDescriptor(target, property) {
             const key = property as string
             if (key in computedProperties) {
@@ -141,7 +141,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             return Object.getOwnPropertyDescriptor(target, key)
         }
     })
-    
+
     /**
      * Register an observer for a specific property
      */
@@ -151,13 +151,13 @@ export function IQReactor(dataObj: any): IQReactorOptions {
         }
         observers[key].push(callback)
     }
-    
+
     /**
      * Unregister an observer
      */
     function unobserve(key: string, callback?: Function): void {
         if (!observers[key]) return
-        
+
         if (callback) {
             const index = observers[key].indexOf(callback)
             if (index !== -1) {
@@ -168,7 +168,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             delete observers[key]
         }
     }
-    
+
     /**
      * Notify observers of a property change
      */
@@ -182,7 +182,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             }
         }
     }
-    
+
     /**
      * Define a computed property
      */
@@ -192,7 +192,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             dependencies: dependencies || []
         }
         computedDirty[key] = true
-        
+
         // Auto-detect dependencies if not provided
         if (!dependencies || dependencies.length === 0) {
             // Track which properties are accessed during getter execution
@@ -206,7 +206,7 @@ export function IQReactor(dataObj: any): IQReactorOptions {
                     return target[propKey]
                 }
             })
-            
+
             // Execute getter with tracking proxy to detect dependencies
             try {
                 const originalModel = model
@@ -214,25 +214,25 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             } catch (e) {
                 // Ignore errors during dependency detection
             }
-            
+
             if (accessedProps.length > 0) {
                 computedProperties[key].dependencies = accessedProps
             }
         }
     }
-    
+
     /**
      * Batch multiple updates together
      */
     function batch(fn: () => void): void {
         batchMode = true
         pendingNotifications.clear()
-        
+
         try {
             fn()
         } finally {
             batchMode = false
-            
+
             // Process all pending notifications
             for (const key of pendingNotifications) {
                 notifyObservers(key)
@@ -240,14 +240,14 @@ export function IQReactor(dataObj: any): IQReactorOptions {
             pendingNotifications.clear()
         }
     }
-    
+
     /**
      * Get all observers (for debugging)
      */
     function getObservers(): { [key: string]: Function[] } {
         return { ...observers }
     }
-    
+
     return {
         model,
         observe,

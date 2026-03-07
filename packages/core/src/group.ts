@@ -4,10 +4,10 @@
  * @summary User groups, access control, and permissions
  */
 
-import * as fs from 'fs'
-import * as path from 'path'
-import { UserAccessLevel } from './user'
-import { Transaction, Validate, Measure } from './decorators-runtime'
+import * as fs from "fs"
+import * as path from "path"
+import { UserAccessLevel } from "./user"
+import { Transaction, Validate, Measure } from "./decorators-runtime"
 
 /**
  * Group permissions
@@ -209,7 +209,7 @@ export class JSONGroupDatabase implements IGroupDatabase {
     private groups: Map<string, IGroupData> = new Map()
     private nextId: number = 1
 
-    constructor(dataPath: string = './data/groups') {
+    constructor(dataPath: string = "./data/groups") {
         this.dataPath = dataPath
         this.ensureDataDir()
         this.loadAllGroups()
@@ -223,7 +223,7 @@ export class JSONGroupDatabase implements IGroupDatabase {
     }
 
     private getGroupFilePath(name: string): string {
-        const safeName = name.toLowerCase().replace(/[^a-z0-9]/g, '_')
+        const safeName = name.toLowerCase().replace(/[^a-z0-9]/g, "_")
         return path.join(this.dataPath, `${safeName}.json`)
     }
 
@@ -231,9 +231,9 @@ export class JSONGroupDatabase implements IGroupDatabase {
         try {
             const files = fs.readdirSync(this.dataPath)
             for (const file of files) {
-                if (file.endsWith('.json')) {
+                if (file.endsWith(".json")) {
                     const filePath = path.join(this.dataPath, file)
-                    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+                    const data = JSON.parse(fs.readFileSync(filePath, "utf-8"))
                     this.groups.set(data.name.toLowerCase(), data)
                     if (data.id >= this.nextId) {
                         this.nextId = data.id + 1
@@ -247,11 +247,11 @@ export class JSONGroupDatabase implements IGroupDatabase {
 
     private ensureDefaultGroups(): void {
         const defaultGroups = [
-            { name: 'Guests', accessLevel: UserAccessLevel.guest },
-            { name: 'Users', accessLevel: UserAccessLevel.normal },
-            { name: 'Power Users', accessLevel: UserAccessLevel.high },
-            { name: 'Sysops', accessLevel: UserAccessLevel.sysop },
-            { name: 'Admins', accessLevel: UserAccessLevel.admin }
+            { name: "Guests", accessLevel: UserAccessLevel.guest },
+            { name: "Users", accessLevel: UserAccessLevel.normal },
+            { name: "Power Users", accessLevel: UserAccessLevel.high },
+            { name: "Sysops", accessLevel: UserAccessLevel.sysop },
+            { name: "Admins", accessLevel: UserAccessLevel.admin }
         ]
 
         for (const group of defaultGroups) {
@@ -278,7 +278,7 @@ export class JSONGroupDatabase implements IGroupDatabase {
             this.groups.set(group.name.toLowerCase(), group)
             return true
         } catch (err) {
-            console.error('Failed to save group:', err)
+            console.error("Failed to save group:", err)
             return false
         }
     }
@@ -293,16 +293,16 @@ export class JSONGroupDatabase implements IGroupDatabase {
         const group: IGroupData = {
             id: this.getNextId(),
             name: groupData.name,
-            description: groupData.description || '',
+            description: groupData.description || "",
             accessLevel: accessLevel,
             permissions: { ...defaultPerms, ...groupData.permissions },
             members: groupData.members || [],
             createdAt: new Date().toISOString(),
             modifiedAt: new Date().toISOString(),
             flags: groupData.flags || 0,
-            color: groupData.color || 'white',
-            prefix: groupData.prefix || '',
-            suffix: groupData.suffix || ''
+            color: groupData.color || "white",
+            prefix: groupData.prefix || "",
+            suffix: groupData.suffix || ""
         }
 
         if (this.save(group)) {
@@ -359,7 +359,7 @@ export function getGroupDatabase(): IGroupDatabase {
  * @param bbsPath - The root directory of the BBS (where iniquity.ts lives)
  */
 export function initGroupDatabase(bbsPath: string): void {
-    const dataPath = path.join(bbsPath, 'data', 'groups')
+    const dataPath = path.join(bbsPath, "data", "groups")
     globalGroupDatabase = new JSONGroupDatabase(dataPath)
 }
 
@@ -372,8 +372,8 @@ export class IQGroup {
 
     constructor(options: IGroupOptions | string) {
         this.db = getGroupDatabase()
-        
-        if (typeof options === 'string') {
+
+        if (typeof options === "string") {
             this.data = this.db.load(options)
         } else {
             this.data = this.db.load(options.name)
@@ -393,7 +393,7 @@ export class IQGroup {
      * Get group name
      */
     get name(): string {
-        return this.data?.name || ''
+        return this.data?.name || ""
     }
 
     /**
@@ -407,7 +407,7 @@ export class IQGroup {
      * Get group description
      */
     get description(): string {
-        return this.data?.description || ''
+        return this.data?.description || ""
     }
 
     /**
@@ -484,7 +484,7 @@ export class IQGroup {
     hasPermission(permission: keyof IGroupPermissions): boolean {
         if (!this.data?.permissions) return false
         const value = this.data.permissions[permission]
-        return typeof value === 'boolean' ? value : false
+        return typeof value === "boolean" ? value : false
     }
 
     /**
@@ -567,7 +567,7 @@ export class IQGroupList {
      * Get groups by access level
      */
     byAccessLevel(level: UserAccessLevel): IGroupData[] {
-        return this.db.list().filter(g => g.accessLevel === level)
+        return this.db.list().filter((g) => g.accessLevel === level)
     }
 
     /**
@@ -575,6 +575,6 @@ export class IQGroupList {
      */
     forUser(handle: string): IGroupData[] {
         const lowerHandle = handle.toLowerCase()
-        return this.db.list().filter(g => g.members.includes(lowerHandle))
+        return this.db.list().filter((g) => g.members.includes(lowerHandle))
     }
 }

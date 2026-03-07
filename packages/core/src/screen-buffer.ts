@@ -4,8 +4,8 @@
  * @summary Screen buffer stack and background management for popup overlays
  */
 
-import { Graphic } from './graphic'
-import { IQOutput } from './output'
+import { Graphic } from "./graphic"
+import { IQOutput } from "./output"
 
 // Screen buffer stack for popup/overlay management
 let screenStack: Graphic[] = []
@@ -51,7 +51,7 @@ export const screenBuffer = {
      * @param processMCI - If true and graphic is a string, process MCI/pipe codes before parsing
      */
     setBackground(graphic: Graphic | string, processMCI: boolean = false): void {
-        if (typeof graphic === 'string') {
+        if (typeof graphic === "string") {
             currentBackground = new Graphic({ width: currentWidth, height: currentHeight })
             currentBackground.setANSI(graphic, processMCI)
         } else {
@@ -85,10 +85,10 @@ export const screenBuffer = {
         if (!currentBackground) {
             return null
         }
-        
+
         // Create a graphic to hold the saved region
         const saved = new Graphic({ width, height })
-        
+
         // Copy the region from the background
         for (let row = 0; row < height; row++) {
             for (let col = 0; col < width; col++) {
@@ -98,10 +98,10 @@ export const screenBuffer = {
                 }
             }
         }
-        
+
         // Push to stack
         screenStack.push(saved)
-        
+
         return { x, y, graphic: saved }
     },
 
@@ -113,13 +113,13 @@ export const screenBuffer = {
         if (screenStack.length === 0 || !currentOutput) {
             return false
         }
-        
+
         // For now, just redraw the entire background
         // A more sophisticated implementation would track regions
         if (currentBackground) {
             currentBackground.draw(currentOutput, 1, 1)
         }
-        
+
         screenStack.pop()
         return true
     },
@@ -135,7 +135,7 @@ export const screenBuffer = {
         if (!currentBackground || !currentOutput) {
             return
         }
-        
+
         if (x !== undefined && y !== undefined && width !== undefined && height !== undefined) {
             // Redraw specific region
             currentBackground.draw(currentOutput, x, y, width, height, x - 1, y - 1)

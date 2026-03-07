@@ -4,7 +4,7 @@
  * @summary Original Iniquity-style position markers (^X01-^X99)
  */
 
-const ESC = '\x1b'
+const ESC = "\x1b"
 
 export interface PositionMarker {
     id: number
@@ -121,14 +121,14 @@ export class PositionMarkerProcessor {
 
     processMarkerCode(text: string): { result: string; markersFound: number[] } {
         const markersFound: number[] = []
-        
+
         const result = text.replace(/\^X(\d{2})/g, (match, numStr) => {
             const id = parseInt(numStr, 10)
             if (id >= 1 && id <= 99) {
                 this.savePosition(id)
                 markersFound.push(id)
             }
-            return ''
+            return ""
         })
 
         return { result, markersFound }
@@ -138,15 +138,15 @@ export class PositionMarkerProcessor {
         const parts: string[] = []
 
         if (attributes !== undefined) {
-            if (attributes & 0x01) parts.push('1')
-            if (attributes & 0x02) parts.push('4')
-            if (attributes & 0x04) parts.push('5')
-            if (attributes & 0x08) parts.push('7')
+            if (attributes & 0x01) parts.push("1")
+            if (attributes & 0x02) parts.push("4")
+            if (attributes & 0x04) parts.push("5")
+            if (attributes & 0x08) parts.push("7")
         }
 
         if (foreground !== undefined) {
             if (foreground >= 8) {
-                parts.push('1')
+                parts.push("1")
                 parts.push((30 + (foreground - 8)).toString())
             } else {
                 parts.push((30 + foreground).toString())
@@ -157,8 +157,8 @@ export class PositionMarkerProcessor {
             parts.push((40 + (background % 8)).toString())
         }
 
-        if (parts.length === 0) return ''
-        return `${ESC}[${parts.join(';')}m`
+        if (parts.length === 0) return ""
+        return `${ESC}[${parts.join(";")}m`
     }
 
     exportMarkers(): Record<number, PositionMarker> {
@@ -193,11 +193,11 @@ export function createPositionMarker(id: number): string {
     if (id < 1 || id > 99) {
         throw new Error(`Position marker ID must be between 1 and 99, got ${id}`)
     }
-    return `^X${id.toString().padStart(2, '0')}`
+    return `^X${id.toString().padStart(2, "0")}`
 }
 
 export function stripPositionMarkers(text: string): string {
-    return text.replace(/\^X\d{2}/g, '')
+    return text.replace(/\^X\d{2}/g, "")
 }
 
 export function findAllPositionMarkers(text: string): number[] {

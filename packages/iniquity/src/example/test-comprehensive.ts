@@ -31,23 +31,6 @@ bbs.start(async () => {
     bbs.say("|07Test suite completed.")
     await bbs.pause()
 })
-        await this.wait(1000)
-        
-        // Test 5: Frame system
-        this.say("\n\nTesting frame system...".color("bright white"))
-        await this.wait(500)
-        
-        const frame = this.frame({
-            x: 10,
-            y: 15,
-            width: 50,
-            height: 8,
-            color: IQFrameColorOptions.brightBlue
-        })
-        
-        frame.open()
-        frame.say("This is a frame!".color("white"))
-        frame.say("Frames can contain multiple lines.".color("cyan"))
         frame.say(`Counter: ${this.data.model.counter}`.color("yellow"))
         frame.draw()
         await this.wait(2000)

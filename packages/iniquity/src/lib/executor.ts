@@ -4,11 +4,11 @@
  * @summary Execute BBS programs written in TypeScript
  */
 
-import { Runtime, setGlobalRuntime, getModuleMetadata, initUserDatabase, initGroupDatabase } from '@iniquitybbs/core'
-import { Session } from './session'
-import * as fs from 'fs'
-import * as path from 'path'
-import { pathToFileURL } from 'url'
+import { Runtime, setGlobalRuntime, getModuleMetadata, initUserDatabase, initGroupDatabase } from "@iniquitybbs/core"
+import { Session } from "./session"
+import * as fs from "fs"
+import * as path from "path"
+import { pathToFileURL } from "url"
 
 /**
  * Execute a BBS program
@@ -28,10 +28,10 @@ export async function executeProgram(programPath: string, runtime: Runtime, sess
     }
 
     const ext = path.extname(programPath)
-    
-    if (ext === '.ts') {
+
+    if (ext === ".ts") {
         await executeTypeScript(programPath, runtime, session)
-    } else if (ext === '.js') {
+    } else if (ext === ".js") {
         await executeJavaScript(programPath, runtime, session)
     } else {
         throw new Error(`Unsupported file type: ${ext}`)
@@ -43,14 +43,14 @@ export async function executeProgram(programPath: string, runtime: Runtime, sess
  */
 async function executeTypeScript(filePath: string, runtime: Runtime, session: Session): Promise<void> {
     try {
-        let code = fs.readFileSync(filePath, 'utf-8')
-        
+        let code = fs.readFileSync(filePath, "utf-8")
+
         const hasDecorator = /@IQModule/.test(code)
         const hasTypeAnnotations = /:\s*(string|number|boolean|Promise|void|any)\b/.test(code)
         const hasAsyncFunction = /async\s+(function\s+\w+|\([^)]*\)\s*=>|\w+\s*=>)/.test(code)
         const hasImports = /^import\s+.*from\s+['"]@iniquitybbs\/core['"]/m.test(code)
         const usesBbsApi = /\bbbs\.(menu|start|popup|welcome|goodbye)\s*\(/.test(code)
-        
+
         // Use tsx for any TypeScript that has imports, type annotations, or complex syntax
         if (hasDecorator || hasTypeAnnotations || hasAsyncFunction || hasImports || usesBbsApi) {
             await executeWithTsx(filePath, runtime, session)
@@ -58,7 +58,7 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
             await executeSimpleScript(code, runtime, session)
         }
     } catch (err) {
-        console.error('TypeScript execution error:', err)
+        console.error("TypeScript execution error:", err)
         throw err
     }
 }
@@ -68,20 +68,20 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
  */
 async function executeWithTsx(filePath: string, runtime: Runtime, session: Session): Promise<void> {
     const absolutePath = path.resolve(filePath)
-    
+
     // Use tsx to load TypeScript files directly
-    const tsxPath = require.resolve('tsx/cjs')
+    const tsxPath = require.resolve("tsx/cjs")
     require(tsxPath)
-    
+
     // Clear require cache to ensure fresh load
     delete require.cache[absolutePath]
-    
+
     // Import bbs to check for registered start callback
-    const { bbs } = await import('@iniquitybbs/core')
-    
+    const { bbs } = await import("@iniquitybbs/core")
+
     // Now we can require the TypeScript file directly
     const module = require(absolutePath)
-    
+
     // Check if bbs.start() was called (primary API pattern)
     if (bbs.hasStartCallback()) {
         await bbs.executeStart()
@@ -89,15 +89,15 @@ async function executeWithTsx(filePath: string, runtime: Runtime, session: Sessi
         runtime.disconnect()
         return
     }
-    
+
     // If no bbs.start(), check for default export or main function
     if (module.default) {
-        if (typeof module.default === 'function') {
+        if (typeof module.default === "function") {
             await module.default(runtime)
-        } else if (typeof module.default.start === 'function') {
+        } else if (typeof module.default.start === "function") {
             await module.default.start()
         }
-    } else if (typeof module.main === 'function') {
+    } else if (typeof module.main === "function") {
         // Support for main() function pattern
         await module.main()
     }
@@ -107,29 +107,18 @@ async function executeWithTsx(filePath: string, runtime: Runtime, session: Sessi
  * Execute a simple script (non-class-based)
  */
 async function executeSimpleScript(code: string, runtime: Runtime, session: Session): Promise<void> {
-    code = code.replace(/^import\s+.*?from\s+['"].*?['"];?\s*$/gm, '')
-    code = code.replace(/^@\w+\(.*?\)\s*$/gm, '')
+    code = code.replace(/^import\s+.*?from\s+['"].*?['"];?\s*$/gm, "")
+    code = code.replace(/^@\w+\(.*?\)\s*$/gm, "")
     code = code.trim()
-    
-    const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
-    
+
+    const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor
+
     // Import from @iniquitybbs/core
-    const coreModule = await import('@iniquitybbs/core')
-    
-    const fn = new AsyncFunction(
-        'runtime',
-        'bbs',
-        'screen',
-        'session',
-        code
-    )
-    
-    await fn(
-        runtime,
-        coreModule.bbs,
-        coreModule.screen,
-        session
-    )
+    const coreModule = await import("@iniquitybbs/core")
+
+    const fn = new AsyncFunction("runtime", "bbs", "screen", "session", code)
+
+    await fn(runtime, coreModule.bbs, coreModule.screen, session)
 }
 
 /**
@@ -138,12 +127,12 @@ async function executeSimpleScript(code: string, runtime: Runtime, session: Sess
 async function executeJavaScript(filePath: string, runtime: Runtime, session: Session): Promise<void> {
     try {
         const module = await import(pathToFileURL(filePath).href)
-        
-        if (typeof module.default === 'function') {
+
+        if (typeof module.default === "function") {
             await module.default(runtime)
         }
     } catch (err) {
-        console.error('JavaScript execution error:', err)
+        console.error("JavaScript execution error:", err)
         throw err
     }
 }
@@ -153,20 +142,11 @@ async function executeJavaScript(filePath: string, runtime: Runtime, session: Se
  */
 export async function executeCode(code: string, runtime: Runtime): Promise<void> {
     setGlobalRuntime(runtime)
-    
-    const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
-    const coreModule = await import('@iniquitybbs/core')
-    
-    const fn = new AsyncFunction(
-        'runtime',
-        'bbs',
-        'screen',
-        code
-    )
-    
-    await fn(
-        runtime,
-        coreModule.bbs,
-        coreModule.screen
-    )
+
+    const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor
+    const coreModule = await import("@iniquitybbs/core")
+
+    const fn = new AsyncFunction("runtime", "bbs", "screen", code)
+
+    await fn(runtime, coreModule.bbs, coreModule.screen)
 }

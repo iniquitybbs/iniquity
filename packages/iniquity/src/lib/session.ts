@@ -4,8 +4,8 @@
  * @summary Per-connection session state and management implementing IQOutput
  */
 
-import { Socket } from 'net'
-import { ANSI, MCIProcessor, MCIProcessorOptions, MCIContext, IQOutput, ControlCodeAction } from '@iniquitybbs/core'
+import { Socket } from "net"
+import { ANSI, MCIProcessor, MCIProcessorOptions, MCIContext, IQOutput, ControlCodeAction } from "@iniquitybbs/core"
 
 export interface SessionInfo {
     terminalType: string
@@ -29,36 +29,36 @@ export interface WriteOptions {
 /**
  * Input mode determines how incoming characters are handled
  */
-export type InputMode = 'line' | 'key' | 'raw'
+export type InputMode = "line" | "key" | "raw"
 
 /**
  * Session class implements IQOutput interface for use with core Runtime
  */
 export class Session implements IQOutput {
     private socket: Socket
-    private inputBuffer: string = ''
+    private inputBuffer: string = ""
     private inputCallback: ((input: string) => void) | null = null
-    private inputMode: InputMode = 'line'
+    private inputMode: InputMode = "line"
     private mciProcessor: MCIProcessor
     private pendingActions: ControlCodeAction[] = []
     private lineCount: number = 0
     private pauseEnabled: boolean = true
     private pauseAborted: boolean = false
-    private pendingInputQueue: string[] = []  // Queue for non-blocking reads
-    
+    private pendingInputQueue: string[] = [] // Queue for non-blocking reads
+
     /** Node number assigned by the server */
     public nodeNumber: number = 0
-    
+
     /** Connection timestamp */
     public connectedAt: Date = new Date()
-    
+
     public info: SessionInfo = {
-        terminalType: 'ansi-bbs',
+        terminalType: "ansi-bbs",
         width: 80,
         height: 24,
         client: {
-            name: 'unknown',
-            version: 'unknown',
+            name: "unknown",
+            version: "unknown",
             isSyncTerm: false,
             isVtx: false,
             supportsIceColors: false,
@@ -77,7 +77,7 @@ export class Session implements IQOutput {
     }
 
     private setupSocket() {
-        this.socket.on('data', (data) => {
+        this.socket.on("data", (data) => {
             this.handleData(data)
         })
 
@@ -89,7 +89,7 @@ export class Session implements IQOutput {
         this.socket.write(ANSI.telnetCommand(ANSI.telnet.WILL, ANSI.telnet.SUPPRESS_GO_AHEAD))
         this.socket.write(ANSI.telnetCommand(ANSI.telnet.DO, ANSI.telnet.TERMINAL_TYPE))
         this.socket.write(ANSI.telnetCommand(ANSI.telnet.DO, ANSI.telnet.NAWS))
-        this.socket.write(ANSI.enableIceColors(), 'binary')
+        this.socket.write(ANSI.enableIceColors(), "binary")
     }
 
     private handleData(data: Buffer) {
@@ -98,7 +98,7 @@ export class Session implements IQOutput {
             if (data[i] === ANSI.telnet.IAC) {
                 if (i + 1 < data.length) {
                     const command = data[i + 1]
-                    
+
                     if (command === ANSI.telnet.SB && i + 2 < data.length) {
                         const option = data[i + 2]
                         let j = i + 3
@@ -119,29 +119,29 @@ export class Session implements IQOutput {
                     continue
                 }
             }
-            
+
             const char = String.fromCharCode(data[i])
-            
+
             if (this.inputCallback) {
-                if (this.inputMode === 'key' || this.inputMode === 'raw') {
+                if (this.inputMode === "key" || this.inputMode === "raw") {
                     const callback = this.inputCallback
                     this.inputCallback = null
-                    this.inputMode = 'line'
+                    this.inputMode = "line"
                     callback(char)
                 } else {
-                    if (char === '\r' || char === '\n') {
+                    if (char === "\r" || char === "\n") {
                         const input = this.inputBuffer
-                        this.inputBuffer = ''
+                        this.inputBuffer = ""
                         const callback = this.inputCallback
                         this.inputCallback = null
-                        this.write('\r\n')
+                        this.write("\r\n")
                         callback(input)
-                    } else if (char === '\x7f' || char === '\b') {
+                    } else if (char === "\x7f" || char === "\b") {
                         if (this.inputBuffer.length > 0) {
                             this.inputBuffer = this.inputBuffer.slice(0, -1)
-                            this.write('\b \b')
+                            this.write("\b \b")
                         }
-                    } else if (char >= ' ' && char <= '~') {
+                    } else if (char >= " " && char <= "~") {
                         this.inputBuffer += char
                         this.write(char)
                     }
@@ -150,7 +150,7 @@ export class Session implements IQOutput {
                 // No callback waiting - queue for non-blocking reads
                 this.pendingInputQueue.push(char)
             }
-            
+
             i++
         }
     }
@@ -165,7 +165,7 @@ export class Session implements IQOutput {
             })
         } else if (option === ANSI.telnet.TERMINAL_TYPE && data.length > 0) {
             if (data[0] === 0) {
-                this.info.terminalType = data.slice(1).toString('ascii').toLowerCase()
+                this.info.terminalType = data.slice(1).toString("ascii").toLowerCase()
                 this.detectTerminalClient()
             }
         }
@@ -174,33 +174,30 @@ export class Session implements IQOutput {
     private detectTerminalClient() {
         const termType = this.info.terminalType.toLowerCase()
 
-        if (termType.includes('syncterm')) {
-            this.info.client.name = 'syncterm'
+        if (termType.includes("syncterm")) {
+            this.info.client.name = "syncterm"
             this.info.client.isSyncTerm = true
             this.info.client.supportsIceColors = true
             this.info.client.supportsFonts = true
-            
+
             const versionMatch = termType.match(/syncterm[- ]?(\d+\.\d+[a-z]?)/)
             if (versionMatch) {
                 this.info.client.version = versionMatch[1]
             }
-        }
-        else if (termType.includes('vtx') || termType.includes('ftelnet')) {
-            this.info.client.name = 'vtx'
+        } else if (termType.includes("vtx") || termType.includes("ftelnet")) {
+            this.info.client.name = "vtx"
             this.info.client.isVtx = true
             this.info.client.supportsIceColors = true
-        }
-        else if (termType.includes('netrunner')) {
-            this.info.client.name = 'netrunner'
+        } else if (termType.includes("netrunner")) {
+            this.info.client.name = "netrunner"
+            this.info.client.supportsIceColors = true
+        } else if (termType.includes("ansi-bbs") || termType.includes("pc-ansi") || termType.includes("ansi")) {
+            this.info.client.name = "ansi-bbs"
             this.info.client.supportsIceColors = true
         }
-        else if (termType.includes('ansi-bbs') || termType.includes('pc-ansi') || termType.includes('ansi')) {
-            this.info.client.name = 'ansi-bbs'
-            this.info.client.supportsIceColors = true
-        }
-        
+
         if (this.info.client.isSyncTerm || this.info.client.isVtx) {
-            this.socket.write(ANSI.queryDeviceAttributes(), 'binary')
+            this.socket.write(ANSI.queryDeviceAttributes(), "binary")
         }
     }
 
@@ -210,7 +207,7 @@ export class Session implements IQOutput {
      * Write data to socket
      */
     write(data: string): void {
-        this.socket.write(data, 'binary')
+        this.socket.write(data, "binary")
     }
 
     /**
@@ -219,11 +216,11 @@ export class Session implements IQOutput {
     writeMCI(data: string): void {
         const result = this.mciProcessor.processWithDetails(data)
         this.pendingActions.push(...result.actions)
-        
+
         const newlines = (result.text.match(/\r?\n/g) || []).length
         this.mciProcessor.incrementLineCount(newlines)
-        
-        this.socket.write(result.text, 'binary')
+
+        this.socket.write(result.text, "binary")
     }
 
     /**
@@ -268,7 +265,7 @@ export class Session implements IQOutput {
      */
     async readLine(): Promise<string> {
         return new Promise((resolve) => {
-            this.inputMode = 'line'
+            this.inputMode = "line"
             this.inputCallback = resolve
         })
     }
@@ -278,7 +275,7 @@ export class Session implements IQOutput {
      */
     async waitKey(): Promise<string> {
         return new Promise((resolve) => {
-            this.inputMode = 'key'
+            this.inputMode = "key"
             this.inputCallback = (char: string) => resolve(char)
         })
     }
@@ -288,7 +285,7 @@ export class Session implements IQOutput {
      */
     async readKey(): Promise<string> {
         return new Promise((resolve) => {
-            this.inputMode = 'key'
+            this.inputMode = "key"
             this.inputCallback = (char: string) => resolve(char)
         })
     }

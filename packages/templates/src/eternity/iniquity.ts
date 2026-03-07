@@ -14,70 +14,21 @@ screen.setResolution(132, 37)
 
 bbs.start(async () => {
     if (screen.width < 132 || screen.height < 37) {
-            this.say("Your terminal is too small to call this bbs. Please set your terminal scale to 132x37. It's way cooler.").wait(3000)
-            this.disconnect()
-        }
-
-        this.data.observe("alert", () => {
-            this.artwork().render({ filename: "as-ini.cp437.ans", mode: "reactive", clearScreenBefore: true })
-
-            this.data.model.alert()
-
-            this.gotoxy(1, 1)
-            this.wait(2000)
-        })
-
-        this.data.observe("message", () => {
-            const message = this.data.model.message as string
-            this.artwork().render({ filename: "newuser.cp437.ans", mode: "reactive", clearScreenBefore: true })
-
-            message.color("background bright green").center()
-
-            this.gotoxy(1, 1)
-            this.wait(2000)
-        })
-
-        this.artwork().render({ filename: "iqascii.ans", clearScreenBefore: false }).colorReset()
-        this.wait(2000)
-
-        this.data.model.alert = () => {
-            "Loading iniquity...".center()
-        }
-
-        "".color("reset")
-
-        this.artwork().render({ filename: "cx-iqwfc.ans", mode: "character", speed: 40, clearScreenBefore: false }).colorReset()
-
-        this.wait(4000)
-
-        this.welcome()
+        bbs.say("Your terminal is too small. Please set to 132x37.")
+        await bbs.wait(3000)
+        bbs.hangup()
+        return
     }
 
-    /**
-     * Welcome screen
-     */
-    public welcome() {
-        "You just connected to an iniquity bbs. The artwork you are seeing above is called. It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool."
-            .newlines(2)
-            .color("background red")
+    await bbs.art("iqascii.ans", { clearScreen: false })
+    await bbs.wait(2000)
 
-        const menu = this.menu({
-            name: "Iniquity answer menu.",
-            description: "Really I just get to rattle off more non-sense.",
-            commands: {
-                L: (description = "Sit cillum consequat qui quis dolore Lorem.") => {
-                    this.say("Hey, don't touch that!").wait(3000)
-                },
-                O: () => {
-                    this.say("Nothing to see here, move along...").wait(3000)
-                },
-                H: () => {
-                    if (this.ask("Are you sure you want to hangup?")) this.disconnect()
-                },
-                default: () => {
-                    this.say("That command key doesn't do anything, try again.".gotoxy(1, 1)).wait(3000)
-                }
-            }
+    await bbs.art("cx-iqwfc.ans", { display: "character", speed: 40, clearScreen: false })
+    await bbs.wait(4000)
+
+    bbs.say("|07Welcome to Eternity BBS!")
+    await bbs.pause()
+})
         })
 
         menu.render(
