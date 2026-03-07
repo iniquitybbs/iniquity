@@ -37,21 +37,11 @@ import yargs from "yargs"
 import * as path from "path"
 import fs from "fs"
 import { exec } from "child_process"
+import { TelnetServer } from "../lib/telnet"
 
-import * as compose from "docker-compose"
-import * as dotenv from "dotenv"
 import copyfiles from "copyfiles"
+import * as dotenv from "dotenv"
 dotenv.config()
-
-process.env["COMPOSE_PROJECT_NAME"] = "iniquity"
-process.env["COMPOSE_HTTP_TIMEOUT"] = process.env["COMPOSE_HTTP_TIMEOUT"] || "120"
-process.env["COMPOSE_INTERACTIVE_NO_CLI"] = "true"
-
-const composeOptions: compose.IDockerComposeOptions = {
-    composeOptions: ["-f", path.join(".iniquity/docker-compose.yml") || process.env["COMPOSE_FILE"] || ""],
-    log: true,
-    env: process.env
-}
 
 /**
  * Iniquity Server
@@ -61,9 +51,20 @@ const composeOptions: compose.IDockerComposeOptions = {
 export class Server implements yargs.CommandModule {
     public command = "server [action]"
     public describe = "Control your iniquity bbs server."
+    private telnetServer: TelnetServer | null = null
 
     public builder = (yargs: yargs.Argv) => {
         return yargs
+            .options("port", {
+                type: "number",
+                default: 23,
+                describe: "Port to listen on for Telnet connections."
+            })
+            .options("program", {
+                type: "string",
+                default: "./iniquity.ts",
+                describe: "Path to the BBS program to execute."
+            })
             .options("install", {
                 type: "boolean",
                 default: false,
@@ -80,15 +81,16 @@ export class Server implements yargs.CommandModule {
             })
             .positional("stop", {
                 type: "string",
-                description: "Brings the iniquity bbs environment down."
+                description: "Stops the iniquity bbs server."
             })
             .positional("restart", {
                 type: "string",
-                description: "Restart your iniquity bbs environment."
+                description: "Restart your iniquity bbs server."
             })
             .pkgConf("iniquity", path.join(__dirname))
     }
-    public handler(argv: yargs.Arguments) {
+    
+    public async handler(argv: yargs.Arguments) {
         if (argv.install || argv.watch) {
             if (fs.existsSync(".iniquity")) {
                 process.chdir(".iniquity")
@@ -125,37 +127,65 @@ export class Server implements yargs.CommandModule {
 
         switch (argv.action) {
             case "start":
-                compose.upAll(composeOptions).then(
-                    (response: compose.IDockerComposeResult) => {
-                        if (response.out) console.log(response.out)
-                    },
-                    (err) => {
-                        console.error("something went wrong:", err)
+                const port = argv.port as number || 23
+                const programPath = argv.program as string || "./iniquity.ts"
+                
+                // Find the actual program path
+                let resolvedPath = programPath
+                if (!path.isAbsolute(programPath)) {
+                    // Check current directory
+                    if (fs.existsSync(programPath)) {
+                        resolvedPath = path.resolve(programPath)
                     }
-                )
+                    // Check src/example directory
+                    else if (fs.existsSync(path.join("src", "example", "iniquity.ts"))) {
+                        resolvedPath = path.resolve("src", "example", "iniquity.ts")
+                    }
+                    // Check packages/iniquity/src/example
+                    else if (fs.existsSync(path.join("packages", "iniquity", "src", "example", "iniquity.ts"))) {
+                        resolvedPath = path.resolve("packages", "iniquity", "src", "example", "iniquity.ts")
+                    }
+                }
+
+                this.telnetServer = new TelnetServer({
+                    port: port,
+                    programPath: resolvedPath
+                })
+
+                try {
+                    await this.telnetServer.start()
+                    
+                    // Keep process alive
+                    process.on('SIGINT', async () => {
+                        console.log('\nShutting down...')
+                        if (this.telnetServer) {
+                            await this.telnetServer.stop()
+                        }
+                        process.exit(0)
+                    })
+                } catch (err) {
+                    console.error('Failed to start server:', err)
+                    process.exit(1)
+                }
 
                 break
+                
             case "stop":
-                compose.down(composeOptions).then(
-                    (response: compose.IDockerComposeResult) => {
-                        if (response.out) console.log(response.out)
-                    },
-                    (err) => {
-                        console.error("something went wrong:", err)
-                    }
-                )
-
+                if (this.telnetServer) {
+                    await this.telnetServer.stop()
+                    this.telnetServer = null
+                } else {
+                    console.log('Server is not running')
+                }
                 break
+                
             case "restart":
-                compose.restartOne("server", composeOptions).then(
-                    (response: compose.IDockerComposeResult) => {
-                        if (response.out) console.log(response.out)
-                    },
-                    (err) => {
-                        console.error("something went wrong:", err)
-                    }
-                )
-
+                if (this.telnetServer) {
+                    await this.telnetServer.stop()
+                    await this.telnetServer.start()
+                } else {
+                    console.log('Server is not running')
+                }
                 break
         }
     }

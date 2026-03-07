@@ -1,10 +1,18 @@
-import { say, ask } from "./.iniquity/node_modules/@iniquitybbs/core/src"
-import config from "./iniquity.json"
+import { say, ask, pause } from "../runtime/core"
 
-say(`Welcome to ${config.name}.`).pause()
-say("MyBBS is the best board ever made.").pause()
+// Async wrapper to use await
+(async () => {
+    say(`Welcome to Iniquity BBS!`)
+    await pause()
+    
+    say("MyBBS is the best board ever made.")
+    await pause()
 
-say("Hey there visitor.".color("red")).pause()
+    say("Hey there visitor.".color("red"))
+    await pause()
 
-const name = ask("Hey can I know your name")
-say(`Hello ${name}!`).pause()
+    const name = await ask("Hey can I know your name?")
+    say(`Hello ${name}!`)
+    await pause()
+})()
+

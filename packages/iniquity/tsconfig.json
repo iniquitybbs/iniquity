@@ -11,6 +11,7 @@
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "types": ["node"],
         "baseUrl": ".",
         "lib": ["es2020", "dom"],
@@ -24,6 +25,5 @@
         "forceConsistentCasingInFileNames": true
     },
     "include": ["src/**/*.ts", "scripts/build.ts"],
-    "exclude": [".vscode", "dist", "node_modules", "src/example"],
-    "references": [{ "path": "../core" }]
+    "exclude": [".vscode", "dist", "node_modules", "src/example"]
 }

@@ -1,0 +1,145 @@
+/**
+ * Comprehensive Runtime Test
+ * Tests all major features of the Iniquity runtime
+ */
+
+import { IQ, IQModule, IQModuleRuntime, IQReactor, IQModuleACLS, IQFrameColorOptions } from "../runtime/core"
+
+@IQModule({
+    basepath: "/dist/assets",
+    access: IQModuleACLS.low,
+    data: IQReactor({
+        counter: 0,
+        message: "Hello from IQReactor!",
+        timestamp: new Date().toISOString()
+    })
+})
+class TestBBS extends IQ {
+    @IQModuleRuntime({ debug: true })
+    async start() {
+        // Test 1: Basic output
+        this.say("╔══════════════════════════════════════════════════════════╗".color("bright cyan"))
+        this.say("║  INIQUITY RUNTIME TEST SUITE                          ║".color("bright cyan"))
+        this.say("╚══════════════════════════════════════════════════════════╝".color("bright cyan"))
+        this.say("")
+        
+        // Test 2: Terminal info
+        this.say(`Terminal Size: ${this.terminfo.x}x${this.terminfo.y}`.color("yellow"))
+        await this.wait(1000)
+        
+        // Test 3: String extensions
+        this.say("Testing string extensions:".color("bright white"))
+        this.say("  - Colors".color("red"))
+        this.say("  - Newlines".newlines(1).color("green"))
+        await this.wait(1000)
+        
+        // Test 4: Cursor control
+        this.say("Testing cursor control...".color("bright white"))
+        this.cursor().down(2).right(10)
+        this.say("→ Moved cursor".color("magenta"))
+        this.cursor().up(1)
+        await this.wait(1000)
+        
+        // Test 5: Frame system
+        this.say("\n\nTesting frame system...".color("bright white"))
+        await this.wait(500)
+        
+        const frame = this.frame({
+            x: 10,
+            y: 15,
+            width: 50,
+            height: 8,
+            color: IQFrameColorOptions.brightBlue
+        })
+        
+        frame.open()
+        frame.say("This is a frame!".color("white"))
+        frame.say("Frames can contain multiple lines.".color("cyan"))
+        frame.say(`Counter: ${this.data.model.counter}`.color("yellow"))
+        frame.draw()
+        await this.wait(2000)
+        frame.close()
+        
+        // Test 6: Reactive data
+        this.say("\n\nTesting reactive data...".color("bright white"))
+        
+        this.data.observe("counter", (value) => {
+            this.say(`Counter changed to: ${value}`.color("green"))
+        })
+        
+        this.data.model.counter = 1
+        await this.wait(500)
+        this.data.model.counter = 2
+        await this.wait(500)
+        this.data.model.counter = 3
+        await this.wait(1000)
+        
+        // Test 7: Menu system
+        this.say("\n\nTesting menu system...".color("bright white"))
+        await this.wait(1000)
+        
+        const menu = this.menu({
+            name: "Test Menu",
+            description: "A test menu to demonstrate the menu system",
+            commands: {
+                T: () => {
+                    this.say("You pressed T!".color("bright yellow"))
+                    return { description: "Test command" }
+                },
+                H: () => {
+                    this.say("Exiting menu...".color("bright red"))
+                    return { description: "Exit menu" }
+                },
+                default: () => {
+                    this.say("Invalid command. Try T or H.".color("yellow"))
+                }
+            }
+        })
+        
+        this.say("Press T to test, or H to continue...".color("cyan"))
+        
+        let menuDone = false
+        await menu.render((res, cmdkey) => {
+            if (!menuDone) {
+                menu.prompt({ x: 1, y: this.terminfo.y - 1, text: "Command: ".color("bright cyan") }).command((cmd: string) => {
+                    const result = menu.executeCommand(cmd)
+                    if (cmd === 'H') {
+                        menuDone = true
+                    }
+                })
+            }
+        }, { maxInterval: 30000 })
+        
+        // Test 8: Ask for input
+        this.say("\n\nTesting user input...".color("bright white"))
+        const name = await this.ask("What's your name?".color("cyan"))
+        this.say(`Nice to meet you, ${name}!`.color("bright green"))
+        await this.wait(1000)
+        
+        // Final summary
+        this.say("\n\n╔══════════════════════════════════════════════════════════╗".color("bright green"))
+        this.say("║  ALL TESTS COMPLETED SUCCESSFULLY!                    ║".color("bright green"))
+        this.say("╚══════════════════════════════════════════════════════════╝".color("bright green"))
+        this.say("")
+        this.say("Features tested:".color("white"))
+        this.say("  ✓ IQ base class".color("green"))
+        this.say("  ✓ Terminal info (terminfo)".color("green"))
+        this.say("  ✓ String extensions (color, newlines)".color("green"))
+        this.say("  ✓ Cursor control (chainable movements)".color("green"))
+        this.say("  ✓ Frame system (windows with borders)".color("green"))
+        this.say("  ✓ Reactive data (IQReactor with observers)".color("green"))
+        this.say("  ✓ Menu system (commands and prompts)".color("green"))
+        this.say("  ✓ User input (ask)".color("green"))
+        this.say("  ✓ Module decorators (@IQModule, @IQModuleRuntime)".color("green"))
+        this.say("")
+        
+        await this.pause()
+        
+        this.say("Disconnecting...".color("bright yellow"))
+        await this.wait(1000)
+        this.disconnect()
+    }
+}
+
+// Export the module
+export default TestBBS
