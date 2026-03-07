@@ -1,6 +1,6 @@
 {
     "name": "@iniquitybbs/iniquity",
-    "version": "3.0.73",
+    "version": "3.0.74",
     "description": "The main sysop/developer interface into iniquity.",
     "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
     "homepage": "http://iniquitybbs.com",
@@ -41,7 +41,7 @@
         "iq": "./dist/src/index.js"
     },
     "dependencies": {
-        "@iniquitybbs/core": "^3.0.73",
+        "@iniquitybbs/core": "^3.0.74",
         "app-root-path": "^3.0.0",
         "copyfiles": "^2.4.1",
         "docker-cli-js": "^2.9.0",
