@@ -77,14 +77,15 @@ async function executeWithTsx(filePath: string, runtime: Runtime, session: Sessi
     // Clear require cache to ensure fresh load
     delete require.cache[absolutePath]
 
-    // Require the user's program first (this runs their code and registers bbs.start())
-    const module = require(absolutePath)
-
-    // Import bbs from the USER'S project node_modules, not the global iq's node_modules
-    // This ensures we get the same singleton instance
+    // Import core from the USER'S project to get their singleton instances
     const coreModulePath = require.resolve("@iniquitybbs/core", { paths: [programDir] })
-    delete require.cache[coreModulePath] // Clear any cached version
-    const { bbs } = require(coreModulePath)
+    const { bbs, setGlobalRuntime } = require(coreModulePath)
+    
+    // Set the global runtime on the USER'S core instance
+    setGlobalRuntime(runtime)
+
+    // Require the user's program (this runs their code and registers bbs.start())
+    const module = require(absolutePath)
 
     // Check if bbs.start() was called (primary API pattern)
     if (bbs.hasStartCallback()) {
