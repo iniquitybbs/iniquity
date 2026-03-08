@@ -9,8 +9,6 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Discord](https://img.shields.io/discord/499484963587096597?label=discord)](https://discord.gg/UsyvrSZ)
 [![GitHub license](https://img.shields.io/github/license/iniquitybbs/iniquity)](https://github.com/iniquitybbs/iniquity/blob/master/LICENSE.md)
-![Docker Pulls](https://img.shields.io/docker/pulls/iniquitybbs/iniquity)
-![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/iniquitybbs/iniquity)
 
 ## Synopsis
 
@@ -42,350 +40,135 @@ While you are developing, you can use the `--watch` flag to automatically restar
 iq server --watch
 ```
 
-Using SyncTerm, you can connect to your BBS at `localhost`. Or web browsers can connect to `http://localhost`.
+Connect with SyncTERM or any telnet client to `localhost` on port **23** (default).
 
 ## Getting started guide
 
-In its most simple form, Iniquity can provide you with some shortcuts to working with a terminal...
+You build your BBS with the **bbs** and **screen** API from `@iniquitybbs/core`. Here’s a minimal example:
 
 ```typescript
-import { say, pause, wait, ask } from "@iniquitybbs/core"
+import { bbs, screen } from "@iniquitybbs/core"
 
-say("Hey there visitor?".color("blue")).pause()
+screen.setResolution(80, 25)
 
-ask("Hey can I know your name", (name) => {
-    say(`Hey ${name}, nice to meet you!`)
+bbs.menu("main", {
+    prompt: "Command: ",
+    layout: "single",
+    items: [
+        { key: "M", label: "Messages", action: () => bbs.popup("Messages", "Coming soon!") },
+        { key: "F", label: "Files", action: () => bbs.popup("Files", "Coming soon!") },
+        { key: "Q", label: "Quit", action: "quit" }
+    ]
+})
+
+bbs.start(async () => {
+    bbs.say("Welcome to my BBS!")
+    await bbs.pause()
+    await bbs.showMenu("main")
 })
 ```
 
-Alright, that's kinda neat, but now let's make it a bit more useful, because Iniquity can handle some more common use cases.
+Add a welcome screen and menu artwork:
 
 ```typescript
-import iq from "@iniquitybbs/core"
+import { bbs, screen } from "@iniquitybbs/core"
 
-iq.artwork({ filename: Assets.sm_iniq2 }).render({ clearScreenBefore: true, speed: 100 })
+screen.setResolution(132, 37)
 
-iq.say(
-    `You just connected to an iniquity bbs. The artwork you are seeing above is called ${welcomeArt.filename} It's still pretty new. Likely has bugs. Real talk, it's not even finished. But maybe you'll still think it's cool.`
-        .newlines(2)
-        .color("background red")
-        .center()
-).pause({ colorReset: true, newlines: 2, center: true })
-```
-
-How about we make a menu that users could use to help them navigate around a bit.
-
-```typescript
-import iq from "@iniquitybbs/core"
-
-const menu = iq.menu({
-    name: "Iniquity answer menu.",
-    description: "Really I just get to rattle off more non-sense.",
-    commands: {
-        L: (description = "Sit cillum consequat qui quis dolore Lorem.") => {
-            iq.say("Hey, don't touch that!")
-        },
-        O: () => {
-            iq.say("Nothing to see here, move along...")
-        },
-        H: () => {
-            if (ask("Are you sure you want to hangup?")) {
-                iq.disconnect()
-            }
-        },
-        default: () => {
-            iq.say("That command key doesn't do anything, try again.".gotoxy(1, 1))
-        }
-    }
+bbs.menu("main", {
+    art: "main_menu.ans",
+    layout: "two-column",
+    items: [
+        { key: "M", label: "Message bases", goto: "messages" },
+        { key: "F", label: "File areas", goto: "files" },
+        { key: "G", label: "Goodbye", action: "quit" }
+    ]
 })
 
-menu.render(
-    (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
-        iq.artwork().render({
-            clearScreenBefore: true,
-            filename: IQCoreAssets.sm_iniq2
-        })
-
-        menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
-    },
-    {
-        maxInterval: 1000000
-    }
-)
-```
-
-Thinking you need something a bit more advanced? Try the class based approach.
-
-```typescript
-import { IQ, IQModule, IQModuleRuntime, IQModuleACLS, IQCoreAssets, IQCoreModules } from "@iniquitybbs/core"
-
-@IQModule({ basepath: "/iniquity/core/src/assets/", access: IQModuleACLS.low })
-export class Login extends IQ {
-    @IQModuleRuntime({ debug: true })
-    start() {
-        const art = this.artwork({ basepath: this.basepath })
-
-        art.render({ filename: IQCoreAssets.iq3_login }).cursor(40, 25)
-
-        const login = this.ask("Enter your handle, or type 'new' to apply".color("green"))
-
-        /** More login logic to come **/
-    }
-}
-```
-
-Familiar with making event-driven, single page applications like with Vue, React or Angular? You can build fully reactive applications with iniquity 3 also.
-
-```typescript
-import { IQCoreAssets, IQFrameColorOptions, IQMenuLoopMessageResponse, IQModule, IQModuleRuntime, IQReactor, IQ } from "@iniquitybbs/core"
-
-@IQModule({
-    basepath: "/iniquity/core/src/assets",
-    data: IQReactor({
-        message: "Umm, yeah this needs to change",
-        number: 1,
-        time: time(),
-        system: system.stats
-    })
+bbs.start(async () => {
+    await bbs.art("welcome.ans", { clearScreen: true, pauseAfter: true })
+    await bbs.showMenu("main")
 })
-export class Answer extends IQ {
-    @IQModuleRuntime({
-        debug: true
-    })
-    start() {
-        this.data.observe("message", () => {
-            this.artwork({ filename: IQCoreAssets.iq3_apply }).render({ speed: 1, clearScreenBefore: true }).colorReset()
-            this.say(this.data.model.message).wait(1000)
-            this.pause()
-        })
-        this.data.observe("number", () => {
-            this.say(this.data.model.number).wait(1000)
-        })
-
-        while (this.terminfo.x < 132 || this.terminfo.y < 37) {
-            const menu = this.menu({
-                name: "Unsupported",
-                description: "A simple menu for letting the user know their terminal settings are not supported.",
-                commands: {
-                    /**
-                     * Unsupported.R
-                     * @param description
-                     * @returns
-                     */
-                    R: (description = "Sit cillum consequat qui quis dolore Lorem.") => {
-                        return {
-                            description
-                        }
-                    },
-                    G: () => {
-                        this.data.model.number + 1
-                    },
-                    H: () => {
-                        this.data.model.message = this.ask("What should I change the message to?")
-                    },
-                    default: () => {
-                        // this.say("please try again.".gotoxy(1, 1))
-                    }
-                }
-            })
-
-            menu.render(
-                (res: IQMenuLoopMessageResponse, cmdkey: Function) => {
-                    this.artwork({ filename: IQCoreAssets.sm_iniq2 }).render({
-                        clearScreenBefore: true,
-                        speed: 1,
-                        data: this.data.model
-                    })
-                    menu.prompt({ text: "Enter your command: ".color("bright cyan"), x: 20, y: 20 }).command(cmdkey)
-                },
-                {
-                    maxInterval: 3000,
-                    data: this.data.model
-                }
-            )
-
-            this.wait(100)
-        }
-
-        alert(this.data.model.message)
-
-        alert(this.basepath)
-
-        this.data.model.message = this.ask("So what's the new message?")
-
-        this.artwork({ filename: IQCoreAssets.iq3_welcome })
-            .render({
-                speed: 100,
-                data: this.data,
-                mode: "@-codes"
-            })
-            .pause()
-
-        const frame = this.frame({
-            x: 10,
-            y: 10,
-            width: 30,
-            height: 15,
-            color: IQFrameColorOptions.blue
-        })
-
-        const menu = this.menu({
-            name: "Iniquity answer menu.",
-            description: "Really I just get to rattle off more non-sense.",
-            commands: {
-                L: (help = "Sit cillum consequat qui quis dolore Lorem.") => {
-                    this.gotoxy(23, 63)
-                    this.data.model.message = this.ask("Oh so you wanna change it?")
-                    this.data.model.number++
-                },
-                O: () => {
-                    frame.open()
-
-                    while (true) {
-                        frame.say(JSON.stringify(this.data.model))
-                        frame.cycle()
-
-                        this.data.model.number++
-
-                        if (this.data.model.number > 20) break
-
-                        this.wait(10)
-                    }
-
-                    frame.close()
-                },
-                H: () => {
-                    this.cursor().down().left(22)
-                    this.data.model.number++
-                },
-                default: () => {
-                    this.say("please try again.".gotoxy(1, 1))
-                }
-            },
-            data: this.data.model
-        })
-
-        menu.render(
-            (res: IQMenuLoopMessageResponse, cmdkey: Function, data?: any) => {
-                this.artwork().render({
-                    clearScreenBefore: true,
-                    filename: IQCoreAssets.sm_iniq2,
-                    data: this.data.model
-                })
-
-                this.data.model.number++
-
-                menu.prompt({ x: 20, y: 30, text: "Feed me: " }).command(cmdkey)
-            },
-            {
-                maxInterval: 1000000
-            }
-        )
-    }
-}
 ```
 
-[Want to learn more? Read the docs!](https://iniquitybbs.com/modules/Core.html)
+[Learn more in the documentation](https://iniquitybbs.com/modules.html).
 
 # Iniquity 3
 
-Iniquity 3 is a modern BBS (Bulletin Board System) framework designed for sysops, modders, and developers. While it provides all the tools necessary to run a legacy-style BBS, it also allows the creation of entirely new terminal-style applications, bridging the gap between the classic and the contemporary.
+Iniquity 3 is the modern reimagining of the Iniquity BBS software. It strives to embody many of the ideas of that era — a classic BBS experience with a clean Node.js and TypeScript stack for sysops, modders, and developers.
 
-## Development Environment Requirements
+## The journey
 
-To get started with Iniquity 3, ensure your development environment includes the following:
+As of today, Iniquity 3 is a thoughtful fusion of **Iniquity**, **Synchronet**, **EniGMA**, **x84**, and other BBS softwares that have inspired the project along the way. You get a **Node.js and TypeScript** runtime: install, write your BBS in TypeScript, and run it with Node.
 
-### Operating Systems
-- **macOS / Windows / Linux** (required): Modern operating systems are supported.
+## Development environment
 
-### Software Requirements
-- **Docker Desktop** (for macOS/Windows) or **Docker Machine** (required): The Iniquity BBS runtime operates inside a Docker container for portability.
-- **Node.js** & **NPM** (required): Node.js powers TypeScript transpiling and package management for Iniquity.
-- **Visual Studio Code** (recommended): This repository is tuned to maximize the capabilities of VS Code.
-- **Moebius** (recommended): Ideal for working with ANSI/ASCII/PETSCII/AMIGA artwork.
+- **Node.js** (v18+) and **npm** — required. Iniquity runs on Node.
+- **macOS / Windows / Linux** — supported.
+- **Visual Studio Code** (recommended) — the repo works well with VS Code.
+- **Moebius** (recommended) — for editing ANSI/ASCII/PETSCII/AMIGA artwork.
 
-## Guiding Principles
+## Guiding principles
 
-Iniquity 3 is built with the following objectives in mind:
+1. **Flexibility for sysops** — Easy to develop and deploy BBS applications.
+2. **Empowerment for developers and modders** — A solid framework for custom terminal apps, not only legacy BBS setups.
+3. **Interoperability** — Networking, messages, and communication between BBS applications.
+4. **Unified experience** — Consistent behavior across terminals (e.g. SyncTERM, xterm, EtherTerm).
 
-1. **Flexibility for Sysops**: Make it easy to develop and deploy BBS applications.
-2. **Empowerment for Developers and Modders**: Provide a robust framework for creating custom terminal applications, not just legacy BBS setups.
-3. **Interoperability**: Facilitate networking files, messages, and other forms of communication between different BBS applications.
-4. **Unified Experience**: Ensure consistent behavior between terminal and web environments (e.g., Terminal.app, xterm, SyncTerm, EtherTerm).
+## About the runtime
 
-## About the Iniquity Runtime
+Iniquity 3 runs on **Node.js** and **TypeScript** only. Your BBS is a TypeScript program that uses `@iniquitybbs/core` (menus, artwork, users, MCI) and is executed by `@iniquitybbs/iniquity` (CLI and telnet server).
 
-Iniquity 3 operates inside a custom runtime environment that combines:
-- **Node.js**: Leverages JavaScript-based modules.
-- **Synchronet JavaScript**: Incorporates tools from Synchronet’s ecosystem, streamlining BBS-related functionalities.
-- **Ubuntu Linux**: Provides access to system tools like DOSemu and other utilities.
+## Developer focus
 
-All of these components are packaged into a Docker container for seamless cross-platform compatibility. This setup allows Iniquity to:
-- Use existing JavaScript-based modules, including those from Synchronet.
-- Integrate with utilities like DOSemu for legacy support.
-- Provide a rich development and runtime environment, requiring only Docker and Node.js on your system.
+Iniquity 3 is both a BBS platform and an SDK for terminal applications. You can target:
 
-## Developer Focus
+- Classic terminals (SyncTERM, xterm, qodem).
+- Any ANSI-capable client connecting over telnet.
 
-Iniquity 3 is more than a BBS platform; it’s a powerful SDK and runtime for creating terminal-based applications that can be accessed from:
-- Terminal environments (e.g., xterm, SyncTerm, qodem).
-- Web browsers.
-- (Potentially) mobile devices.
+### Templates
 
-### Example Templates
-The upcoming `@iniquitybbs/templates` package will include example setups to help users get started quickly. These templates showcase both traditional BBS setups and innovative terminal applications.
+The `@iniquitybbs/templates` package includes full example BBSs: **Euphoria** (modern layout, event bus, data-driven artwork) and **Eternity** (classic Iniquity-style flow, CP437/UTF-8 encoding choice). Use them as a starting point or reference.
 
 ## Why TypeScript?
-Iniquity 3 is written in TypeScript, providing:
-- A robust development experience with static typing.
-- Seamless integration with modern JavaScript tooling.
-- Compatibility with the Node.js ecosystem.
 
-As a user, you’ll write TypeScript to build your BBS or terminal application. Installation is straightforward:
-1. Install Iniquity from NPM.
-2. Ensure Docker is running.
-3. Let the runtime handle the rest!
+Iniquity 3 is written in TypeScript so you get:
+
+- Static typing and a clear API.
+- Integration with modern JavaScript tooling.
+- Full use of the Node.js ecosystem.
+
+Install from npm, run `iq init` and `iq server start`, and build your BBS in TypeScript.
 
 ---
 
-Whether you’re a sysop looking to modernize your BBS or a developer seeking to create a cutting-edge terminal application, Iniquity 3 has the tools and flexibility to bring your ideas to life. Join the community and start building today!
+Whether you’re a sysop modernizing a BBS or a developer building a terminal application, Iniquity 3 is built to help. Join the community and start building.
 
-#### First, clone this repository somewhere on your system
+## Development (from source)
+
+Clone the repository and install dependencies (this bootstraps and builds all packages):
 
 ```shell
 git clone https://github.com/iniquitybbs/iniquity.git
-```
-
-#### Inside of the iniquity directory, install the project dependencies
-
-Will install all dependencies and bootstrap and build all packages.
-
-```shell
+cd iniquity
 npm install
 ```
 
-#### Start iniquity
-
-Inside of the VS Code Integrated Terminal, fire up the development server.
+Build all packages (if needed):
 
 ```shell
-npm start
+npm run build
 ```
 
-### Docker
-
-You could just pull the latest version of the runtime directly from docker.
+To run the BBS server from source, see [packages/iniquity/README.md](packages/iniquity/README.md). In short: from a directory that has been initialized with `iq init` (or using a template path), run the iniquity package’s server. Alternatively, install the CLI globally and use it from any directory:
 
 ```shell
-docker pull iniquitybbs/iniquity
+npm install -g @iniquitybbs/iniquity
+iq init
+iq server start
 ```
 
-Or even just run it directly
-
-```shell
-docker run -d -P --name iniquity -it iniquitybbs/iniquity
-
-```
+Connect with SyncTERM or `iq term` to `localhost:23`.
 
 ## Discord
 
