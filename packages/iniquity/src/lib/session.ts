@@ -231,7 +231,7 @@ export class Session implements IQOutput {
     setEncoding(encoding: "cp437" | "utf8"): void {
         this.info.encoding = encoding
         const utf8 = encoding === "utf8"
-        this.mciProcessor.setContext({ terminal: { utf8, cp437: !utf8 } })
+        this.mciProcessor.setTerminal({ utf8, cp437: !utf8 })
     }
 
     /**

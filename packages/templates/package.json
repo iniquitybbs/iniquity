@@ -48,5 +48,5 @@
         "docker-cli": "^0.0.2",
         "yargs": "^17.2.1"
     },
-    "gitHead": "252965cd7cec58cf02b0fe0a56dd4b565acebdf2"
+    "gitHead": "58bd1c04f035a5ac2a3f2c82e17b5fc420c6d0fd"
 }
