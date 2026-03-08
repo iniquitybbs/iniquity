@@ -8,6 +8,11 @@ import { IQOutput } from "./output"
 import { ANSI } from "./ansi"
 import { events } from "./events"
 import { Measure } from "./decorators-runtime"
+import { CTerm } from "./cterm"
+import { visibleLength } from "./string-utils"
+
+/** Sentinel for mouse events from Session (format \u0000MOUSE:x:y, 1-based column and row) */
+const MOUSE_EVENT_PREFIX = "\u0000MOUSE:"
 
 export interface IMenuCommand {
     (): any | Promise<any>
@@ -51,6 +56,12 @@ export interface IQMenuOptions {
     itemsY?: number
     autoRenderItems?: boolean
     itemFormat?: string
+    /** Enable keyboard hotkeys for menu items (default true) */
+    hotkeys?: boolean
+    /** Enable SGR mouse for clicking items (default true) */
+    mouse?: boolean
+    /** MCI string for "pressed" look when an item is clicked (e.g. "|15|16"). If omitted, reverse video is used. */
+    mouseHighlightFormat?: string
 }
 
 export interface IQMenuLoopOptions {
@@ -83,6 +94,8 @@ export interface IQMenuItem {
     y?: number
     action?: () => any | Promise<any>
     submenu?: IQMenu
+    /** Bounds for mouse hit-testing (1-based x, y, endX); set by displayItems() when positioned */
+    bounds?: { x: number; y: number; endX: number }
 }
 
 /**
@@ -103,6 +116,9 @@ export class IQMenu {
     public autoRenderItems: boolean
     public itemFormat: string
     public items: IQMenuItem[] = []
+    public hotkeys: boolean
+    public mouse: boolean
+    public mouseHighlightFormat: string | undefined
     private output: IQOutput
     private promptOptions: IQMenuPromptOptions | null = null
     private parent: IQMenu | null = null
@@ -123,6 +139,9 @@ export class IQMenu {
         this.itemsY = options.itemsY
         this.autoRenderItems = options.autoRenderItems ?? true
         this.itemFormat = options.itemFormat || "|11[|15{key}|11] |07{label}"
+        this.hotkeys = options.hotkeys ?? true
+        this.mouse = options.mouse ?? true
+        this.mouseHighlightFormat = options.mouseHighlightFormat
         this.output = output
         this.artworkFn = artworkFn
     }
@@ -181,38 +200,113 @@ export class IQMenu {
     }
 
     /**
+     * Resolve (cx, cy) 1-based to a menu item key, or null if no hit.
+     */
+    private resolveMouseToKey(cx: number, cy: number): string | null {
+        for (const item of this.items) {
+            const b = item.bounds
+            if (b && b.y === cy && cx >= b.x && cx <= b.endX) {
+                return item.key.toUpperCase()
+            }
+        }
+        return null
+    }
+
+    /**
+     * Parse \u0000MOUSE:x:y string to item key or null.
+     */
+    private parseMouseInput(input: string): string | null {
+        if (!input.startsWith(MOUSE_EVENT_PREFIX)) return null
+        const rest = input.slice(MOUSE_EVENT_PREFIX.length)
+        const parts = rest.split(":")
+        if (parts.length < 2) return null
+        const cx = parseInt(parts[0], 10)
+        const cy = parseInt(parts[1], 10)
+        if (isNaN(cx) || isNaN(cy)) return null
+        return this.resolveMouseToKey(cx, cy)
+    }
+
+    /**
+     * Draw click highlight on an item line, then restore after a short delay.
+     */
+    private async drawClickHighlight(item: IQMenuItem): Promise<void> {
+        const b = item.bounds
+        if (!b) return
+        const line = this.itemFormat.replace("{key}", item.key).replace("{label}", item.label)
+        const processed = this.output.processMCI(line)
+        const highlightStart = this.mouseHighlightFormat
+            ? this.output.processMCI(this.mouseHighlightFormat)
+            : "\x1b[7m"
+        const reset = "\x1b[0m"
+
+        this.output.write(ANSI.gotoxy(b.x, b.y))
+        this.output.write(highlightStart + processed + reset)
+        await new Promise((r) => setTimeout(r, 100))
+        this.output.write(ANSI.gotoxy(b.x, b.y))
+        this.output.write(processed + reset)
+    }
+
+    /**
      * Wait for user command input and return the key
      * Uses non-blocking input with event processing loop
      */
     async waitForKey(): Promise<string> {
-        // First check if there's already input available (non-blocking)
         const immediateInput = this.output.readKeyNonBlocking()
         if (immediateInput) {
-            return immediateInput.toUpperCase()
-        }
-
-        // Poll for input while processing events
-        while (true) {
-            // Process any pending events from the event bus
-            await events.processQueue()
-
-            // Check for input (non-blocking)
-            const input = this.output.readKeyNonBlocking()
-            if (input) {
-                return input.toUpperCase()
-            }
-
-            // Check if we have input available
-            if (this.output.hasInput()) {
-                const key = this.output.readKeyNonBlocking()
-                if (key) {
-                    return key.toUpperCase()
+            if (this.mouse && immediateInput.startsWith(MOUSE_EVENT_PREFIX)) {
+                const key = this.parseMouseInput(immediateInput)
+                if (key !== null) {
+                    const item = this.items.find((i) => i.key.toUpperCase() === key)
+                    if (item) await this.drawClickHighlight(item)
+                    return key
                 }
             }
+            if (this.hotkeys || immediateInput.toUpperCase() === "Q") {
+                return immediateInput.toUpperCase()
+            }
+            // hotkeys false and not Q: ignore, fall through to loop
+        }
 
-            // Yield to event loop with a short delay
+        while (true) {
+            await events.processQueue()
+            const input = this.output.readKeyNonBlocking()
+            if (input) {
+                const key = await this.handleInput(input)
+                if (key !== null) return key
+                continue
+            }
+            if (this.output.hasInput()) {
+                const k = this.output.readKeyNonBlocking()
+                if (k) {
+                    const key = await this.handleInput(k)
+                    if (key !== null) return key
+                }
+            }
             await new Promise((resolve) => setTimeout(resolve, 10))
         }
+    }
+
+    private async handleInput(input: string): Promise<string | null> {
+        if (this.mouse && input.startsWith(MOUSE_EVENT_PREFIX)) {
+            const key = this.parseMouseInput(input)
+            if (key !== null) {
+                const item = this.items.find((i) => i.key.toUpperCase() === key)
+                if (item) await this.drawClickHighlight(item)
+                return key
+            }
+            return null
+        }
+        if (!this.hotkeys && input.toUpperCase() !== "Q") return null
+        return input.toUpperCase()
+    }
+
+    private normalizeInput(input: string): string {
+        if (this.mouse && input.startsWith(MOUSE_EVENT_PREFIX)) {
+            const key = this.parseMouseInput(input)
+            if (key !== null) return key
+        }
+        if (!this.hotkeys && input.toUpperCase() !== "Q") return input
+        return input.toUpperCase()
     }
 
     /**
@@ -259,72 +353,92 @@ export class IQMenu {
     async show(): Promise<string> {
         this.running = true
 
-        // Clear any pending input from previous operations (login, etc.)
-        // This prevents leftover keystrokes from triggering menu actions
+        // Clear any pending input and partial escape sequences from previous operations
+        if (typeof this.output.clearInputQueue === "function") {
+            this.output.clearInputQueue()
+        }
         while (this.output.hasInput()) {
             this.output.readKeyNonBlocking()
         }
-        // Small delay to allow any in-flight data to arrive
         await new Promise((resolve) => setTimeout(resolve, 50))
-        // Clear again after delay
+        if (typeof this.output.clearInputQueue === "function") {
+            this.output.clearInputQueue()
+        }
         while (this.output.hasInput()) {
             this.output.readKeyNonBlocking()
         }
 
-        while (this.running) {
-            // Clear screen
-            this.output.write(ANSI.clearScreen())
+        if (this.mouse) {
+            this.output.write(CTerm.mouseSgrModeSequence(true))
+            this.output.write(CTerm.mouseTrackingSequence(true))
+        }
+        try {
+            while (this.running) {
+                // Re-enable mouse each iteration so it stays on after returning from a submenu
+                // (submenu's finally turns it off when we Q/back)
+                if (this.mouse) {
+                    this.output.write(CTerm.mouseSgrModeSequence(true))
+                    this.output.write(CTerm.mouseTrackingSequence(true))
+                }
+                // Clear screen
+                this.output.write(ANSI.clearScreen())
 
-            // Display artwork if specified
-            if (this.art && this.artworkFn) {
-                const artInstance = this.artworkFn({ basepath: this.basepath })
-                await artInstance.render({
-                    filename: this.art.filename,
-                    mode: this.art.mode || "line",
-                    speed: this.art.speed || 30,
-                    clearScreenBefore: this.art.clearScreenBefore,
-                    center: this.art.center,
-                    x: this.art.x,
-                    y: this.art.y
-                })
+                // Display artwork if specified
+                if (this.art && this.artworkFn) {
+                    const artInstance = this.artworkFn({ basepath: this.basepath })
+                    await artInstance.render({
+                        filename: this.art.filename,
+                        mode: this.art.mode || "line",
+                        speed: this.art.speed || 30,
+                        clearScreenBefore: this.art.clearScreenBefore,
+                        center: this.art.center,
+                        x: this.art.x,
+                        y: this.art.y
+                    })
+                }
+
+                // Display menu items if any
+                if (this.items.length > 0 && this.autoRenderItems) {
+                    this.displayItems()
+                }
+
+                // Position cursor for prompt if specified
+                if (this.promptX !== undefined && this.promptY !== undefined) {
+                    this.output.write(ANSI.gotoxy(this.promptX, this.promptY))
+                }
+
+                // Show prompt and get input (uses writeMCI for pipe code support)
+                this.output.writeMCI(this.promptText)
+                const key = await this.waitForKey()
+
+                // Handle quit/back
+                if (key === "Q") {
+                    this.running = false
+                    return "Q"
+                }
+
+                // Execute command
+                const result = await this.executeCommand(key)
+
+                // If command returns 'back' or 'quit', handle navigation
+                if (result === "back" || result === "quit") {
+                    this.running = false
+                    return result
+                }
             }
-
-            // Display menu items if any
-            if (this.items.length > 0 && this.autoRenderItems) {
-                this.displayItems()
-            }
-
-            // Position cursor for prompt if specified
-            if (this.promptX !== undefined && this.promptY !== undefined) {
-                this.output.write(ANSI.gotoxy(this.promptX, this.promptY))
-            }
-
-            // Show prompt and get input (uses writeMCI for pipe code support)
-            this.output.writeMCI(this.promptText)
-            const key = await this.waitForKey()
-
-            // Handle quit/back
-            if (key === "Q") {
-                this.running = false
-                return "Q"
-            }
-
-            // Execute command
-            const result = await this.executeCommand(key)
-
-            // If command returns 'back' or 'quit', handle navigation
-            if (result === "back" || result === "quit") {
-                this.running = false
-                return result
+            return "quit"
+        } finally {
+            if (this.mouse) {
+                this.output.write(CTerm.mouseTrackingSequence(false))
+                this.output.write(CTerm.mouseSgrModeSequence(false))
             }
         }
-
-        return "quit"
     }
 
     /**
      * Display menu items in a formatted list (uses writeMCI for pipe code support)
      * Items can have individual x,y positions, or use itemsX/itemsY as starting point
+     * Computes and stores bounds (x, y, endX) per item for mouse hit-testing when positioned.
      */
     private displayItems(): void {
         // If no global positioning and no per-item positioning, add a newline
@@ -335,15 +449,21 @@ export class IQMenu {
         let currentY = this.itemsY || 0
         for (const item of this.items) {
             const line = this.itemFormat.replace("{key}", item.key).replace("{label}", item.label)
+            const processed = this.output.processMCI(line)
+            const len = visibleLength(processed)
 
             // Per-item positioning takes priority
             if (item.x !== undefined && item.y !== undefined) {
                 this.output.write(ANSI.gotoxy(item.x, item.y))
+                item.bounds = { x: item.x, y: item.y, endX: item.x + len - 1 }
             }
             // Otherwise use global itemsX/itemsY with auto-incrementing Y
             else if (this.itemsX !== undefined && this.itemsY !== undefined) {
                 this.output.write(ANSI.gotoxy(this.itemsX, currentY))
+                item.bounds = { x: this.itemsX!, y: currentY, endX: this.itemsX! + len - 1 }
                 currentY++
+            } else {
+                item.bounds = undefined
             }
 
             this.output.writeMCI(line + "\r\n")

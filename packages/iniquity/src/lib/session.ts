@@ -48,6 +48,10 @@ export class Session implements IQOutput {
     private pauseEnabled: boolean = true
     private pauseAborted: boolean = false
     private pendingInputQueue: string[] = [] // Queue for non-blocking reads
+    private escapeSequenceBuffer: number[] = [] // Incomplete escape sequence across packets
+
+    /** Sentinel for mouse events in the queue (followed by "x:y") */
+    static readonly MOUSE_PREFIX = "\u0000MOUSE:"
 
     /** Node number assigned by the server */
     public nodeNumber: number = 0
@@ -97,25 +101,32 @@ export class Session implements IQOutput {
     }
 
     private handleData(data: Buffer) {
-        let i = 0
-        while (i < data.length) {
-            if (data[i] === ANSI.telnet.IAC) {
-                if (i + 1 < data.length) {
-                    const command = data[i + 1]
+        // Prepend any incomplete escape sequence from previous chunk
+        let buf: Buffer = data
+        if (this.escapeSequenceBuffer.length > 0) {
+            buf = Buffer.concat([Buffer.from(this.escapeSequenceBuffer), data])
+            this.escapeSequenceBuffer = []
+        }
 
-                    if (command === ANSI.telnet.SB && i + 2 < data.length) {
-                        const option = data[i + 2]
+        let i = 0
+        while (i < buf.length) {
+            if (buf[i] === ANSI.telnet.IAC) {
+                if (i + 1 < buf.length) {
+                    const command = buf[i + 1]
+
+                    if (command === ANSI.telnet.SB && i + 2 < buf.length) {
+                        const option = buf[i + 2]
                         let j = i + 3
-                        while (j < data.length - 1) {
-                            if (data[j] === ANSI.telnet.IAC && data[j + 1] === ANSI.telnet.SE) {
-                                this.handleSubnegotiation(option, data.slice(i + 3, j))
+                        while (j < buf.length - 1) {
+                            if (buf[j] === ANSI.telnet.IAC && buf[j + 1] === ANSI.telnet.SE) {
+                                this.handleSubnegotiation(option, buf.slice(i + 3, j))
                                 i = j + 2
                                 break
                             }
                             j++
                         }
-                        if (j >= data.length - 1) break
-                    } else if (i + 2 < data.length) {
+                        if (j >= buf.length - 1) break
+                    } else if (i + 2 < buf.length) {
                         i += 3
                     } else {
                         break
@@ -124,7 +135,41 @@ export class Session implements IQOutput {
                 }
             }
 
-            const char = String.fromCharCode(data[i])
+            // ESC starts an escape sequence - buffer and parse (e.g. SGR 1006 mouse or other CSI)
+            if (buf[i] === 0x1b) {
+                const seq: number[] = [buf[i]]
+                i++
+                while (i < buf.length) {
+                    seq.push(buf[i])
+                    i++
+                    const result = this.parseEscapeSequence(seq)
+                    if (result === "complete") {
+                        const mouse = this.tryParseSGR1006Mouse(seq)
+                        if (mouse !== null) {
+                            const event = `${Session.MOUSE_PREFIX}${mouse.x}:${mouse.y}`
+                            if (this.inputCallback) {
+                                const callback = this.inputCallback
+                                this.inputCallback = null
+                                this.inputMode = "line"
+                                callback(event)
+                            } else {
+                                this.pendingInputQueue.push(event)
+                            }
+                        }
+                        break
+                    }
+                    if (result === "incomplete" && i >= buf.length) {
+                        this.escapeSequenceBuffer = [...seq]
+                        return
+                    }
+                    if (result === "incomplete") continue
+                    // unknown/other CSI - consumed, break
+                    break
+                }
+                continue
+            }
+
+            const char = String.fromCharCode(buf[i])
 
             if (this.inputCallback) {
                 if (this.inputMode === "key" || this.inputMode === "raw") {
@@ -157,6 +202,47 @@ export class Session implements IQOutput {
 
             i++
         }
+    }
+
+    /**
+     * Parse escape sequence buffer.
+     * @returns "complete" when we have a full CSI (or SGR) sequence, "incomplete" when we need more bytes, "other" when we consumed a non-mouse sequence
+     */
+    private parseEscapeSequence(seq: number[]): "complete" | "incomplete" | "other" {
+        if (seq.length < 2) return "incomplete"
+        if (seq[0] !== 0x1b) return "other"
+        if (seq[1] !== 0x5b) {
+            // ESC + single char (e.g. ESC O or ESC [)
+            if (seq.length >= 2) return "other"
+            return "incomplete"
+        }
+        // CSI: ESC [ ... (letter or 0x7e)
+        if (seq.length < 3) return "incomplete"
+        // SGR 1006: ESC [ < digits ; digits ; digits M or m
+        if (seq[2] === 0x3c) {
+            const s = Buffer.from(seq).toString("ascii")
+            if (/^\x1b\[<\d+;\d+;\d+[Mm]$/.test(s)) return "complete"
+            if (/^\x1b\[<\d*;\d*;\d*$/.test(s) || /^\x1b\[<\d+;\d+;\d+$/.test(s)) return "incomplete"
+            if (s.length > 32) return "other"
+            return "incomplete"
+        }
+        // Other CSI: ESC [ (params) final byte (0x40-0x7e)
+        const last = seq[seq.length - 1]
+        if (last >= 0x40 && last <= 0x7e) return "complete"
+        if (seq.length > 64) return "other"
+        return "incomplete"
+    }
+
+    /**
+     * If seq is SGR 1006 mouse (press or release), return { x, y } (1-based). Otherwise null.
+     */
+    private tryParseSGR1006Mouse(seq: number[]): { x: number; y: number } | null {
+        const s = Buffer.from(seq).toString("ascii")
+        const match = s.match(/^\x1b\[<(\d+);(\d+);(\d+)[Mm]$/)
+        if (!match) return null
+        const x = parseInt(match[2], 10)
+        const y = parseInt(match[3], 10)
+        return { x, y }
     }
 
     private handleSubnegotiation(option: number, data: Buffer) {
@@ -447,6 +533,7 @@ export class Session implements IQOutput {
      */
     clearInputQueue(): void {
         this.pendingInputQueue = []
+        this.escapeSequenceBuffer = []
     }
 
     /**

@@ -210,6 +210,8 @@ const showStatus = async () => {
 
 // ============================================================================
 // Menu Definitions using declarative bbs.menu() API
+// Menu items are clickable with the mouse when the terminal supports SGR mouse (e.g. SyncTERM).
+// Use hotkeys: false for mouse-only menus, or mouseHighlightFormat for custom click highlight.
 // ============================================================================
 
 // Messages Menu

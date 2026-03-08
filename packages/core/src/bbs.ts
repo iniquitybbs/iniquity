@@ -82,6 +82,12 @@ export interface BBSMenuOptions {
     itemsX?: number
     /** Starting Y position for items (used by both layouts if col1Y/col2Y not set) */
     itemsY?: number
+    /** Enable keyboard hotkeys for menu items (default true) */
+    hotkeys?: boolean
+    /** Enable SGR mouse for clicking items (default true) */
+    mouse?: boolean
+    /** MCI string for "pressed" look when an item is clicked (e.g. "|15|16") */
+    mouseHighlightFormat?: string
 }
 
 /**
@@ -231,7 +237,10 @@ class BBS {
             promptY: options.promptY ?? layoutConfig.promptY,
             autoRenderItems: true,
             itemFormat: options.itemFormat || "|11[|15{key}|11] |07{label}",
-            commands: this.buildCommands(options.items)
+            commands: this.buildCommands(options.items),
+            hotkeys: options.hotkeys ?? true,
+            mouse: options.mouse ?? true,
+            mouseHighlightFormat: options.mouseHighlightFormat
         }
 
         // Add artwork if specified

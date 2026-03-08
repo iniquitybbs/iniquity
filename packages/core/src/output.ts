@@ -49,6 +49,11 @@ export interface IQOutput {
      */
     hasInput(): boolean
 
+    /**
+     * Clear pending input and any partial escape sequence (optional; Session implements it).
+     */
+    clearInputQueue?(): void
+
     // MCI processing
     getMCIProcessor(): MCIProcessor
     processMCI(text: string): string
