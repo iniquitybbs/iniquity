@@ -68,6 +68,7 @@ async function executeTypeScript(filePath: string, runtime: Runtime, session: Se
  */
 async function executeWithTsx(filePath: string, runtime: Runtime, session: Session): Promise<void> {
     const absolutePath = path.resolve(filePath)
+    const programDir = path.dirname(absolutePath)
 
     // Use tsx to load TypeScript files directly
     const tsxPath = require.resolve("tsx/cjs")
@@ -76,11 +77,14 @@ async function executeWithTsx(filePath: string, runtime: Runtime, session: Sessi
     // Clear require cache to ensure fresh load
     delete require.cache[absolutePath]
 
-    // Import bbs to check for registered start callback
-    const { bbs } = await import("@iniquitybbs/core")
-
-    // Now we can require the TypeScript file directly
+    // Require the user's program first (this runs their code and registers bbs.start())
     const module = require(absolutePath)
+
+    // Import bbs from the USER'S project node_modules, not the global iq's node_modules
+    // This ensures we get the same singleton instance
+    const coreModulePath = require.resolve("@iniquitybbs/core", { paths: [programDir] })
+    delete require.cache[coreModulePath] // Clear any cached version
+    const { bbs } = require(coreModulePath)
 
     // Check if bbs.start() was called (primary API pattern)
     if (bbs.hasStartCallback()) {
