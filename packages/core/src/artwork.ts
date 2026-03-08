@@ -289,7 +289,7 @@ const CP437_TO_UTF8: string[] = [
  * @param cp437String String with CP437 character codes (read as latin1)
  * @returns UTF-8 encoded string
  */
-function cp437ToUtf8(cp437String: string): string {
+export function cp437ToUtf8(cp437String: string): string {
     let result = ""
     let i = 0
 

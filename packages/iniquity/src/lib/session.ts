@@ -5,10 +5,13 @@
  */
 
 import { Socket } from "net"
-import { ANSI, MCIProcessor, MCIProcessorOptions, MCIContext, IQOutput, ControlCodeAction } from "@iniquitybbs/core"
+import { ANSI, MCIProcessor, MCIProcessorOptions, MCIContext, IQOutput, ControlCodeAction, cp437ToUtf8 } from "@iniquitybbs/core"
+
+export type TerminalEncoding = "cp437" | "utf8"
 
 export interface SessionInfo {
     terminalType: string
+    encoding: TerminalEncoding
     width: number
     height: number
     client: {
@@ -54,6 +57,7 @@ export class Session implements IQOutput {
 
     public info: SessionInfo = {
         terminalType: "ansi-bbs",
+        encoding: "cp437",
         width: 80,
         height: 24,
         client: {
@@ -204,14 +208,34 @@ export class Session implements IQOutput {
     // IQOutput interface implementation
 
     /**
-     * Write data to socket
+     * Write data to socket (converts to UTF-8 when session encoding is utf8)
      */
     write(data: string): void {
-        this.socket.write(data, "binary")
+        if (this.info.encoding === "utf8") {
+            this.socket.write(cp437ToUtf8(data), "utf8")
+        } else {
+            this.socket.write(data, "binary")
+        }
     }
 
     /**
-     * Write with MCI processing enabled
+     * Get terminal encoding preference (set at connect)
+     */
+    getEncoding(): "cp437" | "utf8" {
+        return this.info.encoding
+    }
+
+    /**
+     * Set terminal encoding; updates MCI context for @CHARSET@ etc.
+     */
+    setEncoding(encoding: "cp437" | "utf8"): void {
+        this.info.encoding = encoding
+        const utf8 = encoding === "utf8"
+        this.mciProcessor.setContext({ terminal: { utf8, cp437: !utf8 } })
+    }
+
+    /**
+     * Write with MCI processing enabled (respects session encoding)
      */
     writeMCI(data: string): void {
         const result = this.mciProcessor.processWithDetails(data)
@@ -220,7 +244,7 @@ export class Session implements IQOutput {
         const newlines = (result.text.match(/\r?\n/g) || []).length
         this.mciProcessor.incrementLineCount(newlines)
 
-        this.socket.write(result.text, "binary")
+        this.write(result.text)
     }
 
     /**

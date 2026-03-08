@@ -79,7 +79,7 @@ export {
 /**
  * ANSI artwork rendering with SAUCE metadata support
  */
-export { Artwork, IQArtworkOptions, IQArtworkRenderOptions, IQArtworkRenderFunctions, SAUCEInfo } from "./artwork"
+export { Artwork, IQArtworkOptions, IQArtworkRenderOptions, IQArtworkRenderFunctions, SAUCEInfo, cp437ToUtf8 } from "./artwork"
 
 /**
  * String utility functions (opt-in, no global pollution)

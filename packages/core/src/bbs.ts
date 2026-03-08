@@ -116,6 +116,8 @@ export interface BBSArtOptions {
     y?: number
     /** Pause after rendering (true for default pause, string for custom prompt) */
     pauseAfter?: boolean | string
+    /** Override session encoding for this artwork (default: use session preference) */
+    encoding?: "cp437" | "utf8"
 }
 
 /**
@@ -533,6 +535,20 @@ class BBS {
         getGlobalRuntime().disconnect()
     }
 
+    /**
+     * Get terminal encoding (CP437 or UTF-8) chosen at connect
+     */
+    getEncoding(): "cp437" | "utf8" {
+        return getGlobalRuntime().getOutput().getEncoding?.() ?? "cp437"
+    }
+
+    /**
+     * Set terminal encoding for this session (affects all subsequent output)
+     */
+    setEncoding(encoding: "cp437" | "utf8"): void {
+        getGlobalRuntime().getOutput().setEncoding?.(encoding)
+    }
+
     // =========================================================================
     // Event System Methods
     // =========================================================================
@@ -889,6 +905,7 @@ class BBS {
     async art(filename: string, options?: BBSArtOptions): Promise<void> {
         const runtime = getGlobalRuntime()
         const art = runtime.artwork({ basepath: this.basepath })
+        const encoding = options?.encoding ?? runtime.getOutput().getEncoding?.() ?? "cp437"
 
         await art.render({
             filename: filename,
@@ -898,7 +915,8 @@ class BBS {
             data: options?.data,
             center: options?.center ?? "auto",
             x: options?.x,
-            y: options?.y
+            y: options?.y,
+            encoding
         })
 
         if (options?.pauseAfter) {

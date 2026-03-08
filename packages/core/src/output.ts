@@ -68,6 +68,10 @@ export interface IQOutput {
     supportsFonts?(): boolean
     setSyncTermFont?(fontName: string): void
 
+    // Terminal encoding (optional) - CP437 for classic BBS, UTF-8 for modern terminals
+    getEncoding?(): "cp437" | "utf8"
+    setEncoding?(encoding: "cp437" | "utf8"): void
+
     // Connection management
     close(): void
 }
