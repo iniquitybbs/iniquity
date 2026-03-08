@@ -1,6 +1,6 @@
 {
     "name": "@iniquitybbs/templates",
-    "version": "3.0.79",
+    "version": "3.0.80",
     "description": "Various templates showing how a sysop can create a bbs with iniquity.",
     "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
     "homepage": "http://iniquitybbs.com",
@@ -44,7 +44,7 @@
         "iqtpl": "./dist/commands/index.js"
     },
     "dependencies": {
-        "@iniquitybbs/core": "^3.0.79",
+        "@iniquitybbs/core": "^3.0.80",
         "docker-cli": "^0.0.2",
         "yargs": "^17.2.1"
     },
