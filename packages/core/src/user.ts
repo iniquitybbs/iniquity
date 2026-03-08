@@ -313,7 +313,6 @@ export class IQUser {
     /**
      * Set user access level
      */
-    @Transaction()
     set access(level: UserAccessLevel) {
         if (this.data) {
             this.data.access = level

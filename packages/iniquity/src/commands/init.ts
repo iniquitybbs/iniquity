@@ -78,14 +78,12 @@ export class Init implements yargs.CommandModule {
         if (!argv.help || !argv.version) {
             if (argv.template === "eternity") {
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/*"), "."], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/eternity/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/assets/*"), "assets"], { up: true, all: true }, (err) => {})
+                copyfiles([path.join(__dirname, "../../../../templates/src/eternity/assets/*"), "assets"], { up: true, all: true }, (err) => {})
             }
 
             if (argv.template === "euphoria") {
                 copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/*"), "."], { up: true, all: true }, (err) => {})
-                copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/.iniquity/*"), ".iniquity"], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/.vscode/*"), ".vscode"], { up: true, all: true }, (err) => {})
                 copyfiles([path.join(__dirname, "../../../../templates/src/euphoria/assets/*"), "assets"], { up: true, all: true }, (err) => {})
             }
@@ -93,18 +91,14 @@ export class Init implements yargs.CommandModule {
             console.log(`Iniquity template ${argv.template} installed.`)
 
             setTimeout(() => {
-                if (fs.existsSync(".iniquity")) {
-                    process.chdir(".iniquity")
+                exec("npm install", (err, stdout, stderr) => {
+                    if (err) {
+                        console.error(err)
+                        return
+                    }
 
-                    exec("npm install", (err, stdout, stderr) => {
-                        if (err) {
-                            console.error(err)
-                            return
-                        }
-
-                        console.log(`Template ${argv.template} npm dependencies installed.`)
-                    })
-                }
+                    console.log(`Template ${argv.template} dependencies installed.`)
+                })
             }, 3000)
         }
     }

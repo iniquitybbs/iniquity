@@ -1,0 +1,16 @@
+{
+    "name": "iniquity-bbs",
+    "version": "1.0.0",
+    "description": "An Iniquity BBS application",
+    "private": true,
+    "scripts": {
+        "start": "iq server start",
+        "dev": "iq server start --watch",
+        "server": "iq server start",
+        "server:watch": "iq server start --watch",
+        "term": "iq term"
+    },
+    "dependencies": {
+        "@iniquitybbs/core": "^3.0.75"
+    }
+}
