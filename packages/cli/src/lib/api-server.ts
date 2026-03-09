@@ -4,7 +4,29 @@
  * @module lib/api-server
  */
 
+/*
+-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+ `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
+;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
+:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
+ `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
+%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$//$%$
+dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
+%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
+   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
+.      .  '$a,          .        a` .   'a          .   .             s` .  . .
+      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%//$
+==============================================================================
+   t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
+==============================================================================
+*/
+
 import * as http from "http"
+import * as path from "path"
+import * as fs from "fs"
 import Koa = require("koa")
 import bodyParser from "koa-bodyparser"
 
@@ -16,6 +38,44 @@ const DEFAULT_MODEL = process.env.OLLAMA_MODEL || "gemma3:1b"
 export interface ApiServerOptions {
     port?: number
     host?: string
+    /** BBS root directory (containing iniquity.json and optionally package.json). Used to build AI system context. */
+    bbsRoot?: string
+}
+
+function readJson<T = unknown>(filePath: string): T | null {
+    try {
+        if (!fs.existsSync(filePath)) return null
+        const raw = fs.readFileSync(filePath, "utf-8")
+        return JSON.parse(raw) as T
+    } catch {
+        return null
+    }
+}
+
+function getBbsName(root: string): string {
+    const config = readJson<{ name?: string; server?: { name?: string } }>(path.join(root, "iniquity.json"))
+    if (config?.server?.name) return config.server.name
+    if (config?.name) return config.name
+    return "Iniquity BBS"
+}
+
+function getBbsVersion(root: string): string | null {
+    const pkg = readJson<{ version?: string }>(path.join(root, "package.json"))
+    if (pkg?.version) return pkg.version
+    const iniquityPkg = readJson<{ version?: string }>(path.join(root, ".iniquity", "package.json"))
+    return iniquityPkg?.version ?? null
+}
+
+function getIniquityVersion(): string {
+    const pkg = readJson<{ version?: string }>(path.join(__dirname, "..", "package.json"))
+    return pkg?.version ?? "3.x"
+}
+
+function buildSystemPrompt(bbsName: string, bbsVersion: string | null, iniquityVersion: string): string {
+    const bbsVer = bbsVersion ? ` This BBS version: ${bbsVersion}.` : ""
+    return `You are the AI assistant for ${bbsName}, a bulletin board system (BBS) accessed by users over telnet or terminal. This BBS is powered by Iniquity (https://iniquitybbs.com), version ${iniquityVersion}.${bbsVer}
+
+Keep responses concise and appropriate for a terminal BBS environment. Help callers with questions, conversation, and BBS-related topics. You are part of the BBS experience, not a generic chatbot.`
 }
 
 /**
@@ -25,6 +85,8 @@ export interface ApiServerOptions {
 export function startApiServer(options: ApiServerOptions = {}): http.Server {
     const port = options.port ?? 8383
     const host = options.host ?? "0.0.0.0"
+    const bbsRoot = options.bbsRoot ?? process.cwd()
+    const iniquityVersion = getIniquityVersion()
 
     const app = new Koa()
     app.use(bodyParser({ enableTypes: ["json"] }))
@@ -43,13 +105,23 @@ export function startApiServer(options: ApiServerOptions = {}): http.Server {
             return
         }
 
-        const body = ((ctx.request as KoaCtx["request"] & { body?: unknown }).body || {}) as { prompt?: unknown; model?: string }
+        const body = ((ctx.request as KoaCtx["request"] & { body?: unknown }).body || {}) as {
+            prompt?: unknown
+            model?: string
+            bbsName?: string
+            bbsVersion?: string
+        }
         const prompt = typeof body.prompt === "string" ? body.prompt.trim() : ""
         if (!prompt) {
             ctx.status = 400
             ctx.body = { error: "Missing or invalid prompt" }
             return
         }
+
+        const bbsName = typeof body.bbsName === "string" && body.bbsName.trim() ? body.bbsName.trim() : getBbsName(bbsRoot)
+        const bbsVersion =
+            typeof body.bbsVersion === "string" && body.bbsVersion.trim() ? body.bbsVersion.trim() : getBbsVersion(bbsRoot)
+        const system = buildSystemPrompt(bbsName, bbsVersion, iniquityVersion)
 
         const model = body.model || DEFAULT_MODEL
         const url = `${OLLAMA_BASE}/api/generate`
@@ -58,7 +130,7 @@ export function startApiServer(options: ApiServerOptions = {}): http.Server {
             const ollamaRes = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ model, prompt, stream: false })
+                body: JSON.stringify({ model, prompt, system, stream: false })
             })
 
             if (!ollamaRes.ok) {

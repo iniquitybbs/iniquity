@@ -158,7 +158,8 @@ export class Server implements yargs.CommandModule {
                     const n = parseInt(raw, 10)
                     return Number.isFinite(n) ? n : 8383
                 })()
-                const httpServer = startApiServer({ port: apiPort })
+                const bbsRoot = path.dirname(resolvedPath)
+                const httpServer = startApiServer({ port: apiPort, bbsRoot })
                 console.log("[iniquity] AI API base URL: http://localhost:" + apiPort)
 
                 this.telnetServer = new TelnetServer({

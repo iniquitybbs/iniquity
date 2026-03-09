@@ -4,6 +4,26 @@
  * @summary Interactive command-driven menu system for BBS applications
  */
 
+/*
+-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+ `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
+;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
+:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
+ `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
+%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$//$%$
+dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
+%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
+   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
+.      .  '$a,          .        a` .   'a          .   .             s` .  . .
+      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%//$
+==============================================================================
+   t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
+==============================================================================
+*/
+
 import { IQOutput } from "./output"
 import { ANSI } from "./ansi"
 import { events } from "./events"
@@ -411,7 +431,11 @@ export class IQMenu {
                     contentBounds !== null
 
                 if (sameArtAsLast) {
-                    // Same artwork: redraw it without clearing (re-output line/char by line so full ANSI is on screen)
+                    // Clear the art region (right pane) before redrawing so no leftover content; then redraw art
+                    if (this.art?.x != null) {
+                        this.clearArtRegion(this.art.x)
+                    }
+                    // Same artwork: redraw it without clearing full screen (re-output line/char by line so full ANSI is on screen)
                     if (this.art && this.artworkFn) {
                         const artInstance = this.artworkFn({ basepath: this.basepath })
                         await artInstance.render({
@@ -534,6 +558,20 @@ export class IQMenu {
         for (const y of rows) {
             this.output.write(ANSI.gotoxy(1, y))
             this.output.write(" ".repeat(w))
+        }
+    }
+
+    /**
+     * Clear the art region (from artX to end of screen, all rows) so redrawing the same art starts from a clean slate.
+     */
+    private clearArtRegion(artX: number): void {
+        const w = this.output.getWidth()
+        const h = this.output.getHeight()
+        const cols = w - artX + 1
+        if (cols <= 0) return
+        for (let y = 1; y <= h; y++) {
+            this.output.write(ANSI.gotoxy(artX, y))
+            this.output.write(" ".repeat(cols))
         }
     }
 

@@ -1,17 +1,13 @@
 #!/usr/bin/env node
 /**
  *
- * Iniquity App
- * @module App
- * @summary The super cool command line interface to Iniquity.
+ * Iniquity Term
+ * @module Term
+ * @summary Built-in terminal client to connect to an Iniquity BBS.
  * @example Invoking via the shell
  * ```shell
- * iq cli -h
- * ```
- * @example Invoking via yargs programatically
- * ```typescript
- * import CLI from "@iniquitybbs/cli"
- * const cli: yargs.CommandModule = new CLI()
+ * iq term
+ * iq term localhost --port 2323
  * ```
  */
 
@@ -36,68 +32,71 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 import yargs from "yargs"
-import * as path from "path"
-import { exec } from "child_process"
+import * as net from "net"
 
-/**
- * Iniquity CLI
- * @summary The main entry into all iniquity cli commands that are available.
- * @implements {yargs.CommandModule}
- */
-export class App implements yargs.CommandModule {
-    public command = "term [options]"
-    public describe = "Use iniquity's built in terminal client."
-
-    public builder = (yargs: yargs.Argv) => {
-        return yargs
-            .options("name", {
-                type: "string",
-                describe: "Provide a name for your iniquity system.",
-                demandOption: false
-            })
-            .options("template", {
-                type: "string",
-                choices: ["eternity", "euphoria"],
-                describe: "Specify a template to use when constructing your new iniquity bbs.",
-                demandOption: false
-            })
-            .options("install", {
-                type: "string",
-                describe: "Install iniquity and npm packages.",
-                demandOption: false
-            })
-            .options("packages", {
-                type: "string",
-                choices: ["available", "installed"],
-                describe: "Displays a list of all packages available for use with iniquity.",
-                demandOption: false
-            })
-            .pkgConf("iniquity", path.join(__dirname))
+function restoreStdin(): void {
+    if (process.stdin.isTTY && process.stdin.setRawMode) {
+        process.stdin.setRawMode(false)
     }
-    public handler(argv: yargs.Arguments) {
-        if (!argv.help) console.log("Iniquity system initialized.")
-
-        if (argv.init === "food") {
-            console.log("yay")
-            console.log("yay")
-            console.log("yay")
-        }
-
-        if (argv.install) {
-            exec(`npm install @iniquitybbs/${argv.install}`, (error, stdout, stderr) => {
-                if (error) {
-                    console.error(`exec error: ${error}`)
-                    return
-                }
-
-                console.info(stdout)
-                console.error(stderr)
-            })
-        }
-    }
+    process.stdin.pause()
 }
 
-const app: yargs.CommandModule = new App()
+export const command = "term [host]"
+export const describe = "Connect to an Iniquity BBS with the built-in terminal client."
 
-// if (process.argv.length > 2) yargs.command(app).pkgConf("iniquity").help().argv
-export default app
+export function builder(yargs: yargs.Argv) {
+    return yargs
+        .positional("host", {
+            type: "string",
+            default: "localhost",
+            describe: "Host to connect to."
+        })
+        .option("port", {
+            type: "number",
+            default: 23,
+            describe: "Port to connect to."
+        })
+}
+
+export function handler(argv: yargs.Arguments) {
+    const host = (argv.host as string) || "localhost"
+    const port = (argv.port as number) || 23
+
+    const socket = net.createConnection(port, host, () => {
+        if (process.stderr.isTTY) {
+            process.stderr.write(`Connecting to ${host}:${port}...\r\n`)
+        }
+        if (process.stdin.isTTY && process.stdin.setRawMode) {
+            process.stdin.setRawMode(true)
+        }
+        process.stdin.resume()
+
+        process.stdin.on("data", (chunk: Buffer | string) => {
+            if (socket.writable) {
+                socket.write(chunk)
+            }
+        })
+    })
+
+    socket.pipe(process.stdout)
+
+    socket.on("close", (hadError: boolean) => {
+        restoreStdin()
+        process.exit(hadError ? 1 : 0)
+    })
+
+    socket.on("error", (err: Error) => {
+        restoreStdin()
+        console.error(`Connection error: ${err.message}`)
+        process.exit(1)
+    })
+}
+
+const term: yargs.CommandModule = {
+    command,
+    describe,
+    builder,
+    handler
+}
+
+export default term

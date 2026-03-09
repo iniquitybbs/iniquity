@@ -4,6 +4,26 @@
  * @author ispyhumanfly
  * @license MIT
  */
+/*
+-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+ `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
+;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
+:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
+ `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
+%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$//$%$
+dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
+%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
+   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
+.      .  '$a,          .        a` .   'a          .   .             s` .  . .
+      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%//$
+==============================================================================
+   t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
+==============================================================================
+*/
+
 import { bbs, screen, UserAccessLevel } from "@iniquitybbs/core"
 
 // Set terminal resolution (132x37 is the Iniquity standard)
@@ -64,10 +84,18 @@ bbs.on(
 // Listen for other users connecting/disconnecting
 bbs.on("server:connect", (event) => {
     console.log(`[Server] Node ${event.data?.node} connected (${event.data?.totalConnections} online)`)
+    const n = event.data?.node
+    const total = event.data?.totalConnections
+    const msg = total != null ? `Node ${n} connected (${total} online)` : `Node ${n} connected`
+    bbs.snack(msg, { corner: "bottom-right", durationMs: 4000 })
 })
 
 bbs.on("server:disconnect", (event) => {
     console.log(`[Server] Node ${event.data?.node} disconnected (${event.data?.totalConnections} online)`)
+    const n = event.data?.node
+    const total = event.data?.totalConnections
+    const msg = total != null ? `Node ${n} disconnected (${total} online)` : `Node ${n} disconnected`
+    bbs.snack(msg, { corner: "bottom-right", durationMs: 4000 })
 })
 
 // ============================================================================
@@ -267,9 +295,8 @@ const showStatus = async () => {
 // Shared layout/art: single column of items on the left, ANSI image to the right
 const menuLayout = {
     art: "ep_main_menu.ans",
-    artCenter: "none" as const,
+    artCenter: "vertical" as const,
     artX: 38,
-    artY: 1,
     promptY: 27,
     layout: "single" as const,
     itemsX: 2,

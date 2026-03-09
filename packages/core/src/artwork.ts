@@ -4,6 +4,26 @@
  * @summary ANSI artwork rendering with SAUCE metadata support and CP437 encoding
  */
 
+/*
+-$a. ------------------ .a$ ---------------------------- %$!, ----------------%
+ `$¸   .%$$^¸$$aa.     .¸$`        .        .a$a$$.      `¸$%  $a$.        .
+-.aaa$ $$$$'- $$$$$.- $aaa. -.a%$^"$$aa -- .$$$$$'- $$a. $aaa. `$,$ ----------%
+;$$$$',a$a$  d$%$$$$$,'$$$$;$$$$$  $$$$$., $$%$$"  d$a$$ '$$$$; $$$   .a%$  $$a
+:$$$$;$$$$%; Z$$$$$$$$;$$$$:$$$$$. $$$$^$,;$$&$$   Z$$$$,;$$$$.a$$$a..$$$   $$$
+.$$$$ `$$$$.  $$$%$$$' $$$$.`$$$$  $$%$$$$ `$$$$.   $%$$$ $$$$""$$$" $$$$:  a$$
+ `$$$a.$$%$   $$$$$$';a$$$`  `¸$$aa$$$$&$': `$$$$a. $$$$'a$$$`.$$'$  $$$$;  $$$
+%-----.------ $$$$'--------------- $$%$$' -- `¸$$$$$%$¸' ---- $$¸$a. `"$&$$//$%$
+dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$&
+%--------- a`-----------.--------- $$¸' -----.------------.---------------- $$$
+   .      !a    . .    .      .   .:'   .  .                  .        .:.a$$$¸
+.      .  '$a,          .        a` .   'a          .   .             s` .  . .
+      .    ¸$Aa         .       !a       a!      .    .         ..   %s      .s
+   .         ¸¸'     . .        '$$Aa.aA$$'        . .               `!$%a.a%//$
+==============================================================================
+   t h e    i n i q u i t y    b u l l e t i n   b o a r d   s y s t e m
+==============================================================================
+*/
+
 import { IQOutput } from "./output"
 import { ANSI } from "./ansi"
 import { screen } from "./screen"
@@ -483,17 +503,16 @@ export class Artwork {
         let startX = explicitX ?? 1
         let startY = explicitY ?? 1
 
-        if (explicitX === undefined && explicitY === undefined && centerMode !== "none") {
-            const screenW = screen.width
-            const screenH = screen.height
-
+        // Apply centering per axis when that axis is not explicitly set
+        const screenW = screen.width
+        const screenH = screen.height
+        if (centerMode !== "none") {
             const shouldCenterH = centerMode === "both" || centerMode === "horizontal" || (centerMode === "auto" && artWidth < screenW)
             const shouldCenterV = centerMode === "both" || centerMode === "vertical" || (centerMode === "auto" && artHeight < screenH)
-
-            if (shouldCenterH) {
+            if (explicitX === undefined && shouldCenterH) {
                 startX = Math.max(1, screen.centerX(artWidth))
             }
-            if (shouldCenterV) {
+            if (explicitY === undefined && shouldCenterV) {
                 startY = Math.max(1, screen.centerY(artHeight))
             }
         }
