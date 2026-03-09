@@ -1,7 +1,5 @@
 # Interface: IQCursorOptions
 
-[Core](../modules/Core.md).IQCursorOptions
+[core](../modules/core.md).IQCursorOptions
 
-## Indexable
-
-▪ [s: `string`]: `any`
+Cursor control options

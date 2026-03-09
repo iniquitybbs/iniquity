@@ -7,51 +7,51 @@ Collected from various artpacks over the decades, and various incarnations of in
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [d\_iniq1](Archive.Textmode.md#d_iniq1)
 - [newuser1](Archive.Textmode.md#newuser1)
 - [sm\_iniq2](Archive.Textmode.md#sm_iniq2)
 - [we\_iniq3](Archive.Textmode.md#we_iniq3)
 
-## Enumeration members
+## Enumeration Members
 
 ### d\_iniq1
 
-• **d\_iniq1** = `"4d-iniq1.ans"`
+• **d\_iniq1** = ``"4d-iniq1.ans"``
 
 #### Defined in
 
-[archive/src/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/archive/src/index.ts#L51)
+[archive/src/index.ts:51](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/archive/src/index.ts#L51)
 
 ___
 
 ### newuser1
 
-• **newuser1** = `"newuser.ans"`
+• **newuser1** = ``"newuser.ans"``
 
 #### Defined in
 
-[archive/src/index.ts:52](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/archive/src/index.ts#L52)
+[archive/src/index.ts:52](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/archive/src/index.ts#L52)
 
 ___
 
 ### sm\_iniq2
 
-• **sm\_iniq2** = `"sm!iniq2.ans"`
+• **sm\_iniq2** = ``"sm!iniq2.ans"``
 
 This one.
 
 #### Defined in
 
-[archive/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/archive/src/index.ts#L49)
+[archive/src/index.ts:49](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/archive/src/index.ts#L49)
 
 ___
 
 ### we\_iniq3
 
-• **we\_iniq3** = `"we-iniq3.ans"`
+• **we\_iniq3** = ``"we-iniq3.ans"``
 
 #### Defined in
 
-[archive/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/archive/src/index.ts#L50)
+[archive/src/index.ts:50](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/archive/src/index.ts#L50)

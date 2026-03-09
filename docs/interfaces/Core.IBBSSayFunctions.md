@@ -1,14 +1,16 @@
 # Interface: IBBSSayFunctions
 
-[Core](../modules/Core.md).IBBSSayFunctions
+[core](../modules/core.md).IBBSSayFunctions
+
+Chainable functions returned by say/print
 
 ## Table of contents
 
 ### Methods
 
-- [gotoxy](Core.IBBSSayFunctions.md#gotoxy)
-- [pause](Core.IBBSSayFunctions.md#pause)
-- [wait](Core.IBBSSayFunctions.md#wait)
+- [gotoxy](core.IBBSSayFunctions.md#gotoxy)
+- [pause](core.IBBSSayFunctions.md#pause)
+- [wait](core.IBBSSayFunctions.md#wait)
 
 ## Methods
 
@@ -29,44 +31,44 @@
 
 #### Defined in
 
-[core/src/index.ts:268](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L268)
+[core/src/core.ts:50](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L50)
 
 ___
 
 ### pause
 
-▸ **pause**(`options?`): `void`
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | [`IQPauseOptions`](Core.IQPauseOptions.md) | [IQPauseOptions](Core.IQPauseOptions.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[core/src/index.ts:266](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L266)
-
-___
-
-### wait
-
-▸ **wait**(`options?`): `void`
+▸ **pause**(`optionsOrPrompt?`): `Promise`<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `number` \| [`IQWaitOptions`](Core.IQWaitOptions.md) |
+| `optionsOrPrompt?` | `string` \| [`IQPauseOptions`](core.IQPauseOptions.md) |
 
 #### Returns
 
-`void`
+`Promise`<`string`\>
 
 #### Defined in
 
-[core/src/index.ts:267](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L267)
+[core/src/core.ts:48](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L48)
+
+___
+
+### wait
+
+▸ **wait**(`ms?`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ms?` | `number` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[core/src/core.ts:49](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L49)

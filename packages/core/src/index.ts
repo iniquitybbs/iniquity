@@ -36,7 +36,9 @@ export {
     BBSChoiceOption,
     BBSBulletinOptions,
     SessionInfo,
-    ServerInfo
+    ServerInfo,
+    SnackTarget,
+    BBSSnackOptions
 } from "./bbs"
 
 /**
@@ -48,6 +50,11 @@ export { screen, Screen, TERM_WIDTH, TERM_HEIGHT } from "./screen"
  * Screen buffer management for popup overlays (advanced use)
  */
 export { screenBuffer, ScreenBuffer } from "./screen-buffer"
+
+/**
+ * Snack (toast) notification types and helpers
+ */
+export { showSnack, SnackPayload, SnackCorner } from "./snack"
 
 // ============================================================================
 // Runtime Layer - Advanced/Internal Components

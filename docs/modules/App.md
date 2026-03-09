@@ -2,14 +2,20 @@
 
 Iniquity App
 
-**`summary`** The super cool command line interface to Iniquity.
+**`Summary`**
 
-**`example`** Invoking via the shell
+The super cool command line interface to Iniquity.
+
+**`Example`**
+
+Invoking via the shell
 ```shell
 iq cli -h
 ```
 
-**`example`** Invoking via yargs programatically
+**`Example`**
+
+Invoking via yargs programatically
 ```typescript
 import CLI from "@iniquitybbs/cli"
 const cli: yargs.CommandModule = new CLI()
@@ -19,7 +25,7 @@ const cli: yargs.CommandModule = new CLI()
 
 ### Classes
 
-- [App](../classes/App.App-1.md)
+- [App](../classes/App.App.md)
 
 ### Variables
 
@@ -29,8 +35,8 @@ const cli: yargs.CommandModule = new CLI()
 
 ### default
 
-• **default**: `yargs.CommandModule`
+• `Const` **default**: `yargs.CommandModule`
 
 #### Defined in
 
-[iniquity/src/commands/term.ts:99](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/iniquity/src/commands/term.ts#L99)
+[iniquity/src/commands/term.ts:100](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/commands/term.ts#L100)

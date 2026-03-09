@@ -124,8 +124,24 @@ export class IQMenu {
     private parent: IQMenu | null = null
     private running: boolean = true
     private artworkFn?: (options?: { basepath?: string }) => { render: (opts: any) => Promise<any> }
+    private getRuntime?: () => {
+        processSnacks(): void
+        setPromptPosition(x: number, y: number): void
+        getLastRenderedMenuArtKey(): string | null
+        setLastRenderedMenuArtKey(key: string): void
+    }
 
-    constructor(options: IQMenuOptions, output: IQOutput, artworkFn?: (options?: { basepath?: string }) => { render: (opts: any) => Promise<any> }) {
+    constructor(
+        options: IQMenuOptions,
+        output: IQOutput,
+        artworkFn?: (options?: { basepath?: string }) => { render: (opts: any) => Promise<any> },
+        getRuntime?: () => {
+            processSnacks(): void
+            setPromptPosition(x: number, y: number): void
+            getLastRenderedMenuArtKey(): string | null
+            setLastRenderedMenuArtKey(key: string): void
+        }
+    ) {
         this.name = options.name
         this.description = options.description || ""
         this.commands = options.commands || {}
@@ -144,6 +160,7 @@ export class IQMenu {
         this.mouseHighlightFormat = options.mouseHighlightFormat
         this.output = output
         this.artworkFn = artworkFn
+        this.getRuntime = getRuntime
     }
 
     /**
@@ -269,6 +286,7 @@ export class IQMenu {
 
         while (true) {
             await events.processQueue()
+            this.getRuntime?.().processSnacks()
             const input = this.output.readKeyNonBlocking()
             if (input) {
                 const key = await this.handleInput(input)
@@ -380,21 +398,45 @@ export class IQMenu {
                     this.output.write(CTerm.mouseSgrModeSequence(true))
                     this.output.write(CTerm.mouseTrackingSequence(true))
                 }
-                // Clear screen
-                this.output.write(ANSI.clearScreen())
 
-                // Display artwork if specified
-                if (this.art && this.artworkFn) {
-                    const artInstance = this.artworkFn({ basepath: this.basepath })
-                    await artInstance.render({
-                        filename: this.art.filename,
-                        mode: this.art.mode || "line",
-                        speed: this.art.speed || 30,
-                        clearScreenBefore: this.art.clearScreenBefore,
-                        center: this.art.center,
-                        x: this.art.x,
-                        y: this.art.y
-                    })
+                const myArtKey = this.getArtKey()
+                const contentBounds = this.getContentBounds()
+                const sameArtAsLast =
+                    myArtKey !== null &&
+                    this.getRuntime?.().getLastRenderedMenuArtKey?.() === myArtKey &&
+                    contentBounds !== null
+
+                if (sameArtAsLast) {
+                    // Same artwork: redraw it without clearing (re-output line/char by line so full ANSI is on screen)
+                    if (this.art && this.artworkFn) {
+                        const artInstance = this.artworkFn({ basepath: this.basepath })
+                        await artInstance.render({
+                            filename: this.art.filename,
+                            mode: this.art.mode || "line",
+                            speed: 0,
+                            clearScreenBefore: false,
+                            center: this.art.center,
+                            x: this.art.x,
+                            y: this.art.y
+                        })
+                    }
+                    this.clearContentRows(this.getContentRows())
+                } else {
+                    // Full redraw: clear screen and optionally render artwork
+                    this.output.write(ANSI.clearScreen())
+                    if (this.art && this.artworkFn) {
+                        const artInstance = this.artworkFn({ basepath: this.basepath })
+                        await artInstance.render({
+                            filename: this.art.filename,
+                            mode: this.art.mode || "line",
+                            speed: this.art.speed || 30,
+                            clearScreenBefore: this.art.clearScreenBefore ?? true,
+                            center: this.art.center,
+                            x: this.art.x,
+                            y: this.art.y
+                        })
+                        if (myArtKey !== null) this.getRuntime?.().setLastRenderedMenuArtKey?.(myArtKey)
+                    }
                 }
 
                 // Display menu items if any
@@ -405,6 +447,7 @@ export class IQMenu {
                 // Position cursor for prompt if specified
                 if (this.promptX !== undefined && this.promptY !== undefined) {
                     this.output.write(ANSI.gotoxy(this.promptX, this.promptY))
+                    this.getRuntime?.().setPromptPosition?.(this.promptX, this.promptY)
                 }
 
                 // Show prompt and get input (uses writeMCI for pipe code support)
@@ -432,6 +475,54 @@ export class IQMenu {
                 this.output.write(CTerm.mouseTrackingSequence(false))
                 this.output.write(CTerm.mouseSgrModeSequence(false))
             }
+        }
+    }
+
+    /**
+     * Build art key for same-art skip comparison (filename|center|x|y).
+     */
+    private getArtKey(): string | null {
+        if (!this.art) return null
+        const a = this.art
+        return `${a.filename}|${a.center ?? ""}|${a.x ?? ""}|${a.y ?? ""}`
+    }
+
+    /**
+     * Bounding box (1-based Y) for menu items + prompt. Used to clear only that region when skipping art redraw.
+     * Returns the distinct sorted list of row numbers we draw on, so we don't clear rows that might be part of the art.
+     */
+    private getContentBounds(): { contentTopY: number; contentBottomY: number } | null {
+        const ys: number[] = []
+        this.items.forEach((item, index) => {
+            if (item.y !== undefined) ys.push(item.y!)
+            else if (this.itemsY !== undefined) ys.push(this.itemsY + index)
+        })
+        if (this.promptY !== undefined) ys.push(this.promptY)
+        if (ys.length === 0) return null
+        return { contentTopY: Math.min(...ys), contentBottomY: Math.max(...ys) }
+    }
+
+    /**
+     * Sorted distinct row numbers that have menu items or prompt. Clears only these rows when skipping art.
+     */
+    private getContentRows(): number[] {
+        const set = new Set<number>()
+        this.items.forEach((item, index) => {
+            if (item.y !== undefined) set.add(item.y!)
+            else if (this.itemsY !== undefined) set.add(this.itemsY! + index)
+        })
+        if (this.promptY !== undefined) set.add(this.promptY)
+        return Array.from(set).sort((a, b) => a - b)
+    }
+
+    /**
+     * Clear full-width lines for the given row numbers (1-based). Used when skipping art to avoid clearing artwork.
+     */
+    private clearContentRows(rows: number[]): void {
+        const w = this.output.getWidth()
+        for (const y of rows) {
+            this.output.write(ANSI.gotoxy(1, y))
+            this.output.write(" ".repeat(w))
         }
     }
 

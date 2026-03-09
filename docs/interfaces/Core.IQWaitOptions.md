@@ -1,19 +1,19 @@
 # Interface: IQWaitOptions
 
-[Core](../modules/Core.md).IQWaitOptions
+[core](../modules/core.md).IQWaitOptions
 
 ## Table of contents
 
 ### Properties
 
-- [milliseconds](Core.IQWaitOptions.md#milliseconds)
+- [ms](core.IQWaitOptions.md#ms)
 
 ## Properties
 
-### milliseconds
+### ms
 
-• `Optional` **milliseconds**: `number`
+• `Optional` **ms**: `number`
 
 #### Defined in
 
-[core/src/index.ts:582](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L582)
+[core/src/core.ts:79](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L79)

@@ -77,6 +77,57 @@ bbs.on("server:disconnect", (event) => {
 // One-line popup helper using bbs.popup()
 const comingSoon = () => bbs.popup("Coming Soon", "This feature is coming soon!")
 
+// AI chat: base URL for the Iniquity HTTP API (Ollama wrapper). Override with INIQ_AI_URL.
+const AI_API_BASE = process.env.INIQ_AI_URL || "http://localhost:8383"
+
+const showAIChat = async () => {
+    await bbs.popup("AI Chat", "Chat with the BBS AI (powered by Ollama).\n\nYou can ask questions or just say hi.\nType /q to quit the chat.", {
+        type: "info"
+    })
+    let chatting = true
+    while (chatting) {
+        const prompt = await bbs.ask("|14You |07» |15")
+        if (!prompt || prompt.trim().toUpperCase() === "/Q") {
+            chatting = false
+            break
+        }
+        try {
+            const res = await fetch(`${AI_API_BASE}/api/v1/ai`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ prompt: prompt.trim(), model: "gemma3:1b" })
+            })
+            const data = (await res.json()) as { response?: string; error?: string; detail?: string }
+            if (!res.ok) {
+                const detail = data.detail ? `\n\n${data.detail}` : ""
+                await bbs.popup(
+                    "AI Error",
+                    (data.error || `Request failed: ${res.status}`) + detail + "\n\nIf the error says \"Failed to reach Ollama\", ensure Ollama is running (e.g. ollama run gemma3:1b) and reachable at 127.0.0.1:11434."
+                )
+                continue
+            }
+            const text = data.response || "(no response)"
+            await bbs.popup("AI", text, { width: 70 })
+        } catch (err) {
+            const message = err instanceof Error ? err.message : String(err)
+            const isRefused = /ECONNREFUSED|fetch failed/i.test(message)
+            const hint = isRefused
+                ? `
+
+The AI API is not reachable at ${AI_API_BASE}.
+
+1) Ensure "iq server start" is running (it starts both Telnet and the HTTP API on port 8383).
+
+2) Test from another terminal:
+   curl -X POST http://localhost:8383/api/v1/ai -H "Content-Type: application/json" -d '{"prompt":"hi"}'
+   If that fails, the API is not listening.`
+                : "\n\nEnsure iq server start is running and Ollama is available (e.g. ollama run gemma3:1b)."
+            await bbs.popup("AI Error", `Could not reach the AI API: ${message}${hint}`)
+        }
+    }
+    bbs.say("|08Chat ended.|07")
+}
+
 // Simulate receiving a system announcement (for demo purposes)
 const simulateAnnouncement = () => {
     bbs.emit(
@@ -212,12 +263,25 @@ const showStatus = async () => {
 // Menu Definitions using declarative bbs.menu() API
 // Menu items are clickable with the mouse when the terminal supports SGR mouse (e.g. SyncTERM).
 // Use hotkeys: false for mouse-only menus, or mouseHighlightFormat for custom click highlight.
+// All menus use the same ANSI with a single column of items to the left of the image.
 // ============================================================================
+
+// Shared layout/art: single column of items on the left, ANSI image to the right
+const menuLayout = {
+    art: "ep_main_menu.ans",
+    artCenter: "none" as const,
+    artX: 38,
+    artY: 1,
+    promptY: 27,
+    layout: "single" as const,
+    itemsX: 2,
+    itemsY: 10
+}
 
 // Messages Menu
 bbs.menu("messages", {
+    ...menuLayout,
     prompt: "|14Messages |07» |15",
-    layout: "two-column",
     items: [
         { key: "1", label: "General Discussion", action: comingSoon },
         { key: "2", label: "BBS Discussion", action: comingSoon },
@@ -234,8 +298,8 @@ bbs.menu("messages", {
 
 // Files Menu
 bbs.menu("files", {
+    ...menuLayout,
     prompt: "|14Files |07» |15",
-    layout: "two-column",
     items: [
         { key: "1", label: "BBS Software & Utilities", action: comingSoon },
         { key: "2", label: "DOS Games & Apps", action: comingSoon },
@@ -254,8 +318,8 @@ bbs.menu("files", {
 
 // Bulletins Menu
 bbs.menu("bulletins", {
+    ...menuLayout,
     prompt: "|14Bulletins |07» |15",
-    layout: "two-column",
     items: [
         { key: "1", label: "System News & Announcements", action: comingSoon },
         { key: "2", label: "BBS Rules & Guidelines", action: comingSoon },
@@ -269,8 +333,8 @@ bbs.menu("bulletins", {
 
 // Users Menu
 bbs.menu("users", {
+    ...menuLayout,
     prompt: "|14Users |07» |15",
-    layout: "single",
     items: [
         { key: "L", label: "List All Users", action: showUserList },
         { key: "W", label: "Who's Online", action: showWhosOnline },
@@ -279,11 +343,12 @@ bbs.menu("users", {
     ]
 })
 
-// Chat Menu - with event-driven features
+// Chat Menu - with event-driven features and AI chat
 bbs.menu("chat", {
+    ...menuLayout,
     prompt: "|14Chat |07» |15",
-    layout: "two-column",
     items: [
+        { key: "A", label: "AI Chat", action: showAIChat },
         { key: "1", label: "Page the SysOp", action: comingSoon },
         { key: "2", label: "Multi-Node Chat", action: comingSoon },
         { key: "3", label: "Private Message", action: comingSoon },
@@ -295,8 +360,8 @@ bbs.menu("chat", {
 
 // Settings Menu
 bbs.menu("settings", {
+    ...menuLayout,
     prompt: "|14Settings |07» |15",
-    layout: "two-column",
     items: [
         { key: "1", label: "Change Password", action: comingSoon },
         { key: "2", label: "Edit User Profile", action: comingSoon },
@@ -309,8 +374,8 @@ bbs.menu("settings", {
 
 // Info Menu - with event demos and data-driven artwork
 bbs.menu("info", {
+    ...menuLayout,
     prompt: "|14Info |07» |15",
-    layout: "single",
     items: [
         { key: "S", label: "User Status (Data Demo)", action: showStatus },
         { key: "V", label: "Version & Features", action: comingSoon },
@@ -319,18 +384,10 @@ bbs.menu("info", {
     ]
 })
 
-// Main Menu - with ANSI art (artwork has built-in positioning via leading spaces)
-// Column positions are set to flank the artwork: left column at X=30, right column at X=90
+// Main Menu - same layout config as all submenus (art has built-in positioning)
 bbs.menu("main", {
-    art: "ep_main_menu.ans",
-    artCenter: "none", // Artwork has built-in positioning, don't add extra centering
+    ...menuLayout,
     prompt: "|14Main Menu |07» |15",
-    promptY: 27,
-    layout: "two-column",
-    col1X: 30, // Left column X position (flanking left side of artwork)
-    col1Y: 10, // Starting Y position for left column
-    col2X: 90, // Right column X position (flanking right side of artwork)
-    col2Y: 10, // Starting Y position for right column
     items: [
         { key: "M", label: "Message Bases", goto: "messages" },
         { key: "F", label: "File Areas", goto: "files" },
@@ -400,8 +457,20 @@ bbs.start(async () => {
     }
 
     // Show main menu (handles all navigation automatically)
-    // The menu event loop will process any queued events between key presses
+    // The menu event loop will process any queued events between key presses.
+    // Periodic "Welcome to Iniquity!" snack is driven by events so it runs in the
+    // menu loop context (no raw timer -> bbs.snack).
+    const welcomeSnackHandler = () => {
+        bbs.snack("Welcome to Iniquity!", { corner: "bottom-right", durationMs: 3000 })
+    }
+    bbs.on("snack:welcome", welcomeSnackHandler)
+    const welcomeInterval = setInterval(() => bbs.emit("snack:welcome"), 60_000)
+    setTimeout(() => bbs.emit("snack:welcome"), 500)
+
     await bbs.showMenu("main")
+
+    clearInterval(welcomeInterval)
+    bbs.off("snack:welcome", welcomeSnackHandler)
 
     // Logout current user if logged in
     const currentUser = bbs.getCurrentUser()

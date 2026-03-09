@@ -28,6 +28,8 @@
         "@types/copyfiles": "^2.4.1",
         "@types/dotenv": "^8.2.0",
         "@types/hjson": "^2.4.3",
+        "@types/koa": "^2.15.0",
+        "@types/koa-bodyparser": "^4.3.12",
         "@types/node": "^18.18.4",
         "@types/yargs": "17.0.10",
         "cpy-cli": "^4.1.0",
@@ -48,6 +50,8 @@
         "docker-compose": "^0.23.17",
         "dotenv": "^16.0.0",
         "hjson": "^3.2.2",
+        "koa": "^2.15.0",
+        "koa-bodyparser": "^4.3.0",
         "tsx": "^4.7.0",
         "yargs": "17.4.1"
     },

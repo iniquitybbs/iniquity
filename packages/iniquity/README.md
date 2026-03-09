@@ -113,28 +113,35 @@ iq init
 
 ### `iq server start`
 
-Start the telnet server and run your BBS.
+Start the Telnet server and the built-in HTTP API in one process. No Redis or external API server required.
 
 ```bash
 iq server start [options]
 ```
 
 **Options:**
-- `--port <number>` - Port to listen on (default: 2023)
-- `--host <string>` - Host to bind to (default: localhost)
-- `--watch` - Auto-reload on file changes
+- `--port <number>` - Telnet port (default: 23)
 - `--program <file>` - BBS program to run (default: iniquity.ts)
+- `--watch` - Auto-reload on file changes (see Development Workflow)
+- `--install` - Install BBS app dependencies before start
+
+**Servers started:**
+- **Telnet** – BBS connections on `--port` (default 23).
+- **HTTP API** – Listens on port **8383** (override with `IQ_API_PORT`). Provides `POST /api/v1/ai` for AI (Ollama) and `GET /api/v1/health`. Set `INIQ_AI_URL` in your BBS if the API is elsewhere.
+
+**Optional for AI chat:**
+- **Ollama** – For the Euphoria template’s “AI Chat”, run Ollama locally and pull a model: `ollama run gemma3:1b`. The API proxies requests to `http://127.0.0.1:11434` (override with `OLLAMA_HOST`).
 
 **Examples:**
 
 ```bash
-# Start with defaults
+# Start with defaults (Telnet + API)
 iq server start
 
 # Start with hot reload
 iq server start --watch
 
-# Start on custom port
+# Start Telnet on custom port
 iq server start --port 8023
 
 # Run specific program

@@ -2,14 +2,20 @@
 
 Iniquity Init
 
-**`summary`** The super cool command line interface to Iniquity.
+**`Summary`**
 
-**`example`** Invoking via the shell
+The super cool command line interface to Iniquity.
+
+**`Example`**
+
+Invoking via the shell
 ```shell
 iq init --help
 ```
 
-**`example`** Invoking via yargs programatically
+**`Example`**
+
+Invoking via yargs programatically
 ```typescript
 import Init from "@iniquitybbs/iniquity/dist/src/commands/init"
 const init: yargs.CommandModule = new Init()
@@ -19,7 +25,7 @@ const init: yargs.CommandModule = new Init()
 
 ### Classes
 
-- [Init](../classes/Init.Init-1.md)
+- [Init](../classes/Init.Init.md)
 
 ### Variables
 
@@ -29,8 +35,8 @@ const init: yargs.CommandModule = new Init()
 
 ### default
 
-• **default**: `yargs.CommandModule`
+• `Const` **default**: `yargs.CommandModule`
 
 #### Defined in
 
-[iniquity/src/commands/init.ts:86](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/iniquity/src/commands/init.ts#L86)
+[iniquity/src/commands/init.ts:107](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/commands/init.ts#L107)

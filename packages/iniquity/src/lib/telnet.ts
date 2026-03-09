@@ -81,7 +81,7 @@ export class TelnetServer {
                 idleSeconds: idleSeconds,
                 terminalType: session.info.terminalType,
                 location: undefined, // Could be set from IP geolocation
-                username: undefined // Set when user logs in
+                username: session.username
             }
         })
 
@@ -114,6 +114,23 @@ export class TelnetServer {
 
                 // Register server info provider with the BBS API
                 bbs.setServerInfoProvider(() => this.getBBSServerInfo())
+
+                // Deliver snacks to sessions by target
+                events.on("snack:push", (event) => {
+                    const data = event.data as { message: string; corner: string; durationMs: number; target?: "current" | "broadcast" | { node: number } | { user: string } }
+                    if (!data?.message) return
+                    const payload = { message: data.message, corner: data.corner ?? "bottom-right", durationMs: data.durationMs ?? 3000 }
+                    const target = data.target ?? "broadcast"
+                    if (target === "broadcast") {
+                        this.activeSessions.forEach((s) => s.pushSnack(payload))
+                    } else if (typeof target === "object" && "node" in target) {
+                        const session = Array.from(this.activeSessions).find((s) => s.nodeNumber === target.node)
+                        if (session) session.pushSnack(payload)
+                    } else if (typeof target === "object" && "user" in target) {
+                        const sessions = Array.from(this.activeSessions).filter((s) => s.username === target.user)
+                        sessions.forEach((s) => s.pushSnack(payload))
+                    }
+                })
 
                 resolve()
             })
@@ -168,6 +185,10 @@ export class TelnetServer {
 
         const runtime = new Runtime(session)
         setGlobalRuntime(runtime)
+        session.setTickCallback(async () => {
+            await events.processQueue()
+            runtime.processSnacks()
+        })
 
         socket.on("close", () => {
             console.log(`[Node ${nodeNumber}] Connection closed: ${address}`)

@@ -49,12 +49,18 @@ export class Session implements IQOutput {
     private pauseAborted: boolean = false
     private pendingInputQueue: string[] = [] // Queue for non-blocking reads
     private escapeSequenceBuffer: number[] = [] // Incomplete escape sequence across packets
+    private snackQueue: { message: string; corner: string; durationMs: number }[] = []
+    /** Optional callback run every 10ms while waiting for a key (e.g. processQueue + processSnacks). Serialized, no overlap. */
+    private tickCallback?: () => Promise<void>
 
     /** Sentinel for mouse events in the queue (followed by "x:y") */
     static readonly MOUSE_PREFIX = "\u0000MOUSE:"
 
     /** Node number assigned by the server */
     public nodeNumber: number = 0
+
+    /** Username when logged in (set by BBS layer for snack target by user) */
+    public username: string | undefined = undefined
 
     /** Connection timestamp */
     public connectedAt: Date = new Date()
@@ -85,8 +91,8 @@ export class Session implements IQOutput {
     }
 
     private setupSocket() {
-        this.socket.on("data", (data) => {
-            this.handleData(data)
+        this.socket.on("data", (data: Buffer | string) => {
+            this.handleData(Buffer.isBuffer(data) ? data : Buffer.from(data, "binary"))
         })
 
         this.negotiate()
@@ -381,13 +387,37 @@ export class Session implements IQOutput {
     }
 
     /**
-     * Wait for any key press (does not echo)
+     * Wait for any key press (does not echo).
+     * While waiting, if a tick callback is set, runs it every 10ms (serialized, no overlap).
      */
     async waitKey(): Promise<string> {
+        let intervalId: ReturnType<typeof setInterval> | undefined
+        let tickInProgress = false
+        if (this.tickCallback) {
+            const runTick = () => {
+                if (tickInProgress) return
+                tickInProgress = true
+                this.tickCallback!().finally(() => {
+                    tickInProgress = false
+                })
+            }
+            intervalId = setInterval(runTick, 10)
+        }
         return new Promise((resolve) => {
             this.inputMode = "key"
-            this.inputCallback = (char: string) => resolve(char)
+            this.inputCallback = (char: string) => {
+                if (intervalId !== undefined) clearInterval(intervalId)
+                resolve(char)
+            }
         })
+    }
+
+    /**
+     * Set the callback run every 10ms while waitKey() is active (e.g. processQueue + processSnacks).
+     * Used so snacks and events are processed when waiting in popup/pause/choice etc.
+     */
+    setTickCallback(cb: () => Promise<void>): void {
+        this.tickCallback = cb
     }
 
     /**
@@ -534,6 +564,18 @@ export class Session implements IQOutput {
     clearInputQueue(): void {
         this.pendingInputQueue = []
         this.escapeSequenceBuffer = []
+    }
+
+    pushSnack(payload: { message: string; corner: string; durationMs: number }): void {
+        this.snackQueue.push(payload)
+    }
+
+    getNextSnack(): { message: string; corner: string; durationMs: number } | null {
+        return this.snackQueue.shift() ?? null
+    }
+
+    setUsername(handle: string | undefined): void {
+        this.username = handle
     }
 
     /**

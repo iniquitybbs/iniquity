@@ -54,6 +54,21 @@ export interface IQOutput {
      */
     clearInputQueue?(): void
 
+    /**
+     * Push a snack onto the session queue (optional; Session implements it).
+     */
+    pushSnack?(payload: { message: string; corner: string; durationMs: number }): void
+
+    /**
+     * Pop and return the next snack from the session queue (optional; Session implements it).
+     */
+    getNextSnack?(): { message: string; corner: string; durationMs: number } | null
+
+    /**
+     * Set the session username for snack targeting by user (optional; Session implements it).
+     */
+    setUsername?(handle: string | undefined): void
+
     // MCI processing
     getMCIProcessor(): MCIProcessor
     processMCI(text: string): string

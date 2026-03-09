@@ -38,6 +38,7 @@ import * as path from "path"
 import fs from "fs"
 import { exec } from "child_process"
 import { TelnetServer } from "../lib/telnet"
+import { startApiServer } from "../lib/api-server"
 
 import copyfiles from "copyfiles"
 import * as dotenv from "dotenv"
@@ -125,50 +126,61 @@ export class Server implements yargs.CommandModule {
             }
         }
 
-        switch (argv.action) {
-            case "start":
+        const action = (argv.action ?? argv.start) as string | undefined
+        switch (action) {
+            case "start": {
                 const port = (argv.port as number) || 23
                 const programPath = (argv.program as string) || "./iniquity.ts"
 
-                // Find the actual program path
+                // Resolve path to the BBS program
                 let resolvedPath = programPath
                 if (!path.isAbsolute(programPath)) {
-                    // Check current directory
                     if (fs.existsSync(programPath)) {
                         resolvedPath = path.resolve(programPath)
-                    }
-                    // Check src/example directory
-                    else if (fs.existsSync(path.join("src", "example", "iniquity.ts"))) {
+                    } else if (fs.existsSync(path.join("src", "example", "iniquity.ts"))) {
                         resolvedPath = path.resolve("src", "example", "iniquity.ts")
-                    }
-                    // Check packages/iniquity/src/example
-                    else if (fs.existsSync(path.join("packages", "iniquity", "src", "example", "iniquity.ts"))) {
+                    } else if (fs.existsSync(path.join("packages", "iniquity", "src", "example", "iniquity.ts"))) {
                         resolvedPath = path.resolve("packages", "iniquity", "src", "example", "iniquity.ts")
+                    } else if (fs.existsSync(path.join("packages", "templates", "src", "euphoria", "iniquity.ts"))) {
+                        resolvedPath = path.resolve("packages", "templates", "src", "euphoria", "iniquity.ts")
                     }
                 }
 
-                this.telnetServer = new TelnetServer({
-                    port: port,
-                    programPath: resolvedPath
-                })
-
-                try {
-                    await this.telnetServer.start()
-
-                    // Keep process alive
-                    process.on("SIGINT", async () => {
-                        console.log("\nShutting down...")
-                        if (this.telnetServer) {
-                            await this.telnetServer.stop()
-                        }
-                        process.exit(0)
-                    })
-                } catch (err) {
-                    console.error("Failed to start server:", err)
+                if (!fs.existsSync(resolvedPath)) {
+                    console.error("[iniquity] Program not found:", resolvedPath)
+                    console.error("  Run from a directory with iniquity.ts or pass --program <path>")
                     process.exit(1)
                 }
 
+                const apiPort = (() => {
+                    const raw = process.env.IQ_API_PORT
+                    if (raw === undefined || raw === "") return 8383
+                    const n = parseInt(raw, 10)
+                    return Number.isFinite(n) ? n : 8383
+                })()
+                const httpServer = startApiServer({ port: apiPort })
+                console.log("[iniquity] AI API base URL: http://localhost:" + apiPort)
+
+                this.telnetServer = new TelnetServer({
+                    port,
+                    programPath: resolvedPath
+                })
+
+                const onExit = async () => {
+                    console.log("\nShutting down...")
+                    httpServer.close()
+                    if (this.telnetServer) {
+                        await this.telnetServer.stop()
+                        this.telnetServer = null
+                    }
+                    process.exit(0)
+                }
+                process.on("SIGINT", onExit)
+                process.on("SIGTERM", onExit)
+
+                await this.telnetServer.start()
                 break
+            }
 
             case "stop":
                 if (this.telnetServer) {
@@ -186,6 +198,11 @@ export class Server implements yargs.CommandModule {
                 } else {
                     console.log("Server is not running")
                 }
+                break
+
+            default:
+                console.error("[iniquity] Unknown action:", action ?? "(none)")
+                console.error("  Usage: iq server start | stop | restart")
                 break
         }
     }

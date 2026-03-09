@@ -2,9 +2,12 @@
 
 Iniquity Archive
 
-**`summary`** A growing collection of all things Iniquity. Past and present. For use in helping build your bbs.
+**`Summary`**
 
-**`example`**
+A growing collection of all things Iniquity. Past and present. For use in helping build your bbs.
+
+**`Example`**
+
 ```typescript
 import { Iniquity } from "@iniquitybbs/core"
 import { Assets } from "@iniquitybbs/assets"
@@ -27,7 +30,7 @@ iq.hangup()
 
 ### Classes
 
-- [Archive](../classes/Archive.Archive-1.md)
+- [Archive](../classes/Archive.Archive.md)
 
 ### Interfaces
 

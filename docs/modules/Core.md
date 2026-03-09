@@ -1,234 +1,69 @@
-# Module: Core
+# Module: core
 
-Iniquity Core
+Iniquity Core Runtime
 
-**`summary`** This is the Iniquity core bbs library. It's the foundation of any Iniquity application.
+**`Summary`**
 
-**`example`**
-```typescript
-import BBS from "@iniquitybbs/core"
-
-const mybbs = new BBS()
-
-myIniquity.artwork({ filename: "./path/to/textfile.ans" }).render({ speed: 10 })
-
-myIniquity.say("Pretty cool, right???".newlines(2).color("bright cyan").center()).pause()
-
-myIniquity.disconnect()
-```
+IQ base class and Runtime for BBS applications
 
 ## Table of contents
 
 ### References
 
-- [IQCoreAssets](Core.md#iqcoreassets)
-
-### Namespaces
-
-- [IQ](Core.IQ.md)
-
-### Enumerations
-
-- [IQFrameColorOptions](../enums/Core.IQFrameColorOptions.md)
-- [IQModuleACLS](../enums/Core.IQModuleACLS.md)
+- [Artwork](core.md#artwork)
 
 ### Classes
 
-- [Artwork](../classes/Core.Artwork.md)
-- [Group](../classes/Core.Group.md)
-- [IQ](../classes/Core.IQ-1.md)
-- [IQBaseConfig](../classes/Core.IQBaseConfig.md)
-- [IQFrame](../classes/Core.IQFrame.md)
-- [IQMenu](../classes/Core.IQMenu.md)
-- [Iniquity](../classes/Core.Iniquity.md)
-- [Network](../classes/Core.Network.md)
-- [Text](../classes/Core.Text.md)
-- [User](../classes/Core.User.md)
+- [Runtime](../classes/core.Runtime.md)
 
 ### Interfaces
 
-- [IBBSPrintFunctions](../interfaces/Core.IBBSPrintFunctions.md)
-- [IBBSSayFunctions](../interfaces/Core.IBBSSayFunctions.md)
-- [IMenuCommand](../interfaces/Core.IMenuCommand.md)
-- [IMenuCommands](../interfaces/Core.IMenuCommands.md)
-- [IQArtworkOptions](../interfaces/Core.IQArtworkOptions.md)
-- [IQArtworkRenderFunctions](../interfaces/Core.IQArtworkRenderFunctions.md)
-- [IQArtworkRenderOptions](../interfaces/Core.IQArtworkRenderOptions.md)
-- [IQCursorChainableMethods](../interfaces/Core.IQCursorChainableMethods.md)
-- [IQCursorOptions](../interfaces/Core.IQCursorOptions.md)
-- [IQFrameOptions](../interfaces/Core.IQFrameOptions.md)
-- [IQMenuLoopMessageResponse](../interfaces/Core.IQMenuLoopMessageResponse.md)
-- [IQMenuLoopOptions](../interfaces/Core.IQMenuLoopOptions.md)
-- [IQMenuOptions](../interfaces/Core.IQMenuOptions.md)
-- [IQMenuPromptFunctions](../interfaces/Core.IQMenuPromptFunctions.md)
-- [IQMenuPromptOptions](../interfaces/Core.IQMenuPromptOptions.md)
-- [IQModuleOptions](../interfaces/Core.IQModuleOptions.md)
-- [IQModuleRuntimeOptions](../interfaces/Core.IQModuleRuntimeOptions.md)
-- [IQPauseOptions](../interfaces/Core.IQPauseOptions.md)
-- [IQPrintOptions](../interfaces/Core.IQPrintOptions.md)
-- [IQReactorOptions](../interfaces/Core.IQReactorOptions.md)
-- [IQStringUtils](../interfaces/Core.IQStringUtils.md)
-- [IQTermInfoObject](../interfaces/Core.IQTermInfoObject.md)
-- [IQWaitOptions](../interfaces/Core.IQWaitOptions.md)
-- [IUserOptions](../interfaces/Core.IUserOptions.md)
-
-### Variables
-
-- [default](Core.md#default)
+- [IAlertOptions](../interfaces/core.IAlertOptions.md)
+- [IBBSPrintFunctions](../interfaces/core.IBBSPrintFunctions.md)
+- [IBBSSayFunctions](../interfaces/core.IBBSSayFunctions.md)
+- [IQCursorChainableMethods](../interfaces/core.IQCursorChainableMethods.md)
+- [IQCursorOptions](../interfaces/core.IQCursorOptions.md)
+- [IQPauseOptions](../interfaces/core.IQPauseOptions.md)
+- [IQSayOptions](../interfaces/core.IQSayOptions.md)
+- [IQTermInfoObject](../interfaces/core.IQTermInfoObject.md)
+- [IQWaitOptions](../interfaces/core.IQWaitOptions.md)
 
 ### Functions
 
-- [IQModule](Core.md#iqmodule)
-- [IQModuleRuntime](Core.md#iqmoduleruntime)
-- [IQReactor](Core.md#iqreactor)
-- [cursor](Core.md#cursor)
-- [gotoxy](Core.md#gotoxy)
-- [pause](Core.md#pause)
-- [randomAsset](Core.md#randomasset)
-- [say](Core.md#say)
-- [wait](Core.md#wait)
+- [getGlobalRuntime](core.md#getglobalruntime)
+- [setGlobalRuntime](core.md#setglobalruntime)
 
 ## References
 
-### IQCoreAssets
+### Artwork
 
-• **IQCoreAssets**: `Object`
-
-#### Defined in
-
-[core/src/index.ts:1345](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1345)
-
-## Variables
-
-### default
-
-• **default**: [`Iniquity`](../classes/Core.Iniquity.md)
-
-The globally scoped intance of iniquity
-
-#### Defined in
-
-[core/src/index.ts:1296](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1296)
+Re-exports [Artwork](../classes/core_artwork.Artwork.md)
 
 ## Functions
 
-### IQModule
+### getGlobalRuntime
 
-▸ **IQModule**(`options`): (`constructor`: `Function`) => `void`
-
-An experimental Iniquity module decorator for bbs modules
-
-**`author`** ispyhumanfly
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | [`IQModuleOptions`](../interfaces/Core.IQModuleOptions.md) |
+▸ **getGlobalRuntime**(): [`Runtime`](../classes/core.Runtime.md)
 
 #### Returns
 
-`fn`
-
-▸ (`constructor`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `constructor` | `Function` |
-
-##### Returns
-
-`void`
+[`Runtime`](../classes/core.Runtime.md)
 
 #### Defined in
 
-[core/src/index.ts:1315](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1315)
+[core/src/core.ts:648](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L648)
 
 ___
 
-### IQModuleRuntime
+### setGlobalRuntime
 
-▸ **IQModuleRuntime**(`options?`): `any`
-
-The IQ script executed as part of a module.
+▸ **setGlobalRuntime**(`runtime`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`IQModuleRuntimeOptions`](../interfaces/Core.IQModuleRuntimeOptions.md) |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[core/src/index.ts:1335](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1335)
-
-___
-
-### IQReactor
-
-▸ **IQReactor**(`dataObj`): [`IQReactorOptions`](../interfaces/Core.IQReactorOptions.md)
-
-Iniquity reactive data model
-
-**`see`** https://www.monterail.com/blog/2016/how-to-build-a-reactive-engine-in-javascript-part-1-observable-objects
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `dataObj` | `any` |
-
-#### Returns
-
-[`IQReactorOptions`](../interfaces/Core.IQReactorOptions.md)
-
-#### Defined in
-
-[core/src/index.ts:102](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L102)
-
-___
-
-### cursor
-
-▸ **cursor**(`options?`): [`IQCursorChainableMethods`](../interfaces/Core.IQCursorChainableMethods.md)
-
-A pretty cool method for working with cursor movement.
-
-**`example`**
-cursor().down(10).up(12).down().up().down().left(1).right(20).down(12).up(14)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`IQCursorOptions`](../interfaces/Core.IQCursorOptions.md) |
-
-#### Returns
-
-[`IQCursorChainableMethods`](../interfaces/Core.IQCursorChainableMethods.md)
-
-#### Defined in
-
-[core/src/index.ts:1144](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1144)
-
-___
-
-### gotoxy
-
-▸ **gotoxy**(`x`, `y`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
+| `runtime` | [`Runtime`](../classes/core.Runtime.md) |
 
 #### Returns
 
@@ -236,93 +71,4 @@ ___
 
 #### Defined in
 
-[core/src/index.ts:1148](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1148)
-
-___
-
-### pause
-
-▸ **pause**(`options?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`IQPauseOptions`](../interfaces/Core.IQPauseOptions.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[core/src/index.ts:1152](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1152)
-
-___
-
-### randomAsset
-
-▸ **randomAsset**(`assets`): `string`
-
-Return a single asset random selected from an array of IQCoreAssets
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `assets` | `string`[] | An array of IQCoreAssets to choose from |
-
-#### Returns
-
-`string`
-
-The randomly selected asset
-
-#### Defined in
-
-[core/src/index.ts:1424](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1424)
-
-___
-
-### say
-
-▸ **say**(`options?`): [`IBBSSayFunctions`](../interfaces/Core.IBBSSayFunctions.md)
-
-Say whatever you want, but to the screen
-
-**`example`**
-say("are we making it here?").pause()
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | `any` |
-
-#### Returns
-
-[`IBBSSayFunctions`](../interfaces/Core.IBBSSayFunctions.md)
-
-#### Defined in
-
-[core/src/index.ts:1122](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1122)
-
-___
-
-### wait
-
-▸ **wait**(`options?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | `number` \| [`IQWaitOptions`](../interfaces/Core.IQWaitOptions.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[core/src/index.ts:1155](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L1155)
+[core/src/core.ts:644](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L644)

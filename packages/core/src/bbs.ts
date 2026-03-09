@@ -15,6 +15,7 @@ import { ANSI } from "./ansi"
 import { events, IQEventHandler, IQEventOptions } from "./events"
 import { IQUser, IQUserList, IUserOptions, UserAccessLevel } from "./user"
 import { IQGroup, IQGroupList, IGroupOptions } from "./group"
+import type { SnackCorner, SnackPayload } from "./snack"
 
 /**
  * Menu item definition for declarative menus
@@ -100,6 +101,19 @@ export interface BBSPopupOptions {
     width?: number
     /** Message to show when data is empty (for dataPopup) */
     emptyMessage?: string
+}
+
+/** Target for snack delivery: current session, broadcast, or specific node/user */
+export type SnackTarget = "current" | "broadcast" | { node: number } | { user: string }
+
+/** Options for snack (toast) notifications */
+export interface BBSSnackOptions {
+    /** Corner of the terminal (default 'bottom-right') */
+    corner?: SnackCorner
+    /** Duration in ms before the snack fades (default 3000) */
+    durationMs?: number
+    /** Who receives the snack (default 'current') */
+    target?: SnackTarget
 }
 
 /**
@@ -442,6 +456,7 @@ class BBS {
      */
     async goodbye(artFile: string): Promise<void> {
         const runtime = getGlobalRuntime()
+        runtime.clearLastRenderedMenuArtKey()
         const art = runtime.artwork({ basepath: this.basepath })
 
         await art.render({
@@ -707,6 +722,9 @@ class BBS {
      */
     setCurrentUser(user: IQUser | null): void {
         this.currentUser = user
+        const handle = user?.getRawData()?.handle
+        const output = getGlobalRuntime().getOutput()
+        output.setUsername?.(handle ?? undefined)
     }
 
     /**
@@ -737,6 +755,9 @@ class BBS {
         const runtime = getGlobalRuntime()
         const width = 50
         const height = 10
+
+        // Clear screen so the form is drawn on a clean canvas (avoids shift after choice menu)
+        runtime.getOutput().write(ANSI.clearScreen())
 
         const form = runtime.frame({
             x: screen.centerX(width),
@@ -800,6 +821,9 @@ class BBS {
         const runtime = getGlobalRuntime()
         const width = 55
         const height = 16
+
+        // Clear screen so the form is drawn on a clean canvas (avoids shift after choice menu)
+        runtime.getOutput().write(ANSI.clearScreen())
 
         const form = runtime.frame({
             x: screen.centerX(width),
@@ -1024,6 +1048,52 @@ class BBS {
         const message = header + "\n" + formattedLines.join("\n")
 
         await this.popup(title, message, options)
+    }
+
+    /**
+     * Show a snack (toast) notification in a corner of the terminal.
+     * Use target 'current' (default), 'broadcast', { node: n }, or { user: handle }.
+     */
+    snack(message: string, options?: BBSSnackOptions): void {
+        const corner = options?.corner ?? "bottom-right"
+        const durationMs = options?.durationMs ?? 3000
+        const target = options?.target ?? "current"
+        const payload: SnackPayload & { target?: SnackTarget } = {
+            message,
+            corner,
+            durationMs,
+            target
+        }
+
+        if (target === "current") {
+            const runtime = getGlobalRuntime()
+            const output = runtime.getOutput()
+            output.pushSnack?.({ message, corner, durationMs })
+            runtime.processSnacks()
+        } else {
+            events.emit("snack:push", payload)
+        }
+    }
+
+    /**
+     * Show a data-driven snack (e.g. "3 new messages") in a corner.
+     */
+    dataSnack<T>(
+        title: string,
+        items: T[],
+        formatter: (item: T, index: number) => string,
+        options?: BBSSnackOptions
+    ): void {
+        if (!items || items.length === 0) {
+            this.snack(`${title}: 0 items`, options)
+            return
+        }
+        const line =
+            items.length === 1
+                ? formatter(items[0], 0)
+                : `|15${items.length}|07 ${title}: ${items.length} items`
+        const message = `|14${title}|07\n${line}`
+        this.snack(message, options)
     }
 
     // =========================================================================

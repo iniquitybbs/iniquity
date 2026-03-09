@@ -5,35 +5,23 @@
 ### References
 
 - [init](iniquity_src_commands.md#init)
-- [runtime](iniquity_src_commands.md#runtime)
+- [server](iniquity_src_commands.md#server)
 - [term](iniquity_src_commands.md#term)
 
 ## References
 
 ### init
 
-• **init**: `Object`
-
-#### Defined in
-
-[iniquity/src/commands/index.ts:5](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/iniquity/src/commands/index.ts#L5)
+Renames and re-exports [default](Init.md#default)
 
 ___
 
-### runtime
+### server
 
-• **runtime**: `Object`
-
-#### Defined in
-
-[iniquity/src/commands/index.ts:5](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/iniquity/src/commands/index.ts#L5)
+Renames and re-exports [default](iniquity_src_commands_server.md#default)
 
 ___
 
 ### term
 
-• **term**: `Object`
-
-#### Defined in
-
-[iniquity/src/commands/index.ts:5](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/iniquity/src/commands/index.ts#L5)
+Renames and re-exports [default](App.md#default)

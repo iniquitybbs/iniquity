@@ -1,106 +1,122 @@
 # Interface: IQCursorChainableMethods
 
-[Core](../modules/Core.md).IQCursorChainableMethods
+[core](../modules/core.md).IQCursorChainableMethods
 
 ## Table of contents
 
-### Properties
-
-- [errors](Core.IQCursorChainableMethods.md#errors)
-
 ### Methods
 
-- [down](Core.IQCursorChainableMethods.md#down)
-- [left](Core.IQCursorChainableMethods.md#left)
-- [right](Core.IQCursorChainableMethods.md#right)
-- [up](Core.IQCursorChainableMethods.md#up)
-
-## Properties
-
-### errors
-
-• **errors**: []
-
-#### Defined in
-
-[core/src/index.ts:575](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L575)
+- [down](core.IQCursorChainableMethods.md#down)
+- [hide](core.IQCursorChainableMethods.md#hide)
+- [left](core.IQCursorChainableMethods.md#left)
+- [right](core.IQCursorChainableMethods.md#right)
+- [show](core.IQCursorChainableMethods.md#show)
+- [up](core.IQCursorChainableMethods.md#up)
 
 ## Methods
 
 ### down
 
-▸ **down**(`rows?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+▸ **down**(`n?`): [`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `rows?` | `number` |
+| `n?` | `number` |
 
 #### Returns
 
-[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+[`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[core/src/index.ts:577](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L577)
+[core/src/core.ts:91](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L91)
+
+___
+
+### hide
+
+▸ **hide**(): [`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
+
+#### Returns
+
+[`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
+
+#### Defined in
+
+[core/src/core.ts:94](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L94)
 
 ___
 
 ### left
 
-▸ **left**(`cols?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+▸ **left**(`n?`): [`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `cols?` | `number` |
+| `n?` | `number` |
 
 #### Returns
 
-[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+[`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[core/src/index.ts:578](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L578)
+[core/src/core.ts:92](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L92)
 
 ___
 
 ### right
 
-▸ **right**(`cols?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+▸ **right**(`n?`): [`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `cols?` | `number` |
+| `n?` | `number` |
 
 #### Returns
 
-[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+[`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[core/src/index.ts:579](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L579)
+[core/src/core.ts:93](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L93)
+
+___
+
+### show
+
+▸ **show**(): [`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
+
+#### Returns
+
+[`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
+
+#### Defined in
+
+[core/src/core.ts:95](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L95)
 
 ___
 
 ### up
 
-▸ **up**(`rows?`): [`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+▸ **up**(`n?`): [`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `rows?` | `number` |
+| `n?` | `number` |
 
 #### Returns
 
-[`IQCursorChainableMethods`](Core.IQCursorChainableMethods.md)
+[`IQCursorChainableMethods`](core.IQCursorChainableMethods.md)
 
 #### Defined in
 
-[core/src/index.ts:576](https://github.com/iniquitybbs/iniquity/blob/d1c5f72/packages/core/src/index.ts#L576)
+[core/src/core.ts:90](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L90)

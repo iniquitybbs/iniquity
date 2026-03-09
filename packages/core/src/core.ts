@@ -18,6 +18,8 @@ import { IQText } from "./text"
 import { IQConfig, getConfig } from "./config"
 import { Artwork, IQArtworkOptions } from "./artwork"
 import { MCIProcessor, MCIContext } from "./mci"
+import { showSnack } from "./snack"
+import type { SnackPayload } from "./snack"
 /**
  * Alert options
  */
@@ -146,6 +148,11 @@ export class Runtime {
     protected basepath: string = ""
     protected programDirectory: string = ""
     public data: IQReactorOptions = IQReactor({})
+    private snackActive: boolean = false
+    /** Current prompt position (1-based); used to restore cursor after snack clear. Set by menu. */
+    private promptPosition: { x: number; y: number } | null = null
+    /** Art key of the last menu that drew artwork; used to skip redraw when same art. */
+    private lastRenderedMenuArtKey: string | null = null
 
     constructor(output: IQOutput) {
         this.output = output
@@ -405,7 +412,7 @@ export class Runtime {
      * Create a menu
      */
     menu(options: IQMenuOptions): IQMenu {
-        return new IQMenu(options, this.output, (opts) => this.artwork(opts))
+        return new IQMenu(options, this.output, (opts) => this.artwork(opts), () => this)
     }
 
     /**
@@ -536,6 +543,51 @@ export class Runtime {
      */
     getProgramDirectory(): string {
         return this.programDirectory
+    }
+
+    /**
+     * Process any queued snacks (draw one, then after duration clear and process next).
+     * Called from menu loop or session tick. No-op if output does not support snacks.
+     * Cursor is restored by showSnack (save/restore) so behavior is correct in any context.
+     */
+    processSnacks(): void {
+        if (this.snackActive) return
+        const payload = this.output.getNextSnack?.() ?? null
+        if (!payload) return
+        this.snackActive = true
+        showSnack(this.output, payload as SnackPayload, () => {
+            this.snackActive = false
+            this.processSnacks()
+        })
+    }
+
+    /**
+     * Set the current prompt position (1-based). Called by the menu so the cursor
+     * can be restored to the prompt after a snack is cleared.
+     */
+    setPromptPosition(x: number, y: number): void {
+        this.promptPosition = { x, y }
+    }
+
+    /**
+     * Get the art key of the last menu that drew artwork (used to skip redraw when same art).
+     */
+    getLastRenderedMenuArtKey(): string | null {
+        return this.lastRenderedMenuArtKey
+    }
+
+    /**
+     * Set the art key after drawing menu artwork (so next menu can skip if same).
+     */
+    setLastRenderedMenuArtKey(key: string): void {
+        this.lastRenderedMenuArtKey = key
+    }
+
+    /**
+     * Clear the last-rendered art key (e.g. after full-screen goodbye so next menu full-redraws).
+     */
+    clearLastRenderedMenuArtKey(): void {
+        this.lastRenderedMenuArtKey = null
     }
 
     /**
