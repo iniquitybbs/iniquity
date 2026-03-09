@@ -8,7 +8,7 @@
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
- * import Server from "@iniquitybbs/iniquity/src/commands/server"
+ * import Server from "@iniquitybbs/cli/src/commands/server"
  * const server: yargs.CommandModule = new Server()
  * ```
  */
@@ -139,8 +139,8 @@ export class Server implements yargs.CommandModule {
                         resolvedPath = path.resolve(programPath)
                     } else if (fs.existsSync(path.join("src", "example", "iniquity.ts"))) {
                         resolvedPath = path.resolve("src", "example", "iniquity.ts")
-                    } else if (fs.existsSync(path.join("packages", "iniquity", "src", "example", "iniquity.ts"))) {
-                        resolvedPath = path.resolve("packages", "iniquity", "src", "example", "iniquity.ts")
+                    } else if (fs.existsSync(path.join("packages", "cli", "src", "example", "iniquity.ts"))) {
+                        resolvedPath = path.resolve("packages", "cli", "src", "example", "iniquity.ts")
                     } else if (fs.existsSync(path.join("packages", "templates", "src", "euphoria", "iniquity.ts"))) {
                         resolvedPath = path.resolve("packages", "templates", "src", "euphoria", "iniquity.ts")
                     }

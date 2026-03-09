@@ -145,6 +145,19 @@ export class Session implements IQOutput {
             if (buf[i] === 0x1b) {
                 const seq: number[] = [buf[i]]
                 i++
+                // Standalone ESC (no more bytes in this chunk) → deliver as Escape key so UI can cancel
+                if (i >= buf.length) {
+                    const esc = "\x1b"
+                    if (this.inputCallback && (this.inputMode === "key" || this.inputMode === "raw")) {
+                        const callback = this.inputCallback
+                        this.inputCallback = null
+                        this.inputMode = "line"
+                        callback(esc)
+                    } else {
+                        this.pendingInputQueue.push(esc)
+                    }
+                    continue
+                }
                 while (i < buf.length) {
                     seq.push(buf[i])
                     i++

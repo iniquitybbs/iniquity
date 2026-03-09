@@ -109,7 +109,7 @@ Implement a comprehensive macro system for dynamic content insertion.
 **Implementation Plan:**
 
 ```typescript
-// packages/iniquity/src/runtime/mci.ts
+// packages/cli/src/runtime/mci.ts
 
 export interface MCIContext {
     user?: UserData
@@ -291,7 +291,7 @@ Enhanced input with validation, masks, and line editing.
 **Implementation:**
 
 ```typescript
-// packages/iniquity/src/runtime/input.ts
+// packages/cli/src/runtime/input.ts
 
 export interface InputOptions {
     maxLength?: number
@@ -500,7 +500,7 @@ Implement a caching system for frequently accessed ANSI files.
 **Implementation:**
 
 ```typescript
-// packages/iniquity/src/runtime/textlib.ts
+// packages/cli/src/runtime/textlib.ts
 
 export interface TextLibEntry {
     filename: string

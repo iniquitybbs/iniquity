@@ -66,7 +66,7 @@ The Iniquity runtime has been fully implemented to match the specification at ht
 ## File Structure
 
 ```
-packages/iniquity/src/runtime/
+packages/cli/src/runtime/
 ├── ansi.ts           - ANSI escape sequences and terminal control
 ├── core.ts           - IQ base class, Runtime, Artwork, global functions
 ├── menu.ts           - Menu system (IQMenu)
@@ -77,7 +77,7 @@ packages/iniquity/src/runtime/
 ├── session.ts        - Session management and Telnet protocol
 └── telnet.ts         - Telnet server
 
-packages/iniquity/dist/src/runtime/
+packages/cli/dist/src/runtime/
 ├── [All .js, .js.map, and .d.ts files compiled from above]
 ```
 
@@ -118,7 +118,7 @@ See `src/example/test-comprehensive.ts` for a full test suite that exercises all
 
 ### Start the Server
 ```bash
-cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/iniquity
+cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/cli
 node start-server.js src/example/test-comprehensive.ts
 ```
 

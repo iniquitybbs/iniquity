@@ -28,16 +28,16 @@ The Telnet server runtime has been extended to support the sophisticated Euphori
 
 ### Modified Files
 
-1. **`packages/iniquity/src/runtime/core.ts`**
+1. **`packages/cli/src/runtime/core.ts`**
    - Added `Artwork` class with rendering methods
    - Added `artwork()` global function
    - Added program directory tracking to `Runtime` class
 
-2. **`packages/iniquity/src/runtime/executor.ts`**
+2. **`packages/cli/src/runtime/executor.ts`**
    - Added program directory detection and passing to runtime
    - Added `artwork` to the execution context
 
-3. **`packages/iniquity/tsconfig.json`**
+3. **`packages/cli/tsconfig.json`**
    - Removed invalid reference to non-existent `../core` package
 
 ## Testing Instructions
@@ -45,7 +45,7 @@ The Telnet server runtime has been extended to support the sophisticated Euphori
 ### 1. Build the Server
 
 ```bash
-cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/iniquity
+cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/cli
 npx tsc
 ```
 

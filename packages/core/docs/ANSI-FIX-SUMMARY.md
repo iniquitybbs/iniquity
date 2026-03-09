@@ -3,7 +3,7 @@
 ## Changes Made
 
 ### 1. File Encoding Fix (CRITICAL)
-**File**: `/packages/iniquity/src/runtime/core.ts`
+**File**: `/packages/cli/src/runtime/core.ts`
 
 **Before**:
 ```typescript
@@ -18,7 +18,7 @@ content = fs.readFileSync(fullPath, 'latin1')
 **Why**: ANSI art files use CP437 encoding (IBM PC character set). Reading as UTF-8 corrupts special characters like box-drawing symbols. Latin1 encoding preserves all bytes 0-255 as-is, which is exactly what we need for ANSI art.
 
 ### 2. SAUCE Metadata Filtering
-**File**: `/packages/iniquity/src/runtime/core.ts`
+**File**: `/packages/cli/src/runtime/core.ts`
 
 **Added**:
 ```typescript
@@ -29,7 +29,7 @@ if (line.includes('SAUCE00')) continue
 **Why**: SAUCE (Standard Architecture for Universal Comment Extensions) is metadata appended to ANSI files. It contains author info, dimensions, etc. Should not be displayed.
 
 ### 3. Color Support Already Present
-**File**: `/packages/iniquity/src/runtime/ansi.ts`
+**File**: `/packages/cli/src/runtime/ansi.ts`
 
 **Verified**:
 - ✅ All 16 foreground colors (including bright variants)
@@ -40,7 +40,7 @@ if (line.includes('SAUCE00')) continue
 
 ### Test Command
 ```bash
-cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/iniquity
+cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/cli
 node start-server.js /Users/dan.stephenson/Projects/board/iniquity.ts
 ```
 

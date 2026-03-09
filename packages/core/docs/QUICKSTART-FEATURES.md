@@ -5,7 +5,7 @@
 Start the server with the feature showcase program:
 
 ```bash
-cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/iniquity
+cd /Users/dan.stephenson/Projects/iniquitybbs/iniquity/packages/cli
 node start-server.js src/example/feature-showcase.ts
 ```
 

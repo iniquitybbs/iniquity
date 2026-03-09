@@ -27,7 +27,7 @@ ANSI File (CP437 bytes)
 ## The Two Critical Fixes
 
 ### Fix #1: File Reading (Already Done)
-**File**: `/packages/iniquity/src/runtime/core.ts`
+**File**: `/packages/cli/src/runtime/core.ts`
 
 ```typescript
 // BEFORE (corrupted at read time):
@@ -38,7 +38,7 @@ content = fs.readFileSync(fullPath, 'latin1')
 ```
 
 ### Fix #2: Socket Writing (THE KEY FIX)
-**File**: `/packages/iniquity/src/runtime/session.ts`
+**File**: `/packages/cli/src/runtime/session.ts`
 
 ```typescript
 // BEFORE (Node.js converts string to UTF-8):

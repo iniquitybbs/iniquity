@@ -38,7 +38,7 @@ case "bright black": return "\u001b[30;1m" + this
 
 ## Issues in Our Current Runtime
 
-### `/packages/iniquity/src/runtime/core.ts`
+### `/packages/cli/src/runtime/core.ts`
 
 **Problem 1: File Reading**
 ```typescript
@@ -67,7 +67,7 @@ stripSauce(content: string): string {
 - ✅ Implemented correctly
 - ⚠️ But happens after UTF-8 decoding corrupts data
 
-### `/packages/iniquity/src/runtime/ansi.ts`
+### `/packages/cli/src/runtime/ansi.ts`
 
 **ANSI Color Codes - Need Verification**
 ```typescript
@@ -169,15 +169,15 @@ The BBS at `/Users/dan.stephenson/Projects/board/iniquity.ts` requires:
 
 ## Files to Modify
 
-1. `/packages/iniquity/src/runtime/core.ts`
+1. `/packages/cli/src/runtime/core.ts`
    - Change `fs.readFileSync` encoding to 'latin1'
    - Improve SAUCE stripping in line mode
    
-2. `/packages/iniquity/src/runtime/ansi.ts`
+2. `/packages/cli/src/runtime/ansi.ts`
    - Add bright color codes
    - Verify all 16 foreground + 16 background colors
 
-3. `/packages/iniquity/src/runtime/session.ts`
+3. `/packages/cli/src/runtime/session.ts`
    - Verify socket writes handle binary data correctly
    - Ensure no UTF-8 conversion happens
 

@@ -1,10 +1,10 @@
-# @iniquitybbs/iniquity
+# @iniquitybbs/cli
 
 The command-line interface and telnet server for building and running Iniquity BBS applications.
 
 ## Overview
 
-`@iniquitybbs/iniquity` is the execution environment for BBS applications built with `@iniquitybbs/core`. It provides:
+`@iniquitybbs/cli` is the execution environment for BBS applications built with `@iniquitybbs/core`. It provides:
 
 - **CLI tool** (`iq` command) for BBS project management
 - **Telnet server** for running your BBS over the network
@@ -15,10 +15,10 @@ The command-line interface and telnet server for building and running Iniquity B
 
 ```bash
 # Global installation (recommended for CLI usage)
-npm install -g @iniquitybbs/iniquity
+npm install -g @iniquitybbs/cli
 
 # Or local installation for development
-npm install --save-dev @iniquitybbs/iniquity
+npm install --save-dev @iniquitybbs/cli
 ```
 
 Verify installation:
@@ -45,7 +45,7 @@ iq term
 
 ---
 
-## What is @iniquitybbs/iniquity?
+## What is @iniquitybbs/cli?
 
 This package is the **execution environment** that bridges your BBS application (built with `@iniquitybbs/core`) and the network.
 
@@ -60,7 +60,7 @@ This package is the **execution environment** that bridges your BBS application 
 - BBS API for building applications (that's `@iniquitybbs/core`)
 - Menu systems, artwork rendering, user management (that's `@iniquitybbs/core`)
 
-Think of it as: **@iniquitybbs/iniquity runs your BBS, @iniquitybbs/core is what you build with.**
+Think of it as: **@iniquitybbs/cli runs your BBS, @iniquitybbs/core is what you build with.**
 
 ---
 
@@ -75,7 +75,7 @@ Think of it as: **@iniquitybbs/iniquity runs your BBS, @iniquitybbs/core is what
                   │
                   ▼
 ┌────────────────────────────────────────┐
-│      @iniquitybbs/iniquity             │
+│      @iniquitybbs/cli             │
 │                                        │
 │  • CLI Tool (iq commands)              │
 │  • Telnet Server (multi-node)          │
@@ -232,7 +232,7 @@ iq term
 Multi-node telnet server managing connections and sessions.
 
 ```typescript
-import { TelnetServer } from "@iniquitybbs/iniquity"
+import { TelnetServer } from "@iniquitybbs/cli"
 
 const server = new TelnetServer({
     port: 2023,
@@ -247,7 +247,7 @@ await server.start()
 Implements `IQOutput` interface for telnet protocol communication.
 
 ```typescript
-import { Session } from "@iniquitybbs/iniquity"
+import { Session } from "@iniquitybbs/cli"
 
 // Session handles:
 // - Telnet protocol negotiation
@@ -261,7 +261,7 @@ import { Session } from "@iniquitybbs/iniquity"
 Runs TypeScript BBS programs with `tsx` on-the-fly compilation.
 
 ```typescript
-import { executeProgram, Runtime } from "@iniquitybbs/iniquity"
+import { executeProgram, Runtime } from "@iniquitybbs/cli"
 
 const runtime = new Runtime(session)
 await executeProgram('./iniquity.ts', runtime, session)

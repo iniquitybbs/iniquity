@@ -424,7 +424,7 @@ export class IQMenu {
                             y: this.art.y
                         })
                     }
-                    this.clearContentRows(this.getContentRows())
+                    this.clearContentRows(this.getContentRows(), this.art?.x != null ? this.art.x - 1 : undefined)
                 } else {
                     // Full redraw: clear screen and optionally render artwork
                     this.output.write(ANSI.clearScreen())
@@ -526,10 +526,11 @@ export class IQMenu {
     }
 
     /**
-     * Clear full-width lines for the given row numbers (1-based). Used when skipping art to avoid clearing artwork.
+     * Clear lines for the given row numbers (1-based). Used when skipping art to avoid clearing artwork.
+     * If contentMaxCol is set (e.g. art.x - 1), only columns 1..contentMaxCol are cleared so art on the right persists.
      */
-    private clearContentRows(rows: number[]): void {
-        const w = this.output.getWidth()
+    private clearContentRows(rows: number[], contentMaxCol?: number): void {
+        const w = contentMaxCol ?? this.output.getWidth()
         for (const y of rows) {
             this.output.write(ANSI.gotoxy(1, y))
             this.output.write(" ".repeat(w))

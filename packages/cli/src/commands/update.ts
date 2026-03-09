@@ -8,7 +8,7 @@
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
- * import Update from "@iniquitybbs/iniquity/src/commands/update"
+ * import Update from "@iniquitybbs/cli/src/commands/update"
  * const update: yargs.CommandModule = new Update()
  * ```
  */

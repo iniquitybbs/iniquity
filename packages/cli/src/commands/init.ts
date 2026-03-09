@@ -9,7 +9,7 @@
  * ```
  * @example Invoking via yargs programatically
  * ```typescript
- * import Init from "@iniquitybbs/iniquity/dist/src/commands/init"
+ * import Init from "@iniquitybbs/cli/dist/src/commands/init"
  * const init: yargs.CommandModule = new Init()
  * ```
  */
