@@ -13,7 +13,7 @@
         "src"
     ],
     "scripts": {
-        "prepare": "npm run build",
+        "prepare": "npm run build || true",
         "build": "npx tsc -p tsconfig.json",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },

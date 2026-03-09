@@ -62,6 +62,8 @@ export interface IQMenuOptions {
     mouse?: boolean
     /** MCI string for "pressed" look when an item is clicked (e.g. "|15|16"). If omitted, reverse video is used. */
     mouseHighlightFormat?: string
+    /** Global hotkeys run before menu commands (e.g. "/" for quick AI). Handler runs, then menu loop continues. */
+    globalHotkeys?: Record<string, () => Promise<void>>
 }
 
 export interface IQMenuLoopOptions {
@@ -119,6 +121,7 @@ export class IQMenu {
     public hotkeys: boolean
     public mouse: boolean
     public mouseHighlightFormat: string | undefined
+    private globalHotkeys: Record<string, () => Promise<void>> = {}
     private output: IQOutput
     private promptOptions: IQMenuPromptOptions | null = null
     private parent: IQMenu | null = null
@@ -158,6 +161,7 @@ export class IQMenu {
         this.hotkeys = options.hotkeys ?? true
         this.mouse = options.mouse ?? true
         this.mouseHighlightFormat = options.mouseHighlightFormat
+        this.globalHotkeys = options.globalHotkeys ?? {}
         this.output = output
         this.artworkFn = artworkFn
         this.getRuntime = getRuntime
@@ -458,6 +462,12 @@ export class IQMenu {
                 if (key === "Q") {
                     this.running = false
                     return "Q"
+                }
+
+                // Global hotkey: run handler and continue loop (e.g. "/" for quick AI popup)
+                if (this.globalHotkeys[key]) {
+                    await this.globalHotkeys[key]()
+                    continue
                 }
 
                 // Execute command

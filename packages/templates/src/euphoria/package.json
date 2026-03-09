@@ -11,6 +11,6 @@
         "term": "iq term"
     },
     "dependencies": {
-        "@iniquitybbs/core": "^3.0.75"
+        "@iniquitybbs/core": "^3.0.81"
     }
 }

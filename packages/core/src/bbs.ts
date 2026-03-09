@@ -214,6 +214,17 @@ class BBS {
     private menuRegistry: Map<string, MenuDefinition> = new Map()
     private startCallback: (() => Promise<void>) | null = null
     private basepath: string = "assets"
+    private globalHotkeys: Record<string, () => Promise<void>> = {}
+
+    /**
+     * Register a global hotkey that works on every menu. When the user presses the key,
+     * the handler runs (e.g. popup flow); the menu then redraws and waits for input again.
+     * @param key - Single key (e.g. "/" for quick AI chat)
+     * @param handler - Async function to run when key is pressed
+     */
+    setGlobalHotkey(key: string, handler: () => Promise<void>): void {
+        this.globalHotkeys[key] = handler
+    }
 
     /**
      * Register a declarative menu definition
@@ -254,7 +265,8 @@ class BBS {
             commands: this.buildCommands(options.items),
             hotkeys: options.hotkeys ?? true,
             mouse: options.mouse ?? true,
-            mouseHighlightFormat: options.mouseHighlightFormat
+            mouseHighlightFormat: options.mouseHighlightFormat,
+            globalHotkeys: Object.keys(this.globalHotkeys).length > 0 ? { ...this.globalHotkeys } : undefined
         }
 
         // Add artwork if specified

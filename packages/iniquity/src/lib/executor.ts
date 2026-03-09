@@ -77,11 +77,12 @@ async function executeWithTsx(filePath: string, runtime: Runtime, session: Sessi
     // Clear require cache to ensure fresh load
     delete require.cache[absolutePath]
 
-    // Import core from the USER'S project to get their singleton instances
+    // Resolve and load @iniquitybbs/core from the user's project (program directory).
+    // The template's package.json must depend on a version that includes the APIs you use (e.g. setGlobalHotkey).
     const coreModulePath = require.resolve("@iniquitybbs/core", { paths: [programDir] })
     const { bbs, setGlobalRuntime } = require(coreModulePath)
     
-    // Set the global runtime on the USER'S core instance
+    // Set the global runtime on the user's core instance
     setGlobalRuntime(runtime)
 
     // Require the user's program (this runs their code and registers bbs.start())

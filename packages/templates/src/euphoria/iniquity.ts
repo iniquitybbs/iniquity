@@ -128,6 +128,48 @@ The AI API is not reachable at ${AI_API_BASE}.
     bbs.say("|08Chat ended.|07")
 }
 
+/** Global "/" hotkey: one-shot popup prompt → API → response popup. Works from any menu. */
+const quickAIChatPopup = async () => {
+    const form = bbs.frame("Quick AI", { width: 60, height: 5 })
+    form.open()
+    const prompt = await form.input("|14Prompt |07» |15", 200)
+    form.close()
+    if (!prompt || !prompt.trim()) return
+    try {
+        const res = await fetch(`${AI_API_BASE}/api/v1/ai`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ prompt: prompt.trim(), model: "gemma3:1b" })
+        })
+        const data = (await res.json()) as { response?: string; error?: string; detail?: string }
+        if (!res.ok) {
+            const detail = data.detail ? `\n\n${data.detail}` : ""
+            await bbs.popup(
+                "AI Error",
+                (data.error || `Request failed: ${res.status}`) + detail + "\n\nIf the error says \"Failed to reach Ollama\", ensure Ollama is running (e.g. ollama run gemma3:1b) and reachable at 127.0.0.1:11434."
+            )
+            return
+        }
+        const text = data.response || "(no response)"
+        await bbs.popup("AI", text, { width: 70 })
+    } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        const isRefused = /ECONNREFUSED|fetch failed/i.test(message)
+        const hint = isRefused
+            ? `
+
+The AI API is not reachable at ${AI_API_BASE}.
+
+1) Ensure "iq server start" is running (it starts both Telnet and the HTTP API on port 8383).
+
+2) Test from another terminal:
+   curl -X POST http://localhost:8383/api/v1/ai -H "Content-Type: application/json" -d '{"prompt":"hi"}'
+   If that fails, the API is not listening.`
+            : "\n\nEnsure iq server start is running and Ollama is available (e.g. ollama run gemma3:1b)."
+        await bbs.popup("AI Error", `Could not reach the AI API: ${message}${hint}`)
+    }
+}
+
 // Simulate receiving a system announcement (for demo purposes)
 const simulateAnnouncement = () => {
     bbs.emit(
@@ -403,6 +445,9 @@ bbs.menu("main", {
 // ============================================================================
 // Entry Point - using bbs.start() with event lifecycle
 // ============================================================================
+
+// Global "/" hotkey: from any menu, type / for quick AI popup (prompt → response)
+bbs.setGlobalHotkey("/", quickAIChatPopup)
 
 bbs.start(async () => {
     // Emit session start event
