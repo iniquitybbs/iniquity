@@ -1,6 +1,6 @@
 {
     "name": "@iniquitybbs/cli",
-    "version": "3.0.82",
+    "version": "3.0.83",
     "description": "CLI and runtime for Iniquity BBS.",
     "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
     "homepage": "http://iniquitybbs.com",
@@ -43,7 +43,7 @@
         "iq": "./dist/src/index.js"
     },
     "dependencies": {
-        "@iniquitybbs/core": "^3.0.82",
+        "@iniquitybbs/core": "^3.0.83",
         "app-root-path": "^3.0.0",
         "copyfiles": "^2.4.1",
         "docker-cli-js": "^2.9.0",
