@@ -86,7 +86,7 @@ CGA attribute constants (re-exported for convenience)
 
 #### Defined in
 
-[core/src/ansi.ts:45](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L45)
+[core/src/ansi.ts:65](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L65)
 
 ___
 
@@ -119,7 +119,7 @@ Background colors
 
 #### Defined in
 
-[core/src/ansi.ts:159](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L159)
+[core/src/ansi.ts:179](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L179)
 
 ___
 
@@ -152,7 +152,7 @@ Foreground colors
 
 #### Defined in
 
-[core/src/ansi.ts:137](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L137)
+[core/src/ansi.ts:157](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L157)
 
 ___
 
@@ -177,7 +177,7 @@ Cursor movement
 
 #### Defined in
 
-[core/src/ansi.ts:199](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L199)
+[core/src/ansi.ts:219](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L219)
 
 ___
 
@@ -193,7 +193,7 @@ Cursor style control (DEC)
 
 #### Defined in
 
-[core/src/ansi.ts:392](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L392)
+[core/src/ansi.ts:412](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L412)
 
 ___
 
@@ -210,7 +210,7 @@ Maps common SAUCE font names to SyncTERM font names
 
 #### Defined in
 
-[core/src/ansi.ts:291](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L291)
+[core/src/ansi.ts:311](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L311)
 
 ___
 
@@ -228,7 +228,7 @@ See: https://github.com/protomouse/synchronet/blob/master/src/conio/cterm.txt
 
 #### Defined in
 
-[core/src/ansi.ts:253](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L253)
+[core/src/ansi.ts:273](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L273)
 
 ___
 
@@ -257,7 +257,7 @@ Telnet protocol commands
 
 #### Defined in
 
-[core/src/ansi.ts:213](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L213)
+[core/src/ansi.ts:233](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L233)
 
 ## Methods
 
@@ -282,7 +282,7 @@ Create a CGA attribute from foreground, background, and flags
 
 #### Defined in
 
-[core/src/ansi.ts:50](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L50)
+[core/src/ansi.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L70)
 
 ___
 
@@ -304,7 +304,7 @@ Convert CGA attribute to ANSI escape sequence
 
 #### Defined in
 
-[core/src/ansi.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L60)
+[core/src/ansi.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L80)
 
 ___
 
@@ -320,7 +320,7 @@ Clear the entire screen and move cursor to home position
 
 #### Defined in
 
-[core/src/ansi.ts:116](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L116)
+[core/src/ansi.ts:136](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L136)
 
 ___
 
@@ -342,7 +342,7 @@ Get color code by name
 
 #### Defined in
 
-[core/src/ansi.ts:181](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L181)
+[core/src/ansi.ts:201](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L201)
 
 ___
 
@@ -356,7 +356,7 @@ ___
 
 #### Defined in
 
-[core/src/ansi.ts:244](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L244)
+[core/src/ansi.ts:264](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L264)
 
 ___
 
@@ -374,7 +374,7 @@ Essential for most modern BBS ANSI art
 
 #### Defined in
 
-[core/src/ansi.ts:240](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L240)
+[core/src/ansi.ts:260](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L260)
 
 ___
 
@@ -396,7 +396,7 @@ Get SyncTERM font name from alias (e.g., SAUCE font name)
 
 #### Defined in
 
-[core/src/ansi.ts:350](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L350)
+[core/src/ansi.ts:370](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L370)
 
 ___
 
@@ -419,7 +419,7 @@ Move cursor to specific position (1-indexed)
 
 #### Defined in
 
-[core/src/ansi.ts:123](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L123)
+[core/src/ansi.ts:143](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L143)
 
 ___
 
@@ -435,7 +435,7 @@ Hide cursor (non-standard, widely supported)
 
 #### Defined in
 
-[core/src/ansi.ts:420](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L420)
+[core/src/ansi.ts:440](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L440)
 
 ___
 
@@ -451,7 +451,7 @@ Query device attributes (for terminal detection)
 
 #### Defined in
 
-[core/src/ansi.ts:413](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L413)
+[core/src/ansi.ts:433](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L433)
 
 ___
 
@@ -467,7 +467,7 @@ Reset all attributes
 
 #### Defined in
 
-[core/src/ansi.ts:130](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L130)
+[core/src/ansi.ts:150](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L150)
 
 ___
 
@@ -487,7 +487,7 @@ ___
 
 #### Defined in
 
-[core/src/ansi.ts:402](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L402)
+[core/src/ansi.ts:422](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L422)
 
 ___
 
@@ -509,7 +509,7 @@ Set emulated baud rate (CTerm/SyncTERM)
 
 #### Defined in
 
-[core/src/ansi.ts:367](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L367)
+[core/src/ansi.ts:387](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L387)
 
 ___
 
@@ -532,7 +532,7 @@ Set SyncTERM font
 
 #### Defined in
 
-[core/src/ansi.ts:339](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L339)
+[core/src/ansi.ts:359](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L359)
 
 ___
 
@@ -555,7 +555,7 @@ Set SyncTERM font using alias (handles SAUCE font names)
 
 #### Defined in
 
-[core/src/ansi.ts:358](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L358)
+[core/src/ansi.ts:378](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L378)
 
 ___
 
@@ -571,7 +571,7 @@ Show cursor (non-standard, widely supported)
 
 #### Defined in
 
-[core/src/ansi.ts:427](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L427)
+[core/src/ansi.ts:447](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L447)
 
 ___
 
@@ -594,4 +594,4 @@ Create Telnet negotiation sequence
 
 #### Defined in
 
-[core/src/ansi.ts:231](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/ansi.ts#L231)
+[core/src/ansi.ts:251](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/ansi.ts#L251)

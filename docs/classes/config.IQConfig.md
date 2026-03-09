@@ -52,7 +52,7 @@ IQConfig class for managing BBS configuration
 
 #### Defined in
 
-[core/src/config.ts:185](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L185)
+[core/src/config.ts:205](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L205)
 
 ## Accessors
 
@@ -68,7 +68,7 @@ Get display configuration
 
 #### Defined in
 
-[core/src/config.ts:312](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L312)
+[core/src/config.ts:332](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L332)
 
 • `set` **display**(`config`): `void`
 
@@ -86,7 +86,7 @@ Set display configuration
 
 #### Defined in
 
-[core/src/config.ts:319](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L319)
+[core/src/config.ts:339](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L339)
 
 ___
 
@@ -102,7 +102,7 @@ Get logging configuration
 
 #### Defined in
 
-[core/src/config.ts:354](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L354)
+[core/src/config.ts:374](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L374)
 
 • `set` **logging**(`config`): `void`
 
@@ -120,7 +120,7 @@ Set logging configuration
 
 #### Defined in
 
-[core/src/config.ts:361](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L361)
+[core/src/config.ts:381](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L381)
 
 ___
 
@@ -136,7 +136,7 @@ Get network configuration
 
 #### Defined in
 
-[core/src/config.ts:340](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L340)
+[core/src/config.ts:360](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L360)
 
 • `set` **network**(`config`): `void`
 
@@ -154,7 +154,7 @@ Set network configuration
 
 #### Defined in
 
-[core/src/config.ts:347](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L347)
+[core/src/config.ts:367](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L367)
 
 ___
 
@@ -170,7 +170,7 @@ Get paths configuration
 
 #### Defined in
 
-[core/src/config.ts:298](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L298)
+[core/src/config.ts:318](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L318)
 
 • `set` **paths**(`config`): `void`
 
@@ -188,7 +188,7 @@ Set paths configuration
 
 #### Defined in
 
-[core/src/config.ts:305](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L305)
+[core/src/config.ts:325](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L325)
 
 ___
 
@@ -204,7 +204,7 @@ Get security configuration
 
 #### Defined in
 
-[core/src/config.ts:326](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L326)
+[core/src/config.ts:346](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L346)
 
 • `set` **security**(`config`): `void`
 
@@ -222,7 +222,7 @@ Set security configuration
 
 #### Defined in
 
-[core/src/config.ts:333](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L333)
+[core/src/config.ts:353](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L353)
 
 ___
 
@@ -238,7 +238,7 @@ Get server configuration
 
 #### Defined in
 
-[core/src/config.ts:284](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L284)
+[core/src/config.ts:304](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L304)
 
 • `set` **server**(`config`): `void`
 
@@ -256,7 +256,7 @@ Set server configuration
 
 #### Defined in
 
-[core/src/config.ts:291](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L291)
+[core/src/config.ts:311](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L311)
 
 ## Methods
 
@@ -278,7 +278,7 @@ Delete custom configuration value
 
 #### Defined in
 
-[core/src/config.ts:382](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L382)
+[core/src/config.ts:402](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L402)
 
 ___
 
@@ -294,7 +294,7 @@ Ensure all required directories exist
 
 #### Defined in
 
-[core/src/config.ts:486](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L486)
+[core/src/config.ts:506](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L506)
 
 ___
 
@@ -316,7 +316,7 @@ Import configuration from JSON string
 
 #### Defined in
 
-[core/src/config.ts:517](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L517)
+[core/src/config.ts:537](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L537)
 
 ___
 
@@ -344,7 +344,7 @@ Get a specific config value by path (e.g., 'server.name')
 
 #### Defined in
 
-[core/src/config.ts:393](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L393)
+[core/src/config.ts:413](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L413)
 
 ___
 
@@ -360,7 +360,7 @@ Get full configuration
 
 #### Defined in
 
-[core/src/config.ts:269](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L269)
+[core/src/config.ts:289](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L289)
 
 ___
 
@@ -388,7 +388,7 @@ Get custom configuration value
 
 #### Defined in
 
-[core/src/config.ts:368](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L368)
+[core/src/config.ts:388](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L388)
 
 ___
 
@@ -404,7 +404,7 @@ Check if config was loaded from file
 
 #### Defined in
 
-[core/src/config.ts:262](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L262)
+[core/src/config.ts:282](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L282)
 
 ___
 
@@ -420,7 +420,7 @@ Load configuration from file
 
 #### Defined in
 
-[core/src/config.ts:223](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L223)
+[core/src/config.ts:243](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L243)
 
 ___
 
@@ -436,7 +436,7 @@ Reset configuration to defaults
 
 #### Defined in
 
-[core/src/config.ts:431](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L431)
+[core/src/config.ts:451](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L451)
 
 ___
 
@@ -458,7 +458,7 @@ Reset a specific section to defaults
 
 #### Defined in
 
-[core/src/config.ts:438](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L438)
+[core/src/config.ts:458](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L458)
 
 ___
 
@@ -474,7 +474,7 @@ Save configuration to file
 
 #### Defined in
 
-[core/src/config.ts:243](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L243)
+[core/src/config.ts:263](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L263)
 
 ___
 
@@ -497,7 +497,7 @@ Set a specific config value by path (e.g., 'server.name')
 
 #### Defined in
 
-[core/src/config.ts:411](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L411)
+[core/src/config.ts:431](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L431)
 
 ___
 
@@ -519,7 +519,7 @@ Set full configuration
 
 #### Defined in
 
-[core/src/config.ts:277](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L277)
+[core/src/config.ts:297](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L297)
 
 ___
 
@@ -542,7 +542,7 @@ Set custom configuration value
 
 #### Defined in
 
-[core/src/config.ts:375](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L375)
+[core/src/config.ts:395](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L395)
 
 ___
 
@@ -558,7 +558,7 @@ Export configuration as JSON string
 
 #### Defined in
 
-[core/src/config.ts:510](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L510)
+[core/src/config.ts:530](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L530)
 
 ___
 
@@ -579,4 +579,4 @@ Validate configuration
 
 #### Defined in
 
-[core/src/config.ts:447](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L447)
+[core/src/config.ts:467](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L467)

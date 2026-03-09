@@ -21,7 +21,7 @@ Network connection options
 
 #### Defined in
 
-[core/src/network.ts:58](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L58)
+[core/src/network.ts:78](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L78)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:59](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L59)
+[core/src/network.ts:79](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L79)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:61](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L61)
+[core/src/network.ts:81](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L81)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L60)
+[core/src/network.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L80)

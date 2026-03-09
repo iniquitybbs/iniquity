@@ -20,17 +20,17 @@ Options for say() function
 
 #### Defined in
 
-[core/src/core.ts:75](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L75)
+[core/src/core.ts:95](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L95)
 
 ___
 
 ### mci
 
-• `Optional` **mci**: `boolean` \| ``"pipe"`` \| ``"at-codes"`` \| ``"all"``
+• `Optional` **mci**: `boolean` \| ``"all"`` \| ``"pipe"`` \| ``"at-codes"``
 
 #### Defined in
 
-[core/src/core.ts:73](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L73)
+[core/src/core.ts:93](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L93)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:74](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L74)
+[core/src/core.ts:94](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L94)

@@ -23,7 +23,7 @@ Session info for online users display
 
 #### Defined in
 
-[core/src/bbs.ts:1146](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1146)
+[core/src/bbs.ts:1166](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1166)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1147](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1147)
+[core/src/bbs.ts:1167](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1167)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1149](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1149)
+[core/src/bbs.ts:1169](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1169)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1145](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1145)
+[core/src/bbs.ts:1165](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1165)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1148](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1148)
+[core/src/bbs.ts:1168](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1168)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1150](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1150)
+[core/src/bbs.ts:1170](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1170)

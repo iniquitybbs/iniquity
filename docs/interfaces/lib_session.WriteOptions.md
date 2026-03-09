@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:28](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L28)
+[cli/src/lib/session.ts:48](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/session.ts#L48)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L29)
+[cli/src/lib/session.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/session.ts#L49)

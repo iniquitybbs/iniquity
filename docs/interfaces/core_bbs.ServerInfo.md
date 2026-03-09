@@ -21,7 +21,7 @@ Server info structure
 
 #### Defined in
 
-[core/src/bbs.ts:1158](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1158)
+[core/src/bbs.ts:1178](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1178)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1157](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1157)
+[core/src/bbs.ts:1177](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1177)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1160](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1160)
+[core/src/bbs.ts:1180](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1180)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/bbs.ts:1159](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L1159)
+[core/src/bbs.ts:1179](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L1179)

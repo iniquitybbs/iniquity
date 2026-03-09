@@ -22,19 +22,19 @@ Message to show when data is empty (for dataPopup)
 
 #### Defined in
 
-[core/src/bbs.ts:103](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L103)
+[core/src/bbs.ts:123](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L123)
 
 ___
 
 ### type
 
-• `Optional` **type**: ``"error"`` \| ``"info"`` \| ``"warning"`` \| ``"success"``
+• `Optional` **type**: ``"error"`` \| ``"warning"`` \| ``"info"`` \| ``"success"``
 
 Type affects color scheme
 
 #### Defined in
 
-[core/src/bbs.ts:99](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L99)
+[core/src/bbs.ts:119](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L119)
 
 ___
 
@@ -46,4 +46,4 @@ Width of the popup
 
 #### Defined in
 
-[core/src/bbs.ts:101](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L101)
+[core/src/bbs.ts:121](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L121)

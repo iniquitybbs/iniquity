@@ -28,7 +28,7 @@ Centering mode for artwork positioning
 
 #### Defined in
 
-[core/src/bbs.ts:132](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L132)
+[core/src/bbs.ts:152](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L152)
 
 ___
 
@@ -40,7 +40,7 @@ Clear screen before rendering
 
 #### Defined in
 
-[core/src/bbs.ts:124](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L124)
+[core/src/bbs.ts:144](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L144)
 
 ___
 
@@ -52,7 +52,7 @@ Data for MCI code interpolation (accessible as @KEY@ in artwork)
 
 #### Defined in
 
-[core/src/bbs.ts:130](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L130)
+[core/src/bbs.ts:150](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L150)
 
 ___
 
@@ -64,19 +64,19 @@ Display mode: 'line' (line-by-line), 'character' (char-by-char), 'instant' (all 
 
 #### Defined in
 
-[core/src/bbs.ts:126](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L126)
+[core/src/bbs.ts:146](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L146)
 
 ___
 
 ### encoding
 
-• `Optional` **encoding**: ``"cp437"`` \| ``"utf8"``
+• `Optional` **encoding**: ``"utf8"`` \| ``"cp437"``
 
 Override session encoding for this artwork (default: use session preference)
 
 #### Defined in
 
-[core/src/bbs.ts:140](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L140)
+[core/src/bbs.ts:160](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L160)
 
 ___
 
@@ -88,7 +88,7 @@ Pause after rendering (true for default pause, string for custom prompt)
 
 #### Defined in
 
-[core/src/bbs.ts:138](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L138)
+[core/src/bbs.ts:158](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L158)
 
 ___
 
@@ -100,7 +100,7 @@ Speed in milliseconds (for line/character modes)
 
 #### Defined in
 
-[core/src/bbs.ts:128](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L128)
+[core/src/bbs.ts:148](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L148)
 
 ___
 
@@ -112,7 +112,7 @@ Explicit X position (1-indexed)
 
 #### Defined in
 
-[core/src/bbs.ts:134](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L134)
+[core/src/bbs.ts:154](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L154)
 
 ___
 
@@ -124,4 +124,4 @@ Explicit Y position (1-indexed)
 
 #### Defined in
 
-[core/src/bbs.ts:136](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L136)
+[core/src/bbs.ts:156](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L156)

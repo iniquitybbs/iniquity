@@ -25,7 +25,7 @@ Action to perform: "back", "quit", or a function
 
 #### Defined in
 
-[core/src/bbs.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L29)
+[core/src/bbs.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L49)
 
 ___
 
@@ -37,7 +37,7 @@ Name of another menu to navigate to
 
 #### Defined in
 
-[core/src/bbs.ts:31](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L31)
+[core/src/bbs.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L51)
 
 ___
 
@@ -49,7 +49,7 @@ Hotkey for this menu item
 
 #### Defined in
 
-[core/src/bbs.ts:25](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L25)
+[core/src/bbs.ts:45](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L45)
 
 ___
 
@@ -61,7 +61,7 @@ Display label
 
 #### Defined in
 
-[core/src/bbs.ts:27](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L27)
+[core/src/bbs.ts:47](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L47)
 
 ___
 
@@ -73,7 +73,7 @@ Explicit X position for this item (bypasses layout system)
 
 #### Defined in
 
-[core/src/bbs.ts:33](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L33)
+[core/src/bbs.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L53)
 
 ___
 
@@ -85,4 +85,4 @@ Explicit Y position for this item (bypasses layout system)
 
 #### Defined in
 
-[core/src/bbs.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L35)
+[core/src/bbs.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L55)

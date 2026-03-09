@@ -25,7 +25,7 @@ Text box options
 
 #### Defined in
 
-[core/src/text.ts:31](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L31)
+[core/src/text.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L51)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:32](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L32)
+[core/src/text.ts:52](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L52)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:33](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L33)
+[core/src/text.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L53)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L29)
+[core/src/text.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L49)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:30](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L30)
+[core/src/text.ts:50](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L50)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:34](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L34)
+[core/src/text.ts:54](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L54)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L35)
+[core/src/text.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L55)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:28](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L28)
+[core/src/text.ts:48](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/text.ts#L48)

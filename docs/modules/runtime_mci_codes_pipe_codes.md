@@ -39,7 +39,7 @@ Oblivion/2 and Synchronet compatible pipe color codes
 
 #### Defined in
 
-[core/src/mci/codes/pipe-codes.ts:173](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/pipe-codes.ts#L173)
+[core/src/mci/codes/pipe-codes.ts:193](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/pipe-codes.ts#L193)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/pipe-codes.ts:163](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/pipe-codes.ts#L163)
+[core/src/mci/codes/pipe-codes.ts:183](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/pipe-codes.ts#L183)

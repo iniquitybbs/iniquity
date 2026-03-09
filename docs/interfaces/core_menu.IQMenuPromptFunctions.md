@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[core/src/menu.ts:86](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L86)
+[core/src/menu.ts:106](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/menu.ts#L106)

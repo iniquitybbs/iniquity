@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L35)
+[cli/src/lib/telnet.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L55)
 
 ## Methods
 
@@ -47,7 +47,7 @@ Get all active sessions
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:53](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L53)
+[cli/src/lib/telnet.ts:73](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L73)
 
 ___
 
@@ -70,7 +70,7 @@ Get server info in BBS API format
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:72](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L72)
+[cli/src/lib/telnet.ts:92](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L92)
 
 ___
 
@@ -86,7 +86,7 @@ Get the number of active connections
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:46](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L46)
+[cli/src/lib/telnet.ts:66](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L66)
 
 ___
 
@@ -109,7 +109,7 @@ Get server info
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L60)
+[cli/src/lib/telnet.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L80)
 
 ___
 
@@ -125,7 +125,7 @@ Start the Telnet server
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:99](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L99)
+[cli/src/lib/telnet.ts:119](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L119)
 
 ___
 
@@ -141,4 +141,4 @@ Stop the Telnet server
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:143](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L143)
+[cli/src/lib/telnet.ts:163](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L163)

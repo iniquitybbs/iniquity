@@ -4,9 +4,14 @@
 
 ### Modules
 
-- [App](modules/App.md)
 - [Archive](modules/Archive.md)
 - [Init](modules/Init.md)
+- [Term](modules/Term.md)
+- [cli/src](modules/cli_src.md)
+- [cli/src/commands](modules/cli_src_commands.md)
+- [cli/src/commands/server](modules/cli_src_commands_server.md)
+- [cli/src/commands/update](modules/cli_src_commands_update.md)
+- [cli/src/types/koa-bodyparser](modules/cli_src_types_koa_bodyparser.md)
 - [config](modules/config.md)
 - [core](modules/core.md)
 - [core/artwork](modules/core_artwork.md)
@@ -27,11 +32,6 @@
 - [core/string-utils](modules/core_string_utils.md)
 - [core/xbin](modules/core_xbin.md)
 - [group](modules/group.md)
-- [iniquity/src](modules/iniquity_src.md)
-- [iniquity/src/commands](modules/iniquity_src_commands.md)
-- [iniquity/src/commands/server](modules/iniquity_src_commands_server.md)
-- [iniquity/src/commands/update](modules/iniquity_src_commands_update.md)
-- [iniquity/src/types/koa-bodyparser](modules/iniquity_src_types_koa_bodyparser.md)
 - [lib](modules/lib.md)
 - [lib/api-server](modules/lib_api_server.md)
 - [lib/executor](modules/lib_executor.md)

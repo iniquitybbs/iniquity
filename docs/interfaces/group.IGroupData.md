@@ -29,7 +29,7 @@ Group data structure
 
 #### Defined in
 
-[core/src/group.ts:44](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L44)
+[core/src/group.ts:64](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L64)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:50](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L50)
+[core/src/group.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L70)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:47](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L47)
+[core/src/group.ts:67](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L67)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:43](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L43)
+[core/src/group.ts:63](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L63)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:49](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L49)
+[core/src/group.ts:69](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L69)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:41](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L41)
+[core/src/group.ts:61](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L61)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:46](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L46)
+[core/src/group.ts:66](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L66)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:48](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L48)
+[core/src/group.ts:68](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L68)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:42](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L42)
+[core/src/group.ts:62](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L62)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:45](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L45)
+[core/src/group.ts:65](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L65)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:51](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L51)
+[core/src/group.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L71)
 
 ___
 
@@ -139,4 +139,4 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:52](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L52)
+[core/src/group.ts:72](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L72)

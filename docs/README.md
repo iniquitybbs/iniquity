@@ -13,7 +13,7 @@ This is the re-imagining of the iconic Iniquity Bulletin Board Software.
 ## Synopsis
 
 ```shell
-npm install -g @iniquitybbs/iniquity
+npm install -g @iniquitybbs/cli
 ```
 
 You will find a `iniquity` and `iq` command in your path. Both commands do the same thing. Use whichever you prefer.
@@ -117,7 +117,7 @@ As of today, Iniquity 3 is a thoughtful fusion of **Iniquity**, **Synchronet**, 
 
 ## About the runtime
 
-Iniquity 3 runs on **Node.js** and **TypeScript** only. Your BBS is a TypeScript program that uses `@iniquitybbs/core` (menus, artwork, users, MCI) and is executed by `@iniquitybbs/iniquity` (CLI and telnet server).
+Iniquity 3 runs on **Node.js** and **TypeScript** only. Your BBS is a TypeScript program that uses `@iniquitybbs/core` (menus, artwork, users, MCI) and is executed by `@iniquitybbs/cli` (CLI and telnet server).
 
 ## Developer focus
 
@@ -160,10 +160,10 @@ Build all packages (if needed):
 npm run build
 ```
 
-To run the BBS server from source, see [packages/iniquity/README.md](packages/iniquity/README.md). In short: from a directory that has been initialized with `iq init` (or using a template path), run the iniquity package’s server. Alternatively, install the CLI globally and use it from any directory:
+To run the BBS server from source, see [packages/cli/README.md](packages/cli/README.md). In short: from a directory that has been initialized with `iq init` (or using a template path), run the CLI package’s server. Alternatively, install the CLI globally and use it from any directory:
 
 ```shell
-npm install -g @iniquitybbs/iniquity
+npm install -g @iniquitybbs/cli
 iq init
 iq server start
 ```

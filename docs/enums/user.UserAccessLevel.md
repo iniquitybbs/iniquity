@@ -23,7 +23,7 @@ User access levels
 
 #### Defined in
 
-[core/src/user.ts:21](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L21)
+[core/src/user.ts:41](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L41)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:16](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L16)
+[core/src/user.ts:36](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L36)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:19](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L19)
+[core/src/user.ts:39](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L39)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:17](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L17)
+[core/src/user.ts:37](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L37)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:18](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L18)
+[core/src/user.ts:38](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L38)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:20](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L20)
+[core/src/user.ts:40](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L40)

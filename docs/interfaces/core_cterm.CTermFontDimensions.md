@@ -19,7 +19,7 @@ Font dimensions
 
 #### Defined in
 
-[core/src/cterm.ts:74](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/cterm.ts#L74)
+[core/src/cterm.ts:94](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L94)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:73](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/cterm.ts#L73)
+[core/src/cterm.ts:93](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L93)

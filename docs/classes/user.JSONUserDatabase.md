@@ -39,7 +39,7 @@ JSON file-based user database
 
 #### Defined in
 
-[core/src/user.ts:112](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L112)
+[core/src/user.ts:132](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L132)
 
 ## Methods
 
@@ -63,7 +63,7 @@ JSON file-based user database
 
 #### Defined in
 
-[core/src/user.ts:163](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L163)
+[core/src/user.ts:183](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L183)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:210](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L210)
+[core/src/user.ts:230](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L230)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:223](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L223)
+[core/src/user.ts:243](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L243)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:231](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L231)
+[core/src/user.ts:251](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L251)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:241](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L241)
+[core/src/user.ts:261](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L261)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:227](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L227)
+[core/src/user.ts:247](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L247)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:147](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L147)
+[core/src/user.ts:167](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L167)
 
 ___
 
@@ -219,4 +219,4 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:151](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L151)
+[core/src/user.ts:171](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L171)

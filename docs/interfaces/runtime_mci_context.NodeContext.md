@@ -23,7 +23,7 @@ Node context for multi-node BBS systems
 
 #### Defined in
 
-[core/src/mci/context.ts:236](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L236)
+[core/src/mci/context.ts:256](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L256)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:234](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L234)
+[core/src/mci/context.ts:254](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L254)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:232](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L232)
+[core/src/mci/context.ts:252](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L252)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:235](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L235)
+[core/src/mci/context.ts:255](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L255)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:233](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L233)
+[core/src/mci/context.ts:253](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L253)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:237](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L237)
+[core/src/mci/context.ts:257](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L257)

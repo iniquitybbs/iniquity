@@ -22,7 +22,7 @@ Options for creating a Graphic
 
 #### Defined in
 
-[core/src/graphic.ts:39](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L39)
+[core/src/graphic.ts:59](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L59)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/src/graphic.ts:40](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L40)
+[core/src/graphic.ts:60](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L60)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/graphic.ts:41](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L41)
+[core/src/graphic.ts:61](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L61)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/graphic.ts:38](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L38)
+[core/src/graphic.ts:58](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L58)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[core/src/graphic.ts:37](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L37)
+[core/src/graphic.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L57)

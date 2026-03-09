@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[core/src/frame.ts:42](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L42)
+[core/src/frame.ts:62](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L62)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:38](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L38)
+[core/src/frame.ts:58](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L58)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:37](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L37)
+[core/src/frame.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L57)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:43](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L43)
+[core/src/frame.ts:63](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L63)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:44](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L44)
+[core/src/frame.ts:64](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L64)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:39](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L39)
+[core/src/frame.ts:59](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L59)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:40](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L40)
+[core/src/frame.ts:60](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L60)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:41](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L41)
+[core/src/frame.ts:61](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L61)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:36](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L36)
+[core/src/frame.ts:56](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L56)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:34](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L34)
+[core/src/frame.ts:54](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L54)
 
 ___
 
@@ -126,4 +126,4 @@ ___
 
 #### Defined in
 
-[core/src/frame.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/frame.ts#L35)
+[core/src/frame.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L55)

@@ -52,7 +52,7 @@ Graphic class for in-memory ANSI manipulation
 
 #### Defined in
 
-[core/src/graphic.ts:61](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L61)
+[core/src/graphic.ts:81](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L81)
 
 ## Accessors
 
@@ -68,7 +68,7 @@ Get ANSI representation of the graphic
 
 #### Defined in
 
-[core/src/graphic.ts:431](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L431)
+[core/src/graphic.ts:451](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L451)
 
 • `set` **ANSI**(`data`): `void`
 
@@ -86,7 +86,7 @@ Parse ANSI data into the graphic
 
 #### Defined in
 
-[core/src/graphic.ts:469](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L469)
+[core/src/graphic.ts:489](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L489)
 
 ___
 
@@ -102,7 +102,7 @@ Get BIN representation (raw character + attribute pairs)
 
 #### Defined in
 
-[core/src/graphic.ts:719](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L719)
+[core/src/graphic.ts:739](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L739)
 
 • `set` **BIN**(`data`): `void`
 
@@ -120,7 +120,7 @@ Load from BIN data
 
 #### Defined in
 
-[core/src/graphic.ts:740](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L740)
+[core/src/graphic.ts:760](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L760)
 
 ___
 
@@ -136,7 +136,7 @@ Get MSG representation (Ctrl-A codes for Synchronet compatibility)
 
 #### Defined in
 
-[core/src/graphic.ts:756](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L756)
+[core/src/graphic.ts:776](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L776)
 
 ___
 
@@ -152,7 +152,7 @@ Default attribute
 
 #### Defined in
 
-[core/src/graphic.ts:102](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L102)
+[core/src/graphic.ts:122](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L122)
 
 • `set` **attr**(`value`): `void`
 
@@ -168,7 +168,7 @@ Default attribute
 
 #### Defined in
 
-[core/src/graphic.ts:106](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L106)
+[core/src/graphic.ts:126](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L126)
 
 ___
 
@@ -184,7 +184,7 @@ Attribute mask for filtering attributes during draw
 
 #### Defined in
 
-[core/src/graphic.ts:113](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L113)
+[core/src/graphic.ts:133](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L133)
 
 • `set` **attrMask**(`value`): `void`
 
@@ -200,7 +200,7 @@ Attribute mask for filtering attributes during draw
 
 #### Defined in
 
-[core/src/graphic.ts:117](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L117)
+[core/src/graphic.ts:137](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L137)
 
 ___
 
@@ -216,7 +216,7 @@ Raw data array
 
 #### Defined in
 
-[core/src/graphic.ts:124](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L124)
+[core/src/graphic.ts:144](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L144)
 
 ___
 
@@ -232,7 +232,7 @@ True height of content (may be less than allocated height)
 
 #### Defined in
 
-[core/src/graphic.ts:131](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L131)
+[core/src/graphic.ts:151](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L151)
 
 ___
 
@@ -248,7 +248,7 @@ True width of content
 
 #### Defined in
 
-[core/src/graphic.ts:138](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L138)
+[core/src/graphic.ts:158](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L158)
 
 ___
 
@@ -264,7 +264,7 @@ Height of the graphic
 
 #### Defined in
 
-[core/src/graphic.ts:95](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L95)
+[core/src/graphic.ts:115](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L115)
 
 ___
 
@@ -280,7 +280,7 @@ Width of the graphic
 
 #### Defined in
 
-[core/src/graphic.ts:88](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L88)
+[core/src/graphic.ts:108](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L108)
 
 ## Methods
 
@@ -302,7 +302,7 @@ Convert CGA attribute to ANSI escape sequence
 
 #### Defined in
 
-[core/src/graphic.ts:374](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L374)
+[core/src/graphic.ts:394](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L394)
 
 ___
 
@@ -324,7 +324,7 @@ Clear the entire graphic
 
 #### Defined in
 
-[core/src/graphic.ts:193](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L193)
+[core/src/graphic.ts:213](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L213)
 
 ___
 
@@ -347,7 +347,7 @@ Clear cell data at position
 
 #### Defined in
 
-[core/src/graphic.ts:182](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L182)
+[core/src/graphic.ts:202](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L202)
 
 ___
 
@@ -363,7 +363,7 @@ Create a copy of this graphic
 
 #### Defined in
 
-[core/src/graphic.ts:822](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L822)
+[core/src/graphic.ts:842](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L842)
 
 ___
 
@@ -392,7 +392,7 @@ Draw the graphic to output at specified position
 
 #### Defined in
 
-[core/src/graphic.ts:319](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L319)
+[core/src/graphic.ts:339](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L339)
 
 ___
 
@@ -415,7 +415,7 @@ Get cell data at position
 
 #### Defined in
 
-[core/src/graphic.ts:151](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L151)
+[core/src/graphic.ts:171](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L171)
 
 ___
 
@@ -438,7 +438,7 @@ Load a file into the graphic
 
 #### Defined in
 
-[core/src/graphic.ts:285](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L285)
+[core/src/graphic.ts:305](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L305)
 
 ___
 
@@ -463,7 +463,7 @@ Put a message at position with optional attribute
 
 #### Defined in
 
-[core/src/graphic.ts:237](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L237)
+[core/src/graphic.ts:257](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L257)
 
 ___
 
@@ -486,7 +486,7 @@ Resize the graphic
 
 #### Defined in
 
-[core/src/graphic.ts:846](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L846)
+[core/src/graphic.ts:866](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L866)
 
 ___
 
@@ -509,7 +509,7 @@ Scroll the graphic content
 
 #### Defined in
 
-[core/src/graphic.ts:207](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L207)
+[core/src/graphic.ts:227](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L227)
 
 ___
 
@@ -532,7 +532,7 @@ Set ANSI content with optional MCI pre-processing
 
 #### Defined in
 
-[core/src/graphic.ts:478](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L478)
+[core/src/graphic.ts:498](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L498)
 
 ___
 
@@ -557,4 +557,4 @@ Set cell data at position
 
 #### Defined in
 
-[core/src/graphic.ts:162](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L162)
+[core/src/graphic.ts:182](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L182)

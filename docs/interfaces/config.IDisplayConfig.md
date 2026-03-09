@@ -24,7 +24,7 @@ Display configuration
 
 #### Defined in
 
-[core/src/config.ts:54](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L54)
+[core/src/config.ts:74](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L74)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:53](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L53)
+[core/src/config.ts:73](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L73)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:50](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L50)
+[core/src/config.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L70)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:51](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L51)
+[core/src/config.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L71)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:49](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L49)
+[core/src/config.ts:69](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L69)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:48](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L48)
+[core/src/config.ts:68](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L68)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:52](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L52)
+[core/src/config.ts:72](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L72)

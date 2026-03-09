@@ -24,7 +24,7 @@ Alert options
 
 #### Defined in
 
-[core/src/core.ts:33](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L33)
+[core/src/core.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L53)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L29)
+[core/src/core.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L49)
 
 ___
 
@@ -44,17 +44,17 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:27](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L27)
+[core/src/core.ts:47](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L47)
 
 ___
 
 ### type
 
-• `Optional` **type**: ``"error"`` \| ``"info"`` \| ``"warning"`` \| ``"success"``
+• `Optional` **type**: ``"error"`` \| ``"warning"`` \| ``"info"`` \| ``"success"``
 
 #### Defined in
 
-[core/src/core.ts:28](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L28)
+[core/src/core.ts:48](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L48)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:32](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L32)
+[core/src/core.ts:52](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L52)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:30](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L30)
+[core/src/core.ts:50](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L50)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:31](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L31)
+[core/src/core.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L51)

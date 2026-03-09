@@ -59,7 +59,7 @@ Utility decorators for runtime class enhancement
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:11](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L11)
+[core/src/decorators-runtime.ts:31](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L31)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:242](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L242)
+[core/src/decorators-runtime.ts:262](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L262)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:90](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L90)
+[core/src/decorators-runtime.ts:110](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L110)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:40](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L40)
+[core/src/decorators-runtime.ts:60](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L60)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:191](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L191)
+[core/src/decorators-runtime.ts:211](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L211)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:144](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L144)
+[core/src/decorators-runtime.ts:164](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L164)
 
 ___
 
@@ -282,7 +282,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:265](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L265)
+[core/src/decorators-runtime.ts:285](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L285)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:223](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L223)
+[core/src/decorators-runtime.ts:243](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L243)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:123](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L123)
+[core/src/decorators-runtime.ts:143](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L143)
 
 ___
 
@@ -390,4 +390,4 @@ ___
 
 #### Defined in
 
-[core/src/decorators-runtime.ts:68](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators-runtime.ts#L68)
+[core/src/decorators-runtime.ts:88](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators-runtime.ts#L88)

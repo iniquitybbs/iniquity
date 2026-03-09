@@ -51,7 +51,7 @@ Avatar dimension constants
 
 #### Defined in
 
-[core/src/avatar.ts:59](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L59)
+[core/src/avatar.ts:79](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L79)
 
 ## Methods
 
@@ -73,7 +73,7 @@ Create avatar data object
 
 #### Defined in
 
-[core/src/avatar.ts:255](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L255)
+[core/src/avatar.ts:275](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L275)
 
 ___
 
@@ -96,7 +96,7 @@ Create a blank avatar with specified colors
 
 #### Defined in
 
-[core/src/avatar.ts:274](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L274)
+[core/src/avatar.ts:294](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L294)
 
 ___
 
@@ -123,7 +123,7 @@ Draw avatar at absolute screen position using Graphic.draw()
 
 #### Defined in
 
-[core/src/avatar.ts:91](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L91)
+[core/src/avatar.ts:111](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L111)
 
 ___
 
@@ -146,7 +146,7 @@ The graphic must be exactly 10x6 or will be cropped/padded
 
 #### Defined in
 
-[core/src/avatar.ts:156](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L156)
+[core/src/avatar.ts:176](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L176)
 
 ___
 
@@ -170,7 +170,7 @@ Create avatar from text (simple text rendering)
 
 #### Defined in
 
-[core/src/avatar.ts:288](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L288)
+[core/src/avatar.ts:308](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L308)
 
 ___
 
@@ -193,7 +193,7 @@ Creates a simple symmetric pattern based on the hash
 
 #### Defined in
 
-[core/src/avatar.ts:183](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L183)
+[core/src/avatar.ts:203](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L203)
 
 ___
 
@@ -215,7 +215,7 @@ Check if avatar data is enabled and valid
 
 #### Defined in
 
-[core/src/avatar.ts:267](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L267)
+[core/src/avatar.ts:287](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L287)
 
 ___
 
@@ -238,7 +238,7 @@ Returns true if the data is valid for use as an avatar
 
 #### Defined in
 
-[core/src/avatar.ts:65](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L65)
+[core/src/avatar.ts:85](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L85)
 
 ___
 
@@ -261,7 +261,7 @@ Load avatar from a BIN file
 
 #### Defined in
 
-[core/src/avatar.ts:230](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L230)
+[core/src/avatar.ts:250](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L250)
 
 ___
 
@@ -284,4 +284,4 @@ Show avatar at current cursor position using console output
 
 #### Defined in
 
-[core/src/avatar.ts:129](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L129)
+[core/src/avatar.ts:149](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L149)

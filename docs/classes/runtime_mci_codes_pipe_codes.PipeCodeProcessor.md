@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[core/src/mci/codes/pipe-codes.ts:158](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/pipe-codes.ts#L158)
+[core/src/mci/codes/pipe-codes.ts:178](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/pipe-codes.ts#L178)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/pipe-codes.ts:118](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/pipe-codes.ts#L118)
+[core/src/mci/codes/pipe-codes.ts:138](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/pipe-codes.ts#L138)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/pipe-codes.ts:81](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/pipe-codes.ts#L81)
+[core/src/mci/codes/pipe-codes.ts:101](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/pipe-codes.ts#L101)
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/pipe-codes.ts:151](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/pipe-codes.ts#L151)
+[core/src/mci/codes/pipe-codes.ts:171](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/pipe-codes.ts#L171)

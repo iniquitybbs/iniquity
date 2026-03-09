@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[core/src/mci/processor.ts:44](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L44)
+[core/src/mci/processor.ts:64](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L64)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:43](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L43)
+[core/src/mci/processor.ts:63](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L63)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:42](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L42)
+[core/src/mci/processor.ts:62](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L62)

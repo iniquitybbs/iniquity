@@ -26,7 +26,7 @@ Group list utilities
 
 #### Defined in
 
-[core/src/group.ts:538](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L538)
+[core/src/group.ts:558](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L558)
 
 ## Methods
 
@@ -42,7 +42,7 @@ Get all groups
 
 #### Defined in
 
-[core/src/group.ts:545](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L545)
+[core/src/group.ts:565](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L565)
 
 ___
 
@@ -64,7 +64,7 @@ Get groups by access level
 
 #### Defined in
 
-[core/src/group.ts:569](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L569)
+[core/src/group.ts:589](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L589)
 
 ___
 
@@ -80,7 +80,7 @@ Get group count
 
 #### Defined in
 
-[core/src/group.ts:552](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L552)
+[core/src/group.ts:572](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L572)
 
 ___
 
@@ -102,7 +102,7 @@ Find group by name
 
 #### Defined in
 
-[core/src/group.ts:559](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L559)
+[core/src/group.ts:579](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L579)
 
 ___
 
@@ -124,4 +124,4 @@ Get groups for a user
 
 #### Defined in
 
-[core/src/group.ts:576](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L576)
+[core/src/group.ts:596](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L596)

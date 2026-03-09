@@ -40,7 +40,7 @@ Contains system-level information
 
 #### Defined in
 
-[core/src/mci/context.ts:91](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L91)
+[core/src/mci/context.ts:111](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L111)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:96](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L96)
+[core/src/mci/context.ts:116](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L116)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:80](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L80)
+[core/src/mci/context.ts:100](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L100)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:82](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L82)
+[core/src/mci/context.ts:102](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L102)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:107](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L107)
+[core/src/mci/context.ts:127](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L127)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:106](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L106)
+[core/src/mci/context.ts:126](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L126)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:105](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L105)
+[core/src/mci/context.ts:125](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L125)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:98](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L98)
+[core/src/mci/context.ts:118](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L118)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:92](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L92)
+[core/src/mci/context.ts:112](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L112)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:90](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L90)
+[core/src/mci/context.ts:110](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L110)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:89](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L89)
+[core/src/mci/context.ts:109](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L109)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:100](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L100)
+[core/src/mci/context.ts:120](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L120)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:81](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L81)
+[core/src/mci/context.ts:101](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L101)
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:83](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L83)
+[core/src/mci/context.ts:103](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L103)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:84](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L84)
+[core/src/mci/context.ts:104](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L104)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:95](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L95)
+[core/src/mci/context.ts:115](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L115)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:102](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L102)
+[core/src/mci/context.ts:122](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L122)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:101](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L101)
+[core/src/mci/context.ts:121](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L121)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:99](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L99)
+[core/src/mci/context.ts:119](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L119)
 
 ___
 
@@ -230,7 +230,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:97](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L97)
+[core/src/mci/context.ts:117](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L117)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:85](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L85)
+[core/src/mci/context.ts:105](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L105)
 
 ___
 
@@ -250,4 +250,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:86](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L86)
+[core/src/mci/context.ts:106](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L106)

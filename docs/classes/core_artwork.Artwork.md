@@ -33,7 +33,7 @@ Artwork class for rendering ANSI art files with SAUCE metadata support
 
 #### Defined in
 
-[core/src/artwork.ts:414](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L414)
+[core/src/artwork.ts:434](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L434)
 
 ## Methods
 
@@ -55,7 +55,7 @@ Get raw content of artwork file without rendering
 
 #### Defined in
 
-[core/src/artwork.ts:760](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L760)
+[core/src/artwork.ts:779](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L779)
 
 ___
 
@@ -71,7 +71,7 @@ Get SAUCE metadata for the last rendered artwork
 
 #### Defined in
 
-[core/src/artwork.ts:424](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L424)
+[core/src/artwork.ts:444](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L444)
 
 ___
 
@@ -93,7 +93,7 @@ Render ANSI artwork to the screen
 
 #### Defined in
 
-[core/src/artwork.ts:431](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L431)
+[core/src/artwork.ts:451](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L451)
 
 ___
 
@@ -118,4 +118,4 @@ Load artwork into a Graphic object instead of rendering
 
 #### Defined in
 
-[core/src/artwork.ts:736](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L736)
+[core/src/artwork.ts:755](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L755)

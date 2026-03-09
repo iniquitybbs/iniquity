@@ -24,7 +24,7 @@ User options for creating/loading users
 
 #### Defined in
 
-[core/src/user.ts:34](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L34)
+[core/src/user.ts:54](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L54)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:31](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L31)
+[core/src/user.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L51)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L29)
+[core/src/user.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L49)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:33](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L33)
+[core/src/user.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L53)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:28](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L28)
+[core/src/user.ts:48](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L48)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:30](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L30)
+[core/src/user.ts:50](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L50)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:32](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/user.ts#L32)
+[core/src/user.ts:52](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L52)

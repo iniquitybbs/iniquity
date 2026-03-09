@@ -25,7 +25,7 @@ Complete MCI context combining all context types
 
 #### Defined in
 
-[core/src/mci/context.ts:246](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L246)
+[core/src/mci/context.ts:266](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L266)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:251](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L251)
+[core/src/mci/context.ts:271](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L271)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:249](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L249)
+[core/src/mci/context.ts:269](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L269)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:248](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L248)
+[core/src/mci/context.ts:268](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L268)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:250](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L250)
+[core/src/mci/context.ts:270](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L270)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:245](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L245)
+[core/src/mci/context.ts:265](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L265)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:247](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L247)
+[core/src/mci/context.ts:267](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L267)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:244](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/context.ts#L244)
+[core/src/mci/context.ts:264](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L264)

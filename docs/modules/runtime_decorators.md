@@ -59,7 +59,7 @@ Marks a class as an Iniquity module and stores configuration
 
 #### Defined in
 
-[core/src/decorators.ts:49](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L49)
+[core/src/decorators.ts:69](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L69)
 
 ___
 
@@ -98,7 +98,7 @@ Marks a method as the runtime entry point for a module
 
 #### Defined in
 
-[core/src/decorators.ts:85](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L85)
+[core/src/decorators.ts:105](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L105)
 
 ___
 
@@ -120,7 +120,7 @@ Get module metadata for a constructor
 
 #### Defined in
 
-[core/src/decorators.ts:120](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L120)
+[core/src/decorators.ts:140](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L140)
 
 ___
 
@@ -142,4 +142,4 @@ Get runtime metadata for a method
 
 #### Defined in
 
-[core/src/decorators.ts:127](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L127)
+[core/src/decorators.ts:147](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L147)

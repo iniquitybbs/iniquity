@@ -17,7 +17,7 @@ iq init --help
 
 Invoking via yargs programatically
 ```typescript
-import Init from "@iniquitybbs/iniquity/dist/src/commands/init"
+import Init from "@iniquitybbs/cli/dist/src/commands/init"
 const init: yargs.CommandModule = new Init()
 ```
 
@@ -39,4 +39,4 @@ const init: yargs.CommandModule = new Init()
 
 #### Defined in
 
-[iniquity/src/commands/init.ts:107](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/commands/init.ts#L107)
+[cli/src/commands/init.ts:107](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/commands/init.ts#L107)

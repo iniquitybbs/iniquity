@@ -21,7 +21,7 @@ Avatar data structure
 
 #### Defined in
 
-[core/src/avatar.ts:33](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L33)
+[core/src/avatar.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L53)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/avatar.ts:31](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L31)
+[core/src/avatar.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L51)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/avatar.ts:32](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L32)
+[core/src/avatar.ts:52](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L52)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/avatar.ts:34](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/avatar.ts#L34)
+[core/src/avatar.ts:54](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L54)

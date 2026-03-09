@@ -19,7 +19,7 @@ A single cell in the graphic buffer
 
 #### Defined in
 
-[core/src/graphic.ts:30](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L30)
+[core/src/graphic.ts:50](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L50)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[core/src/graphic.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L29)
+[core/src/graphic.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/graphic.ts#L49)

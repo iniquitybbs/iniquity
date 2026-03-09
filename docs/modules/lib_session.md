@@ -32,7 +32,7 @@ Input mode determines how incoming characters are handled
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L35)
+[cli/src/lib/session.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/session.ts#L55)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:10](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L10)
+[cli/src/lib/session.ts:30](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/session.ts#L30)

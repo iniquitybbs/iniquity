@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[core/src/mci/processor.ts:36](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L36)
+[core/src/mci/processor.ts:56](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L56)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:38](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L38)
+[core/src/mci/processor.ts:58](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L58)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:37](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L37)
+[core/src/mci/processor.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L57)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L35)
+[core/src/mci/processor.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/processor.ts#L55)

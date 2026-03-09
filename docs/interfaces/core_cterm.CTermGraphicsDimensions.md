@@ -19,7 +19,7 @@ Graphics dimensions
 
 #### Defined in
 
-[core/src/cterm.ts:82](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/cterm.ts#L82)
+[core/src/cterm.ts:102](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L102)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:81](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/cterm.ts#L81)
+[core/src/cterm.ts:101](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L101)

@@ -28,7 +28,7 @@ Corner toast notifications with queue and optional event delivery
 
 #### Defined in
 
-[core/src/snack.ts:11](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/snack.ts#L11)
+[core/src/snack.ts:31](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/snack.ts#L31)
 
 ## Functions
 
@@ -53,4 +53,4 @@ Uses a single line; if message contains newlines, only first line is used for po
 
 #### Defined in
 
-[core/src/snack.ts:56](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/snack.ts#L56)
+[core/src/snack.ts:76](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/snack.ts#L76)

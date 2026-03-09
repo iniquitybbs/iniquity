@@ -51,7 +51,7 @@ Sixel escape sequence markers
 
 #### Defined in
 
-[core/src/sixel.ts:65](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L65)
+[core/src/sixel.ts:85](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L85)
 
 ___
 
@@ -63,7 +63,7 @@ Minimum CTerm version for Sixel support
 
 #### Defined in
 
-[core/src/sixel.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L60)
+[core/src/sixel.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L80)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:67](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L67)
+[core/src/sixel.ts:87](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L87)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:66](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L66)
+[core/src/sixel.ts:86](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L86)
 
 ## Methods
 
@@ -99,7 +99,7 @@ Generate carriage return (move to start of next sixel row)
 
 #### Defined in
 
-[core/src/sixel.ts:179](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L179)
+[core/src/sixel.ts:199](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L199)
 
 ___
 
@@ -124,7 +124,7 @@ Generate sixel color definition
 
 #### Defined in
 
-[core/src/sixel.ts:158](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L158)
+[core/src/sixel.ts:178](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L178)
 
 ___
 
@@ -146,7 +146,7 @@ Generate sixel color selection
 
 #### Defined in
 
-[core/src/sixel.ts:165](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L165)
+[core/src/sixel.ts:185](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L185)
 
 ___
 
@@ -169,7 +169,7 @@ Display a pre-rendered Sixel file
 
 #### Defined in
 
-[core/src/sixel.ts:79](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L79)
+[core/src/sixel.ts:99](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L99)
 
 ___
 
@@ -194,7 +194,7 @@ Display sixel data from a buffer
 
 #### Defined in
 
-[core/src/sixel.ts:108](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L108)
+[core/src/sixel.ts:128](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L128)
 
 ___
 
@@ -217,7 +217,7 @@ Encode repeated sixel character
 
 #### Defined in
 
-[core/src/sixel.ts:204](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L204)
+[core/src/sixel.ts:224](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L224)
 
 ___
 
@@ -240,7 +240,7 @@ A sixel character represents 6 vertical pixels
 
 #### Defined in
 
-[core/src/sixel.ts:195](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L195)
+[core/src/sixel.ts:215](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L215)
 
 ___
 
@@ -264,7 +264,7 @@ Useful for testing sixel support
 
 #### Defined in
 
-[core/src/sixel.ts:291](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L291)
+[core/src/sixel.ts:311](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L311)
 
 ___
 
@@ -288,7 +288,7 @@ Generate sixel header sequence
 
 #### Defined in
 
-[core/src/sixel.ts:127](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L127)
+[core/src/sixel.ts:147](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L147)
 
 ___
 
@@ -310,7 +310,7 @@ Check if data appears to be sixel format
 
 #### Defined in
 
-[core/src/sixel.ts:272](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L272)
+[core/src/sixel.ts:292](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L292)
 
 ___
 
@@ -332,7 +332,7 @@ Check if Sixel is supported based on CTerm version
 
 #### Defined in
 
-[core/src/sixel.ts:72](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L72)
+[core/src/sixel.ts:92](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L92)
 
 ___
 
@@ -348,7 +348,7 @@ Generate line feed (move down one sixel row)
 
 #### Defined in
 
-[core/src/sixel.ts:186](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L186)
+[core/src/sixel.ts:206](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L206)
 
 ___
 
@@ -371,7 +371,7 @@ Returns basic info about the sixel image
 
 #### Defined in
 
-[core/src/sixel.ts:215](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L215)
+[core/src/sixel.ts:235](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L235)
 
 ___
 
@@ -393,7 +393,7 @@ Strip sixel data from a string (for text extraction)
 
 #### Defined in
 
-[core/src/sixel.ts:282](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L282)
+[core/src/sixel.ts:302](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L302)
 
 ___
 
@@ -409,4 +409,4 @@ Generate sixel terminator
 
 #### Defined in
 
-[core/src/sixel.ts:172](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L172)
+[core/src/sixel.ts:192](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L192)

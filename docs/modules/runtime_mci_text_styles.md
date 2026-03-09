@@ -63,7 +63,7 @@ ENiGMA-inspired text transformations (l33t, title, upper, etc.)
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:22](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L22)
+[core/src/mci/text-styles.ts:42](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L42)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:7](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L7)
+[core/src/mci/text-styles.ts:27](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L27)
 
 ## Variables
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:160](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L160)
+[core/src/mci/text-styles.ts:180](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L180)
 
 ## Functions
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:224](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L224)
+[core/src/mci/text-styles.ts:244](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L244)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:210](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L210)
+[core/src/mci/text-styles.ts:230](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L230)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:236](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L236)
+[core/src/mci/text-styles.ts:256](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L256)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:232](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L232)
+[core/src/mci/text-styles.ts:252](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L252)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:131](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L131)
+[core/src/mci/text-styles.ts:151](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L151)
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:83](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L83)
+[core/src/mci/text-styles.ts:103](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L103)
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:65](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L65)
+[core/src/mci/text-styles.ts:85](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L85)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:119](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L119)
+[core/src/mci/text-styles.ts:139](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L139)
 
 ___
 
@@ -258,7 +258,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:55](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L55)
+[core/src/mci/text-styles.ts:75](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L75)
 
 ___
 
@@ -278,7 +278,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:107](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L107)
+[core/src/mci/text-styles.ts:127](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L127)
 
 ___
 
@@ -298,7 +298,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:47](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L47)
+[core/src/mci/text-styles.ts:67](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L67)
 
 ___
 
@@ -318,7 +318,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:127](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L127)
+[core/src/mci/text-styles.ts:147](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L147)
 
 ___
 
@@ -338,7 +338,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:95](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L95)
+[core/src/mci/text-styles.ts:115](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L115)
 
 ___
 
@@ -358,7 +358,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:71](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L71)
+[core/src/mci/text-styles.ts:91](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L91)
 
 ___
 
@@ -378,7 +378,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:59](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L59)
+[core/src/mci/text-styles.ts:79](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L79)
 
 ___
 
@@ -398,7 +398,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:51](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L51)
+[core/src/mci/text-styles.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L71)
 
 ___
 
@@ -418,4 +418,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/text-styles.ts:145](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/text-styles.ts#L145)
+[core/src/mci/text-styles.ts:165](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/text-styles.ts#L165)

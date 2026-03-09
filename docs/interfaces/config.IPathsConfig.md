@@ -27,7 +27,7 @@ Paths configuration
 
 #### Defined in
 
-[core/src/config.ts:39](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L39)
+[core/src/config.ts:59](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L59)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:32](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L32)
+[core/src/config.ts:52](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L52)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:41](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L41)
+[core/src/config.ts:61](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L61)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:36](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L36)
+[core/src/config.ts:56](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L56)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:34](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L34)
+[core/src/config.ts:54](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L54)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:37](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L37)
+[core/src/config.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L57)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:35](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L35)
+[core/src/config.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L55)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:40](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L40)
+[core/src/config.ts:60](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L60)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:38](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L38)
+[core/src/config.ts:58](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L58)
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:33](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L33)
+[core/src/config.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L53)

@@ -48,7 +48,7 @@ Text with newlines prepended
 
 #### Defined in
 
-[core/src/string-utils.ts:77](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L77)
+[core/src/string-utils.ts:97](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L97)
 
 ___
 
@@ -80,7 +80,7 @@ Centered text with padding
 
 #### Defined in
 
-[core/src/string-utils.ts:37](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L37)
+[core/src/string-utils.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L57)
 
 ___
 
@@ -112,7 +112,7 @@ Colorized text with ANSI codes
 
 #### Defined in
 
-[core/src/string-utils.ts:21](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L21)
+[core/src/string-utils.ts:41](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L41)
 
 ___
 
@@ -138,7 +138,7 @@ Text with cursor positioning
 
 #### Defined in
 
-[core/src/string-utils.ts:167](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L167)
+[core/src/string-utils.ts:187](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L187)
 
 ___
 
@@ -163,7 +163,7 @@ Left-aligned text with right padding
 
 #### Defined in
 
-[core/src/string-utils.ts:51](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L51)
+[core/src/string-utils.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L71)
 
 ___
 
@@ -187,7 +187,7 @@ Lowercase text
 
 #### Defined in
 
-[core/src/string-utils.ts:185](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L185)
+[core/src/string-utils.ts:205](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L205)
 
 ___
 
@@ -221,7 +221,7 @@ Padded text
 
 #### Defined in
 
-[core/src/string-utils.ts:143](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L143)
+[core/src/string-utils.ts:163](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L163)
 
 ___
 
@@ -246,7 +246,7 @@ Repeated text
 
 #### Defined in
 
-[core/src/string-utils.ts:204](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L204)
+[core/src/string-utils.ts:224](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L224)
 
 ___
 
@@ -271,7 +271,7 @@ Right-aligned text with left padding
 
 #### Defined in
 
-[core/src/string-utils.ts:64](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L64)
+[core/src/string-utils.ts:84](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L84)
 
 ___
 
@@ -302,7 +302,7 @@ Text with ANSI codes removed
 
 #### Defined in
 
-[core/src/string-utils.ts:96](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L96)
+[core/src/string-utils.ts:116](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L116)
 
 ___
 
@@ -326,7 +326,7 @@ Title-cased text
 
 #### Defined in
 
-[core/src/string-utils.ts:194](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L194)
+[core/src/string-utils.ts:214](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L214)
 
 ___
 
@@ -352,7 +352,7 @@ Truncated text
 
 #### Defined in
 
-[core/src/string-utils.ts:122](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L122)
+[core/src/string-utils.ts:142](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L142)
 
 ___
 
@@ -376,7 +376,7 @@ Uppercase text
 
 #### Defined in
 
-[core/src/string-utils.ts:176](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L176)
+[core/src/string-utils.ts:196](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L196)
 
 ___
 
@@ -407,4 +407,4 @@ Visible character count
 
 #### Defined in
 
-[core/src/string-utils.ts:111](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/string-utils.ts#L111)
+[core/src/string-utils.ts:131](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/string-utils.ts#L131)

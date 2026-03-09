@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[core/src/decorators.ts:17](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L17)
+[core/src/decorators.ts:37](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L37)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators.ts:18](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L18)
+[core/src/decorators.ts:38](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L38)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators.ts:16](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L16)
+[core/src/decorators.ts:36](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L36)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators.ts:21](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L21)
+[core/src/decorators.ts:41](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L41)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[core/src/decorators.ts:20](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L20)
+[core/src/decorators.ts:40](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L40)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[core/src/decorators.ts:19](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L19)
+[core/src/decorators.ts:39](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/decorators.ts#L39)

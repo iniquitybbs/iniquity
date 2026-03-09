@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[core/src/core.ts:64](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L64)
+[core/src/core.ts:84](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L84)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:61](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L61)
+[core/src/core.ts:81](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L81)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:59](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L59)
+[core/src/core.ts:79](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L79)
 
 ___
 
@@ -53,17 +53,17 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:65](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L65)
+[core/src/core.ts:85](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L85)
 
 ___
 
 ### mci
 
-• `Optional` **mci**: `boolean` \| ``"pipe"`` \| ``"at-codes"`` \| ``"all"``
+• `Optional` **mci**: `boolean` \| ``"all"`` \| ``"pipe"`` \| ``"at-codes"``
 
 #### Defined in
 
-[core/src/core.ts:66](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L66)
+[core/src/core.ts:86](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L86)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L60)
+[core/src/core.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L80)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:62](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L62)
+[core/src/core.ts:82](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L82)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:63](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L63)
+[core/src/core.ts:83](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/core.ts#L83)

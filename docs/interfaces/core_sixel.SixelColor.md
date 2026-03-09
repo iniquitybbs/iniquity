@@ -21,7 +21,7 @@ Sixel color definition
 
 #### Defined in
 
-[core/src/sixel.ts:41](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L41)
+[core/src/sixel.ts:61](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L61)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:40](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L40)
+[core/src/sixel.ts:60](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L60)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:38](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L38)
+[core/src/sixel.ts:58](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L58)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:39](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/sixel.ts#L39)
+[core/src/sixel.ts:59](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L59)
