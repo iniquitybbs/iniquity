@@ -64,7 +64,7 @@ IQText class for advanced text manipulation
 
 #### Defined in
 
-[core/src/text.ts:83](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L83)
+[core/src/text.ts:83](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L83)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ Get visible length (excluding ANSI codes)
 
 #### Defined in
 
-[core/src/text.ts:98](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L98)
+[core/src/text.ts:98](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L98)
 
 ## Methods
 
@@ -102,7 +102,7 @@ Append content
 
 #### Defined in
 
-[core/src/text.ts:113](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L113)
+[core/src/text.ts:113](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L113)
 
 ___
 
@@ -124,7 +124,7 @@ Create a text box
 
 #### Defined in
 
-[core/src/text.ts:301](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L301)
+[core/src/text.ts:301](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L301)
 
 ___
 
@@ -146,7 +146,7 @@ Center text
 
 #### Defined in
 
-[core/src/text.ts:137](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L137)
+[core/src/text.ts:137](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L137)
 
 ___
 
@@ -168,7 +168,7 @@ Apply color
 
 #### Defined in
 
-[core/src/text.ts:129](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L129)
+[core/src/text.ts:129](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L129)
 
 ___
 
@@ -190,7 +190,7 @@ Left align text
 
 #### Defined in
 
-[core/src/text.ts:150](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L150)
+[core/src/text.ts:150](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L150)
 
 ___
 
@@ -206,7 +206,7 @@ Convert to lowercase
 
 #### Defined in
 
-[core/src/text.ts:224](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L224)
+[core/src/text.ts:224](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L224)
 
 ___
 
@@ -229,7 +229,7 @@ Add newlines
 
 #### Defined in
 
-[core/src/text.ts:248](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L248)
+[core/src/text.ts:248](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L248)
 
 ___
 
@@ -253,7 +253,7 @@ Pad text
 
 #### Defined in
 
-[core/src/text.ts:186](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L186)
+[core/src/text.ts:186](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L186)
 
 ___
 
@@ -275,7 +275,7 @@ Prepend content
 
 #### Defined in
 
-[core/src/text.ts:121](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L121)
+[core/src/text.ts:121](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L121)
 
 ___
 
@@ -297,7 +297,7 @@ Repeat text
 
 #### Defined in
 
-[core/src/text.ts:208](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L208)
+[core/src/text.ts:208](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L208)
 
 ___
 
@@ -313,7 +313,7 @@ Reverse text
 
 #### Defined in
 
-[core/src/text.ts:240](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L240)
+[core/src/text.ts:240](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L240)
 
 ___
 
@@ -335,7 +335,7 @@ Right align text
 
 #### Defined in
 
-[core/src/text.ts:162](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L162)
+[core/src/text.ts:162](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L162)
 
 ___
 
@@ -357,7 +357,7 @@ Set content
 
 #### Defined in
 
-[core/src/text.ts:105](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L105)
+[core/src/text.ts:105](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L105)
 
 ___
 
@@ -373,7 +373,7 @@ Title case
 
 #### Defined in
 
-[core/src/text.ts:232](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L232)
+[core/src/text.ts:232](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L232)
 
 ___
 
@@ -389,7 +389,7 @@ Get the text content
 
 #### Defined in
 
-[core/src/text.ts:91](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L91)
+[core/src/text.ts:91](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L91)
 
 ___
 
@@ -412,7 +412,7 @@ Truncate text
 
 #### Defined in
 
-[core/src/text.ts:174](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L174)
+[core/src/text.ts:174](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L174)
 
 ___
 
@@ -428,7 +428,7 @@ Convert to uppercase
 
 #### Defined in
 
-[core/src/text.ts:216](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L216)
+[core/src/text.ts:216](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L216)
 
 ___
 
@@ -450,7 +450,7 @@ Word wrap text
 
 #### Defined in
 
-[core/src/text.ts:265](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L265)
+[core/src/text.ts:265](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L265)
 
 ___
 
@@ -473,7 +473,7 @@ Center text within width
 
 #### Defined in
 
-[core/src/text.ts:396](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L396)
+[core/src/text.ts:396](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L396)
 
 ___
 
@@ -496,7 +496,7 @@ Format bytes to human readable
 
 #### Defined in
 
-[core/src/text.ts:564](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L564)
+[core/src/text.ts:564](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L564)
 
 ___
 
@@ -519,7 +519,7 @@ Format date
 
 #### Defined in
 
-[core/src/text.ts:600](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L600)
+[core/src/text.ts:600](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L600)
 
 ___
 
@@ -541,7 +541,7 @@ Format duration to human readable
 
 #### Defined in
 
-[core/src/text.ts:577](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L577)
+[core/src/text.ts:577](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L577)
 
 ___
 
@@ -564,7 +564,7 @@ Format number with thousands separator
 
 #### Defined in
 
-[core/src/text.ts:593](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L593)
+[core/src/text.ts:593](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L593)
 
 ___
 
@@ -587,7 +587,7 @@ Left align text within width
 
 #### Defined in
 
-[core/src/text.ts:417](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L417)
+[core/src/text.ts:417](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L417)
 
 ___
 
@@ -611,7 +611,7 @@ Create horizontal line
 
 #### Defined in
 
-[core/src/text.ts:371](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L371)
+[core/src/text.ts:371](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L371)
 
 ___
 
@@ -643,7 +643,7 @@ Create a progress bar
 
 #### Defined in
 
-[core/src/text.ts:462](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L462)
+[core/src/text.ts:462](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L462)
 
 ___
 
@@ -666,7 +666,7 @@ Right align text within width
 
 #### Defined in
 
-[core/src/text.ts:407](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L407)
+[core/src/text.ts:407](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L407)
 
 ___
 
@@ -688,7 +688,7 @@ Strip ANSI codes from text
 
 #### Defined in
 
-[core/src/text.ts:382](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L382)
+[core/src/text.ts:382](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L382)
 
 ___
 
@@ -716,7 +716,7 @@ Create a table
 
 #### Defined in
 
-[core/src/text.ts:505](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L505)
+[core/src/text.ts:505](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L505)
 
 ___
 
@@ -740,7 +740,7 @@ Truncate text to max length
 
 #### Defined in
 
-[core/src/text.ts:427](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L427)
+[core/src/text.ts:427](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L427)
 
 ___
 
@@ -762,7 +762,7 @@ Get visible length of text (excluding ANSI codes)
 
 #### Defined in
 
-[core/src/text.ts:389](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L389)
+[core/src/text.ts:389](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L389)
 
 ___
 
@@ -785,4 +785,4 @@ Word wrap text to width
 
 #### Defined in
 
-[core/src/text.ts:437](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/text.ts#L437)
+[core/src/text.ts:437](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/text.ts#L437)

@@ -39,7 +39,7 @@ Artwork filename to display
 
 #### Defined in
 
-[core/src/bbs.ts:43](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L43)
+[core/src/bbs.ts:43](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L43)
 
 ___
 
@@ -56,7 +56,7 @@ Centering mode for menu artwork positioning based on screen resolution.
 
 #### Defined in
 
-[core/src/bbs.ts:52](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L52)
+[core/src/bbs.ts:52](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L52)
 
 ___
 
@@ -68,7 +68,7 @@ Explicit X position for artwork (1-indexed). Overrides centering.
 
 #### Defined in
 
-[core/src/bbs.ts:54](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L54)
+[core/src/bbs.ts:54](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L54)
 
 ___
 
@@ -80,7 +80,7 @@ Explicit Y position for artwork (1-indexed). Overrides centering.
 
 #### Defined in
 
-[core/src/bbs.ts:56](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L56)
+[core/src/bbs.ts:56](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L56)
 
 ___
 
@@ -92,7 +92,7 @@ Base path for artwork files
 
 #### Defined in
 
-[core/src/bbs.ts:66](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L66)
+[core/src/bbs.ts:66](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L66)
 
 ___
 
@@ -104,7 +104,7 @@ Column 1 (left) X position for two-column layout
 
 #### Defined in
 
-[core/src/bbs.ts:75](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L75)
+[core/src/bbs.ts:75](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L75)
 
 ___
 
@@ -116,7 +116,7 @@ Column 1 (left) starting Y position
 
 #### Defined in
 
-[core/src/bbs.ts:77](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L77)
+[core/src/bbs.ts:77](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L77)
 
 ___
 
@@ -128,7 +128,7 @@ Column 2 (right) X position for two-column layout
 
 #### Defined in
 
-[core/src/bbs.ts:79](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L79)
+[core/src/bbs.ts:79](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L79)
 
 ___
 
@@ -140,7 +140,7 @@ Column 2 (right) starting Y position
 
 #### Defined in
 
-[core/src/bbs.ts:81](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L81)
+[core/src/bbs.ts:81](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L81)
 
 ___
 
@@ -152,7 +152,7 @@ Enable keyboard hotkeys for menu items (default true)
 
 #### Defined in
 
-[core/src/bbs.ts:87](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L87)
+[core/src/bbs.ts:87](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L87)
 
 ___
 
@@ -164,7 +164,7 @@ Format string for menu items (e.g., "|11[|15{key}|11] |07{label}")
 
 #### Defined in
 
-[core/src/bbs.ts:68](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L68)
+[core/src/bbs.ts:68](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L68)
 
 ___
 
@@ -176,7 +176,7 @@ Menu items
 
 #### Defined in
 
-[core/src/bbs.ts:70](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L70)
+[core/src/bbs.ts:70](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L70)
 
 ___
 
@@ -188,7 +188,7 @@ Starting X position for single-column layout
 
 #### Defined in
 
-[core/src/bbs.ts:83](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L83)
+[core/src/bbs.ts:83](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L83)
 
 ___
 
@@ -200,7 +200,7 @@ Starting Y position for items (used by both layouts if col1Y/col2Y not set)
 
 #### Defined in
 
-[core/src/bbs.ts:85](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L85)
+[core/src/bbs.ts:85](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L85)
 
 ___
 
@@ -212,7 +212,7 @@ Layout mode for auto-positioning
 
 #### Defined in
 
-[core/src/bbs.ts:64](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L64)
+[core/src/bbs.ts:64](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L64)
 
 ___
 
@@ -224,7 +224,7 @@ Enable SGR mouse for clicking items (default true)
 
 #### Defined in
 
-[core/src/bbs.ts:89](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L89)
+[core/src/bbs.ts:89](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L89)
 
 ___
 
@@ -236,7 +236,7 @@ MCI string for "pressed" look when an item is clicked (e.g. "|15|16")
 
 #### Defined in
 
-[core/src/bbs.ts:91](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L91)
+[core/src/bbs.ts:91](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L91)
 
 ___
 
@@ -248,7 +248,7 @@ Custom prompt text (supports MCI/pipe codes)
 
 #### Defined in
 
-[core/src/bbs.ts:58](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L58)
+[core/src/bbs.ts:58](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L58)
 
 ___
 
@@ -260,7 +260,7 @@ X position for prompt (if not specified, auto-centered)
 
 #### Defined in
 
-[core/src/bbs.ts:60](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L60)
+[core/src/bbs.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L60)
 
 ___
 
@@ -272,4 +272,4 @@ Y position for prompt (if not specified, uses layout default)
 
 #### Defined in
 
-[core/src/bbs.ts:62](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L62)
+[core/src/bbs.ts:62](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L62)

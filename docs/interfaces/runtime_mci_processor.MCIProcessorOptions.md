@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[core/src/mci/processor.ts:25](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L25)
+[core/src/mci/processor.ts:25](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L25)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:27](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L27)
+[core/src/mci/processor.ts:27](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L27)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:28](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L28)
+[core/src/mci/processor.ts:28](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L28)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:26](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L26)
+[core/src/mci/processor.ts:26](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L26)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:29](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L29)
+[core/src/mci/processor.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L29)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:31](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L31)
+[core/src/mci/processor.ts:31](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L31)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:30](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L30)
+[core/src/mci/processor.ts:30](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L30)

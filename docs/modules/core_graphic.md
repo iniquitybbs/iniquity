@@ -62,7 +62,7 @@ Helper function to extract background from attribute
 
 #### Defined in
 
-[core/src/graphic.ts:884](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/graphic.ts#L884)
+[core/src/graphic.ts:884](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L884)
 
 ___
 
@@ -84,7 +84,7 @@ Helper function to extract foreground from attribute
 
 #### Defined in
 
-[core/src/graphic.ts:877](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/graphic.ts#L877)
+[core/src/graphic.ts:877](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L877)
 
 ___
 
@@ -106,7 +106,7 @@ Helper function to check if blink is set
 
 #### Defined in
 
-[core/src/graphic.ts:891](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/graphic.ts#L891)
+[core/src/graphic.ts:891](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L891)
 
 ___
 
@@ -130,4 +130,4 @@ Helper function to create attribute from components
 
 #### Defined in
 
-[core/src/graphic.ts:868](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/graphic.ts#L868)
+[core/src/graphic.ts:868](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/graphic.ts#L868)

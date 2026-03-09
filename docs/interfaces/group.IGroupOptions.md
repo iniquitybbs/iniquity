@@ -21,7 +21,7 @@ Group options for creating groups
 
 #### Defined in
 
-[core/src/group.ts:61](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L61)
+[core/src/group.ts:61](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L61)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:60](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L60)
+[core/src/group.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L60)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:59](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L59)
+[core/src/group.ts:59](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L59)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:62](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L62)
+[core/src/group.ts:62](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L62)

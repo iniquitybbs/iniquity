@@ -17,7 +17,7 @@
 
 #### Defined in
 
-iniquity/src/lib/api-server.ts:14
+[iniquity/src/lib/api-server.ts:18](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/api-server.ts#L18)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-iniquity/src/lib/api-server.ts:13
+[iniquity/src/lib/api-server.ts:17](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/api-server.ts#L17)

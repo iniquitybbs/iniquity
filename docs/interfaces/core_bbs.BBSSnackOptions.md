@@ -22,7 +22,7 @@ Corner of the terminal (default 'bottom-right')
 
 #### Defined in
 
-[core/src/bbs.ts:112](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L112)
+[core/src/bbs.ts:112](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L112)
 
 ___
 
@@ -34,7 +34,7 @@ Duration in ms before the snack fades (default 3000)
 
 #### Defined in
 
-[core/src/bbs.ts:114](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L114)
+[core/src/bbs.ts:114](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L114)
 
 ___
 
@@ -46,4 +46,4 @@ Who receives the snack (default 'current')
 
 #### Defined in
 
-[core/src/bbs.ts:116](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L116)
+[core/src/bbs.ts:116](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L116)

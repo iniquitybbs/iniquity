@@ -35,7 +35,7 @@ SAUCE metadata structure
 
 #### Defined in
 
-[core/src/artwork.ts:386](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L386)
+[core/src/artwork.ts:386](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L386)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:396](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L396)
+[core/src/artwork.ts:396](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L396)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:390](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L390)
+[core/src/artwork.ts:390](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L390)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:388](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L388)
+[core/src/artwork.ts:388](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L388)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:389](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L389)
+[core/src/artwork.ts:389](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L389)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:391](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L391)
+[core/src/artwork.ts:391](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L391)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:397](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L397)
+[core/src/artwork.ts:397](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L397)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:398](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L398)
+[core/src/artwork.ts:398](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L398)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:387](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L387)
+[core/src/artwork.ts:387](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L387)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:400](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L400)
+[core/src/artwork.ts:400](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L400)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:401](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L401)
+[core/src/artwork.ts:401](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L401)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:392](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L392)
+[core/src/artwork.ts:392](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L392)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:393](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L393)
+[core/src/artwork.ts:393](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L393)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:394](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L394)
+[core/src/artwork.ts:394](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L394)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:395](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L395)
+[core/src/artwork.ts:395](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L395)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:385](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L385)
+[core/src/artwork.ts:385](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L385)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:384](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L384)
+[core/src/artwork.ts:384](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L384)
 
 ___
 
@@ -205,4 +205,4 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:399](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L399)
+[core/src/artwork.ts:399](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L399)

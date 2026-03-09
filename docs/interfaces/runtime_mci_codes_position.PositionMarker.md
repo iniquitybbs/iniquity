@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:15](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L15)
+[core/src/mci/codes/position.ts:15](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L15)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:14](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L14)
+[core/src/mci/codes/position.ts:14](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L14)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:13](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L13)
+[core/src/mci/codes/position.ts:13](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L13)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:10](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L10)
+[core/src/mci/codes/position.ts:10](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L10)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:16](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L16)
+[core/src/mci/codes/position.ts:16](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L16)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:11](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L11)
+[core/src/mci/codes/position.ts:11](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L11)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:12](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/position.ts#L12)
+[core/src/mci/codes/position.ts:12](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/position.ts#L12)

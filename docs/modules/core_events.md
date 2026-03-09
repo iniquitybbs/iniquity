@@ -52,7 +52,7 @@ Event handler function type
 
 #### Defined in
 
-[core/src/events.ts:29](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/events.ts#L29)
+[core/src/events.ts:29](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/events.ts#L29)
 
 ## Variables
 
@@ -65,4 +65,4 @@ Use this for application-wide event handling
 
 #### Defined in
 
-[core/src/events.ts:271](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/events.ts#L271)
+[core/src/events.ts:271](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/events.ts#L271)

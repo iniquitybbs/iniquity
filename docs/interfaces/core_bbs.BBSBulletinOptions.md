@@ -22,7 +22,7 @@ Clear screen before display
 
 #### Defined in
 
-[core/src/bbs.ts:162](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L162)
+[core/src/bbs.ts:162](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L162)
 
 ___
 
@@ -34,7 +34,7 @@ Lines per page for pagination
 
 #### Defined in
 
-[core/src/bbs.ts:160](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L160)
+[core/src/bbs.ts:160](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L160)
 
 ___
 
@@ -46,4 +46,4 @@ Pause after display
 
 #### Defined in
 
-[core/src/bbs.ts:164](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/bbs.ts#L164)
+[core/src/bbs.ts:164](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/bbs.ts#L164)

@@ -49,7 +49,7 @@ Screen and flow control codes (|CS, |PA, |DE, etc.)
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:9](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L9)
+[core/src/mci/codes/ctrl-codes.ts:9](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L9)
 
 ## Variables
 
@@ -59,7 +59,7 @@ Screen and flow control codes (|CS, |PA, |DE, etc.)
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:27](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L27)
+[core/src/mci/codes/ctrl-codes.ts:27](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L27)
 
 ## Functions
 
@@ -73,7 +73,7 @@ Screen and flow control codes (|CS, |PA, |DE, etc.)
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:195](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L195)
+[core/src/mci/codes/ctrl-codes.ts:195](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L195)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:191](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L191)
+[core/src/mci/codes/ctrl-codes.ts:191](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L191)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:199](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L199)
+[core/src/mci/codes/ctrl-codes.ts:199](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L199)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:203](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L203)
+[core/src/mci/codes/ctrl-codes.ts:203](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L203)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:175](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L175)
+[core/src/mci/codes/ctrl-codes.ts:175](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L175)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:183](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L183)
+[core/src/mci/codes/ctrl-codes.ts:183](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L183)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:187](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L187)
+[core/src/mci/codes/ctrl-codes.ts:187](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L187)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:179](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L179)
+[core/src/mci/codes/ctrl-codes.ts:179](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L179)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:171](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L171)
+[core/src/mci/codes/ctrl-codes.ts:171](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L171)
 
 ___
 
@@ -230,7 +230,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:215](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L215)
+[core/src/mci/codes/ctrl-codes.ts:215](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L215)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:223](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L223)
+[core/src/mci/codes/ctrl-codes.ts:223](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L223)
 
 ___
 
@@ -258,7 +258,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:211](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L211)
+[core/src/mci/codes/ctrl-codes.ts:211](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L211)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:207](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L207)
+[core/src/mci/codes/ctrl-codes.ts:207](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L207)
 
 ___
 
@@ -286,4 +286,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/ctrl-codes.ts:219](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/ctrl-codes.ts#L219)
+[core/src/mci/codes/ctrl-codes.ts:219](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/ctrl-codes.ts#L219)

@@ -51,7 +51,7 @@ Re-exports [Artwork](../classes/core_artwork.Artwork.md)
 
 #### Defined in
 
-[core/src/core.ts:648](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L648)
+[core/src/core.ts:648](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L648)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:644](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L644)
+[core/src/core.ts:644](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L644)

@@ -41,7 +41,7 @@ Default permissions for different access levels
 
 #### Defined in
 
-[core/src/group.ts:68](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L68)
+[core/src/group.ts:68](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L68)
 
 ## Functions
 
@@ -55,7 +55,7 @@ Default permissions for different access levels
 
 #### Defined in
 
-[core/src/group.ts:350](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L350)
+[core/src/group.ts:350](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L350)
 
 ___
 
@@ -77,7 +77,7 @@ Initialize the group database with a BBS-specific data path
 
 #### Defined in
 
-[core/src/group.ts:361](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L361)
+[core/src/group.ts:361](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L361)
 
 ___
 
@@ -97,4 +97,4 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:346](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L346)
+[core/src/group.ts:346](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L346)

@@ -28,7 +28,7 @@ Network node information
 
 #### Defined in
 
-[core/src/network.ts:17](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L17)
+[core/src/network.ts:17](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L17)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:15](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L15)
+[core/src/network.ts:15](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L15)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:24](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L24)
+[core/src/network.ts:24](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L24)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:16](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L16)
+[core/src/network.ts:16](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L16)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:21](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L21)
+[core/src/network.ts:21](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L21)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:22](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L22)
+[core/src/network.ts:22](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L22)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:23](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L23)
+[core/src/network.ts:23](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L23)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:18](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L18)
+[core/src/network.ts:18](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L18)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:19](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L19)
+[core/src/network.ts:19](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L19)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:25](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L25)
+[core/src/network.ts:25](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L25)
 
 ___
 
@@ -128,4 +128,4 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:20](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L20)
+[core/src/network.ts:20](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L20)

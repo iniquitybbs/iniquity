@@ -19,7 +19,7 @@ Artwork constructor options
 
 #### Defined in
 
-[core/src/artwork.ts:330](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L330)
+[core/src/artwork.ts:330](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L330)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:329](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L329)
+[core/src/artwork.ts:329](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L329)

@@ -38,7 +38,7 @@ JSON file-based group database
 
 #### Defined in
 
-[core/src/group.ts:212](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L212)
+[core/src/group.ts:212](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L212)
 
 ## Methods
 
@@ -62,7 +62,7 @@ JSON file-based group database
 
 #### Defined in
 
-[core/src/group.ts:286](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L286)
+[core/src/group.ts:286](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L286)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:315](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L315)
+[core/src/group.ts:315](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L315)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:328](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L328)
+[core/src/group.ts:328](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L328)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:336](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L336)
+[core/src/group.ts:336](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L336)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:332](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L332)
+[core/src/group.ts:332](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L332)
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:269](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L269)
+[core/src/group.ts:269](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L269)
 
 ___
 
@@ -194,4 +194,4 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:273](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/group.ts#L273)
+[core/src/group.ts:273](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/group.ts#L273)

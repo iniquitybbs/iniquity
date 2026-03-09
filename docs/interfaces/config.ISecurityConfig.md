@@ -26,7 +26,7 @@ Security configuration
 
 #### Defined in
 
-[core/src/config.ts:67](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L67)
+[core/src/config.ts:67](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L67)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:62](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L62)
+[core/src/config.ts:62](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L62)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:68](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L68)
+[core/src/config.ts:68](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L68)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:69](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L69)
+[core/src/config.ts:69](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L69)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:61](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L61)
+[core/src/config.ts:61](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L61)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:63](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L63)
+[core/src/config.ts:63](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L63)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:64](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L64)
+[core/src/config.ts:64](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L64)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:65](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L65)
+[core/src/config.ts:65](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L65)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:66](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L66)
+[core/src/config.ts:66](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L66)

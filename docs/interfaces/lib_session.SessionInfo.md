@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:17](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L17)
+[iniquity/src/lib/session.ts:17](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L17)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:14](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L14)
+[iniquity/src/lib/session.ts:14](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L14)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:16](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L16)
+[iniquity/src/lib/session.ts:16](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L16)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:13](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L13)
+[iniquity/src/lib/session.ts:13](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L13)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:15](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L15)
+[iniquity/src/lib/session.ts:15](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L15)

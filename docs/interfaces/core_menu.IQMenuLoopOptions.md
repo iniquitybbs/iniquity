@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[core/src/menu.ts:69](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L69)
+[core/src/menu.ts:71](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L71)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:68](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L68)
+[core/src/menu.ts:70](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L70)

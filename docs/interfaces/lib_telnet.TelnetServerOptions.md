@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:15](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/telnet.ts#L15)
+[iniquity/src/lib/telnet.ts:15](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L15)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:14](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/telnet.ts#L14)
+[iniquity/src/lib/telnet.ts:14](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L14)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:16](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/telnet.ts#L16)
+[iniquity/src/lib/telnet.ts:16](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L16)

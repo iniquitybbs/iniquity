@@ -32,7 +32,7 @@ Menu item for display
 
 #### Defined in
 
-[core/src/menu.ts:95](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L95)
+[core/src/menu.ts:97](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L97)
 
 ___
 
@@ -52,7 +52,7 @@ Bounds for mouse hit-testing (1-based x, y, endX); set by displayItems() when po
 
 #### Defined in
 
-[core/src/menu.ts:98](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L98)
+[core/src/menu.ts:100](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L100)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:91](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L91)
+[core/src/menu.ts:93](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L93)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:92](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L92)
+[core/src/menu.ts:94](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L94)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:96](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L96)
+[core/src/menu.ts:98](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L98)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:93](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L93)
+[core/src/menu.ts:95](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L95)
 
 ___
 
@@ -102,4 +102,4 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:94](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/menu.ts#L94)
+[core/src/menu.ts:96](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/menu.ts#L96)

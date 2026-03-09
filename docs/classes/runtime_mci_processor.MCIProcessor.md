@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[core/src/mci/processor.ts:58](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L58)
+[core/src/mci/processor.ts:58](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L58)
 
 ## Methods
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[core/src/mci/processor.ts:307](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L307)
+[core/src/mci/processor.ts:307](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L307)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:295](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L295)
+[core/src/mci/processor.ts:295](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L295)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:291](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L291)
+[core/src/mci/processor.ts:291](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L291)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:236](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L236)
+[core/src/mci/processor.ts:236](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L236)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:271](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L271)
+[core/src/mci/processor.ts:271](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L271)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:327](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L327)
+[core/src/mci/processor.ts:327](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L327)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:354](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L354)
+[core/src/mci/processor.ts:354](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L354)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:279](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L279)
+[core/src/mci/processor.ts:279](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L279)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:287](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L287)
+[core/src/mci/processor.ts:287](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L287)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:331](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L331)
+[core/src/mci/processor.ts:331](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L331)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:319](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L319)
+[core/src/mci/processor.ts:319](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L319)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:299](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L299)
+[core/src/mci/processor.ts:299](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L299)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:85](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L85)
+[core/src/mci/processor.ts:85](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L85)
 
 ___
 
@@ -300,7 +300,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:90](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L90)
+[core/src/mci/processor.ts:90](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L90)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:315](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L315)
+[core/src/mci/processor.ts:315](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L315)
 
 ___
 
@@ -342,7 +342,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:311](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L311)
+[core/src/mci/processor.ts:311](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L311)
 
 ___
 
@@ -356,7 +356,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:347](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L347)
+[core/src/mci/processor.ts:347](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L347)
 
 ___
 
@@ -370,7 +370,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:335](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L335)
+[core/src/mci/processor.ts:335](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L335)
 
 ___
 
@@ -390,7 +390,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:275](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L275)
+[core/src/mci/processor.ts:275](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L275)
 
 ___
 
@@ -410,7 +410,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:252](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L252)
+[core/src/mci/processor.ts:252](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L252)
 
 ___
 
@@ -430,7 +430,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:232](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L232)
+[core/src/mci/processor.ts:232](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L232)
 
 ___
 
@@ -451,7 +451,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:303](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L303)
+[core/src/mci/processor.ts:303](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L303)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:267](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L267)
+[core/src/mci/processor.ts:267](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L267)
 
 ___
 
@@ -492,7 +492,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:343](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L343)
+[core/src/mci/processor.ts:343](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L343)
 
 ___
 
@@ -512,7 +512,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:323](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L323)
+[core/src/mci/processor.ts:323](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L323)
 
 ___
 
@@ -532,7 +532,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:246](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L246)
+[core/src/mci/processor.ts:246](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L246)
 
 ___
 
@@ -552,7 +552,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:258](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L258)
+[core/src/mci/processor.ts:258](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L258)
 
 ___
 
@@ -572,7 +572,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:240](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L240)
+[core/src/mci/processor.ts:240](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L240)
 
 ___
 
@@ -586,7 +586,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:339](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L339)
+[core/src/mci/processor.ts:339](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L339)
 
 ___
 
@@ -607,4 +607,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/processor.ts:283](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/processor.ts#L283)
+[core/src/mci/processor.ts:283](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/processor.ts#L283)

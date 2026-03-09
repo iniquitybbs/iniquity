@@ -34,4 +34,4 @@ Get the currently active TelnetServer instance
 
 #### Defined in
 
-[iniquity/src/lib/telnet.ts:25](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/telnet.ts#L25)
+[iniquity/src/lib/telnet.ts:25](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/telnet.ts#L25)

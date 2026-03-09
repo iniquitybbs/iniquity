@@ -20,7 +20,7 @@ Options for say() function
 
 #### Defined in
 
-[core/src/core.ts:75](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L75)
+[core/src/core.ts:75](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L75)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:73](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L73)
+[core/src/core.ts:73](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L73)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:74](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L74)
+[core/src/core.ts:74](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L74)

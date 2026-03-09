@@ -48,7 +48,7 @@ yargs.CommandModule.command
 
 #### Defined in
 
-[iniquity/src/commands/server.ts:53](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/commands/server.ts#L53)
+[iniquity/src/commands/server.ts:53](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/commands/server.ts#L53)
 
 ___
 
@@ -62,7 +62,7 @@ yargs.CommandModule.describe
 
 #### Defined in
 
-[iniquity/src/commands/server.ts:54](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/commands/server.ts#L54)
+[iniquity/src/commands/server.ts:54](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/commands/server.ts#L54)
 
 ## Methods
 
@@ -86,7 +86,7 @@ yargs.CommandModule.builder
 
 #### Defined in
 
-[iniquity/src/commands/server.ts:57](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/commands/server.ts#L57)
+[iniquity/src/commands/server.ts:57](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/commands/server.ts#L57)
 
 ___
 
@@ -110,4 +110,4 @@ yargs.CommandModule.handler
 
 #### Defined in
 
-[iniquity/src/commands/server.ts:94](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/commands/server.ts#L94)
+[iniquity/src/commands/server.ts:94](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/commands/server.ts#L94)

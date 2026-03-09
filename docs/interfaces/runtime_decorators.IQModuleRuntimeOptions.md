@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[core/src/decorators.ts:25](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/decorators.ts#L25)
+[core/src/decorators.ts:25](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/decorators.ts#L25)

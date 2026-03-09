@@ -74,7 +74,7 @@ Session class implements IQOutput interface for use with core Runtime
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:83](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L83)
+[iniquity/src/lib/session.ts:83](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L83)
 
 ## Properties
 
@@ -86,7 +86,7 @@ Connection timestamp
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:66](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L66)
+[iniquity/src/lib/session.ts:66](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L66)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:68](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L68)
+[iniquity/src/lib/session.ts:68](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L68)
 
 ___
 
@@ -108,7 +108,7 @@ Node number assigned by the server
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:60](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L60)
+[iniquity/src/lib/session.ts:60](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L60)
 
 ___
 
@@ -120,7 +120,7 @@ Username when logged in (set by BBS layer for snack target by user)
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:63](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L63)
+[iniquity/src/lib/session.ts:63](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L63)
 
 ___
 
@@ -132,7 +132,7 @@ Sentinel for mouse events in the queue (followed by "x:y")
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:57](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L57)
+[iniquity/src/lib/session.ts:57](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L57)
 
 ## Methods
 
@@ -152,7 +152,7 @@ IQOutput.clearInputQueue
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:564](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L564)
+[iniquity/src/lib/session.ts:564](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L564)
 
 ___
 
@@ -172,7 +172,7 @@ IQOutput.close
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:584](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L584)
+[iniquity/src/lib/session.ts:584](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L584)
 
 ___
 
@@ -192,7 +192,7 @@ IQOutput.getEncoding
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:316](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L316)
+[iniquity/src/lib/session.ts:316](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L316)
 
 ___
 
@@ -212,7 +212,7 @@ IQOutput.getHeight
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:492](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L492)
+[iniquity/src/lib/session.ts:492](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L492)
 
 ___
 
@@ -232,7 +232,7 @@ IQOutput.getLineCount
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:436](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L436)
+[iniquity/src/lib/session.ts:436](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L436)
 
 ___
 
@@ -252,7 +252,7 @@ IQOutput.getMCIProcessor
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:361](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L361)
+[iniquity/src/lib/session.ts:361](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L361)
 
 ___
 
@@ -270,7 +270,7 @@ IQOutput.getNextSnack
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:573](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L573)
+[iniquity/src/lib/session.ts:573](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L573)
 
 ___
 
@@ -290,7 +290,7 @@ IQOutput.getPendingActions
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:345](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L345)
+[iniquity/src/lib/session.ts:345](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L345)
 
 ___
 
@@ -310,7 +310,7 @@ IQOutput.getWidth
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:485](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L485)
+[iniquity/src/lib/session.ts:485](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L485)
 
 ___
 
@@ -330,7 +330,7 @@ IQOutput.hasInput
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:557](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L557)
+[iniquity/src/lib/session.ts:557](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L557)
 
 ___
 
@@ -346,7 +346,7 @@ Check if there are pending actions
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:354](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L354)
+[iniquity/src/lib/session.ts:354](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L354)
 
 ___
 
@@ -372,7 +372,7 @@ IQOutput.incrementLineCount
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:450](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L450)
+[iniquity/src/lib/session.ts:450](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L450)
 
 ___
 
@@ -392,7 +392,7 @@ IQOutput.isPauseAborted
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:457](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L457)
+[iniquity/src/lib/session.ts:457](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L457)
 
 ___
 
@@ -412,7 +412,7 @@ IQOutput.isPauseEnabled
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:471](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L471)
+[iniquity/src/lib/session.ts:471](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L471)
 
 ___
 
@@ -438,7 +438,7 @@ IQOutput.processMCI
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:375](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L375)
+[iniquity/src/lib/session.ts:375](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L375)
 
 ___
 
@@ -465,7 +465,7 @@ IQOutput.pushSnack
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:569](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L569)
+[iniquity/src/lib/session.ts:569](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L569)
 
 ___
 
@@ -485,7 +485,7 @@ IQOutput.readKey
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:426](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L426)
+[iniquity/src/lib/session.ts:426](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L426)
 
 ___
 
@@ -507,7 +507,7 @@ IQOutput.readKeyNonBlocking
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:547](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L547)
+[iniquity/src/lib/session.ts:547](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L547)
 
 ___
 
@@ -527,7 +527,7 @@ IQOutput.readLine
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:382](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L382)
+[iniquity/src/lib/session.ts:382](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L382)
 
 ___
 
@@ -547,7 +547,7 @@ IQOutput.resetLineCount
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:443](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L443)
+[iniquity/src/lib/session.ts:443](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L443)
 
 ___
 
@@ -569,7 +569,7 @@ Set cursor style (if supported)
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:522](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L522)
+[iniquity/src/lib/session.ts:522](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L522)
 
 ___
 
@@ -591,7 +591,7 @@ Set emulated baud rate (if supported)
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:513](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L513)
+[iniquity/src/lib/session.ts:513](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L513)
 
 ___
 
@@ -617,7 +617,7 @@ IQOutput.setEncoding
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:323](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L323)
+[iniquity/src/lib/session.ts:323](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L323)
 
 ___
 
@@ -643,7 +643,7 @@ IQOutput.setMCIContext
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:368](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L368)
+[iniquity/src/lib/session.ts:368](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L368)
 
 ___
 
@@ -669,7 +669,7 @@ IQOutput.setPauseAborted
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:464](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L464)
+[iniquity/src/lib/session.ts:464](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L464)
 
 ___
 
@@ -695,7 +695,7 @@ IQOutput.setPauseEnabled
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:478](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L478)
+[iniquity/src/lib/session.ts:478](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L478)
 
 ___
 
@@ -722,7 +722,7 @@ IQOutput.setSyncTermFont
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:499](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L499)
+[iniquity/src/lib/session.ts:499](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L499)
 
 ___
 
@@ -745,7 +745,7 @@ Used so snacks and events are processed when waiting in popup/pause/choice etc.
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:419](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L419)
+[iniquity/src/lib/session.ts:419](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L419)
 
 ___
 
@@ -769,7 +769,7 @@ IQOutput.setUsername
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:577](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L577)
+[iniquity/src/lib/session.ts:577](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L577)
 
 ___
 
@@ -789,7 +789,7 @@ IQOutput.supportsFonts
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:539](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L539)
+[iniquity/src/lib/session.ts:539](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L539)
 
 ___
 
@@ -805,7 +805,7 @@ Check if client supports iCE colors
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:532](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L532)
+[iniquity/src/lib/session.ts:532](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L532)
 
 ___
 
@@ -826,7 +826,7 @@ IQOutput.waitKey
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:393](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L393)
+[iniquity/src/lib/session.ts:393](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L393)
 
 ___
 
@@ -852,7 +852,7 @@ IQOutput.write
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:305](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L305)
+[iniquity/src/lib/session.ts:305](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L305)
 
 ___
 
@@ -878,4 +878,4 @@ IQOutput.writeMCI
 
 #### Defined in
 
-[iniquity/src/lib/session.ts:332](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/iniquity/src/lib/session.ts#L332)
+[iniquity/src/lib/session.ts:332](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/iniquity/src/lib/session.ts#L332)

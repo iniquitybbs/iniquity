@@ -5,8 +5,10 @@
  */
 
 import * as http from "http"
-import Koa from "koa"
+import Koa = require("koa")
 import bodyParser from "koa-bodyparser"
+
+type KoaCtx = Parameters<Parameters<Koa["use"]>[0]>[0]
 
 const OLLAMA_BASE = process.env.OLLAMA_HOST || "http://127.0.0.1:11434"
 const DEFAULT_MODEL = process.env.OLLAMA_MODEL || "gemma3:1b"
@@ -27,7 +29,7 @@ export function startApiServer(options: ApiServerOptions = {}): http.Server {
     const app = new Koa()
     app.use(bodyParser({ enableTypes: ["json"] }))
 
-    app.use(async (ctx) => {
+    app.use(async (ctx: KoaCtx) => {
         ctx.type = "application/json"
 
         if (ctx.path === "/api/v1/health" && ctx.method === "GET") {
@@ -41,7 +43,7 @@ export function startApiServer(options: ApiServerOptions = {}): http.Server {
             return
         }
 
-        const body = (ctx.request.body || {}) as { prompt?: unknown; model?: string }
+        const body = ((ctx.request as KoaCtx["request"] & { body?: unknown }).body || {}) as { prompt?: unknown; model?: string }
         const prompt = typeof body.prompt === "string" ? body.prompt.trim() : ""
         if (!prompt) {
             ctx.status = 400

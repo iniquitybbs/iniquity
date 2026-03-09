@@ -42,7 +42,7 @@ Default configuration values
 
 #### Defined in
 
-[core/src/config.ts:113](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L113)
+[core/src/config.ts:113](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L113)
 
 ## Functions
 
@@ -56,7 +56,7 @@ Default configuration values
 
 #### Defined in
 
-[core/src/config.ts:533](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L533)
+[core/src/config.ts:533](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L533)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:544](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L544)
+[core/src/config.ts:544](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L544)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:540](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/config.ts#L540)
+[core/src/config.ts:540](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/config.ts#L540)

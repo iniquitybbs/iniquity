@@ -75,7 +75,7 @@ Primary coordinator for all runtime components
 
 #### Defined in
 
-[core/src/core.ts:157](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L157)
+[core/src/core.ts:157](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L157)
 
 ## Properties
 
@@ -85,7 +85,7 @@ Primary coordinator for all runtime components
 
 #### Defined in
 
-[core/src/core.ts:150](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L150)
+[core/src/core.ts:150](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L150)
 
 ## Accessors
 
@@ -101,7 +101,7 @@ Get the MCI processor
 
 #### Defined in
 
-[core/src/core.ts:181](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L181)
+[core/src/core.ts:181](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L181)
 
 ___
 
@@ -117,7 +117,7 @@ Get terminal dimensions
 
 #### Defined in
 
-[core/src/core.ts:171](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L171)
+[core/src/core.ts:171](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L171)
 
 ## Methods
 
@@ -140,7 +140,7 @@ Display an alert box
 
 #### Defined in
 
-[core/src/core.ts:492](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L492)
+[core/src/core.ts:492](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L492)
 
 ___
 
@@ -162,7 +162,7 @@ Create artwork instance
 
 #### Defined in
 
-[core/src/core.ts:428](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L428)
+[core/src/core.ts:428](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L428)
 
 ___
 
@@ -184,7 +184,7 @@ Ask the user a question and return their input
 
 #### Defined in
 
-[core/src/core.ts:327](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L327)
+[core/src/core.ts:327](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L327)
 
 ___
 
@@ -200,7 +200,7 @@ Clear the last-rendered art key (e.g. after full-screen goodbye so next menu ful
 
 #### Defined in
 
-[core/src/core.ts:589](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L589)
+[core/src/core.ts:589](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L589)
 
 ___
 
@@ -216,7 +216,7 @@ Get configuration
 
 #### Defined in
 
-[core/src/core.ts:485](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L485)
+[core/src/core.ts:485](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L485)
 
 ___
 
@@ -238,7 +238,7 @@ Get cursor control
 
 #### Defined in
 
-[core/src/core.ts:436](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L436)
+[core/src/core.ts:436](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L436)
 
 ___
 
@@ -254,7 +254,7 @@ Disable pause
 
 #### Defined in
 
-[core/src/core.ts:617](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L617)
+[core/src/core.ts:617](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L617)
 
 ___
 
@@ -270,7 +270,7 @@ Disconnect the user
 
 #### Defined in
 
-[core/src/core.ts:407](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L407)
+[core/src/core.ts:407](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L407)
 
 ___
 
@@ -286,7 +286,7 @@ Enable pause
 
 #### Defined in
 
-[core/src/core.ts:610](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L610)
+[core/src/core.ts:610](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L610)
 
 ___
 
@@ -308,7 +308,7 @@ Create a frame
 
 #### Defined in
 
-[core/src/core.ts:421](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L421)
+[core/src/core.ts:421](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L421)
 
 ___
 
@@ -324,7 +324,7 @@ Get the art key of the last menu that drew artwork (used to skip redraw when sam
 
 #### Defined in
 
-[core/src/core.ts:575](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L575)
+[core/src/core.ts:575](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L575)
 
 ___
 
@@ -346,7 +346,7 @@ Get custom MCI variable
 
 #### Defined in
 
-[core/src/core.ts:209](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L209)
+[core/src/core.ts:209](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L209)
 
 ___
 
@@ -362,7 +362,7 @@ Get current output
 
 #### Defined in
 
-[core/src/core.ts:164](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L164)
+[core/src/core.ts:164](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L164)
 
 ___
 
@@ -378,7 +378,7 @@ Get program directory
 
 #### Defined in
 
-[core/src/core.ts:544](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L544)
+[core/src/core.ts:544](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L544)
 
 ___
 
@@ -401,7 +401,7 @@ Move cursor to position
 
 #### Defined in
 
-[core/src/core.ts:400](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L400)
+[core/src/core.ts:400](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L400)
 
 ___
 
@@ -423,7 +423,7 @@ Create or load a group
 
 #### Defined in
 
-[core/src/core.ts:457](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L457)
+[core/src/core.ts:457](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L457)
 
 ___
 
@@ -439,7 +439,7 @@ Get group list utilities
 
 #### Defined in
 
-[core/src/core.ts:464](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L464)
+[core/src/core.ts:464](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L464)
 
 ___
 
@@ -455,7 +455,7 @@ Check if pause was aborted by user
 
 #### Defined in
 
-[core/src/core.ts:596](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L596)
+[core/src/core.ts:596](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L596)
 
 ___
 
@@ -477,7 +477,7 @@ Create a menu
 
 #### Defined in
 
-[core/src/core.ts:414](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L414)
+[core/src/core.ts:414](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L414)
 
 ___
 
@@ -493,7 +493,7 @@ Get network utilities
 
 #### Defined in
 
-[core/src/core.ts:471](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L471)
+[core/src/core.ts:471](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L471)
 
 ___
 
@@ -515,7 +515,7 @@ Display pause prompt and wait for key
 
 #### Defined in
 
-[core/src/core.ts:335](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L335)
+[core/src/core.ts:335](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L335)
 
 ___
 
@@ -538,7 +538,7 @@ Print text with automatic pause at page length
 
 #### Defined in
 
-[core/src/core.ts:288](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L288)
+[core/src/core.ts:288](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L288)
 
 ___
 
@@ -561,7 +561,7 @@ Print text with MCI processing
 
 #### Defined in
 
-[core/src/core.ts:319](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L319)
+[core/src/core.ts:319](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L319)
 
 ___
 
@@ -583,7 +583,7 @@ Process MCI codes in text
 
 #### Defined in
 
-[core/src/core.ts:188](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L188)
+[core/src/core.ts:188](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L188)
 
 ___
 
@@ -599,7 +599,7 @@ Process pending MCI actions
 
 #### Defined in
 
-[core/src/core.ts:216](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L216)
+[core/src/core.ts:216](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L216)
 
 ___
 
@@ -617,7 +617,7 @@ Cursor is restored by showSnack (save/restore) so behavior is correct in any con
 
 #### Defined in
 
-[core/src/core.ts:553](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L553)
+[core/src/core.ts:553](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L553)
 
 ___
 
@@ -633,7 +633,7 @@ Reset pause aborted state
 
 #### Defined in
 
-[core/src/core.ts:603](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L603)
+[core/src/core.ts:603](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L603)
 
 ___
 
@@ -656,7 +656,7 @@ Display text to the user
 
 #### Defined in
 
-[core/src/core.ts:256](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L256)
+[core/src/core.ts:256](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L256)
 
 ___
 
@@ -678,7 +678,7 @@ Display raw text without MCI processing
 
 #### Defined in
 
-[core/src/core.ts:281](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L281)
+[core/src/core.ts:281](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L281)
 
 ___
 
@@ -700,7 +700,7 @@ Set the art key after drawing menu artwork (so next menu can skip if same).
 
 #### Defined in
 
-[core/src/core.ts:582](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L582)
+[core/src/core.ts:582](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L582)
 
 ___
 
@@ -722,7 +722,7 @@ Set MCI context
 
 #### Defined in
 
-[core/src/core.ts:195](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L195)
+[core/src/core.ts:195](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L195)
 
 ___
 
@@ -745,7 +745,7 @@ Set custom MCI variable
 
 #### Defined in
 
-[core/src/core.ts:202](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L202)
+[core/src/core.ts:202](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L202)
 
 ___
 
@@ -767,7 +767,7 @@ Set program directory for asset resolution
 
 #### Defined in
 
-[core/src/core.ts:537](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L537)
+[core/src/core.ts:537](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L537)
 
 ___
 
@@ -791,7 +791,7 @@ can be restored to the prompt after a snack is cleared.
 
 #### Defined in
 
-[core/src/core.ts:568](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L568)
+[core/src/core.ts:568](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L568)
 
 ___
 
@@ -813,7 +813,7 @@ Create text manipulation instance
 
 #### Defined in
 
-[core/src/core.ts:478](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L478)
+[core/src/core.ts:478](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L478)
 
 ___
 
@@ -835,7 +835,7 @@ Create or load a user
 
 #### Defined in
 
-[core/src/core.ts:443](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L443)
+[core/src/core.ts:443](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L443)
 
 ___
 
@@ -851,7 +851,7 @@ Get user list utilities
 
 #### Defined in
 
-[core/src/core.ts:450](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L450)
+[core/src/core.ts:450](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L450)
 
 ___
 
@@ -873,4 +873,4 @@ Wait for specified milliseconds
 
 #### Defined in
 
-[core/src/core.ts:393](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L393)
+[core/src/core.ts:393](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L393)

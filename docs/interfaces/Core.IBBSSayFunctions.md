@@ -31,7 +31,7 @@ Chainable functions returned by say/print
 
 #### Defined in
 
-[core/src/core.ts:50](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L50)
+[core/src/core.ts:50](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L50)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:48](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L48)
+[core/src/core.ts:48](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L48)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:49](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/core.ts#L49)
+[core/src/core.ts:49](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/core.ts#L49)

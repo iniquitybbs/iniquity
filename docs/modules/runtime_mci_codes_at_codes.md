@@ -54,7 +54,7 @@ Synchronet-compatible @-codes for dynamic content expansion
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:9](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L9)
+[core/src/mci/codes/at-codes.ts:9](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L9)
 
 ## Variables
 
@@ -64,7 +64,7 @@ Synchronet-compatible @-codes for dynamic content expansion
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:181](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L181)
+[core/src/mci/codes/at-codes.ts:181](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L181)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:114](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L114)
+[core/src/mci/codes/at-codes.ts:114](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L114)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:167](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L167)
+[core/src/mci/codes/at-codes.ts:167](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L167)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:152](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L152)
+[core/src/mci/codes/at-codes.ts:152](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L152)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:145](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L145)
+[core/src/mci/codes/at-codes.ts:145](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L145)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:94](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L94)
+[core/src/mci/codes/at-codes.ts:94](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L94)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:131](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L131)
+[core/src/mci/codes/at-codes.ts:131](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L131)
 
 ___
 
@@ -134,4 +134,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/at-codes.ts:50](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/mci/codes/at-codes.ts#L50)
+[core/src/mci/codes/at-codes.ts:50](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/mci/codes/at-codes.ts#L50)

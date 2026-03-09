@@ -30,7 +30,7 @@ Artwork render options
 
 #### Defined in
 
-[core/src/artwork.ts:347](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L347)
+[core/src/artwork.ts:347](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L347)
 
 ___
 
@@ -47,7 +47,7 @@ Centering mode for artwork positioning based on screen resolution.
 
 #### Defined in
 
-[core/src/artwork.ts:368](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L368)
+[core/src/artwork.ts:368](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L368)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:338](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L338)
+[core/src/artwork.ts:338](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L338)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:344](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L344)
+[core/src/artwork.ts:344](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L344)
 
 ___
 
@@ -79,7 +79,7 @@ Display style: 'line' renders line-by-line, 'character' renders char-by-char, 'i
 
 #### Defined in
 
-[core/src/artwork.ts:340](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L340)
+[core/src/artwork.ts:340](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L340)
 
 ___
 
@@ -94,7 +94,7 @@ Defaults to 'cp437' for traditional BBS compatibility.
 
 #### Defined in
 
-[core/src/artwork.ts:355](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L355)
+[core/src/artwork.ts:355](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L355)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:337](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L337)
+[core/src/artwork.ts:337](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L337)
 
 ___
 
@@ -118,7 +118,7 @@ Use 'display' instead
 
 #### Defined in
 
-[core/src/artwork.ts:342](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L342)
+[core/src/artwork.ts:342](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L342)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:348](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L348)
+[core/src/artwork.ts:348](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L348)
 
 ___
 
@@ -140,7 +140,7 @@ Process MCI/pipe codes in artwork. Defaults to true for BBS compatibility.
 
 #### Defined in
 
-[core/src/artwork.ts:346](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L346)
+[core/src/artwork.ts:346](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L346)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:343](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L343)
+[core/src/artwork.ts:343](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L343)
 
 ___
 
@@ -162,7 +162,7 @@ Explicit X position (1-indexed). Overrides centering.
 
 #### Defined in
 
-[core/src/artwork.ts:357](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L357)
+[core/src/artwork.ts:357](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L357)
 
 ___
 
@@ -174,4 +174,4 @@ Explicit Y position (1-indexed). Overrides centering.
 
 #### Defined in
 
-[core/src/artwork.ts:359](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/artwork.ts#L359)
+[core/src/artwork.ts:359](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/artwork.ts#L359)

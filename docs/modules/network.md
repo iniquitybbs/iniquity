@@ -36,7 +36,7 @@ Network connectivity, FidoNet, and inter-BBS communication
 
 #### Defined in
 
-[core/src/network.ts:309](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L309)
+[core/src/network.ts:309](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L309)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:316](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L316)
+[core/src/network.ts:316](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L316)

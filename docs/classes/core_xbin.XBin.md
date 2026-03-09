@@ -45,7 +45,7 @@ XBin class for reading and displaying XBin images
 
 #### Defined in
 
-[core/src/xbin.ts:95](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L95)
+[core/src/xbin.ts:95](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L95)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:94](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L94)
+[core/src/xbin.ts:94](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L94)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:97](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L97)
+[core/src/xbin.ts:97](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L97)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:96](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L96)
+[core/src/xbin.ts:96](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L96)
 
 ___
 
@@ -87,7 +87,7 @@ Flag constants
 
 #### Defined in
 
-[core/src/xbin.ts:93](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L93)
+[core/src/xbin.ts:93](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L93)
 
 ___
 
@@ -99,7 +99,7 @@ XBin file signature
 
 #### Defined in
 
-[core/src/xbin.ts:87](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L87)
+[core/src/xbin.ts:87](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L87)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:88](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L88)
+[core/src/xbin.ts:88](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L88)
 
 ## Methods
 
@@ -131,7 +131,7 @@ Clean up after displaying XBin (reset fonts and palette)
 
 #### Defined in
 
-[core/src/xbin.ts:458](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L458)
+[core/src/xbin.ts:458](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L458)
 
 ___
 
@@ -156,7 +156,7 @@ Create an XBin file from a Graphic
 
 #### Defined in
 
-[core/src/xbin.ts:387](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L387)
+[core/src/xbin.ts:387](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L387)
 
 ___
 
@@ -182,7 +182,7 @@ Display an XBin image
 
 #### Defined in
 
-[core/src/xbin.ts:284](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L284)
+[core/src/xbin.ts:284](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L284)
 
 ___
 
@@ -204,7 +204,7 @@ Get info about an XBin file without fully parsing it
 
 #### Defined in
 
-[core/src/xbin.ts:355](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L355)
+[core/src/xbin.ts:355](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L355)
 
 ___
 
@@ -226,7 +226,7 @@ Check if a file is an XBin file
 
 #### Defined in
 
-[core/src/xbin.ts:332](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L332)
+[core/src/xbin.ts:332](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L332)
 
 ___
 
@@ -248,7 +248,7 @@ Check if buffer contains XBin data
 
 #### Defined in
 
-[core/src/xbin.ts:347](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L347)
+[core/src/xbin.ts:347](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L347)
 
 ___
 
@@ -270,7 +270,7 @@ Parse XBin data from a buffer
 
 #### Defined in
 
-[core/src/xbin.ts:114](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L114)
+[core/src/xbin.ts:114](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L114)
 
 ___
 
@@ -292,4 +292,4 @@ Read an XBin file
 
 #### Defined in
 
-[core/src/xbin.ts:102](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/xbin.ts#L102)
+[core/src/xbin.ts:102](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/xbin.ts#L102)

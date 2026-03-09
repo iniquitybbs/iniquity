@@ -21,7 +21,7 @@ Only trigger once then auto-unsubscribe
 
 #### Defined in
 
-[core/src/events.ts:36](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/events.ts#L36)
+[core/src/events.ts:36](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/events.ts#L36)
 
 ___
 
@@ -33,4 +33,4 @@ Priority (higher = called first)
 
 #### Defined in
 
-[core/src/events.ts:38](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/events.ts#L38)
+[core/src/events.ts:38](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/events.ts#L38)

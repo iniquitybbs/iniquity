@@ -37,7 +37,7 @@ IQNetwork class for inter-BBS and external connectivity
 
 #### Defined in
 
-[core/src/network.ts:71](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L71)
+[core/src/network.ts:71](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L71)
 
 ## Methods
 
@@ -59,7 +59,7 @@ Connect to a telnet server
 
 #### Defined in
 
-[core/src/network.ts:264](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L264)
+[core/src/network.ts:264](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L264)
 
 ___
 
@@ -81,7 +81,7 @@ Simple GET request
 
 #### Defined in
 
-[core/src/network.ts:244](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L244)
+[core/src/network.ts:244](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L244)
 
 ___
 
@@ -97,7 +97,7 @@ Get local FidoNet address
 
 #### Defined in
 
-[core/src/network.ts:83](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L83)
+[core/src/network.ts:83](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L83)
 
 ___
 
@@ -119,7 +119,7 @@ Get a network node
 
 #### Defined in
 
-[core/src/network.ts:123](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L123)
+[core/src/network.ts:123](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L123)
 
 ___
 
@@ -135,7 +135,7 @@ Get offline nodes
 
 #### Defined in
 
-[core/src/network.ts:299](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L299)
+[core/src/network.ts:299](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L299)
 
 ___
 
@@ -151,7 +151,7 @@ Get online nodes
 
 #### Defined in
 
-[core/src/network.ts:292](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L292)
+[core/src/network.ts:292](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L292)
 
 ___
 
@@ -178,7 +178,7 @@ Make HTTP/HTTPS request
 
 #### Defined in
 
-[core/src/network.ts:193](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L193)
+[core/src/network.ts:193](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L193)
 
 ___
 
@@ -194,7 +194,7 @@ List all nodes
 
 #### Defined in
 
-[core/src/network.ts:130](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L130)
+[core/src/network.ts:130](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L130)
 
 ___
 
@@ -218,7 +218,7 @@ Check if a host is reachable
 
 #### Defined in
 
-[core/src/network.ts:137](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L137)
+[core/src/network.ts:137](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L137)
 
 ___
 
@@ -242,7 +242,7 @@ Simple POST request
 
 #### Defined in
 
-[core/src/network.ts:252](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L252)
+[core/src/network.ts:252](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L252)
 
 ___
 
@@ -264,7 +264,7 @@ Register a network node
 
 #### Defined in
 
-[core/src/network.ts:116](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L116)
+[core/src/network.ts:116](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L116)
 
 ___
 
@@ -286,7 +286,7 @@ Set local FidoNet address
 
 #### Defined in
 
-[core/src/network.ts:76](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L76)
+[core/src/network.ts:76](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L76)
 
 ___
 
@@ -302,7 +302,7 @@ Update all node statuses
 
 #### Defined in
 
-[core/src/network.ts:179](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L179)
+[core/src/network.ts:179](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L179)
 
 ___
 
@@ -324,7 +324,7 @@ Update node status
 
 #### Defined in
 
-[core/src/network.ts:165](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L165)
+[core/src/network.ts:165](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L165)
 
 ___
 
@@ -346,7 +346,7 @@ Format FidoNet address to string
 
 #### Defined in
 
-[core/src/network.ts:105](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L105)
+[core/src/network.ts:105](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L105)
 
 ___
 
@@ -368,4 +368,4 @@ Parse FidoNet address string (zone:net/node.point)
 
 #### Defined in
 
-[core/src/network.ts:90](https://github.com/iniquitybbs/iniquity/blob/6d665ac/packages/core/src/network.ts#L90)
+[core/src/network.ts:90](https://github.com/iniquitybbs/iniquity/blob/7f71270/packages/core/src/network.ts#L90)

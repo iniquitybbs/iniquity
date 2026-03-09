@@ -12,7 +12,7 @@
         "resolveJsonModule": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "types": ["node"],
+        "types": ["node", "koa"],
         "baseUrl": ".",
         "lib": ["es2020", "dom"],
         "skipLibCheck": true,
