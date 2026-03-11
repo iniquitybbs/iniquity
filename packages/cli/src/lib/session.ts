@@ -41,6 +41,8 @@ export interface SessionInfo {
         isVtx: boolean
         supportsIceColors: boolean
         supportsFonts: boolean
+        /** True if client sent IQTERM UTF-8 handshake or TERM type suggests UTF-8 */
+        suggestsUtf8?: boolean
     }
 }
 
@@ -70,6 +72,8 @@ export class Session implements IQOutput {
     private pendingInputQueue: string[] = [] // Queue for non-blocking reads
     private escapeSequenceBuffer: number[] = [] // Incomplete escape sequence across packets
     private snackQueue: { message: string; corner: string; durationMs: number }[] = []
+    private handshakeComplete: boolean = false
+    private handshakeBuffer: Buffer[] = []
     /** Optional callback run every 10ms while waiting for a key (e.g. processQueue + processSnacks). Serialized, no overlap. */
     private tickCallback?: () => Promise<void>
 
@@ -127,6 +131,39 @@ export class Session implements IQOutput {
     }
 
     private handleData(data: Buffer) {
+        // Pre-handshake: only wait for first line when it looks like IQTERM (iq term client).
+        // Otherwise pass data through immediately so telnet and other clients work.
+        if (!this.handshakeComplete) {
+            this.handshakeBuffer.push(data)
+            const full = Buffer.concat(this.handshakeBuffer)
+            const lineEnd = full.indexOf(0x0a) // \n
+            if (lineEnd === -1) {
+                // No newline yet: only keep buffering if this could be start of "IQTERM\t..."
+                const startsWithIqTerm = full.length >= 1 && full[0] === 0x49 && (full.length < 7 || full.slice(0, 6).toString("ascii") === "IQTERM")
+                if (!startsWithIqTerm) {
+                    this.handshakeComplete = true
+                    this.handshakeBuffer = []
+                    data = full
+                }
+                // else keep buffering until we see \n
+            } else {
+                const line = full.slice(0, lineEnd).toString("ascii").replace(/\r$/, "")
+                const rest = lineEnd + 1 < full.length ? full.slice(lineEnd + 1) : null
+                this.handshakeComplete = true
+                this.handshakeBuffer = []
+                if (/^IQTERM\t[\d.]+\tUTF-8/i.test(line)) {
+                    const parts = line.split("\t")
+                    this.info.client.name = "iq term"
+                    this.info.client.version = (parts[1] ?? "1.0").trim()
+                    this.info.client.suggestsUtf8 = true
+                    if (rest && rest.length > 0) this.handleData(rest)
+                    return
+                }
+                data = full
+            }
+            if (this.handshakeBuffer.length > 0) return
+        }
+
         // Prepend any incomplete escape sequence from previous chunk
         let buf: Buffer = data
         if (this.escapeSequenceBuffer.length > 0) {
@@ -325,6 +362,11 @@ export class Session implements IQOutput {
             this.info.client.supportsIceColors = true
         }
 
+        // Infer UTF-8 capability from modern terminal types (telnet TERMINAL_TYPE)
+        if (/xterm|iterm|utf|linux|screen|tmux|foot|alacritty|wezterm/i.test(termType)) {
+            this.info.client.suggestsUtf8 = true
+        }
+
         if (this.info.client.isSyncTerm || this.info.client.isVtx) {
             this.socket.write(ANSI.queryDeviceAttributes(), "binary")
         }
@@ -348,6 +390,13 @@ export class Session implements IQOutput {
      */
     getEncoding(): "cp437" | "utf8" {
         return this.info.encoding
+    }
+
+    /**
+     * Whether the client suggested UTF-8 (iq term handshake or TERM type)
+     */
+    getClientSuggestsUtf8(): boolean {
+        return this.info.client.suggestsUtf8 === true
     }
 
     /**

@@ -66,6 +66,8 @@ export function handler(argv: yargs.Arguments) {
         if (process.stderr.isTTY) {
             process.stderr.write(`Connecting to ${host}:${port}...\r\n`)
         }
+        // Handshake: tell server we are iq term with UTF-8 so it can offer encoding preference
+        socket.write("IQTERM\t1.0\tUTF-8\r\n", "utf8")
         if (process.stdin.isTTY && process.stdin.setRawMode) {
             process.stdin.setRawMode(true)
         }

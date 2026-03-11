@@ -72,6 +72,8 @@ export interface IDisplayConfig {
     iceColors: boolean
     blinkingText: boolean
     ansiMusic: boolean
+    /** When to apply or ask for UTF-8: detect (auto), ask (prompt), cp437/utf8 (force) */
+    encodingPrompt?: "detect" | "ask" | "cp437" | "utf8"
 }
 
 /**
@@ -163,7 +165,8 @@ export const DEFAULT_CONFIG: IBBSConfig = {
         defaultFont: "IBM VGA",
         iceColors: true,
         blinkingText: false,
-        ansiMusic: false
+        ansiMusic: false,
+        encodingPrompt: "ask"
     },
     security: {
         maxLoginAttempts: 3,

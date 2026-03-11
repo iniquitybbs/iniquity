@@ -112,6 +112,9 @@ export interface IQOutput {
     getEncoding?(): "cp437" | "utf8"
     setEncoding?(encoding: "cp437" | "utf8"): void
 
+    /** Whether the client suggested UTF-8 (iq term handshake or TERM type); optional for core compatibility */
+    getClientSuggestsUtf8?(): boolean
+
     // Connection management
     close(): void
 }

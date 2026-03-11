@@ -130,7 +130,9 @@ const quickAIChatPopup = async () => {
             const detail = data.detail ? `\n\n${data.detail}` : ""
             await bbs.popup(
                 "AI Error",
-                (data.error || `Request failed: ${res.status}`) + detail + "\n\nIf the error says \"Failed to reach Ollama\", ensure Ollama is running (e.g. ollama run gemma3:1b) and reachable at 127.0.0.1:11434."
+                (data.error || `Request failed: ${res.status}`) +
+                    detail +
+                    '\n\nIf the error says "Failed to reach Ollama", ensure Ollama is running (e.g. ollama run gemma3:1b) and reachable at 127.0.0.1:11434.'
             )
             return
         }
@@ -386,6 +388,8 @@ bbs.start(async () => {
         await bbs.goodbye("ep_logoff.ans")
         return
     }
+
+    // await bbs.promptEncodingPreference()
 
     // Show main menu (handles all navigation automatically)
     // The menu event loop will process any queued events between key presses.

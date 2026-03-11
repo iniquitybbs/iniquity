@@ -28,6 +28,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 import { getGlobalRuntime, Runtime, Artwork } from "./core"
+import { getConfig } from "./config"
 import { IQMenu, IQMenuOptions, IMenuCommands } from "./menu"
 import { IQFrame } from "./frame"
 import { screen } from "./screen"
@@ -603,6 +604,36 @@ class BBS {
      */
     setEncoding(encoding: "cp437" | "utf8"): void {
         getGlobalRuntime().getOutput().setEncoding?.(encoding)
+    }
+
+    /**
+     * Apply encoding policy from config: detect (auto UTF-8), ask (prompt), or force cp437/utf8.
+     * Call once after login, before main menu. No-op if client does not suggest UTF-8 or encoding is already utf8.
+     */
+    async promptEncodingPreference(): Promise<void> {
+        const out = getGlobalRuntime().getOutput()
+        const suggestsUtf8 = out.getClientSuggestsUtf8?.() === true
+        const encoding = out.getEncoding?.() ?? "cp437"
+        if (!suggestsUtf8 || encoding === "utf8") return
+
+        const cfg = getConfig()
+        const raw = cfg.display.encodingPrompt
+        const policy = (raw === "detect" || raw === "ask" || raw === "cp437" || raw === "utf8") ? raw : "ask"
+
+        if (policy === "utf8" || policy === "cp437") {
+            out.setEncoding?.(policy)
+            return
+        }
+        if (policy === "detect") {
+            out.setEncoding?.("utf8")
+            return
+        }
+        out.write("Your terminal supports UTF-8. Use UTF-8 for the whole BBS? (Y/n) ")
+        const line = await getGlobalRuntime().getOutput().readLine()
+        const answer = (line ?? "").trim().toLowerCase()
+        if (answer === "y" || answer === "yes" || answer === "") {
+            out.setEncoding?.("utf8")
+        }
     }
 
     // =========================================================================

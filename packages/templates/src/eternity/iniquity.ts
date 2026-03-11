@@ -580,6 +580,8 @@ bbs.start(async () => {
         bbs.say("")
     }
 
+    await bbs.promptEncodingPreference()
+
     // Run main menu
     await bbs.showMenu("main")
 
