@@ -1,6 +1,6 @@
 {
     "name": "@iniquitybbs/desktop",
-    "version": "3.0.84",
+    "version": "3.0.85",
     "description": "IQ term Desktop — Electron app for Iniquity BBS.",
     "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
     "license": "MIT",
