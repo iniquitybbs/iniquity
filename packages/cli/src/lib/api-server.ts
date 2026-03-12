@@ -204,7 +204,7 @@ function getTermPageHtmlFallback(wsUrl: string): string {
   function toHtml(t) {
     var r="", i=0, n=t.length, f=null, b=null, bold=false, open=false;
     function end(){ if(open){ r+="</span>"; open=false; } }
-    function start(){ var s=[]; if(f)s.push("color:"+f); if(b)s.push("background-color:"+b); if(bold)s.push("font-weight:bold"); if(s.length){ r+="<span style=\\\""+s.join(";")+"\\\">"; open=true; } }
+    function start(){ var s=[]; if(f)s.push("color:"+f); if(b)s.push("background-color:"+b); if(bold)s.push("font-weight:bold"); if(s.length){ r+='<span style="'+s.join(";")+'">'; open=true; } }
     while(i<n){
       if(t.charCodeAt(i)===27&&i+1<n&&t[i+1]==="["){
         var e=i+2; while(e<n&&t.charCodeAt(e)>=0x20&&t.charCodeAt(e)<=0x3f)e++;
