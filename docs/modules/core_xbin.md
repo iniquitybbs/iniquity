@@ -44,7 +44,7 @@ XBin file signature
 
 #### Defined in
 
-[core/src/xbin.ts:46](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L46)
+[core/src/xbin.ts:46](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L46)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:47](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L47)
+[core/src/xbin.ts:47](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L47)
 
 ___
 
@@ -81,4 +81,4 @@ XBin flag constants
 
 #### Defined in
 
-[core/src/xbin.ts:52](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L52)
+[core/src/xbin.ts:52](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L52)

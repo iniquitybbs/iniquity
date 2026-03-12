@@ -40,4 +40,4 @@ Main processor that orchestrates all MCI code processing
 
 #### Defined in
 
-[core/src/mci/processor.ts:379](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/processor.ts#L379)
+[core/src/mci/processor.ts:379](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/processor.ts#L379)

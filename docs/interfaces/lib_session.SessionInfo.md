@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[cli/src/lib/session.ts:37](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/session.ts#L37)
+[cli/src/lib/session.ts:37](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/session.ts#L37)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/session.ts:34](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/session.ts#L34)
+[cli/src/lib/session.ts:34](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/session.ts#L34)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/session.ts:36](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/session.ts#L36)
+[cli/src/lib/session.ts:36](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/session.ts#L36)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/session.ts:33](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/session.ts#L33)
+[cli/src/lib/session.ts:33](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/session.ts#L33)
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 #### Defined in
 
-[cli/src/lib/session.ts:35](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/session.ts#L35)
+[cli/src/lib/session.ts:35](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/session.ts#L35)

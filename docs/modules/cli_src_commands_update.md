@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[cli/src/commands/update.ts:164](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/commands/update.ts#L164)
+[cli/src/commands/update.ts:164](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/update.ts#L164)

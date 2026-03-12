@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:57](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L57)
+[cli/src/lib/telnet.ts:57](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L57)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Get all active sessions
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:75](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L75)
+[cli/src/lib/telnet.ts:75](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L75)
 
 ___
 
@@ -71,7 +71,7 @@ Get server info in BBS API format
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:94](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L94)
+[cli/src/lib/telnet.ts:94](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L94)
 
 ___
 
@@ -87,7 +87,7 @@ Get the number of active connections
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L68)
+[cli/src/lib/telnet.ts:68](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L68)
 
 ___
 
@@ -110,7 +110,7 @@ Get server info
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:82](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L82)
+[cli/src/lib/telnet.ts:82](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L82)
 
 ___
 
@@ -134,7 +134,7 @@ Call this from the HTTP server's WebSocket upgrade handler so web/desktop client
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:247](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L247)
+[cli/src/lib/telnet.ts:247](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L247)
 
 ___
 
@@ -150,7 +150,7 @@ Start the Telnet server
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:121](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L121)
+[cli/src/lib/telnet.ts:121](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L121)
 
 ___
 
@@ -166,4 +166,4 @@ Stop the Telnet server
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:165](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L165)
+[cli/src/lib/telnet.ts:165](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/telnet.ts#L165)

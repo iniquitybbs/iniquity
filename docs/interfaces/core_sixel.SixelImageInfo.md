@@ -20,7 +20,7 @@ Sixel image info
 
 #### Defined in
 
-[core/src/sixel.ts:70](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L70)
+[core/src/sixel.ts:70](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/sixel.ts#L70)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:69](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L69)
+[core/src/sixel.ts:69](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/sixel.ts#L69)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L68)
+[core/src/sixel.ts:68](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/sixel.ts#L68)

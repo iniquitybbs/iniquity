@@ -44,7 +44,7 @@ IQFrame - Windowed content area
 
 #### Defined in
 
-[core/src/frame.ts:154](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L154)
+[core/src/frame.ts:154](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L154)
 
 ## Methods
 
@@ -60,7 +60,7 @@ Add a blank line
 
 #### Defined in
 
-[core/src/frame.ts:337](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L337)
+[core/src/frame.ts:337](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L337)
 
 ___
 
@@ -82,7 +82,7 @@ Center text within the frame
 
 #### Defined in
 
-[core/src/frame.ts:327](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L327)
+[core/src/frame.ts:327](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L327)
 
 ___
 
@@ -98,7 +98,7 @@ Clear the frame content (but keep frame open)
 
 #### Defined in
 
-[core/src/frame.ts:368](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L368)
+[core/src/frame.ts:368](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L368)
 
 ___
 
@@ -115,7 +115,7 @@ If screen buffer management is active, redraws the saved region
 
 #### Defined in
 
-[core/src/frame.ts:245](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L245)
+[core/src/frame.ts:245](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L245)
 
 ___
 
@@ -131,7 +131,7 @@ Cycle through content (for animation effects)
 
 #### Defined in
 
-[core/src/frame.ts:354](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L354)
+[core/src/frame.ts:354](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L354)
 
 ___
 
@@ -147,7 +147,7 @@ Draw the buffered content inside the frame
 
 #### Defined in
 
-[core/src/frame.ts:284](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L284)
+[core/src/frame.ts:284](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L284)
 
 ___
 
@@ -170,7 +170,7 @@ Get the interior content area dimensions
 
 #### Defined in
 
-[core/src/frame.ts:385](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L385)
+[core/src/frame.ts:385](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L385)
 
 ___
 
@@ -193,7 +193,7 @@ Position cursor inside the frame at relative coordinates
 
 #### Defined in
 
-[core/src/frame.ts:397](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L397)
+[core/src/frame.ts:397](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L397)
 
 ___
 
@@ -218,7 +218,7 @@ The user's input
 
 #### Defined in
 
-[core/src/frame.ts:427](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L427)
+[core/src/frame.ts:427](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L427)
 
 ___
 
@@ -243,7 +243,7 @@ The user's input
 
 #### Defined in
 
-[core/src/frame.ts:488](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L488)
+[core/src/frame.ts:488](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L488)
 
 ___
 
@@ -260,7 +260,7 @@ Automatically saves the background region if screen buffer is available
 
 #### Defined in
 
-[core/src/frame.ts:173](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L173)
+[core/src/frame.ts:173](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L173)
 
 ___
 
@@ -277,7 +277,7 @@ Convenience method for quick modal dialogs
 
 #### Defined in
 
-[core/src/frame.ts:413](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L413)
+[core/src/frame.ts:413](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L413)
 
 ___
 
@@ -299,7 +299,7 @@ Add content to the frame buffer
 
 #### Defined in
 
-[core/src/frame.ts:267](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L267)
+[core/src/frame.ts:267](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L267)
 
 ___
 
@@ -321,7 +321,7 @@ Add content with MCI processing
 
 #### Defined in
 
-[core/src/frame.ts:276](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L276)
+[core/src/frame.ts:276](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L276)
 
 ___
 
@@ -344,7 +344,7 @@ Add a horizontal separator line
 
 #### Defined in
 
-[core/src/frame.ts:344](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L344)
+[core/src/frame.ts:344](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L344)
 
 ___
 
@@ -360,4 +360,4 @@ Wait for a key press (convenience method)
 
 #### Defined in
 
-[core/src/frame.ts:405](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L405)
+[core/src/frame.ts:405](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/frame.ts#L405)

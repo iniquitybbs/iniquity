@@ -46,4 +46,4 @@ UTF-8 encoded string
 
 #### Defined in
 
-[core/src/artwork.ts:312](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/artwork.ts#L312)
+[core/src/artwork.ts:312](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/artwork.ts#L312)

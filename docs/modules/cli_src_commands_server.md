@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[cli/src/commands/server.ts:214](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/commands/server.ts#L214)
+[cli/src/commands/server.ts:214](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/server.ts#L214)

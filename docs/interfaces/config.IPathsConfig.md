@@ -27,7 +27,7 @@ Paths configuration
 
 #### Defined in
 
-[core/src/config.ts:59](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L59)
+[core/src/config.ts:59](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L59)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:52](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L52)
+[core/src/config.ts:52](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L52)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:61](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L61)
+[core/src/config.ts:61](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L61)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:56](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L56)
+[core/src/config.ts:56](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L56)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:54](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L54)
+[core/src/config.ts:54](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L54)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:57](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L57)
+[core/src/config.ts:57](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L57)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:55](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L55)
+[core/src/config.ts:55](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L55)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:60](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L60)
+[core/src/config.ts:60](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L60)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:58](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L58)
+[core/src/config.ts:58](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L58)
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:53](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L53)
+[core/src/config.ts:53](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L53)

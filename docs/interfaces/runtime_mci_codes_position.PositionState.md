@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:44](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L44)
+[core/src/mci/codes/position.ts:44](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L44)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:43](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L43)
+[core/src/mci/codes/position.ts:43](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L43)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:42](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L42)
+[core/src/mci/codes/position.ts:42](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L42)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:40](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L40)
+[core/src/mci/codes/position.ts:40](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L40)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:41](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L41)
+[core/src/mci/codes/position.ts:41](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L41)

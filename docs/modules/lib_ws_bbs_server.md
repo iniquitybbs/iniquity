@@ -35,4 +35,4 @@ Call after TelnetServer.start() so snack:push and server info are already regist
 
 #### Defined in
 
-cli/src/lib/ws-bbs-server.ts:38
+[cli/src/lib/ws-bbs-server.ts:38](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-bbs-server.ts#L38)

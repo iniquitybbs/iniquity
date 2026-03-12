@@ -37,7 +37,7 @@ Contains current message/area information
 
 #### Defined in
 
-[core/src/mci/context.ts:193](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L193)
+[core/src/mci/context.ts:193](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L193)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:192](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L192)
+[core/src/mci/context.ts:192](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L192)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:194](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L194)
+[core/src/mci/context.ts:194](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L194)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:209](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L209)
+[core/src/mci/context.ts:209](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L209)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:215](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L215)
+[core/src/mci/context.ts:215](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L215)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:204](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L204)
+[core/src/mci/context.ts:204](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L204)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:205](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L205)
+[core/src/mci/context.ts:205](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L205)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:195](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L195)
+[core/src/mci/context.ts:195](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L195)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:196](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L196)
+[core/src/mci/context.ts:196](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L196)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:199](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L199)
+[core/src/mci/context.ts:199](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L199)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:201](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L201)
+[core/src/mci/context.ts:201](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L201)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:210](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L210)
+[core/src/mci/context.ts:210](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L210)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:216](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L216)
+[core/src/mci/context.ts:216](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L216)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:208](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L208)
+[core/src/mci/context.ts:208](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L208)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:211](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L211)
+[core/src/mci/context.ts:211](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L211)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:206](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L206)
+[core/src/mci/context.ts:206](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L206)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:207](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L207)
+[core/src/mci/context.ts:207](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L207)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:200](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L200)
+[core/src/mci/context.ts:200](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L200)
 
 ___
 
@@ -217,4 +217,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/context.ts:214](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L214)
+[core/src/mci/context.ts:214](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/context.ts#L214)

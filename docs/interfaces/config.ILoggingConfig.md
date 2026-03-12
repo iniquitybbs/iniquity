@@ -25,7 +25,7 @@ Logging configuration
 
 #### Defined in
 
-[core/src/config.ts:110](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L110)
+[core/src/config.ts:110](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L110)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:111](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L111)
+[core/src/config.ts:111](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L111)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:109](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L109)
+[core/src/config.ts:109](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L109)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:114](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L114)
+[core/src/config.ts:114](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L114)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:116](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L116)
+[core/src/config.ts:116](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L116)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:115](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L115)
+[core/src/config.ts:115](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L115)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:112](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L112)
+[core/src/config.ts:112](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L112)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:113](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L113)
+[core/src/config.ts:113](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/config.ts#L113)

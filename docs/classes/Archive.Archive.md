@@ -32,7 +32,7 @@ What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCI
 
 #### Defined in
 
-[archive/src/index.ts:67](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/archive/src/index.ts#L67)
+[archive/src/index.ts:67](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/archive/src/index.ts#L67)
 
 ## Methods
 
@@ -46,4 +46,4 @@ What I hope will be a really cool way of accessing all of your ANSI/ASCII/PETSCI
 
 #### Defined in
 
-[archive/src/index.ts:69](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/archive/src/index.ts#L69)
+[archive/src/index.ts:69](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/archive/src/index.ts#L69)

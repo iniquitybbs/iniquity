@@ -144,7 +144,7 @@ function getTermPageHtml(wsUrl: string): string {
   var status = document.getElementById("status");
   if (typeof Terminal === "undefined") {
     status.textContent = "Terminal failed to load.";
-    document.getElementById("terminal").innerHTML = "<pre style=\"color:#888;padding:8px;\">xterm.js could not load. Run: npm install (in packages/cli)</pre>";
+    document.getElementById("terminal").innerHTML = '<pre style="color:#888;padding:8px;">xterm.js could not load. Run: npm install (in packages/cli)</pre>';
     return;
   }
   var term = new Terminal({ cols: 80, rows: 25, theme: { background: "#000", foreground: "#aaa" }, fontFamily: "Consolas, monospace", fontSize: 14 });

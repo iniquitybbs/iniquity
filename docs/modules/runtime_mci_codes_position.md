@@ -42,7 +42,7 @@ Original Iniquity-style position markers (^X01-^X99)
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:212](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L212)
+[core/src/mci/codes/position.ts:212](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L212)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:223](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L223)
+[core/src/mci/codes/position.ts:223](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L223)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:202](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L202)
+[core/src/mci/codes/position.ts:202](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L202)
 
 ___
 
@@ -102,4 +102,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:219](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L219)
+[core/src/mci/codes/position.ts:219](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L219)

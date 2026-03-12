@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[core/src/menu.ts:70](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L70)
+[core/src/menu.ts:70](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L70)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:77](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L77)
+[core/src/menu.ts:77](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L77)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:71](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L71)
+[core/src/menu.ts:71](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L71)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L68)
+[core/src/menu.ts:68](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L68)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:69](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L69)
+[core/src/menu.ts:69](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L69)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:67](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L67)
+[core/src/menu.ts:67](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L67)
 
 ___
 
@@ -94,7 +94,7 @@ Global hotkeys run before menu commands (e.g. "/" for quick AI). Handler runs, t
 
 #### Defined in
 
-[core/src/menu.ts:86](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L86)
+[core/src/menu.ts:86](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L86)
 
 ___
 
@@ -106,7 +106,7 @@ Enable keyboard hotkeys for menu items (default true)
 
 #### Defined in
 
-[core/src/menu.ts:80](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L80)
+[core/src/menu.ts:80](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L80)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:78](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L78)
+[core/src/menu.ts:78](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L78)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:75](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L75)
+[core/src/menu.ts:75](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L75)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:76](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L76)
+[core/src/menu.ts:76](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L76)
 
 ___
 
@@ -148,7 +148,7 @@ Enable SGR mouse for clicking items (default true)
 
 #### Defined in
 
-[core/src/menu.ts:82](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L82)
+[core/src/menu.ts:82](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L82)
 
 ___
 
@@ -160,7 +160,7 @@ MCI string for "pressed" look when an item is clicked (e.g. "|15|16"). If omitte
 
 #### Defined in
 
-[core/src/menu.ts:84](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L84)
+[core/src/menu.ts:84](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L84)
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:66](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L66)
+[core/src/menu.ts:66](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L66)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:72](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L72)
+[core/src/menu.ts:72](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L72)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:73](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L73)
+[core/src/menu.ts:73](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L73)
 
 ___
 
@@ -200,4 +200,4 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:74](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L74)
+[core/src/menu.ts:74](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L74)

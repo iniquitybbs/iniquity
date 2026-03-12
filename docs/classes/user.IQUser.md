@@ -54,7 +54,7 @@ User class for managing individual users
 
 #### Defined in
 
-[core/src/user.ts:301](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L301)
+[core/src/user.ts:301](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L301)
 
 ## Accessors
 
@@ -70,7 +70,7 @@ Get user access level
 
 #### Defined in
 
-[core/src/user.ts:329](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L329)
+[core/src/user.ts:329](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L329)
 
 • `set` **access**(`level`): `void`
 
@@ -88,7 +88,7 @@ Set user access level
 
 #### Defined in
 
-[core/src/user.ts:336](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L336)
+[core/src/user.ts:336](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L336)
 
 ___
 
@@ -104,7 +104,7 @@ Get user email
 
 #### Defined in
 
-[core/src/user.ts:345](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L345)
+[core/src/user.ts:345](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L345)
 
 ___
 
@@ -120,7 +120,7 @@ Get user handle
 
 #### Defined in
 
-[core/src/user.ts:315](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L315)
+[core/src/user.ts:315](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L315)
 
 ___
 
@@ -136,7 +136,7 @@ Get user ID
 
 #### Defined in
 
-[core/src/user.ts:322](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L322)
+[core/src/user.ts:322](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L322)
 
 ___
 
@@ -152,7 +152,7 @@ Get user location
 
 #### Defined in
 
-[core/src/user.ts:359](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L359)
+[core/src/user.ts:359](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L359)
 
 ___
 
@@ -168,7 +168,7 @@ Check if user is currently logged in
 
 #### Defined in
 
-[core/src/user.ts:389](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L389)
+[core/src/user.ts:389](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L389)
 
 ___
 
@@ -184,7 +184,7 @@ Get user real name
 
 #### Defined in
 
-[core/src/user.ts:352](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L352)
+[core/src/user.ts:352](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L352)
 
 ___
 
@@ -200,7 +200,7 @@ Get user statistics
 
 #### Defined in
 
-[core/src/user.ts:366](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L366)
+[core/src/user.ts:366](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L366)
 
 ## Methods
 
@@ -223,7 +223,7 @@ Change password
 
 #### Defined in
 
-[core/src/user.ts:581](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L581)
+[core/src/user.ts:581](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L581)
 
 ___
 
@@ -239,7 +239,7 @@ Delete user
 
 #### Defined in
 
-[core/src/user.ts:489](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L489)
+[core/src/user.ts:489](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L489)
 
 ___
 
@@ -255,7 +255,7 @@ Check if user exists in database
 
 #### Defined in
 
-[core/src/user.ts:382](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L382)
+[core/src/user.ts:382](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L382)
 
 ___
 
@@ -277,7 +277,7 @@ Get custom user property
 
 #### Defined in
 
-[core/src/user.ts:502](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L502)
+[core/src/user.ts:502](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L502)
 
 ___
 
@@ -293,7 +293,7 @@ Get raw user data
 
 #### Defined in
 
-[core/src/user.ts:561](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L561)
+[core/src/user.ts:561](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L561)
 
 ___
 
@@ -315,7 +315,7 @@ Check if user has required access level
 
 #### Defined in
 
-[core/src/user.ts:522](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L522)
+[core/src/user.ts:522](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L522)
 
 ___
 
@@ -331,7 +331,7 @@ Increment post count
 
 #### Defined in
 
-[core/src/user.ts:529](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L529)
+[core/src/user.ts:529](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L529)
 
 ___
 
@@ -353,7 +353,7 @@ Attempt to login
 
 #### Defined in
 
-[core/src/user.ts:411](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L411)
+[core/src/user.ts:411](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L411)
 
 ___
 
@@ -369,7 +369,7 @@ Logout user
 
 #### Defined in
 
-[core/src/user.ts:440](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L440)
+[core/src/user.ts:440](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L440)
 
 ___
 
@@ -391,7 +391,7 @@ Record download
 
 #### Defined in
 
-[core/src/user.ts:550](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L550)
+[core/src/user.ts:550](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L550)
 
 ___
 
@@ -413,7 +413,7 @@ Record upload
 
 #### Defined in
 
-[core/src/user.ts:539](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L539)
+[core/src/user.ts:539](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L539)
 
 ___
 
@@ -435,7 +435,7 @@ Register a new user
 
 #### Defined in
 
-[core/src/user.ts:453](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L453)
+[core/src/user.ts:453](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L453)
 
 ___
 
@@ -457,7 +457,7 @@ Reset password (admin function)
 
 #### Defined in
 
-[core/src/user.ts:592](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L592)
+[core/src/user.ts:592](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L592)
 
 ___
 
@@ -473,7 +473,7 @@ Save user data
 
 #### Defined in
 
-[core/src/user.ts:481](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L481)
+[core/src/user.ts:481](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L481)
 
 ___
 
@@ -496,7 +496,7 @@ Set custom user property
 
 #### Defined in
 
-[core/src/user.ts:509](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L509)
+[core/src/user.ts:509](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L509)
 
 ___
 
@@ -518,4 +518,4 @@ Update user data
 
 #### Defined in
 
-[core/src/user.ts:568](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L568)
+[core/src/user.ts:568](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L568)

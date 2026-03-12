@@ -29,7 +29,7 @@ Centering mode for artwork positioning based on screen resolution.
 
 #### Defined in
 
-[core/src/menu.ts:58](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L58)
+[core/src/menu.ts:58](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L58)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:49](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L49)
+[core/src/menu.ts:49](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L49)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:46](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L46)
+[core/src/menu.ts:46](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L46)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:47](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L47)
+[core/src/menu.ts:47](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L47)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:48](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L48)
+[core/src/menu.ts:48](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L48)
 
 ___
 
@@ -81,7 +81,7 @@ Explicit X position (1-indexed). Overrides centering.
 
 #### Defined in
 
-[core/src/menu.ts:60](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L60)
+[core/src/menu.ts:60](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L60)
 
 ___
 
@@ -93,4 +93,4 @@ Explicit Y position (1-indexed). Overrides centering.
 
 #### Defined in
 
-[core/src/menu.ts:62](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L62)
+[core/src/menu.ts:62](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L62)

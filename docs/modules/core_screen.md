@@ -28,7 +28,7 @@ Terminal dimensions and centering utilities
 
 #### Defined in
 
-[core/src/screen.ts:130](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/screen.ts#L130)
+[core/src/screen.ts:130](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen.ts#L130)
 
 ## Variables
 
@@ -38,7 +38,7 @@ Terminal dimensions and centering utilities
 
 #### Defined in
 
-[core/src/screen.ts:33](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/screen.ts#L33)
+[core/src/screen.ts:33](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen.ts#L33)
 
 ___
 
@@ -50,7 +50,7 @@ Default Iniquity terminal dimensions
 
 #### Defined in
 
-[core/src/screen.ts:32](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/screen.ts#L32)
+[core/src/screen.ts:32](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen.ts#L32)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[core/src/screen.ts:128](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/screen.ts#L128)
+[core/src/screen.ts:128](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen.ts#L128)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[core/src/screen.ts:127](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/screen.ts#L127)
+[core/src/screen.ts:127](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen.ts#L127)
 
 ___
 
@@ -107,4 +107,4 @@ Screen object providing terminal constants and positioning utilities
 
 #### Defined in
 
-[core/src/screen.ts:42](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/screen.ts#L42)
+[core/src/screen.ts:42](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen.ts#L42)

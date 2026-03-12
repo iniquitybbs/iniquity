@@ -49,7 +49,7 @@ Clear all pending events from the queue
 
 #### Defined in
 
-[core/src/events.ts:220](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L220)
+[core/src/events.ts:220](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L220)
 
 ___
 
@@ -73,7 +73,7 @@ Emit an event (queues for processing)
 
 #### Defined in
 
-[core/src/events.ts:159](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L159)
+[core/src/events.ts:159](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L159)
 
 ___
 
@@ -97,7 +97,7 @@ Emit an event and process immediately (synchronous dispatch)
 
 #### Defined in
 
-[core/src/events.ts:177](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L177)
+[core/src/events.ts:177](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L177)
 
 ___
 
@@ -113,7 +113,7 @@ Get the number of pending events
 
 #### Defined in
 
-[core/src/events.ts:213](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L213)
+[core/src/events.ts:213](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L213)
 
 ___
 
@@ -129,7 +129,7 @@ Get list of registered event types
 
 #### Defined in
 
-[core/src/events.ts:235](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L235)
+[core/src/events.ts:235](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L235)
 
 ___
 
@@ -151,7 +151,7 @@ Check if an event has any handlers
 
 #### Defined in
 
-[core/src/events.ts:242](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L242)
+[core/src/events.ts:242](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L242)
 
 ___
 
@@ -167,7 +167,7 @@ Check if there are pending events in the queue
 
 #### Defined in
 
-[core/src/events.ts:206](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L206)
+[core/src/events.ts:206](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L206)
 
 ___
 
@@ -190,7 +190,7 @@ Unsubscribe from an event
 
 #### Defined in
 
-[core/src/events.ts:128](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L128)
+[core/src/events.ts:128](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L128)
 
 ___
 
@@ -226,7 +226,7 @@ Unsubscribe function
 
 #### Defined in
 
-[core/src/events.ts:89](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L89)
+[core/src/events.ts:89](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L89)
 
 ___
 
@@ -261,7 +261,7 @@ Unsubscribe function
 
 #### Defined in
 
-[core/src/events.ts:119](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L119)
+[core/src/events.ts:119](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L119)
 
 ___
 
@@ -278,7 +278,7 @@ Called from the menu event loop to process pending events
 
 #### Defined in
 
-[core/src/events.ts:192](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L192)
+[core/src/events.ts:192](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L192)
 
 ___
 
@@ -294,4 +294,4 @@ Remove all handlers for all events
 
 #### Defined in
 
-[core/src/events.ts:227](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/events.ts#L227)
+[core/src/events.ts:227](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L227)
