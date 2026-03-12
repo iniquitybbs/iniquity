@@ -34,4 +34,4 @@ Returns the server instance so the caller can close it.
 
 #### Defined in
 
-[cli/src/lib/api-server.ts:85](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/api-server.ts#L85)
+[cli/src/lib/api-server.ts:257](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/api-server.ts#L257)

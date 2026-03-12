@@ -39,6 +39,7 @@ import fs from "fs"
 import { exec } from "child_process"
 import { TelnetServer } from "../lib/telnet"
 import { startApiServer } from "../lib/api-server"
+import { attachWebSocketServer } from "../lib/ws-bbs-server"
 
 import copyfiles from "copyfiles"
 import * as dotenv from "dotenv"
@@ -180,6 +181,7 @@ export class Server implements yargs.CommandModule {
                 process.on("SIGTERM", onExit)
 
                 await this.telnetServer.start()
+                attachWebSocketServer(httpServer, this.telnetServer)
                 break
             }
 

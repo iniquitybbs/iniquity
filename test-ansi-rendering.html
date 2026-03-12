@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANSI Rendering Test - Iniquity BBS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; 
+      background: #0c0c0c; 
+      color: #c0c0c0; 
+      font-family: "Consolas", "Monaco", monospace; 
+      font-size: 14px;
+      padding: 20px;
+    }
+    h1 { color: #55ff55; }
+    .info { 
+      background: #1a1a1a; 
+      padding: 10px; 
+      margin: 10px 0;
+      border: 1px solid #333;
+    }
+    #terminal { 
+      margin: 20px 0;
+      border: 1px solid #333;
+    }
+    .test-output {
+      background: #000;
+      padding: 10px;
+      margin: 10px 0;
+      white-space: pre;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>ANSI Rendering Test</h1>
+  
+  <div class="info">
+    <h2>Implementation Status</h2>
+    <p>✅ WebSocket connections auto-enable UTF-8 encoding</p>
+    <p>✅ Server-side CP437 to UTF-8 conversion active</p>
+    <p>✅ xterm.js terminal emulator integrated</p>
+  </div>
+
+  <div class="info">
+    <h2>Test Terminal</h2>
+    <p>Connect to WebSocket: <input type="text" id="wsUrl" value="ws://localhost:8383/ws" style="width: 300px;"> 
+       <button onclick="connect()">Connect</button>
+       <button onclick="disconnect()">Disconnect</button>
+    </p>
+    <p id="status">Not connected</p>
+  </div>
+
+  <div id="terminal"></div>
+
+  <div class="info">
+    <h2>Test Patterns</h2>
+    <div class="test-output">
+Box Drawing Test (should show proper box):
+╔═══════════════╗
+║ Hello World!  ║
+╚═══════════════╝
+
+CP437 Symbols (should show card suits):
+♠ ♣ ♥ ♦
+
+ANSI Colors:
+<span style="color: #aa0000">Red</span> <span style="color: #00aa00">Green</span> <span style="color: #0000aa">Blue</span> <span style="color: #aa5500">Yellow</span>
+<span style="color: #ff5555">Bright Red</span> <span style="color: #55ff55">Bright Green</span> <span style="color: #5555ff">Bright Blue</span> <span style="color: #ffff55">Bright Yellow</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
+  <script>
+    let term = null;
+    let ws = null;
+    let fitAddon = null;
+
+    function initTerminal() {
+      term = new Terminal({
+        cols: 80,
+        rows: 25,
+        theme: {
+          background: '#000000',
+          foreground: '#aaaaaa',
+          cursor: '#aaaaaa',
+          black: '#000000',
+          red: '#aa0000',
+          green: '#00aa00',
+          yellow: '#aa5500',
+          blue: '#0000aa',
+          magenta: '#aa00aa',
+          cyan: '#00aaaa',
+          white: '#aaaaaa',
+          brightBlack: '#555555',
+          brightRed: '#ff5555',
+          brightGreen: '#55ff55',
+          brightYellow: '#ffff55',
+          brightBlue: '#5555ff',
+          brightMagenta: '#ff55ff',
+          brightCyan: '#55ffff',
+          brightWhite: '#ffffff'
+        },
+        fontFamily: 'Consolas, "Courier New", monospace',
+        fontSize: 14,
+        cursorBlink: true,
+        convertEol: false
+      });
+      
+      term.open(document.getElementById('terminal'));
+      
+      fitAddon = new FitAddon.FitAddon();
+      term.loadAddon(fitAddon);
+      fitAddon.fit();
+      
+      window.addEventListener('resize', function() {
+        if (fitAddon) fitAddon.fit();
+      });
+      
+      // Test message
+      term.write('\\x1b[32mTerminal initialized. Click Connect to start.\\x1b[0m\\r\\n');
+    }
+
+    function connect() {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        console.log('Already connected');
+        return;
+      }
+      
+      const wsUrl = document.getElementById('wsUrl').value;
+      document.getElementById('status').textContent = 'Connecting...';
+      
+      ws = new WebSocket(wsUrl);
+      ws.binaryType = "arraybuffer";
+      
+      ws.onopen = function() {
+        document.getElementById('status').textContent = 'Connected to ' + wsUrl;
+        term.write('\\x1b[32mConnected!\\x1b[0m\\r\\n');
+        term.focus();
+      };
+      
+      ws.onmessage = function(ev) {
+        if (ev.data instanceof ArrayBuffer) {
+          // Decode UTF-8 text (server sends UTF-8 for WebSocket connections)
+          const text = new TextDecoder("utf-8").decode(new Uint8Array(ev.data));
+          term.write(text);
+        } else {
+          term.write(ev.data);
+        }
+      };
+      
+      ws.onclose = function() {
+        document.getElementById('status').textContent = 'Disconnected';
+        term.write('\\r\\n\\x1b[31mDisconnected from server.\\x1b[0m\\r\\n');
+      };
+      
+      ws.onerror = function(err) {
+        document.getElementById('status').textContent = 'Connection error';
+        term.write('\\r\\n\\x1b[31mConnection error: ' + err + '\\x1b[0m\\r\\n');
+      };
+      
+      // Send user input to WebSocket
+      term.onData(function(data) {
+        if (ws && ws.readyState === WebSocket.OPEN) {
+          ws.send(data);
+        }
+      });
+    }
+
+    function disconnect() {
+      if (ws) {
+        ws.close();
+        ws = null;
+      }
+    }
+
+    // Initialize terminal on page load
+    window.addEventListener('load', initTerminal);
+  </script>
+</body>
+</html>

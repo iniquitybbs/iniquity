@@ -34,7 +34,7 @@ Execute code string directly (for testing)
 
 #### Defined in
 
-[cli/src/lib/executor.ts:169](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/executor.ts#L169)
+[cli/src/lib/executor.ts:169](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/executor.ts#L169)
 
 ___
 
@@ -58,4 +58,4 @@ Execute a BBS program
 
 #### Defined in
 
-[cli/src/lib/executor.ts:36](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/executor.ts#L36)
+[cli/src/lib/executor.ts:36](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/executor.ts#L36)

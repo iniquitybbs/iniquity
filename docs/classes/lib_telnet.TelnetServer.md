@@ -14,6 +14,7 @@
 - [getBBSServerInfo](lib_telnet.TelnetServer.md#getbbsserverinfo)
 - [getConnectionCount](lib_telnet.TelnetServer.md#getconnectioncount)
 - [getServerInfo](lib_telnet.TelnetServer.md#getserverinfo)
+- [handleWebSocketConnection](lib_telnet.TelnetServer.md#handlewebsocketconnection)
 - [start](lib_telnet.TelnetServer.md#start)
 - [stop](lib_telnet.TelnetServer.md#stop)
 
@@ -31,7 +32,7 @@
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:55](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L55)
+[cli/src/lib/telnet.ts:57](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L57)
 
 ## Methods
 
@@ -47,7 +48,7 @@ Get all active sessions
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:73](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L73)
+[cli/src/lib/telnet.ts:75](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L75)
 
 ___
 
@@ -70,7 +71,7 @@ Get server info in BBS API format
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:92](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L92)
+[cli/src/lib/telnet.ts:94](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L94)
 
 ___
 
@@ -86,7 +87,7 @@ Get the number of active connections
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:66](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L66)
+[cli/src/lib/telnet.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L68)
 
 ___
 
@@ -109,7 +110,31 @@ Get server info
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L80)
+[cli/src/lib/telnet.ts:82](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L82)
+
+___
+
+### handleWebSocketConnection
+
+▸ **handleWebSocketConnection**(`ws`, `remoteAddress?`): `void`
+
+Handle a new WebSocket connection (same BBS session as TCP, different transport).
+Call this from the HTTP server's WebSocket upgrade handler so web/desktop clients get a session.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ws` | `WebSocket` |
+| `remoteAddress?` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[cli/src/lib/telnet.ts:247](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L247)
 
 ___
 
@@ -125,7 +150,7 @@ Start the Telnet server
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:119](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L119)
+[cli/src/lib/telnet.ts:121](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L121)
 
 ___
 
@@ -141,4 +166,4 @@ Stop the Telnet server
 
 #### Defined in
 
-[cli/src/lib/telnet.ts:163](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/cli/src/lib/telnet.ts#L163)
+[cli/src/lib/telnet.ts:165](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/cli/src/lib/telnet.ts#L165)

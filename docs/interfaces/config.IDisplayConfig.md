@@ -14,6 +14,7 @@ Display configuration
 - [defaultFont](config.IDisplayConfig.md#defaultfont)
 - [defaultHeight](config.IDisplayConfig.md#defaultheight)
 - [defaultWidth](config.IDisplayConfig.md#defaultwidth)
+- [encodingPrompt](config.IDisplayConfig.md#encodingprompt)
 - [iceColors](config.IDisplayConfig.md#icecolors)
 
 ## Properties
@@ -24,7 +25,7 @@ Display configuration
 
 #### Defined in
 
-[core/src/config.ts:74](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L74)
+[core/src/config.ts:74](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L74)
 
 ___
 
@@ -34,7 +35,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:73](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L73)
+[core/src/config.ts:73](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L73)
 
 ___
 
@@ -44,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L70)
+[core/src/config.ts:70](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L70)
 
 ___
 
@@ -54,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L71)
+[core/src/config.ts:71](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L71)
 
 ___
 
@@ -64,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:69](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L69)
+[core/src/config.ts:69](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L69)
 
 ___
 
@@ -74,7 +75,19 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:68](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L68)
+[core/src/config.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L68)
+
+___
+
+### encodingPrompt
+
+• `Optional` **encodingPrompt**: ``"utf8"`` \| ``"cp437"`` \| ``"detect"`` \| ``"ask"``
+
+When to apply or ask for UTF-8: detect (auto), ask (prompt), cp437/utf8 (force)
+
+#### Defined in
+
+[core/src/config.ts:76](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L76)
 
 ___
 
@@ -84,4 +97,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:72](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L72)
+[core/src/config.ts:72](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L72)

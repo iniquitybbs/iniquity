@@ -39,7 +39,7 @@ User database interface
 
 #### Defined in
 
-[core/src/user.ts:116](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L116)
+[core/src/user.ts:116](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L116)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:117](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L117)
+[core/src/user.ts:117](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L117)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:118](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L118)
+[core/src/user.ts:118](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L118)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:120](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L120)
+[core/src/user.ts:120](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L120)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:121](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L121)
+[core/src/user.ts:121](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L121)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:119](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L119)
+[core/src/user.ts:119](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L119)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:114](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L114)
+[core/src/user.ts:114](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L114)
 
 ___
 
@@ -167,4 +167,4 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:115](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/user.ts#L115)
+[core/src/user.ts:115](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/user.ts#L115)

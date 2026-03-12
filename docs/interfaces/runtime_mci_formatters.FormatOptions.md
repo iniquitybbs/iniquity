@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[core/src/mci/formatters.ts:32](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/formatters.ts#L32)
+[core/src/mci/formatters.ts:32](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/formatters.ts#L32)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:30](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/formatters.ts#L30)
+[core/src/mci/formatters.ts:30](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/formatters.ts#L30)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:31](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/formatters.ts#L31)
+[core/src/mci/formatters.ts:31](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/formatters.ts#L31)

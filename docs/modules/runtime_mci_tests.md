@@ -24,4 +24,4 @@ Unit and integration tests for the MCI code system
 
 #### Defined in
 
-[core/src/mci/tests.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/tests.ts#L57)
+[core/src/mci/tests.ts:57](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/tests.ts#L57)

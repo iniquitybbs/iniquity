@@ -27,7 +27,7 @@ Network message for inter-BBS communication
 
 #### Defined in
 
-[core/src/network.ts:68](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L68)
+[core/src/network.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L68)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:66](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L66)
+[core/src/network.ts:66](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L66)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:63](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L63)
+[core/src/network.ts:63](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L63)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:62](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L62)
+[core/src/network.ts:62](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L62)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L70)
+[core/src/network.ts:70](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L70)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:69](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L69)
+[core/src/network.ts:69](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L69)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L71)
+[core/src/network.ts:71](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L71)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:65](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L65)
+[core/src/network.ts:65](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L65)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:67](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L67)
+[core/src/network.ts:67](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L67)
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:64](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/network.ts#L64)
+[core/src/network.ts:64](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/network.ts#L64)

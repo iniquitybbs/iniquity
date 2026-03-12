@@ -22,7 +22,7 @@ Network configuration
 
 #### Defined in
 
-[core/src/config.ts:100](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L100)
+[core/src/config.ts:102](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L102)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:97](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L97)
+[core/src/config.ts:99](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L99)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:96](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L96)
+[core/src/config.ts:98](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L98)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:98](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L98)
+[core/src/config.ts:100](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L100)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[core/src/config.ts:99](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/config.ts#L99)
+[core/src/config.ts:101](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/config.ts#L101)

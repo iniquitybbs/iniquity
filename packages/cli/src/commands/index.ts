@@ -21,5 +21,6 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 import init from "./init"
 import term from "./term"
 import server from "./server"
+import desktop from "./desktop"
 
-export { init, term, server }
+export { init, term, server, desktop }

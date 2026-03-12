@@ -22,11 +22,11 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 
 import yargs from "yargs"
 
-import { init, term, server } from "./commands"
+import { init, term, server, desktop } from "./commands"
 
 // Allow "iq start server" as alias for "iq server start"
 if (process.argv[2] === "start" && process.argv[3] === "server") {
     process.argv.splice(2, 2, "server", "start")
 }
 
-yargs.command(init).command(term).command(server).demandCommand().help().argv
+yargs.command(init).command(term).command(server).command(desktop).demandCommand().help().argv

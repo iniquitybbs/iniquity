@@ -119,10 +119,21 @@ export class Session implements IQOutput {
             this.handleData(Buffer.isBuffer(data) ? data : Buffer.from(data, "binary"))
         })
 
+        const sock = this.socket as unknown as { isWebSocket?: boolean }
+        if (sock.isWebSocket === true) {
+            this.info.encoding = "utf8"
+            this.info.client.name = "web"
+            this.info.client.suggestsUtf8 = true
+            this.mciProcessor.setTerminal({ utf8: true, cp437: false })
+        }
+
         this.negotiate()
     }
 
     private negotiate() {
+        // Skip telnet option negotiation for WebSocket; browser doesn't speak telnet and IAC bytes show as garbage
+        const sock = this.socket as unknown as { isWebSocket?: boolean }
+        if (sock.isWebSocket === true) return
         this.socket.write(ANSI.telnetCommand(ANSI.telnet.WILL, ANSI.telnet.ECHO))
         this.socket.write(ANSI.telnetCommand(ANSI.telnet.WILL, ANSI.telnet.SUPPRESS_GO_AHEAD))
         this.socket.write(ANSI.telnetCommand(ANSI.telnet.DO, ANSI.telnet.TERMINAL_TYPE))

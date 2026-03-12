@@ -27,7 +27,7 @@ Terminal capabilities structure
 
 #### Defined in
 
-[core/src/cterm.ts:77](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L77)
+[core/src/cterm.ts:77](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L77)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:74](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L74)
+[core/src/cterm.ts:74](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L74)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:75](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L75)
+[core/src/cterm.ts:75](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L75)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:73](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L73)
+[core/src/cterm.ts:73](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L73)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:69](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L69)
+[core/src/cterm.ts:69](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L69)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:76](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L76)
+[core/src/cterm.ts:76](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L76)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:72](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L72)
+[core/src/cterm.ts:72](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L72)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:71](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L71)
+[core/src/cterm.ts:71](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L71)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L70)
+[core/src/cterm.ts:70](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L70)
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:68](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/cterm.ts#L68)
+[core/src/cterm.ts:68](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/cterm.ts#L68)

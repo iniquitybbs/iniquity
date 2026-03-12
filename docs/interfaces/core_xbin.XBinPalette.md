@@ -18,4 +18,4 @@ XBin palette (48 bytes - 16 colors x 3 RGB values)
 
 #### Defined in
 
-[core/src/xbin.ts:86](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/xbin.ts#L86)
+[core/src/xbin.ts:86](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L86)

@@ -32,4 +32,4 @@ Windowed content areas with borders and isolated drawing
 
 #### Defined in
 
-[core/src/frame.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/frame.ts#L51)
+[core/src/frame.ts:51](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/frame.ts#L51)

@@ -11,6 +11,7 @@ This allows the core package to be decoupled from the Session implementation
 
 - [clearInputQueue](core_output.IQOutput.md#clearinputqueue)
 - [close](core_output.IQOutput.md#close)
+- [getClientSuggestsUtf8](core_output.IQOutput.md#getclientsuggestsutf8)
 - [getEncoding](core_output.IQOutput.md#getencoding)
 - [getHeight](core_output.IQOutput.md#getheight)
 - [getLineCount](core_output.IQOutput.md#getlinecount)
@@ -53,7 +54,7 @@ Clear pending input and any partial escape sequence (optional; Session implement
 
 #### Defined in
 
-[core/src/output.ts:75](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L75)
+[core/src/output.ts:75](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L75)
 
 ___
 
@@ -67,7 +68,23 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:116](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L116)
+[core/src/output.ts:119](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L119)
+
+___
+
+### getClientSuggestsUtf8
+
+▸ `Optional` **getClientSuggestsUtf8**(): `boolean`
+
+Whether the client suggested UTF-8 (iq term handshake or TERM type); optional for core compatibility
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[core/src/output.ts:116](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L116)
 
 ___
 
@@ -81,7 +98,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:112](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L112)
+[core/src/output.ts:112](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L112)
 
 ___
 
@@ -95,7 +112,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:54](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L54)
+[core/src/output.ts:54](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L54)
 
 ___
 
@@ -109,7 +126,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:98](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L98)
+[core/src/output.ts:98](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L98)
 
 ___
 
@@ -123,7 +140,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:93](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L93)
+[core/src/output.ts:93](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L93)
 
 ___
 
@@ -139,7 +156,7 @@ Pop and return the next snack from the session queue (optional; Session implemen
 
 #### Defined in
 
-[core/src/output.ts:85](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L85)
+[core/src/output.ts:85](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L85)
 
 ___
 
@@ -153,7 +170,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:105](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L105)
+[core/src/output.ts:105](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L105)
 
 ___
 
@@ -167,7 +184,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:53](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L53)
+[core/src/output.ts:53](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L53)
 
 ___
 
@@ -183,7 +200,7 @@ Check if input is available without blocking
 
 #### Defined in
 
-[core/src/output.ts:70](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L70)
+[core/src/output.ts:70](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L70)
 
 ___
 
@@ -203,7 +220,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:100](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L100)
+[core/src/output.ts:100](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L100)
 
 ___
 
@@ -217,7 +234,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:101](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L101)
+[core/src/output.ts:101](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L101)
 
 ___
 
@@ -231,7 +248,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:103](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L103)
+[core/src/output.ts:103](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L103)
 
 ___
 
@@ -251,7 +268,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:94](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L94)
+[core/src/output.ts:94](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L94)
 
 ___
 
@@ -276,7 +293,7 @@ Push a snack onto the session queue (optional; Session implements it).
 
 #### Defined in
 
-[core/src/output.ts:80](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L80)
+[core/src/output.ts:80](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L80)
 
 ___
 
@@ -290,7 +307,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:58](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L58)
+[core/src/output.ts:58](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L58)
 
 ___
 
@@ -308,7 +325,7 @@ The key pressed, or null if no input available
 
 #### Defined in
 
-[core/src/output.ts:65](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L65)
+[core/src/output.ts:65](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L65)
 
 ___
 
@@ -322,7 +339,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:59](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L59)
+[core/src/output.ts:59](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L59)
 
 ___
 
@@ -336,7 +353,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:99](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L99)
+[core/src/output.ts:99](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L99)
 
 ___
 
@@ -356,7 +373,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:113](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L113)
+[core/src/output.ts:113](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L113)
 
 ___
 
@@ -376,7 +393,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:95](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L95)
+[core/src/output.ts:95](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L95)
 
 ___
 
@@ -396,7 +413,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:102](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L102)
+[core/src/output.ts:102](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L102)
 
 ___
 
@@ -416,7 +433,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:104](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L104)
+[core/src/output.ts:104](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L104)
 
 ___
 
@@ -436,7 +453,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:109](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L109)
+[core/src/output.ts:109](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L109)
 
 ___
 
@@ -458,7 +475,7 @@ Set the session username for snack targeting by user (optional; Session implemen
 
 #### Defined in
 
-[core/src/output.ts:90](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L90)
+[core/src/output.ts:90](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L90)
 
 ___
 
@@ -472,7 +489,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:108](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L108)
+[core/src/output.ts:108](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L108)
 
 ___
 
@@ -486,7 +503,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:57](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L57)
+[core/src/output.ts:57](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L57)
 
 ___
 
@@ -506,7 +523,7 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L49)
+[core/src/output.ts:49](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L49)
 
 ___
 
@@ -526,4 +543,4 @@ ___
 
 #### Defined in
 
-[core/src/output.ts:50](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/output.ts#L50)
+[core/src/output.ts:50](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/output.ts#L50)

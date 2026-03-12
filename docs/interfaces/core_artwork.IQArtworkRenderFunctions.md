@@ -30,7 +30,7 @@ Chainable functions returned by artwork render
 
 #### Defined in
 
-[core/src/artwork.ts:397](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L397)
+[core/src/artwork.ts:397](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/artwork.ts#L397)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:396](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L396)
+[core/src/artwork.ts:396](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/artwork.ts#L396)
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 #### Defined in
 
-[core/src/artwork.ts:395](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/artwork.ts#L395)
+[core/src/artwork.ts:395](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/artwork.ts#L395)

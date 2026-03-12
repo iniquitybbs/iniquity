@@ -19,7 +19,7 @@ Computed property definition
 
 #### Defined in
 
-[core/src/reactor.ts:32](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/reactor.ts#L32)
+[core/src/reactor.ts:32](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/reactor.ts#L32)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:31](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/reactor.ts#L31)
+[core/src/reactor.ts:31](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/reactor.ts#L31)

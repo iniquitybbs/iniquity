@@ -46,7 +46,7 @@ Group class for managing user groups
 
 #### Defined in
 
-[core/src/group.ts:393](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L393)
+[core/src/group.ts:393](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L393)
 
 ## Accessors
 
@@ -62,7 +62,7 @@ Get group access level
 
 #### Defined in
 
-[core/src/group.ts:436](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L436)
+[core/src/group.ts:436](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L436)
 
 ___
 
@@ -78,7 +78,7 @@ Get group description
 
 #### Defined in
 
-[core/src/group.ts:429](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L429)
+[core/src/group.ts:429](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L429)
 
 ___
 
@@ -94,7 +94,7 @@ Get group ID
 
 #### Defined in
 
-[core/src/group.ts:422](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L422)
+[core/src/group.ts:422](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L422)
 
 ___
 
@@ -110,7 +110,7 @@ Get group members
 
 #### Defined in
 
-[core/src/group.ts:450](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L450)
+[core/src/group.ts:450](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L450)
 
 ___
 
@@ -126,7 +126,7 @@ Get group name
 
 #### Defined in
 
-[core/src/group.ts:415](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L415)
+[core/src/group.ts:415](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L415)
 
 ___
 
@@ -142,7 +142,7 @@ Get group permissions
 
 #### Defined in
 
-[core/src/group.ts:443](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L443)
+[core/src/group.ts:443](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L443)
 
 ## Methods
 
@@ -164,7 +164,7 @@ Add member to group
 
 #### Defined in
 
-[core/src/group.ts:464](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L464)
+[core/src/group.ts:464](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L464)
 
 ___
 
@@ -180,7 +180,7 @@ Delete group
 
 #### Defined in
 
-[core/src/group.ts:535](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L535)
+[core/src/group.ts:535](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L535)
 
 ___
 
@@ -196,7 +196,7 @@ Check if group exists
 
 #### Defined in
 
-[core/src/group.ts:457](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L457)
+[core/src/group.ts:457](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L457)
 
 ___
 
@@ -212,7 +212,7 @@ Get raw group data
 
 #### Defined in
 
-[core/src/group.ts:547](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L547)
+[core/src/group.ts:547](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L547)
 
 ___
 
@@ -234,7 +234,7 @@ Check if user is member
 
 #### Defined in
 
-[core/src/group.ts:490](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L490)
+[core/src/group.ts:490](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L490)
 
 ___
 
@@ -256,7 +256,7 @@ Check permission
 
 #### Defined in
 
-[core/src/group.ts:504](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L504)
+[core/src/group.ts:504](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L504)
 
 ___
 
@@ -272,7 +272,7 @@ Get member count
 
 #### Defined in
 
-[core/src/group.ts:497](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L497)
+[core/src/group.ts:497](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L497)
 
 ___
 
@@ -294,7 +294,7 @@ Remove member from group
 
 #### Defined in
 
-[core/src/group.ts:476](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L476)
+[core/src/group.ts:476](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L476)
 
 ___
 
@@ -317,7 +317,7 @@ Set permission
 
 #### Defined in
 
-[core/src/group.ts:513](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L513)
+[core/src/group.ts:513](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L513)
 
 ___
 
@@ -339,4 +339,4 @@ Update group data
 
 #### Defined in
 
-[core/src/group.ts:523](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/group.ts#L523)
+[core/src/group.ts:523](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/group.ts#L523)

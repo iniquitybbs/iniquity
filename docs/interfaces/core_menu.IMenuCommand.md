@@ -14,4 +14,4 @@
 
 #### Defined in
 
-[core/src/menu.ts:38](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/menu.ts#L38)
+[core/src/menu.ts:38](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/menu.ts#L38)

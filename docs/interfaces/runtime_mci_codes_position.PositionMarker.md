@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:35](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L35)
+[core/src/mci/codes/position.ts:35](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L35)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:34](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L34)
+[core/src/mci/codes/position.ts:34](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L34)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:33](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L33)
+[core/src/mci/codes/position.ts:33](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L33)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:30](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L30)
+[core/src/mci/codes/position.ts:30](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L30)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:36](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L36)
+[core/src/mci/codes/position.ts:36](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L36)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:31](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L31)
+[core/src/mci/codes/position.ts:31](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L31)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:32](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/codes/position.ts#L32)
+[core/src/mci/codes/position.ts:32](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/codes/position.ts#L32)

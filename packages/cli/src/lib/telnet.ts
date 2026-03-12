@@ -29,6 +29,8 @@ import { Session } from "./session"
 import { Runtime, setGlobalRuntime, events, bbs, SessionInfo as BBSSessionInfo } from "@iniquitybbs/core"
 import { executeProgram } from "./executor"
 import * as path from "path"
+import { createSocketFromWebSocket } from "./ws-socket-adapter"
+import type { WebSocket } from "ws"
 
 export interface TelnetServerOptions {
     port?: number
@@ -228,6 +230,63 @@ export class TelnetServer {
 
         socket.on("error", (err) => {
             console.error(`[Node ${nodeNumber}] Socket error for ${address}:`, err.message)
+            this.activeSessions.delete(session)
+        })
+
+        this.executeBBSProgram(runtime, session).catch((err) => {
+            console.error("Error executing BBS program:", err)
+            session.write("\r\n\r\nAn error occurred. Disconnecting...\r\n")
+            setTimeout(() => session.close(), 1000)
+        })
+    }
+
+    /**
+     * Handle a new WebSocket connection (same BBS session as TCP, different transport).
+     * Call this from the HTTP server's WebSocket upgrade handler so web/desktop clients get a session.
+     */
+    handleWebSocketConnection(ws: WebSocket, remoteAddress?: string): void {
+        const adapter = createSocketFromWebSocket(ws, remoteAddress)
+        const nodeNumber = ++this.nodeCounter
+        const address = adapter.remoteAddress
+        console.log(`[Node ${nodeNumber}] New WebSocket connection from ${address}`)
+
+        const session = new Session(adapter as unknown as net.Socket)
+        session.nodeNumber = nodeNumber
+        this.activeSessions.add(session)
+
+        events.emit(
+            "server:connect",
+            {
+                node: nodeNumber,
+                address: adapter.remoteAddress,
+                totalConnections: this.activeSessions.size
+            },
+            "server"
+        )
+
+        const runtime = new Runtime(session)
+        setGlobalRuntime(runtime)
+        session.setTickCallback(async () => {
+            await events.processQueue()
+            runtime.processSnacks()
+        })
+
+        adapter.on("close", () => {
+            console.log(`[Node ${nodeNumber}] WebSocket closed: ${address}`)
+            this.activeSessions.delete(session)
+            events.emit(
+                "server:disconnect",
+                {
+                    node: nodeNumber,
+                    address: adapter.remoteAddress,
+                    totalConnections: this.activeSessions.size
+                },
+                "server"
+            )
+        })
+
+        adapter.on("error", (err: Error) => {
+            console.error(`[Node ${nodeNumber}] WebSocket error for ${address}:`, err.message)
             this.activeSessions.delete(session)
         })
 

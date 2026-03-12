@@ -21,7 +21,7 @@ Sixel display options
 
 #### Defined in
 
-[core/src/sixel.ts:51](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L51)
+[core/src/sixel.ts:51](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L51)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:48](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L48)
+[core/src/sixel.ts:48](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L48)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:49](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L49)
+[core/src/sixel.ts:49](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L49)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/sixel.ts:50](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/sixel.ts#L50)
+[core/src/sixel.ts:50](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/sixel.ts#L50)

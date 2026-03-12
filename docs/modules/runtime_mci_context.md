@@ -52,7 +52,7 @@ Default BBS context
 
 #### Defined in
 
-[core/src/mci/context.ts:302](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L302)
+[core/src/mci/context.ts:302](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L302)
 
 ___
 
@@ -68,7 +68,7 @@ Create a complete default MCI context
 
 #### Defined in
 
-[core/src/mci/context.ts:341](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L341)
+[core/src/mci/context.ts:341](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L341)
 
 ___
 
@@ -84,7 +84,7 @@ Default node context
 
 #### Defined in
 
-[core/src/mci/context.ts:330](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L330)
+[core/src/mci/context.ts:330](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L330)
 
 ___
 
@@ -100,7 +100,7 @@ Default system context with current date/time
 
 #### Defined in
 
-[core/src/mci/context.ts:289](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L289)
+[core/src/mci/context.ts:289](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L289)
 
 ___
 
@@ -116,7 +116,7 @@ Default terminal context
 
 #### Defined in
 
-[core/src/mci/context.ts:312](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L312)
+[core/src/mci/context.ts:312](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L312)
 
 ___
 
@@ -132,7 +132,7 @@ Default user context with sensible defaults
 
 #### Defined in
 
-[core/src/mci/context.ts:277](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L277)
+[core/src/mci/context.ts:277](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L277)
 
 ___
 
@@ -155,4 +155,4 @@ Merge partial context into existing context
 
 #### Defined in
 
-[core/src/mci/context.ts:355](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/mci/context.ts#L355)
+[core/src/mci/context.ts:355](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/mci/context.ts#L355)

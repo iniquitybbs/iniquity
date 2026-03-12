@@ -22,7 +22,7 @@ Optional description shown below the label
 
 #### Defined in
 
-[core/src/bbs.ts:172](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L172)
+[core/src/bbs.ts:173](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/bbs.ts#L173)
 
 ___
 
@@ -34,7 +34,7 @@ Hotkey for this choice
 
 #### Defined in
 
-[core/src/bbs.ts:168](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L168)
+[core/src/bbs.ts:169](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/bbs.ts#L169)
 
 ___
 
@@ -46,4 +46,4 @@ Display label
 
 #### Defined in
 
-[core/src/bbs.ts:170](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/bbs.ts#L170)
+[core/src/bbs.ts:171](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/bbs.ts#L171)

@@ -22,7 +22,7 @@ XBin image structure
 
 #### Defined in
 
-[core/src/xbin.ts:96](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/xbin.ts#L96)
+[core/src/xbin.ts:96](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L96)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:95](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/xbin.ts#L95)
+[core/src/xbin.ts:95](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L95)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:97](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/xbin.ts#L97)
+[core/src/xbin.ts:97](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L97)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:93](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/xbin.ts#L93)
+[core/src/xbin.ts:93](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L93)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:94](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/xbin.ts#L94)
+[core/src/xbin.ts:94](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/xbin.ts#L94)

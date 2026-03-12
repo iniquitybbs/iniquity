@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[core/src/snack.ts:35](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/snack.ts#L35)
+[core/src/snack.ts:35](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/snack.ts#L35)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[core/src/snack.ts:36](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/snack.ts#L36)
+[core/src/snack.ts:36](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/snack.ts#L36)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[core/src/snack.ts:34](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/snack.ts#L34)
+[core/src/snack.ts:34](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/snack.ts#L34)

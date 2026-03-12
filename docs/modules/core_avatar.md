@@ -45,4 +45,4 @@ Avatar dimension constants
 
 #### Defined in
 
-[core/src/avatar.ts:41](https://github.com/iniquitybbs/iniquity/blob/48d6dbd/packages/core/src/avatar.ts#L41)
+[core/src/avatar.ts:41](https://github.com/iniquitybbs/iniquity/blob/6da3164/packages/core/src/avatar.ts#L41)
