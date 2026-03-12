@@ -1,6 +1,6 @@
 {
     "name": "@iniquitybbs/core",
-    "version": "3.0.85",
+    "version": "3.0.86",
     "description": "Core BBS runtime library for building bulletin board systems with Iniquity.",
     "author": "ispyhumanfly <ispyhumanfly@gmail.com>",
     "homepage": "http://iniquitybbs.com",
