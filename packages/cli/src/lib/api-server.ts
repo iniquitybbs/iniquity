@@ -28,6 +28,7 @@ import * as http from "http"
 import * as path from "path"
 import * as fs from "fs"
 import Koa = require("koa")
+import { TERM_WIDTH, TERM_HEIGHT } from "@iniquitybbs/core"
 import bodyParser from "koa-bodyparser"
 
 type KoaCtx = Parameters<Parameters<Koa["use"]>[0]>[0]
@@ -147,7 +148,7 @@ function getTermPageHtml(wsUrl: string): string {
     document.getElementById("terminal").innerHTML = '<pre style="color:#888;padding:8px;">xterm.js could not load. Run: npm install (in packages/cli)</pre>';
     return;
   }
-  var term = new Terminal({ cols: 80, rows: 25, theme: { background: "#000", foreground: "#aaa" }, fontFamily: "Consolas, monospace", fontSize: 14 });
+  var term = new Terminal({ cols: ${TERM_WIDTH}, rows: ${TERM_HEIGHT}, theme: { background: "#000", foreground: "#aaa" }, fontFamily: "Consolas, monospace", fontSize: 14 });
   term.open(document.getElementById("terminal"));
   var ws = new WebSocket(wsUrl);
   ws.binaryType = "arraybuffer";

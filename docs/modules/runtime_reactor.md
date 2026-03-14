@@ -42,4 +42,4 @@ https://www.monterail.com/blog/2016/how-to-build-a-reactive-engine-in-javascript
 
 #### Defined in
 
-[core/src/reactor.ts:53](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L53)
+[core/src/reactor.ts:53](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L53)

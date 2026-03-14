@@ -25,7 +25,7 @@ dz      .   .:'¸'     .        .   $$$$'     .        .       `¸$$$$y.     `$$
 */
 
 import { Socket } from "net"
-import { ANSI, MCIProcessor, MCIProcessorOptions, MCIContext, IQOutput, ControlCodeAction, cp437ToUtf8 } from "@iniquitybbs/core"
+import { ANSI, MCIProcessor, MCIProcessorOptions, MCIContext, IQOutput, ControlCodeAction, cp437ToUtf8, TERM_WIDTH, TERM_HEIGHT } from "@iniquitybbs/core"
 
 export type TerminalEncoding = "cp437" | "utf8"
 
@@ -122,9 +122,11 @@ export class Session implements IQOutput {
         const sock = this.socket as unknown as { isWebSocket?: boolean }
         if (sock.isWebSocket === true) {
             this.info.encoding = "utf8"
+            this.info.width = TERM_WIDTH
+            this.info.height = TERM_HEIGHT
             this.info.client.name = "web"
             this.info.client.suggestsUtf8 = true
-            this.mciProcessor.setTerminal({ utf8: true, cp437: false })
+            this.mciProcessor.setTerminal({ utf8: true, cp437: false, width: TERM_WIDTH, height: TERM_HEIGHT })
         }
 
         this.negotiate()

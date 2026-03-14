@@ -89,10 +89,18 @@ function waitForHealth(baseUrl: string, timeoutMs: number): Promise<boolean> {
     return poll()
 }
 
+// Iniquity default terminal size (132×37) — size window to fit character grid (~9×18px per cell)
+const TERM_COLS = 132
+const TERM_ROWS = 37
+const CHAR_WIDTH = 9
+const CHAR_HEIGHT = 18
+const WINDOW_WIDTH = TERM_COLS * CHAR_WIDTH + 40
+const WINDOW_HEIGHT = TERM_ROWS * CHAR_HEIGHT + 80
+
 function createWindow(termUrl: string): void {
     const win = new BrowserWindow({
-        width: 1024,
-        height: 768,
+        width: WINDOW_WIDTH,
+        height: WINDOW_HEIGHT,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,

@@ -35,7 +35,7 @@ iq term localhost --port 2323
 
 #### Defined in
 
-[cli/src/commands/term.ts:44](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/term.ts#L44)
+[cli/src/commands/term.ts:44](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/term.ts#L44)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[cli/src/commands/term.ts:97](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/term.ts#L97)
+[cli/src/commands/term.ts:97](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/term.ts#L97)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[cli/src/commands/term.ts:45](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/term.ts#L45)
+[cli/src/commands/term.ts:45](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/term.ts#L45)
 
 ## Functions
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[cli/src/commands/term.ts:47](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/term.ts#L47)
+[cli/src/commands/term.ts:47](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/term.ts#L47)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[cli/src/commands/term.ts:61](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/term.ts#L61)
+[cli/src/commands/term.ts:61](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/term.ts#L61)

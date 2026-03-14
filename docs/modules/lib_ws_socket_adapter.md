@@ -37,4 +37,4 @@ Create a Socket-like object from a WebSocket for use with Session.
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:84](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L84)
+[cli/src/lib/ws-socket-adapter.ts:84](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L84)

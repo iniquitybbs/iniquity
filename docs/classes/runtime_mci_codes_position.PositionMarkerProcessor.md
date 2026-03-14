@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:115](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L115)
+[core/src/mci/codes/position.ts:115](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L115)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:111](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L111)
+[core/src/mci/codes/position.ts:111](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L111)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:184](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L184)
+[core/src/mci/codes/position.ts:184](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L184)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:132](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L132)
+[core/src/mci/codes/position.ts:132](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L132)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:123](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L123)
+[core/src/mci/codes/position.ts:123](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L123)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:70](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L70)
+[core/src/mci/codes/position.ts:70](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L70)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:78](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L78)
+[core/src/mci/codes/position.ts:78](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L78)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:94](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L94)
+[core/src/mci/codes/position.ts:94](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L94)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:74](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L74)
+[core/src/mci/codes/position.ts:74](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L74)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:192](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L192)
+[core/src/mci/codes/position.ts:192](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L192)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:119](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L119)
+[core/src/mci/codes/position.ts:119](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L119)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:142](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L142)
+[core/src/mci/codes/position.ts:142](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L142)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:52](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L52)
+[core/src/mci/codes/position.ts:52](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L52)
 
 ___
 
@@ -289,7 +289,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:136](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L136)
+[core/src/mci/codes/position.ts:136](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L136)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:127](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L127)
+[core/src/mci/codes/position.ts:127](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L127)
 
 ___
 
@@ -331,4 +331,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/codes/position.ts:104](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/codes/position.ts#L104)
+[core/src/mci/codes/position.ts:104](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/codes/position.ts#L104)

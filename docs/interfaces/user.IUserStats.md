@@ -25,7 +25,7 @@ User statistics
 
 #### Defined in
 
-[core/src/user.ts:105](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L105)
+[core/src/user.ts:105](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L105)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:107](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L107)
+[core/src/user.ts:107](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L107)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:106](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L106)
+[core/src/user.ts:106](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L106)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:100](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L100)
+[core/src/user.ts:100](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L100)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:103](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L103)
+[core/src/user.ts:103](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L103)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:101](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L101)
+[core/src/user.ts:101](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L101)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:102](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L102)
+[core/src/user.ts:102](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L102)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:104](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L104)
+[core/src/user.ts:104](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L104)

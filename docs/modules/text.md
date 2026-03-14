@@ -31,4 +31,4 @@ Text alignment options
 
 #### Defined in
 
-[core/src/text.ts:32](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/text.ts#L32)
+[core/src/text.ts:32](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/text.ts#L32)

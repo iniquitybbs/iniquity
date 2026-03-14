@@ -61,7 +61,7 @@ IQMenu - Interactive menu system
 
 #### Defined in
 
-[core/src/menu.ts:157](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L157)
+[core/src/menu.ts:157](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L157)
 
 ## Properties
 
@@ -71,7 +71,7 @@ IQMenu - Interactive menu system
 
 #### Defined in
 
-[core/src/menu.ts:131](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L131)
+[core/src/menu.ts:131](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L131)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:138](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L138)
+[core/src/menu.ts:138](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L138)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:132](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L132)
+[core/src/menu.ts:132](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L132)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:129](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L129)
+[core/src/menu.ts:129](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L129)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:130](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L130)
+[core/src/menu.ts:130](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L130)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:128](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L128)
+[core/src/menu.ts:128](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L128)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:141](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L141)
+[core/src/menu.ts:141](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L141)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:139](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L139)
+[core/src/menu.ts:139](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L139)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:140](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L140)
+[core/src/menu.ts:140](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L140)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:136](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L136)
+[core/src/menu.ts:136](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L136)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:137](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L137)
+[core/src/menu.ts:137](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L137)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:142](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L142)
+[core/src/menu.ts:142](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L142)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:143](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L143)
+[core/src/menu.ts:143](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L143)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:127](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L127)
+[core/src/menu.ts:127](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L127)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:133](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L133)
+[core/src/menu.ts:133](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L133)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:134](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L134)
+[core/src/menu.ts:134](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L134)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[core/src/menu.ts:135](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L135)
+[core/src/menu.ts:135](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L135)
 
 ## Methods
 
@@ -253,7 +253,7 @@ Add a menu item
 
 #### Defined in
 
-[core/src/menu.ts:193](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L193)
+[core/src/menu.ts:193](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L193)
 
 ___
 
@@ -275,7 +275,7 @@ Add multiple menu items
 
 #### Defined in
 
-[core/src/menu.ts:210](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L210)
+[core/src/menu.ts:210](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L210)
 
 ___
 
@@ -291,7 +291,7 @@ Go back to parent menu
 
 #### Defined in
 
-[core/src/menu.ts:628](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L628)
+[core/src/menu.ts:628](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L628)
 
 ___
 
@@ -313,7 +313,7 @@ Execute a command by key
 
 #### Defined in
 
-[core/src/menu.ts:378](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L378)
+[core/src/menu.ts:378](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L378)
 
 ___
 
@@ -329,7 +329,7 @@ Get parent menu
 
 #### Defined in
 
-[core/src/menu.ts:226](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L226)
+[core/src/menu.ts:226](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L226)
 
 ___
 
@@ -351,7 +351,7 @@ Set up a prompt for user input
 
 #### Defined in
 
-[core/src/menu.ts:233](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L233)
+[core/src/menu.ts:233](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L233)
 
 ___
 
@@ -374,7 +374,7 @@ Render the menu with a loop (legacy API)
 
 #### Defined in
 
-[core/src/menu.ts:636](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L636)
+[core/src/menu.ts:636](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L636)
 
 ___
 
@@ -396,7 +396,7 @@ Set parent menu (for back navigation)
 
 #### Defined in
 
-[core/src/menu.ts:218](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L218)
+[core/src/menu.ts:218](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L218)
 
 ___
 
@@ -412,7 +412,7 @@ Display the menu and wait for input
 
 #### Defined in
 
-[core/src/menu.ts:394](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L394)
+[core/src/menu.ts:394](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L394)
 
 ___
 
@@ -428,7 +428,7 @@ Stop the menu loop
 
 #### Defined in
 
-[core/src/menu.ts:621](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L621)
+[core/src/menu.ts:621](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L621)
 
 ___
 
@@ -445,4 +445,4 @@ Uses non-blocking input with event processing loop
 
 #### Defined in
 
-[core/src/menu.ts:294](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/menu.ts#L294)
+[core/src/menu.ts:294](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/menu.ts#L294)

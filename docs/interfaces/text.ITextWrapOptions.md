@@ -21,7 +21,7 @@ Text wrapping options
 
 #### Defined in
 
-[core/src/text.ts:40](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/text.ts#L40)
+[core/src/text.ts:40](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/text.ts#L40)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:39](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/text.ts#L39)
+[core/src/text.ts:39](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/text.ts#L39)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:41](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/text.ts#L41)
+[core/src/text.ts:41](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/text.ts#L41)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/text.ts:38](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/text.ts#L38)
+[core/src/text.ts:38](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/text.ts#L38)

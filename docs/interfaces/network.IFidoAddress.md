@@ -21,7 +21,7 @@ FidoNet address
 
 #### Defined in
 
-[core/src/network.ts:53](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/network.ts#L53)
+[core/src/network.ts:53](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/network.ts#L53)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:54](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/network.ts#L54)
+[core/src/network.ts:54](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/network.ts#L54)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:55](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/network.ts#L55)
+[core/src/network.ts:55](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/network.ts#L55)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[core/src/network.ts:52](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/network.ts#L52)
+[core/src/network.ts:52](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/network.ts#L52)

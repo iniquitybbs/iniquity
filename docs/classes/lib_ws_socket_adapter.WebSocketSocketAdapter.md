@@ -47,7 +47,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:41](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L41)
+[cli/src/lib/ws-socket-adapter.ts:41](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L41)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Set so Session can skip telnet negotiation (browser doesn't speak telnet).
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:37](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L37)
+[cli/src/lib/ws-socket-adapter.ts:37](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L37)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:35](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L35)
+[cli/src/lib/ws-socket-adapter.ts:35](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L35)
 
 ## Methods
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:76](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L76)
+[cli/src/lib/ws-socket-adapter.ts:76](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L76)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:69](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L69)
+[cli/src/lib/ws-socket-adapter.ts:69](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L69)
 
 ___
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[cli/src/lib/ws-socket-adapter.ts:62](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/ws-socket-adapter.ts#L62)
+[cli/src/lib/ws-socket-adapter.ts:62](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/ws-socket-adapter.ts#L62)

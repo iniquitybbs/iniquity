@@ -26,4 +26,4 @@ Control code action from MCI processing
 
 #### Defined in
 
-[core/src/output.ts:32](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/output.ts#L32)
+[core/src/output.ts:32](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/output.ts#L32)

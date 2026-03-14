@@ -40,7 +40,7 @@ core functionality, enabling cleaner and more expressive BBS development.
 
 #### Defined in
 
-[core/src/bbs.ts:1219](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/bbs.ts#L1219)
+[core/src/bbs.ts:1219](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/bbs.ts#L1219)
 
 ___
 
@@ -52,7 +52,7 @@ Target for snack delivery: current session, broadcast, or specific node/user
 
 #### Defined in
 
-[core/src/bbs.ts:128](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/bbs.ts#L128)
+[core/src/bbs.ts:128](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/bbs.ts#L128)
 
 ## Variables
 
@@ -64,4 +64,4 @@ Singleton BBS instance
 
 #### Defined in
 
-[core/src/bbs.ts:1217](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/bbs.ts#L1217)
+[core/src/bbs.ts:1217](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/bbs.ts#L1217)

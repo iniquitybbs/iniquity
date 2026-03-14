@@ -69,7 +69,7 @@ Font slot range
 
 #### Defined in
 
-[core/src/cterm.ts:125](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L125)
+[core/src/cterm.ts:125](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L125)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:126](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L126)
+[core/src/cterm.ts:126](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L126)
 
 ___
 
@@ -100,7 +100,7 @@ Font styles
 
 #### Defined in
 
-[core/src/cterm.ts:131](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L131)
+[core/src/cterm.ts:131](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L131)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:118](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L118)
+[core/src/cterm.ts:118](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L118)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:119](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L119)
+[core/src/cterm.ts:119](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L119)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:117](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L117)
+[core/src/cterm.ts:117](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L117)
 
 ___
 
@@ -142,7 +142,7 @@ Version constants
 
 #### Defined in
 
-[core/src/cterm.ts:112](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L112)
+[core/src/cterm.ts:112](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L112)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:116](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L116)
+[core/src/cterm.ts:116](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L116)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:120](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L120)
+[core/src/cterm.ts:120](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L120)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:115](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L115)
+[core/src/cterm.ts:115](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L115)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:114](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L114)
+[core/src/cterm.ts:114](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L114)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:113](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L113)
+[core/src/cterm.ts:113](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L113)
 
 ## Methods
 
@@ -214,7 +214,7 @@ Build capabilities object from version number
 
 #### Defined in
 
-[core/src/cterm.ts:356](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L356)
+[core/src/cterm.ts:356](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L356)
 
 ___
 
@@ -237,7 +237,7 @@ Generate sequence to load a font
 
 #### Defined in
 
-[core/src/cterm.ts:288](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L288)
+[core/src/cterm.ts:288](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L288)
 
 ___
 
@@ -259,7 +259,7 @@ Generate sequence to enable/disable mouse button events
 
 #### Defined in
 
-[core/src/cterm.ts:335](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L335)
+[core/src/cterm.ts:335](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L335)
 
 ___
 
@@ -281,7 +281,7 @@ Generate sequence to enable/disable mouse motion events
 
 #### Defined in
 
-[core/src/cterm.ts:342](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L342)
+[core/src/cterm.ts:342](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L342)
 
 ___
 
@@ -303,7 +303,7 @@ Generate sequence to enable/disable SGR mouse mode
 
 #### Defined in
 
-[core/src/cterm.ts:349](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L349)
+[core/src/cterm.ts:349](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L349)
 
 ___
 
@@ -325,7 +325,7 @@ Generate sequence to enable/disable mouse tracking
 
 #### Defined in
 
-[core/src/cterm.ts:328](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L328)
+[core/src/cterm.ts:328](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L328)
 
 ___
 
@@ -348,7 +348,7 @@ Returns version number or -1 if not CTerm
 
 #### Defined in
 
-[core/src/cterm.ts:210](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L210)
+[core/src/cterm.ts:210](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L210)
 
 ___
 
@@ -370,7 +370,7 @@ Parse font dimensions response
 
 #### Defined in
 
-[core/src/cterm.ts:241](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L241)
+[core/src/cterm.ts:241](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L241)
 
 ___
 
@@ -392,7 +392,7 @@ Parse font state response
 
 #### Defined in
 
-[core/src/cterm.ts:225](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L225)
+[core/src/cterm.ts:225](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L225)
 
 ___
 
@@ -414,7 +414,7 @@ Parse graphics dimensions response
 
 #### Defined in
 
-[core/src/cterm.ts:256](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L256)
+[core/src/cterm.ts:256](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L256)
 
 ___
 
@@ -436,7 +436,7 @@ Parse enabled modes response
 
 #### Defined in
 
-[core/src/cterm.ts:271](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L271)
+[core/src/cterm.ts:271](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L271)
 
 ___
 
@@ -458,7 +458,7 @@ Parse version from string (e.g., "1.189")
 
 #### Defined in
 
-[core/src/cterm.ts:383](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L383)
+[core/src/cterm.ts:383](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L383)
 
 ___
 
@@ -475,7 +475,7 @@ Response format: ESC[=67;84;101;114;109;MAJOR;MINOR;ATTRIBUTESc
 
 #### Defined in
 
-[core/src/cterm.ts:170](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L170)
+[core/src/cterm.ts:170](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L170)
 
 ___
 
@@ -492,7 +492,7 @@ Response format: ESC[=3;HEIGHT;WIDTHn
 
 #### Defined in
 
-[core/src/cterm.ts:194](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L194)
+[core/src/cterm.ts:194](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L194)
 
 ___
 
@@ -509,7 +509,7 @@ Response format: ESC[=1;FIRST;RESULT;STYLE0;STYLE1;STYLE2;STYLE3n
 
 #### Defined in
 
-[core/src/cterm.ts:178](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L178)
+[core/src/cterm.ts:178](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L178)
 
 ___
 
@@ -526,7 +526,7 @@ Response format: ESC[?2;0;WIDTH;HEIGHTS
 
 #### Defined in
 
-[core/src/cterm.ts:202](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L202)
+[core/src/cterm.ts:202](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L202)
 
 ___
 
@@ -543,7 +543,7 @@ Response format: ESC[=2;MODE1;MODE2;...n
 
 #### Defined in
 
-[core/src/cterm.ts:186](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L186)
+[core/src/cterm.ts:186](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L186)
 
 ___
 
@@ -559,7 +559,7 @@ Generate sequence to reset palette to defaults
 
 #### Defined in
 
-[core/src/cterm.ts:321](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L321)
+[core/src/cterm.ts:321](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L321)
 
 ___
 
@@ -582,7 +582,7 @@ Generate sequence to select a font for a style
 
 #### Defined in
 
-[core/src/cterm.ts:300](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L300)
+[core/src/cterm.ts:300](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L300)
 
 ___
 
@@ -607,7 +607,7 @@ Generate sequence to set palette color
 
 #### Defined in
 
-[core/src/cterm.ts:314](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L314)
+[core/src/cterm.ts:314](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L314)
 
 ___
 
@@ -630,7 +630,7 @@ Check if a specific feature is supported based on version
 
 #### Defined in
 
-[core/src/cterm.ts:141](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L141)
+[core/src/cterm.ts:141](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L141)
 
 ___
 
@@ -652,7 +652,7 @@ Check if fonts are supported
 
 #### Defined in
 
-[core/src/cterm.ts:148](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L148)
+[core/src/cterm.ts:148](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L148)
 
 ___
 
@@ -674,7 +674,7 @@ Check if palette manipulation is supported
 
 #### Defined in
 
-[core/src/cterm.ts:162](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L162)
+[core/src/cterm.ts:162](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L162)
 
 ___
 
@@ -696,7 +696,7 @@ Check if Sixel graphics are supported
 
 #### Defined in
 
-[core/src/cterm.ts:155](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L155)
+[core/src/cterm.ts:155](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L155)
 
 ___
 
@@ -718,4 +718,4 @@ Get human-readable version string
 
 #### Defined in
 
-[core/src/cterm.ts:374](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L374)
+[core/src/cterm.ts:374](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L374)

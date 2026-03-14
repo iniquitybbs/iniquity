@@ -28,7 +28,7 @@ Screen buffer stack and background management for popup overlays
 
 #### Defined in
 
-[core/src/screen-buffer.ts:191](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen-buffer.ts#L191)
+[core/src/screen-buffer.ts:191](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/screen-buffer.ts#L191)
 
 ## Variables
 
@@ -56,7 +56,7 @@ Screen buffer management object
 
 #### Defined in
 
-[core/src/screen-buffer.ts:51](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen-buffer.ts#L51)
+[core/src/screen-buffer.ts:51](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/screen-buffer.ts#L51)
 
 ## Functions
 
@@ -79,4 +79,4 @@ Update the current screen dimensions (called by screen module)
 
 #### Defined in
 
-[core/src/screen-buffer.ts:43](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/screen-buffer.ts#L43)
+[core/src/screen-buffer.ts:43](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/screen-buffer.ts#L43)

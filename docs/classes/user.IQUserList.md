@@ -30,7 +30,7 @@ User list utilities
 
 #### Defined in
 
-[core/src/user.ts:605](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L605)
+[core/src/user.ts:605](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L605)
 
 ## Methods
 
@@ -46,7 +46,7 @@ Get all users
 
 #### Defined in
 
-[core/src/user.ts:612](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L612)
+[core/src/user.ts:612](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L612)
 
 ___
 
@@ -68,7 +68,7 @@ Get users by access level
 
 #### Defined in
 
-[core/src/user.ts:647](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L647)
+[core/src/user.ts:647](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L647)
 
 ___
 
@@ -84,7 +84,7 @@ Get user count
 
 #### Defined in
 
-[core/src/user.ts:619](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L619)
+[core/src/user.ts:619](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L619)
 
 ___
 
@@ -106,7 +106,7 @@ Find user by email
 
 #### Defined in
 
-[core/src/user.ts:636](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L636)
+[core/src/user.ts:636](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L636)
 
 ___
 
@@ -128,7 +128,7 @@ Find user by handle
 
 #### Defined in
 
-[core/src/user.ts:626](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L626)
+[core/src/user.ts:626](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L626)
 
 ___
 
@@ -150,7 +150,7 @@ Get new users
 
 #### Defined in
 
-[core/src/user.ts:684](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L684)
+[core/src/user.ts:684](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L684)
 
 ___
 
@@ -172,7 +172,7 @@ Get recently active users
 
 #### Defined in
 
-[core/src/user.ts:674](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L674)
+[core/src/user.ts:674](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L674)
 
 ___
 
@@ -194,7 +194,7 @@ Get top users by calls
 
 #### Defined in
 
-[core/src/user.ts:654](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L654)
+[core/src/user.ts:654](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L654)
 
 ___
 
@@ -216,4 +216,4 @@ Get top users by posts
 
 #### Defined in
 
-[core/src/user.ts:664](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L664)
+[core/src/user.ts:664](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L664)

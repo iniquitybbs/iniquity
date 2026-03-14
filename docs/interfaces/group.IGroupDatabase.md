@@ -38,7 +38,7 @@ Group database interface
 
 #### Defined in
 
-[core/src/group.ts:217](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L217)
+[core/src/group.ts:217](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L217)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:218](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L218)
+[core/src/group.ts:218](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L218)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:219](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L219)
+[core/src/group.ts:219](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L219)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:221](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L221)
+[core/src/group.ts:221](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L221)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:220](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L220)
+[core/src/group.ts:220](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L220)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:215](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L215)
+[core/src/group.ts:215](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L215)
 
 ___
 
@@ -146,4 +146,4 @@ ___
 
 #### Defined in
 
-[core/src/group.ts:216](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/group.ts#L216)
+[core/src/group.ts:216](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/group.ts#L216)

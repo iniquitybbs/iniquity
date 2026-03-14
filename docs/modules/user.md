@@ -43,7 +43,7 @@ User management, authentication, and data persistence
 
 #### Defined in
 
-[core/src/user.ts:275](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L275)
+[core/src/user.ts:275](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L275)
 
 ___
 
@@ -65,7 +65,7 @@ Initialize the user database with a BBS-specific data path
 
 #### Defined in
 
-[core/src/user.ts:286](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L286)
+[core/src/user.ts:286](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L286)
 
 ___
 
@@ -85,4 +85,4 @@ ___
 
 #### Defined in
 
-[core/src/user.ts:271](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/user.ts#L271)
+[core/src/user.ts:271](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/user.ts#L271)

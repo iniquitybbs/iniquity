@@ -20,7 +20,7 @@ Font state information
 
 #### Defined in
 
-[core/src/cterm.ts:84](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L84)
+[core/src/cterm.ts:84](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L84)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:85](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L85)
+[core/src/cterm.ts:85](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L85)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[core/src/cterm.ts:86](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L86)
+[core/src/cterm.ts:86](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L86)

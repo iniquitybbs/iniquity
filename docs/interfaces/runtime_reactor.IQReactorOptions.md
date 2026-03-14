@@ -38,7 +38,7 @@ Reactor options interface
 
 #### Defined in
 
-[core/src/reactor.ts:44](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L44)
+[core/src/reactor.ts:44](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L44)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:42](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L42)
+[core/src/reactor.ts:42](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L42)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:45](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L45)
+[core/src/reactor.ts:45](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L45)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:39](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L39)
+[core/src/reactor.ts:39](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L39)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:41](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L41)
+[core/src/reactor.ts:41](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L41)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:40](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L40)
+[core/src/reactor.ts:40](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L40)
 
 ___
 
@@ -166,4 +166,4 @@ ___
 
 #### Defined in
 
-[core/src/reactor.ts:43](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/reactor.ts#L43)
+[core/src/reactor.ts:43](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/reactor.ts#L43)

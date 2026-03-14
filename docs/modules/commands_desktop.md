@@ -33,7 +33,7 @@ iq desktop
 
 #### Defined in
 
-[cli/src/commands/desktop.ts:36](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/desktop.ts#L36)
+[cli/src/commands/desktop.ts:36](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/desktop.ts#L36)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[cli/src/commands/desktop.ts:58](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/desktop.ts#L58)
+[cli/src/commands/desktop.ts:58](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/desktop.ts#L58)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[cli/src/commands/desktop.ts:37](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/desktop.ts#L37)
+[cli/src/commands/desktop.ts:37](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/desktop.ts#L37)
 
 ## Functions
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[cli/src/commands/desktop.ts:39](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/desktop.ts#L39)
+[cli/src/commands/desktop.ts:39](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/desktop.ts#L39)
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 #### Defined in
 
-[cli/src/commands/desktop.ts:43](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/commands/desktop.ts#L43)
+[cli/src/commands/desktop.ts:43](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/commands/desktop.ts#L43)

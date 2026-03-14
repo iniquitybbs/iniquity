@@ -52,7 +52,7 @@ CTerm device attribute flags
 
 #### Defined in
 
-[core/src/cterm.ts:53](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L53)
+[core/src/cterm.ts:53](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L53)
 
 ___
 
@@ -79,4 +79,4 @@ CTerm version constants for feature support
 
 #### Defined in
 
-[core/src/cterm.ts:37](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/cterm.ts#L37)
+[core/src/cterm.ts:37](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/cterm.ts#L37)

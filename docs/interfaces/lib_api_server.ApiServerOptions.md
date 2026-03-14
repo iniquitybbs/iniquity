@@ -20,7 +20,7 @@ BBS root directory (containing iniquity.json and optionally package.json). Used 
 
 #### Defined in
 
-[cli/src/lib/api-server.ts:42](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/api-server.ts#L42)
+[cli/src/lib/api-server.ts:43](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/api-server.ts#L43)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[cli/src/lib/api-server.ts:40](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/api-server.ts#L40)
+[cli/src/lib/api-server.ts:41](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/api-server.ts#L41)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[cli/src/lib/api-server.ts:39](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/cli/src/lib/api-server.ts#L39)
+[cli/src/lib/api-server.ts:40](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/cli/src/lib/api-server.ts#L40)

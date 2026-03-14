@@ -19,7 +19,7 @@ Terminal info interface
 
 #### Defined in
 
-[core/src/core.ts:60](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/core.ts#L60)
+[core/src/core.ts:60](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/core.ts#L60)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[core/src/core.ts:61](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/core.ts#L61)
+[core/src/core.ts:61](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/core.ts#L61)

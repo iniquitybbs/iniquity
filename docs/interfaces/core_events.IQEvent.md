@@ -23,7 +23,7 @@ Optional event data payload
 
 #### Defined in
 
-[core/src/events.ts:39](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L39)
+[core/src/events.ts:39](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/events.ts#L39)
 
 ___
 
@@ -35,7 +35,7 @@ Optional source identifier
 
 #### Defined in
 
-[core/src/events.ts:43](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L43)
+[core/src/events.ts:43](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/events.ts#L43)
 
 ___
 
@@ -47,7 +47,7 @@ Timestamp when event was created
 
 #### Defined in
 
-[core/src/events.ts:41](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L41)
+[core/src/events.ts:41](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/events.ts#L41)
 
 ___
 
@@ -59,4 +59,4 @@ Event type/name
 
 #### Defined in
 
-[core/src/events.ts:37](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/events.ts#L37)
+[core/src/events.ts:37](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/events.ts#L37)

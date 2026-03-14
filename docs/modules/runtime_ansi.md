@@ -57,4 +57,4 @@ CGA Color attribute constants for cell-based graphics
 
 #### Defined in
 
-[core/src/ansi.ts:30](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/ansi.ts#L30)
+[core/src/ansi.ts:30](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/ansi.ts#L30)

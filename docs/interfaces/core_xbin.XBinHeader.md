@@ -26,7 +26,7 @@ XBin header structure
 
 #### Defined in
 
-[core/src/xbin.ts:73](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L73)
+[core/src/xbin.ts:73](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L73)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:74](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L74)
+[core/src/xbin.ts:74](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L74)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:79](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L79)
+[core/src/xbin.ts:79](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L79)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:76](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L76)
+[core/src/xbin.ts:76](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L76)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:78](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L78)
+[core/src/xbin.ts:78](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L78)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:75](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L75)
+[core/src/xbin.ts:75](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L75)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:72](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L72)
+[core/src/xbin.ts:72](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L72)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:77](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L77)
+[core/src/xbin.ts:77](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L77)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[core/src/xbin.ts:71](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/xbin.ts#L71)
+[core/src/xbin.ts:71](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/xbin.ts#L71)

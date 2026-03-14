@@ -41,7 +41,7 @@ Synchronet-style format modifiers (L/R/C/Z/W/T/U)
 
 #### Defined in
 
-[core/src/mci/formatters.ts:27](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L27)
+[core/src/mci/formatters.ts:27](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L27)
 
 ## Functions
 
@@ -62,7 +62,7 @@ Synchronet-style format modifiers (L/R/C/Z/W/T/U)
 
 #### Defined in
 
-[core/src/mci/formatters.ts:148](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L148)
+[core/src/mci/formatters.ts:148](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L148)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:72](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L72)
+[core/src/mci/formatters.ts:72](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L72)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:125](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L125)
+[core/src/mci/formatters.ts:125](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L125)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:111](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L111)
+[core/src/mci/formatters.ts:111](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L111)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:290](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L290)
+[core/src/mci/formatters.ts:290](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L290)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:42](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L42)
+[core/src/mci/formatters.ts:42](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L42)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:118](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L118)
+[core/src/mci/formatters.ts:118](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L118)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:282](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L282)
+[core/src/mci/formatters.ts:282](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L282)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:255](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L255)
+[core/src/mci/formatters.ts:255](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L255)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:263](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L263)
+[core/src/mci/formatters.ts:263](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L263)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:276](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L276)
+[core/src/mci/formatters.ts:276](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L276)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:286](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L286)
+[core/src/mci/formatters.ts:286](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L286)
 
 ___
 
@@ -311,4 +311,4 @@ ___
 
 #### Defined in
 
-[core/src/mci/formatters.ts:135](https://github.com/iniquitybbs/iniquity/blob/e56a878/packages/core/src/mci/formatters.ts#L135)
+[core/src/mci/formatters.ts:135](https://github.com/iniquitybbs/iniquity/blob/27c3858/packages/core/src/mci/formatters.ts#L135)
