@@ -31,7 +31,7 @@ jobs:
               run: |
                   npm i -g npm@7
                   npm i -g lerna
-                  lerna bootstrap
+                  npm ci
                   lerna run build
                   lerna publish --canary --yes
               env:
