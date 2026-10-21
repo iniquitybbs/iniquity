@@ -2,8 +2,10 @@
   "name": "iniquity",
   "description": "A re-imagining of the iconic BBS software.",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "postinstall": "npx lerna bootstrap",
     "build": "npx lerna run build && npx typedoc --theme default ./packages",
     "desktop": "cd packages/desktop && npm run build && npm run start",
     "start": "node_modules/.bin/concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" -c \"bgGreen.bold,bgCyan.bold,bgMagenta.bold,bgBlue.bold,bgYellow.bold\" --kill-others-on-fail -n cli \"docker compose up --build\"",
@@ -36,7 +38,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sort-class-members": "^1.19.0",
-    "lerna": "^6.0.3",
+    "lerna": "^10.1.1",
     "prettier": "2.8.0",
     "typedoc": "^0.23.21",
     "typedoc-github-wiki-theme": "^1.0.1",

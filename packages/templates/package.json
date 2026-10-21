@@ -14,8 +14,7 @@
         "src"
     ],
     "scripts": {
-        "prepare": "npm run build",
-        "build": "npx tsc -p tsconfig.bundle.json",
+        "build": "tsc -p tsconfig.bundle.json",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
     "repository": {

@@ -13,8 +13,7 @@
         "src"
     ],
     "scripts": {
-        "prepare": "npm run build || true",
-        "build": "npx tsc -p tsconfig.json",
+        "build": "tsc -p tsconfig.json",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
     "repository": {
@@ -47,8 +46,6 @@
         "@iniquitybbs/core": "^3.0.86",
         "app-root-path": "^3.0.0",
         "copyfiles": "^2.4.1",
-        "docker-cli-js": "^2.9.0",
-        "docker-compose": "^0.23.17",
         "dotenv": "^16.0.0",
         "hjson": "^3.2.2",
         "koa": "^2.15.0",
