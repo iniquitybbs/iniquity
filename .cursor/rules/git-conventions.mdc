@@ -1,0 +1,42 @@
+---
+description: Git commit authorship and message requirements
+alwaysApply: true
+---
+
+# Git Commit Requirements
+
+**CRITICAL: Every commit in this repository must follow these rules:**
+
+## Git Identity
+
+All commits MUST be authored by the repository's configured git identity:
+
+```bash
+git config user.name "Dan Stephenson"
+git config user.email "ispyhumanfly@gmail.com"
+```
+
+Before making any commits, set and verify the git config.
+
+## Prohibited Content
+
+**NEVER include in commit messages:**
+
+- `Co-authored-by:` trailers
+- "Generated with Cursor" or any AI/agent attribution
+- Any AI attribution in author, committer, or message fields
+
+## Verification
+
+Before pushing, ALWAYS verify commit metadata:
+
+```bash
+git log --format='%an <%ae> | %cn <%ce>%n%B' -n 5
+```
+
+Each commit must show:
+- Author: `Dan Stephenson <ispyhumanfly@gmail.com>`
+- Committer: `Dan Stephenson <ispyhumanfly@gmail.com>`
+- Clean message body with no prohibited trailers
+
+If your tooling auto-adds trailers, disable it or amend commits before pushing.
